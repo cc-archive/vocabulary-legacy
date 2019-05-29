@@ -1,0 +1,34 @@
+/*
+ * Overrides default styling set by Styleguidist.
+ */
+
+
+// Selectors are repeated to increase specificity
+
+div[class^="rsg--logo"][class^="rsg--logo"]
+  text-align center
+
+h1[class^="rsg--logo"][class^="rsg--logo"]
+  font-family "Fira Code", monospace
+  font-weight 700
+  font-size 1.25rem
+
+  text-align center
+
+p[class^="rsg--version"][class^="rsg--version"]
+  font-family "Fira Code", monospace
+  font-size 0.8em
+
+  display inline-block
+
+  padding 4px
+
+  border 1px solid @color
+  border-radius 3px
+
+footer[class^="rsg--footer"][class^="rsg--footer"]
+  opacity 0.5
+  transition opacity 0.5s
+
+  &:hover
+    opacity 1.0
