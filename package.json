@@ -1,0 +1,49 @@
+{
+  "name": "cc-vocabulary",
+  "verboseName": "CC Vocabulary",
+  "version": "0.0.1",
+  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "homepage": "https://github.com/creativecommons/cc-vocabulary/",
+  "repository": "github:creativecommons/cc-vocabulary",
+  "license": "MIT",
+  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "vue components",
+    "library"
+  ],
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-styleguidist": "^3.13.7",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
