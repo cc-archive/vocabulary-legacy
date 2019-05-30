@@ -15,6 +15,7 @@ module.exports = {
 
   theme: {
     sidebarWidth: 256,
+    maxWidth: '100%',
     fontFamily: {
       monospace: ['"Fira Code"', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace']
     }
