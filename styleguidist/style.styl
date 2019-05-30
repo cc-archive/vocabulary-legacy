@@ -5,30 +5,53 @@
 
 // Selectors are repeated to increase specificity
 
-div[class^="rsg--logo"][class^="rsg--logo"]
+@import "~@/assets/tokens/tokens.styl"
+
+div[class*="rsg--logo"][class*="rsg--logo"]
   text-align center
 
-h1[class^="rsg--logo"][class^="rsg--logo"]
+h1[class*="rsg--logo"][class*="rsg--logo"]
   font-family "Fira Code", monospace
-  font-weight 700
-  font-size 1.25rem
+  font-weight $weight-bold
+  font-size $size-large
 
   text-align center
 
-p[class^="rsg--version"][class^="rsg--version"]
+p[class*="rsg--version"][class*="rsg--version"]
   font-family "Fira Code", monospace
-  font-size 0.8em
+  font-size $size-small
 
   display inline-block
 
-  padding 4px
+  padding $space-normal
 
-  border 1px solid @color
-  border-radius 3px
+  border 1px solid
+  border-radius $radius-normal
 
-footer[class^="rsg--footer"][class^="rsg--footer"]
+a[class*="rsg--link"][class*="rsg--heading"]
+  font-weight $weight-bold
+
+li[class*="rsg--item"][class*="rsg--item"]
+  line-height 1.2
+
+button[name="rsg--usage"]
+  border-bottom 1px dashed
+
+code[class*="rsg--code"][class*="rsg--code"]
+  font-size $size-small
+
+  background-color $color-tone-near-white
+
+  padding $rspace-small
+
+  border-radius $radius-normal
+
+footer[class*="rsg--footer"][class*="rsg--footer"]
   opacity 0.5
   transition opacity 0.5s
 
   &:hover
     opacity 1.0
+
+.dark-background[class*="rsg--preview"]
+  background-color $color-tone-near-black
