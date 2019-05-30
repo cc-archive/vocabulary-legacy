@@ -1,0 +1,29 @@
+# Spacing tokens
+# --------------
+# Define the spacing values between two elements.
+
+
+props:
+  space_smaller:
+    value: '0.125em'
+  space_small:
+    value: '0.25em'
+  space_normal:
+    value: '0.5em'
+  space_large:
+    value: '1em'
+  rspace_smaller:
+    value: '0.125rem'
+  rspace_small:
+    value: '0.25rem'
+  rspace_normal:
+    value: '0.5rem'
+  rspace_large:
+    value: '1rem'
+
+  space_zero:
+    value: '0'
+
+global:
+  type: size
+  category: spacing

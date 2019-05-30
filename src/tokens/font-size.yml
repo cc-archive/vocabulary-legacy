@@ -1,0 +1,26 @@
+# Font size tokens
+# ----------------
+# Describe the various font sizes on the page.
+
+
+props:
+  size_small:
+    value: '0.7937rem'
+  size_normal:
+    value: '1.0000rem'
+  size_big:
+    value: '1.2599rem'
+  size_large:
+    value: '1.5874rem'
+  size_huge:
+    value: '2.0000rem'
+  size_enormous:
+    value: '2.5198rem'
+  size_gigantic:
+    value: '3.1748rem'
+  size_mega:
+    value: '4.0000rem'
+
+global:
+  type: size
+  category: font-size

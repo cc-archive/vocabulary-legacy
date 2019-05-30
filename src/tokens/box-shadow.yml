@@ -1,0 +1,12 @@
+# Box shadow tokens
+# -----------------
+# Define the various types of box shadows.
+
+
+props:
+  shadow_subtle:
+    value: '0 1px 1px 0'
+
+global:
+  type: string
+  category: box-shadow

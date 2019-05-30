@@ -1,0 +1,13 @@
+# Master file where all other files will be imported.
+
+imports:
+  - ./color.yml
+  - ./font-size.yml
+  - ./font-weight.yml
+  - ./spacing.yml
+  - ./radius.yml
+  - ./box-shadow.yml
+
+global:
+  type: global
+  category: all

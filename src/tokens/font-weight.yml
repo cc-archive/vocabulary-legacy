@@ -1,0 +1,17 @@
+# Font weight tokens
+# ------------------
+# Describe the various font weights on the page.
+
+
+props:
+  weight_bold:
+    value: '700'
+  weight_normal:
+    value: '400'
+  weight_light:
+    value: '300'
+
+global:
+  type: number
+  category: font-weight
+

@@ -1,0 +1,135 @@
+# Colour tokens
+# -------------
+# Describe the various tones of various colours.
+
+
+props:
+  color_purple_lighter:
+    value: '#F7B2CC'
+    category: color_group_purple
+  color_purple_light:
+    value: '#B62B6E'
+    category: color_group_purple
+  color_purple:
+    value: '#7B1B53'
+    category: color_group_purple
+  color_purple_dark:
+    value: '#4F1035'
+    category: color_group_purple
+
+  color_violet_lighter:
+    value: '#D6B4D6'
+    category: color_group_violet
+  color_violet_light:
+    value: '#9628C6'
+    category: color_group_violet
+  color_violet:
+    value: '#9628C6'
+    category: color_group_violet
+  color_violet_dark:
+    value: '#42194F'
+    category: color_group_violet
+
+  color_blue_lighter:
+    value: '#BFCEEA'
+    category: color_group_blue
+  color_blue_light:
+    value: '#4374B7'
+    category: color_group_blue
+  color_blue:
+    value: '#214184'
+    category: color_group_blue
+  color_blue_dark:
+    value: '#102548'
+    category: color_group_blue
+
+  color_green_lighter:
+    value: '#E4EBA0'
+    category: color_group_green
+  color_green_light:
+    value: '#98C807'
+    category: color_group_green
+  color_green:
+    value: '#01A635'
+    category: color_group_green
+  color_green_dark:
+    value: '#3D5024'
+    category: color_group_green
+
+  color_yellow_lighter:
+    value: '#FFF3A2'
+    category: color_group_yellow
+  color_yellow_light:
+    value: '#EDD812'
+    category: color_group_yellow
+  color_yellow:
+    value: '#B09A11'
+    category: color_group_yellow
+  color_yellow_dark:
+    value: '#4E4917'
+    category: color_group_yellow
+
+  color_orange_lighter:
+    value: '#FFD89E'
+    category: color_group_orange
+  color_orange_light:
+    value: '#FB7928'
+    category: color_group_orange
+  color_orange:
+    value: '#EE5B32'
+    category: color_group_orange
+  color_orange_dark:
+    value: '#A46810'
+    category: color_group_orange
+
+  color_red_lighter:
+    value: '#FAB499'
+    category: color_group_red
+  color_red_light:
+    value: '#D13814'
+    category: color_group_red
+  color_red:
+    value: '#912B10'
+    category: color_group_red
+  color_red_dark:
+    value: '#5A1C0E'
+    category: color_group_red
+
+  color_context_primary:
+    value: '#4374B7'
+    category: color_contexts
+  color_context_positive:
+    value: '#98C807'
+    category: color_contexts
+  color_context_negative:
+    value: '#D13814'
+    category: color_contexts
+
+  color_tone_white:
+    value: '#FFFFFF'
+    category: color_tones
+  color_tone_near_white:
+    value: '#EDEDEE'
+    category: color_tones
+  color_tone_grey_lighter:
+    value: '#DCDDDE'
+    category: color_tones
+  color_tone_grey_light:
+    value: '#A7A9AC'
+    category: color_tones
+  color_tone_grey_dark:
+    value: '#636466'
+    category: color_tones
+  color_tone_grey_darker:
+    value: '#393839'
+    category: color_tones
+  color_tone_near_black:
+    value: '#121513'
+    category: color_tones
+  color_tone_black:
+    value: '#000000'
+    category: color_tones
+
+global:
+  type: color
+  category: color
