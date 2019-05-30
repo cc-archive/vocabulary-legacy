@@ -49,5 +49,32 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+
+  sections: [
+    {
+      name: 'Tokens',
+      content: 'src/tokens/SECTION.md',
+      sectionDepth: 1,
+      components: 'src/tokens/[A-Z]*/[A-Z]*.vue'
+    },
+    {
+      name: 'Elements',
+      content: 'src/elements/SECTION.md',
+      sectionDepth: 1,
+      components: 'src/elements/[A-Z]*/[A-Z]*.vue'
+    },
+    {
+      name: 'Patterns',
+      content: 'src/patterns/SECTION.md',
+      sectionDepth: 1,
+      components: 'src/patterns/[A-Z]*/[A-Z]*.vue'
+    },
+    {
+      name: 'Templates',
+      content: 'src/templates/SECTION.md',
+      sectionDepth: 1,
+      components: 'src/templates/[A-Z]*/[A-Z]*.vue'
+    }
+  ]
 }
