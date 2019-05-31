@@ -372,6 +372,13 @@
       "originalValue": "1em",
       "name": "space_large"
     },
+    "rspace_larger": {
+      "type": "size",
+      "category": "spacing",
+      "value": "2rem",
+      "originalValue": "2rem",
+      "name": "rspace_larger"
+    },
     "rspace_smaller": {
       "type": "size",
       "category": "spacing",
@@ -385,6 +392,13 @@
       "value": "0.25em",
       "originalValue": "0.25em",
       "name": "space_small"
+    },
+    "space_larger": {
+      "type": "size",
+      "category": "spacing",
+      "value": "2em",
+      "originalValue": "2em",
+      "name": "space_larger"
     },
     "rspace_large": {
       "type": "size",

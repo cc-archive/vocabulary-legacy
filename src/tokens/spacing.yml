@@ -12,6 +12,9 @@ props:
     value: '0.5em'
   space_large:
     value: '1em'
+  space_larger:
+    value: '2em'
+
   rspace_smaller:
     value: '0.125rem'
   rspace_small:
@@ -20,6 +23,8 @@ props:
     value: '0.5rem'
   rspace_large:
     value: '1rem'
+  rspace_larger:
+    value: '2rem'
 
   space_zero:
     value: '0'

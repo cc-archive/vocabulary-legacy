@@ -8,12 +8,14 @@ props:
     value: '50%'
   radius_circle:
     value: '999px'
+
   radius_small:
     value: '0.125em'
   radius_normal:
     value: '0.25em'
   radius_large:
     value: '0.5em'
+
   rradius_small:
     value: '0.125rem'
   rradius_normal:
