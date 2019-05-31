@@ -12,13 +12,13 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/script-indent': ['error', 2, {
       baseIndent: 1
-    }]
+    }] // Supersedes the normal indent rule
   },
   overrides: [
     {
       files: ['*.vue'],
       rules: {
-        indent: 'off'
+        indent: 'off' // Replaced by vue/script-indent
       }
     }
   ],
