@@ -24,7 +24,8 @@ module.exports = {
     StyleGuide: {
       '@global html': {
         fontFamily: ['"Source Sans Pro"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
-        lineHeight: 1
+        fontSize: 16,
+        lineHeight: 1.2
       }
     }
   },
