@@ -1,11 +1,25 @@
 @import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
 
 .colors
   display: grid;
-  max-width: 1200px;
   align-content: stretch;
   justify-content: left;
 
-  grid-template-columns 1fr 1fr 1fr 1fr
   grid-column-gap $space-large
   grid-row-gap $space-large
+
+  +phone-only()
+    grid-template-columns 1fr
+
+  +tablet-portrait-up()
+    grid-template-columns 1fr 1fr
+
+  +tablet-landscape-up()
+    grid-template-columns 1fr 1fr 1fr 1fr
+
+  +desktop-up()
+    grid-template-columns 1fr 1fr 1fr 1fr
+
+  +big-desktop-up()
+    grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
