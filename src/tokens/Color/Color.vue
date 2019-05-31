@@ -10,7 +10,8 @@
       </Heading>
       <p>
         <strong>Value:</strong><code> {{ value }}</code>
-        <br>
+      </p>
+      <p>
         <strong>Style:</strong><code> ${{ styleName }}</code>
       </p>
     </div>
