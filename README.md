@@ -22,9 +22,20 @@ CC Vocabulary is a collection of UI components that
 - make it easier for developers to make a seamless experience across the Creative Commons suite
 
 As a library, CC Vocabulary
-- provides Storybooks to make it easy to visualise and test-drive components
-- will also decrease the barrier of entry and increase the productivity in frontend-development
+- provides styleguides to make it easy to see all variations of a component
+- provide playgrounds to visualise and test-drive components
+- will decrease the barrier of entry and increase the productivity in frontend-development
 - will take the effort out of developing the frontend of a new service by enabling remixing components
+
+## Screenshots
+
+Feast your eyes on this.
+
+![screenshot_1](readme_assets/screenshot_1.png)
+Styleguide shows all variations of the `Heading` component.
+
+![screenshot_2](readme_assets/screenshot_2.png)
+Styleguide shows the various colors tokens that are part of the library.
 
 ## Disclaimer
 
