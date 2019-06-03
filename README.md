@@ -6,6 +6,8 @@
 
 # Vocabulary
 
+[![CircleCI](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield)](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master)
+
 CC Vocabulary is a collection of UI components, available both as CSS stylesheets and minified JS, as well as Vue components, that make it easy to develop Creative Commons apps and services while ensuring a cohesive experience and appearance across CC projects.
 
 CC Vocabulary would make it easy for designers to design and prototype mockups, developers to develop evolving standards-compliant code that covers a large number of use-cases out-of-the-box and users to navigate a more consistently familiar CC web presence.
