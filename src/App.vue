@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    Hello World!
+    <Index/>
   </div>
 </template>
 
 <script>
+  import Index from '@/templates/Index/Index'
+
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      Index
+    }
   }
 </script>
 
