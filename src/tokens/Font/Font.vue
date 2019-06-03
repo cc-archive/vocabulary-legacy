@@ -19,7 +19,6 @@
 </template>
 
 <script>
-  import camelCase from 'lodash/camelCase'
   import startCase from 'lodash/startCase'
 
   import Heading from '@/elements/Heading/Heading'
@@ -57,7 +56,9 @@
        * the capitalised name to show to the viewer
        */
       properName: function () {
-        return startCase(this.name.replace(/_/g, ' ').replace(/color/g, ''))
+        return startCase(
+          this.name.replace(/_/g, ' ').replace(this.property, '')
+        )
       },
       /**
        * the Stylus style name for this value
@@ -70,14 +71,8 @@
        */
       style: function () {
         let styleDict = {}
-        styleDict[this.properProperty] = this.value
+        styleDict[`font${startCase(this.property)}`] = this.value
         return styleDict
-      },
-      /**
-       * the camel cased property name to use in the JSS swatch
-       */
-      properProperty: function () {
-        return camelCase(this.property)
       }
     }
   }

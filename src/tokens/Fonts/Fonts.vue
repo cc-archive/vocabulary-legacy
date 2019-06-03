@@ -3,7 +3,7 @@
     <Font
       v-for="(props, index) in values"
       :key="index"
-      :property="`font-${property}`"
+      :property="property"
       :name="props.name"
       :value="props.value"/>
   </div>
