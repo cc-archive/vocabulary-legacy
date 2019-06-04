@@ -8,9 +8,15 @@
 
 [![CircleCI](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield)](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master)
 
-CC Vocabulary is a collection of UI components, available both as CSS stylesheets and minified JS, as well as Vue components, that make it easy to develop Creative Commons apps and services while ensuring a cohesive experience and appearance across CC projects.
+CC Vocabulary is a collection of UI components, available both as CSS
+stylesheets and minified JS, as well as Vue components, that make it easy to
+develop Creative Commons apps and services while ensuring a cohesive experience
+and appearance across CC projects.
 
-CC Vocabulary would make it easy for designers to design and prototype mockups, developers to develop evolving standards-compliant code that covers a large number of use-cases out-of-the-box and users to navigate a more consistently familiar CC web presence.
+CC Vocabulary would make it easy for designers to design and prototype mockups,
+developers to develop evolving standards-compliant code that covers a large
+number of use-cases out-of-the-box and users to navigate a more consistently
+familiar CC web presence.
 
 ## Goals
 
@@ -39,6 +45,13 @@ Styleguide shows all variations of the `Heading` component.
 ![screenshot_2](readme_assets/screenshot_2.png)
 Styleguide shows the various colors tokens that are part of the library.
 
+## Contributing code
+
+For instructions regarding contributing code to the project, read the file
+`DEVELOPMENT.md` in the repository.
+
 ## Disclaimer
 
-This project is still under development and as a consequence of the fact, users of the library should be expect to encounter bugs. Feedback and bug reports are welcome, fixes and patches even more so.
+This project is still under development and as a consequence of the fact, users
+of the library should be expect to encounter bugs. Feedback and bug reports are
+welcome, fixes and patches even more so.
