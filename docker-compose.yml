@@ -1,0 +1,52 @@
+##############################
+# Development Docker Compose #
+##############################
+
+# This is the version of the Docker Compose standard
+version: '3.4'
+
+services:
+  # The website is the landing page for the CC Vocabulary project
+  website:
+    # Use the CC Vocabulary image
+    image: ccvocabulary:latest
+    # If the image is not found, build it
+    build: .
+
+    # The command to run in the container
+    command: npm run serve
+
+    # Volumes attached to the container
+    volumes:
+      # Enable code changes to reflect in the container
+      - .:/codebase
+      # Ensures that host node_modules are not mounted
+      - node_modules:/codebase/node_modules
+    ports:
+      # Map 8080 in the container to the same port on the host
+      - 8080:8080
+
+  # The documentation is the guide on how to use CC Vocabulary components
+  documentation:
+    # Use the CC Vocabulary image
+    image: ccvocabulary:latest
+    # If the image is not found, build it
+    build: .
+
+    # The command to run in the container
+    command: npm run styleguide
+
+    # Volumes attached to the container
+    volumes:
+      # Enable code changes to reflect in the container
+      - .:/codebase
+      # Ensures that host node_modules are not mounted
+      - node_modules:/codebase/node_modules
+    ports:
+      # Map 6060 in the container to the same port on the host
+      - 6060:6060
+
+volumes:
+  # Holds the node_modules directory
+  # Prevents the host node_modules from being mounted and used
+  node_modules:
