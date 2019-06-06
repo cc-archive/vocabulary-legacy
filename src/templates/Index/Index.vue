@@ -5,7 +5,7 @@
       inverted
       heading="Welcome!"
       tagline=" "
-      :show-logo="false"
+      logoType="none"
       title=";-)">
       <Heading :level="4" inverted>Everything is fine.</Heading>
     </Hello>

@@ -1,16 +1,9 @@
 <template>
   <div class="hello">
-    <div v-if="showLogo">
-      <img v-if="inverted"
-           src="@/assets/logo/wordmark_white.svg"
-           alt="Creative Commons logo"
-           class="hello--logo">
-      <img v-else
-           src="@/assets/logo/wordmark_black.svg"
-           alt="Creative Commons logo"
-           class="hello--logo">
-    </div>
-
+    <img v-if="logoType !== 'none'"
+         :src="logo"
+         alt="Creative Commons logo"
+         class="hello--logo">
     <Heading :level="4" :inverted="inverted">{{ heading }}</Heading>
     <!-- @slot Use this to insert additional content -->
     <slot>
@@ -44,11 +37,17 @@
     },
     props: {
       /**
-       * whether to show the Creative Commons logo
+       * which Creative Commons logo to show, if any
        */
-      showLogo: {
-        type: Boolean,
-        default: true
+      logoType: {
+        type: String,
+        validator: val => [
+          'wordmark',
+          'lettermark',
+          'letterheart',
+          'none' // Hides the logo altogether
+        ].includes(val),
+        default: 'wordmark'
       },
       /**
        * the heading displayed by the component
@@ -81,6 +80,12 @@
           let count = this.taglines.length
           return this.taglines[Math.floor(Math.random() * count)]
         }
+      },
+      logo: function () {
+        let color = this.inverted ? 'white' : 'black'
+        return require(
+          `@/assets/logo/${this.logoType}_${color}.svg`
+        )
       }
     }
   }

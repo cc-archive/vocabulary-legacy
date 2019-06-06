@@ -12,6 +12,15 @@ randomly chosen welcoming tagline from a predefined set.
 <Hello/>
 ```
 
+The logo at the top can be one of three variants (or none at all):
+- wordmark
+- lettermark
+- letterheart
+
+```jsx
+<Hello logoType="letterheart"/>
+```
+
 These texts can be overwritten by passing the `heading` and `tagline` prop to 
 the component. Passing these props removes the random functionality. Note that
 the Creative Commons logo might look a tad bit weird with unrelated text 
@@ -20,7 +29,7 @@ underneath it, so it can be turned off as well.
 ```jsx
 <Hello heading="Reality can be whatever I want." 
        tagline="— Thanos"
-       :showLogo="false"/>
+       logoType="none"/>
 ```
 
 If you hate the idea of a tagline, you can use the default `slot` to insert any 
