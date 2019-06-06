@@ -1,6 +1,6 @@
 # Templates
 
-![representation](../assets/icons/template.svg)
+![representation](../assets/icons/ds_nomenclature/template.svg)
 
 Templates exist to formulate the layout and structure of a page. They utilise 
 elements, patterns and tokens.

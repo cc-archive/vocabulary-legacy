@@ -1,6 +1,6 @@
 # Elements
 
-![representation](../assets/icons/element.svg)
+![representation](../assets/icons/ds_nomenclature/element.svg)
 
 Elements are components that cannot be broken down into smaller or simpler 
 components. They utilize decisions made on the token level.

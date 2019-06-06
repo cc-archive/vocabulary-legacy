@@ -1,5 +1,5 @@
 <center>
-  <img src="/icons/pattern.svg" width="64px" />
+  <img src="/icons/ds_nomenclature/pattern.svg" width="64px" />
 </center>
 
 &nbsp;

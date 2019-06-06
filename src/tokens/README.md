@@ -1,6 +1,6 @@
 # Tokens
 
-![representation](../assets/icons/token.svg)
+![representation](../assets/icons/ds_nomenclature/token.svg)
 
 Design tokens are the atoms of the system. They are used instead of hardcoded 
 values to ensure a better consistency across platforms.

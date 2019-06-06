@@ -1,6 +1,6 @@
 # Patterns
 
-![representation](../assets/icons/pattern.svg)
+![representation](../assets/icons/ds_nomenclature/pattern.svg)
 
 Patterns are UI patterns that fall on the more complex side of the spectrum. 
 Patterns utilize both elements and tokens.

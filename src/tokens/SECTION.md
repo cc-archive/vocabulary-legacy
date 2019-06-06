@@ -1,5 +1,5 @@
 <center>
-  <img src="/icons/token.svg" width="64px" />
+  <img src="/icons/ds_nomenclature/token.svg" width="64px" />
 </center>
 
 &nbsp;
