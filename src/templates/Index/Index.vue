@@ -1,22 +1,25 @@
 <template>
-  <div :class="isEasterEggMode? 'index--easter-egg': 'index'">
-    <Hello
-      v-if="isEasterEggMode"
-      inverted
-      heading="Welcome!"
-      tagline=" "
-      logoType="none"
-      title=";-)">
-      <Heading :level="4" inverted>Everything is fine.</Heading>
-    </Hello>
-    <Hello
-      v-else
-      inverted/>
+  <div class="index" :class="{'easter-egg': isEasterEggMode}">
+    <main>
+      <Hello
+        v-if="isEasterEggMode"
+        inverted
+        heading="Welcome!"
+        tagline=" "
+        logoType="none"
+        title=";-)">
+        <Heading :level="4" inverted>Everything is fine.</Heading>
+      </Hello>
+      <Hello
+        v-else
+        inverted/>
+    </main>
   </div>
 </template>
 
 <script>
   import Heading from '@/elements/Heading/Heading'
+
   import Hello from '@/patterns/Hello/Hello'
 
   export default {

@@ -1,18 +1,13 @@
 @import "~@/assets/tokens/tokens.styl"
-
-.index,
-.index--easter-egg
-  height 100%
-
-  display flex
-  flex-direction column
-  align-items center
-  justify-content center
+@import "~@/styles/page.styl"
 
 .index
-  background radial-gradient($color-orange-light, $color-orange)
+  page()
 
-.index--easter-egg
-  background $color-green
+  main
+    min-height 100vh
+    background radial-gradient($color-orange-light, $color-orange)
 
-
+.easter-egg
+  main
+    background $color-green
