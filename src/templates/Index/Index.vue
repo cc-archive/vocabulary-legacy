@@ -14,6 +14,7 @@
         v-else
         inverted/>
     </main>
+    <Footer/>
   </div>
 </template>
 
@@ -21,12 +22,14 @@
   import Heading from '@/elements/Heading/Heading'
 
   import Hello from '@/patterns/Hello/Hello'
+  import Footer from '@/patterns/Footer/Footer'
 
   export default {
     name: 'Index',
     components: {
       Heading,
-      Hello
+      Hello,
+      Footer
     },
     props: {
       /**
