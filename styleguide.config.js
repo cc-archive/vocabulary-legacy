@@ -31,6 +31,7 @@ module.exports = {
   },
 
   require: [
+    path.join(__dirname, 'src/icons.js'),
     path.join(__dirname, 'styleguidist/style.styl')
   ],
   template: {
