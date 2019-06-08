@@ -9,6 +9,9 @@ props:
   radius_circle:
     value: '999px'
 
+  radius_zero:
+    value: '0'
+
   radius_small:
     value: '0.125em'
   radius_normal:

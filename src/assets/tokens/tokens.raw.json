@@ -428,47 +428,12 @@
       "originalValue": "0.25rem",
       "name": "rspace_small"
     },
-    "radius_ellipse": {
+    "rradius_large": {
       "type": "size",
       "category": "radius",
-      "value": "50%",
-      "originalValue": "50%",
-      "name": "radius_ellipse"
-    },
-    "radius_circle": {
-      "type": "size",
-      "category": "radius",
-      "value": "999px",
-      "originalValue": "999px",
-      "name": "radius_circle"
-    },
-    "radius_small": {
-      "type": "size",
-      "category": "radius",
-      "value": "0.125em",
-      "originalValue": "0.125em",
-      "name": "radius_small"
-    },
-    "radius_normal": {
-      "type": "size",
-      "category": "radius",
-      "value": "0.25em",
-      "originalValue": "0.25em",
-      "name": "radius_normal"
-    },
-    "radius_large": {
-      "type": "size",
-      "category": "radius",
-      "value": "0.5em",
-      "originalValue": "0.5em",
-      "name": "radius_large"
-    },
-    "rradius_small": {
-      "type": "size",
-      "category": "radius",
-      "value": "0.125rem",
-      "originalValue": "0.125rem",
-      "name": "rradius_small"
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
+      "name": "rradius_large"
     },
     "rradius_normal": {
       "type": "size",
@@ -477,12 +442,54 @@
       "originalValue": "0.25rem",
       "name": "rradius_normal"
     },
-    "rradius_large": {
+    "rradius_small": {
       "type": "size",
       "category": "radius",
-      "value": "0.5rem",
-      "originalValue": "0.5rem",
-      "name": "rradius_large"
+      "value": "0.125rem",
+      "originalValue": "0.125rem",
+      "name": "rradius_small"
+    },
+    "radius_large": {
+      "type": "size",
+      "category": "radius",
+      "value": "0.5em",
+      "originalValue": "0.5em",
+      "name": "radius_large"
+    },
+    "radius_ellipse": {
+      "type": "size",
+      "category": "radius",
+      "value": "50%",
+      "originalValue": "50%",
+      "name": "radius_ellipse"
+    },
+    "radius_normal": {
+      "type": "size",
+      "category": "radius",
+      "value": "0.25em",
+      "originalValue": "0.25em",
+      "name": "radius_normal"
+    },
+    "radius_zero": {
+      "type": "size",
+      "category": "radius",
+      "value": "0",
+      "originalValue": "0",
+      "name": "radius_zero"
+    },
+    "radius_small": {
+      "type": "size",
+      "category": "radius",
+      "value": "0.125em",
+      "originalValue": "0.125em",
+      "name": "radius_small"
+    },
+    "radius_circle": {
+      "type": "size",
+      "category": "radius",
+      "value": "999px",
+      "originalValue": "999px",
+      "name": "radius_circle"
     },
     "shadow_subtle": {
       "type": "string",
