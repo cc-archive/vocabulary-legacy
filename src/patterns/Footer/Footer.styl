@@ -1,0 +1,73 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
+@import "~@/styles/list.styl"
+
+footer
+  color $color-tone-grey-light
+  background-color $color-tone-grey-darker
+
+.grid
+  width 100%
+
+  display grid
+  align-content stretch
+  justify-content left
+
+  grid-column-gap $space-large
+  grid-row-gap $space-large
+
+  padding $rspace-large $space-zero
+
+  +phone-only()
+    grid-template-columns 1fr
+
+  +tablet-portrait-up()
+    grid-template-columns 1fr 1fr
+
+  +tablet-landscape-up()
+    grid-template-columns 1fr 1fr 1fr
+
+  +desktop-up()
+    grid-template-columns 1fr 1fr 1fr
+
+  +big-desktop-up()
+    grid-template-columns 1fr 1fr 1fr
+
+.column
+  padding $space-zero $space-normal
+
+#branding
+  display flex
+  flex-direction column
+  justify-content space-between
+
+  .logo
+    width 15rem
+
+    margin $space-large 0
+
+  .links
+    ul
+      piped-list-compact()
+
+#contact
+  address
+    font-style normal
+
+    margin-bottom $space-small
+
+  .contacts
+    bland-list()
+
+    color $color-blue-light
+
+h6
+  &:hover
+    color $color-tone-white
+
+a
+  color inherit
+  text-decoration none
+
+  &:hover
+    color $color-tone-white
