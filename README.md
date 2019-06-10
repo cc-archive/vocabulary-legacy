@@ -4,6 +4,7 @@
     </a>
 </p>
 
+
 # Vocabulary
 
 [![CircleCI](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield)](https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master)
@@ -18,6 +19,7 @@ developers to develop evolving standards-compliant code that covers a large
 number of use-cases out-of-the-box and users to navigate a more consistently
 familiar CC web presence.
 
+
 ## Goals
 
 CC Vocabulary is a collection of UI components that
@@ -25,15 +27,20 @@ CC Vocabulary is a collection of UI components that
 - cover as many use-cases and scenarios as possible out-of-the-box
 - are flexible to accommodate a certain degree of variation
 - ensure accessibility, internationalisation and localisation to a large extent
-- enable a clear separation between generic components and very app specific components
+- enable a clear separation between generic components and very app specific
+  components
 - come packaged as a simple to use npm package for ease of use
-- make it easier for developers to make a seamless experience across the Creative Commons suite
+- make it easier for developers to make a seamless experience across the
+  Creative Commons suite
 
 As a library, CC Vocabulary
 - provides styleguides to make it easy to see all variations of a component
 - provide playgrounds to visualise and test-drive components
-- will decrease the barrier of entry and increase the productivity in frontend-development
-- will take the effort out of developing the frontend of a new service by enabling remixing components
+- will decrease the barrier of entry and increase the productivity in
+  frontend-development
+- will take the effort out of developing the frontend of a new service by
+  enabling remixing components
+
 
 ## Screenshots
 
@@ -45,13 +52,22 @@ Styleguide shows all variations of the `Heading` component.
 ![screenshot_2](readme_assets/screenshot_2.png)
 Styleguide shows the various colors tokens that are part of the library.
 
+
 ## Contributing code
 
 For instructions regarding contributing code to the project, read the file
-`DEVELOPMENT.md` in the repository.
+[`DEVELOPMENT.md`](DEVELOPMENT.md) in the repository.
+
 
 ## Disclaimer
 
 This project is still under development and as a consequence of the fact, users
 of the library should be expect to encounter bugs. Feedback and bug reports are
 welcome, fixes and patches even more so.
+
+
+## License
+
+- [`LICENSE`](LICENSE) (Expat/[MIT][mit] License)
+
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
