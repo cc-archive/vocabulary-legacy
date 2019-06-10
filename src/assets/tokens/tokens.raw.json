@@ -235,8 +235,8 @@
     "color_violet": {
       "type": "color",
       "category": "color_group_violet",
-      "value": "rgb(150, 40, 198)",
-      "originalValue": "#9628C6",
+      "value": "rgb(102, 41, 120)",
+      "originalValue": "#662978",
       "name": "color_violet"
     },
     "color_purple_lighter": {

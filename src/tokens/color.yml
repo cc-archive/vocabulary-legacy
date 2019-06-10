@@ -24,7 +24,7 @@ props:
     value: '#9628C6'
     category: color_group_violet
   color_violet:
-    value: '#9628C6'
+    value: '#662978'
     category: color_group_violet
   color_violet_dark:
     value: '#42194F'
