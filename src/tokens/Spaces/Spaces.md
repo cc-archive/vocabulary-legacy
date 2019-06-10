@@ -5,7 +5,8 @@ different units to ensure consistency in the whitespaces throughout the project.
 ### `em` based
 
 Vocabulary provides a number of spaces calculated as a fraction of the font size
-of the element.
+of the element. So in an element with `font-size: 3em`, the sizes are 
+tripled.
 
 ```jsx
 <div style="font-size: 3em;">
@@ -16,7 +17,7 @@ of the element.
 ### `rem` based
 
 Vocabulary provides a number of spaces calculated as a fraction of the font size
-of the root element, which is by default 16px.
+of the root element. This is set to 16 pixels by default but can be overridden.
 
 ```jsx
 <Spaces units="rem"/>
