@@ -12,6 +12,7 @@ module.exports = {
   pagePerSection: true,
 
   assetsDir: 'src/assets/',
+  styleguideDir: 'docs', // For easy push to GitHub Pages
 
   theme: {
     sidebarWidth: 256,
