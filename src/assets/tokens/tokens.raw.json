@@ -4,13 +4,20 @@
     "color_red_dark": {
       "type": "color",
       "category": "color_group_red",
-      "value": "rgb(90, 28, 14)",
-      "originalValue": "#5A1C0E",
+      "value": "rgb(145, 43, 16)",
+      "originalValue": "#912B10",
       "name": "color_red_dark"
+    },
+    "color_sand": {
+      "type": "color",
+      "category": "color_group_sand",
+      "value": "rgb(177, 162, 74)",
+      "originalValue": "#B1A24A",
+      "name": "color_sand"
     },
     "color_context_negative": {
       "type": "color",
-      "category": "color_contexts",
+      "category": "color_group_context",
       "value": "rgb(209, 56, 20)",
       "originalValue": "#D13814",
       "name": "color_context_negative"
@@ -18,34 +25,55 @@
     "color_orange_light": {
       "type": "color",
       "category": "color_group_orange",
-      "value": "rgb(251, 121, 40)",
-      "originalValue": "#FB7928",
+      "value": "rgb(255, 216, 158)",
+      "originalValue": "#FFD89E",
       "name": "color_orange_light"
+    },
+    "color_sand_darker": {
+      "type": "color",
+      "category": "color_group_sand",
+      "value": "rgb(68, 65, 31)",
+      "originalValue": "#44411F",
+      "name": "color_sand_darker"
+    },
+    "color_olive_darker": {
+      "type": "color",
+      "category": "color_group_olive",
+      "value": "rgb(42, 55, 47)",
+      "originalValue": "#2A372F",
+      "name": "color_olive_darker"
     },
     "color_tone_near_white": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(237, 237, 238)",
       "originalValue": "#EDEDEE",
       "name": "color_tone_near_white"
     },
+    "color_magenta_light": {
+      "type": "color",
+      "category": "color_group_magenta",
+      "value": "rgb(247, 178, 204)",
+      "originalValue": "#F7B2CC",
+      "name": "color_magenta_light"
+    },
     "color_yellow_dark": {
       "type": "color",
       "category": "color_group_yellow",
-      "value": "rgb(78, 73, 23)",
-      "originalValue": "#4E4917",
+      "value": "rgb(176, 154, 17)",
+      "originalValue": "#B09A11",
       "name": "color_yellow_dark"
     },
     "color_tone_grey_dark": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(99, 100, 102)",
       "originalValue": "#636466",
       "name": "color_tone_grey_dark"
     },
     "color_context_positive": {
       "type": "color",
-      "category": "color_contexts",
+      "category": "color_group_context",
       "value": "rgb(152, 200, 7)",
       "originalValue": "#98C807",
       "name": "color_context_positive"
@@ -53,62 +81,90 @@
     "color_yellow_light": {
       "type": "color",
       "category": "color_group_yellow",
-      "value": "rgb(237, 216, 18)",
-      "originalValue": "#EDD812",
+      "value": "rgb(255, 243, 162)",
+      "originalValue": "#FFF3A2",
       "name": "color_yellow_light"
     },
     "color_green": {
       "type": "color",
       "category": "color_group_green",
-      "value": "rgb(1, 166, 53)",
-      "originalValue": "#01A635",
+      "value": "rgb(152, 200, 7)",
+      "originalValue": "#98C807",
       "name": "color_green"
     },
     "color_tone_grey_light": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(167, 169, 172)",
       "originalValue": "#A7A9AC",
       "name": "color_tone_grey_light"
     },
+    "color_magenta_dark": {
+      "type": "color",
+      "category": "color_group_magenta",
+      "value": "rgb(123, 27, 83)",
+      "originalValue": "#7B1B53",
+      "name": "color_magenta_dark"
+    },
+    "color_purple_darker": {
+      "type": "color",
+      "category": "color_group_purple",
+      "value": "rgb(66, 25, 79)",
+      "originalValue": "#42194F",
+      "name": "color_purple_darker"
+    },
     "color_orange": {
       "type": "color",
       "category": "color_group_orange",
-      "value": "rgb(238, 91, 50)",
-      "originalValue": "#EE5B32",
+      "value": "rgb(251, 121, 40)",
+      "originalValue": "#FB7928",
       "name": "color_orange"
     },
     "color_orange_dark": {
       "type": "color",
       "category": "color_group_orange",
-      "value": "rgb(164, 104, 16)",
-      "originalValue": "#A46810",
+      "value": "rgb(238, 91, 50)",
+      "originalValue": "#EE5B32",
       "name": "color_orange_dark"
-    },
-    "color_green_lighter": {
-      "type": "color",
-      "category": "color_group_green",
-      "value": "rgb(228, 235, 160)",
-      "originalValue": "#E4EBA0",
-      "name": "color_green_lighter"
     },
     "color_red_light": {
       "type": "color",
       "category": "color_group_red",
-      "value": "rgb(209, 56, 20)",
-      "originalValue": "#D13814",
+      "value": "rgb(250, 180, 153)",
+      "originalValue": "#FAB499",
       "name": "color_red_light"
+    },
+    "color_blue_darker": {
+      "type": "color",
+      "category": "color_group_blue",
+      "value": "rgb(16, 37, 72)",
+      "originalValue": "#102548",
+      "name": "color_blue_darker"
+    },
+    "color_red_darker": {
+      "type": "color",
+      "category": "color_group_red",
+      "value": "rgb(90, 28, 14)",
+      "originalValue": "#5A1C0E",
+      "name": "color_red_darker"
     },
     "color_blue_light": {
       "type": "color",
       "category": "color_group_blue",
-      "value": "rgb(67, 116, 183)",
-      "originalValue": "#4374B7",
+      "value": "rgb(191, 206, 234)",
+      "originalValue": "#BFCEEA",
       "name": "color_blue_light"
+    },
+    "color_magenta": {
+      "type": "color",
+      "category": "color_group_magenta",
+      "value": "rgb(182, 43, 110)",
+      "originalValue": "#B62B6E",
+      "name": "color_magenta"
     },
     "color_tone_black": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(0, 0, 0)",
       "originalValue": "#000000",
       "name": "color_tone_black"
@@ -116,162 +172,162 @@
     "color_green_dark": {
       "type": "color",
       "category": "color_group_green",
-      "value": "rgb(61, 80, 36)",
-      "originalValue": "#3D5024",
+      "value": "rgb(1, 166, 53)",
+      "originalValue": "#01A635",
       "name": "color_green_dark"
-    },
-    "color_orange_lighter": {
-      "type": "color",
-      "category": "color_group_orange",
-      "value": "rgb(255, 216, 158)",
-      "originalValue": "#FFD89E",
-      "name": "color_orange_lighter"
     },
     "color_purple_light": {
       "type": "color",
       "category": "color_group_purple",
-      "value": "rgb(182, 43, 110)",
-      "originalValue": "#B62B6E",
+      "value": "rgb(214, 180, 214)",
+      "originalValue": "#D6B4D6",
       "name": "color_purple_light"
     },
     "color_yellow": {
       "type": "color",
       "category": "color_group_yellow",
-      "value": "rgb(176, 154, 17)",
-      "originalValue": "#B09A11",
+      "value": "rgb(237, 216, 18)",
+      "originalValue": "#EDD812",
       "name": "color_yellow"
     },
-    "color_violet_light": {
+    "color_yellow_darker": {
       "type": "color",
-      "category": "color_group_violet",
-      "value": "rgb(150, 40, 198)",
-      "originalValue": "#9628C6",
-      "name": "color_violet_light"
+      "category": "color_group_yellow",
+      "value": "rgb(78, 73, 23)",
+      "originalValue": "#4E4917",
+      "name": "color_yellow_darker"
     },
     "color_tone_grey_darker": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(57, 56, 57)",
       "originalValue": "#393839",
       "name": "color_tone_grey_darker"
     },
     "color_tone_grey_lighter": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(220, 221, 222)",
       "originalValue": "#DCDDDE",
       "name": "color_tone_grey_lighter"
     },
-    "color_yellow_lighter": {
+    "color_sand_dark": {
       "type": "color",
-      "category": "color_group_yellow",
-      "value": "rgb(255, 243, 162)",
-      "originalValue": "#FFF3A2",
-      "name": "color_yellow_lighter"
+      "category": "color_group_sand",
+      "value": "rgb(109, 97, 24)",
+      "originalValue": "#6D6118",
+      "name": "color_sand_dark"
     },
     "color_red": {
       "type": "color",
       "category": "color_group_red",
-      "value": "rgb(145, 43, 16)",
-      "originalValue": "#912B10",
+      "value": "rgb(209, 56, 20)",
+      "originalValue": "#D13814",
       "name": "color_red"
+    },
+    "color_magenta_darker": {
+      "type": "color",
+      "category": "color_group_magenta",
+      "value": "rgb(79, 16, 53)",
+      "originalValue": "#4F1035",
+      "name": "color_magenta_darker"
+    },
+    "color_olive_dark": {
+      "type": "color",
+      "category": "color_group_olive",
+      "value": "rgb(67, 89, 74)",
+      "originalValue": "#43594A",
+      "name": "color_olive_dark"
     },
     "color_context_primary": {
       "type": "color",
-      "category": "color_contexts",
+      "category": "color_group_context",
       "value": "rgb(67, 116, 183)",
       "originalValue": "#4374B7",
       "name": "color_context_primary"
     },
+    "color_olive_light": {
+      "type": "color",
+      "category": "color_group_olive",
+      "value": "rgb(224, 228, 225)",
+      "originalValue": "#E0E4E1",
+      "name": "color_olive_light"
+    },
     "color_blue": {
       "type": "color",
       "category": "color_group_blue",
-      "value": "rgb(33, 65, 132)",
-      "originalValue": "#214184",
+      "value": "rgb(67, 116, 183)",
+      "originalValue": "#4374B7",
       "name": "color_blue"
+    },
+    "color_sand_light": {
+      "type": "color",
+      "category": "color_group_sand",
+      "value": "rgb(235, 224, 178)",
+      "originalValue": "#EBE0B2",
+      "name": "color_sand_light"
     },
     "color_purple": {
       "type": "color",
       "category": "color_group_purple",
-      "value": "rgb(123, 27, 83)",
-      "originalValue": "#7B1B53",
+      "value": "rgb(150, 40, 198)",
+      "originalValue": "#9628C6",
       "name": "color_purple"
     },
     "color_tone_white": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(255, 255, 255)",
       "originalValue": "#FFFFFF",
       "name": "color_tone_white"
     },
+    "color_orange_darker": {
+      "type": "color",
+      "category": "color_group_orange",
+      "value": "rgb(164, 104, 16)",
+      "originalValue": "#A46810",
+      "name": "color_orange_darker"
+    },
     "color_tone_near_black": {
       "type": "color",
-      "category": "color_tones",
+      "category": "color_group_tone",
       "value": "rgb(18, 21, 19)",
       "originalValue": "#121513",
       "name": "color_tone_near_black"
     },
-    "color_red_lighter": {
+    "color_green_darker": {
       "type": "color",
-      "category": "color_group_red",
-      "value": "rgb(250, 180, 153)",
-      "originalValue": "#FAB499",
-      "name": "color_red_lighter"
-    },
-    "color_violet_dark": {
-      "type": "color",
-      "category": "color_group_violet",
-      "value": "rgb(66, 25, 79)",
-      "originalValue": "#42194F",
-      "name": "color_violet_dark"
-    },
-    "color_blue_lighter": {
-      "type": "color",
-      "category": "color_group_blue",
-      "value": "rgb(191, 206, 234)",
-      "originalValue": "#BFCEEA",
-      "name": "color_blue_lighter"
-    },
-    "color_violet": {
-      "type": "color",
-      "category": "color_group_violet",
-      "value": "rgb(102, 41, 120)",
-      "originalValue": "#662978",
-      "name": "color_violet"
-    },
-    "color_purple_lighter": {
-      "type": "color",
-      "category": "color_group_purple",
-      "value": "rgb(247, 178, 204)",
-      "originalValue": "#F7B2CC",
-      "name": "color_purple_lighter"
+      "category": "color_group_green",
+      "value": "rgb(61, 80, 36)",
+      "originalValue": "#3D5024",
+      "name": "color_green_darker"
     },
     "color_purple_dark": {
       "type": "color",
       "category": "color_group_purple",
-      "value": "rgb(79, 16, 53)",
-      "originalValue": "#4F1035",
+      "value": "rgb(102, 41, 120)",
+      "originalValue": "#662978",
       "name": "color_purple_dark"
     },
     "color_green_light": {
       "type": "color",
       "category": "color_group_green",
-      "value": "rgb(152, 200, 7)",
-      "originalValue": "#98C807",
+      "value": "rgb(228, 235, 160)",
+      "originalValue": "#E4EBA0",
       "name": "color_green_light"
     },
-    "color_violet_lighter": {
+    "color_olive": {
       "type": "color",
-      "category": "color_group_violet",
-      "value": "rgb(214, 180, 214)",
-      "originalValue": "#D6B4D6",
-      "name": "color_violet_lighter"
+      "category": "color_group_olive",
+      "value": "rgb(171, 184, 175)",
+      "originalValue": "#ABB8AF",
+      "name": "color_olive"
     },
     "color_blue_dark": {
       "type": "color",
       "category": "color_group_blue",
-      "value": "rgb(16, 37, 72)",
-      "originalValue": "#102548",
+      "value": "rgb(33, 65, 132)",
+      "originalValue": "#214184",
       "name": "color_blue_dark"
     },
     "size_small": {

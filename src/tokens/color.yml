@@ -1,134 +1,160 @@
 # Colour tokens
 # -------------
-# Describe the various tones of various colours.
+# Describe the various shades of various colours.
 
 
 props:
-  color_purple_lighter:
+  color_magenta_light:
     value: '#F7B2CC'
-    category: color_group_purple
-  color_purple_light:
+    category: color_group_magenta
+  color_magenta:
     value: '#B62B6E'
+    category: color_group_magenta
+  color_magenta_dark:
+    value: '#7B1B53'
+    category: color_group_magenta
+  color_magenta_darker:
+    value: '#4F1035'
+    category: color_group_magenta
+
+  color_purple_light:
+    value: '#D6B4D6'
     category: color_group_purple
   color_purple:
-    value: '#7B1B53'
+    value: '#9628C6'
     category: color_group_purple
   color_purple_dark:
-    value: '#4F1035'
+    value: '#662978'
+    category: color_group_purple
+  color_purple_darker:
+    value: '#42194F'
     category: color_group_purple
 
-  color_violet_lighter:
-    value: '#D6B4D6'
-    category: color_group_violet
-  color_violet_light:
-    value: '#9628C6'
-    category: color_group_violet
-  color_violet:
-    value: '#662978'
-    category: color_group_violet
-  color_violet_dark:
-    value: '#42194F'
-    category: color_group_violet
-
-  color_blue_lighter:
+  color_blue_light:
     value: '#BFCEEA'
     category: color_group_blue
-  color_blue_light:
+  color_blue:
     value: '#4374B7'
     category: color_group_blue
-  color_blue:
+  color_blue_dark:
     value: '#214184'
     category: color_group_blue
-  color_blue_dark:
+  color_blue_darker:
     value: '#102548'
     category: color_group_blue
 
-  color_green_lighter:
+  color_green_light:
     value: '#E4EBA0'
     category: color_group_green
-  color_green_light:
+  color_green:
     value: '#98C807'
     category: color_group_green
-  color_green:
+  color_green_dark:
     value: '#01A635'
     category: color_group_green
-  color_green_dark:
+  color_green_darker:
     value: '#3D5024'
     category: color_group_green
 
-  color_yellow_lighter:
+  color_olive_light:
+    value: '#E0E4E1'
+    category: color_group_olive
+  color_olive:
+    value: '#ABB8AF'
+    category: color_group_olive
+  color_olive_dark:
+    value: '#43594A'
+    category: color_group_olive
+  color_olive_darker:
+    value: '#2A372F'
+    category: color_group_olive
+
+  color_sand_light:
+    value: '#EBE0B2'
+    category: color_group_sand
+  color_sand:
+    value: '#B1A24A'
+    category: color_group_sand
+  color_sand_dark:
+    value: '#6D6118'
+    category: color_group_sand
+  color_sand_darker:
+    value: '#44411F'
+    category: color_group_sand
+
+  color_yellow_light:
     value: '#FFF3A2'
     category: color_group_yellow
-  color_yellow_light:
+  color_yellow:
     value: '#EDD812'
     category: color_group_yellow
-  color_yellow:
+  color_yellow_dark:
     value: '#B09A11'
     category: color_group_yellow
-  color_yellow_dark:
+  color_yellow_darker:
     value: '#4E4917'
     category: color_group_yellow
 
-  color_orange_lighter:
+  color_orange_light:
     value: '#FFD89E'
     category: color_group_orange
-  color_orange_light:
+  color_orange:
     value: '#FB7928'
     category: color_group_orange
-  color_orange:
+  color_orange_dark:
     value: '#EE5B32'
     category: color_group_orange
-  color_orange_dark:
+  color_orange_darker:
     value: '#A46810'
     category: color_group_orange
 
-  color_red_lighter:
+  color_red_light:
     value: '#FAB499'
     category: color_group_red
-  color_red_light:
+  color_red:
     value: '#D13814'
     category: color_group_red
-  color_red:
+  color_red_dark:
     value: '#912B10'
     category: color_group_red
-  color_red_dark:
+  color_red_darker:
     value: '#5A1C0E'
     category: color_group_red
 
   color_context_primary:
-    value: '#4374B7'
-    category: color_contexts
+    value: '#4374B7'sus
+    category: color_group_context
   color_context_positive:
     value: '#98C807'
-    category: color_contexts
+    category: color_group_context
   color_context_negative:
     value: '#D13814'
-    category: color_contexts
+    category: color_group_context
 
   color_tone_white:
     value: '#FFFFFF'
-    category: color_tones
+    category: color_group_tone
   color_tone_near_white:
     value: '#EDEDEE'
-    category: color_tones
+    category: color_group_tone
   color_tone_grey_lighter:
     value: '#DCDDDE'
-    category: color_tones
+    category: color_group_tone
   color_tone_grey_light:
     value: '#A7A9AC'
-    category: color_tones
+    category: color_group_tone
   color_tone_grey_dark:
     value: '#636466'
-    category: color_tones
+    category: color_group_tone
   color_tone_grey_darker:
     value: '#393839'
-    category: color_tones
+    category: color_group_tone
   color_tone_near_black:
     value: '#121513'
-    category: color_tones
+    category: color_group_tone
   color_tone_black:
     value: '#000000'
-    category: color_tones
+    category: color_group_tone
 
 global:
   type: color
