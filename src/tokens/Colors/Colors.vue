@@ -24,20 +24,50 @@
       /**
        * the substring of the category to filter based on
        */
-      category: {
+      group: {
         type: String,
         required: true
       }
     },
     methods: {
       extractColors: function (data) {
-        return sortBy(
+        let colors = sortBy(
           data,
-          ['name', 'category']
+          [
+            'category',
+            function (color) {
+              if (color.name.includes('darker')) {
+                return 4
+              }
+              if (color.name.includes('dark')) {
+                return 3
+              }
+              if (color.name.includes('light')) {
+                return 1
+              }
+              return 2
+            }
+          ]
         ).filter(
-          token => token.type === 'color' &&
-            token.category.includes(this.category)
+          token => token.type === 'color'
         )
+
+        if (this.group === 'tone') {
+          colors = colors.filter(
+            token => token.category === 'color_group_tone'
+          )
+        } else if (this.group === 'context') {
+          colors = colors.filter(
+            token => token.category === 'color_group_context'
+          )
+        } else {
+          colors = colors.filter(
+            token => token.category !== 'color_group_tone' &&
+              token.category !== 'color_group_context'
+          )
+        }
+
+        return colors
       }
     },
     data: function () {
