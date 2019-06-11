@@ -5,4 +5,4 @@ english_name: CC Vocabulary
 # All technologies used
 technologies: JavaScript, Vue, Webpack, Babel, Stylus, Styleguidist, Theo
 # Whether this repository should be featured on the CC Open Source site
-featured: true
+featured: false  # In the future, maybe
