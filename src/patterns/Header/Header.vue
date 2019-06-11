@@ -1,10 +1,10 @@
 <template>
-  <header>
+  <header :class="gradientColor">
     <Container class="flex">
       <div class="section" id="branding">
         <!-- @slot Branding imagery or site title go here -->
         <slot name="branding">
-          <div v-if="name">
+          <div v-if="appName">
             <img
               src="@/assets/logo/lettermark_white.svg"
               alt="CC lettermark"
@@ -16,10 +16,10 @@
               alt="CC wordmark"
               class="wordmark">
           </div>
-          <span class="name">{{ name }}</span>
+          <span class="name">{{ appName }}</span>
         </slot>
       </div>
-      <div v-if="links" v-on:click="toggleNav" class="section" id="hamburger">
+      <div v-if="navLinks" v-on:click="toggleNav" class="section" id="hamburger">
         <FontAwesomeIcon :icon="['fas', 'bars']"/>
       </div>
       <div class="section" id="navigation" :style="navStyle">
@@ -27,7 +27,7 @@
         <slot name="navigation">
           <nav>
             <ul>
-              <li v-for="(link, index) in links" :key="index">
+              <li v-for="(link, index) in navLinks" :key="index">
                 <a :href="link.href">{{ link.text }}</a>
               </li>
             </ul>
@@ -40,6 +40,7 @@
 
 <script>
   import Container from '@/elements/Container/Container'
+
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
   export default {
@@ -57,13 +58,13 @@
       /**
        * the name of the app that should appear adjacent to the CC logo
        */
-      name: {
+      appName: {
         type: String
       },
       /**
        * the set of navigation links to show on the right side
        */
-      links: {
+      navLinks: {
         type: Array,
         validator: val => val.every(
           item => {
@@ -71,13 +72,23 @@
             return keys.every(key => key in item)
           }
         )
+      },
+      /**
+       * the background gradient for the header
+       *
+       * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
+       * `'red'`, `'sand'`, `'yellow'`, `'grey-dark'`, `'grey-darker'`}
+       */
+      gradientColor: {
+        type: String,
+        default: 'orange'
       }
     },
     computed: {
       navStyle: function () {
         if (this.isNavVisible) {
           return {
-            maxHeight: `${3 * this.links.length}rem`
+            maxHeight: `${3 * this.navLinks.length}rem`
           }
         } else {
           return {}

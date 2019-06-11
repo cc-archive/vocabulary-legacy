@@ -16,8 +16,8 @@ via props and they will customise the header according to the needs of the app.
 
 ```jsx
 <Header 
-  name="Search"
-  :links="[{text: 'Page 1', href:'#1'}, {text: 'Page 2', href:'#2'}]"/> 
+  appName="Search"
+  :navLinks="[{text: 'Page 1', href:'#1'}, {text: 'Page 2', href:'#2'}]"/> 
 ```
 
 If the plain site naming doesn't appeal to you, you can simply swap out the 
@@ -44,4 +44,24 @@ However you are free to use your own components and their own scoped styles.
     </nav>
   </template>
 </Header>
+```
+
+And one more thing... did we mention colors?
+
+```jsx
+<Header appName="Blue" gradientColor="blue"/>
+<br/>
+<Header appName="Green" gradientColor="green"/>
+<br/>
+<Header appName="Magenta" gradientColor="magenta"/>
+<br/>
+<Header appName="Olive" gradientColor="olive"/>
+<br/>
+<Header appName="Purple" gradientColor="purple"/>
+<br/>
+<Header appName="Red" gradientColor="red"/>
+<br/>
+<Header appName="Sand" gradientColor="sand"/>
+<br/>
+<Header appName="Yellow" gradientColor="yellow"/>
 ```
