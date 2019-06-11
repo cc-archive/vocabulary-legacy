@@ -23,11 +23,11 @@
        * the font color of the heading
        *
        * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
-       * `'red'`, `'sand'`, `'yellow'`, `'black'`}
+       * `'red'`, `'sand'`, `'yellow'`, `'black'`, `'white'`}
        */
       color: {
         type: String,
-        default: 'black'
+        default: 'inherit'
       },
       /**
        * whether the content appears on a dark background
