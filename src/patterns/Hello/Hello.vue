@@ -3,7 +3,8 @@
     <img v-if="logoType !== 'none'"
          :src="logo"
          alt="Creative Commons logo"
-         class="hello--logo">
+         class="logo"
+         :class="logoType">
     <Heading :level="4" :inverted="inverted">{{ heading }}</Heading>
     <!-- @slot Use this to insert additional content -->
     <slot>
