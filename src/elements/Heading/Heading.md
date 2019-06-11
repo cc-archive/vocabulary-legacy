@@ -28,3 +28,18 @@ inverted for readability or aesthetic reasons.
 <Heading inverted :level="5">Heading 5</Heading>
 <Heading inverted :level="6">Heading 6</Heading>
 ```
+
+Needless to say, headings can be colored with any color from the set provided by
+CC Vocabulary.
+
+```jsx
+<Heading :level="6" color="blue">Blue</Heading>
+<Heading :level="6" color="green">Green</Heading>
+<Heading :level="6" color="magenta">Magenta</Heading>
+<Heading :level="6" color="olive">Olive</Heading>
+<Heading :level="6" color="orange">Orange</Heading>
+<Heading :level="6" color="purple">Purple</Heading>
+<Heading :level="6" color="red">Red</Heading>
+<Heading :level="6" color="sand">Sand</Heading>
+<Heading :level="6" color="yellow">Yellow</Heading>
+```

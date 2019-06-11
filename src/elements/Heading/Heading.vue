@@ -1,5 +1,5 @@
 <template>
-  <div :is="tag" :class="{inverted: inverted}">
+  <div :is="tag" :class="[color, inverted ? 'inverted': '']">
     <!-- @slot Content goes here -->
     <slot/>
   </div>
@@ -12,7 +12,7 @@
       /**
        * the level of the heading
        *
-       * **Range:** `1 <= level <= 6`
+       * ⩾ 1 and ⩽ 6
        */
       level: {
         type: Number,
@@ -20,7 +20,19 @@
         validator: val => val >= 1 && val <= 6
       },
       /**
-       * whether the content is on a dark background
+       * the font color of the heading
+       *
+       * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
+       * `'red'`, `'sand'`, `'yellow'`, `'black'`}
+       */
+      color: {
+        type: String,
+        default: 'black'
+      },
+      /**
+       * whether the content appears on a dark background
+       *
+       * This essentially overrides prop `color` with value `'white'`.
        */
       inverted: {
         type: Boolean,
