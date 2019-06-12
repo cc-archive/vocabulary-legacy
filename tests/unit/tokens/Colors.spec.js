@@ -6,30 +6,30 @@ describe('Colors.vue', () => {
   let propsData, options
 
   beforeEach(() => {
-    let category = ''
+    let group = ''
 
     propsData = {
-      category
+      group
     }
     options = {
       propsData
     }
   })
 
-  it('finds all color groups', () => {
-    propsData.category = 'color_group'
+  it('finds all colors', () => {
+    propsData.group = 'meh'
 
     const wrapper = shallowMount(Colors, options)
 
     expect(
       wrapper.vm.colors.length
     ).toBe(
-      28
+      36
     )
   })
 
-  it('finds all color tones', () => {
-    propsData.category = 'color_tone'
+  it('finds all tones', () => {
+    propsData.group = 'tone'
 
     const wrapper = shallowMount(Colors, options)
 
@@ -37,6 +37,18 @@ describe('Colors.vue', () => {
       wrapper.vm.colors.length
     ).toBe(
       8
+    )
+  })
+
+  it('finds all contexts', () => {
+    propsData.group = 'context'
+
+    const wrapper = shallowMount(Colors, options)
+
+    expect(
+      wrapper.vm.colors.length
+    ).toBe(
+      3
     )
   })
 })
