@@ -10,24 +10,21 @@
         <div class="links">
           <ul>
             <li v-for="(link, index) in links" :key="index">
-              <a :href="link.href">{{ link.text }}</a>
+              <a :href="link.href">{{ $t(`links.${link.text}`) }}</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="column" id="contact">
         <a href="https://creativecommons.org/about/contact">
-          <Heading :level="6">
-            We'd love to hear from you!
+          <Heading :level="6" v-t="'lovetohear'">
           </Heading>
         </a>
-        <address>
-          Creative Commons<br/>
-          PO Box 1866, Mountain View, CA 94042
+        <address v-html="$t('address')">
         </address>
         <ul class="contacts">
           <li v-for="(contact, index) in contacts" :key="index">
-            <a :href="contact.href">{{ contact.text }}</a>
+            <a :href="contact.href">{{ $t(`contacts.${contact.text}`) }}</a>
           </li>
         </ul>
       </div>
@@ -35,9 +32,9 @@
         <!-- @slot Content goes here -->
         <slot>
           <div>
-            "Computers are useless. They can only give you answers."
+            {{ $t('useless') }}
             <p>
-              &mdash; Pablo Picasso
+              &mdash; {{ $t('picasso') }}
             </p>
           </div>
         </slot>
@@ -60,33 +57,33 @@
       return {
         links: [
           {
-            text: 'Contact',
+            text: 'contact',
             href: 'https://creativecommons.org/about/contact/'
           },
           {
-            text: 'Privacy',
+            text: 'privacy',
             href: 'https://creativecommons.org/privacy/'
           },
           {
-            text: 'Policies',
+            text: 'policies',
             href: 'https://creativecommons.org/policies'
           },
           {
-            text: 'Terms',
+            text: 'terms',
             href: 'https://creativecommons.org/terms/'
           }
         ],
         contacts: [
           {
-            text: 'info@creativecommons.org',
+            text: 'email',
             href: 'mailto:info@creativecommons.org'
           },
           {
-            text: '1-415-429-6753',
+            text: 'phone',
             href: 'tel:1-415-429-6753'
           },
           {
-            text: 'Frequently Asked Questions',
+            text: 'faq',
             href: 'https://creativecommons.org/faq'
           }
         ]
@@ -97,3 +94,6 @@
 
 <style scoped lang="stylus" src="./Footer.styl">
 </style>
+
+<i18n src="./Footer.json">
+</i18n>
