@@ -53,10 +53,10 @@ Styleguide shows all variations of the `Heading` component.
 Styleguide shows the various colors tokens that are part of the library.
 
 
-## Contributing code
+## Contributing code, documentation and translation
 
-For instructions regarding contributing code to the project, read the file
-[`DEVELOPMENT.md`](DEVELOPMENT.md) in the repository.
+For instructions regarding contributing to the project, read the file
+[`INSTRUCTIONS.md`](INSTRUCTIONS.md) in the repository.
 
 
 ## Disclaimer

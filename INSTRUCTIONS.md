@@ -88,6 +88,12 @@ $ npm run lint
 $ npm run test:unit
 ```
 
+If translations are to be changed, update the `.json` files under individual 
+components for component-level translations or the `.json` files in `locales/` 
+for global-level translations.
+
+New locales must be manually added to the `Locale` component.
+
 **Step 4:**
 Push the commits to your branch on the fork and submit a PR. Fill all relevant 
 fields in the PR template.

@@ -19,14 +19,16 @@ structure as well as in the form of code comments.
 
 Instructions pertaining to development such as the procedure to set up a copy of
 the codebase and a running instance locally on your machine can be found in
-`DEVELOPMENT.md`.
+`INSTRUCTIONS.md`.
 
 ## How to Contribute
 
 Please follow the processes in our general [Contributing Code][contributing]
 guidelines on the Creative Common Open Source website.
 
-In addition to this, read the `README.md` and `DEVELOPMENT.md` files in the 
+Contributions in terms of code, documentation and translations are welcome!
+
+In addition to this, read the `README.md` and `INSTRUCTIONS.md` files in the 
 repository for instructions.
 
 [contributing]:https://creativecommons.github.io/contributing-code/
