@@ -14,7 +14,10 @@
         v-else
         inverted/>
     </main>
-    <Footer/>
+    <Footer>
+      <Heading :level="6">Let's talk freely!</Heading>
+      <Locale/>
+    </Footer>
   </div>
 </template>
 
@@ -23,10 +26,12 @@
 
   import Hello from '@/patterns/Hello/Hello'
   import Footer from '@/patterns/Footer/Footer'
+  import Locale from '@/patterns/Locale/Locale'
 
   export default {
     name: 'Index',
     components: {
+      Locale,
       Heading,
       Hello,
       Footer

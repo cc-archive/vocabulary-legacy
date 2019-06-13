@@ -10,7 +10,7 @@ wider, center aligns itself horizontally within the parent. Try resizing the
 window from small width to large width to see if you can spot the container 
 reach the `max-width` and activate centering. 
 
-```jsx
+```jsx { "props": { "className": "no-i18n" } }
 <div style="width:100%; background-color: rgb(67, 116, 183);">
   <Container style="background-color: rgb(152, 200, 7);">
     <Paragraph inverted>

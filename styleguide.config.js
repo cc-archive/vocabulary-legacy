@@ -33,6 +33,7 @@ module.exports = {
 
   require: [
     path.join(__dirname, 'src/icons.js'),
+    path.join(__dirname, 'styleguidist/i18n.js'),
     path.join(__dirname, 'styleguidist/style.styl')
   ],
   template: {
@@ -53,6 +54,7 @@ module.exports = {
       ]
     }
   },
+  renderRootJsx: path.join(__dirname, 'styleguidist/styleguide.root.js'),
 
   sections: [
     {

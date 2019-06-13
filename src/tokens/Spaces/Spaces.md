@@ -8,7 +8,7 @@ Vocabulary provides a number of spaces calculated as a fraction of the font size
 of the element. So in an element with `font-size: 3em`, the sizes are 
 tripled.
 
-```jsx
+```jsx { "props": { "className": "no-i18n" } }
 <div style="font-size: 3em;">
   <Spaces units="em"/>
 </div>
@@ -19,6 +19,6 @@ tripled.
 Vocabulary provides a number of spaces calculated as a fraction of the font size
 of the root element. This is set to 16 pixels by default but can be overridden.
 
-```jsx
+```jsx { "props": { "className": "no-i18n" } }
 <Spaces units="rem"/>
 ```

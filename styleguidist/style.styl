@@ -53,5 +53,20 @@ footer[class*="rsg--footer"][class*="rsg--footer"]
   &:hover
     opacity 1.0
 
-.dark-background[class*="rsg--preview"]
-  background-color $color-tone-near-black
+div[class*="rsg--preview"][class*="rsg--preview"]
+  & > div > v-app > .locale
+    background $color-tone-white
+
+    padding $space-normal
+
+    border-radius $radius-normal
+    border 1px solid $color-tone-grey-lighter
+
+    margin-bottom $space-normal
+
+  &.dark-background
+    background-color $color-tone-near-black
+
+  &.no-i18n
+    & > div > v-app > .locale
+      display none
