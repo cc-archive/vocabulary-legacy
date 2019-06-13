@@ -8,7 +8,12 @@
     <Heading :level="4" :inverted="inverted">{{ heading }}</Heading>
     <!-- @slot Use this to insert additional content -->
     <slot>
-      <Paragraph :inverted="inverted">{{ computedTagline }}</Paragraph>
+      <Paragraph v-if="tagline" :inverted="inverted">
+        {{ computedTagline }}
+      </Paragraph>
+      <Paragraph v-else :inverted="inverted">
+        {{ $t(computedTagline) }}
+      </Paragraph>
     </slot>
   </div>
 </template>
@@ -26,13 +31,13 @@
     data: () => {
       return {
         taglines: [
-          'Welcome to CC Vocabulary!',
-          'Meet CC Vocabulary!',
-          'CC Vocabulary is here!',
-          'Hello, I\'m CC Vocabulary!',
-          'Powered by CC Vocabulary!',
-          'A new design system for CC!',
-          'Or should I say Vue-cabulary!'
+          'welcome',
+          'meet',
+          'here',
+          'iam',
+          'powered',
+          'new',
+          'vue'
         ]
       }
     },
@@ -94,3 +99,6 @@
 
 <style scoped lang="stylus" src="./Hello.styl">
 </style>
+
+<i18n src="./Hello.json">
+</i18n>
