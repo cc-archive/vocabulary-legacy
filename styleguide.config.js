@@ -24,7 +24,7 @@ module.exports = {
   styles: {
     StyleGuide: {
       '@global html': {
-        fontFamily: ['"Source Sans Pro"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
+        fontFamily: ['"Source Sans Pro"', '"Noto Sans"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
         fontSize: 16,
         lineHeight: 1.2
       }
@@ -44,7 +44,7 @@ module.exports = {
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap'
+          href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap'
         },
         {
           rel: 'icon',
