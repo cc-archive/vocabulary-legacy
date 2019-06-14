@@ -49,7 +49,7 @@ module.exports = {
         },
         {
           rel: 'icon',
-          href: '/icons/favicon.png'
+          href: 'icons/favicon.png'
         }
       ]
     }
