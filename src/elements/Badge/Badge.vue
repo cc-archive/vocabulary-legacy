@@ -9,7 +9,8 @@
       /**
        * the license whose badge is being shown
        *
-       * Must be one of the license types.
+       * ∈ {`'by'`, `'by-nc'`, `'by-nc-nd'`, `'by-nc-sa'`, `'by-nd'`, `'by-sa'`,
+       * `'zero'`, `'pd'`}
        */
       license: {
         type: String,
@@ -21,13 +22,14 @@
           'by-nd',
           'by-sa',
           'zero',
-          'pd',
-          'srr' // The small version of SRR is a copy of the larger version
+          'pd'
         ].includes(val),
         required: true
       },
       /**
        * the size of the badge being displayed
+       *
+       * ∈ {`'large'`, `'small'`}
        */
       size: {
         type: String,

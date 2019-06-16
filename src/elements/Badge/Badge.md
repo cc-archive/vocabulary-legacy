@@ -23,15 +23,6 @@ aspect of the license.
 <Badge license="by-nc-nd" size="small"/>
 ```
 
-One of the licenses, SRR (Some Rights Reserved) has no small variant. Also the 
-only variant available has atrocious vertical spacing so the use of it is highly 
-discouraged. Also a patch with a better version of the SVG is much appreciated.
-
-```jsx { "props": { "className": "no-i18n" } }
-<Badge license="srr" size="small"/>
-<Badge license="srr" size="large"/>
-```
-
 Since `Badge` tags are effectively `img` tags, one can use `height` and `width`
 attributes or CSS rules to change the size of the badge. And since the images 
 are all SVGs, they can scale beautifully to virtually any size.
