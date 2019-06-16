@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://creativecommons.org/">
-        <img src="readme_assets/cc_logo.svg" height="62px" />
+        <img src="readme_assets/cc_logo.png" height="62px" />
     </a>
 </p>
 
@@ -42,15 +42,11 @@ As a library, CC Vocabulary
   enabling remixing components
 
 
-## Screenshots
+## Demo
 
-Feast your eyes on this.
-
-![screenshot_1](readme_assets/screenshot_1.png)
-Styleguide shows all variations of the `Heading` component.
-
-![screenshot_2](readme_assets/screenshot_2.png)
-Styleguide shows the various colors tokens that are part of the library.
+You can find the [live styleguide](https://creativecommons.github.io/cc-vocabulary/)
+for the library, showcasing the components therein and variants thereof on 
+GitHub Pages.
 
 
 ## Contributing code, documentation and translation
