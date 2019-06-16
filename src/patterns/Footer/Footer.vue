@@ -95,5 +95,5 @@
 <style scoped lang="stylus" src="./Footer.styl">
 </style>
 
-<i18n src="./Footer.json">
+<i18n src="./lang.json">
 </i18n>

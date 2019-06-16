@@ -100,5 +100,5 @@
 <style scoped lang="stylus" src="./Hello.styl">
 </style>
 
-<i18n src="./Hello.json">
+<i18n src="./lang.json">
 </i18n>
