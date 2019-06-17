@@ -1,7 +1,6 @@
 {
   "name": "cc-vocabulary",
   "verboseName": "CC Vocabulary",
-  "version": "0.0.1",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "homepage": "https://github.com/creativecommons/cc-vocabulary/",
   "repository": "github:creativecommons/cc-vocabulary",

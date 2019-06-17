@@ -3,7 +3,7 @@ const packageConfig = require('./package.json')
 
 module.exports = {
   title: packageConfig.verboseName,
-  version: packageConfig.version,
+  version: 'latest',
 
   components: 'src/**/[A-Z]*.vue',
   skipComponentsWithoutExample: true,
