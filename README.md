@@ -21,6 +21,9 @@
   <a href="https://github.com/creativecommons/cc-vocabulary/blob/master/CONTRIBUTING.md">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
   </a>
+  <a href="https://lerna.js.org/">
+    <img alt="Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg"/>
+  </a>
 </p>
 
 
