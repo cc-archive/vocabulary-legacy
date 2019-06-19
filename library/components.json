@@ -1,0 +1,14 @@
+{
+  "elements": [
+    "Badge",
+    "Container",
+    "Heading",
+    "Paragraph"
+  ],
+  "patterns": [
+    "Footer",
+    "Header",
+    "Hello",
+    "Locale"
+  ]
+}

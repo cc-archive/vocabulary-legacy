@@ -1,0 +1,40 @@
+{
+  "name": "@creativecommons/vocabulary",
+  "version": "0.0.0",
+  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
+  "homepage": "https://creativecommons.github.io/cc-vocabulary/",
+  "repository": "github:creativecommons/cc-vocabulary",
+  "bugs": "https://github.com/creativecommons/cc-vocabulary/issues/",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "vue components",
+    "library"
+  ],
+  "peerDependencies": {
+    "vue": ">=2.0.0",
+    "vue-i18n": ">=8.0.0",
+    "@fortawesome/fontawesome-svg-core": ">=1.0.0",
+    "@fortawesome/free-brands-svg-icons": ">=5.0.0",
+    "@fortawesome/free-regular-svg-icons": ">=5.0.0",
+    "@fortawesome/free-solid-svg-icons": ">=5.0.0",
+    "@fortawesome/vue-fontawesome": ">=0.0.0"
+  },
+  "main": "vocabulary.common.js",
+  "unpkg": "vocabulary.umd.min.js",
+  "jsdelivr": "vocabulary.umd.min.js",
+  "files": [
+    "*.js",
+    "*.map",
+    "*.css",
+    "package.json",
+    "demo.html",
+    "README.md",
+    "LICENSE"
+  ]
+}
