@@ -4,11 +4,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
-  faBars,
-  faLanguage
-} from '@fortawesome/free-solid-svg-icons'
+  faFortAwesome
+} from '@fortawesome/free-brands-svg-icons'
 
 library.add(
-  faBars,
-  faLanguage
+  faFortAwesome
 )

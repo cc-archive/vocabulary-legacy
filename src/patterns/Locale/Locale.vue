@@ -1,8 +1,10 @@
 <template>
   <!-- TODO Use dropdown -->
   <div class="locale">
-    <FontAwesomeIcon :icon="['fas', 'language']" size="2x" class="icon"/>
-    <select v-model="i18n.locale">
+    <label :for="id">
+      <FontAwesomeIcon :icon="['fas', 'language']" size="2x" class="icon"/>
+    </label>
+    <select v-model="$i18n.locale" :id="id">
       <option
         v-for="(locale, index) in locales"
         :key="index"
@@ -14,9 +16,11 @@
 </template>
 
 <script>
-  import i18n from '@/i18n'
-
+  import { library } from '@fortawesome/fontawesome-svg-core'
+  import { faLanguage } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+  library.add(faLanguage)
 
   export default {
     name: 'Locale',
@@ -37,8 +41,11 @@
             nativeName: 'English'
           }
         ],
-        i18n: i18n
+        id: null
       }
+    },
+    mounted: function () {
+      this.id = this._uid // Replace with UUID in case things go south
     }
   }
 </script>
