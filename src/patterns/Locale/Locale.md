@@ -16,8 +16,14 @@ In components that have i18n enabled, such as `<Footer/>`, this switcher shows
 up in the preview as well, on the top left corner, allowing explorers to change 
 locales and see the various versions of the component on the go.
 
+In fact, the [Footer](#/Patterns/Footer) is an excellent place to place the 
+component. 
+
 ```jsx
-<Footer/>
+<Footer>
+  <Heading :level="6">Let's talk freely!</Heading>
+  <Locale/>
+</Footer>
 ```
 
 Changes made in any switcher across the styleguide documentation website are 
