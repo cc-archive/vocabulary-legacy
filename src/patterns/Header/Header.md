@@ -11,23 +11,15 @@ The header has a standard layout and appearance.
 <Header/>
 ```
 
-The name of the site and the set of navigation links can be passed to the header 
-via props and they will customise the header according to the needs of the app.
+The name of the site can be passed to the header via a prop.
 
 ```jsx
-<Header 
-  appName="Search"
-  :navLinks="[{text: 'Page 1', href:'#1'}, {text: 'Page 2', href:'#2'}]"/> 
+<Header appName="Search"> 
 ```
 
 If the plain site naming doesn't appeal to you, you can simply swap out the 
 whole branding slot with something that does. Use the class `name` on the text
 to make use of the standard formatting.
-
-Similarly the navigation links can also be replaced entirely by populating the 
-navigation slot. To make use of the default formatting, the DOM structure of the 
-links must be look like `nav` > `ul` > `li` > `a`. This is not recommended 
-because your slot would have to manually handle mobile-responsiveness.
 
 However you are free to use your own components and their own scoped styles.
 
@@ -36,32 +28,71 @@ However you are free to use your own components and their own scoped styles.
   <template v-slot:branding>
     <span class="name">Site name</span>
   </template>
-  <template v-slot:navigation>
-    <nav>
-      <ul>
-        <li><a href="#1">Page 1</a></li><li><a href="#2">Page 2</a></li>
-      </ul>
-    </nav>
-  </template>
+</Header>
+```
+
+In case you want to display some content in the header, you can add it to the 
+default slot and it will be placed toward the right side.
+
+```jsx
+<Header 
+  appName="Search" 
+  gradientColor="blue">
+  <input type="text" placeholder="Search..."/>
+  <Navigation 
+    inverted
+    :links="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>
 </Header>
 ```
 
 And one more thing... did we mention colors?
 
 ```jsx
-<Header appName="Blue" gradientColor="blue"/>
+<Header appName="Blue" gradientColor="blue">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Green" gradientColor="green"/>
+<Header appName="Green" gradientColor="green">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Magenta" gradientColor="magenta"/>
+<Header appName="Magenta" gradientColor="magenta">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Olive" gradientColor="olive"/>
+<Header appName="Olive" gradientColor="olive">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Purple" gradientColor="purple"/>
+<Header appName="Purple" gradientColor="purple">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Red" gradientColor="red"/>
+<Header appName="Red" gradientColor="red">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Sand" gradientColor="sand"/>
+<Header appName="Sand" gradientColor="sand">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 <br/>
-<Header appName="Yellow" gradientColor="yellow"/>
+<Header appName="Yellow" gradientColor="yellow">
+  <Navigation
+    inverted 
+    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
+</Header>
 ```

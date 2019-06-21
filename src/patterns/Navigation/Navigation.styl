@@ -1,0 +1,50 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
+@import "~@/styles/list.styl"
+
+nav
+  display inline
+
+  ul
+    li
+      &:hover
+        background-color rgba(0, 0, 0, 0.1)
+
+      a
+        color inherit
+        text-decoration none
+
+        font-size $size-big
+        font-weight $weight-bold
+
+  &.inverted
+    color: white
+
+    ul
+      li
+        &:hover
+          background-color rgba(255, 255, 255, 0.1)
+
+  +phone-only()
+    width 100%
+    text-align left
+
+    ul
+      bland-list()
+
+      li
+        border-bottom 1px solid @color
+
+        &:last-of-type
+          border none
+
+        a
+          display block
+          padding $space-normal $space-zero
+
+  +tablet-portrait-up()
+    ul
+      piped-list()
+
+      li
+        padding $space-small $space-large

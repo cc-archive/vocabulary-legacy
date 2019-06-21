@@ -19,20 +19,16 @@
           <span class="name">{{ appName }}</span>
         </slot>
       </div>
-      <div v-if="navLinks" v-on:click="toggleNav" class="section" id="hamburger">
-        <FontAwesomeIcon :icon="['fas', 'bars']"/>
+      <div
+        v-if="$slots.default"
+        v-on:click="toggleDropdown"
+        class="section"
+        id="hamburger">
+        <FontAwesomeIcon :icon="['fas', isContentVisible ? 'times' : 'bars']"/>
       </div>
-      <div class="section" id="navigation" :style="navStyle">
-        <!-- @slot Navigation links go here -->
-        <slot name="navigation">
-          <nav>
-            <ul>
-              <li v-for="(link, index) in navLinks" :key="index">
-                <a :href="link.href">{{ link.text }}</a>
-              </li>
-            </ul>
-          </nav>
-        </slot>
+      <div class="section" id="content" :style="contentStyle">
+        <!-- @slot Content goes here -->
+        <slot/>
       </div>
     </Container>
   </header>
@@ -42,10 +38,10 @@
   import Container from '@/elements/Container/Container'
 
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import { faBars } from '@fortawesome/free-solid-svg-icons'
+  import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  library.add(faBars)
+  library.add(faBars, faTimes)
 
   export default {
     name: 'Header',
@@ -55,7 +51,7 @@
     },
     data: function () {
       return {
-        isNavVisible: false
+        isContentVisible: true
       }
     },
     props: {
@@ -64,18 +60,6 @@
        */
       appName: {
         type: String
-      },
-      /**
-       * the set of navigation links to show on the right side
-       */
-      navLinks: {
-        type: Array,
-        validator: val => val.every(
-          item => {
-            let keys = ['text', 'href']
-            return keys.every(key => key in item)
-          }
-        )
       },
       /**
        * the background gradient for the header
@@ -89,19 +73,15 @@
       }
     },
     computed: {
-      navStyle: function () {
-        if (this.isNavVisible) {
-          return {
-            maxHeight: `${3 * this.navLinks.length}rem`
-          }
-        } else {
-          return {}
+      contentStyle: function () {
+        return {
+          maxHeight: this.isContentVisible ? '15rem' : '0'
         }
       }
     },
     methods: {
-      toggleNav: function () {
-        this.isNavVisible = !this.isNavVisible
+      toggleDropdown: function () {
+        this.isContentVisible = !this.isContentVisible
       }
     }
   }
