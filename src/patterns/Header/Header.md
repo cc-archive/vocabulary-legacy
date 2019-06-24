@@ -11,10 +11,11 @@ The header has a standard layout and appearance.
 <Header/>
 ```
 
-The name of the site can be passed to the header via a prop.
+The name of the site and the URL to which the branding points can be passed to 
+the header via props.
 
 ```jsx
-<Header appName="Search"> 
+<Header appName="Search" homeLink="https://creativecommons.org/"> 
 ```
 
 If the plain site naming doesn't appeal to you, you can simply swap out the 

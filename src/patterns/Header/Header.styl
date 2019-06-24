@@ -94,11 +94,19 @@ header
 /deep/ #branding
   flex-grow 0
 
-  display flex
-  flex-direction row
-  align-items center
-
   margin $space-small $space-zero
+
+  .homelink
+    color inherit
+
+    display flex
+    flex-direction row
+    align-items center
+
+    text-decoration none
+
+    &:visited
+      color inherit
 
   .wordmark
     width 10rem

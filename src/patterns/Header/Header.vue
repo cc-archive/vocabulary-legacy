@@ -3,21 +3,23 @@
     <Container class="flex">
       <div class="section" id="branding">
         <!-- @slot Branding imagery or site title go here -->
-        <slot name="branding">
-          <div v-if="appName">
-            <img
-              src="@/assets/logo/lettermark_white.svg"
-              alt="CC lettermark"
-              class="lettermark">
-          </div>
-          <div v-else>
-            <img
-              src="@/assets/logo/wordmark_white.svg"
-              alt="CC wordmark"
-              class="wordmark">
-          </div>
-          <span class="name">{{ appName }}</span>
-        </slot>
+        <a :href="homeLink" class="homelink">
+          <slot name="branding">
+            <div v-if="appName">
+              <img
+                src="@/assets/logo/lettermark_white.svg"
+                alt="CC lettermark"
+                class="lettermark">
+            </div>
+            <div v-else>
+              <img
+                src="@/assets/logo/wordmark_white.svg"
+                alt="CC wordmark"
+                class="wordmark">
+            </div>
+            <span class="name">{{ appName }}</span>
+          </slot>
+        </a>
       </div>
       <div
         v-if="$slots.default"
@@ -70,6 +72,13 @@
       gradientColor: {
         type: String,
         default: 'orange'
+      },
+      /**
+       * the link that the branding should point to
+       */
+      homeLink: {
+        type: String,
+        default: '/'
       }
     },
     computed: {
