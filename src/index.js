@@ -15,6 +15,7 @@ import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Hello from './patterns/Hello/Hello'
 import Locale from './patterns/Locale/Locale'
+import Navigation from './patterns/Navigation/Navigation'
 
 // Export individual components
 export {
@@ -25,7 +26,8 @@ export {
   Footer,
   Header,
   Hello,
-  Locale
+  Locale,
+  Navigation
 }
 
 // Export as plugin
@@ -39,5 +41,6 @@ export default {
     Vue.component('Header', Header)
     Vue.component('Hello', Hello)
     Vue.component('Locale', Locale)
+    Vue.component('Navigation', Navigation)
   }
 }
