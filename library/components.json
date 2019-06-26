@@ -3,7 +3,8 @@
     "Badge",
     "Container",
     "Heading",
-    "Paragraph"
+    "Paragraph",
+    "Input"
   ],
   "patterns": [
     "Footer",

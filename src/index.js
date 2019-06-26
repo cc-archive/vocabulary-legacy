@@ -10,6 +10,7 @@ import Badge from './elements/Badge/Badge'
 import Container from './elements/Container/Container'
 import Heading from './elements/Heading/Heading'
 import Paragraph from './elements/Paragraph/Paragraph'
+import Input from './elements/Input/Input'
 
 import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
@@ -23,6 +24,7 @@ export {
   Container,
   Heading,
   Paragraph,
+  Input,
   Footer,
   Header,
   Hello,
@@ -37,6 +39,7 @@ export default {
     Vue.component('Container', Container)
     Vue.component('Heading', Heading)
     Vue.component('Paragraph', Paragraph)
+    Vue.component('Input', Input)
     Vue.component('Footer', Footer)
     Vue.component('Header', Header)
     Vue.component('Hello', Hello)
