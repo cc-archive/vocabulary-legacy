@@ -39,7 +39,11 @@ default slot and it will be placed toward the right side.
 <Header 
   appName="Search" 
   gradientColor="blue">
-  <input type="text" placeholder="Search..."/>
+  <Input
+    inverted
+    type="text"
+    :icons="['', 'search']"
+    placeholder="Search..."/>
   <Navigation 
     inverted
     :links="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>

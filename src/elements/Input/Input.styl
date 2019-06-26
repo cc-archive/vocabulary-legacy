@@ -1,0 +1,124 @@
+@import "~@/assets/tokens/tokens.styl"
+
+.wrapper
+  display inline-flex
+  flex-direction row
+
+  .label
+    display inline-flex
+    flex-direction row
+    align-items center
+
+    font-size 1em
+    line-height 1.5
+
+    color $color-tone-grey-light
+    font-weight $weight-bold
+
+    padding $space-normal
+
+    border 1px solid @color
+    border-right none
+
+  .input
+    position relative
+
+    display inline-flex
+    flex-direction row
+    align-items center
+
+    .field
+      font inherit
+
+      font-size 1em
+      line-height 1.5
+      height 100%
+
+      flex-grow 1
+      flex-shrink 0
+
+      background transparent
+
+      padding $space-normal
+
+      border-radius $radius-zero
+      border 1px solid $color-tone-grey-light
+
+      box-sizing border-box
+
+      transition 0.25s border, 0.25s margin
+
+      &.has-left-icon
+        padding-left 'calc(2 * %s + 1.25em)' % $space-normal
+
+      &.has-right-icon
+        padding-right 'calc(2 * %s + 1.25em)' % $space-normal
+
+      &:focus
+        border-color $color-tone-black
+
+        & ~ .left-icon,
+        & ~ .right-icon
+          color: $color-tone-grey-darker
+
+    .left-icon,
+    .right-icon
+      position absolute
+      color $color-tone-grey-lighter
+
+      margin $space-normal
+
+      transition 0.25s color
+
+    .left-icon
+      left 0
+
+    .right-icon
+      right 0
+
+  &.inverted
+    .label
+      color $color-tone-grey-dark
+      border-color @color
+
+    .input
+      .field
+        color $color-tone-white
+        border-color $color-tone-grey-dark
+
+        &:focus
+          border-color $color-tone-white
+
+          & ~ .left-icon,
+          & ~ .right-icon
+            color: $color-tone-grey-lighter
+
+      .left-icon,
+      .right-icon
+        color $color-tone-grey-darker
+
+  &.disabled
+    background-color $color-tone-near-white
+
+  &.error
+    background-color $color-context-negative-light
+
+    .label
+      color $color-context-negative
+      border-color @color
+
+    .input
+      .field
+        color $color-context-negative
+        border-color @color
+
+        &:focus
+          border-color $color-context-negative-dark
+
+          & ~ .left-icon,
+          & ~ .right-icon
+            color: $color-context-negative-dark
+
+      .left-icon,
+      .right-icon
+        color $color-context-negative
