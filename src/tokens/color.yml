@@ -122,13 +122,25 @@ props:
     category: color_group_red
 
   color_context_primary:
-    value: '#4374B7'sus
+    value: '#4374B7'
+    category: color_group_context
+  color_context_positive_light:
+    value: '#E4EBA0'
     category: color_group_context
   color_context_positive:
     value: '#98C807'
     category: color_group_context
+  color_context_positive_dark:
+    value: '#01A635'
+    category: color_group_context
+  color_context_negative_light:
+    value: '#FAB499'
+    category: color_group_context
   color_context_negative:
     value: '#D13814'
+    category: color_group_context
+  color_context_negative_dark:
+    value: '#912B10'
     category: color_group_context
 
   color_tone_white:
