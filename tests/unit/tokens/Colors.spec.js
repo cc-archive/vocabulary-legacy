@@ -48,7 +48,7 @@ describe('Colors.vue', () => {
     expect(
       wrapper.vm.colors.length
     ).toBe(
-      3
+      7
     )
   })
 })
