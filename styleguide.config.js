@@ -81,10 +81,5 @@ module.exports = {
       sectionDepth: 1,
       components: 'src/templates/[A-Z]*/[A-Z]*.vue'
     }
-  ],
-
-  ribbon: {
-    text: 'Contribute',
-    url: 'https://github.com/creativecommons/cc-vocabulary'
-  }
+  ]
 }
