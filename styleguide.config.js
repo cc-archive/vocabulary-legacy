@@ -70,6 +70,12 @@ module.exports = {
       components: 'src/elements/[A-Z]*/[A-Z]*.vue'
     },
     {
+      name: 'Layouts',
+      content: 'src/layouts/SECTION.md',
+      sectionDepth: 1,
+      components: 'src/layouts/[A-Z]*/[A-Z]*.vue'
+    },
+    {
       name: 'Patterns',
       content: 'src/patterns/SECTION.md',
       sectionDepth: 1,
