@@ -95,7 +95,7 @@ So a very customised field looks like this.
 </Input>
 ```
 
-A field may be disabled to prevent it from being changed. And it fades away.
+A field may be disabled to prevent being changed. And it literally fades away.
 So that you don't see it.
 
 ```jsx  { "props": { "className": "no-i18n" } }
@@ -118,6 +118,59 @@ So there is no way to miss it.
   :icons="['', 'times']"
   value="Wrong answer"
   placeholder="Question"/>
+```
+
+Fields come in a number of sizes.
+
+```jsx  { "props": { "className": "no-i18n" } }
+<Input
+  size="small"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="normal"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="big"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="large"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="huge"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="enormous"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="gigantic"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
+<Input
+  size="mega"
+  type="text"
+  label="Q?"
+  :icons="['', '']"
+  placeholder="Answer..."/><br/><br/>
 ```
 
 On a dark background, the colors may be inverted for readability. Do not invert

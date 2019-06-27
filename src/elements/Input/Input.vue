@@ -1,18 +1,16 @@
 <template>
-  <label class="wrapper" :class="{inverted, disabled, error}">
+  <label class="wrapper" :class="[{inverted, disabled, error}, size]">
     <span v-if="label || $slots.default" class="label">
       <!-- @slot Replacement for label goes here -->
       <slot>{{ label }}</slot>
     </span>
     <span class="input">
       <input
-        :type="type"
-        :placeholder="placeholder"
         :disabled="disabled"
-        :value="value"
+        v-bind="$attrs"
         v-on="inputListeners"
         class="field"
-        :class="{'has-left-icon': showLeftIcon, 'has-right-icon': showRightIcon}">
+        :class="fieldClasses">
       <!-- @slot Replacement for left icon goes here -->
       <slot name="left-icon">
         <FontAwesomeIcon
@@ -48,27 +46,11 @@
 
   export default {
     name: 'Input',
+    inheritAttrs: false,
     components: {
       FontAwesomeIcon
     },
     props: {
-      /**
-       * the type of input this field will receive
-       */
-      type: {
-        type: String,
-        default: 'text',
-        validator: val => ['text', 'email', 'number'].includes(val)
-      },
-      /**
-       * the placeholder text in the input field
-       */
-      placeholder: {
-        type: String
-      },
-      value: {
-        type: String
-      },
       /**
        * the label to attach with the input field
        */
@@ -105,6 +87,23 @@
         type: Array,
         default: () => ['', ''],
         validator: val => val.length === 2
+      },
+      /**
+       * the size of the input field
+       */
+      size: {
+        type: String,
+        default: 'normal',
+        validator: val => [
+          'small',
+          'normal',
+          'big',
+          'large',
+          'huge',
+          'enormous',
+          'gigantic',
+          'mega'
+        ].includes(val)
       }
     },
     computed: {
@@ -113,6 +112,12 @@
       },
       showRightIcon: function () {
         return this.icons[1] !== ''
+      },
+      fieldClasses: function () {
+        return {
+          'has-left-icon': this.showLeftIcon,
+          'has-right-icon': this.showRightIcon
+        }
       },
       inputListeners: function () {
         let vm = this

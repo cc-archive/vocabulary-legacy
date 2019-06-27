@@ -4,6 +4,30 @@
   display inline-flex
   flex-direction row
 
+  &.small
+    font-size $size-small
+
+  &.normal
+    font-size $size-normal
+
+  &.big
+    font-size $size-big
+
+  &.large
+    font-size $size-large
+
+  &.huge
+    font-size $size-huge
+
+  &.enormous
+    font-size $size-enormous
+
+  &.gigantic
+    font-size $size-gigantic
+
+  &.mega
+    font-size $size-mega
+
   .label
     display inline-flex
     flex-direction row
@@ -98,7 +122,12 @@
         color $color-tone-grey-darker
 
   &.disabled
-    background-color $color-tone-near-white
+    opacity 0.66
+    cursor: not-allowed
+
+    .input
+      .field
+        cursor not-allowed
 
   &.error
     background-color $color-context-negative-light
