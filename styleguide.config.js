@@ -10,6 +10,7 @@ module.exports = {
 
   defaultExample: false,
   pagePerSection: true,
+  usageMode: 'expand',
 
   assetsDir: 'src/assets/',
   styleguideDir: 'docs', // For easy push to GitHub Pages
