@@ -7,10 +7,10 @@ export default previewComponent => {
     i18n,
     render (createElement) {
       return createElement(
-        'v-app',
+        'div',
         {
-          props: {
-            id: 'v-app'
+          class: {
+            'actual-preview': true
           }
         },
         [

@@ -54,7 +54,7 @@ footer[class*="rsg--footer"][class*="rsg--footer"]
     opacity 1.0
 
 div[class*="rsg--preview"][class*="rsg--preview"]
-  & > div > v-app > .locale
+  div.actual-preview > div.locale
     background $color-tone-white
 
     padding $space-normal
@@ -67,6 +67,9 @@ div[class*="rsg--preview"][class*="rsg--preview"]
   &.dark-background
     background-color $color-tone-near-black
 
+  &.enlarged-text
+    font-size 2rem
+
   &.no-i18n
-    & > div > v-app > .locale
+    div.actual-preview > div.locale
       display none
