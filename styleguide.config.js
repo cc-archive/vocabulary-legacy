@@ -11,6 +11,10 @@ module.exports = {
   defaultExample: false,
   pagePerSection: true,
   usageMode: 'expand',
+  getComponentPathLine: function (componentPath) {
+    const name = path.basename(componentPath, '.vue')
+    return `import { ${name} } from '@creativecommons/vocabulary'`
+  },
 
   assetsDir: 'src/assets/',
   styleguideDir: 'docs', // For easy push to GitHub Pages
