@@ -31,6 +31,10 @@ module.exports = {
       }
     }
   },
+  editorConfig: {
+    theme: 'material',
+    lineNumbers: true
+  },
 
   require: [
     path.join(__dirname, 'src/icons.js'),
