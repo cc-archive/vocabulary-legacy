@@ -5,13 +5,13 @@
          alt="Creative Commons logo"
          class="logo"
          :class="logoType">
-    <Heading :level="4" :inverted="inverted">{{ heading }}</Heading>
+    <Heading :level="4" :is-inverted="inverted">{{ heading }}</Heading>
     <!-- @slot Use this to insert additional content -->
     <slot>
-      <Paragraph v-if="tagline" :inverted="inverted">
+      <Paragraph v-if="tagline" :is-inverted="inverted">
         {{ computedTagline }}
       </Paragraph>
-      <Paragraph v-else :inverted="inverted">
+      <Paragraph v-else :is-inverted="inverted">
         {{ $t(computedTagline) }}
       </Paragraph>
     </slot>

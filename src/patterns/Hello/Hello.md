@@ -48,7 +48,7 @@ content you want. Note that using the slot replaces the tagline.
 ``` 
 
 
-There is also an inverted version that inverts the logo as well as text colour.
+There is also an inverted version that inverts the logo as well as text color.
 This is intended for placement on dark or non-white backgrounds.
 
 ```jsx { "props": { "className": "dark-background" } } 
