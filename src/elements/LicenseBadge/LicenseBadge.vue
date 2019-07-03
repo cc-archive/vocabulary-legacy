@@ -3,11 +3,17 @@
 </template>
 
 <script>
+  /**
+   * ## License badges are hieroglyphs for licenses.
+   *
+   * A license badge represents a license in pictorial form, depicting all the
+   * aspects of said license such as shareability and commercial usability.
+   */
   export default {
-    name: 'Badge',
+    name: 'LicenseBadge',
     props: {
       /**
-       * the license whose badge is being shown
+       * _the license whose badge is being shown_
        *
        * ∈ {`'by'`, `'by-nc'`, `'by-nc-nd'`, `'by-nc-sa'`, `'by-nd'`, `'by-sa'`,
        * `'zero'`, `'pd'`}
@@ -27,7 +33,7 @@
         required: true
       },
       /**
-       * the size of the badge being displayed
+       * _the size of the badge being displayed_
        *
        * ∈ {`'large'`, `'small'`}
        */
@@ -46,5 +52,5 @@
   }
 </script>
 
-<style scoped lang="stylus" src="./Badge.styl">
+<style scoped lang="stylus" src="./LicenseBadge.styl">
 </style>

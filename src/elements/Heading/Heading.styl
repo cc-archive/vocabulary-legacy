@@ -1,61 +1,29 @@
 @import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
 
-h1, h2, h3, h4, h5, h6
-  margin $space-small $space-zero
+.vocab.heading
+  margin $space-zero $space-zero $space-small $space-zero
+  color inherit
 
-  &.blue
-    color $color-blue
-
-  &.green
-    color $color-green
-
-  &.magenta
-    color $color-magenta
-
-  &.olive
-    color $color-olive
-
-  &.orange
-    color $color-orange
-
-  &.purple
-    color $color-purple
-
-  &.red
-    color $color-red
-
-  &.sand
-    color $color-sand
-
-  &.yellow
-    color $color-yellow
-
-  &.black
-    color $color-tone-black
-
-  &.white
-    color $color-tone-white
-
-  &.inherit
-    color $inherit
+  colors('color')
 
   &.inverted
     color $color-tone-white
 
-h1
+h1.vocab.heading
   font-size $size-mega
 
-h2
+h2.vocab.heading
   font-size $size-gigantic
 
-h3
+h3.vocab.heading
   font-size $size-enormous
 
-h4
+h4.vocab.heading
   font-size $size-huge
 
-h5
+h5.vocab.heading
   font-size $size-large
 
-h6
+h6.vocab.heading
   font-size $size-big
