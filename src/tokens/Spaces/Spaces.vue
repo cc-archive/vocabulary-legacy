@@ -1,5 +1,5 @@
 <template>
-  <div class="spaces">
+  <div class="vocab spaces">
     <Space
       v-for="(prop, index) in colors"
       :key="index"
@@ -15,6 +15,14 @@
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
+  /**
+   * ## Spaces provide readability.
+   *
+   * Vocabulary is meant to be readable, and whitespaces are of paramount
+   * importance in readability considerations. Vocabulary provides a number of
+   * standard spaces in different units to ensure consistency in the whitespaces
+   * throughout the project.
+   */
   export default {
     name: 'Spaces',
     components: {
@@ -22,10 +30,13 @@
     },
     props: {
       /**
-       * the units of the value to filter based on
+       * _the units of the value to filter based on_
+       *
+       * ∈ {`'rem'`, `'em'`}
        */
       units: {
         type: String,
+        validator: val => ['em', 'rem'].includes(val),
         required: true
       }
     },

@@ -1,5 +1,5 @@
 <template>
-  <div class="colors">
+  <div class="vocab colors">
     <Color
       v-for="(prop, index) in colors"
       :key="index"
@@ -15,6 +15,14 @@
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
+  /**
+   * ## Colors add pizzazz.
+   *
+   * Vocabulary is the design system of Creative Commons, and as such is infused
+   * with color throughout the project. There are a number of bright colours,
+   * with their lighter and darker shades. There are also a set of color tones
+   * in greyscale and some colors with contextual meaning.
+   */
   export default {
     name: 'Colors',
     components: {
@@ -22,7 +30,10 @@
     },
     props: {
       /**
-       * the substring of the category to filter based on
+       * _the substring of the category to filter based on_
+       *
+       * Here `'tones'` refers to greyscale colors and `'context'` refers to
+       * colors have have certain contextual connotations.
        */
       group: {
         type: String,

@@ -1,21 +1,30 @@
-Vocabulary is completely based on 'Source Sans Pro' by Adobe as the body font, 
-with fallback on 'Arial', 'Helvetica Neue', 'Helvetica' and finally, if all else 
-fails, the generic `sans-serif` font family.
+## Examples
 
-### Sizes
+```jsx { "props": { "className": "no-i18n" } }
+<Heading
+  :level="1">
+  Hello World!
+</Heading>
+<Paragraph>
+  The heading above uses <strong>bold</strong> weight and <strong>mega</strong>
+  size.
+</Paragraph>
+```
+
+### Size set
 
 Vocabulary provides a number of font sizes calculated using a harmonic scale 
 that scales `4em` over 6 harmonics.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Fonts property="size"/>
 ```
 
-### Weights
+### Weight set
 
 In each of these sizes, Vocabulary uses provides three distinct font weights, 
 namely light, normal and bold.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Fonts property="weight"/>
 ```

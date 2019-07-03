@@ -1,7 +1,7 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/media.styl"
 
-.spaces
+.vocab.spaces
   display: grid;
   align-content: stretch;
   justify-content: left;
@@ -12,14 +12,14 @@
   +phone-only()
     grid-template-columns 1fr
 
-  +tablet-portrait-up()
-    grid-template-columns 1fr 1fr
+  +tablet-portrait-only()
+    grid-template-columns repeat(2, 1fr)
 
-  +tablet-landscape-up()
-    grid-template-columns 1fr 1fr 1fr
+  +tablet-landscape-only()
+    grid-template-columns repeat(3, 1fr)
 
-  +desktop-up()
-    grid-template-columns 1fr 1fr 1fr
+  +desktop-only()
+    grid-template-columns repeat(3, 1fr)
 
   +big-desktop-up()
-    grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-columns repeat(6, 1fr)

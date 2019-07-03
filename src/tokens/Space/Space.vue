@@ -9,10 +9,10 @@
         {{ properName }}
       </Heading>
       <p>
-        <strong>Value:</strong><code> {{ value }}</code>
+        <strong>{{ $t('value') }}:</strong><code> {{ value }}</code>
       </p>
       <p>
-        <strong>Style:</strong><code> ${{ styleName }}</code>
+        <strong>{{ $t('stylustoken') }}:</strong><code> ${{ styleName }}</code>
       </p>
     </div>
   </div>
@@ -71,3 +71,6 @@
 
 <style scoped lang="stylus" src="./Space.styl">
 </style>
+
+<i18n src="./lang.json">
+</i18n>
