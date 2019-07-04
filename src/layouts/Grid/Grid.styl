@@ -1,0 +1,25 @@
+@import "~@/assets/tokens/tokens.styl"
+
+.vocab.grid
+  display grid
+  align-content stretch;
+  justify-content left;
+
+  grid-template-columns repeat(12, 1fr)
+
+  grid-gap $space-normal
+
+  &.sparser
+    grid-gap $space-larger
+
+  &.sparse
+    grid-gap $space-large
+
+  &.dense
+    grid-gap $space-small
+
+  &.denser
+    grid-gap $space-smaller
+
+  &.packed
+    grid-gap $space-zero
