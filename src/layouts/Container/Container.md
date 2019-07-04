@@ -14,15 +14,23 @@ Try resizing the window or visiting the page from a different device to see
 the various sizes. See if you can spot the container crossing over into another 
 display size-segment.
 
-In this example, blue represents gutters and green is the actual container. To
-see it in its natural form, please switch to the isolated mode using the icon in
-the top-right corner.
+To see it in its natural form, please switch to the isolated mode using the icon
+in the top-right corner.
 
 ```jsx { "props": { "className": "no-i18n contain-content" } }
-<div style="width:100%; background-color: rgb(67, 116, 183);">
+<div 
+  style="width:100%; 
+         background-image: linear-gradient(45deg, #ddd 25%, #fff 25%, #fff 50%, #ddd 50%, #ddd 75%, #fff 75%, #fff 100%);
+         background-size: 8px 8px;">
   <Container
-    style="color: white; background-color: rgb(152, 200, 7);">
-    Hello World!
+    style="border: 1px solid #ddd; background-color: white;">
+    <Heading :level="1">
+      Hello World!
+    </Heading>
+    <Paragraph>
+      The stripes on either sides are gutters. The actual container, i.e. this
+      will maintain width across screens in the same device class.
+    </Paragraph>
   </Container>
 </div>
 ```
