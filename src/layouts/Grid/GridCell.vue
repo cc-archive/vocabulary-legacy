@@ -107,7 +107,7 @@
         }
 
         // Defaults
-        phone = phone || 1
+        phone = phone || 12
         tabletPortrait = tabletPortrait || tablet || phone
         tabletLandscape = tabletLandscape || tablet || desktop
         bigDesktop = bigDesktop || desktop
