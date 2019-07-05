@@ -7,16 +7,21 @@ describe('Heading.vue', () => {
 
   beforeEach(() => {
     let level = 1
-    let slot = '<span>Slot</span>'
-    let inverted = true
-
+    let isInverted = true
+    let color = 'blue'
+    let shade = 'dark'
     propsData = {
       level,
-      inverted
+      isInverted,
+      color,
+      shade
     }
+
+    let slot = '<span>Slot</span>'
     slots = {
       default: slot
     }
+
     options = {
       propsData,
       slots
@@ -29,10 +34,17 @@ describe('Heading.vue', () => {
     expect(wrapper.is('h1')).toBe(true)
   })
 
-  it('renders correct style', () => {
+  it('renders correct inverted style', () => {
     const wrapper = shallowMount(Heading, options)
 
     expect(wrapper.element.classList).toContain('inverted')
+  })
+
+  it('renders correct color style', () => {
+    const wrapper = shallowMount(Heading, options)
+
+    expect(wrapper.element.classList).toContain('blue')
+    expect(wrapper.element.classList).toContain('dark')
   })
 
   it('renders correct slot', () => {

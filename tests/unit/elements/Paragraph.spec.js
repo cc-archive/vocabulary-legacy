@@ -6,15 +6,20 @@ describe('Paragraph.vue', () => {
   let propsData, slots, options
 
   beforeEach(() => {
-    let inverted = true
-    let slot = '<span>Slot</span>'
-
+    let isInverted = true
+    let color = 'blue'
+    let shade = 'dark'
     propsData = {
-      inverted
+      isInverted,
+      color,
+      shade
     }
+
+    let slot = '<span>Slot</span>'
     slots = {
       default: slot
     }
+
     options = {
       propsData,
       slots
@@ -27,10 +32,17 @@ describe('Paragraph.vue', () => {
     expect(wrapper.is('p')).toBe(true)
   })
 
-  it('renders correct style', () => {
+  it('renders correct inverted style', () => {
     const wrapper = shallowMount(Paragraph, options)
 
     expect(wrapper.element.classList).toContain('inverted')
+  })
+
+  it('renders correct color style', () => {
+    const wrapper = shallowMount(Paragraph, options)
+
+    expect(wrapper.element.classList).toContain('blue')
+    expect(wrapper.element.classList).toContain('dark')
   })
 
   it('renders correct slot', () => {

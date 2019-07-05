@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 import Font from '@/tokens/Font/Font'
 
 describe('Font.vue (size)', () => {
-  let propsData, options
+  let propsData, mocks, options
 
   beforeEach(() => {
     let property = 'size'
@@ -15,8 +15,12 @@ describe('Font.vue (size)', () => {
       name,
       value
     }
+    mocks = {
+      $t: () => {}
+    }
     options = {
-      propsData
+      propsData,
+      mocks
     }
   })
 
@@ -52,7 +56,7 @@ describe('Font.vue (size)', () => {
 })
 
 describe('Font.vue (weight)', () => {
-  let propsData, options
+  let propsData, mocks, options
 
   beforeEach(() => {
     let property = 'weight'
@@ -64,8 +68,12 @@ describe('Font.vue (weight)', () => {
       name,
       value
     }
+    mocks = {
+      $t: () => {}
+    }
     options = {
-      propsData
+      propsData,
+      mocks
     }
   })
 

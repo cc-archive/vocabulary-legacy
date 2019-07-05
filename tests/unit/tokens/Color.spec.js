@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 import Color from '@/tokens/Color/Color'
 
 describe('Color.vue', () => {
-  let propsData, options
+  let propsData, mocks, options
 
   beforeEach(() => {
     let name = 'color_oxford_blue'
@@ -13,8 +13,12 @@ describe('Color.vue', () => {
       name,
       value
     }
+    mocks = {
+      $t: () => {}
+    }
     options = {
-      propsData
+      propsData,
+      mocks
     }
   })
 
