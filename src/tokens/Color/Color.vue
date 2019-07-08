@@ -1,6 +1,6 @@
 <template>
   <!-- TODO Make card -->
-  <div class="color">
+  <div class="vocab color">
     <div class="swatch" :style="style">
       &nbsp;
     </div>

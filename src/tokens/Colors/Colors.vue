@@ -1,17 +1,22 @@
 <template>
-  <div class="vocab colors">
-    <Color
-      v-for="(prop, index) in colors"
-      :key="index"
-      :name="prop.name"
-      :value="prop.value"/>
-  </div>
+    <Grid>
+      <GridCell
+        :spanSet="[12, 3, 3]"
+        v-for="(prop, index) in colors"
+        :key="index">
+        <Color
+          :name="prop.name"
+          :value="prop.value"/>
+      </GridCell>
+    </Grid>
 </template>
 
 <script>
   import sortBy from 'lodash/sortBy'
 
   import Color from '@/tokens/Color/Color'
+  import Grid from '@/layouts/Grid/Grid'
+  import GridCell from '@/layouts/Grid/GridCell'
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
@@ -26,6 +31,8 @@
   export default {
     name: 'Colors',
     components: {
+      GridCell,
+      Grid,
       Color
     },
     props: {
@@ -88,6 +95,3 @@
     }
   }
 </script>
-
-<style scoped lang="stylus" src="./Colors.styl">
-</style>

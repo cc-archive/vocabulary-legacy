@@ -1,18 +1,23 @@
 <template>
-  <div class="vocab fonts">
-    <Font
+  <Grid>
+    <GridCell
+      :spanSet="[12]"
       v-for="(props, index) in values"
-      :key="index"
-      :property="property"
-      :name="props.name"
-      :value="props.value"/>
-  </div>
+      :key="index">
+      <Font
+        :property="property"
+        :name="props.name"
+        :value="props.value"/>
+    </GridCell>
+  </Grid>
 </template>
 
 <script>
   import sortBy from 'lodash/sortBy'
 
   import Font from '@/tokens/Font/Font'
+  import Grid from '@/layouts/Grid/Grid'
+  import GridCell from '@/layouts/Grid/GridCell'
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
@@ -26,6 +31,8 @@
   export default {
     name: 'Fonts',
     components: {
+      GridCell,
+      Grid,
       Font
     },
     props: {
@@ -57,6 +64,3 @@
     }
   }
 </script>
-
-<style scoped lang="stylus" src="./Fonts.styl">
-</style>

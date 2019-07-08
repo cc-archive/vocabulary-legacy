@@ -1,6 +1,6 @@
 <template>
   <!-- TODO Make card -->
-  <div class="font">
+  <div class="vocab font">
     <div class="demo" :style="style">
       When we share, everyone wins
     </div>

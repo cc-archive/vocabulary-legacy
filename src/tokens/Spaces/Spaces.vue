@@ -1,17 +1,22 @@
 <template>
-  <div class="vocab spaces">
-    <Space
+  <Grid>
+    <GridCell
+      :span-set="[12, 3, 3]"
       v-for="(prop, index) in colors"
-      :key="index"
-      :name="prop.name"
-      :value="prop.value"/>
-  </div>
+      :key="index">
+      <Space
+        :name="prop.name"
+        :value="prop.value"/>
+    </GridCell>
+  </Grid>
 </template>
 
 <script>
   import sortBy from 'lodash/sortBy'
 
   import Space from '@/tokens/Space/Space'
+  import Grid from '@/layouts/Grid/Grid'
+  import GridCell from '@/layouts/Grid/GridCell'
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
@@ -26,6 +31,8 @@
   export default {
     name: 'Spaces',
     components: {
+      GridCell,
+      Grid,
       Space
     },
     props: {
@@ -70,6 +77,3 @@
     }
   }
 </script>
-
-<style scoped lang="stylus" src="./Spaces.styl">
-</style>

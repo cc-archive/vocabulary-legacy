@@ -1,6 +1,6 @@
 <template>
   <!-- TODO Make card -->
-  <div class="space">
+  <div class="vocab space">
     <div class="box" :style="style">
       &nbsp;
     </div>
