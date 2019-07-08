@@ -79,32 +79,17 @@ Paragraphs can be colored for some reason.
 And to add to that, you may add one of three shades to them.
 
 ```jsx { "props": { "className": "no-i18n" } }
+<Paragraph color="blue" shade="light">
+  This is a paragraph colored the light shade of blue.
+</Paragraph>
+<Paragraph color="blue">
+  This is a paragraph colored blue.
+</Paragraph>
 <Paragraph color="blue" shade="dark">
-  This is a paragraph colored a darker shade of blue.
+  This is a paragraph colored the dark shade of blue.
 </Paragraph>
-<Paragraph color="green" shade="dark">
-  This is a paragraph colored a darker shade of green.
-</Paragraph>
-<Paragraph color="magenta" shade="dark">
-  This is a paragraph colored a darker shade of magenta.
-</Paragraph>
-<Paragraph color="olive" shade="dark">
-  This is a paragraph colored a darker shade of olive.
-</Paragraph>
-<Paragraph color="orange" shade="dark">
-  This is a paragraph colored a darker shade of orange.
-</Paragraph>
-<Paragraph color="purple" shade="dark">
-  This is a paragraph colored a darker shade of purple.
-</Paragraph>
-<Paragraph color="red" shade="dark">
-  This is a paragraph colored a darker shade of red.
-</Paragraph>
-<Paragraph color="sand" shade="dark">
-  This is a paragraph colored a darker shade of sand.
-</Paragraph>
-<Paragraph color="yellow" shade="dark">
-  This is a paragraph colored a darker shade of yellow.
+<Paragraph color="blue" shade="darker">
+  This is a paragraph colored the darker shade of blue.
 </Paragraph>
 ```
 

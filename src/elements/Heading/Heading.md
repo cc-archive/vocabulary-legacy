@@ -86,32 +86,17 @@ Also you may use one of the three shades, namely `light`, `dark` and `darker`,
 to accentuate the color.
 
 ```jsx { "props": { "className": "no-i18n" } }
-<Heading :level="4" color="blue" shade="dark">
+<Heading :level="4" color="blue" shade="light">
+  Light blue heading
+</Heading>
+<Heading :level="4" color="blue">
   Blue heading
 </Heading>
-<Heading :level="4" color="green" shade="dark">
-  Green heading
+<Heading :level="4" color="blue" shade="dark">
+  Dark blue heading
 </Heading>
-<Heading :level="4" color="magenta" shade="dark">
-  Magenta heading
-</Heading>
-<Heading :level="4" color="olive" shade="dark">
-  Olive heading
-</Heading>
-<Heading :level="4" color="orange" shade="dark">
-  Orange heading
-</Heading>
-<Heading :level="4" color="purple" shade="dark">
-  Purple heading
-</Heading>
-<Heading :level="4" color="red" shade="dark">
-  Red heading
-</Heading>
-<Heading :level="4" color="sand" shade="dark">
-  Sand heading
-</Heading>
-<Heading :level="4" color="yellow" shade="dark">
-  Yellow heading
+<Heading :level="4" color="blue" shade="darker">
+  Darker blue heading
 </Heading>
 ```
 
