@@ -1,0 +1,76 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.button
+  --button-color $color-tone-grey-dark
+  colors('--button-color')
+
+  sizes('font-size')
+
+  color white
+  font-reset()
+  font-weight $weight-bold
+  white-space nowrap
+
+  background-color var(--button-color)
+  cursor pointer
+
+  display inline-flex
+  flex-direction row
+  align-items center
+
+  padding $space-zero
+
+  border 1px solid var(--button-color)
+
+  transition 0.25s background-color, 0.25s background-image, 0.25s color
+
+  .addons
+    padding $space-normal
+
+  .content
+    padding $space-normal
+
+    &.has-addons
+      border-left 1px solid var(--button-color)
+
+      transition 0.25s border
+
+  &:hover
+    background-image linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.15) 100%
+    )
+
+  &.basic
+    color var(--button-color)
+    background-color transparent
+
+    &:hover
+      color $color-tone-white
+      background-color var(--button-color)
+
+      .content
+        border-color $color-tone-white
+
+  &.rounded
+    border-radius $radius-circle
+
+  &.negative
+    --button-color $color-context-negative
+
+  &.positive
+    --button-color $color-context-positive
+
+  &.disabled
+    --button-color $color-tone-near-white
+
+    color rgb(146, 149, 149)
+    cursor auto
+
+    &:hover
+      background-image none
+

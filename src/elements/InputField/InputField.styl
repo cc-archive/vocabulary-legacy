@@ -1,0 +1,87 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.input-field
+  --input-color: $color-tone-grey-dark
+  colors('--input-color')
+
+  sizes('font-size')
+
+  font-reset()
+
+  background-color $color-tone-white
+
+  display inline-flex
+  flex-direction row
+
+  position relative
+
+  border 1px solid var(--input-color)
+
+  .field
+    font inherit
+    background-color inherit
+
+    padding $space-normal
+
+    border transparent
+
+    &::placeholder
+      color var(--input-color)
+
+  .left-addons
+    order -1
+
+  .right-addons
+    order 1
+
+  .left-addons,
+  .right-addons
+    color $color-tone-white
+    background-color var(--input-color)
+
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    padding $space-normal
+
+    transition 0.25s color, 0.25s background-color
+
+  &:focus-within
+    .left-addons,
+    .right-addons
+      background-image linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.15) 0%,
+              rgba(255, 255, 255, 0.15) 100%
+      )
+
+  &.basic
+    .left-addons,
+    .right-addons
+      color var(--input-color)
+      background-color transparent
+
+    &:focus-within
+      .left-addons,
+      .right-addons
+        color $color-tone-white
+        background-color var(--input-color)
+
+  &.negative
+    --input-color $color-context-negative
+    background-color $color-context-negative-light
+
+  &.positive
+    --input-color $color-context-positive
+    background-color $color-context-positive-light
+
+  &.disabled
+    --input-color $color-tone-grey-light
+    background-color $color-tone-near-white
+
+    opacity 0.6
