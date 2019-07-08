@@ -1,0 +1,27 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.shield
+  display inline-flex
+  flex-direction row
+  align-items center
+
+  color $color-tone-white
+
+  --chosen-color: $color-tone-grey-light
+  colors('--chosen-color')
+
+  sizes('font-size')
+
+  .label
+    text-transform lowercase
+
+    background-color $color-tone-near-black
+
+    padding $space-normal
+
+  .message
+    background-color var(--chosen-color)
+
+    padding $space-normal
