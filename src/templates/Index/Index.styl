@@ -1,13 +1,21 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/page.styl"
 
-.index
+.vocab.index
   page()
 
   main
     min-height 100vh
     background radial-gradient($color-orange, $color-orange-dark)
 
-.easter-egg
-  main
-    background $color-green-dark
+  footer.vocab.footer
+    .panel
+      height 100%
+
+      display flex
+      flex-direction column
+      justify-content space-between
+
+  &.easter-egg
+    main
+      background $color-green-dark

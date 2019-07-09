@@ -1,0 +1,18 @@
+{
+  "en": {
+    "credits": "Credits",
+    "builtusing": "Built using {0}.",
+    "iconsby": "Icons by {0}.",
+    "fa": "Font Awesome",
+    "welcome": "Welcome",
+    "everythingisfine": "Everything is fine."
+  },
+  "hi": {
+    "credits": "श्रेय",
+    "builtusing": "{0} का उपयोग कर बनाया गया।",
+    "iconsby": "चिह्न {0} द्वारा।",
+    "fa": "फॉन्ट औसम",
+    "welcome": "नमस्ते",
+    "everythingisfine": "सब कुछ ठीक है।"
+  }
+}
