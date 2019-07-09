@@ -1,7 +1,7 @@
 export default {
   props: {
     /**
-     * _the font color for the text_
+     * _the primary color for the component_
      *
      * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
      * `'red'`, `'sand'`, `'yellow'`}
@@ -23,7 +23,7 @@ export default {
       ].includes(val)
     },
     /**
-     * _the shade of the color to use for the text_
+     * _the accentuating shade of the primary color to use_
      *
      * ∈ {`'light'`, `'dark'`, `'darker'`}
      *
