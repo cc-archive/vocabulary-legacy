@@ -1,103 +1,124 @@
-## Header opens the page.
+## Examples
 
-The header displays information about the site such as its branding and name as
-well as navigation links.
+The header has a standard layout and appearance. It sits flush with the 
+[Footer](#/Patterns/Footer) component, thanks to the use of 
+[Container](#/Layouts/Container).
 
-### Examples
+```jsx { "props": { "className": "contain-content" } }
+<Header 
+  appName="Search" 
+  color="blue">
+  <InputField
+    type="text"
+    color="blue"
+    shade="dark"
+    :iconSet="['keyboard', '']"
+    placeholder="Search..."/>
+  <Navigation
+    is-inverted
+    :linkList="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>
+</Header>
+<Footer/>
+```
 
-The header has a standard layout and appearance.
+### Style set
 
-```jsx
+Without specifying any app, the header shows the CC wordmark.
+
+```jsx { "props": { "className": "no-i18n contain-content" } }
 <Header/>
 ```
 
 The name of the site and the URL to which the branding points can be passed to 
 the header via props.
 
-```jsx
-<Header appName="Search" homeLink="https://creativecommons.org/"> 
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header 
+  color="red"
+  appName="Search"
+  homeLink="https://creativecommons.org/"/>
 ```
 
-If the plain site naming doesn't appeal to you, you can simply swap out the 
-whole branding slot with something that does. Use the class `name` on the text
-to make use of the standard formatting.
+If the standard site naming does not catch your fancy, you can simply populate
+the branding slot with something that does. Try not to deviate too much from the
+standard template.
 
-However you are free to use your own components and their own scoped styles.
-
-```jsx
-<Header>
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header color="green">
   <template v-slot:branding>
-    <span class="name">Site name</span>
+    <LicenseIconography :iconList="['', 'by']"/>:
+    Attribution
   </template>
 </Header>
 ```
 
-In case you want to display some content in the header, you can add it to the 
-default slot and it will be placed toward the right side.
+### Add-on set
 
-```jsx
+The right side contains a slot so that you can populate your own content in it.
+
+Ideally you would use this space to place a [Navigation](#/Elements/Navigation) 
+component or a search box or the user profile. But those are just suggestions.
+
+Anything goes.
+
+```jsx { "props": { "className": "no-i18n contain-content" } }
 <Header 
-  appName="Search" 
-  gradientColor="blue">
-  <Input
-    inverted
-    type="text"
-    :icons="['', 'search']"
-    placeholder="Search..."/>
-  <Navigation 
-    inverted
-    :links="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>
+  appName="App" 
+  color="magenta">
+  <Heading :level="6">You really mean anything?</Heading>
+  Yes, <em>literally</em> anything.
 </Header>
 ```
 
-And one more thing... did we mention colors?
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header 
+  appName="App" 
+  color="magenta">
+  <Navigation
+    is-inverted
+    :linkList="[{text: 'Link 1', href:'#1'}, {text: 'Link 2', href:'#2'}]"/>
+</Header>
+```
 
-```jsx
-<Header appName="Blue" gradientColor="blue">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+### Color set
+
+A header without the color specified is orange.
+
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header appName="Default"/>
+```
+
+But by now you already know, the header can be colored using any color from the 
+set provided by CC Vocabulary. Let's leave orange for the 
+[main site](https://creativecommons.org), shall we?
+
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header appName="Blue" color="blue"/>
 <br/>
-<Header appName="Green" gradientColor="green">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Green" color="green"/>
 <br/>
-<Header appName="Magenta" gradientColor="magenta">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Magenta" color="magenta"/>
 <br/>
-<Header appName="Olive" gradientColor="olive">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Olive" color="olive"/>
 <br/>
-<Header appName="Purple" gradientColor="purple">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Purple" color="purple"/>
 <br/>
-<Header appName="Red" gradientColor="red">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Red" color="red"/>
 <br/>
-<Header appName="Sand" gradientColor="sand">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Sand" color="sand"/>
 <br/>
-<Header appName="Yellow" gradientColor="yellow">
-  <Navigation
-    inverted 
-    :links="[{text: 'Link 1', href: '#2'}, {text: 'Link 2', href: '#2'}]"/>
-</Header>
+<Header appName="Yellow" color="yellow"/>
+```
+
+Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+to accentuate the color.
+
+```jsx { "props": { "className": "no-i18n contain-content" } }
+<Header appName="Light" color="blue" shade="light"/>
+<br/>
+<Header appName="Default" color="blue"/>
+<br/>
+<Header appName="Dark" color="blue" shade="dark"/>
+<br/>
+<Header appName="Darker" color="blue" shade="darker"/>
 ```

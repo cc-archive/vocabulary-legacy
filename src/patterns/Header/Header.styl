@@ -1,139 +1,82 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/media.styl"
 @import "~@/styles/list.styl"
+@import "~@/styles/colors.styl"
 
-header
-  color $color-tone-white
+.vocab.header
+  color white
 
-  &.blue
-    background linear-gradient(
-            90deg,
-            $color-blue-dark,
-            $color-blue,
-            $color-blue-dark
-    )
+  background-color $color-orange
+  colors('background-color')
 
-  &.green
-    background linear-gradient(
-            90deg,
-            $color-green-dark,
-            $color-green,
-            $color-green-dark
-    )
+  background-image linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.15) 0%,
+          rgba(0, 0, 0, 0) 25%,
+          rgba(0, 0, 0, 0) 75%,
+          rgba(0, 0, 0, 0.15) 100%
+  )
 
-  &.magenta
-    background linear-gradient(
-            90deg,
-            $color-magenta-dark,
-            $color-magenta,
-            $color-magenta-dark
-    )
-
-  &.olive
-    background linear-gradient(
-            90deg,
-            $color-olive-dark,
-            $color-olive,
-            $color-olive-dark
-    )
-
-  &.orange
-    background linear-gradient(
-            90deg,
-            $color-orange-dark,
-            $color-orange,
-            $color-orange-dark
-    )
-
-  &.purple
-    background linear-gradient(
-            90deg,
-            $color-purple-dark,
-            $color-purple,
-            $color-purple-dark
-    )
-
-  &.red
-    background linear-gradient(
-            90deg,
-            $color-red-dark,
-            $color-red,
-            $color-red-dark
-    )
-
-  &.sand
-    background linear-gradient(
-            90deg,
-            $color-sand-dark,
-            $color-sand,
-            $color-sand-dark
-    )
-
-  &.yellow
-    background linear-gradient(
-            90deg,
-            $color-yellow-dark,
-            $color-yellow,
-            $color-yellow-dark
-    )
-
-.flex
-  width 100%
-
-  display flex
-  flex-direction row
-  flex-wrap wrap
-  align-items center
-  justify-content space-between
-
-  padding $space-normal $space-zero
-
-.section
-  padding $space-zero $space-normal
-
-/deep/ #branding
-  flex-grow 0
-
-  margin $space-small $space-zero
-
-  .homelink
-    color inherit
-
+  .flex
     display flex
-    flex-direction row
+
+    flex-direction column
     align-items center
 
-    text-decoration none
+    padding $space-normal $space-normal
 
-    &:visited
-      color inherit
+    +tablet-landscape-up()
+      flex-direction row
+      flex-wrap wrap
+      align-items center
+      justify-content space-between
 
-  .wordmark
-    width 10rem
+      padding $space-normal $space-zero
 
-  .lettermark
-    width 2.5rem
-    margin-right $space-normal
+    #branding
+      flex-grow 0
 
-  .name
-    font-size $size-huge
-    font-weight $weight-bold
+      font-size $size-huge
+      font-weight $weight-bold
 
-#hamburger
-  flex-grow 0
+      margin $rspace-small $space-zero
 
-  +tablet-portrait-up()
-    display none
+      .homelink
+        color inherit
 
-#content
-  margin-top 0
+        display flex
+        flex-direction row
+        align-items center
 
-  +phone-only()
-    text-align center
+        text-decoration none
 
-    width 100%
+      .wordmark
+        width 10rem
 
-    max-height 0
-    overflow hidden
+      .lettermark
+        width 2.5rem
+        margin-right $rspace-normal
 
-    transition max-height 0.25s, margin 0.25s
+    #hamburger
+      -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+
+      .icon
+        transform scale(0)
+        transition 0.25s transform
+
+        &.active
+          transform scale(1)
+
+      +tablet-portrait-up()
+        display none
+
+    #content
+      +phone-only()
+        text-align center
+
+        width 100%
+
+        max-height 0
+        overflow hidden
+
+        transition max-height 0.25s, margin 0.25s
