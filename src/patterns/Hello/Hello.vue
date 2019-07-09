@@ -1,18 +1,17 @@
 <template>
-  <div class="hello">
+  <div class="vocab hello">
     <img v-if="logoType !== 'none'"
          :src="logo"
          alt="Creative Commons logo"
          class="logo"
          :class="logoType">
-    <Heading :level="4" :is-inverted="inverted">{{ heading }}</Heading>
-    <!-- @slot Use this to insert additional content -->
+    <!-- @slot Content goes here -->
     <slot>
-      <Paragraph v-if="tagline" :is-inverted="inverted">
+      <Heading :level="4" :is-inverted="isInverted">
+        {{ computedHeading }}
+      </Heading>
+      <Paragraph :is-inverted="isInverted">
         {{ computedTagline }}
-      </Paragraph>
-      <Paragraph v-else :is-inverted="inverted">
-        {{ $t(computedTagline) }}
       </Paragraph>
     </slot>
   </div>
@@ -22,8 +21,19 @@
   import Heading from '@/elements/Heading/Heading'
   import Paragraph from '@/elements/Paragraph/Paragraph'
 
+  import Invertible from '@/mixins/invertible'
+
+  /**
+   * ## Hello greets visitors.
+   *
+   * Visitors coming to meet CC Vocabulary are greeted with a friendly message
+   * chosen at random from a predefined list of messages or a custom one.
+   */
   export default {
     name: 'Hello',
+    mixins: [
+      Invertible
+    ],
     components: {
       Paragraph,
       Heading
@@ -43,7 +53,9 @@
     },
     props: {
       /**
-       * which Creative Commons logo to show, if any
+       * _which Creative Commons logo to show, if any_
+       *
+       * ∈ {`'wordmark'`, `'lettermark'`, `'letterheart'`, `'none'`}
        */
       logoType: {
         type: String,
@@ -56,39 +68,40 @@
         default: 'wordmark'
       },
       /**
-       * the heading displayed by the component
+       * _the heading displayed by the component_
+       *
+       * If not provided, 'CC Vocabulary' is shown in the locale language.
        */
       heading: {
-        type: String,
-        default: 'CC Vocabulary'
+        type: String
       },
       /**
-       * the tagline displayed by the component
+       * _the tagline displayed by the component_
        *
        * If not provided, one will be chosen at random.
        */
       tagline: {
         type: String
-      },
-      /**
-       * whether the content is on a dark background
-       */
-      inverted: {
-        type: Boolean,
-        default: false
       }
     },
     computed: {
+      computedHeading: function () {
+        if (this.heading) {
+          return this.heading
+        } else {
+          return this.$t('ccvocabulary')
+        }
+      },
       computedTagline: function () {
         if (this.tagline) {
           return this.tagline
         } else {
           let count = this.taglines.length
-          return this.taglines[Math.floor(Math.random() * count)]
+          return this.$t(this.taglines[Math.floor(Math.random() * count)])
         }
       },
       logo: function () {
-        let color = this.inverted ? 'white' : 'black'
+        let color = this.isInverted ? 'white' : 'black'
         return require(
           `@/assets/logo/${this.logoType}_${color}.svg`
         )

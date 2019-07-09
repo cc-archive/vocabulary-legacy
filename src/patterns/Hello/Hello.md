@@ -1,9 +1,4 @@
-## Hello greets visitors.
-
-Visitors coming to meet CC Vocabulary are greeted with a friendly message chosen
-at random from a predefined list of messages or a custom one.
-
-### Examples
+## Examples
 
 Without any customisation, we see the CC wordmark, the project title and a 
 randomly chosen welcoming tagline from a predefined set.
@@ -12,45 +7,60 @@ randomly chosen welcoming tagline from a predefined set.
 <Hello/>
 ```
 
-The logo at the top can be one of three variants (or none at all):
-- wordmark
-- lettermark
-- letterheart
+### Style set
 
-```jsx
-<Hello logoType="letterheart"/>
+The logo at the top can be one of three variants, or can be hidden altogether.
+
+```jsx { "props": { "className": "no-i18n" } }
+<Grid>
+  <GridCell :spanSet="[12, 4, 4]">
+    <Hello logoType="wordmark">&nbsp;</Hello>
+  </GridCell>
+  <GridCell :spanSet="[12, 4, 4]">
+    <Hello logoType="lettermark">&nbsp;</Hello>
+  </GridCell>
+  <GridCell :spanSet="[12, 4, 4]">
+    <Hello logoType="letterheart">&nbsp;</Hello>
+  </GridCell>
+</Grid>
 ```
 
-These texts can be overwritten by passing the `heading` and `tagline` prop to 
-the component. Passing these props removes the random functionality. Note that
-the Creative Commons logo might look a tad bit weird with unrelated text 
-underneath it, so it can be turned off as well.
+### Add-on set
 
-```jsx
-<Hello heading="Reality can be whatever I want." 
-       tagline="— Thanos"
-       logoType="none"/>
+The textual content can be overwritten using the props `heading` and `tagline`
+Passing these props removes the random functionality. Note that the Creative 
+Commons logo might look a tad bit weird with unrelated text underneath it, so 
+it should be turned off in those situations.
+
+```jsx { "props": { "className": "no-i18n" } }
+<Hello 
+  heading="Reality can be whatever I want." 
+  tagline="— Thanos"
+  logoType="none"/>
 ```
 
-If you hate the idea of a tagline, you can use the default `slot` to insert any 
-content you want. Note that using the slot replaces the tagline.
+If you hate the idea of having just heading and tagline text as you can use the 
+default slot to insert any content you want. Note that using the slot means
+that the `heading` and `tagline` props become moot.
 
-```jsx
-<Hello heading="Hello from CC Summit 2019!" tagline="This is irrelevant">
+```jsx { "props": { "className": "no-i18n" } }
+<Hello>
+  <Heading :level="5">Hello from CC Summit 2019!</Heading>
   <img src="https://live.staticflickr.com/65535/47788052912_62df647c48_z_d.jpg"/>
   <p>
     Photo by 
     <a href="https://www.flickr.com/photos/ter-burg/47788052912/in/album-72157708410802765/">
       Sebastiaan ter Burg, CC BY
     </a>
-  </p> 
+  </p>
 </Hello>
 ``` 
 
+### Color set
 
-There is also an inverted version that inverts the logo as well as text color.
+There is an inverted version that inverts the logo as well as text color.
 This is intended for placement on dark or non-white backgrounds.
 
 ```jsx { "props": { "className": "dark-background" } } 
-<Hello inverted/>
+<Hello is-inverted/>
 ```
