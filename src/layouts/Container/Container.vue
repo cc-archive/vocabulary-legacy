@@ -1,5 +1,6 @@
 <template>
   <div class="vocab container">
+    <!-- @slot Content goes here -->
     <slot/>
   </div>
 </template>
