@@ -1,5 +1,9 @@
 <template>
-  <button class="vocab button" :class="buttonClasses" :disabled="isDisabled">
+  <button
+    v-on="buttonListeners"
+    class="vocab button"
+    :class="buttonClasses"
+    :disabled="isDisabled">
     <div class="addons" v-if="hasAddons">
       <!-- @slot Addons go here -->
       <slot name="addons">
@@ -18,9 +22,7 @@
 
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import {
-    faHandPointUp
-  } from '@fortawesome/free-solid-svg-icons'
+  import { faHandPointUp } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
   import Colorable from '@/mixins/colorable'
@@ -90,6 +92,18 @@
         return {
           'has-addons': this.hasAddons
         }
+      },
+      buttonListeners: function () {
+        let vm = this
+        return Object.assign(
+          {},
+          vm.$listeners,
+          {
+            click: function (event) {
+              vm.$emit('click', event.target.value)
+            }
+          }
+        )
       }
     }
   }
