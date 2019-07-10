@@ -125,16 +125,13 @@ Buttons come in all sizes, from small to mega.
 
 ### Indication set
 
-A button may indicate a negative outcome.
-
-```jsx { "props": { "className": "no-i18n" } }
-<Button indication="positive">I'm safe to click</Button>
-```
-
-A button may indicate a positive outcome.
+A button may indicate a negative or positive outcome. For example, in this case
+clicking the button that calls itself dangerous will lead to much agony and 
+unpleasantness.
 
 ```jsx { "props": { "className": "no-i18n" } }
 <Button indication="negative">I'm dangerous to click</Button>
+<Button indication="positive">I'm safe to click</Button>
 ```
 
 ### State set

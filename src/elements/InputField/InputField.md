@@ -210,26 +210,18 @@ Input fields come in all sizes, from small to mega.
 
 ### Indication set
 
-A field may indicate erroneous input.
+A field may indicate erroneous or correct input. For example, in this case
+any answer will me highlighted red, other than _'Right answer'_ which will be
+highlighted green.
 
 ```jsx { "props": { "className": "no-i18n" } }
+let value = 'Wrong answer'
 <InputField
   type="text"
   :iconSet="['keyboard', '']"
   placeholder="Answer..."
-  value="Wrong answer"
-  indication="negative"/>
-```
-
-A field may indicate correct input.
-
-```jsx { "props": { "className": "no-i18n" } }
-<InputField
-  type="text"
-  :iconSet="['keyboard', '']"
-  placeholder="Answer..."
-  value="Right answer"
-  indication="positive"/>
+  :indication="value === 'Right answer' ? 'positive' : 'negative'"
+  v-model="value"/>
 ```
 
 ### State set
