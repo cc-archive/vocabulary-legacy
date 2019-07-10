@@ -1,0 +1,79 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.select-field
+  appearance none
+
+  --select-color: $color-tone-grey-dark
+  colors('--select-color')
+
+  sizes('font-size')
+
+  color white
+  font-reset()
+  font-weight $weight-bold
+  white-space nowrap
+
+  background-color var(--select-color)
+
+  display inline-flex
+  flex-direction row
+  align-items center
+
+  position relative
+
+  border 1px solid var(--select-color)
+
+  .field
+    appearance none
+    cursor pointer
+
+    font inherit
+    color inherit
+    background-color inherit
+
+    padding $space-normal
+    padding-right 'calc(2 * %s + 1.25em)' % $space-normal
+
+    border transparent
+
+    &.has-addons
+      padding-left 'calc(2 * %s + 1.25em)' % $space-normal
+
+  .addons
+    position absolute
+    left $space-zero
+
+  .caret
+    position absolute
+    right $space-zero
+
+  .addons,
+  .caret
+    pointer-events none
+
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    padding $space-normal
+
+  &.negative
+    --select-color $color-context-negative
+
+  &.positive
+    --select-color $color-context-positive
+
+  &.disabled
+    --select-color $color-tone-near-white
+
+    color rgb(146, 149, 149)
+
+    .field
+      cursor auto
+
+    &:hover
+      background-image none
