@@ -20,6 +20,18 @@ It may be in the middle of some text.
 </Paragraph>
 ```
 
+### Style set
+
+The badge may be vertically centered with respect to surrounding text.
+
+```jsx { "props": { "className": "no-i18n" } }
+<Paragraph>
+  The CC BY license
+  (<LicenseBadge license="by" is-centered/>)
+  is a permissive free-culture license.
+</Paragraph>
+```
+
 ### Badge set
 
 To start with we have badges for all CC licenses.

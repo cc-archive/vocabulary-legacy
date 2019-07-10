@@ -1,5 +1,5 @@
 <template>
-  <img :src="svg" :alt="`${license}`.toUpperCase()">
+  <img class="vocab license-badge" :class="licenseBadgeClasses" :src="svg" :alt="`${license}`.toUpperCase()">
 </template>
 
 <script>
@@ -40,9 +40,23 @@
       size: {
         type: String,
         default: 'large'
+      },
+      /**
+       * _whether to center the image when inline with text_
+       */
+      isCentered: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
+      licenseBadgeClasses: function () {
+        return [
+          {
+            'centered': this.isCentered
+          }
+        ]
+      },
       svg: function () {
         return require(
           `@/assets/icons/license/badges_${this.size}/${this.license}.svg`
@@ -52,5 +66,5 @@
   }
 </script>
 
-<style scoped lang="stylus" src="./LicenseBadge.styl">
+<style lang="stylus" src="./LicenseBadge.styl">
 </style>
