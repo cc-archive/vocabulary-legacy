@@ -118,6 +118,20 @@ field.
 </Dropdown>
 ```
 
+### Style set
+
+A dropdown can be defined to not attract attention, unless given attention via 
+means of a hover.
+
+```jsx { "props": { "className": "no-i18n" } }
+<SelectField
+  color="red"
+  icon="vote-yea"
+  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  is-basic/>
+```
+
+
 ### Size set
 
 Dropdowns come in all sizes, from small to mega.

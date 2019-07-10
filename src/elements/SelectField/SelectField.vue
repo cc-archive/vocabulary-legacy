@@ -37,6 +37,7 @@
 
   import Colorable from '@/mixins/colorable'
   import Resizable from '@/mixins/resizable'
+  import Basicable from '@/mixins/basicable'
   import Disableable from '@/mixins/disableable'
   import Indicatable from '@/mixins/indicatable'
 
@@ -55,6 +56,7 @@
     mixins: [
       Colorable,
       Resizable,
+      Basicable,
       Disableable,
       Indicatable
     ],
