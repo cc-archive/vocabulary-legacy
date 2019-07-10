@@ -2,6 +2,7 @@
   <div class="vocab locale">
     <SelectField
       v-model="$i18n.locale"
+      v-bind="$attrs"
       color="orange"
       icon="globe"
       :optionList="localeOptions"/>
@@ -24,6 +25,7 @@
    */
   export default {
     name: 'Locale',
+    inheritAttrs: false,
     components: {
       SelectField
     },
