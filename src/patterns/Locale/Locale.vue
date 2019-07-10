@@ -1,31 +1,31 @@
 <template>
-  <!-- TODO Use dropdown -->
-  <div class="locale">
-    <label :for="id">
-      <FontAwesomeIcon :icon="['fas', 'language']" size="2x" class="icon"/>
-    </label>
-    <select v-model="$i18n.locale" :id="id">
-      <option
-        v-for="(locale, index) in locales"
-        :key="index"
-        :value="locale.code">
-        {{ locale.nativeName }}
-      </option>
-    </select>
+  <div class="vocab locale">
+    <SelectField
+      v-model="$i18n.locale"
+      color="orange"
+      icon="globe"
+      :optionList="localeOptions"/>
   </div>
 </template>
 
 <script>
+  import SelectField from '@/elements/SelectField/SelectField'
+
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import { faLanguage } from '@fortawesome/free-solid-svg-icons'
-  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+  import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
-  library.add(faLanguage)
+  library.add(faGlobe)
 
+  /**
+   * ## Locale translates Vocabulary to the users' language.
+   *
+   * When exploring an app that has translations defined, the user can
+   * switch between locales using this component.
+   */
   export default {
     name: 'Locale',
     components: {
-      FontAwesomeIcon
+      SelectField
     },
     data: function () {
       return {
@@ -40,15 +40,16 @@
             englishName: 'English',
             nativeName: 'English'
           }
-        ],
-        id: null
+        ]
       }
     },
-    mounted: function () {
-      this.id = this._uid // Replace with UUID in case things go south
+    computed: {
+      localeOptions: function () {
+        return this.locales.map(locale => ({
+          value: locale.code,
+          text: locale.nativeName
+        }))
+      }
     }
   }
 </script>
-
-<style scoped lang="stylus" src="./Locale.styl">
-</style>

@@ -1,10 +1,4 @@
-## Locale translates Vocabulary to the users' language.
-
-Vocabulary comes with support for i18n built in. When exploring a component that
-has translations defined, the user can switch between locales using this 
-component.
-
-### Examples
+## Examples
 
 The locale switcher in the standard form looks like this.
 
@@ -12,19 +6,16 @@ The locale switcher in the standard form looks like this.
 <Locale/>
 ``` 
 
-In components that have i18n enabled, such as `<Footer/>`, this switcher shows
-up in the preview as well, on the top left corner, allowing explorers to change 
-locales and see the various versions of the component on the go.
-
-In fact, the [Footer](#/Patterns/Footer) is an excellent place to place the 
-component. 
+In components that have i18n enabled and translations defined this component
+appears in the preview as well, allowing explorers (like yourself!) to change 
+locales and see the various versions of the component.
 
 ```jsx
 <Footer>
-  <Heading :level="6">Let's talk freely!</Heading>
   <Locale/>
 </Footer>
 ```
 
-Changes made in any switcher across the styleguide documentation website are 
-reflected in all switchers, so be careful.
+All locale switchers across the styleguide, including those in component 
+previews, share the same scope and thus switching one will cause a switch in all
+components across the styleguide.
