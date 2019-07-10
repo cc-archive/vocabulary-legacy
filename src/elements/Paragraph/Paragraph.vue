@@ -21,11 +21,26 @@
       Invertible,
       Colorable
     ],
+    props: {
+      /**
+       * _whether the line height should be more or less than is default_
+       *
+       * ∈ {`'sparse'`, `'dense'`}
+       */
+      density: {
+        type: String,
+        validator: val => [
+          'sparse',
+          'dense'
+        ].includes(val)
+      }
+    },
     computed: {
       paragraphStyles: function () {
         return [
           this.color,
           this.shade,
+          this.density,
           {
             'inverted': this.isInverted
           }
@@ -35,5 +50,5 @@
   }
 </script>
 
-<style scoped lang="stylus" src="./Paragraph.styl">
+<style lang="stylus" src="./Paragraph.styl">
 </style>
