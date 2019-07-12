@@ -26,8 +26,13 @@
        * Note that in a 12-slice grid, number of columns that can be
        * accommodated is `12 / span`.
        *
-       * Depending on the length of the array, the values are interpreted
-       * differently.
+       * Other than desktop, all values have a default and will be resolved as
+       * follows. On phones and tablets in portrait orientation, the cell
+       * occupies all twelve slices. Tablets in landscape orientation and big
+       * desktops fall back to the slices configured for the standard desktop.
+       *
+       * With these fallbacks in mind, depending on the length of the array,
+       * the values are interpreted differently.
        *
        * ```
        * [desktop]
@@ -35,16 +40,6 @@
        * [phone, desktop, big desktop]
        * [phone, tablet, desktop, big desktop]
        * [phone, tablet (portrait), tablet (landscape), desktop, big desktop]
-       * ```
-       *
-       * Other than desktop, all values have a default and will be resolved as
-       * follows.
-       *
-       * ```
-       * Phone -> 12
-       * Tablet (portrait) -> Phone
-       * Tablet (landscape) -> Desktop
-       * Big desktop -> Desktop
        * ```
        */
       spanSet: {
