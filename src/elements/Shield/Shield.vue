@@ -9,6 +9,13 @@
   import Colorable from '@/mixins/colorable'
   import Resizeable from '@/mixins/resizable'
 
+  /**
+   * ## Shields are informative badges.
+   *
+   * A shield conveys two bits of information, a key-value pair if you will in
+   * an easy-to-digest badge form. This has made it immensely popular in the
+   * development ecosystem to adorn `README.md` files.
+   */
   export default {
     name: 'Shield',
     mixins: [
