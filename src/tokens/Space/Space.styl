@@ -2,8 +2,11 @@
 
 .vocab.space
   border 1px solid $color-tone-grey-lighter
-  box-shadow $shadow-subtle $color-tone-near-white
+  border-radius 0 0 $rradius-normal $rradius-normal
+  box-shadow unquote($shadow-subtle) $color-tone-near-white
   overflow hidden
+
+  height 100%
 
   .box
     background-color $color-blue-light
