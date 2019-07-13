@@ -30,6 +30,7 @@
   import Basicable from '@/mixins/basicable'
   import Disableable from '@/mixins/disableable'
   import Indicatable from '@/mixins/indicatable'
+  import Roundable from '@/mixins/roundable'
 
   library.add(faHandPointUp)
 
@@ -47,7 +48,8 @@
       Resizable,
       Basicable,
       Disableable,
-      Indicatable
+      Indicatable,
+      Roundable
     ],
     components: {
       FontAwesomeIcon
@@ -59,13 +61,6 @@
       icon: {
         type: String,
         default: ''
-      },
-      /**
-       * _whether to round the corner of the buttons_
-       */
-      isRounded: {
-        type: Boolean,
-        default: false
       }
     },
     computed: {
