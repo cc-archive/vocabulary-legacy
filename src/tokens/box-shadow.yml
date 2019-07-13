@@ -6,6 +6,10 @@
 props:
   shadow_subtle:
     value: '0 1px 1px 0'
+  shadow_normal:
+    value: '0 2px 2px 0'
+  shadow_pronounced:
+    value: '0 3px 3px 0'
 
 global:
   type: string

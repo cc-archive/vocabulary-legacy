@@ -581,6 +581,20 @@
       "value": "0 1px 1px 0",
       "originalValue": "0 1px 1px 0",
       "name": "shadow_subtle"
+    },
+    "shadow_normal": {
+      "type": "string",
+      "category": "box-shadow",
+      "value": "0 2px 2px 0",
+      "originalValue": "0 2px 2px 0",
+      "name": "shadow_normal"
+    },
+    "shadow_pronounced": {
+      "type": "string",
+      "category": "box-shadow",
+      "value": "0 3px 3px 0",
+      "originalValue": "0 3px 3px 0",
+      "name": "shadow_pronounced"
     }
   }
 }
