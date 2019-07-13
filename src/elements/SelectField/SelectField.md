@@ -2,7 +2,7 @@
 
 A dropdown looks like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   icon="vote-yea"
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
@@ -12,7 +12,7 @@ A dropdown looks like this.
 
 A dropdown unless colored is grey.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 ```
@@ -20,7 +20,7 @@ A dropdown unless colored is grey.
 Looks quite drab, we know. So they can be colored with any color from the set 
 provided by CC Vocabulary.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="blue"
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
@@ -62,7 +62,7 @@ provided by CC Vocabulary.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="blue"
   shade="light"
@@ -90,7 +90,7 @@ A dropdown can contain an icon to act as a visual aid as to what the choice is
 about. Note that the icon must be added to the FontAwesome library by the 
 application.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="magenta"
   icon="vote-yea"
@@ -108,7 +108,7 @@ field.
 }
 ```
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="magenta"
   :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]">
@@ -123,7 +123,7 @@ field.
 A dropdown can be defined to not attract attention, unless given attention via 
 means of a hover.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="red"
   icon="vote-yea"
@@ -136,7 +136,7 @@ means of a hover.
 
 Dropdowns come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   color="purple"
   size="small"
@@ -183,7 +183,7 @@ A dropdown may indicate a negative or positive choice. For example, in this case
 deleting permanently is a destructive action whereas restoring to safety is not.
 The dropdown changes color to reflect this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 let value = 'del'
 <SelectField
   :optionList="[{value: 'del', text: 'Delete permanently'}, {value: 'res', text: 'Restore to safety'}]"
@@ -195,7 +195,7 @@ let value = 'del'
 
 A dropdown may be disabled to prevent input altogether.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-disabled/>
@@ -208,7 +208,7 @@ All attributes that you could pass to an `select` tag can be passed to the
 
 So a dropdown may have a `name` and a `value`.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <SelectField
   name="Name"
   value="b"

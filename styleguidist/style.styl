@@ -54,12 +54,13 @@ footer[class*="rsg--footer"][class*="rsg--footer"]
     opacity 1.0
 
 div[class*="rsg--preview"][class*="rsg--preview"]
-  div.actual-preview > div.locale
-    margin-bottom $space-normal
+  div.actual-preview > div.vocab.locale
+    display none
 
-  &.no-i18n
-    div.actual-preview > div.locale
-      display none
+  &.i18n-enabled
+    div.actual-preview > div.vocab.locale
+      display block
+      margin-bottom $space-normal
 
   &.dark-background
     background-color $color-tone-near-black

@@ -14,7 +14,7 @@ The following shows 12 cells that align themselves as follows.
 
 Resize your browser or visit this page from another device to see them reflow.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Grid>
   <GridCell 
     :spanSet="[12, 6, 4, 3, 2]" 
@@ -82,7 +82,7 @@ Resize your browser or visit this page from another device to see them reflow.
 You can easily mix and match column spans, while maintaining the same level of
 control over the sizes at various device sizes.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Grid>
   <GridCell
     :spanSet="[3, 3]"

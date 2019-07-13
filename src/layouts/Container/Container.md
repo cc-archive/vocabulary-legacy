@@ -17,7 +17,7 @@ display size-segment.
 To see it in its natural form, please switch to the isolated mode using the icon
 in the top-right corner.
 
-```jsx { "props": { "className": "no-i18n contain-content" } }
+```jsx { "props": { "className": "contain-content" } }
 <div 
   style="width:100%; 
          background-image: linear-gradient(45deg, #ddd 25%, #fff 25%, #fff 50%, #ddd 50%, #ddd 75%, #fff 75%, #fff 100%);

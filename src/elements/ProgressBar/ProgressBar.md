@@ -2,7 +2,7 @@
 
 Depending on whether completion value is known, progress bars look like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <ProgressBar :value="20" color="orange" is-percent-visible/>
 <br/><br/>
 <ProgressBar color="orange"/>
@@ -12,14 +12,14 @@ Depending on whether completion value is known, progress bars look like this.
 
 A progress bar without the color specified indicates progress in black.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <ProgressBar :value="20"/>
 ```
 
 You already know that the progress bar can be colored using any color from the 
 set provided by CC Vocabulary. Black is no fit color for a progress bar. 
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <ProgressBar :value="20" color="blue"/>
 <br/><br/>
 <ProgressBar :value="20" color="green"/>
@@ -42,7 +42,7 @@ set provided by CC Vocabulary. Black is no fit color for a progress bar.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <ProgressBar :value="20" color="blue" shade="light"/>
 <br/><br/>
 <ProgressBar :value="20" color="blue"/>
@@ -54,7 +54,7 @@ to accentuate the color.
 
 On dark and non-white backgrounds, use the inverted option.
 
-```jsx { "props": { "className": "no-i18n dark-background" } }
+```jsx { "props": { "className": "dark-background" } }
 <ProgressBar :value="20" color="orange" is-percent-visible is-inverted/>
 <br/><br/>
 <ProgressBar color="orange" is-inverted/>
@@ -64,7 +64,7 @@ On dark and non-white backgrounds, use the inverted option.
 
 A progress bar may show the percentage value adjacent to it.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <ProgressBar :value="20" :max="50" color="magenta" is-percent-visible/>
 ```
 
@@ -72,7 +72,7 @@ A progress bar may show the percentage value adjacent to it.
 
 Progress bars come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "no-i18n contain-content" } }
+```jsx { "props": { "className": "contain-content" } }
 <ProgressBar :value="20" color="purple" size="small" is-percent-visible/>
 <br/><br/>
 <ProgressBar :value="20" color="purple" is-percent-visible/>
@@ -95,7 +95,7 @@ Progress bars come in all sizes, from small to mega.
 A progress bar may indicate the positive or negative connotation attached to the
 percentage completion.
 
-```jsx { "props": { "className": "no-i18n contain-content" } }
+```jsx
 let value = 20;
 <InputField
   type="number"

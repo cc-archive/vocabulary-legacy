@@ -12,6 +12,6 @@ reference to ['The Good Place'](https://en.wikipedia.org/wiki/The_Good_Place)
 by Michael Schur.
 
 ```jsx { "props": { "className": "contain-content" } }
-<Index is-easter/>
 <!-- Do not pass this prop in production -->
+<Index is-easter/>
 ```

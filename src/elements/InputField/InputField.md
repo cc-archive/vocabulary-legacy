@@ -2,7 +2,7 @@
 
 An input field looks like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   :iconSet="['keyboard', '']"
@@ -16,7 +16,7 @@ An input field looks like this.
 
 An input field without color is grey.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   placeholder="Answer..."/>
@@ -25,7 +25,7 @@ An input field without color is grey.
 But in classic fashion, input fields can be colored with any color from the set 
 provided by CC Vocabulary. Grey is nobody's favourite.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   placeholder="Answer..."
@@ -75,7 +75,7 @@ provided by CC Vocabulary. Grey is nobody's favourite.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   placeholder="Answer..."
@@ -105,7 +105,7 @@ to accentuate the color.
 A field can also contain two icons, one on the left and right side each. Note 
 that the icon must be added to the FontAwesome library by the application.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   :iconSet="['keyboard', '']"
@@ -125,7 +125,7 @@ that the icon must be added to the FontAwesome library by the application.
 If you'd like your own something there, you can override the left and the right
 add-on slots with something you like.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   placeholder="Not icons">
@@ -153,7 +153,7 @@ add-on slots with something you like.
 An input field can be defined to not attract attention, unless given attention
 via means of a focus.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   :iconSet="['keyboard', '']"
@@ -166,7 +166,7 @@ via means of a focus.
 
 Input fields come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   size="small"
   type="text"
@@ -214,7 +214,7 @@ A field may indicate erroneous or correct input. For example, in this case
 any answer will me highlighted red, other than _'Right answer'_ which will be
 highlighted green.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 let value = 'Wrong answer'
 <InputField
   type="text"
@@ -228,7 +228,7 @@ let value = 'Wrong answer'
 
 A field may be disabled to prevent input altogether.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   :iconSet="['keyboard', '']"
@@ -244,7 +244,7 @@ above.
 
 An initial `value` can be provided for the field.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="text"
   value="Value"
@@ -254,7 +254,7 @@ An initial `value` can be provided for the field.
 
 The `type` attribute works as you would expect.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <InputField
   type="email"
   label="Email address?"

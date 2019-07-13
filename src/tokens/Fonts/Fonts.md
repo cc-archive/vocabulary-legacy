@@ -1,6 +1,6 @@
 ## Examples
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading
   :level="1">
   Hello World!
@@ -16,7 +16,7 @@
 Vocabulary provides a number of font sizes calculated using a harmonic scale 
 that scales `4em` over 6 harmonics.
 
-```jsx
+```jsx { "props" : { "className": "i18n-enabled" } }
 <Fonts property="size"/>
 ```
 
@@ -25,6 +25,6 @@ that scales `4em` over 6 harmonics.
 In each of these sizes, Vocabulary uses provides three distinct font weights, 
 namely light, normal and bold.
 
-```jsx
+```jsx { "props" : { "className": "i18n-enabled" } }
 <Fonts property="weight"/>
 ```

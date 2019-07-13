@@ -3,7 +3,7 @@
 CC Vocabulary uses a 12-slice grid. Every column may span a certain number of 
 slices of this grid.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Grid>
   <GridCell 
     :spanSet="[1, 1]" 
@@ -57,7 +57,7 @@ usually a good idea to ensure consistent look across screen size ranges. But
 that's your call to make because Container usually looks quite small on devices
 on the larger end of the breakpoint.
 
-```jsx { "props": { "className": "no-i18n contain-content" } }
+```jsx { "props": { "className": "contain-content" } }
 <div 
   style="width:100%; 
          background-image: linear-gradient(45deg, #ddd 25%, #fff 25%, #fff 50%, #ddd 50%, #ddd 75%, #fff 75%, #fff 100%);
@@ -112,7 +112,7 @@ on the larger end of the breakpoint.
 The gutter space between cells of the grid is customisable and can be increased
 or decreased all the way to zero, as per the needs of the situation.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="3" color="green" shade="dark">Sparser</Heading>
 <Grid density="sparser">
   <GridCell 

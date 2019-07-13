@@ -2,7 +2,7 @@
 
 A set of shields look like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Shield label="CC" message="vocabulary" color="orange"/>
 <Shield label="Build" message="passing" color="green" shade="dark"/>
 <Shield label="License" message="MIT" color="blue"/>
@@ -12,14 +12,14 @@ A set of shields look like this.
 
 A shield without color is grey.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Shield label="Color" message="grey"/> 
 ```
 
 The message part of the shield can be colored with any color from the set
 provided by CC Vocabulary. No one likes grey.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Shield label="Color" message="blue" color="blue"/>
 <br/><br/>
 <Shield label="Color" message="green" color="green"/>
@@ -42,7 +42,7 @@ provided by CC Vocabulary. No one likes grey.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Shield label="Shade" message="light" color="blue" shade="light"/>
 <br/><br/>
 <Shield label="Shade" message="default" color="blue"/>
@@ -56,7 +56,7 @@ to accentuate the color.
 
 Shields come in all sizes.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Shield label="Label" message="message" color="purple" size="small"/>
 <br/><br/>
 <Shield label="Label" message="message" color="purple"/>

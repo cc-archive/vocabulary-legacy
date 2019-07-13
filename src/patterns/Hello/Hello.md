@@ -3,7 +3,7 @@
 Without any customisation, we see the CC wordmark, the project title and a 
 randomly chosen welcoming tagline from a predefined set.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Hello/>
 ```
 
@@ -11,7 +11,7 @@ randomly chosen welcoming tagline from a predefined set.
 
 The logo at the top can be one of three variants, or can be hidden altogether.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Grid>
   <GridCell :spanSet="[12, 4, 4]">
     <Hello logoType="wordmark">&nbsp;</Hello>
@@ -32,7 +32,7 @@ Passing these props removes the random functionality. Note that the Creative
 Commons logo might look a tad bit weird with unrelated text underneath it, so 
 it should be turned off in those situations.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Hello 
   heading="Reality can be whatever I want." 
   tagline="— Thanos"
@@ -43,7 +43,7 @@ If you hate the idea of having just heading and tagline text as you can use the
 default slot to insert any content you want. Note that using the slot means
 that the `heading` and `tagline` props become moot.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Hello>
   <Heading :level="5">Hello from CC Summit 2019!</Heading>
   <img src="https://live.staticflickr.com/65535/47788052912_62df647c48_z_d.jpg"/>
@@ -61,6 +61,6 @@ that the `heading` and `tagline` props become moot.
 There is an inverted version that inverts the logo as well as text color.
 This is intended for placement on dark or non-white backgrounds.
 
-```jsx { "props": { "className": "dark-background" } } 
+```jsx { "props": { "className": "i18n-enabled dark-background" } } 
 <Hello is-inverted/>
 ```

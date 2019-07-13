@@ -2,7 +2,7 @@
 
 Headings are supposed to preside over content.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="1" color="orange">
   I am a title...
 </Heading>
@@ -14,7 +14,7 @@ Headings are supposed to preside over content.
 </Paragraph>
 ```
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="1" color="red">
   Chapter 1
 </Heading>
@@ -37,7 +37,7 @@ Headings are supposed to preside over content.
 Stardard headers look like this. Each level corresponds to its HTML tag, thus
 ranging from `h1` to `h6`.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="1">Heading 1</Heading>
 <Heading :level="2">Heading 2</Heading>
 <Heading :level="3">Heading 3</Heading>
@@ -52,7 +52,7 @@ Needless to say, headings can be colored with any color from the set provided by
 CC Vocabulary.
 
 <!-- TODO Place them in a grid -->
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="4" color="blue">
   Blue heading
 </Heading>
@@ -85,7 +85,7 @@ CC Vocabulary.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="4" color="blue" shade="light">
   Light blue heading
 </Heading>
@@ -103,7 +103,7 @@ to accentuate the color.
 If the header is set against a dark or non-white option, the text color can be 
 inverted for readability or aesthetic reasons.
 
-```jsx { "props": { "className": "dark-background no-i18n" } }
+```jsx { "props": { "className": "dark-background" } }
 <Heading is-inverted :level="1">Heading 1</Heading>
 <Heading is-inverted :level="2">Heading 2</Heading>
 <Heading is-inverted :level="3">Heading 3</Heading>

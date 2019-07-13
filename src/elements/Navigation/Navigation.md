@@ -2,7 +2,7 @@
 
 A basic navigation bar component looks as follows.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Navigation
   :linkList="[{text: 'Link 1', href: '#1'}, {text: 'Link 2', href: '#2'}]"/>
 ```
@@ -15,7 +15,7 @@ mobile version.
 On dark backgrounds, the component can be inverted to change the font color to 
 white and the hover highlight to 15% white. 
 
-```jsx { "props": { "className": "no-i18n dark-background" } }
+```jsx { "props": { "className": "dark-background" } }
 <Navigation
   :linkList="[{text: 'Link 1', href: '#1'}, {text: 'Link 2', href: '#2'}]"
   is-inverted/>

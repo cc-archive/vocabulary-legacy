@@ -2,7 +2,7 @@
 
 Here is an example of a table.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 let information = {
   head: {
     item: {
@@ -66,7 +66,7 @@ The above table can be recreated in a declarative way which offers many more
 features at the cost of terseness of expression. For example, you may form
 complex-structured tables, use icons and more. 
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table 
   caption="Fruits, their concoctions and their taste"
   color="orange"
@@ -119,9 +119,9 @@ complex-structured tables, use icons and more.
 
 ### Color set
 
-A table wihout color specified is colored black.
+A table without color specified is colored black.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table is-fixed>
   <template v-slot:head>
     <tr>
@@ -139,7 +139,7 @@ A table wihout color specified is colored black.
 Much like the rest of CC Vocabulary, tables can be colored using any color from
 the set provided by CC Vocabulary. Black accent, pfft.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table color="blue" is-fixed>
   <template v-slot:head>
     <tr>
@@ -253,7 +253,7 @@ the set provided by CC Vocabulary. Black accent, pfft.
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table color="blue" shade="light" is-fixed>
   <template v-slot:head>
     <tr>
@@ -314,7 +314,7 @@ to accentuate the color.
 
 A table can be inverted for use on dark or non-white backgrounds.
 
-```jsx { "props": { "className": "no-i18n dark-background" }}
+```jsx { "props": { "className": "dark-background" }}
 <Table 
   caption="Fruits, their concoctions and their taste"
   color="blue"
@@ -370,7 +370,7 @@ A table can be inverted for use on dark or non-white backgrounds.
 
 A table may be striped to enhance the readability of its rows.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a striped table" color="magenta" is-striped>
   <template v-slot:head>
     <tr>
@@ -399,7 +399,7 @@ A table may be striped to enhance the readability of its rows.
 
 A table may be boxed, sliced or celled to enable separation of content.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a boxed table" color="purple" 
   is-boxed>
   <template v-slot:head>
@@ -487,7 +487,7 @@ A table may be boxed, sliced or celled to enable separation of content.
 A table may be fixed, which means that column widths will be decided by the
 first row if it has a width set or will be divided equally.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a fixed table" color="green" is-fixed>
   <template v-slot:head>
     <tr>
@@ -507,7 +507,7 @@ first row if it has a width set or will be divided equally.
 
 A table can be basic so that the colors are not as pronounced.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a basic table" color="red" is-basic>
   <template v-slot:head>
     <tr>
@@ -524,7 +524,7 @@ A table can be basic so that the colors are not as pronounced.
 
 A table can be made compact so as to not take the full width of the parent.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a compact table" color="yellow" is-compact>
   <template v-slot:head>
     <tr>
@@ -542,7 +542,7 @@ A table can be made compact so as to not take the full width of the parent.
 A table can be directed to highlight the row that has mouseover. The highlight
 is a stronger color than the stripes to avoid confusion.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table caption="This is a following table" color="blue" is-striped is-following>
   <template v-slot:head>
     <tr>

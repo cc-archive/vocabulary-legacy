@@ -2,13 +2,13 @@
 
 Without frills, a badge looks like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by"/>
 ```
 
 It may be in the middle of some text.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading :level="3" color="orange">
  The CC BY license
   <LicenseBadge license="by"/>:
@@ -24,7 +24,7 @@ It may be in the middle of some text.
 
 The badge may be vertically centered with respect to surrounding text.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Paragraph>
   The CC BY license
   (<LicenseBadge license="by" is-centered/>)
@@ -36,7 +36,7 @@ The badge may be vertically centered with respect to surrounding text.
 
 To start with we have badges for all CC licenses.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by"/>
 <LicenseBadge license="by-nc"/>
 <LicenseBadge license="by-nc-nd"/>
@@ -48,7 +48,7 @@ To start with we have badges for all CC licenses.
 Apart from these, we also have badges for the CC Zero license and the Public 
 Domain mark.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="zero"/>
 <LicenseBadge license="pd"/>
 ```
@@ -62,7 +62,7 @@ Badges for all licenses come in two variants:
 Smaller badges for the licenses use only abbreviations for every individual 
 aspect of the license.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by-sa" size="small"/>
 <LicenseBadge license="zero" size="small"/>
 ```
@@ -70,7 +70,7 @@ aspect of the license.
 Larger badges for the licenses use both abbreviations as well as iconography for 
 every individual aspect of the license.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by-sa"/>
 <LicenseBadge license="zero"/>
 ```
@@ -79,7 +79,7 @@ Since `Badge` tags are effectively `img` tags, one can use `height` and `width`
 attributes or CSS rules to change the size of the badge. And since the images 
 are all SVGs, they can scale beautifully to virtually any size.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by-sa" height="84px"/>
 <LicenseBadge license="zero" style="height: 84px;"/>
 ```
@@ -87,7 +87,7 @@ are all SVGs, they can scale beautifully to virtually any size.
 The same applies to the smaller versions of the badges, but if you wanted to
 enlarge them, you'd probably be better off using the large versions themselves.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <LicenseBadge license="by-sa" size="small" height="30px"/>
 <LicenseBadge license="zero" size="small" style="height: 30px;"/>
 ```

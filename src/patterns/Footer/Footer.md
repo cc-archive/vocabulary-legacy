@@ -4,7 +4,7 @@ The footer has a standard layout and appearance. It sits flush with the
 [Header](#/Patterns/Header) component, thanks to the use of 
 [Container](#/Layouts/Container).
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx { "props": { "className": "i18n-enabled contain-content" } }
 <Header 
   appName="Search" 
   color="blue">
@@ -32,14 +32,14 @@ they're comfortable with. But those are just suggestions.
 
 Anything goes.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx { "props": { "className": "i18n-enabled contain-content" } }
 <Footer>
   <Heading :level="6">You really mean anything?</Heading>
   Yes, <em>literally</em> anything.
 </Footer>
 ```
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx { "props": { "className": "i18n-enabled contain-content" } }
 <Footer>
   <Locale/>
 </Footer>

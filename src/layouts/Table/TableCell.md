@@ -7,7 +7,7 @@ For example usage, see [Table](#/Layouts/Table).
 A cell may indicate the positive or negative interpretation of the data it 
 contains.
 
-```jsx { "props": { "className": "no-i18n" }}
+```jsx
 <Table 
   caption="Fruits and their taste"
   color="blue"
@@ -47,9 +47,7 @@ contains.
 A cell may be marked as active to indicate that it is capable of performing an
 action.
 
-```jsx { "props": { "className": "no-i18n" }}
-let homeVisits = 0;
-
+```jsx
 <Table
   caption="Websites"
   color="blue"

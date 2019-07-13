@@ -2,7 +2,7 @@
 
 The locale switcher in the standard form looks like this.
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Locale/>
 ``` 
 
@@ -10,7 +10,7 @@ In components that have i18n enabled and translations defined this component
 appears in the preview as well, allowing explorers (like yourself!) to change 
 locales and see the various versions of the component.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Footer>
   <Locale/>
 </Footer>

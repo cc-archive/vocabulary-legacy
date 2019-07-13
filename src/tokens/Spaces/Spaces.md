@@ -1,6 +1,6 @@
 ## Examples
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading
   :level="1">
   Hello World!
@@ -15,7 +15,7 @@
 Vocabulary provides a number of spaces calculated as a fraction of the font size
 of the root element. This is set to 16 pixels by default but can be overridden.
 
-```jsx
+```jsx { "props" : { "className": "i18n-enabled" } }
 <Spaces units="rem"/>
 ```
 
@@ -26,7 +26,7 @@ of the element. So in an element with `font-size: 3em`, the sizes are
 tripled as compared to the above `rem` based spaces. Try changing the font size
 of the div in the example to see how these spaces change.
 
-```jsx
+```jsx { "props" : { "className": "i18n-enabled" } }
 <div style="font-size: 3em;">
   <Spaces units="em"/>
 </div>

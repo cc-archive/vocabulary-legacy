@@ -1,6 +1,6 @@
 ## Examples
 
-```jsx { "props": { "className": "no-i18n" } }
+```jsx
 <Heading
   :level="1"
   color="green"
@@ -18,7 +18,7 @@
 Vocabulary has a rich set of colors, covering the both primary and secondary 
 colors on the spectrum along with their darker and lighter hues.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Colors group="meh"/>
 ```
 
@@ -27,7 +27,7 @@ colors on the spectrum along with their darker and lighter hues.
 Apart from all the vibrant hues, Vocabular provides a diverse set of tones to 
 choose from, covering the grey spectrum from white to black.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Colors group="tone"/>
 ```
 
@@ -37,6 +37,6 @@ Vue also covers the contextual colors that attach a connotation with an action
 such as red for a dangerous action with negative consequences and green for a
 safe one with positive consequences.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Colors group="context"/>
 ```
