@@ -233,7 +233,6 @@ A field may be disabled to prevent input altogether.
   type="text"
   :iconSet="['keyboard', '']"
   placeholder="Answer..."
-  value="Can't answer"
   is-disabled/>
 ```
 
