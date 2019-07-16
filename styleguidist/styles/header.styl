@@ -1,0 +1,25 @@
+@import "~@/assets/tokens/tokens.styl"
+
+header[class*="rsg--header"][class*="rsg--header"]
+  position sticky
+  top 0
+  z-index 5 // CodeMirror uses 4
+
+  background-color $color-tone-near-white
+
+  padding $space-large
+
+  border-bottom 1px solid $color-tone-grey-light
+
+  h2
+    font-family "Fira Code", monospace
+    font-weight $weight-bold
+
+    a
+      transition 150ms color ease-in
+      &:hover
+        color $color-orange
+        text-decoration none
+
+  div[class*="rsg--toolbar"]
+    margin-left $space-normal

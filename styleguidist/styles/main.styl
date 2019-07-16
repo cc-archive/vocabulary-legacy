@@ -1,0 +1,35 @@
+@import "~@/assets/tokens/tokens.styl"
+
+main[class*="rsg--content"]
+  padding-left $space-zero
+  padding-right $space-zero
+  padding-top $space-zero
+
+  div[class*="rsg--docs"],
+  div[class*="rsg--tabs"]
+    max-width 960px
+
+    padding-left $space-large
+    padding-right $space-large
+
+  article[class*="rsg--root"]
+    padding-left $space-large
+    padding-right $space-large
+
+    & > div:not([class*="rsg--root"])
+      max-width 960px
+
+    & > div[class*="rsg--root"]
+      a[title="Open isolated"]
+        display none
+
+  div[class*="rsg--wrapper"]
+    h1
+      margin-left $rspace-large
+
+      & ~ div[class*="rsg--toolbar"]
+        display none
+
+  div[id*="-container"][class*="rsg--root"]
+    display inline-block
+    min-width 100%

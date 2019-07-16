@@ -20,11 +20,18 @@ module.exports = {
   styleguideDir: 'docs', // For easy push to GitHub Pages
 
   theme: {
-    sidebarWidth: 256,
-    maxWidth: '100%',
+    color: {
+      linkHover: '#fb7928',
+      name: '#01a635',
+      type: '#7b1b53'
+    },
     fontFamily: {
+      base: ['"Source Sans Pro"', '"Noto Sans"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
       monospace: ['"Fira Code"', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace']
-    }
+    },
+    borderRadius: 0,
+    sidebarWidth: 256,
+    maxWidth: '100%'
   },
   styles: {
     StyleGuide: {
@@ -43,6 +50,7 @@ module.exports = {
   require: [
     path.join(__dirname, 'src/icons.js'),
     path.join(__dirname, 'styleguidist/i18n.js'),
+    path.join(__dirname, 'styleguidist/script.js'),
     path.join(__dirname, 'styleguidist/style.styl')
   ],
   template: {

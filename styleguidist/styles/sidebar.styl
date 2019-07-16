@@ -1,0 +1,77 @@
+@import "~@/assets/tokens/tokens.styl"
+
+div[class*="rsg--sidebar"][class*="rsg--sidebar"]
+  z-index 6
+
+  background-color $color-blue-darker
+
+  border none
+
+  a
+    color $color-blue-light
+
+    &:hover
+      color $color-tone-white
+
+  div[class*="rsg--logo"]
+    border none
+
+    h1
+      color $color-blue-light
+
+      font-family "Fira Code", monospace
+      font-weight $weight-bold
+      font-size $size-large
+
+    p
+      color $color-blue-light
+
+      font-family "Fira Code", monospace
+      font-size $size-small
+
+      display inline-block
+
+      padding $space-normal
+
+      border 1px solid $color-blue-light
+      border-radius $radius-normal
+
+  input
+    color $color-blue-light
+
+    background-color transparent
+    background-image linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+    )
+
+    border 1px solid transparent
+    border-radius $radius-normal
+
+    transition 0.25s border-color
+
+    &::placeholder
+      color $color-blue-light
+
+    &:focus
+      border-color $color-blue-light
+      box-shadow none
+      outline none
+
+      &::placeholder
+        color $color-tone-white
+
+  nav > ul > li
+    & > a
+      font-weight $weight-bold
+
+    ul
+      display none
+
+      li
+        line-height 1.2
+
+    &.cc-active
+      ul
+        display block

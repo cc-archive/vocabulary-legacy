@@ -1,73 +1,37 @@
 /*
- * Overrides default styling set by Styleguidist.
+ * Overrides for a lot of the default styling set by Styleguidist.
  */
-
-
-// Selectors are repeated to increase specificity
 
 @import "~@/assets/tokens/tokens.styl"
 
-div[class*="rsg--logo"][class*="rsg--logo"]
-  text-align center
+@import "./styles/header.styl"
+@import "./styles/main.styl"
+@import "./styles/footer.styl"
 
-h1[class*="rsg--logo"][class*="rsg--logo"]
-  font-family "Fira Code", monospace
-  font-weight $weight-bold
-  font-size $size-large
+@import "./styles/sidebar.styl"
 
-  text-align center
+@import "./styles/usage.styl"
+@import "./styles/preview.styl"
 
-p[class*="rsg--version"][class*="rsg--version"]
-  font-family "Fira Code", monospace
-  font-size $size-small
-
-  display inline-block
-
-  padding $space-normal
-
-  border 1px solid
-  border-radius $radius-normal
-
-a[class*="rsg--link"][class*="rsg--heading"]
-  font-weight $weight-bold
-
-li[class*="rsg--item"][class*="rsg--item"]
-  line-height 1.2
-
-button[name="rsg--usage"]
-  border-bottom 1px dashed
+@import "./styles/table.styl"
 
 code[class*="rsg--code"][class*="rsg--code"]
   font-size $size-small
 
-  background-color $color-tone-near-white
+  background-color $color-tone-grey-lighter
 
   padding $rspace-small
 
   border-radius $radius-normal
 
-footer[class*="rsg--footer"][class*="rsg--footer"]
-  opacity 0.5
-  transition opacity 0.5s
+h1[class*="rsg--heading"][class*="rsg--heading"]
+  font-family "Fira Code", monospace
+  font-size 3em
+  font-weight $weight-bold
 
-  &:hover
-    opacity 1.0
+  padding-top $rspace-large
 
-div[class*="rsg--preview"][class*="rsg--preview"]
-  div.actual-preview > div.vocab.locale
-    display none
-
-  &.i18n-enabled
-    div.actual-preview > div.vocab.locale
-      display block
-      margin-bottom $space-normal
-
-  &.dark-background
-    background-color $color-tone-near-black
-
-  &.enlarged-text
-    font-size 2rem
-
-  &.contain-content
-    width auto
-    min-width 100%
+  a
+    transition 150ms color ease-in
+    &:hover
+      text-decoration none

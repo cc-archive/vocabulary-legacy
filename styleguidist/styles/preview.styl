@@ -1,0 +1,31 @@
+@import "~@/assets/tokens/tokens.styl"
+
+div[class*="rsg--preview"][class*="rsg--preview"]
+  padding-left $space-zero
+  padding-right $space-zero
+
+  border-top none
+  border-right none
+  border-bottom 1px solid $color-tone-grey-lighter
+  border-left none
+
+  div.actual-preview > div.vocab.locale
+    display none
+
+  &.i18n-enabled
+    div.actual-preview > div.vocab.locale
+      display block
+      margin-bottom $space-normal
+
+  &.dark-background
+    background-color $color-tone-near-black
+
+  &.enlarged-text
+    font-size 2rem
+
+  &.contain-content
+    width auto
+    min-width 100%
+
+  &:not(.contain-content)
+    width calc(960px - 2em)
