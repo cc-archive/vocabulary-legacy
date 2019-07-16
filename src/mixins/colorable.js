@@ -6,7 +6,7 @@ export default {
      * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
      * `'red'`, `'sand'`, `'yellow'`}
      *
-     * If the color is not specified, it is inherited from the parent.
+     * If the color is not specified, a default one is chosen as described.
      */
     color: {
       type: String,

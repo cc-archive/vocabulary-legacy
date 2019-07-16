@@ -40,7 +40,8 @@
        * _the substring of the category to filter based on_
        *
        * Here `'tones'` refers to greyscale colors and `'context'` refers to
-       * colors have have certain contextual connotations.
+       * colors that have certain contextual connotations. Any other value gives
+       * the hues and their variations.
        */
       group: {
         type: String,

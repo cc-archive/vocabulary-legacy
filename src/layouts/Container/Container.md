@@ -14,8 +14,22 @@ Try resizing the window or visiting the page from a different device to see
 the various sizes. See if you can spot the container crossing over into another 
 display size-segment.
 
-To see it in its natural form, please switch to the isolated mode using the icon
-in the top-right corner.
+To see it in its natural form, please switch to the **isolated mode** using the 
+** expand icon**
+(<svg 
+  fill="currentColor" 
+  preserveAspectRatio="xMidYMid meet" 
+  height="1em" 
+  width="1em" 
+  viewBox="0 0 40 40" 
+  style="vertical-align: middle;">
+  <g>
+    <path d="m23.4 8.4h8.2v8.2h-3.2v-5h-5v-3.2z m5 20v-5h3.2v8.2h-8.2v-3.2h5z m-20-11.8v-8.2h8.2v3.2h-5v5h-3.2z m3.2 6.8v5h5v3.2h-8.2v-8.2h3.2z"></path>
+  </g>
+</svg>) 
+adjacent to the component name at the top. Keep this in mind as many components
+such as the header and the footer use `Container` internally and they will look
+best in the isolated view.
 
 ```jsx { "props": { "className": "contain-content" } }
 <div 
