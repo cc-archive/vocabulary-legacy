@@ -136,7 +136,7 @@ means of a hover.
 
 Dropdowns come in all sizes, from small to mega.
 
-```jsx
+```jsx { "props": { "className": "contain-content" } }
 <SelectField
   color="purple"
   size="small"

@@ -56,7 +56,7 @@ to accentuate the color.
 
 Shields come in all sizes.
 
-```jsx
+```jsx { "props": { "className": "contain-content" } }
 <Shield label="Label" message="message" color="purple" size="small"/>
 <br/><br/>
 <Shield label="Label" message="message" color="purple"/>

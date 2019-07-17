@@ -166,7 +166,7 @@ via means of a focus.
 
 Input fields come in all sizes, from small to mega.
 
-```jsx
+```jsx { "props": { "className": "contain-content" } }
 <InputField
   size="small"
   type="text"
