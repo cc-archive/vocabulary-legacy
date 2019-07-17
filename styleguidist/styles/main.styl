@@ -1,4 +1,5 @@
 @import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
 
 main[class*="rsg--content"]
   padding-left $space-zero
@@ -7,17 +8,12 @@ main[class*="rsg--content"]
 
   div[class*="rsg--docs"],
   div[class*="rsg--tabs"]
-    max-width 960px
-
     padding-left $space-large
     padding-right $space-large
 
   article[class*="rsg--root"]
     padding-left $space-large
     padding-right $space-large
-
-    & > div:not([class*="rsg--root"])
-      max-width 960px
 
     & > div[class*="rsg--root"]
       a[title="Open isolated"]
@@ -31,5 +27,7 @@ main[class*="rsg--content"]
         display none
 
   div[id*="-container"][class*="rsg--root"]
-    display inline-block
+    +tablet-portrait-up()
+      display inline-block
+
     min-width 100%

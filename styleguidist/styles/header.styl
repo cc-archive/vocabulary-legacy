@@ -1,9 +1,11 @@
 @import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
 
 header[class*="rsg--header"][class*="rsg--header"]
-  position sticky
-  top 0
-  z-index 5 // CodeMirror uses 4
+  +tablet-portrait-up()
+    position sticky
+    top 0
+    z-index 5 // CodeMirror uses 4
 
   background-color $color-tone-near-white
 
