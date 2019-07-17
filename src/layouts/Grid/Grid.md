@@ -57,56 +57,6 @@ usually a good idea to ensure consistent look across screen size ranges. But
 that's your call to make because Container usually looks quite small on devices
 on the larger end of the breakpoint.
 
-```jsx { "props": { "className": "contain-content" } }
-<div 
-  style="width:100%; 
-         background-image: linear-gradient(45deg, #ddd 25%, #fff 25%, #fff 50%, #ddd 50%, #ddd 75%, #fff 75%, #fff 100%);
-         background-size: 8px 8px;">
-  <Container
-    style="background-color: white;">
-    <Grid>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-      <GridCell 
-        :spanSet="[1, 1]" 
-        style="background-color: rgb(251, 121, 40)"/>
-    </Grid>
-  </Container>
-</div>
-```
-
-
 ### Density set
 
 The gutter space between cells of the grid is customisable and can be increased
