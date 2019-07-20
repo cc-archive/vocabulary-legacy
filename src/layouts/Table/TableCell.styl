@@ -6,8 +6,10 @@
     padding $space-normal
 
     .label
-      display none
       margin-right $space-small
+
+      +tablet-portrait-up()
+        display none
 
       +phone-only()
         display inline

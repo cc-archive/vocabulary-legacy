@@ -20,10 +20,11 @@
   .flex
     display flex
 
-    flex-direction column
-    align-items center
+    +tablet-portrait-down()
+      flex-direction column
+      align-items center
 
-    padding $space-normal $space-normal
+      padding $space-normal $space-normal
 
     +tablet-landscape-up()
       flex-direction row
@@ -58,19 +59,25 @@
         margin-right $rspace-normal
 
     #hamburger
-      -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+      +phone-only()
+        -webkit-tap-highlight-color rgba(0, 0, 0, 0)
 
-      .icon
-        transform scale(0)
-        transition 0.25s transform
+        .icon
+          transform scale(0)
+          transition 0.25s transform
 
-        &.active
-          transform scale(1)
+          &.active
+            transform scale(1)
 
       +tablet-portrait-up()
         display none
 
     #content
+      +tablet-portrait-up()
+        display flex
+        flex-direction row
+        align-items center
+
       +phone-only()
         text-align center
 
