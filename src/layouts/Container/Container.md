@@ -51,11 +51,22 @@ best in the isolated view.
 
 ### Width set
 
-Device name      | Min width | Max width + `1px` | Scrollbar | Formula                   | Container width
------------------|-----------|-------------------|-----------|---------------------------|----------------
-Phone            |           | `·600px`          |           | `··100% - 2×0.5em`        | Fluid
-Tablet portrait  | `·600px`  | `·900px`          | `17px`    | `·600px - 2×0.5em - 17px` | `·567px`
-Tablet landscape | `·900px`  | `1200px`          | `17px`    | `·900px - 2×0.5em - 17px` | `·867px`
-Desktop          | `1200px`  | `1800px`          | `17px`    | `1200px - 2×0.5em - 17px` | `1167px`
-Big desktop      | `1800px`  |                   | `17px`    | `1800px - 2×0.5em - 17px` | `1767px`
+Formulae for width calculation are
 
+- phone: `100% - 2×<spacing>`
+- other devices: `<min width> - 2×<spacing> - <scroll>`
+
+where
+
+- spacing: `0.5em`
+- scrollbar: `17px`
+
+Device name      | Min width | Max width | Width
+-----------------|-----------|-----------|----------------
+Phone            |           | `·600px`  | Fluid
+Tablet portrait  | `·600px`  | `·900px`  | `·567px`
+Tablet landscape | `·900px`  | `1200px`  | `·867px`
+Desktop          | `1200px`  | `1800px`  | `1167px`
+Big desktop      | `1800px`  |           | `1767px`
+
+Note that the devices lie in the range [min-width, max-width).
