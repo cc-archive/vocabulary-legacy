@@ -1,7 +1,6 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/media.styl"
 
-div[class*="rsg--preview"][class*="rsg--preview"]
+div[class*="rsg--preview"]
   padding-left $space-zero
   padding-right $space-zero
 
@@ -27,7 +26,3 @@ div[class*="rsg--preview"][class*="rsg--preview"]
   &.contain-content
     width auto
     min-width 100%
-
-    +phone-only()
-      max-width 100%
-      overflow-x scroll

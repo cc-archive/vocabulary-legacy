@@ -9,9 +9,11 @@ export default previewComponent => {
       return createElement(
         'div',
         {
-          class: {
-            'actual-preview': true
-          }
+          class: [
+            {
+              'actual-preview': true
+            }
+          ]
         },
         [
           createElement(Locale), // Show the locale switcher in every preview

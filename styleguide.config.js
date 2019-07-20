@@ -81,32 +81,37 @@ module.exports = {
 
   sections: [
     {
+      name: 'Vocabulary',
+      content: 'README.md',
+      sectionDepth: 1
+    },
+    {
       name: 'Tokens',
-      content: 'src/tokens/SECTION.md',
+      content: 'src/tokens/README.md',
       sectionDepth: 1,
       components: 'src/tokens/[A-Z]*/[A-Z]*.vue'
     },
     {
       name: 'Elements',
-      content: 'src/elements/SECTION.md',
+      content: 'src/elements/README.md',
       sectionDepth: 1,
       components: 'src/elements/[A-Z]*/[A-Z]*.vue'
     },
     {
       name: 'Layouts',
-      content: 'src/layouts/SECTION.md',
+      content: 'src/layouts/README.md',
       sectionDepth: 1,
       components: 'src/layouts/[A-Z]*/[A-Z]*.vue'
     },
     {
       name: 'Patterns',
-      content: 'src/patterns/SECTION.md',
+      content: 'src/patterns/README.md',
       sectionDepth: 1,
       components: 'src/patterns/[A-Z]*/[A-Z]*.vue'
     },
     {
       name: 'Templates',
-      content: 'src/templates/SECTION.md',
+      content: 'src/templates/README.md',
       sectionDepth: 1,
       components: 'src/templates/[A-Z]*/[A-Z]*.vue'
     }

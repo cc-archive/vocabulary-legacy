@@ -4,6 +4,8 @@
 
 @import "~@/assets/tokens/tokens.styl"
 
+@import "./styles/typography.styl"
+
 @import "./styles/header.styl"
 @import "./styles/main.styl"
 @import "./styles/footer.styl"
@@ -14,24 +16,3 @@
 @import "./styles/preview.styl"
 
 @import "./styles/table.styl"
-
-code[class*="rsg--code"][class*="rsg--code"]
-  font-size $size-small
-
-  background-color $color-tone-grey-lighter
-
-  padding $rspace-small
-
-  border-radius $radius-normal
-
-h1[class*="rsg--heading"][class*="rsg--heading"]
-  font-family "Fira Code", monospace
-  font-size 3em
-  font-weight $weight-bold
-
-  padding-top $rspace-large
-
-  a
-    transition 150ms color ease-in
-    &:hover
-      text-decoration none

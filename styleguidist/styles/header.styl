@@ -1,7 +1,7 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/media.styl"
 
-header[class*="rsg--header"][class*="rsg--header"]
+header[class*="rsg--header"]
   +tablet-portrait-up()
     position sticky
     top 0
@@ -12,16 +12,6 @@ header[class*="rsg--header"][class*="rsg--header"]
   padding $space-large
 
   border-bottom 1px solid $color-tone-grey-light
-
-  h2
-    font-family "Fira Code", monospace
-    font-weight $weight-bold
-
-    a
-      transition 150ms color ease-in
-      &:hover
-        color $color-orange
-        text-decoration none
 
   div[class*="rsg--toolbar"]
     margin-left $space-normal
