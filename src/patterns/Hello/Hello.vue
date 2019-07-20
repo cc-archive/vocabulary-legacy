@@ -38,7 +38,7 @@
       Paragraph,
       Heading
     },
-    data: () => {
+    data: function () {
       return {
         taglines: [
           'welcome',
