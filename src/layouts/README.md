@@ -47,21 +47,21 @@ Here are some available layouts in action. You should probably
   background-size: 8px 8px;">
   <Container
     style="border: 1px solid #ddd; background-color: white;">
-    <Tabbed>
+    <Tabbed color="blue">
       <TabbedPane title="Grid">
         <Grid>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: #01a635"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
         </Grid>
       </TabbedPane>
       <TabbedPane title="Table">
-        <Table color="red" is-compact is-basic is-striped is-following>
+        <Table color="purple" is-compact is-basic is-striped is-following>
           <template v-slot:head>
             <tr>
               <TableCell is-heading></TableCell>
