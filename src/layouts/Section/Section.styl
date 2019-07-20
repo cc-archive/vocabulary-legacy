@@ -1,0 +1,36 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+
+.vocab.section
+  --section-color $color-tone-grey-lighter
+  colors('--section-color')
+
+  for color_group in 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
+    &.{color_group}
+      border-top-width 3px
+
+      &.inverted
+        background-color var(--section-color)
+
+  padding $space-normal
+
+  border 1px solid $color-tone-grey-lighter
+  border-top-color var(--section-color)
+
+  &.rounded
+    border-radius $radius-normal
+
+  &.raised
+    box-shadow unquote($shadow-normal) $color-tone-near-white
+
+  &.basic
+    border-color transparent
+
+  &.inverted
+    background-color $color-tone-near-black
+
+    border-color var(--section-color)
+
+  &.compact
+    display inline-block
+
