@@ -36,6 +36,23 @@
       isCompact: {
         type: Boolean,
         default: false
+      },
+      /**
+       * _whether the section lacks all padding_
+       */
+      isClingy: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * _which side of the div to highlight with the color_
+       *
+       * ∈ {`'top'`, `'bottom'`}
+       */
+      colorSide: {
+        type: String,
+        validator: val => ['top', 'bottom'].includes(val),
+        default: 'top'
       }
     },
     computed: {
@@ -43,12 +60,14 @@
         return [
           this.color,
           this.shade,
+          this.colorSide,
           {
             'basic': this.isBasic,
             'rounded': this.isRounded,
             'raised': this.isRaised,
             'inverted': this.isInverted,
-            'compact': this.isCompact
+            'compact': this.isCompact,
+            'clingy': this.isClingy
           }
         ]
       }
