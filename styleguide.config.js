@@ -92,6 +92,12 @@ module.exports = {
       components: 'src/tokens/[A-Z]*/[A-Z]*.vue'
     },
     {
+      name: 'Utils',
+      content: 'src/utils/README.md',
+      sectionDepth: 1,
+      components: 'src/utils/[A-Z]*/[A-Z]*.vue'
+    },
+    {
       name: 'Elements',
       content: 'src/elements/README.md',
       sectionDepth: 1,

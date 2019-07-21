@@ -1,0 +1,50 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/media.styl"
+@import "~@/styles/list.styl"
+@import "~@/styles/colors.styl"
+
+.vocab.tabbed
+  --tabbed-color $color-tone-black
+  colors('--tabbed-color')
+
+  .tabs
+    bland-list()
+
+    width 100%
+    display flex
+
+    +tablet-portrait-down()
+      flex-direction column
+
+    +tablet-landscape-up()
+      flex-direction row
+
+    border-bottom 1px solid var(--tabbed-color)
+
+  .contents
+    border 1px solid $color-tone-grey-lighter
+    border-top none
+    border-top-left-radius $radius-zero
+    border-top-right-radius $radius-zero
+
+  &.basic
+    .tabs
+      border none
+
+    .contents
+      border none
+
+  &.rounded
+    +tablet-portrait-down()
+      .tabs
+        overflow hidden
+        border-top-left-radius $radius-normal
+        border-top-right-radius $radius-normal
+
+
+  &.inverted
+    .tabs
+      color $color-tone-white
+
+    .contents
+      border-color var(--tabbed-color)
