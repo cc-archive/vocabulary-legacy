@@ -1,0 +1,77 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+
+.vocab.card
+  --card-color $color-tone-black
+  colors('--card-color')
+
+  for color_group in 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
+    &.{color_group}
+      .section
+        .foot
+          border-top 1px solid var(--card-color)
+
+    &.inverted
+      &.{color_group}
+        .section
+          .foot
+            border-top 1px solid lookup('$color-' + color_group)
+
+  .section
+    box-sizing border-box
+
+    display flex
+    flex-direction column
+
+    .feature
+      display flex
+      flex-direction row
+      justify-content center
+      align-items flex-start
+
+      img
+        max-width 100%
+
+    .head
+      padding $space-normal
+
+      .heading
+        font-size $size-large
+        font-weight $weight-bold
+
+      .subheading
+        font-size $size-normal
+        color $color-tone-grey-dark
+
+    .body
+      padding $space-normal
+
+      flex-grow 1
+
+    .foot
+      color $color-tone-grey-dark
+
+      padding $space-normal
+
+      border-top 1px solid $color-tone-grey-lighter
+
+  &.decked
+    height 100%
+
+    .section
+      height 100%
+
+  &.rounded
+    border-radius $radius-large
+    overflow hidden
+
+  &.inverted
+    color $color-tone-white
+
+    .section
+      .head
+        .subheading
+          color $color-tone-grey-light
+
+      .foot
+        color $color-tone-grey-light
