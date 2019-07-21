@@ -112,7 +112,8 @@ Paragraphs can be colored for some reason.
 </Paragraph>
 ```
 
-And to add to that, you may add one of three shades to them.
+Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+to accentuate the color.
 
 ```jsx
 <Paragraph color="blue" shade="light">
