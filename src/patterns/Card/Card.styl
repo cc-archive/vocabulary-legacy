@@ -18,7 +18,7 @@
             border-top 1px solid lookup('$color-' + color_group)
 
   .section
-    box-sizing border-box
+    box-sizing border-box // Messes up box shadow in &.raised
 
     display flex
     flex-direction column
@@ -64,6 +64,9 @@
   &.rounded
     border-radius $radius-large
     overflow hidden
+
+  &.raised
+    box-shadow unquote($shadow-pronounced) $color-tone-near-white // Box sizing of .section messed this up
 
   &.inverted
     color $color-tone-white

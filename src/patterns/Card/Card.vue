@@ -42,6 +42,7 @@
   import Colorable from '@/mixins/colorable'
   import Invertible from '@/mixins/invertible'
   import Roundable from '@/mixins/roundable'
+  import Raisable from '@/mixins/raisable'
 
   /**
    * ## Cards describe singular subjects.
@@ -56,7 +57,8 @@
     mixins: [
       Colorable,
       Invertible,
-      Roundable
+      Roundable,
+      Raisable
     ],
     components: {
       Section
@@ -108,7 +110,8 @@
           {
             'decked': this.isDecked,
             'inverted': this.isInverted,
-            'rounded': this.isRounded
+            'rounded': this.isRounded,
+            'raised': this.isRaised
           }
         ]
       },

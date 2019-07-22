@@ -1,6 +1,6 @@
 ## Examples
 
-Here are some card variants.
+Here is an example of a card.
 
 ```jsx
 <Grid density="sparse">
@@ -18,6 +18,15 @@ Here are some card variants.
       </template>
     </Card>
   </GridCell>
+</Grid>
+```
+
+### Style set
+
+A card can be elevated over the surrounding-content via a shadow.
+
+```jsx
+<Grid>
   <GridCell :spanSet="[12, 6, 3, 3, 2]">
     <Card
       color="magenta"
@@ -31,6 +40,14 @@ Here are some card variants.
       </template>
     </Card>
   </GridCell>
+</Grid>
+```
+
+A card can be rounded instead of sharp cuts at right angles so as to fit in 
+better with more curvy layouts.
+
+```jsx
+<Grid>
   <GridCell :spanSet="[12, 6, 3, 3, 2]">
     <Card
       color="purple"
@@ -44,8 +61,17 @@ Here are some card variants.
       </template>
     </Card>
   </GridCell>
+</Grid>
+```
+
+A card be designed to have more minimalist appearance so as to not be too 
+eye-catching or prominent.
+
+```jsx
+<Grid>
   <GridCell :spanSet="[12, 6, 3, 3, 2]">
     <Card
+      color="orange"
       is-decked
       is-basic
       heading="Sophine Clachar"
