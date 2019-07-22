@@ -1,0 +1,44 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/media.styl"
+
+.vocab.rating
+  --rating-color $color-tone-black
+  colors('--rating-color')
+
+  color var(--rating-color)
+
+  display inline-flex
+  flex-direction row
+  align-items center
+
+  .icon
+    cursor pointer
+
+    &.dot
+      +touch-only()
+        font-size 0.5em
+
+      +mouse-only()
+        font-size 0.25em
+
+      margin-right $rspace-normal
+
+    &.unit
+      margin-right $space-normal
+
+      transition 0.25s color, 0.25s transform
+
+      &:not(.active)
+        color $color-tone-grey-lighter
+        transform scale(0.9)
+
+        &:hover
+          color $color-tone-grey-light
+          transform scale(1)
+
+  &.positive
+    --rating-color $color-context-positive
+
+  &.negative
+    --rating-color $color-context-negative
