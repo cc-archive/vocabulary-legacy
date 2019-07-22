@@ -52,7 +52,7 @@
       Roundable
     ],
     components: {
-      SlotRenderer,
+      SlotRenderer
     },
     data: function () {
       return {
