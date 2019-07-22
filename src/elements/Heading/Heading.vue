@@ -11,6 +11,7 @@
 <script>
   import Invertible from '@/mixins/invertible'
   import Colorable from '@/mixins/colorable'
+  import Indicatable from '@/mixins/indicatable'
 
   /**
    * ## Headings title the content under them.
@@ -21,8 +22,9 @@
   export default {
     name: 'Heading',
     mixins: [
+      Colorable,
       Invertible,
-      Colorable
+      Indicatable
     ],
     props: {
       /**
@@ -33,6 +35,7 @@
       level: {
         type: Number,
         required: true,
+        default: 6,
         validator: val => val >= 1 && val <= 6
       }
     },
@@ -44,6 +47,7 @@
         return [
           this.color,
           this.shade,
+          this.indication,
           {
             'inverted': this.isInverted
           }
