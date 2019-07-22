@@ -13,6 +13,7 @@
   import Invertible from '@/mixins/invertible'
   import Colorable from '@/mixins/colorable'
   import Raisable from '@/mixins/raisable'
+  import Indicatable from '@/mixins/indicatable'
 
   /**
    * ## Sections are groupings of related content.
@@ -27,7 +28,8 @@
       Roundable,
       Colorable,
       Invertible,
-      Raisable
+      Raisable,
+      Indicatable
     ],
     props: {
       /**
@@ -52,15 +54,23 @@
       colorSide: {
         type: String,
         validator: val => ['top', 'bottom'].includes(val),
-        default: 'top'
+        default: ''
       }
     },
     computed: {
+      processedColorSide: function () {
+        if (this.color && this.colorSide === '') {
+          return 'top'
+        } else {
+          return this.colorSide
+        }
+      },
       sectionClasses: function () {
         return [
           this.color,
           this.shade,
-          this.colorSide,
+          this.processedColorSide,
+          this.indication,
           {
             'basic': this.isBasic,
             'rounded': this.isRounded,

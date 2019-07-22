@@ -117,3 +117,27 @@ A section can be compact so that it only takes the required amount of space.
   </Paragraph>
 </Section>
 ```
+
+### Indication set
+
+A section may indicate the positive or negative nature of its content.
+
+```jsx
+<Section indication="positive" colorSide="top" is-rounded>
+  <Heading :level="1" indication="positive">
+    Oh yes!
+  </Heading>
+  <Paragraph indication="positive">
+    The operation completed successfully!
+  </Paragraph>
+</Section>
+<br/>
+<Section indication="negative" colorSide="bottom" is-rounded is-inverted>
+  <Heading :level="1" indication="negative">
+    Oh no!
+  </Heading>
+  <Paragraph indication="negative">
+    The operation failed to complete.
+  </Paragraph>
+</Section>
+```

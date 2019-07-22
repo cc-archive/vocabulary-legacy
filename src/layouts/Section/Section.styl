@@ -7,21 +7,17 @@
 
   for color_group in 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
     &.{color_group}
-      &.top
-        border-top-width 3px
-
-      &.bottom
-        border-bottom-width 3px
-
       &.inverted
         background-color var(--section-color)
 
   border 1px solid $color-tone-grey-lighter
 
   &.top
+    border-top-width 3px
     border-top-color var(--section-color)
 
   &.bottom
+    border-bottom-width 3px
     border-bottom-color var(--section-color)
 
   &:not(.clingy)
@@ -44,4 +40,16 @@
 
   &.compact
     display inline-block
+
+  &.positive
+    --section-color $color-context-positive
+
+    &.inverted
+      background-color $color-context-positive-light
+
+  &.negative
+    --section-color $color-context-negative
+
+    &.inverted
+      background-color $color-context-negative-light
 
