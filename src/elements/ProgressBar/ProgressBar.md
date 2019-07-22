@@ -96,16 +96,28 @@ A progress bar may indicate the positive or negative connotation attached to the
 percentage completion.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faPlus, faMinus);
+
 let value = 20;
-<InputField
-  type="number"
-  v-model="value"
-  :iconSet="['keyboard', '']"
-  :indication="value > 50 ? 'positive' : 'negative'">
-</InputField>
-<br/><br/>
 <ProgressBar 
   :value="parseInt(value)"
   :indication="value > 50 ? 'positive': 'negative'"
   is-percent-visible/>
+<span>&nbsp;&nbsp;</span>
+<Button
+  icon="plus"
+  indication="positive"
+  v-on:click="value += 10; if (value > 100) value = 100;">
+  10%
+</Button>
+<Button 
+  icon="minus" 
+  indication="negative" 
+  v-on:click="value -= 10; if (value < 0) value = 0;">
+  10%
+</Button>
 ```

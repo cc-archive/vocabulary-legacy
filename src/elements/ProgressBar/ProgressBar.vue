@@ -3,12 +3,19 @@
     class="vocab progress-bar"
     :class="progressBarClasses">
     <progress
+      v-if="value !== null"
       class="bar"
       :value="value"
       :max="max">
       &nbsp;
     </progress>
-    <span v-if="value && isPercentVisible">{{ percent }}%</span>
+    <progress
+      v-else
+      class="bar"
+      :max="max">
+      &nbsp;
+    </progress>
+    <span v-if="value !== null && isPercentVisible">{{ percent }}%</span>
   </div>
 </template>
 
@@ -39,7 +46,9 @@
        * If not provided, the progress bar takes the indeterminate form.
        */
       value: {
-        type: Number
+        type: Number,
+        default: null,
+        validator: val => val >= 0
       },
       /**
        * _the upper limit of value_
