@@ -27,3 +27,7 @@ div[class*="rsg--preview"]
   &.contain-content
     width auto
     min-width 100%
+
+    +phone-only()
+      max-width 100%
+      overflow-x scroll
