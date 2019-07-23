@@ -12,7 +12,8 @@ Here is an example of a card.
       is-inverted
       heading="Dhruv Bhanushali"
       subheading="Developer"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/16580576">
+      featuredImageSource="https://avatars0.githubusercontent.com/u/16580576"
+      featuredImageAlternateText="Dhruv Bhanushali's profile picture">
       <template v-slot:foot>
         India
       </template>
@@ -34,7 +35,8 @@ A card can be elevated over the surrounding-content via a shadow.
       is-raised
       heading="Hugo Solar"
       subheading="Mentor"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/894708">
+      featuredImageSource="https://avatars0.githubusercontent.com/u/894708"
+      featuredImageAlternateText="Hugo Solar's profile picture">
       <template v-slot:foot>
         <CountryFlag country=""/>Chile
       </template>
@@ -55,7 +57,8 @@ better with more curvy layouts.
       is-rounded
       heading="Kriti Godey"
       subheading="Mentor"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/287034">
+      featuredImageSource="https://avatars0.githubusercontent.com/u/287034"
+      featuredImageAlternateText="Kriti Godey's profile picture">
       <template v-slot:foot>
         USA
       </template>
@@ -76,7 +79,8 @@ eye-catching or prominent.
       is-basic
       heading="Sophine Clachar"
       subheading="Mentor"
-      featuredImageSource="https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg">
+      featuredImageSource="https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg"
+      featuredImageAlternateText="Sophine Clachar's profile picture">
       <template v-slot:foot>
         USA
       </template>
@@ -88,8 +92,8 @@ eye-catching or prominent.
 ### Add-on set
 
 Apart from the main content, a card has a heading, a subheading, a featured 
-image and footer content. These can be set via props `heading`, `subheading` 
-and `featuredImageSource` respectively.
+image. These can be set via props `heading`, `subheading`,
+`featuredImageSource` and `featuredImageAlternateText` respectively.
 
 ```jsx
 <Grid>
@@ -100,7 +104,8 @@ and `featuredImageSource` respectively.
       is-raised
       heading="Two giraffes in Kenya"
       subheading="Brandt Luke Zorn's father"
-      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Two_Giraffes.PNG/405px-Two_Giraffes.PNG">
+      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Two_Giraffes.PNG/405px-Two_Giraffes.PNG"
+      featuredImageAlternateText="Two giraffes in Kenya">
       <template v-slot:foot>
         CC BY-SA
       </template
@@ -140,7 +145,8 @@ in your own stuff.
       is-decked
       is-rounded
       is-raised
-      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hummingbird.jpg/640px-Hummingbird.jpg">
+      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hummingbird.jpg/640px-Hummingbird.jpg"
+      featuredImageAlternateText="Costa's hummingbird">
       <template v-slot:head>
         <div class="heading">Costa's hummingbird</div>
         <div class="subheading">

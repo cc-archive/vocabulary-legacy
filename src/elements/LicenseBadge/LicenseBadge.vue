@@ -1,8 +1,14 @@
 <template>
-  <img class="vocab license-badge" :class="licenseBadgeClasses" :src="svg" :alt="`${license}`.toUpperCase()">
+  <ImageView
+    class="license-badge"
+    :isCentered="isCentered"
+    :source="svg"
+    :alternateText="`${license}`.toUpperCase()"/>
 </template>
 
 <script>
+  import ImageView from '@/elements/ImageView/ImageView'
+
   /**
    * ## License badges are hieroglyphs for licenses.
    *
@@ -11,6 +17,9 @@
    */
   export default {
     name: 'LicenseBadge',
+    components: {
+      ImageView
+    },
     props: {
       /**
        * _the license whose badge is being shown_
@@ -42,7 +51,7 @@
         default: 'large'
       },
       /**
-       * _whether to center the image when inline with text_
+       * _whether to center the badge when inline with text_
        */
       isCentered: {
         type: Boolean,
@@ -50,13 +59,6 @@
       }
     },
     computed: {
-      licenseBadgeClasses: function () {
-        return [
-          {
-            'centered': this.isCentered
-          }
-        ]
-      },
       svg: function () {
         return require(
           `@/assets/icons/license/badges_${this.size}/${this.license}.svg`
@@ -65,6 +67,3 @@
     }
   }
 </script>
-
-<style lang="stylus" src="./LicenseBadge.styl">
-</style>

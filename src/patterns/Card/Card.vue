@@ -11,10 +11,10 @@
       <div class="feature">
         <!-- @slot Featured content goes here -->
         <slot name="feature">
-          <img
-            :alt="featuredImageAlt"
+          <ImageView
             v-if="featuredImageSource"
-            :src="featuredImageSource">
+            :source="featuredImageSource"
+            :alternateText="featuredImageAlternateText"/>
         </slot>
       </div>
       <div class="head" v-if="hasHead">
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+  import ImageView from '@/elements/ImageView/ImageView'
   import Section from '@/layouts/Section/Section'
 
   import Colorable from '@/mixins/colorable'
@@ -61,6 +62,7 @@
       Raisable
     ],
     components: {
+      ImageView,
       Section
     },
     props: {
@@ -85,7 +87,7 @@
        * This text is read by screen-readers and appears when image could not
        * be loaded.
        */
-      featuredImageAlt: {
+      featuredImageAlternateText: {
         type: String,
         default: 'Featured image'
       },

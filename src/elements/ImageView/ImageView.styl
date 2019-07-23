@@ -1,0 +1,86 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/sizes.styl"
+@import "~@/styles/media.styl"
+
+.vocab.image-view
+  display inline-flex
+
+  position relative
+
+  overflow hidden
+
+  img
+    &.small
+      height 2em
+
+    &.normal
+      height 4em
+
+    &.big
+      height 6em
+
+    &.large
+      height 8em
+
+    &.huge
+      height 12em
+
+    &.enormous
+      height 16em
+
+    &.gigantic
+      height 24em
+
+    &.mega
+      height 32em
+
+  &.hoverable
+    .top-addons, .bottom-addons
+      position absolute
+
+      color $color-tone-white
+
+      padding $space-normal
+
+      width 100%
+
+      transition 0.25s transform
+
+    .top-addons
+      top 0
+      background-image linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 1.00),
+              rgba(0, 0, 0, 0.15)
+      )
+
+      +mouse-only()
+        transform translateY(-100%)
+
+    .bottom-addons
+      bottom 0
+      background-image linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 1.00),
+              rgba(0, 0, 0, 0.15)
+      )
+
+      +mouse-only()
+        transform translateY(100%)
+
+    &:hover
+      .top-addons
+        transform translateY(0)
+
+      .bottom-addons
+        transform translateY(0)
+
+  &.centered
+    vertical-align middle
+
+  &.rounded
+    clip-path circle()
+
+    img
+      object-fit cover
+
