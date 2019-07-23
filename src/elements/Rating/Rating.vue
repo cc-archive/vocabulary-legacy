@@ -28,6 +28,13 @@
 
   library.add(faCircle, faStar, faHeart)
 
+  /**
+   * ## Ratings establish the quality of content.
+   *
+   * A rating is a quantity that maps to the quality of content. It is a way to
+   * pictorially represent if some entity was good or bad, and to what extent
+   * so as a guide to future visitors or site moderators.
+   */
   export default {
     name: 'Rating',
     mixins: [
