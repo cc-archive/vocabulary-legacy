@@ -1,0 +1,53 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+
+.vocab.statistic
+  --statistic-color $color-tone-black
+
+  &.inverted
+    --statistic-color $color-tone-white
+
+  colors('--statistic-color')
+
+  display inline-flex
+  flex-direction column
+  align-items center
+  justify-content flex-end
+
+  .value-wrapper
+    color var(--statistic-color)
+    font-size $size-gigantic
+
+    text-align center
+
+    &.textual
+      font-size $size-huge
+      text-transform uppercase
+
+  .label-wrapper
+    color $color-tone-grey-darker
+    font-weight $weight-bold
+
+    text-align center
+
+    text-transform uppercase
+
+  &.plural
+    height 100%
+
+  &.inverted
+    .label
+      color $color-tone-grey-lighter
+
+  &.positive
+    --statistic-color $color-context-positive
+
+    .label
+      color $color-context-positive-dark
+
+  &.negative
+    --statistic-color $color-context-negative
+
+    .label
+      color $color-context-negative-dark
+
