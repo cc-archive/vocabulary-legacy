@@ -1,6 +1,6 @@
 <template>
   <div class="vocab grid" :class="gridClasses">
-    <!-- Content goes here -->
+    <!-- @slot [`GridCell`](#/Layouts/GridCell) components go here -->
     <slot/>
   </div>
 </template>
