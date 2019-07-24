@@ -1,0 +1,19 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/list.styl"
+
+.vocab.trail
+  --trail-color $color-tone-black
+
+  &.inverted
+    --trail-color $color-tone-white
+
+  colors('--trail-color')
+
+  .crumbs
+    bland-list()
+
+    width 100%
+    display flex
+    flex-direction row
+

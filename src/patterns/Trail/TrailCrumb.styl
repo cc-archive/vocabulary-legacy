@@ -1,0 +1,33 @@
+@import "~@/assets/tokens/tokens.styl"
+
+.vocab.trail
+  .crumbs
+    .crumb
+      color var(--trail-color)
+
+      a
+        color inherit
+        text-decoration inherit
+
+      .separator
+        color $color-tone-grey-light
+
+        margin $space-zero $space-normal
+
+      &:not(:last-of-type)
+        text-decoration underline dotted
+
+      &:last-of-type
+        color $color-tone-black
+
+        .separator
+          display none
+
+  &.inverted
+    .crumbs
+      .crumb
+        .separator
+          color $color-tone-grey-dark
+
+        &:last-of-type
+          color $color-tone-white
