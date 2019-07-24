@@ -325,3 +325,7 @@ sharp cuts.
 ```
 
 Styles can be combined.
+
+### Add-on set
+
+Refer to [TabbedPane](#/Layouts/TabbedPane).

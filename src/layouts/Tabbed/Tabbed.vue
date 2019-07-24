@@ -7,25 +7,39 @@
         class="tab"
         :class="{ active: index === activeTabIndex}"
         v-on:click="changeTab(index)">
-        <span
-          v-if="tabPane.title && !tabPane.$slots.tab">
-          {{ tabPane.title }}
-        </span>
         <SlotRenderer
-          v-if="tabPane.$slots.tab"
           :component="tabPane"
           name="tab"
-          tag="span"/>
+          tag="span">
+          {{ tabPane.title }}
+        </SlotRenderer>
       </li>
     </ul>
     <!-- Cannot use Section component because $parent used in TabbedPane -->
-    <div class="vocab section contents" :class="sectionClasses">
+    <Section
+      :color="color"
+      :shade="shade"
+      :isRaised="isRaised"
+      :isRounded="isRounded"
+      :isInverted="isInverted"
+      class="contents">
+      <SlotRenderer
+        v-for="(tabPane, index) in tabPaneList"
+        :key="index"
+        :component="tabPane"
+        tag="div"
+        :classList="['content', {active: tabPane.isActive}]"/>
+    </Section>
+    <div style="display: none;">
+      <!-- @slot [`TabbedPane`](#/Layouts/TabbedPane) components go here -->
       <slot/>
     </div>
   </div>
 </template>
 
 <script>
+  import Section from '@/layouts/Section/Section'
+
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
 
   import Colorable from '@/mixins/colorable'
@@ -52,7 +66,8 @@
       Roundable
     ],
     components: {
-      SlotRenderer
+      SlotRenderer,
+      Section
     },
     data: function () {
       return {
@@ -78,17 +93,6 @@
           this.shade,
           {
             'basic': this.isBasic,
-            'inverted': this.isInverted,
-            'rounded': this.isRounded
-          }
-        ]
-      },
-      sectionClasses: function () {
-        return [
-          this.color,
-          this.shade,
-          {
-            'raised': this.isRaised,
             'inverted': this.isInverted,
             'rounded': this.isRounded
           }

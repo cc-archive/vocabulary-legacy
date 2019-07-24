@@ -1,3 +1,12 @@
+<template>
+  <div>
+    <!-- @slot Tab goes here -->
+    <slot name="tab"/>
+    <!-- @slot Content goes here -->
+    <slot/>
+  </div>
+</template>
+
 <script>
   /**
    * ## Panes are the content of tabbed views.
@@ -20,7 +29,7 @@
       /**
        * _the text that appears in the tab_
        *
-       * This option is overridden if the slot is populated.
+       * This option is overridden if the slot `tab` is populated.
        */
       title: {
         type: String
@@ -34,20 +43,6 @@
       if (index >= 0) {
         this.$parent.tabPaneList.splice(index, 1)
       }
-    },
-    render: function (createElement) {
-      return createElement(
-        'div',
-        {
-          class: [
-            'content',
-            {
-              'active': this.isActive
-            }
-          ]
-        },
-        this.$slots.default
-      )
     }
   }
 </script>
