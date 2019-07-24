@@ -69,6 +69,15 @@
       },
       isVueComponent () {
         return this.component && this.component._isVue
+      },
+      getContent () {
+        if (this.scoped && this.name in this.component.$scopedSlots) {
+          return this.component.$scopedSlots[this.name](this.props)
+        }
+        if (!this.scoped && this.name in this.component.$slots) {
+          return this.component.$slots[this.name]
+        }
+        return this.$slots.default
       }
     },
     created () {
@@ -89,9 +98,7 @@
             class: this.classList
           },
           [
-            this.scoped
-              ? this.component.$scopedSlots[this.name](this.props)
-              : this.component.$slots[this.name]
+            this.getContent()
           ]
         )
       }
