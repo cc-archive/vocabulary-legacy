@@ -53,8 +53,7 @@
        */
       colorSide: {
         type: String,
-        validator: val => ['top', 'bottom'].includes(val),
-        default: ''
+        validator: val => ['top', 'bottom'].includes(val)
       }
     },
     computed: {
