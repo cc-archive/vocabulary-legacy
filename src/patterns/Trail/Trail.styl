@@ -1,12 +1,17 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/colors.styl"
+@import "~@/styles/media.styl"
 @import "~@/styles/list.styl"
 
 .vocab.trail
   --trail-color $color-tone-black
+  --separator-color $color-tone-grey-light
+  --last-color $color-tone-black
 
   &.inverted
     --trail-color $color-tone-white
+    --separator-color $color-tone-grey-dark
+    --last-color $color-tone-white
 
   colors('--trail-color')
 
@@ -15,5 +20,10 @@
 
     width 100%
     display flex
-    flex-direction row
+
+    +phone-only()
+      flex-direction column
+
+    +tablet-portrait-up()
+      flex-direction row
 

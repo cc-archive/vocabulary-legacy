@@ -1,0 +1,24 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/media.styl"
+@import "~@/styles/list.styl"
+
+.vocab.navigation
+  --navigation-color $color-tone-black
+  --hover-color rgba(255, 255, 255, 0.85)
+
+  &.inverted
+    --navigation-color $color-tone-white
+    --hover-color rgba(0, 0, 0, 0.85)
+
+  colors('--navigation-color')
+
+  .links
+    +phone-only()
+      bland-list()
+
+      width 100%
+      text-align left
+
+    +tablet-portrait-up()
+      piped-list()

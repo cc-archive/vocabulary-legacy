@@ -1,0 +1,56 @@
+## Examples
+
+For example usage, see [Navigation](#/Patterns/Navigation).
+
+### Add-on set
+
+A navigation link can have an icon attached to it via the `icon` prop.
+
+```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faHome,
+  faBook
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHome, faBook);
+
+<Navigation color="red">
+  <NavigationLink icon="home">
+    Home page
+  </NavigationLink>
+  <NavigationLink icon="book">
+    Style guide
+  </Navigation>
+</Navigation>
+```
+
+However, if an icon doesn't cut it for you, you may place any other content
+in the `addons` slot.
+
+```jsx
+import Vue from 'vue';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+
+library.add(faHandshake);
+
+<Navigation color="green">
+  <NavigationLink>
+    <template v-slot:addons>
+      <LicenseIconography :iconList="['']"/>
+    </template>
+    Creative Commons
+  </NavigationLink>
+  <NavigationLink>
+    <template v-slot:addons>
+      <FontAwesomeIcon :icon="['fas', 'handshake']"/>
+    </template>
+    Licenses
+  </NavigationLink>
+</Trail>
+```

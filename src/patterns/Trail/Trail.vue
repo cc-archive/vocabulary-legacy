@@ -5,23 +5,29 @@
         v-for="(trailCrumb, index) in trailCrumbList"
         :key="index"
         class="crumb">
+        <span
+          v-for="loop in index"
+          :key="loop"
+          class="spacing">
+          <template v-if="loop === index">↳</template>
+        </span>
         <a :href="trailCrumb.link">
           <SlotRenderer
             :component="trailCrumb"
             name="addons"
             tag="span">
             <FontAwesomeIcon
-              :icon="['fas', trailCrumb.icon]"/>
+              :icon="['fas', trailCrumb.icon]"
+              fixed-width/>
           </SlotRenderer>
           <SlotRenderer
             :component="trailCrumb"
-            tag="span">
-            {{ trailCrumb.title }}
-          </SlotRenderer>
+            tag="span"/>
         </a>
         <FontAwesomeIcon
           class="separator"
-          :icon="['fas', icon]"/>
+          :icon="['fas', icon]"
+          fixed-width/>
       </li>
     </ul>
     <div style="display: none;">
@@ -45,6 +51,10 @@
 
   /**
    * ## Trail crumbs help you go back.
+   *
+   * Trail provides a collection of
+   * [TrailCrumb](#/Patterns/TrailCrumbs)s in a familiar interface to
+   * facilitate exploration.
    */
   export default {
     name: 'Trail',
