@@ -22,6 +22,7 @@
       :isRaised="isRaised"
       :isRounded="isRounded"
       :isInverted="isInverted"
+      colorSide="bottom"
       class="contents">
       <SlotRenderer
         v-for="(tabPane, index) in tabPaneList"
