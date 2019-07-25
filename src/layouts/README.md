@@ -80,7 +80,7 @@ Here are some available layouts in action. You should probably
             <TableCell>B2</TableCell>
           </tr>
         </Table>
-      </TabPane>
+      </TabbedPane>
     </Tabbed>
   </Container>
 </div>
