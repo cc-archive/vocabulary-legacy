@@ -3,25 +3,33 @@ let navLinkMap = {}
 let navLinks
 let activeLink
 
-window.onload = () => {
-  navLinkList = document.querySelector('nav > ul')
-  navLinks = navLinkList.children
-  navLinks.forEach(
-    navLink => {
-      navLinkMap[navLink.innerText] = navLink
-      navLink.addEventListener('click', () => {
-        activeLink.classList.remove('cc-active')
-        navLink.classList.add('cc-active')
-        activeLink = navLink
-      })
-    }
-  )
+function hashToNav () {
+  let oldActiveLink, newActiveLink
+
+  oldActiveLink = activeLink
+  if (oldActiveLink) {
+    oldActiveLink.classList.remove('cc-active')
+  }
+
   if (window.location.hash === '') {
-    activeLink = navLinks[0]
+    newActiveLink = navLinks[0]
   } else {
     let hash = window.location.hash
     let componentFamily = hash.split('/')[1]
-    activeLink = navLinkMap[componentFamily]
+    newActiveLink = navLinkMap[componentFamily]
   }
-  activeLink.classList.add('cc-active')
+  newActiveLink.classList.add('cc-active')
+
+  activeLink = newActiveLink
 }
+
+window.onload = () => {
+  navLinkList = document.querySelector('div[class*="rsg--sidebar"] nav > ul')
+  navLinks = navLinkList.children
+  navLinks.forEach(navLink => {
+    navLinkMap[navLink.innerText] = navLink
+  })
+  hashToNav()
+}
+
+window.onhashchange = hashToNav

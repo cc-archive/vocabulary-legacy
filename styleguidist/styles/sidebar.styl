@@ -67,7 +67,8 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
       font-weight $weight-bold
 
     ul
-      display none
+      +tablet-portrait-up()
+        display none
 
       li
         line-height 1.2
