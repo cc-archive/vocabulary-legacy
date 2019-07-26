@@ -28,7 +28,7 @@ let value = 3;
 A rating bar without a color specified is black.
 
 ```jsx
-<Rating :value="3">
+<Rating :value="3"/>
 ```
 
 Ratings can be colored using any color from the set provided by CC Vocabulary.
@@ -136,4 +136,15 @@ let value = 3;
 <Rating
   v-model="value"
   :indication="value >= 4 ? 'positive' : 'negative'"/>
+```
+
+### State set
+
+A rating may be disabled to prevent input altogether.
+
+```jsx
+<Rating
+  color="red"
+  :value="3"
+  is-disabled/>
 ```

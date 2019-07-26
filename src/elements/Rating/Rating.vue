@@ -1,7 +1,7 @@
 <template>
   <div class="vocab rating" :class="ratingClasses">
     <FontAwesomeIcon
-      v-if="!isToggleable"
+      v-if="!isToggleable && !isDisabled"
       class="icon dot"
       :icon="['fas', 'circle']"
       v-on:click="changeRating(0)"
@@ -23,6 +23,7 @@
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
   import Colorable from '@/mixins/colorable'
+  import Disableable from '@/mixins/disableable'
   import Indicatable from '@/mixins/indicatable'
   import Resizable from '@/mixins/resizable'
 
@@ -39,6 +40,7 @@
     name: 'Rating',
     mixins: [
       Colorable,
+      Disableable,
       Indicatable,
       Resizable
     ],
@@ -103,7 +105,10 @@
           this.size,
           this.color,
           this.shade,
-          this.indication
+          this.indication,
+          {
+            'disabled': this.isDisabled
+          }
         ]
       },
       computedIcons: function () {
@@ -137,12 +142,14 @@
         ]
       },
       changeRating: function (index) {
-        if (this.isToggleable && index === this.rating) {
-          this.rating = 0
-        } else {
-          this.rating = index
+        if (!this.isDisabled) {
+          if (this.isToggleable && index === this.rating) {
+            this.rating = 0
+          } else {
+            this.rating = index
+          }
+          this.$emit('input', this.rating)
         }
-        this.$emit('input', this.rating)
       }
     }
   }

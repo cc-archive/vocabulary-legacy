@@ -45,3 +45,12 @@
 
   &.negative
     --rating-color $color-context-negative
+
+  &.disabled
+    .icon
+      cursor auto
+
+      &.unit
+        &:not(.active)
+          color rgb(146, 149, 149)
+          transform none
