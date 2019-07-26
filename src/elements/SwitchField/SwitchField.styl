@@ -1,0 +1,71 @@
+@import "~@/assets/tokens/tokens.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/colors.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.switch-field
+  --switch-color $color-tone-near-black
+  colors('--switch-color')
+
+  sizes('font-size')
+
+  font-reset()
+
+  display inline-block
+  vertical-align bottom
+
+  cursor pointer
+
+  .field
+
+    display block
+    width 2em
+    height 1em
+
+    background-color $color-tone-grey-dark
+    border 1px solid @background-color
+
+    position relative
+
+    transition 0.25s background-color, 0.25s border-color
+
+    &:after
+      content ''
+
+      width 1em
+      height 1em
+
+      background-color $color-tone-white
+
+      position absolute
+      left 0
+
+      transition 0.25s left, 0.25s transform
+
+  .field.checked
+    background-color var(--switch-color)
+    border-color @background-color
+
+    &:after
+      left 100%
+      transform translateX(-100%)
+
+
+  &.positive
+    --switch-color $color-context-positive
+
+    .field:not(.checked)
+      background-color $color-context-positive-light
+
+  &.negative
+    --switch-color $color-context-negative
+
+    .field:not(.checked)
+      background-color $color-context-negative-light
+
+  &.disabled
+    cursor auto
+
+    .field
+      &:after
+        background-color rgb(146, 149, 149)
