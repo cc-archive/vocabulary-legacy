@@ -24,7 +24,7 @@
     "serve:styleguide": "vue-cli-service styleguidist",
     "build:website": "vue-cli-service build --dest build/",
     "build:styleguide": "vue-cli-service styleguidist:build",
-    "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,raw.json --dest ./src/assets/tokens",
+    "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,raw.json --dest ./src/assets/tokens",
     "build:library": "node library/build.js"
   },
   "dependencies": {
