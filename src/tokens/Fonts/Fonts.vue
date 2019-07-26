@@ -2,12 +2,13 @@
   <Grid>
     <GridCell
       :spanSet="[12]"
-      v-for="(props, index) in values"
+      v-for="(prop, index) in values"
       :key="index">
       <Font
         :property="property"
-        :name="props.name"
-        :value="props.value"/>
+        :name="prop.name"
+        :value="prop.value"
+        :comment="prop.comment"/>
     </GridCell>
   </Grid>
 </template>
@@ -15,7 +16,7 @@
 <script>
   import sortBy from 'lodash/sortBy'
 
-  import Font from '@/tokens/Font/Font'
+  import Font from '@/tokens/Fonts/Font'
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
 
@@ -35,6 +36,11 @@
       Grid,
       Font
     },
+    data: function () {
+      return {
+        values: this.extractFontProperty(designTokens.props)
+      }
+    },
     props: {
       /**
        * _the property of the font being showcased_
@@ -51,15 +57,12 @@
       extractFontProperty: function (data) {
         return sortBy(
           data,
-          ['value']
+          [
+            'value'
+          ]
         ).filter(
           token => token.category.includes(`font-${this.property}`)
         )
-      }
-    },
-    data: function () {
-      return {
-        values: this.extractFontProperty(designTokens.props, this.property)
       }
     }
   }

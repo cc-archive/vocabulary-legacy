@@ -1,20 +1,22 @@
 <template>
-    <Grid>
-      <GridCell
-        :spanSet="[12, 3, 3]"
-        v-for="(prop, index) in colors"
-        :key="index">
-        <Color
-          :name="prop.name"
-          :value="prop.value"/>
-      </GridCell>
-    </Grid>
+  <Grid>
+    <GridCell
+      :spanSet="spanSet"
+      v-for="(prop, index) in colors"
+      :key="index">
+      <Color
+        :name="prop.name"
+        :value="prop.value"
+        :comment="prop.comment"
+        :category="category"/>
+    </GridCell>
+  </Grid>
 </template>
 
 <script>
   import sortBy from 'lodash/sortBy'
 
-  import Color from '@/tokens/Color/Color'
+  import Color from '@/tokens/Colors/Color'
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
 
@@ -23,7 +25,7 @@
   /**
    * ## Colors add pizzazz.
    *
-   * Vocabulary is the design system of Creative Commons, and as such is infused
+   * CC Vocabulary is the design system of Creative Commons, and is infused
    * with color throughout the project. There are a number of bright colours,
    * with their lighter and darker shades. There are also a set of color tones
    * in greyscale and some colors with contextual meaning.
@@ -35,63 +37,58 @@
       Grid,
       Color
     },
+    data: function () {
+      return {
+        colors: this.extractColors(designTokens.props)
+      }
+    },
     props: {
       /**
        * _the substring of the category to filter based on_
        *
-       * Here `'tones'` refers to greyscale colors and `'context'` refers to
-       * colors that have certain contextual connotations. Any other value gives
-       * the hues and their variations.
+       * ∈ {`'hue'`, `'tone'`, `'context'`, `'overlay'`}
        */
-      group: {
+      category: {
         type: String,
+        validator: val => ['hue', 'tone', 'context', 'overlay'].includes(val),
         required: true
+      }
+    },
+    computed: {
+      spanSet: function () {
+        if (this.category === 'context') {
+          return [12, 6, 4, 4, 4]
+        } else {
+          return [12, 6, 3, 3, 3]
+        }
       }
     },
     methods: {
       extractColors: function (data) {
-        let colors = sortBy(
+        return sortBy(
           data,
           [
             'category',
             function (color) {
-              if (color.name.includes('darker')) {
-                return 4
+              let shadeLevels = [
+                'tone_white', 'near_white', 'lighter', 'light',
+                'white_high', 'white_low',
+                'normal',
+                'black_low', 'black_high',
+                'dark', 'darker', 'near_black', 'tone_black'
+              ]
+              for (let i = 0; i < shadeLevels.length; i++) {
+                if (color.name.endsWith(shadeLevels[i])) {
+                  return i
+                }
               }
-              if (color.name.includes('dark')) {
-                return 3
-              }
-              if (color.name.includes('light')) {
-                return 1
-              }
-              return 2
+              return Math.floor(shadeLevels.length / 2)
             }
           ]
         ).filter(
-          token => token.type === 'color'
+          token => token.type === 'color' &&
+            token.category.includes(`color-group-${this.category}`)
         )
-
-        if (this.group === 'tone') {
-          colors = colors.filter(
-            token => token.category === 'color_group_tone'
-          )
-        } else if (this.group === 'context') {
-          colors = colors.filter(
-            token => token.category === 'color_group_context'
-          )
-        } else {
-          colors = colors.filter(
-            token => token.category !== 'color_group_tone' &&
-              token.category !== 'color_group_context'
-          )
-        }
-
-        return colors
-      }
-    },
-    data: function () {
-      return {
-        colors: this.extractColors(designTokens.props)
       }
     }
   }

@@ -6,7 +6,7 @@
       :is-rounded="isRounded"
       :color="color"
       :shade="shade"
-      colorSide="bottom"
+      :colorSide="color ? 'bottom': ''"
       is-clingy>
       <div class="feature">
         <!-- @slot Featured content goes here -->

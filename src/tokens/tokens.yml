@@ -4,7 +4,7 @@ imports:
   - ./color.yml
   - ./font-size.yml
   - ./font-weight.yml
-  - ./spacing.yml
+  - ./space.yml
   - ./radius.yml
   - ./box-shadow.yml
 

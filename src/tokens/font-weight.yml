@@ -1,15 +1,15 @@
 # Font weight tokens
-# ------------------
-# Describe the various font weights on the page.
-
 
 props:
   weight_bold:
     value: '700'
+    comment: Bolder-than-normal font weight
   weight_normal:
     value: '400'
+    comment: Normal font weight
   weight_light:
     value: '300'
+    comment: Thinner-than-normal font weight
 
 global:
   type: number

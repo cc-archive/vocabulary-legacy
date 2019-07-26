@@ -16,7 +16,7 @@
 Vocabulary provides a number of font sizes calculated using a harmonic scale 
 that scales `4em` over 6 harmonics.
 
-```jsx { "props" : { "className": "i18n-enabled" } }
+```jsx
 <Fonts property="size"/>
 ```
 
@@ -25,6 +25,6 @@ that scales `4em` over 6 harmonics.
 In each of these sizes, Vocabulary uses provides three distinct font weights, 
 namely light, normal and bold.
 
-```jsx { "props" : { "className": "i18n-enabled" } }
+```jsx
 <Fonts property="weight"/>
 ```

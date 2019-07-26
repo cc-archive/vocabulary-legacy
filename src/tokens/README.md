@@ -37,26 +37,56 @@ which follow a strict naming scheme.
 
 Take a look at how tokens replace a value with a Stylus variable.
 
-```jsx { "props": { "className": "i18n-enabled" } }
+```jsx
 import Vue from 'vue';
-import Color from './Color/Color';
-import Font from './Font/Font';
-import Space from './Space/Space';
+import Color from './Colors/Color';
+import Font from './Fonts/Font';
+import Space from './Spaces/Space';
+import Radius from './Radii/Radius';
+import Shadow from './Shadows/Shadow';
 
 Vue.component('Color', Color);
 Vue.component('Font', Font);
 Vue.component('Space', Space);
+Vue.component('Radius', Radius);
+Vue.component('Shadow', Shadow);
 
-<Color 
-  name="color_oxford_blue" 
-  value="rgb(0, 38, 77)"/>
+<Grid>
+  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+    <Color 
+      name="color_oxford_blue" 
+      value="rgb(0, 38, 77)"
+      comment="Deep blue color"/>
+  </GridCell>
+  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+    <Space
+      name="space_half"
+      value="0.5em"
+      comment="Half em space"/>
+  </GridCell>
+  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+    <Radius
+      name="radius_half"
+      value="0.5em"
+      comment="Half em border radius"/>
+  </GridCell>
+  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+    <Shadow
+      name="shadow_five"
+      value="0 5px 5px 0"
+      comment="Five pixels box shadow"/>
+  </GridCell>
+</Grid>
 <br/>
 <Font
   property="size"
-  name="size_one_half"
-  value="1.5000rem"/>
+  name="size_two"
+  value="2.0rem"
+  comment="Two rem sized font"/>
 <br/>
-<Space
-  name="space_two"
-  value="2.0000em"/>
+<Font
+  property="weight"
+  name="weight_bold"
+  value="bold"
+  comment="Bold weighted font"/>
 ```

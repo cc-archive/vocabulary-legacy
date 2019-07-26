@@ -2,9 +2,9 @@
   <Grid>
     <GridCell
       :span-set="[12, 4, 4, 4, 4]"
-      v-for="(prop, index) in spaces"
+      v-for="(prop, index) in radii"
       :key="index">
-      <Space
+      <Radius
         :name="prop.name"
         :value="prop.value"
         :comment="prop.comment"/>
@@ -15,30 +15,30 @@
 <script>
   import sortBy from 'lodash/sortBy'
 
-  import Space from '@/tokens/Spaces/Space'
+  import Radius from '@/tokens/Radii/Radius'
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Spaces provide readability.
+   * ## Radii soften edges.
    *
-   * CC Vocabulary is meant to be readable, and whitespaces are of paramount
-   * importance in readability considerations. There are a number of standard
-   * spaces in different units to ensure consistency in the whitespaces
-   * throughout the project.
+   * While sharp cuts and right-angled corners may define CC Vocabulary, we
+   * don't have to limit ourselves to them. A splash of smooth rounded corners
+   * here and there just adds variety to the interface and looks incredibly
+   * aesthetic.
    */
   export default {
-    name: 'Spaces',
+    name: 'Radii',
     components: {
       GridCell,
       Grid,
-      Space
+      Radius
     },
     data: function () {
       return {
-        spaces: this.extractSpaces(designTokens.props)
+        radii: this.extractRadii(designTokens.props)
       }
     },
     props: {
@@ -54,28 +54,28 @@
       }
     },
     methods: {
-      extractSpaces: function (data) {
+      extractRadii: function (data) {
         return sortBy(
           data,
           [
             'category',
             function (space) {
-              let gapLevels = [
-                'smaller', 'small',
+              let roundLevels = [
+                'small',
                 'normal',
-                'large', 'larger'
+                'large'
               ]
-              for (let i = 0; i < gapLevels.length; i++) {
-                if (space.name.endsWith(gapLevels[i])) {
+              for (let i = 0; i < roundLevels.length; i++) {
+                if (space.name.endsWith(roundLevels[i])) {
                   return i
                 }
               }
-              return Math.floor(gapLevels.length / 2)
+              return Math.floor(roundLevels.length / 2)
             }
           ]
         ).filter(
           token => token.type === 'size' &&
-            token.category.includes(`space-group-${this.category}`)
+            token.category.includes(`radius-group-${this.category}`)
         )
       }
     }

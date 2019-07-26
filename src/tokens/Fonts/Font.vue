@@ -1,52 +1,56 @@
 <template>
-  <!-- TODO Make card -->
-  <div class="vocab font">
-    <div class="demo" :style="style">
-      When we share, everyone wins
+  <Card
+    class="vocab font"
+    :heading="properName"
+    :subheading="comment"
+    is-decked
+    is-raised>
+    <div class="demo" :style="demoStyles">
+      When we share, everyone wins.
     </div>
-    <div class="description">
-      <Heading :level="6">
-        {{ properName }}
-      </Heading>
-      <p>
-        <strong>{{ $t('value') }}:</strong><code> {{ value }}</code>
-      </p>
-      <p>
-        <strong>{{ $t('stylustoken') }}:</strong><code> ${{ styleName }}</code>
-      </p>
-    </div>
-  </div>
+    <template #foot>
+      <code>{{ value }}</code><br/>
+      <code>${{ styleName }}</code>
+    </template>
+  </Card>
 </template>
 
 <script>
   import startCase from 'lodash/startCase'
 
-  import Heading from '@/elements/Heading/Heading'
+  import Card from '@/patterns/Card/Card'
 
   export default {
     name: 'Font',
     components: {
-      Heading
+      Card
     },
     props: {
       /**
-       * the font property being showcased
+       * _the font property being showcased_
        */
       property: {
         type: String,
         required: true
       },
       /**
-       * the name of the value being showcased
+       * _the name of the value being showcased_
        */
       name: {
         type: String,
         required: true
       },
       /**
-       * the actual value being showcased
+       * _the value being showcased_
        */
       value: {
+        type: String,
+        required: true
+      },
+      /**
+       * _some description of the value being showcased_
+       */
+      comment: {
         type: String,
         required: true
       }
@@ -61,7 +65,7 @@
         )
       },
       /**
-       * the Stylus style name for this value
+       * the stylesheet variable name for this value
        */
       styleName: function () {
         return this.name.replace(/_/g, '-')
@@ -69,7 +73,7 @@
       /**
        * the JSS style dictionary to apply to the demo
        */
-      style: function () {
+      demoStyles: function () {
         let styleDict = {}
         styleDict[`font${startCase(this.property)}`] = this.value
         return styleDict
@@ -78,8 +82,5 @@
   }
 </script>
 
-<style scoped lang="stylus" src="./Font.styl">
+<style lang="stylus" src="./Font.styl">
 </style>
-
-<i18n src="./lang.json">
-</i18n>

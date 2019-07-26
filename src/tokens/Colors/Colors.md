@@ -18,8 +18,8 @@
 Vocabulary has a rich set of colors, covering the both primary and secondary 
 colors on the spectrum along with their darker and lighter hues.
 
-```jsx { "props": { "className": "i18n-enabled" } }
-<Colors group="meh"/>
+```jsx
+<Colors category="hue"/>
 ```
 
 ### Tone set
@@ -27,8 +27,8 @@ colors on the spectrum along with their darker and lighter hues.
 Apart from all the vibrant hues, Vocabular provides a diverse set of tones to 
 choose from, covering the grey spectrum from white to black.
 
-```jsx { "props": { "className": "i18n-enabled" } }
-<Colors group="tone"/>
+```jsx
+<Colors category="tone"/>
 ```
 
 ### Context set
@@ -37,6 +37,17 @@ Vue also covers the contextual colors that attach a connotation with an action
 such as red for a dangerous action with negative consequences and green for a
 safe one with positive consequences.
 
-```jsx { "props": { "className": "i18n-enabled" } }
-<Colors group="context"/>
+```jsx
+<Colors category="context"/>
+```
+
+### Overlay set
+
+Vue also covers the overlays which are translucent colors (alpha not at 100%)
+that serve the purpose of darkening down or lightening up other colors. They
+are usually laid on the background color using fake gradients as background 
+images.
+
+```jsx
+<Colors category="overlay"/>
 ```

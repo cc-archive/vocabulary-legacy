@@ -1,173 +1,236 @@
-# Colour tokens
-# -------------
-# Describe the various shades of various colours.
-
+# Color tokens
 
 props:
   color_magenta_light:
     value: '#F7B2CC'
-    category: color_group_magenta
+    category: color-group-hue-magenta
+    comment: Slightly light shade of magenta
   color_magenta:
     value: '#B62B6E'
-    category: color_group_magenta
+    category: color-group-hue-magenta
+    comment: Base shade of magenta
   color_magenta_dark:
     value: '#7B1B53'
-    category: color_group_magenta
+    category: color-group-hue-magenta
+    comment: Slightly dark shade of magenta
   color_magenta_darker:
     value: '#4F1035'
-    category: color_group_magenta
+    category: color-group-hue-magenta
+    comment: Darker shade of magenta
 
   color_purple_light:
     value: '#D6B4D6'
-    category: color_group_purple
+    category: color-group-hue-purple
+    comment: Slightly light shade of purple
   color_purple:
     value: '#9628C6'
-    category: color_group_purple
+    category: color-group-hue-purple
+    comment: Base shade of purple
   color_purple_dark:
     value: '#662978'
-    category: color_group_purple
+    category: color-group-hue-purple
+    comment: Slightly dark shade of purple
   color_purple_darker:
     value: '#42194F'
-    category: color_group_purple
+    category: color-group-hue-purple
+    comment: Darker shade of purple
 
   color_blue_light:
     value: '#BFCEEA'
-    category: color_group_blue
+    category: color-group-hue-blue
+    comment: Slightly light shade of blue
   color_blue:
     value: '#4374B7'
-    category: color_group_blue
+    category: color-group-hue-blue
+    comment: Base shade of blue
   color_blue_dark:
     value: '#214184'
-    category: color_group_blue
+    category: color-group-hue-blue
+    comment: Slightly dark shade of blue
   color_blue_darker:
     value: '#102548'
-    category: color_group_blue
+    category: color-group-hue-blue
+    comment: Darker shade of blue
 
   color_green_light:
     value: '#E4EBA0'
-    category: color_group_green
+    category: color-group-hue-green
+    comment: Slightly light shade of green
   color_green:
     value: '#98C807'
-    category: color_group_green
+    category: color-group-hue-green
+    comment: Base shade of green
   color_green_dark:
     value: '#01A635'
-    category: color_group_green
+    category: color-group-hue-green
+    comment: Slightly dark shade of green
   color_green_darker:
     value: '#3D5024'
-    category: color_group_green
+    category: color-group-hue-green
+    comment: Darker shade of green
 
   color_olive_light:
     value: '#E0E4E1'
-    category: color_group_olive
+    category: color-group-hue-olive
+    comment: Slightly light shade of olive
   color_olive:
     value: '#ABB8AF'
-    category: color_group_olive
+    category: color-group-hue-olive
+    comment: Base shade of olive
   color_olive_dark:
     value: '#43594A'
-    category: color_group_olive
+    category: color-group-hue-olive
+    comment: Slightly dark shade of olive
   color_olive_darker:
     value: '#2A372F'
-    category: color_group_olive
+    category: color-group-hue-olive
+    comment: Darker shade of olive
 
   color_sand_light:
     value: '#EBE0B2'
-    category: color_group_sand
+    category: color-group-hue-sand
+    comment: Slightly light shade of sand
   color_sand:
     value: '#B1A24A'
-    category: color_group_sand
+    category: color-group-hue-sand
+    comment: Base shade of sand
   color_sand_dark:
     value: '#6D6118'
-    category: color_group_sand
+    category: color-group-hue-sand
+    comment: Slightly dark shade of sand
   color_sand_darker:
     value: '#44411F'
-    category: color_group_sand
+    category: color-group-hue-sand
+    comment: Darker shade of sand
 
   color_yellow_light:
     value: '#FFF3A2'
-    category: color_group_yellow
+    category: color-group-hue-yellow
+    comment: Slightly light shade of yellow
   color_yellow:
     value: '#EDD812'
-    category: color_group_yellow
+    category: color-group-hue-yellow
+    comment: Base shade of yellow
   color_yellow_dark:
     value: '#B09A11'
-    category: color_group_yellow
+    category: color-group-hue-yellow
+    comment: Slightly dark shade of yellow
   color_yellow_darker:
     value: '#4E4917'
-    category: color_group_yellow
+    category: color-group-hue-yellow
+    comment: Darker shade of yellow
 
   color_orange_light:
     value: '#FFD89E'
-    category: color_group_orange
+    category: color-group-hue-orange
+    comment: Slightly light shade of orange
   color_orange:
     value: '#FB7928'
-    category: color_group_orange
+    category: color-group-hue-orange
+    comment: Base shade of orange
   color_orange_dark:
     value: '#EE5B32'
-    category: color_group_orange
+    category: color-group-hue-orange
+    comment: Slightly dark shade of orange
   color_orange_darker:
     value: '#A46810'
-    category: color_group_orange
+    category: color-group-hue-orange
+    comment: Darker shade of orange
 
   color_red_light:
     value: '#FAB499'
-    category: color_group_red
+    category: color-group-hue-red
+    comment: Slightly light shade of red
   color_red:
     value: '#D13814'
-    category: color_group_red
+    category: color-group-hue-red
+    comment: Base shade of red
   color_red_dark:
     value: '#912B10'
-    category: color_group_red
+    category: color-group-hue-red
+    comment: Slightly dark shade of red
   color_red_darker:
     value: '#5A1C0E'
-    category: color_group_red
+    category: color-group-hue-red
+    comment: Darker shade of red
 
-  color_context_primary:
-    value: '#4374B7'
-    category: color_group_context
   color_context_positive_light:
     value: '#E4EBA0'
-    category: color_group_context
+    category: color-group-context-positive
+    comment: Slightly light shade of positive context
   color_context_positive:
     value: '#98C807'
-    category: color_group_context
+    category: color-group-context-positive
+    comment: Base shade of positive context
   color_context_positive_dark:
     value: '#01A635'
-    category: color_group_context
+    category: color-group-context-positive
+    comment: Slightly dark shade of positive context
+
   color_context_negative_light:
     value: '#FAB499'
-    category: color_group_context
+    category: color-group-context-negative
+    comment: Slightly light shade of negative context
   color_context_negative:
     value: '#D13814'
-    category: color_group_context
+    category: color-group-context-negative
+    comment: Base shade of negative context
   color_context_negative_dark:
     value: '#912B10'
-    category: color_group_context
+    category: color-group-context-negative
+    comment: Slightly dark shade of negative context
 
   color_tone_white:
     value: '#FFFFFF'
-    category: color_group_tone
+    category: color-group-tone-white
+    comment: Pure white color
   color_tone_near_white:
     value: '#EDEDEE'
-    category: color_group_tone
+    category: color-group-tone-white
+    comment: Lightest grey, near white
   color_tone_grey_lighter:
     value: '#DCDDDE'
-    category: color_group_tone
+    category: color-group-tone-white
+    comment: Lighter grey
   color_tone_grey_light:
     value: '#A7A9AC'
-    category: color_group_tone
+    category: color-group-tone-white
+    comment: Slightly light grey
+
   color_tone_grey_dark:
     value: '#636466'
-    category: color_group_tone
+    category: color-group-tone-black
+    comment: Slightly dark grey
   color_tone_grey_darker:
     value: '#393839'
-    category: color_group_tone
+    category: color-group-tone-black
+    comment: Darker grey
   color_tone_near_black:
     value: '#121513'
-    category: color_group_tone
+    category: color-group-tone-black
+    comment: Darkest grey, near black
   color_tone_black:
     value: '#000000'
-    category: color_group_tone
+    category: color-group-tone-black
+    comment: Pure black color
+
+  color_overlay_white_low:
+    value: 'rgba(255, 255, 255, 0.15)'
+    category: color-group-overlay-white
+    comment: 15% opaque shade of white, overlay makes lighter
+  color_overlay_white_high:
+    value: 'rgba(255, 255, 255, 0.85)'
+    category: color-group-overlay-white
+    comment: 85% opaque shade of white, hint of color on white
+
+  color_overlay_black_low:
+    value: 'rgba(0, 0, 0, 0.15)'
+    category: color-group-overlay-black
+    comment: 15% opaque shade of black, overlay makes darker
+  color_overlay_black_high:
+    value: 'rgba(0, 0, 0, 0.85)'
+    category: color-group-overlay-black
+    comment: 85% opaque shade of black, hint of color on black
 
 global:
   type: color
-  category: color
