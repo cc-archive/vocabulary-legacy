@@ -1,16 +1,16 @@
 <template>
-  <Card
-    class="vocab color"
-    :heading="properName"
-    :subheading="comment"
-    is-decked
-    is-raised>
-    <div class="swatch" :style="swatchStyles"></div>
-    <template #foot>
-      <code>{{ value }}</code><br/>
-      <code>${{ styleName }}</code>
-    </template>
-  </Card>
+    <Card
+            class="vocab color"
+            :heading="properName"
+            :subheading="comment"
+            is-decked
+            is-raised>
+        <div class="swatch" :style="swatchStyles"></div>
+        <template #foot>
+            <code>{{ value }}</code><br/>
+            <code>${{ styleName }}</code>
+        </template>
+    </Card>
 </template>
 
 <script>
@@ -74,10 +74,10 @@
       swatchStyles: function () {
         let styleDict = {}
         if (this.category !== 'overlay') {
-          styleDict['backgroundColor'] = this.value
+          styleDict.backgroundColor = this.value
         } else {
-          styleDict['backgroundColor'] = 'rgb(0, 38, 77)'
-          styleDict['backgroundImage'] = 'linear-gradient(' +
+          styleDict.backgroundColor = 'rgb(0, 38, 77)'
+          styleDict.backgroundImage = 'linear-gradient(' +
             `${this.value}, ` +
             `${this.value})`
         }

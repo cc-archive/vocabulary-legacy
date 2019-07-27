@@ -1,16 +1,16 @@
 <template>
-  <Card
-    class="vocab shadow"
-    :heading="properName"
-    :subheading="comment"
-    is-decked
-    is-raised>
-    <div class="saucer" :style="saucerStyles"></div>
-    <template #foot>
-      <code>{{ value }}</code><br/>
-      <code>${{ styleName }}</code>
-    </template>
-  </Card>
+    <Card
+            class="vocab shadow"
+            :heading="properName"
+            :subheading="comment"
+            is-decked
+            is-raised>
+        <div class="saucer" :style="saucerStyles"></div>
+        <template #foot>
+            <code>{{ value }}</code><br/>
+            <code>${{ styleName }}</code>
+        </template>
+    </Card>
 </template>
 
 <script>
@@ -21,7 +21,7 @@
   export default {
     name: 'Shadow',
     components: {
-      Card,
+      Card
     },
     props: {
       /**
@@ -66,9 +66,7 @@
        */
       saucerStyles: function () {
         let styleDict = {}
-        let shadow = `${this.value} rgb(237, 237, 238)`
-        console.log(shadow)
-        styleDict['boxShadow'] = shadow
+        styleDict.boxShadow = `${this.value} rgb(237, 237, 238)`
         return styleDict
       }
     }

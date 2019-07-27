@@ -1,24 +1,24 @@
 import { shallowMount } from '@vue/test-utils'
 
-import Color from '@/tokens/Color/Color'
+import Color from '@/tokens/Colors/Color'
 
 describe('Color.vue', () => {
-  let propsData, mocks, options
+  let propsData, options
 
   beforeEach(() => {
+    let category = 'color-group-oxford'
     let name = 'color_oxford_blue'
-    let value = 'rgb(0, 38, 77)'
+    let value = 'rgb(0, 33, 71)'
+    let comment = 'Official color of the University of Oxford'
 
     propsData = {
+      category,
       name,
-      value
-    }
-    mocks = {
-      $t: () => {}
+      value,
+      comment
     }
     options = {
-      propsData,
-      mocks
+      propsData
     }
   })
 
@@ -28,7 +28,7 @@ describe('Color.vue', () => {
     expect(
       wrapper.find('div.swatch').element.style.backgroundColor
     ).toContain(
-      'rgb(0, 38, 77)'
+      'rgb(0, 33, 71)'
     )
   })
 

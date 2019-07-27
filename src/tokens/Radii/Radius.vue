@@ -66,7 +66,7 @@
        */
       rectangleStyles: function () {
         let styleDict = {}
-        styleDict['borderRadius'] = this.value
+        styleDict.borderRadius = this.value
         return styleDict
       }
     }

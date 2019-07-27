@@ -1,16 +1,16 @@
 <template>
-  <Card
-    class="vocab space"
-    :heading="properName"
-    :subheading="comment"
-    is-decked
-    is-raised>
-    <div class="box" :style="boxStyles"></div>
-    <template #foot>
-      <code>{{ value }}</code><br/>
-      <code>${{ styleName }}</code>
-    </template>
-  </Card>
+    <Card
+            class="vocab space"
+            :heading="properName"
+            :subheading="comment"
+            is-decked
+            is-raised>
+        <div class="box" :style="boxStyles"></div>
+        <template #foot>
+            <code>{{ value }}</code><br/>
+            <code>${{ styleName }}</code>
+        </template>
+    </Card>
 </template>
 
 <script>
@@ -66,7 +66,7 @@
        */
       boxStyles: function () {
         let styleDict = {}
-        styleDict['height'] = this.value
+        styleDict.height = this.value
         return styleDict
       }
     }

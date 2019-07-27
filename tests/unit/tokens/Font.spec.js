@@ -1,26 +1,24 @@
 import { shallowMount } from '@vue/test-utils'
 
-import Font from '@/tokens/Font/Font'
+import Font from '@/tokens/Fonts/Font'
 
 describe('Font.vue (size)', () => {
-  let propsData, mocks, options
+  let propsData, options
 
   beforeEach(() => {
     let property = 'size'
-    let name = 'size_test'
+    let name = 'size_dedh'
     let value = '1.5000rem'
+    let comment = 'Font size for <~H5 and equivalent'
 
     propsData = {
       property,
       name,
-      value
-    }
-    mocks = {
-      $t: () => {}
+      value,
+      comment
     }
     options = {
-      propsData,
-      mocks
+      propsData
     }
   })
 
@@ -40,7 +38,7 @@ describe('Font.vue (size)', () => {
     expect(
       wrapper.vm.properName
     ).toEqual(
-      'Test'
+      'Dedh'
     )
   })
 
@@ -50,7 +48,7 @@ describe('Font.vue (size)', () => {
     expect(
       wrapper.vm.styleName
     ).toEqual(
-      'size-test'
+      'size-dedh'
     )
   })
 })
@@ -62,14 +60,13 @@ describe('Font.vue (weight)', () => {
     let property = 'weight'
     let name = 'weight_black'
     let value = '900'
+    let comment = 'Bolder-than-bolder-than-normal weight'
 
     propsData = {
       property,
       name,
-      value
-    }
-    mocks = {
-      $t: () => {}
+      value,
+      comment
     }
     options = {
       propsData,
