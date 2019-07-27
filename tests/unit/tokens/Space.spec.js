@@ -6,7 +6,7 @@ describe('Space.vue', () => {
   let propsData, options
 
   beforeEach(() => {
-    let name = 'space_dedh'
+    let name = 'rspace_dedh'
     let value = '1.5rem'
     let comment = 'Extreme spacing in rem units'
 
@@ -46,7 +46,7 @@ describe('Space.vue', () => {
     expect(
       wrapper.vm.styleName
     ).toEqual(
-      'space-dedh'
+      'rspace-dedh'
     )
   })
 })

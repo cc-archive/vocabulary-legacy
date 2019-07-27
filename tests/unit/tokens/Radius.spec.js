@@ -6,7 +6,7 @@ describe('Radius.vue', () => {
   let propsData, options
 
   beforeEach(() => {
-    let name = 'radius_dedh'
+    let name = 'rradius_dedh'
     let value = '1.5rem'
     let comment = 'Extremely rounded radius in rem units'
 
@@ -46,7 +46,7 @@ describe('Radius.vue', () => {
     expect(
       wrapper.vm.styleName
     ).toEqual(
-      'radius-dedh'
+      'rradius-dedh'
     )
   })
 })

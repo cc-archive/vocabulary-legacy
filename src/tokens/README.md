@@ -62,13 +62,13 @@ Vue.component('Shadow', Shadow);
   </GridCell>
   <GridCell :spanSet="[12, 3, 3, 3, 3]">
     <Space
-      name="space_half"
-      value="0.5em"
-      comment="Half em space"/>
+      name="rspace_dedh"
+      value="1.5rem"
+      comment="Extreme spacing in rem units"/>
   </GridCell>
   <GridCell :spanSet="[12, 3, 3, 3, 3]">
     <Radius
-      name="radius_dedh"
+      name="rradius_dedh"
       value="1.5rem"
       comment="Extremely rounded radius in rem units"/>
   </GridCell>
