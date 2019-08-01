@@ -1,66 +1,23 @@
 import { shallowMount } from '@vue/test-utils'
 
-import Colors from '@/tokens/Colors/Colors'
+import Shadows from '@/tokens/Shadows/Shadows'
 
-describe('Colors.vue', () => {
+describe('Shadows.vue', () => {
   let propsData, options
 
   beforeEach(() => {
-    let category = ''
-
-    propsData = {
-      category
-    }
     options = {
       propsData
     }
   })
 
-  it('finds all hues', () => {
-    propsData.category = 'hue'
-
-    const wrapper = shallowMount(Colors, options)
+  it('finds all shadows', () => {
+    const wrapper = shallowMount(Shadows, options)
 
     expect(
-      wrapper.vm.colors.length
+      wrapper.vm.shadows.length
     ).toBe(
-      36
-    )
-  })
-
-  it('finds all tones', () => {
-    propsData.category = 'tone'
-
-    const wrapper = shallowMount(Colors, options)
-
-    expect(
-      wrapper.vm.colors.length
-    ).toBe(
-      8
-    )
-  })
-
-  it('finds all contexts', () => {
-    propsData.category = 'context'
-
-    const wrapper = shallowMount(Colors, options)
-
-    expect(
-      wrapper.vm.colors.length
-    ).toBe(
-      6
-    )
-  })
-
-  it('finds all overlays', () => {
-    propsData.category = 'overlay'
-
-    const wrapper = shallowMount(Colors, options)
-
-    expect(
-      wrapper.vm.colors.length
-    ).toBe(
-      4
+      3
     )
   })
 })
