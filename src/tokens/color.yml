@@ -167,6 +167,19 @@ props:
     category: color-group-context-positive
     comment: Slightly dark shade of positive context
 
+  color_context_probably_light:
+    value: '#FFF3A2'
+    category: color-group-context-probably
+    comment: Slightly light shade of intermediate context
+  color_context_probably:
+    value: '#EDD812'
+    category: color-group-context-probably
+    comment: Base shade of intermediate context
+  color_context_probably_dark:
+    value: '#B09A11'
+    category: color-group-context-probably
+    comment: Slightly dark shade of intermediate context
+
   color_context_negative_light:
     value: '#FAB499'
     category: color-group-context-negative
