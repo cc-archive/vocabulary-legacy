@@ -2,8 +2,11 @@ let navLinkList
 let navLinkMap = {}
 let navLinks
 let activeLink
+let searchField
 
 function hashToNav () {
+  mapLinks()
+
   let oldActiveLink, newActiveLink
 
   oldActiveLink = activeLink
@@ -23,13 +26,31 @@ function hashToNav () {
   activeLink = newActiveLink
 }
 
-window.onload = () => {
+function filterOn () {
+  navLinkList.classList.add('cc-filtering')
+}
+
+function filterOff () {
+  if (!searchField.value) {
+    navLinkList.classList.remove('cc-filtering')
+    hashToNav()
+  }
+}
+
+function mapLinks () {
   navLinkList = document.querySelector('div[class*="rsg--sidebar"] nav > ul')
   navLinks = navLinkList.children
   navLinks.forEach(navLink => {
     navLinkMap[navLink.innerText] = navLink
   })
+}
+
+window.onload = () => {
   hashToNav()
+
+  searchField = document.querySelector('input[placeholder="Filter by name"')
+  searchField.onfocus = filterOn
+  searchField.onblur = filterOff
 }
 
 window.onhashchange = hashToNav

@@ -62,17 +62,22 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
       &::placeholder
         color $color-tone-white
 
-  nav > ul > li
-    & > a
-      font-weight $weight-bold
+  nav > ul
+    & > li
+      & > a
+        font-weight $weight-bold
 
-    ul
-      +tablet-portrait-up()
-        display none
-
-      li
-        line-height 1.2
-
-    &.cc-active
       ul
+        +tablet-portrait-up()
+          display none
+
+        li
+          line-height 1.2
+
+      &.cc-active
+        ul
+          display block
+
+    &.cc-filtering
+      & > li > ul
         display block
