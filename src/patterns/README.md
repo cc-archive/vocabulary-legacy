@@ -47,7 +47,7 @@ Here are some available patterns. You should probably
     type="text"
     color="blue"
     shade="dark"
-    :iconSet="['keyboard', '']"
+    :icon-set="['keyboard', '']"
     placeholder="Search..."/>
   <Navigation
     is-inverted

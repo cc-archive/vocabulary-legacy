@@ -50,14 +50,14 @@ Here are some available layouts in action. You should probably
     <Tabbed color="blue">
       <TabbedPane title="Grid">
         <Grid>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :spanSet="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
         </Grid>
       </TabbedPane>
       <TabbedPane title="Table">

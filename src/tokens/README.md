@@ -53,26 +53,26 @@ Vue.component('Radius', Radius);
 Vue.component('Shadow', Shadow);
 
 <Grid>
-  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="[12, 3, 3, 3, 3]">
     <Color
       category="color-group-oxford"
       name="color_oxford_blue" 
       value="rgb(0, 33, 71)"
       comment="Official color of the University of Oxford"/>
   </GridCell>
-  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="[12, 3, 3, 3, 3]">
     <Space
       name="rspace_dedh"
       value="1.5rem"
       comment="Extreme spacing in rem units"/>
   </GridCell>
-  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="[12, 3, 3, 3, 3]">
     <Radius
       name="rradius_dedh"
       value="1.5rem"
       comment="Extremely rounded radius in rem units"/>
   </GridCell>
-  <GridCell :spanSet="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="[12, 3, 3, 3, 3]">
     <Shadow
       name="shadow_plane"
       value="0 1em 1em 0"
