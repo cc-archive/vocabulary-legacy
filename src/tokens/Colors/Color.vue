@@ -1,16 +1,19 @@
 <template>
-    <Card
-            class="vocab color"
-            :heading="properName"
-            :subheading="comment"
-            is-decked
-            is-raised>
-        <div class="swatch" :style="swatchStyles"></div>
-        <template #foot>
-            <code>{{ value }}</code><br/>
-            <code>${{ styleName }}</code>
-        </template>
-    </Card>
+  <Card
+    class="vocab color"
+    :heading="properName"
+    :subheading="comment"
+    is-decked
+    is-raised>
+    <div
+      class="swatch"
+      :style="swatchStyles"
+      @click="toggleOverlay"></div>
+    <template #foot>
+      <code>{{ value }}</code><br/>
+      <code>${{ styleName }}</code>
+    </template>
+  </Card>
 </template>
 
 <script>
@@ -22,6 +25,11 @@
     name: 'Color',
     components: {
       Card
+    },
+    data: function () {
+      return {
+        showOverlay: true
+      }
     },
     props: {
       /**
@@ -77,11 +85,18 @@
           styleDict.backgroundColor = this.value
         } else {
           styleDict.backgroundColor = 'rgb(0, 38, 77)'
-          styleDict.backgroundImage = 'linear-gradient(' +
-            `${this.value}, ` +
-            `${this.value})`
+          if (this.showOverlay) {
+            styleDict.backgroundImage = 'linear-gradient(' +
+              `${this.value}, ` +
+              `${this.value})`
+          }
         }
         return styleDict
+      }
+    },
+    methods: {
+      toggleOverlay: function () {
+        this.showOverlay = !this.showOverlay
       }
     }
   }
