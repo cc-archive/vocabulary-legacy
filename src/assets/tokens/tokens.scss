@@ -23,6 +23,10 @@ $color-yellow-dark: rgb(176, 154, 17);
 $color-tone-grey-dark: rgb(99, 100, 102);
 /* Base shade of positive context */
 $color-context-positive: rgb(152, 200, 7);
+/* Slightly light shade of intermediate context */
+$color-context-probably-light: rgb(255, 243, 162);
+/* Slightly dark shade of intermediate context */
+$color-context-probably-dark: rgb(176, 154, 17);
 /* Slightly light shade of yellow */
 $color-yellow-light: rgb(255, 243, 162);
 /* Base shade of green */
@@ -55,6 +59,8 @@ $color-magenta: rgb(182, 43, 110);
 $color-tone-black: rgb(0, 0, 0);
 /* Slightly dark shade of green */
 $color-green-dark: rgb(1, 166, 53);
+/* Base shade of intermediate context */
+$color-context-probably: rgb(237, 216, 18);
 /* Slightly light shade of purple */
 $color-purple-light: rgb(214, 180, 214);
 /* Base shade of yellow */
@@ -175,3 +181,13 @@ $shadow-subtle: "0 1px 1px 0";
 $shadow-normal: "0 2px 2px 0";
 /* Object appears more raised */
 $shadow-pronounced: "0 3px 3px 0";
+/* Shortest time duration, barely noticeable */
+$duration-shortest: 0.25s;
+/* Short time duration, noticeable */
+$duration-short: 0.5s;
+/* Normal time duration, observable */
+$duration-normal: 1s;
+/* Long time duration, pronouced */
+$duration-long: 2s;
+/* Longest time duration, very pronounced */
+$duration-longest: 4s;

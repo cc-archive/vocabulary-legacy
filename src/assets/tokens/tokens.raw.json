@@ -97,6 +97,22 @@
       "originalValue": "#98C807",
       "name": "color_context_positive"
     },
+    "color_context_probably_light": {
+      "type": "color",
+      "value": "rgb(255, 243, 162)",
+      "category": "color-group-context-probably",
+      "comment": "Slightly light shade of intermediate context",
+      "originalValue": "#FFF3A2",
+      "name": "color_context_probably_light"
+    },
+    "color_context_probably_dark": {
+      "type": "color",
+      "value": "rgb(176, 154, 17)",
+      "category": "color-group-context-probably",
+      "comment": "Slightly dark shade of intermediate context",
+      "originalValue": "#B09A11",
+      "name": "color_context_probably_dark"
+    },
     "color_yellow_light": {
       "type": "color",
       "value": "rgb(255, 243, 162)",
@@ -224,6 +240,14 @@
       "comment": "Slightly dark shade of green",
       "originalValue": "#01A635",
       "name": "color_green_dark"
+    },
+    "color_context_probably": {
+      "type": "color",
+      "value": "rgb(237, 216, 18)",
+      "category": "color-group-context-probably",
+      "comment": "Base shade of intermediate context",
+      "originalValue": "#EDD812",
+      "name": "color_context_probably"
     },
     "color_purple_light": {
       "type": "color",
@@ -704,6 +728,46 @@
       "comment": "Object appears more raised",
       "originalValue": "0 3px 3px 0",
       "name": "shadow_pronounced"
+    },
+    "duration_shortest": {
+      "type": "time",
+      "category": "duration-group-transition",
+      "value": "0.25s",
+      "comment": "Shortest time duration, barely noticeable",
+      "originalValue": "0.25s",
+      "name": "duration_shortest"
+    },
+    "duration_short": {
+      "type": "time",
+      "category": "duration-group-transition",
+      "value": "0.5s",
+      "comment": "Short time duration, noticeable",
+      "originalValue": "0.5s",
+      "name": "duration_short"
+    },
+    "duration_normal": {
+      "type": "time",
+      "category": "duration-group-transition",
+      "value": "1s",
+      "comment": "Normal time duration, observable",
+      "originalValue": "1s",
+      "name": "duration_normal"
+    },
+    "duration_long": {
+      "type": "time",
+      "category": "duration-group-transition",
+      "value": "2s",
+      "comment": "Long time duration, pronouced",
+      "originalValue": "2s",
+      "name": "duration_long"
+    },
+    "duration_longest": {
+      "type": "time",
+      "category": "duration-group-transition",
+      "value": "4s",
+      "comment": "Longest time duration, very pronounced",
+      "originalValue": "4s",
+      "name": "duration_longest"
     }
   }
 }
