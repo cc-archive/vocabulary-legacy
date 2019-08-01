@@ -62,7 +62,7 @@ Here are some available layouts in action. You should probably
       </TabbedPane>
       <TabbedPane title="Table">
         <Table color="purple" is-compact is-basic is-striped is-following>
-          <template v-slot:head>
+          <template #head>
             <tr>
               <TableCell is-heading></TableCell>
               <TableCell is-heading>A</TableCell>
