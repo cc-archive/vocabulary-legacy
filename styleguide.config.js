@@ -83,7 +83,19 @@ module.exports = {
     {
       name: 'Vocabulary',
       content: 'README.md',
-      sectionDepth: 1
+      sectionDepth: 1,
+      sections: [
+        {
+          name: 'Code style',
+          content: 'src/metafiles/README.md',
+          sectionDepth: 1
+        },
+        {
+          name: 'User guide',
+          content: 'library/metafiles/README.md',
+          sectionDepth: 1
+        }
+      ]
     },
     {
       name: 'Tokens',

@@ -1,14 +1,13 @@
 <p align="center">
-  <center>
-    <a href="https://creativecommons.org/" class="readme-cc-logo">
-      <img src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/cc_logo.png" height="62px" />
-    </a>
-  </center>
+  <a href="https://creativecommons.org/" class="readme-cc-logo">
+    <img 
+      alt="Creative Commons logo" 
+      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/cc_logo.png" 
+      height="62px"/>
+  </a>
 </p>
 <h2 align="center">
-  <center>
-    Vocabulary
-  </center>
+  Vocabulary
 </h2>
 
 > CC Vocabulary is a cohesive design system to unite the web facing Creative 
@@ -16,17 +15,21 @@
 > ensuring a consistently familiar experience.
 
 <p align="center">
-  <center>
-    <a href="https://github.com/creativecommons/cc-vocabulary/blob/master/LICENSE">
-      <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/cc-vocabulary.svg?color=brightgreen"/>
-    </a>
-    <a href="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master">
-      <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield"/>
-    </a>
-    <a href="https://github.com/creativecommons/cc-vocabulary/blob/master/CONTRIBUTING.md">
-      <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
-    </a>
-  </center>
+  <a 
+    href="https://github.com/creativecommons/cc-vocabulary/blob/master/LICENSE"
+    style="margin-right: 1em;">
+    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/cc-vocabulary.svg?color=brightgreen"/>
+  </a>
+  <a 
+    href="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master"
+    style="margin-right: 1em;">
+    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield"/>
+  </a>
+  <a 
+    href="https://github.com/creativecommons/cc-vocabulary/blob/master/CONTRIBUTING.md"
+    style="margin-right: 1em;">
+    <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  </a>
 </p>
 
 In essence CC Vocabulary is a collection of UI components, which are parts of 
@@ -35,19 +38,26 @@ can be mixed, matched, styled and put together to quickly and effectively
 develop consistent applications.
 
 
-## Availability
+### Availability
 
-CC Vocabulary is a collection of UI components, available both as CSS
-stylesheets and minified JS, as well as Vue components.
+CC Vocabulary is a collection of UI components, available both as 
+**CSS stylesheets** and **minified JS** distributed via unpkg, as well the more
+versatile and flexible (and preferred) **Vue components** distributed via `npm`.
+A lot of features available via `npm` packages might not be supported via UMD.
 
 
-## Demo
+### Demo
 
-You can find the [live styleguide](https://creativecommons.github.io/cc-vocabulary/)
-for the library, showcasing the components therein and variants thereof on 
-GitHub Pages. Search for a particular component using the search field or just 
-explore the collection of components. If you find one that catches your fancy, 
-play with it on the playground and tweak its knobs. 
+A **[demo](https://codepen.io/dhruvkb/pen/dxRJYV)** of Vocabulary is hosted on
+CodePen. It does show some components in action so I guess you should check
+it out.
+
+However, the showcase of the true extent of Vocabulary can be found in the
+**[live styleguide](https://creativecommons.github.io/cc-vocabulary/)** for the
+library, showcasing the components therein and variants thereof, on GitHub
+Pages. Search for a particular component using the search field or just explore
+the collection of components. If you find one that catches your fancy, play with
+it on the playground and tweak its knobs.
 
 If it works for you, just pick the code and use it in your own application. If 
 it doesn't and you think more people would love to have this feature open an 
@@ -55,7 +65,7 @@ issue. If something peculiar happens, open a bug report. If you just love it,
 contribute in some way.
 
 
-## Contributing
+### Contributing
 
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
@@ -87,13 +97,13 @@ If you're interested, read the file `INSTRUCTIONS.md` in the
 repository for instructions regarding contributing to the project.
 
 
-## Disclaimer
+### Disclaimer
 
 This project is still under development and as a consequence of the fact, users
 of the library should be expect to encounter bugs. Feedback and bug reports are
 welcome, fixes and patches even more so.
 
 
-## License
+### License
 
 Licensed under the Expat/[MIT](http://www.opensource.org/licenses/MIT) license.
