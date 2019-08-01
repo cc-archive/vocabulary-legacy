@@ -41,15 +41,14 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
 
     background-color transparent
     background-image linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.15),
-            rgba(0, 0, 0, 0.15)
+      $color-overlay-black-low,
+      $color-overlay-black-low
     )
 
     border 1px solid transparent
     border-radius $radius-normal
 
-    transition 0.25s border-color
+    transition border-color $duration-shortest
 
     &::placeholder
       color $color-blue-light
