@@ -1,7 +1,7 @@
 <template>
   <Grid>
     <GridCell
-      :spanSet="spanSet"
+      :span-set="spanSet"
       v-for="(prop, index) in colors"
       :key="index">
       <Color
@@ -72,9 +72,9 @@
             function (color) {
               let shadeLevels = [
                 'tone_white', 'near_white', 'lighter', 'light',
-                'white_high', 'white_low',
+                'white_low', 'white_high',
                 'normal',
-                'black_low', 'black_high',
+                'black_high', 'black_low',
                 'dark', 'darker', 'near_black', 'tone_black'
               ]
               for (let i = 0; i < shadeLevels.length; i++) {

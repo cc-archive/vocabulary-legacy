@@ -1,7 +1,7 @@
 <template>
   <Grid>
     <GridCell
-      :spanSet="[12]"
+      :span-set="[12]"
       v-for="(prop, index) in values"
       :key="index">
       <Font
