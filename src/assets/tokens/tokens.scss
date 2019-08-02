@@ -129,12 +129,24 @@ $size-enormous: 2.5198rem;
 $size-gigantic: 3.1748rem;
 /* Font size for H1 and equivalent */
 $size-mega: 4.0000rem;
-/* Bolder-than-normal font weight */
+/* Extremely thinner-than-normal font weight */
+$weight-thin: 100;
+/* Extremely bolder-than-normal font weight */
+$weight-heavy: 900;
+/* Much bolder-than-normal font weight */
 $weight-bold: 700;
+/* Much thinner-than-normal font weight */
+$weight-extralight: 200;
 /* Normal font weight */
 $weight-normal: 400;
+/* Quite bolder-than-normal font weight */
+$weight-extrabold: 800;
 /* Thinner-than-normal font weight */
 $weight-light: 300;
+/* Bolder-than-normal font weight */
+$weight-semibold: 700;
+/* Slightly bolder-than-normal font weight */
+$weight-medium: 500;
 /* Normal spacing in em units */
 $space-normal: 0.5em;
 /* No spacing at all */

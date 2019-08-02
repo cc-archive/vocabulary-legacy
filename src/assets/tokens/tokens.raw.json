@@ -521,29 +521,77 @@
       "originalValue": "4.0000rem",
       "name": "size_mega"
     },
+    "weight_thin": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 100,
+      "comment": "Extremely thinner-than-normal font weight",
+      "originalValue": 100,
+      "name": "weight_thin"
+    },
+    "weight_heavy": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 900,
+      "comment": "Extremely bolder-than-normal font weight",
+      "originalValue": 900,
+      "name": "weight_heavy"
+    },
     "weight_bold": {
       "type": "number",
       "category": "font-weight",
-      "value": "700",
-      "comment": "Bolder-than-normal font weight",
-      "originalValue": "700",
+      "value": 700,
+      "comment": "Much bolder-than-normal font weight",
+      "originalValue": 700,
       "name": "weight_bold"
+    },
+    "weight_extralight": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 200,
+      "comment": "Much thinner-than-normal font weight",
+      "originalValue": 200,
+      "name": "weight_extralight"
     },
     "weight_normal": {
       "type": "number",
       "category": "font-weight",
-      "value": "400",
+      "value": 400,
       "comment": "Normal font weight",
-      "originalValue": "400",
+      "originalValue": 400,
       "name": "weight_normal"
+    },
+    "weight_extrabold": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 800,
+      "comment": "Quite bolder-than-normal font weight",
+      "originalValue": 800,
+      "name": "weight_extrabold"
     },
     "weight_light": {
       "type": "number",
       "category": "font-weight",
-      "value": "300",
+      "value": 300,
       "comment": "Thinner-than-normal font weight",
-      "originalValue": "300",
+      "originalValue": 300,
       "name": "weight_light"
+    },
+    "weight_semibold": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 700,
+      "comment": "Bolder-than-normal font weight",
+      "originalValue": 700,
+      "name": "weight_semibold"
+    },
+    "weight_medium": {
+      "type": "number",
+      "category": "font-weight",
+      "value": 500,
+      "comment": "Slightly bolder-than-normal font weight",
+      "originalValue": 500,
+      "name": "weight_medium"
     },
     "space_normal": {
       "type": "size",
