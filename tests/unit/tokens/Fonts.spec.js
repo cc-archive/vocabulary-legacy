@@ -36,7 +36,7 @@ describe('Fonts.vue', () => {
     expect(
       wrapper.vm.values.length
     ).toBe(
-      3
+      9
     )
   })
 })
