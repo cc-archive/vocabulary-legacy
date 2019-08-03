@@ -7,5 +7,14 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    disableableClasses: function () {
+      return [
+        {
+          'disabled': this.isDisabled
+        }
+      ]
+    }
   }
 }

@@ -7,5 +7,14 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    roundableClasses: function () {
+      return [
+        {
+          'rounded': this.isRounded
+        }
+      ]
+    }
   }
 }

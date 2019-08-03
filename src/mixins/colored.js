@@ -37,5 +37,17 @@ export default {
         'darker'
       ].includes(val)
     }
+  },
+  computed: {
+    coloredClasses: function () {
+      let classes = []
+      if (this.color) {
+        classes.push(`${this.color}-colored`)
+      }
+      if (this.shade) {
+        classes.push(`${this.shade}-shaded`)
+      }
+      return classes
+    }
   }
 }

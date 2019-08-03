@@ -3,8 +3,8 @@ export default {
     /**
      * _the size of the component_
      *
-     * ∈ {`'small'`, `'big'`, `'large'`, `'huge'`, `'enormous'`, `'gigantic'`,
-     * `'mega'`}
+     * ∈ {`'small'`, `'normal'`, `'big'`, `'large'`, `'huge'`, `'enormous'`,
+     * `'gigantic'`, `'mega'`}
      */
     size: {
       type: String,
@@ -19,6 +19,15 @@ export default {
         'gigantic',
         'mega'
       ].includes(val)
+    }
+  },
+  computed: {
+    resizableClasses: function () {
+      let classes = []
+      if (this.size) {
+        classes.push(`${this.size}-sized`)
+      }
+      return classes
     }
   }
 }

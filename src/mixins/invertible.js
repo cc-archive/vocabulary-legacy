@@ -9,5 +9,14 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    invertibleClasses: function () {
+      return [
+        {
+          'inverted': this.isInverted
+        }
+      ]
+    }
   }
 }

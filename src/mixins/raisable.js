@@ -7,5 +7,14 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    raisableClasses: function () {
+      return [
+        {
+          'raised': this.isRaised
+        }
+      ]
+    }
   }
 }
