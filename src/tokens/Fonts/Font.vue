@@ -44,7 +44,7 @@
        * _the value being showcased_
        */
       value: {
-        type: String,
+        type: [String, Number],
         required: true
       },
       /**
