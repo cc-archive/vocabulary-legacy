@@ -87,8 +87,10 @@
           styleDict.backgroundColor = 'rgb(0, 38, 77)'
           if (this.showOverlay) {
             styleDict.backgroundImage = 'linear-gradient(' +
-              `${this.value}, ` +
-              `${this.value})`
+              '135deg,' +
+              `transparent 50%, ` +
+              `${this.value} 50%` +
+              ')'
           }
         }
         return styleDict

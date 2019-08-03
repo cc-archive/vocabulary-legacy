@@ -48,18 +48,8 @@ that serve the purpose of darkening down or lightening up other colors. They
 are usually laid on the background color using fake gradients as background 
 images.
 
-The following demonstrates different overlays laid out on
-Oxford Blue
-<span style="color: rgb(0, 33, 71);">
-(<svg
-  class="svg-inline--fa fa-square fa-w-14 fa-2x" 
-  data-icon="square" 
-  data-prefix="fas" 
-  viewBox="0 0 448 512"
-  style="vertical-align: middle;">
-  <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/>
-</svg>)
-</span>. Click the swatch to toggle between the overlay off and on and so on. 
+The following demonstrates different overlays laid out on **Oxford Blue**. The
+left half is the actual color and the right half has the overlay color overlaid. 
 
 ```jsx
 <Colors category="overlay"/>
