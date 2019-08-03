@@ -1,10 +1,16 @@
 // Generate given property for all colors and their shades
 
 colors(property)
-  for color_group in 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
-    &.{color_group}
-      {property} lookup('$color-' + color_group)
+  &.inherit-colored
+    {property} inherit
 
-      for shade in 'light' 'dark' 'darker'
-        &.{shade}
-          {property} lookup('$color-' + color_group + '-' + shade)
+  $colors = 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
+  $shades = 'light' 'dark' 'darker'
+
+  for color in $colors
+    &.{color}-colored
+      {property} lookup('$color-' + color)
+
+      for shade in $shades
+        &.{shade}-shaded
+          {property} lookup('$color-' + color + '-' + shade)

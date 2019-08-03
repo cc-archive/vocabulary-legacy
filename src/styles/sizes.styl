@@ -1,26 +1,11 @@
 // Generate given property for all font sizes
 
 sizes(property)
-  &.small
-    {property} $size-small
+  &.inherit-sized
+    {property} inherit
 
-  &.normal
-    {property} $size-normal
+  $sizes = 'small' 'normal' 'big' 'large' 'huge' 'enormous' 'gigantic' 'mega'
 
-  &.big
-    {property} $size-big
-
-  &.large
-    {property} $size-large
-
-  &.huge
-    {property} $size-huge
-
-  &.enormous
-    {property} $size-enormous
-
-  &.gigantic
-    {property} $size-gigantic
-
-  &.mega
-    {property} $size-mega
+  for size in $sizes
+    &.{size}-sized
+      {property} lookup('$size-' + size)
