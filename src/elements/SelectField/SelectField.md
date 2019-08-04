@@ -14,7 +14,7 @@ A select field, unless colored, is grey.
 
 ```jsx
 <SelectField
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 ```
 
 Looks quite drab, we know. So they can be colored with any color from the set 
@@ -25,47 +25,47 @@ provided by CC Vocabulary.
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="blue"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="green"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="magenta"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="olive"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="orange"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="purple"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="red"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="sand"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <SelectField
       color="yellow"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
 </Grid>
 ``` 
@@ -79,24 +79,24 @@ to accentuate the color.
     <SelectField
       color="blue"
       shade="light"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <SelectField
       color="blue"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <SelectField
       color="blue"
       shade="dark"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <SelectField
       color="blue"
       shade="darker"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
   </GridCell>
 </Grid>
 ```
@@ -108,25 +108,25 @@ be used.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
       is-inverted
       is-basic/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
       color="magenta"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
       color="magenta"
-      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
       is-inverted
       is-basic/>
   </GridCell>
@@ -143,7 +143,7 @@ application.
 <SelectField
   color="red"
   icon="vote-yea"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 ```
 
 If you'd like your own something there, you can override the add-on slot with 
@@ -162,8 +162,8 @@ See it in action.
 ```jsx
 <SelectField
   color="green"
-  style="--select-field-addons-space: 2.5em;">
-  :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]"
+  style="--select-field-addons-space: 2.5em;"
+  :option-list="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]">
   <template #addons>
     <LicenseIconography :icon-list="['', 'by']"/>
   </template>
@@ -179,7 +179,7 @@ via means of a hover.
 <SelectField
   color="orange"
   icon="vote-yea"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-basic/>
 ```
 
@@ -190,7 +190,7 @@ attention by the user.
 <SelectField
   color="blue"
   icon="vote-yea"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-ghost/>
 ```
 
@@ -203,41 +203,41 @@ Select fields come in all sizes, from small to mega.
 <SelectField
   color="purple"
   size="small"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="big"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="large"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="huge"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="enormous"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="gigantic"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 <br/><br/>
 <SelectField
   color="purple"
   size="mega"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 ```
 
 ### Indication set
@@ -257,7 +257,7 @@ let options = [
 <SelectField
   v-model="value"
   :indication="value === 'res' ? 'positive' : value === 'del' ? 'negative' : 'probably'"
-  :optionList="options"/>
+  :option-list="options"/>
 ```
 
 ### State set
@@ -266,7 +266,7 @@ A select field may be disabled to prevent input altogether.
 
 ```jsx
 <SelectField
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-disabled/>
 ```
 
@@ -275,7 +275,7 @@ readability as an output-only control.
 
 ```jsx
 <SelectField
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-read-only/>
 ```
 
@@ -288,7 +288,7 @@ So a select field may have a `name` and a `value`.
 
 ```jsx
 <SelectField
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   name="Name"
   value="b"/>
 ```
