@@ -23,7 +23,7 @@
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Fonts add personality to text.
+   * ### Fonts add personality to text.
    *
    * Vocabulary is completely based on 'Source Sans Pro' by Adobe as the body
    * font, with fallback on 'Arial', 'Helvetica Neue', 'Helvetica' and finally,
@@ -36,11 +36,6 @@
       Grid,
       Font
     },
-    data: function () {
-      return {
-        values: this.extractFontProperty(designTokens.props)
-      }
-    },
     props: {
       /**
        * _the property of the font being showcased_
@@ -51,6 +46,11 @@
         type: String,
         validator: val => ['size', 'weight'].includes(val),
         required: true
+      }
+    },
+    data: function () {
+      return {
+        values: this.extractFontProperty(designTokens.props)
       }
     },
     methods: {

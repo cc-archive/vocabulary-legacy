@@ -22,7 +22,7 @@
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Shadows elevate content.
+   * ### Shadows elevate content.
    *
    * CC Vocabulary allows for content to have a 3D position, making it easy to
    * raise emphasised content above the bulk of the page via the illusion of

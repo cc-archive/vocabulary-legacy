@@ -22,7 +22,7 @@
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Spaces provide readability.
+   * ### Spaces provide readability.
    *
    * CC Vocabulary is meant to be readable, and whitespaces are of paramount
    * importance in readability considerations. There are a number of standard
@@ -36,11 +36,6 @@
       Grid,
       Space
     },
-    data: function () {
-      return {
-        spaces: this.extractSpaces(designTokens.props)
-      }
-    },
     props: {
       /**
        * _the substring of the category to filter based on_
@@ -51,6 +46,11 @@
         type: String,
         validator: val => ['em', 'rem', 'special'].includes(val),
         required: true
+      }
+    },
+    data: function () {
+      return {
+        spaces: this.extractSpaces(designTokens.props)
       }
     },
     methods: {

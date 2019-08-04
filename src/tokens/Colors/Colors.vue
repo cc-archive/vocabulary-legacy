@@ -23,7 +23,7 @@
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Colors add pizzazz.
+   * ### Colors add pizzazz.
    *
    * CC Vocabulary is the design system of Creative Commons, and is infused
    * with color throughout the project. There are a number of bright colours,
@@ -37,11 +37,6 @@
       Grid,
       Color
     },
-    data: function () {
-      return {
-        colors: this.extractColors(designTokens.props)
-      }
-    },
     props: {
       /**
        * _the substring of the category to filter based on_
@@ -52,6 +47,11 @@
         type: String,
         validator: val => ['hue', 'tone', 'context', 'overlay'].includes(val),
         required: true
+      }
+    },
+    data: function () {
+      return {
+        colors: this.extractColors(designTokens.props)
       }
     },
     computed: {

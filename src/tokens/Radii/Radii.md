@@ -1,8 +1,10 @@
-## Examples
-
 ```jsx
 <Section
   is-rounded>
+  <Heading 
+    :level="1">
+    Hello World!
+  </Heading>
   <Paragraph>
     The section around has a <strong>large</strong> border-radius.
   </Paragraph>

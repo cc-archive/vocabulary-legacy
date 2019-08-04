@@ -22,7 +22,7 @@
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
   /**
-   * ## Radii soften edges.
+   * ### Radii soften edges.
    *
    * While sharp cuts and right-angled corners may define CC Vocabulary, we
    * don't have to limit ourselves to them. A splash of smooth rounded corners
@@ -36,11 +36,6 @@
       Grid,
       Radius
     },
-    data: function () {
-      return {
-        radii: this.extractRadii(designTokens.props)
-      }
-    },
     props: {
       /**
        * _the substring of the category to filter based on_
@@ -51,6 +46,11 @@
         type: String,
         validator: val => ['em', 'rem', 'special'].includes(val),
         required: true
+      }
+    },
+    data: function () {
+      return {
+        radii: this.extractRadii(designTokens.props)
       }
     },
     methods: {

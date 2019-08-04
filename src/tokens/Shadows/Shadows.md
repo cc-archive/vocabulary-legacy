@@ -1,8 +1,10 @@
-## Examples
-
 ```jsx
 <Section
   is-raised>
+  <Heading 
+    :level="1">
+    Hello World!
+  </Heading>
   <Paragraph>
     The section around is raised to cast a <strong>normal</strong> shadow.
   </Paragraph>

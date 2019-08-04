@@ -1,5 +1,3 @@
-## Examples
-
 ```jsx
 <Heading
   :level="1">
