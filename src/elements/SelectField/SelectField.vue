@@ -31,10 +31,12 @@
       <FontAwesomeLayers>
         <template v-if="!isDisabled && !isReadOnly">
           <FontAwesomeIcon
+            class="icon"
             :class="{active: isContentVisible}"
             :icon="['fas', 'angle-up']"
             fixed-width/>
           <FontAwesomeIcon
+            class="icon"
             :class="{active: !isContentVisible}"
             :icon="['fas', 'angle-down']"
             fixed-width/>
