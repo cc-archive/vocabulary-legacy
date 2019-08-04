@@ -79,6 +79,13 @@
         type: Array,
         validator: val => val.length === 2,
         default: () => [null, null]
+      },
+      /**
+       * _whether to increase the coloration of the input field_
+       */
+      isInfused: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
@@ -89,7 +96,11 @@
           ...this.invertibleClasses,
           ...this.resizableClasses,
           ...this.simplifiableClasses,
-          ...this.unactionableClasses
+          ...this.unactionableClasses,
+
+          {
+            'infused': this.isInfused
+          }
         ]
       },
       fieldClasses: function () {

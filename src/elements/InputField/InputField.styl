@@ -33,6 +33,9 @@
   &.inverted
     --input-field-tertiary $color-tone-white
 
+  &.infused
+    --input-field-tertiary var(--input-field-primary)
+
   &.positive-indicating.positive-indicating
     --input-field-tertiary $color-context-positive-dark
 
@@ -51,6 +54,7 @@
 
   --input-field-background-color transparent
   --input-field-text-color var(--input-field-tertiary)
+  --input-field-placeholder-color var(--input-field-primary)
 
   --input-field-addons-background-color var(--input-field-primary)
   --input-field-addons-text-color var(--input-field-secondary)
@@ -122,10 +126,13 @@
 
     border transparent
 
+    transition-property color, background-color, border-color
+    transition-duration $duration-shortest
+
     // Children
 
     &::placeholder
-      color var(--input-color)
+      color var(--input-field-placeholder-color)
 
     &[type="text"],
     &[type="email"],
