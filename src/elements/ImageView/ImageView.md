@@ -101,7 +101,7 @@ library.add(faImage, faUserCircle);
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <ImageView
       :source="source"
       alternateText="7 weeks old"
@@ -120,7 +120,7 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
         This uses the topAddons slot and the title prop.
     </Paragraph>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <ImageView
       :source="source"
       alternateText="7 weeks old"
