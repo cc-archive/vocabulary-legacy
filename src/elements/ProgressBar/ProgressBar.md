@@ -5,11 +5,13 @@ Depending on whether completion value is known, progress bars look like this.
 ```jsx
 <ProgressBar
   color="orange"
-  icon="hourglass-half" 
+  icon="hourglass-half"
   :value="20"  
   is-percent-visible/>
 <br/><br/>
-<ProgressBar icon="hourglass-half" color="orange"/>
+<ProgressBar
+  color="orange"
+  icon="hourglass-half"/>
 ```
 
 ### Color set
@@ -26,31 +28,49 @@ set provided by CC Vocabulary. Black is no fit color for a progress bar.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="blue"/>
+    <ProgressBar
+      color="blue"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="green"/>
+    <ProgressBar
+      color="green"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="magenta"/>
+    <ProgressBar
+      color="magenta"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="olive"/>
+    <ProgressBar
+      color="olive"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="orange"/>
+    <ProgressBar
+      color="orange"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="purple"/>
+    <ProgressBar
+      color="purple"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="red"/>
+    <ProgressBar
+      color="red"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="sand"/>
+    <ProgressBar
+      color="sand"
+      :value="20"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar :value="20" color="yellow"/>
+    <ProgressBar
+      color="yellow"
+      :value="20"/>
   </GridCell>
 </Grid>
 ```
@@ -101,13 +121,15 @@ On dark and non-white backgrounds, use the inverted option.
   </GridCell>
   <GridCell :spanSet="[12, 6, 6, 6, 6]">
     <ProgressBar
+      color="magenta"
       :value="20" 
-      color="magenta" 
       is-percent-visible 
       is-inverted/>
   </GridCell>
   <GridCell :spanSet="[12, 6, 6, 6, 6]">
-    <ProgressBar color="magenta" is-inverted/>
+    <ProgressBar
+      color="magenta"
+      is-inverted/>
   </GridCell>
 </Grid>
 ```
@@ -120,8 +142,8 @@ to it.
 ```jsx
 <ProgressBar 
   color="red"
-  :value="33"
   icon="hourglass-half"
+  :value="33"
   is-percent-visible/>
 ```
 
@@ -148,57 +170,57 @@ Progress bars come in all sizes, from small to mega.
 ```jsx { "props": { "className": "contain-content" } }
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="small"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
   icon="hourglass-half"
-  :value="20" 
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="big"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="large"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="huge"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="enormous"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="gigantic"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
   color="purple"
-  icon="hourglass-half"
-  :value="20" 
   size="mega"
+  icon="hourglass-half"
+  :value="20"
   is-percent-visible/>
 ```
 
@@ -216,8 +238,8 @@ library.add(faPlus, faMinus);
 
 let value = 50;
 <ProgressBar 
-  :value="parseInt(value)"
   icon="hourglass-half"
+  :value="parseInt(value)"
   :indication="value >= 60 ? 'positive' : value <= 40 ? 'negative' : 'probably'"
   is-percent-visible/>
 <span>&nbsp;&nbsp;</span>

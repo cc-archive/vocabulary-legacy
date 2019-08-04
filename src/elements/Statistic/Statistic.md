@@ -10,35 +10,35 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faImage, faUserCircle);
 
 <Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="magenta" 
-      value="Twenty two" 
-      label="Providers" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="magenta"
+      label="Providers"
+      value="Twenty two"
       is-textual-value
       is-plural/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="purple" 
-      value="300M" 
-      label="Images" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="purple"
       :icon-set="['', 'image']"
+      label="Images"
+      value="300M"
       is-plural/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      value="25" 
-      label="Contributors" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="blue"
       :icon-set="['user-circle', '']"
+      label="Contributors"
+      value="25"
       is-plural/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="orange" 
-      value="2,100+" 
-      label="Commits" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="orange"
+      label="Commits"
+      value="2,100+"
       is-plural/>
   </GridCell>
 </Grid>
@@ -49,75 +49,78 @@ library.add(faImage, faUserCircle);
 A statistic without a color specified is black.
 
 ```jsx
-<Statistic value="Black" label="Color" is-textual-value/>
+<Statistic
+  label="Color"
+  value="Black"
+  is-textual-value/>
 ```
 
 Statistics can be colored using any color from the set provided by CC 
 Vocabulary. Writing this for every component is getting tiresome now.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      value="blue" 
-      label="Color" 
+<Grid style="text-align: center;">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="blue"
+      label="Color"
+      value="blue"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="green" 
-      value="green" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="green"
+      label="Color"
+      value="green"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="magenta" 
-      value="magenta" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="magenta"
+      label="Color"
+      value="magenta"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="olive" 
-      value="olive" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="olive"
+      label="Color"
+      value="olive"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="orange" 
-      value="orange" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="orange"
+      label="Color"
+      value="orange"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="purple" 
-      value="purple" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="purple"
+      label="Color"
+      value="purple"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="red" 
-      value="red" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="red"
+      label="Color"
+      value="red"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="sand" 
-      value="sand" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="sand"
+      label="Color"
+      value="sand"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
-    <Statistic 
-      color="yellow" 
-      value="yellow" 
-      label="Color" 
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Statistic
+      color="yellow"
+      label="Color"
+      value="yellow"
       is-textual-value/>
   </GridCell>
 </Grid>
@@ -127,36 +130,36 @@ Also you may use one of the three shades, namely `light`, `dark` and `darker`,
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      shade="light" 
-      value="Light" 
-      label="Color" 
+<Grid style="text-align: center;">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="blue"
+      shade="light"
+      label="Color"
+      value="Light"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      value="Default" 
-      label="Color" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="blue"
+      label="Color"
+      value="Default"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      shade="dark" 
-      value="Dark" 
-      label="Color" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="blue"
+      shade="dark"
+      label="Color"
+      value="Dark"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]" style="text-align: center;">
-    <Statistic 
-      color="blue" 
-      shade="darker" 
-      value="Darker" 
-      label="Color" 
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Statistic
+      color="blue"
+      shade="darker"
+      label="Color"
+      value="Darker"
       is-textual-value/>
   </GridCell>
 </Grid>
@@ -166,12 +169,21 @@ There is an inverted option when the statistic is being displayed on a dark or
 non-white background.
 
 ```jsx { "props": { "className": "dark-background" } }
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
-    <Statistic value="Inverted" label="Dark outside?" is-inverted is-textual-value/>
+<Grid style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Statistic
+      label="Dark outside?"
+      value="Inverted"
+      is-inverted
+      is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
-    <Statistic color="purple" value="Colored" label="Dark outside?" is-inverted is-textual-value/>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Statistic
+      color="purple"
+      label="Dark outside?"
+      value="Colored"
+      is-inverted
+      is-textual-value/>
   </GridCell>
 </Grid>
 ```
@@ -182,29 +194,29 @@ A statistic can be contain two icons, one for the value and the label each. Note
 that the icon must be added to the FontAwesome library by the application.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
+<Grid style="text-align: center;">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
       color="red"
       :icon-set="['chart-line', '']"
-      value="Value" 
-      label="Icon" 
+      label="Icon"
+      value="Value"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
       color="red"
       :icon-set="['', 'chart-line']"
-      value="Label" 
-      label="Icon" 
+      label="Icon"
+      value="Label"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
       color="red"
       :icon-set="['chart-line', 'chart-line']"
-      value="Both" 
-      label="Icon" 
+      label="Icon"
+      value="Both"
       is-textual-value/>
   </GridCell>
 </Grid>
@@ -228,8 +240,9 @@ library.add(faCertificate);
 
 <Statistic color="green">
   <template #labelAddons>
-    <FontAwesomeIcon
-      :icon="['fas', 'certificate']"/>
+    <FontAwesomeIcon 
+      :icon="['fas', 'certificate']"
+      fixed-width/>
   </template>
   <template #label>
     License
@@ -270,8 +283,8 @@ library.add(faPlus, faMinus);
 
 let value = 50;
 <Statistic 
-  :value="`${value}%`"
   label="Battery"
+  :value="`${value}%`"
   :indication="value >= 60 ? 'positive' : value <= 40 ? 'negative' : 'probably'"/>
 <span>&nbsp;&nbsp;</span>
 <Button

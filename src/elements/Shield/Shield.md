@@ -1,9 +1,18 @@
 A set of shields look like this.
 
 ```jsx
-<Shield label="CC" message="vocabulary" color="orange"/>
-<Shield label="Build" message="passing" color="green" shade="dark"/>
-<Shield label="License" message="MIT" color="blue"/>
+<Shield
+  color="orange"
+  label="CC"
+  message="vocabulary"/>
+<Shield
+  color="green" shade="dark"
+  label="Build"
+  message="passing"/>
+<Shield
+  color="blue"
+  label="License"
+  message="MIT"/>
 ```
 
 ### Color set
@@ -11,7 +20,9 @@ A set of shields look like this.
 A shield without any given color is grey.
 
 ```jsx
-<Shield label="Color" message="Grey"/> 
+<Shield
+  label="Color"
+  message="Grey"/> 
 ```
 
 The message part of the shield can be colored with any color from the set
@@ -20,31 +31,58 @@ provided by CC Vocabulary. No one likes grey.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Blue" color="blue"/>
+    <Shield
+      color="blue"
+      label="Color"
+      message="Blue"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Green" color="green"/>
+    <Shield
+      color="green"
+      label="Color"
+      message="Green"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Magenta" color="magenta"/>
+    <Shield
+      color="magenta"
+      label="Color"
+      message="Magenta"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Olive" color="olive"/>
+    <Shield
+      color="olive"
+      label="Color"
+      message="Olive"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Orange" color="orange"/>
+    <Shield
+      color="orange"
+      label="Color"
+      message="Orange"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Purple" color="purple"/>
+    <Shield
+      color="purple"
+      label="Color"
+      message="Purple"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Red" color="red"/>
+    <Shield
+      color="red"
+      label="Color"
+      message="Red"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Sand" color="sand"/>
+    <Shield
+      color="sand"
+      label="Color"
+      message="Sand"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield label="Color" message="Yellow" color="yellow"/>
+    <Shield
+      color="yellow"
+      label="Color"
+      message="Yellow"/>
   </GridCell>
 </Grid>
 ```
@@ -55,16 +93,31 @@ to accentuate the color.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield label="Shade" message="Light" color="blue" shade="light"/>
+    <Shield
+      color="blue"
+      shade="light"
+      label="Shade"
+      message="Light" />
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield label="Shade" message="Default" color="blue"/>
+    <Shield
+      color="blue"
+      label="Shade"
+      message="Default" />
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield label="Shade" message="Dark" color="blue" shade="dark"/>
+    <Shield
+      color="blue"
+      shade="dark"
+      label="Shade"
+      message="Dark" />
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield label="Shade" message="Darker" color="blue" shade="darker"/>
+    <Shield
+      color="blue"
+      shade="darker"
+      label="Shade"
+      message="Darker" />
   </GridCell>
 </Grid>
 ```
@@ -72,9 +125,16 @@ to accentuate the color.
 On a dark or non-white background, use the inverted type of shield.
 
 ```jsx { "props": { "className": "dark-background" } }
-<Shield label="Dark?" message="Inverted" is-inverted/>
+<Shield
+  label="Dark?"
+  message="Inverted"
+  is-inverted/>
 <br/><br/>
-<Shield color="magenta" label="Dark?" message="Inverted" is-inverted/>
+<Shield
+  color="magenta"
+  label="Dark?"
+  message="Inverted"
+  is-inverted/>
 ```
 
 ### Style set
@@ -96,21 +156,52 @@ needed or desired.
 Shields come in all sizes.
 
 ```jsx { "props": { "className": "contain-content" } }
-<Shield label="Size" message="Level 1" color="purple" size="small"/>
+<Shield
+  color="purple"
+  size="small"
+  label="Size"
+  message="Level 1"/>
 <br/><br/>
-<Shield label="Size" message="Level 2" color="purple"/>
+<Shield
+  color="purple"
+  label="Size"
+  message="Level 2"/>
 <br/><br/>
-<Shield label="Size" message="Level 3" color="purple" size="big"/>
+<Shield
+  color="purple"
+  size="big"
+  label="Size"
+  message="Level 3"/>
 <br/><br/>
-<Shield label="Size" message="Level 4" color="purple" size="large"/>
+<Shield
+  color="purple"
+  size="large"
+  label="Size"
+  message="Level 4"/>
 <br/><br/>
-<Shield label="Size" message="Level 5" color="purple" size="huge"/>
+<Shield
+  color="purple"
+  size="huge"
+  label="Size"
+  message="Level 5"/>
 <br/><br/>
-<Shield label="Size" message="Level 6" color="purple" size="enormous"/>
+<Shield
+  color="purple"
+  size="enormous"
+  label="Size"
+  message="Level 6"/>
 <br/><br/>
-<Shield label="Size" message="Level 7" color="purple" size="gigantic"/>
+<Shield
+  color="purple"
+  size="gigantic"
+  label="Size"
+  message="Level 7"/>
 <br/><br/>
-<Shield label="Size" message="Level 8" color="purple" size="mega"/>
+<Shield
+  color="purple"
+  size="mega"
+  label="Size"
+  message="Level 8"/>
 ```
 
 ### Add-on set
@@ -119,7 +210,10 @@ A label accepts strings for the label and the message via the `label` and
 `message` props.
 
 ```jsx
-<Shield color="red" label="Customisation" message="None"/>
+<Shield
+  color="red"
+  label="Customisation"
+  message="None"/>
 ``` 
 
 But there are times when you just want to control the formatting of the text or
@@ -143,10 +237,16 @@ let one = true;
 let two = true;
 
 <Paragraph>
-  <SwitchField color="blue" v-model="one"/> Test one
+  <SwitchField 
+    v-model="one"
+    color="blue"/>
+   Test one
 </Paragraph>
 <Paragraph>
-  <SwitchField color="blue" v-model="two"/> Test two
+  <SwitchField 
+    v-model="two"
+    color="blue"/>
+   Test two
 </Paragraph>
 <br/>
 <Shield 

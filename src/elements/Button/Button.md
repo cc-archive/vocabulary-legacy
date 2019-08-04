@@ -1,7 +1,9 @@
 Here's a sample button. If you intuitively feel to click it, it's working.
 
 ```jsx
-<Button color="orange" is-call-to-action>
+<Button 
+  color="orange" 
+  is-call-to-action>
   <template #addons>
     <LicenseIconography :icon-list="['', 'by']"/>
   </template>
@@ -58,16 +60,30 @@ to accentuate the color.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button color="blue" shade="light">Click me</Button>
+    <Button 
+      color="blue" 
+      shade="light">
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button color="blue">Click me</Button>
+    <Button color="blue">
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button color="blue" shade="dark">Click me</Button>
+    <Button 
+      color="blue" 
+      shade="dark">
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button color="blue" shade="darker">Click me</Button>
+    <Button 
+      color="blue" 
+      shade="darker">
+      Click me
+    </Button>
   </GridCell>
 </Grid>
 ```
@@ -78,16 +94,31 @@ inverted variant.
 ```jsx { "props": { "className": "dark-background" } }
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Button is-inverted>Click me</Button>
+    <Button is-inverted>
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Button is-inverted is-basic>Click me</Button>
+    <Button 
+      is-inverted 
+      is-basic>
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Button color="magenta" is-inverted>Click me</Button>
+    <Button 
+      color="magenta" 
+      is-inverted>
+      Click me
+    </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Button color="magenta" is-inverted is-basic>Click me</Button>
+    <Button 
+      color="magenta" 
+      is-inverted 
+      is-basic>
+      Click me
+    </Button>
   </GridCell>
 </Grid>
 ```
@@ -99,15 +130,22 @@ visual aid as to what it does. Note that the icon must be added to the
 FontAwesome library by the application.
 
 ```jsx
-<Button color="magenta" icon="hand-point-up"/><br/><br/>
-<Button color="magenta" icon="hand-point-up">Click me</Button>
+<Button 
+  color="red" 
+  icon="hand-point-up"/>
+<br/><br/>
+<Button 
+  color="red" 
+  icon="hand-point-up">
+  Click me
+</Button>
 ```
 
 If you'd like your own something there, you can override the add-on slot with 
 something you like.
 
 ```jsx
-<Button color="blue">
+<Button color="green">
   <template #addons>
     <LicenseBadge license="by-sa"/>
   </template>
@@ -122,36 +160,116 @@ Although supported, the use of this is highly unlikely given CC's love for
 sharp vertices and 90° angles. Looks good with pure icon buttons.
 
 ```jsx
-<Button is-rounded color="magenta" icon="hand-point-up"/><br/><br/>
-<Button is-rounded color="magenta">Click me</Button><br/><br/>
-<Button is-rounded color="magenta" icon="hand-point-up">Click me</Button>
+<Grid>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      is-rounded/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      is-rounded>
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      is-rounded>
+      Click me
+    </Button>
+  </GridCell>
+</Grid>
 ```
 
 A button can be defined to not attract attention, unless given attention via 
 means of a hover.
 
 ```jsx
-<Button is-basic color="purple" icon="hand-point-up"/><br/><br/>
-<Button is-basic color="purple">Click me</Button><br/><br/>
-<Button is-basic color="purple" icon="hand-point-up">Click me</Button>
+<Grid>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="purple"
+      icon="hand-point-up"
+      is-basic/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="purple"
+      is-basic>
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="purple"
+      icon="hand-point-up"
+      is-basic>
+      Click me
+    </Button>
+  </GridCell>
+</Grid>
 ```
 
 A button can be defined to deny attention, unless that is really what the user
 wanted.
 
 ```jsx
-<Button is-ghost color="blue" icon="hand-point-up"/><br/><br/>
-<Button is-ghost color="blue">Click me</Button><br/><br/>
-<Button is-ghost color="blue" icon="hand-point-up">Click me</Button>
+<Grid>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="blue"
+      icon="hand-point-up"
+      is-ghost/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="blue"
+      is-ghost>
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="blue"
+      icon="hand-point-up"
+      is-ghost>
+      Click me
+    </Button>
+  </GridCell>
+</Grid>
 ```
 
 A button can be a call-to-action button to immediately direct the user to commit
 a certain action.
 
 ```jsx
-<Button color="orange" icon="hand-point-up" is-call-to-action/><br/><br/>
-<Button color="orange" is-call-to-action>Click me</Button><br/><br/>
-<Button color="orange" icon="hand-point-up" is-call-to-action>Click me</Button>
+<Grid>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="orange"
+      icon="hand-point-up"
+      is-call-to-action<br/><br/>/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="orange"
+      is-call-to-action<br/><br/>>
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="orange"
+      icon="hand-point-up"
+      is-call-to-action<br/><br/>>
+      Click me
+    </Button>
+  </GridCell>
+</Grid>
 ```
 
 Styles can be combined.
@@ -185,8 +303,8 @@ clicking the button that calls itself dangerous will lead to much agony and
 unpleasantness.
 
 ```jsx
-<Button indication="positive">I'm safe to click</Button>
-<Button indication="probably">I'm not sure what I am</Button>
+<Button indication="positive">I'm safe to click</Button><br/><br/>
+<Button indication="probably">I'm not sure what I am</Button><br/><br/>
 <Button indication="negative">I'm dangerous to click</Button>
 ```
 

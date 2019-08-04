@@ -151,9 +151,9 @@ something you like. This is not very flexible as there is a `1.25em` width limit
 by default. To increase the limit, set the CSS custom property 
 `--select-field-addons-space` on the element like so.
 
-```css
+```css static
 .vocab.select-field {
-    ---select-field-addons-space: 2.5em;
+  ---select-field-addons-space: 2.5em;
 }
 ```
 
@@ -162,8 +162,8 @@ See it in action.
 ```jsx
 <SelectField
   color="green"
-  :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]"
   style="--select-field-addons-space: 2.5em;">
+  :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]"
   <template #addons>
     <LicenseIconography :icon-list="['', 'by']"/>
   </template>
@@ -255,9 +255,9 @@ let options = [
 ];
 
 <SelectField
-  :optionList="options"
+  v-model="value"
   :indication="value === 'res' ? 'positive' : value === 'del' ? 'negative' : 'probably'"
-  v-model="value"/>
+  :optionList="options"/>
 ```
 
 ### State set
@@ -288,7 +288,7 @@ So a select field may have a `name` and a `value`.
 
 ```jsx
 <SelectField
+  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   name="Name"
-  value="b"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  value="b"/>
 ```

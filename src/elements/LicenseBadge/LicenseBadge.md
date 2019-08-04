@@ -1,13 +1,18 @@
 Without frills, badges looks like these.
 
 ```jsx
-<Heading :level="3" color="orange">
- The CC BY license
+<Heading
+  color="orange"
+  :level="3">
+  The CC BY license
   <LicenseBadge license="by"/>:
 </Heading>
 <Paragraph>
   The CC BY license
-  (<LicenseBadge license="by" version="small" is-centered/>)
+  (<LicenseBadge 
+     license="by" 
+     version="small" 
+     is-centered/>)
   is a permissive free-culture license.
 </Paragraph>
 ```
@@ -19,7 +24,9 @@ The badge may be vertically centered with respect to surrounding text.
 ```jsx
 <Paragraph>
   The CC BY license
-  (<LicenseBadge license="by" is-centered/>)
+  (<LicenseBadge 
+     license="by" 
+     is-centered/>)
   is a permissive free-culture license.
 </Paragraph>
 ```
@@ -30,22 +37,22 @@ To start with we have badges for all CC licenses.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc-nd"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc-sa"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nd"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-sa"/>
   </GridCell>
 </Grid>
@@ -56,10 +63,10 @@ Domain mark.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="pd"/>
   </GridCell>
 </Grid>
@@ -76,10 +83,10 @@ aspect of the license.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="by-sa" version="small"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero" version="small"/>
   </GridCell>
 </Grid>
@@ -90,10 +97,10 @@ every individual aspect of the license.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="by-sa"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero"/>
   </GridCell>
 </Grid>
@@ -108,10 +115,10 @@ size.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="by-sa" height="84" size="big"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero" size="big"/>
   </GridCell>
 </Grid>
@@ -122,10 +129,10 @@ enlarge them, you'd probably be better off using the large versions themselves.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="by-sa" version="small" size="small"/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero" version="small" size="small"/>
   </GridCell>
 </Grid>

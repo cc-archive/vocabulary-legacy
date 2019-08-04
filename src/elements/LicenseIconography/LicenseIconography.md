@@ -3,8 +3,10 @@ be used in the midst of running text and they will inherit the font size and
 color of their surrounding content.
 
 ```jsx
-<Heading :level="3" color="orange">
- The CC BY license
+<Heading
+  color="orange"
+  :level="3">
+  The CC BY license
   <LicenseIconography :icon-list="['', 'by']"/>:
 </Heading>
 <Paragraph>
@@ -12,8 +14,10 @@ color of their surrounding content.
   (<LicenseIconography :icon-list="['', 'by']"/>)
   is a permissive free-culture license.
 </Paragraph>
-<Heading :level="3" color="green">
- The CC Zero license
+<Heading
+  color="green"
+  :level="3">
+  The CC Zero license
   <LicenseIconography :icon-list="['', 'zero']"/>:
 </Heading>
 <Paragraph>
@@ -29,35 +33,30 @@ To start there is the plain CC logo icon. This should precede all other icons
 that depict CC licenses.
 
 ```jsx { "props": { "className": "enlarged-text" } }
-<LicenseIconography
-  :icon-list="['']"/>
+<LicenseIconography :icon-list="['']"/>
 ```
 
 Then there all all the various components that make up the CC license aspects.
 
 ```jsx { "props": { "className": "enlarged-text" } }
-<LicenseIconography
-  :icon-list="['by', 'nc', 'nd', 'sa']"/>
+<LicenseIconography :icon-list="['by', 'nc', 'nd', 'sa']"/>
 ```
 
 The non-commercial icon has region specific variants for Europe and Japan (why
 these two regions only and specifically is beyond my understanding).
 
 ```jsx { "props": { "className": "enlarged-text" } }
-<LicenseIconography
-  :icon-list="['nc-eu', 'nc-jp']"/>
+<LicenseIconography :icon-list="['nc-eu', 'nc-jp']"/>
 ```
 
 Some very domain specific and niche aspects have also been covered.
 
 ```jsx { "props": { "className": "enlarged-text" } }
-<LicenseIconography
-  :icon-list="['sampling', 'sampling-plus', 'remix', 'share']"/>
+<LicenseIconography :icon-list="['sampling', 'sampling-plus', 'remix', 'share']"/>
 ```
 
 Finally there are icons for the CC Zero license and the Public Domain mark.
 
 ```jsx { "props": { "className": "enlarged-text" } }
-<LicenseIconography
-  :icon-list="['zero', 'pd']"/>
+<LicenseIconography :icon-list="['zero', 'pd']"/>
 ```

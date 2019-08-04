@@ -4,8 +4,8 @@ Here are a bunch of example images.
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
 <ImageView
-  :source="source"
   alternateText="7 weeks old"
+  :source="source"
   title="7 weeks old"
   height="64"
   width="64"
@@ -13,8 +13,8 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
   is-rounded/>
 <br/><br/>
 <ImageView
-  :source="source"
   alternateText="7 weeks old"
+  :source="source"
   title="7 weeks old"
   height="128"
   width="128"
@@ -22,8 +22,8 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
   is-rounded/>
 <br/><br/>
 <ImageView
-  :source="source"
   alternateText="7 weeks old"
+  :source="source"
   title="7 weeks old"
   height="256"
   width="256"
@@ -38,13 +38,17 @@ An image can be vertically centered to sit well with text.
 ```jsx
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
-<Heading color="green" shade="dark" :level="1">
+<Heading 
+  color="green"
+  shade="dark"
+  :level="1">
   Who's a good boi?
 </Heading>
 <Paragraph>
   <ImageView 
-    :source="source"
     alternateText="7 weeks old"
+    :source="source"
+    title="7 weeks old"
     size="big"
     is-centered/>:
   <em>*barks*</em> (I am!)
@@ -60,13 +64,14 @@ let dhruvSource = "https://avatars0.githubusercontent.com/u/16580576";
 let pupperSource = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
 <ImageView
-  :source="dhruvSource"
   alternateText="Dhruv Bhanushali"
+  :source="dhruvSource"
+  title="Dhruv Bhanushali"
   size="large"
   is-rounded/>
 <ImageView
-  :source="pupperSource"
   alternateText="7 weeks old"
+  :source="pupperSource"
   title="7 weeks old"
   height="128"
   width="128"

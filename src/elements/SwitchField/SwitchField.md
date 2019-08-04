@@ -1,8 +1,11 @@
 A switch looks like this.
 
 ```jsx
-let value = true;
-<SwitchField color="orange" size="large" v-model="value"/>
+<SwitchField
+  color="orange"
+  size="large"
+  :value="true"
+  is-labelled/>
 ```
 
 ### Color set
@@ -19,31 +22,49 @@ CC Vocabulary. Sometimes, black doesn't indicate on.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="blue"/>
+    <SwitchField
+      color="blue"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="green"/>
+    <SwitchField
+      color="green"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="magenta"/>
+    <SwitchField
+      color="magenta"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="olive"/>
+    <SwitchField
+      color="olive"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="orange"/>
+    <SwitchField
+      color="orange"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="purple"/>
+    <SwitchField
+      color="purple"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="red"/>
+    <SwitchField
+      color="red"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="sand"/>
+    <SwitchField
+      color="sand"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField :value="true" color="yellow"/>
+    <SwitchField
+      color="yellow"
+      :value="true"/>
   </GridCell>
 </Grid>
 ```
@@ -54,16 +75,27 @@ to accentuate the color.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField :value="true" color="blue" shade="light"/>
+    <SwitchField
+       color="blue"
+       shade="light"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField :value="true" color="blue"/>
+    <SwitchField
+       color="blue"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField :value="true" color="blue" shade="dark"/>
+    <SwitchField
+       color="blue"
+       shade="dark"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField :value="true" color="blue" shade="darker"/>
+    <SwitchField
+       color="blue"
+       shade="darker"
+      :value="true"/>
   </GridCell>
 </Grid>
 ```
@@ -73,10 +105,15 @@ On a dark or non-white background, use the inverted form of the switch.
 ```jsx { "props": { "className": "dark-background" } }
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <SwitchField :value="true" is-inverted/>
+    <SwitchField
+      :value="true"
+      is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <SwitchField color="magenta" :value="true" is-inverted/>
+    <SwitchField
+      color="magenta"
+      :value="true"
+      is-inverted/>
   </GridCell>
 </Grid>
 ```
@@ -86,14 +123,44 @@ On a dark or non-white background, use the inverted form of the switch.
 Switches come in all sizes, from small to mega.
 
 ```jsx { "props": { "className": "contain-content" } }
-<SwitchField :value="true" color="purple" size="small"/><br/><br/>
-<SwitchField :value="true" color="purple"/><br/><br/>
-<SwitchField :value="true" color="purple" size="big"/><br/><br/>
-<SwitchField :value="true" color="purple" size="large"/><br/><br/>
-<SwitchField :value="true" color="purple" size="huge"/><br/><br/>
-<SwitchField :value="true" color="purple" size="enormous"/><br/><br/>
-<SwitchField :value="true" color="purple" size="gigantic"/><br/><br/>
-<SwitchField :value="true" color="purple" size="mega"/><br/><br/>
+<SwitchField
+  color="purple"
+  size="small"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="big"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="large"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="huge"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="enormous"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="gigantic"
+  :value="true"/>
+<br/><br/>
+<SwitchField
+  color="purple"
+  size="mega"
+  :value="true"/>
 ```
 
 ### Style set
@@ -145,11 +212,17 @@ A special kind of conditional indication has also been provided.
 A switch may be disabled to prevent input altogether.
 
 ```jsx
-<SwitchField color="blue" :value="true" is-disabled/>
+<SwitchField
+  color="blue"
+  :value="true"
+  is-disabled/>
 ```
 
 A switch may be made read-only to prevent input while preserving readability.
 
 ```jsx
-<SwitchField color="blue" :value="true" is-read-only/>
+<SwitchField
+  color="blue"
+  :value="true"
+  is-read-only/>
 ```

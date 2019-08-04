@@ -2,12 +2,13 @@ An input field looks like this.
 
 ```jsx
 <InputField
-  type="text"
+  color="orange"
   :icon-set="['keyboard', '']"
+  type="text"
   placeholder="How is CC Vocabulary?"
   value="It is awesome!"
-  color="orange"
-  is-basic/>
+  is-basic
+  is-infused/>
 ```
 
 ### Color set
@@ -16,8 +17,8 @@ An input field without color is grey.
 
 ```jsx
 <InputField
-  type="text"
   :icon-set="['keyboard', '']"
+  type="text"
   placeholder="Answer..."/>
 ```
 
@@ -28,66 +29,66 @@ provided by CC Vocabulary. Grey is nobody's favourite.
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="blue"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="blue"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="green"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="green"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="magenta"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="magenta"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="olive"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="olive"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="orange"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="orange"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="purple"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="purple"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="red"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="red"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="sand"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="sand"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <InputField
-      type="text"
+      color="yellow"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="yellow"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
 </Grid>
 ```
@@ -99,34 +100,34 @@ to accentuate the color.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
-      :icon-set="['keyboard', '']"
-      placeholder="Answer..."
       color="blue"
-      shade="light"/>
+      shade="light"
+      :icon-set="['keyboard', '']"
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
+      color="blue"
       :icon-set="['keyboard', '']"
-      placeholder="Answer..."
-      color="blue"/>
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
-      :icon-set="['keyboard', '']"
-      placeholder="Answer..."
       color="blue"
-      shade="dark"/>
+      shade="dark"
+      :icon-set="['keyboard', '']"
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
-      :icon-set="['keyboard', '']"
-      placeholder="Answer..."
       color="blue"
-      shade="darker"/>
+      shade="darker"
+      :icon-set="['keyboard', '']"
+      type="text"
+      placeholder="Answer..."/>
   </GridCell>
 </Grid>
 ```
@@ -137,15 +138,15 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
       :icon-set="['keyboard', '']"
+      type="text"
       placeholder="Answer..."
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      type="text"
       :icon-set="['keyboard', '']"
+      type="text"
       placeholder="Answer..."
       is-inverted
       is-basic/>
@@ -153,16 +154,16 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="magenta"
-      type="text"
       :icon-set="['keyboard', '']"
+      type="text"
       placeholder="Answer..."
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="magenta"
-      type="text"
       :icon-set="['keyboard', '']"
+      type="text"
       placeholder="Answer..."
       is-inverted
       is-basic/>
@@ -178,20 +179,20 @@ that the icon must be added to the FontAwesome library by the application.
 ```jsx
 <InputField
   color="red"
-  type="text"
   :icon-set="['keyboard', '']"
+  type="text"
   placeholder="Left"/>
 <br/><br/>
 <InputField
   color="red"
-  type="text"
   :icon-set="['', 'keyboard']"
+  type="text"
   placeholder="Right"/>
 <br/><br/>
 <InputField
   color="red"
-  type="text"
   :icon-set="['keyboard', 'keyboard']"
+  type="text"
   placeholder="Both"/>
 ```
 
@@ -222,7 +223,7 @@ add-on slots with something you like.
   </template>
   <template #rightAddons>
     <div style="width: 1.25em; text-align: center;">
-      <strong>:-(</strong>
+      <strong>:-D</strong>
     </div>
   </template>
 </InputField>
@@ -252,6 +253,18 @@ what the user wanted.
   color="orange"
   placeholder="Answer"
   is-ghost/>
+```
+
+An input field can be defined to color the text inside as well adding an
+additional streak of color to the field.
+
+```jsx
+<InputField
+  type="text"
+  :icon-set="['keyboard', '']"
+  color="orange"
+  placeholder="Answer"
+  is-infused/>
 ```
 
 Styles can be combined.
@@ -329,11 +342,11 @@ probably.
 let value = 'Any answer';
 
 <InputField
-  type="text"
+  v-model="value"
   :icon-set="['keyboard', '']"
-  placeholder="Answer..."
   :indication="value === 'Right answer' ? 'positive' : value === 'Wrong answer' ? 'negative' : 'probably'"
-  v-model="value"/>
+  type="text"
+  placeholder="Answer..."/>
 ```
 
 ### State set
@@ -342,8 +355,8 @@ A field may be disabled to prevent input altogether.
 
 ```jsx
 <InputField
-  type="text"
   :icon-set="['keyboard', '']"
+  type="text"
   placeholder="Answer..."
   is-disabled/>
 ```
@@ -353,8 +366,8 @@ an output component.
 
 ```jsx
 <InputField
-  type="text"
   :icon-set="['keyboard', '']"
+  type="text"
   placeholder="Answer..."
   value="Read me"
   is-read-only/>
@@ -370,42 +383,42 @@ An initial `value` can be provided for the field.
 
 ```jsx
 <InputField
+  color="sand"
   type="text"
-  value="Value"
   placeholder="Placeholder"
-  color="olive"/>
+  value="Value"/>
 ```
 
 The `type` attribute works as you would expect.
 
 ```jsx
 <InputField
+  color="blue"
   type="email"
-  placeholder="Email address..."
-  color="blue">
+  placeholder="Email address...">
 </InputField><br/><br/>
 <InputField
+  color="purple"
   type="url"
-  placeholder="Website URL..."
-  color="purple">
+  placeholder="Website URL...">
 </InputField><br/><br/>
 <InputField
+  color="green"
   type="number"
   placeholder="Age in years..."
   min="0"
-  max="122"
-  color="green">
+  max="122">
 </InputField><br/><br/>
 <InputField
-  type="date"
-  color="magenta">
+  color="magenta"
+  type="date">
 </InputField><br/><br/>
 <InputField
-  type="time"
-  color="orange">
+  color="orange"
+  type="time">
 </InputField><br/><br/>
 <InputField
-  type="file"
-  color="yellow">
+  color="yellow"
+  type="file">
 </InputField>
 ```

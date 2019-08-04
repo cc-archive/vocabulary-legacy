@@ -23,31 +23,49 @@ A black ratings bar, come on!
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="blue"/>
+    <Rating
+      color="blue"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="green"/>
+    <Rating
+      color="green"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="magenta"/>
+    <Rating
+      color="magenta"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="olive"/>
+    <Rating
+      color="olive"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="orange"/>
+    <Rating
+      color="orange"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="purple"/>
+    <Rating
+      color="purple"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="red"/>
+    <Rating
+      color="red"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="sand"/>
+    <Rating
+      color="sand"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating :value="3" color="yellow"/>
+    <Rating
+      color="yellow"
+      :value="3"/>
   </GridCell>
 </Grid>
 ```
@@ -58,16 +76,27 @@ to accentuate the color.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating color="blue" :value="1" shade="light"/>
+    <Rating
+      color="blue"
+      shade="light"
+      :value="1"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating color="blue" :value="2"/>
+    <Rating
+      color="blue" 
+      :value="2"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating color="blue" :value="3" shade="dark"/>
+    <Rating
+      color="blue"
+      shade="dark"
+      :value="3"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating color="blue" :value="4" shade="darker"/>
+    <Rating
+      color="blue"
+      shade="darker"
+      :value="4"/>
   </GridCell>
 </GridCell>
 ```
@@ -75,8 +104,14 @@ to accentuate the color.
 On dark or non-white backgrounds use the inverted version of the component.
 
 ```jsx { "props": { "className": "dark-background" } }
-<Rating :value="3" is-inverted/><br/><br/>
-<Rating color="magenta" :value="3" is-inverted/>
+<Rating
+  :value="3"
+  is-inverted/>
+<br/><br/>
+<Rating
+  color="magenta"
+  :value="3"
+  is-inverted/>
 ```
 
 ### Size set
@@ -84,14 +119,52 @@ On dark or non-white backgrounds use the inverted version of the component.
 Ratings come in all sizes, from small to mega.
 
 ```jsx { "props": { "className": "contain-content" } }
-<Rating color="purple" :max="8" :value="1" size="small"/><br/><br/>
-<Rating color="purple" :max="8" :value="2"/><br/><br/>
-<Rating color="purple" :max="8" :value="3" size="big"/><br/><br/>
-<Rating color="purple" :max="8" :value="4" size="large"/><br/><br/>
-<Rating color="purple" :max="8" :value="5" size="huge"/><br/><br/>
-<Rating color="purple" :max="8" :value="6" size="enormous"/><br/><br/>
-<Rating color="purple" :max="8" :value="7" size="gigantic"/><br/><br/>
-<Rating color="purple" :max="8" :value="8" size="mega"/><br/><br/>
+<Rating
+  color="purple"
+  size="small"
+  :max="8"
+  :value="1"/>
+<br/><br/>
+<Rating
+  color="purple"
+  :max="8"
+  :value="2"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="big"
+  :max="8"
+  :value="3"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="large"
+  :max="8"
+  :value="4"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="huge"
+  :max="8"
+  :value="5"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="enormous"
+  :max="8"
+  :value="6"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="gigantic"
+  :max="8"
+  :value="7"/>
+<br/><br/>
+<Rating
+  color="purple"
+  size="mega"
+  :max="8"
+  :value="8"/>
 ```
 
 ### Style set
@@ -131,11 +204,11 @@ library.add(faThumbsDown, faThumbsUp);
 let value = 2;
 
 <Rating
-  :icon-set="['thumbs-down', 'thumbs-up']"
-  :value="2"
-  :max="2"
   v-model="value"
+  :icon-set="['thumbs-down', 'thumbs-up']"
   :indication="value === 2 ? 'positive': 'negative'"
+  :max="2"
+  :value="2"
   is-toggleable
   is-single-select/>
 ```
@@ -145,8 +218,8 @@ You can increase the maximum rating available on the bar.
 ```jsx
 <Rating
   color="yellow"
-  :value="5"
-  :max="10"/>
+  :max="10"
+  :value="5"/>
 ```
 
 ### Indication set
@@ -163,12 +236,12 @@ library.add(faSmile, faMeh, faFrown);
 let value = 3;
 
 <Rating
+  v-model="value"
   size="huge"
   :icon-set="['frown', 'meh', 'smile']"
+  :indication="value > 2 ? 'positive': value < 2 ? 'negative': 'probably'"
   :value="3"
   :max="3"
-  v-model="value"
-  :indication="value > 2 ? 'positive': value < 2 ? 'negative': 'probably'"
   is-toggleable
   is-single-select/>
 ```

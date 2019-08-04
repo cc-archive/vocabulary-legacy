@@ -1,7 +1,9 @@
 Headings are supposed to preside over content.
 
 ```jsx
-<Heading :level="1" color="orange">
+<Heading
+  :level="1"
+  color="orange">
   I am a title...
 </Heading>
 <Paragraph>
@@ -11,16 +13,22 @@ Headings are supposed to preside over content.
 ```
 
 ```jsx
-<Heading :level="1" color="red">
+<Heading 
+  :level="1"
+  color="red">
   Chapter 1
 </Heading>
-<Heading :level="2" color="blue">
+<Heading 
+  :level="2"
+  color="blue">
   Section 1.1
 </Heading>
 <Paragraph>
   Section 1.1 has some content!
 </Paragraph>
-<Heading :level="2" color="blue">
+<Heading 
+  :level="2"
+  color="blue">
   Section 1.2
 </Heading>
 <Paragraph>
@@ -81,16 +89,30 @@ to accentuate the color.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Heading color="blue" shade="light">Light blue</Heading>
+    <Heading 
+      color="blue"
+      shade="light">
+      Light blue
+    </Heading>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Heading color="blue">Blue</Heading>
+    <Heading color="blue">
+      Blue
+    </Heading>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Heading color="blue" shade="dark">Dark blue</Heading>
+    <Heading 
+      color="blue"
+      shade="dark">
+      Dark blue
+    </Heading>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Heading color="blue" shade="darker">Darker blue</Heading>
+    <Heading 
+      color="blue"
+      shade="darker">
+      Darker blue
+    </Heading>
   </GridCell>
 </Grid>
 ```
@@ -116,16 +138,34 @@ Headings can indicate the contextual nature of the content they preside over.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Heading :level="1" indication="positive">Oh yes!</Heading>
-    <Paragraph indication="positive">That is really terrific news!</Paragraph>
+    <Heading 
+      :level="1"
+      indication="positive">
+      Oh yes!
+    </Heading>
+    <Paragraph indication="positive">
+      That is really terrific news!
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Heading :level="1" indication="probably">Oh.</Heading>
-    <Paragraph indication="probably">That is news.</Paragraph>
+    <Heading 
+      :level="1"
+      indication="probably">
+      Oh.
+    </Heading>
+    <Paragraph indication="probably">
+      That is news.
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Heading :level="1" indication="negative">Oh no!</Heading>
-    <Paragraph indication="negative">That is really terrible news!</Paragraph>
+    <Heading 
+      :level="1"
+      indication="negative">
+      Oh no!
+    </Heading>
+    <Paragraph indication="negative">
+      That is really terrible news!
+    </Paragraph>
   </GridCell>
 </Grid>
 ```

@@ -28,7 +28,11 @@ decreased as per the needs of the situation.
 ```jsx
 <Grid>
   <GridCell :spanSet="[12, 6, 4, 4, 4]">
-    <Heading :level="3" color="red">Dense</Heading>
+    <Heading
+      :level="3"
+      color="red">
+      Dense
+    </Heading>
     <Paragraph density="dense">
       Five syllables here.<br/>
       Seven more syllables here.<br/>
@@ -36,15 +40,23 @@ decreased as per the needs of the situation.
     </Paragraph>
   </GridCell>
   <GridCell :spanSet="[12, 6, 4, 4, 4]">
-    <Heading :level="3" color="yellow">Default</Heading>
+    <Heading
+      :level="3"
+      color="yellow">
+      Default
+    </Heading>
     <Paragraph>
-    Maybe my cat's name...<br/>
-    is Schrödinger. Or is it?<br/>
-    We will never know.
+      Maybe my cat's name...<br/>
+      is Schrödinger. Or is it?<br/>
+      We will never know.
     </Paragraph>
   </GridCell>
   <GridCell :spanSet="[12, 6, 4, 4, 4]">
-    <Heading :level="3" color="green">Sparse</Heading>
+    <Heading
+      :level="3"
+      color="green">
+      Sparse
+    </Heading>
     <Paragraph density="sparse">
       Fat man sees small door.<br/>
       He knows he cannot fit through.<br/>
@@ -105,16 +117,23 @@ Also you may use one of the three shades, namely `light`, `dark` and `darker`,
 to accentuate the color.
 
 ```jsx
-<Paragraph color="blue" shade="light">
+<Paragraph
+  color="blue"
+  shade="light">
   This is a paragraph colored the light shade of blue.
 </Paragraph>
-<Paragraph color="blue">
+<Paragraph
+  color="blue">
   This is a paragraph colored blue.
 </Paragraph>
-<Paragraph color="blue" shade="dark">
+<Paragraph
+  color="blue"
+  shade="dark">
   This is a paragraph colored the dark shade of blue.
 </Paragraph>
-<Paragraph color="blue" shade="darker">
+<Paragraph
+  color="blue"
+  shade="darker">
   This is a paragraph colored the darker shade of blue.
 </Paragraph>
 ```
