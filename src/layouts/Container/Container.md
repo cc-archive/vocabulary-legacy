@@ -1,5 +1,3 @@
-## Examples
-
 Blocks of text, such as paragraphs, tend to become harder and harder to read at
 long widths. Given the popular interest in high DPI and ultrawide displays, this
 is a pervasive issue.

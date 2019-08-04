@@ -7,7 +7,7 @@
 
 <script>
   /**
-   * ## Containers make pages large-display friendly.
+   * ### Containers make pages large-display friendly.
    *
    * A container maintains a constant width on all display sizes in a given
    * breakpoint range.

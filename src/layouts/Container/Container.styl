@@ -1,20 +1,27 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/media.styl"
 
 .vocab.container
-  margin auto
+  // Width
 
   +phone-only()
-    width 'calc(100% - 2 * %s)' % $space-normal
+    --container-width 'calc(100% - 2 * %s)' % $space-normal
 
   +tablet-portrait-only()
-    width 'calc(600px - 2 * %s)' % $space-normal
+    --container-width 'calc(600px - 2 * %s)' % $space-normal
 
   +tablet-landscape-only()
-    width 'calc(900px - 2 * %s - 17px)' % $space-normal
+    --container-width 'calc(900px - 2 * %s - 17px)' % $space-normal
 
   +desktop-only()
-    width 'calc(1200px - 2 * %s - 17px)' % $space-normal
+    --container-width 'calc(1200px - 2 * %s - 17px)' % $space-normal
 
   +big-desktop-up()
-    width 'calc(1800px - 2 * %s - 17px)' % $space-normal
+    --container-width 'calc(1800px - 2 * %s - 17px)' % $space-normal
+
+  // Rules
+
+  width var(--container-width)
+
+  margin auto
