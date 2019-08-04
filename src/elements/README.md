@@ -43,18 +43,35 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faCheck);
 
-let value='Wrong answer';
+let value = 'Some answer';
 
-<Heading :level="3" color="blue" shade="dark">
-  Submit the <em>'Right Answer'</em>
+let indication = (value) => {
+  if (value === 'Right answer') {
+    return 'positive';
+  } else if (value === 'Wrong answer') {
+    return 'negative'; 
+  } else {
+    return 'probably';
+  }
+};
+
+<Heading
+  color="green"
+  :level="4">
+  Submit the <em>'Right answer'</em>
+</Heading>
+<Heading
+  color="red"
+  :level="4">
+  But do try the <em>'Wrong answer'</em>
 </Heading>
 <InputField
+  v-model="value"
   color="blue"
-  shade="dark"
-  v-model="value"/>
+  is-infused/>
 <Button
   icon="check"
-  :indication="value === 'Right answer' ? 'positive' : 'negative'">
+  :indication="indication(value)">
   Submit
 </Button>
 ```
