@@ -97,7 +97,7 @@
 
   // Children
 
-  .field
+  & > .field
     appearance none
 
     font inherit
@@ -112,8 +112,8 @@
     &.has-addons
       padding-left 'calc(2 * %s + var(--select-field-addons-space))' % $space-normal
 
-  .addons,
-  .caret
+  & > .addons,
+  & > .caret
     position absolute
 
     display flex
@@ -125,13 +125,13 @@
 
     pointer-events none
 
-  .addons
+  & > .addons
     left $space-zero
 
-  .caret
+  & > .caret
     right $space-zero
 
-    .icon
+    & > .icon-group > .icon
       transform scale(0)
 
       transition transform $duration-shortest

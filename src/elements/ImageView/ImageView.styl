@@ -32,7 +32,7 @@
 
   // Children
 
-  img
+  & > img
     // Height
 
     &.small-sized
@@ -59,7 +59,7 @@
     &.mega-sized
       height 32em
 
-  .addons
+  & > .addons
     position absolute
 
     color var(--image-view-text)
@@ -70,8 +70,10 @@
 
     // Children
 
-    .pad
+    & > .pad
       padding $space-normal
+
+    // States
 
     &.top
       top 0
@@ -83,17 +85,29 @@
 
       background-image var(--image-view-background-overlay-t2o)
 
+  // States
+
   &.hoverable
     +mouse-only()
-      .addons
+      // Children
+
+      & > .addons
+        // States
+
         &.top
           transform translateY(-100%)
 
         &.bottom
           transform translateY(100%)
 
+      // States
+
       &:hover
-        .addons
+        // Children
+
+        & > .addons
+          // States
+
           &.top
             transform translateY(0)
 
@@ -106,7 +120,7 @@
   &.rounded
     clip-path circle()
 
-    .addons
+    & > .addons
       text-align center
 
     img

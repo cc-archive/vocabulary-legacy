@@ -28,7 +28,7 @@
     </div>
 
     <div class="caret">
-      <FontAwesomeLayers>
+      <FontAwesomeLayers class="icon-group">
         <template v-if="!isDisabled && !isReadOnly">
           <FontAwesomeIcon
             class="icon"

@@ -90,7 +90,7 @@
 
   // Children
 
-  .field
+  & > .field
     position relative
 
     display flex
@@ -126,14 +126,14 @@
       transition-duration $duration-shortest
       transition-timing-function cubic-bezier(0.85, 1.15, 0.85, 1.15)
 
-    .symbol
+    & > .symbol
       position absolute
 
       color var(--switch-field-text-color)
 
       user-select none
 
-      .text
+      & > .text
         text-align center
 
         width 1.25em
@@ -149,7 +149,9 @@
   // States
 
   &.checked
-    .field
+    // Children
+
+    & > .field
       background-color var(--switch-field-on-background-color)
 
       border-color @background-color
@@ -160,18 +162,20 @@
   &.disabled,
   &.read-only
     &.checked
-      .symbol.off
-        opacity 0
+      & > .field
+        & > .symbol.off
+          opacity 0
 
     &:not(.checked)
-      .symbol.on
-        opacity 0
+      & > .field
+        & > .symbol.on
+          opacity 0
 
   &.disabled
-    .field
+    & > .field
       opacity 0.6
 
   &.read-only
-    .field
+    & > .field
       &::after
         opacity 0.6
