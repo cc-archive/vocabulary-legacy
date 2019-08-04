@@ -6,16 +6,7 @@ describe('Heading.vue', () => {
   let propsData, slots, options
 
   beforeEach(() => {
-    let level = 1
-    let isInverted = true
-    let color = 'blue'
-    let shade = 'dark'
-    propsData = {
-      level,
-      isInverted,
-      color,
-      shade
-    }
+    propsData = {}
 
     let slot = '<span>Slot</span>'
     slots = {
@@ -28,25 +19,6 @@ describe('Heading.vue', () => {
     }
   })
 
-  it('renders correct tag', () => {
-    const wrapper = shallowMount(Heading, options)
-
-    expect(wrapper.is('h1')).toBe(true)
-  })
-
-  it('renders correct inverted style', () => {
-    const wrapper = shallowMount(Heading, options)
-
-    expect(wrapper.element.classList).toContain('inverted')
-  })
-
-  it('renders correct color style', () => {
-    const wrapper = shallowMount(Heading, options)
-
-    expect(wrapper.element.classList).toContain('blue')
-    expect(wrapper.element.classList).toContain('dark')
-  })
-
   it('renders correct slot', () => {
     const wrapper = shallowMount(Heading, options)
 
@@ -57,5 +29,31 @@ describe('Heading.vue', () => {
     const wrapper = shallowMount(Heading, options)
 
     expect(wrapper.text()).toEqual('Slot')
+  })
+
+  it('renders correct tag', () => {
+    options.propsData.level = 1
+
+    const wrapper = shallowMount(Heading, options)
+
+    expect(wrapper.is('h1')).toBe(true)
+  })
+
+  it('renders correct color', () => {
+    options.propsData.color = 'blue'
+    options.propsData.shade = 'dark'
+
+    const wrapper = shallowMount(Heading, options)
+
+    expect(wrapper.element.classList).toContain('blue-colored')
+    expect(wrapper.element.classList).toContain('dark-shaded')
+  })
+
+  it('renders correct indication', () => {
+    options.propsData.indication = 'positive'
+
+    const wrapper = shallowMount(Heading, options)
+
+    expect(wrapper.element.classList).toContain('positive-indicating')
   })
 })
