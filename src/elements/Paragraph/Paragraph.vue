@@ -1,17 +1,16 @@
 <template>
-  <p class="vocab paragraph" :class="paragraphStyles">
+  <p class="vocab paragraph" :class="paragraphClasses">
     <!-- @slot Content goes here -->
     <slot/>
   </p>
 </template>
 
 <script>
-  import Invertible from '@/mixins/invertible'
-  import Colorable from '@/mixins/colorable'
-  import Indicatable from '@/mixins/indicatable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
 
   /**
-   * ## Paragraphs are meaningful blocks of text.
+   * ### Paragraphs are meaningful blocks of text.
    *
    * In a paragraph, you write your heart out. You go into details, describe the
    * matter and get the entire bulk of the message across.
@@ -19,9 +18,8 @@
   export default {
     name: 'Paragraph',
     mixins: [
-      Colorable,
-      Invertible,
-      Indicatable
+      Colored,
+      Indicating
     ],
     props: {
       /**
@@ -35,18 +33,18 @@
           'sparse',
           'dense'
         ].includes(val)
+      },
+      color: {
+        default: 'inherit' // Overriding mixin Colorable
       }
     },
     computed: {
-      paragraphStyles: function () {
+      paragraphClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.indication,
-          this.density,
-          {
-            'inverted': this.isInverted
-          }
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+
+          this.density ? `${this.density}-packed` : ''
         ]
       }
     }

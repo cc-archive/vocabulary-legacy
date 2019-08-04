@@ -2,26 +2,36 @@
   <div class="vocab image-view" :class="imageViewClasses">
     <img
       v-bind="$attrs"
-      :src="source"
+      :class="imageClasses"
       :alt="alternateText"
-      :class="imageClasses"/>
-    <div class="top-addons" v-if="isHoverable && hasTopAddons">
-      <!-- @slot Top add-ons go here -->
-      <slot name="topAddons"/>
+      :src="source"/>
+    <div
+      v-if="isHoverable && hasTopAddons"
+      class="addons top">
+      <div class="pad">
+        <!-- @slot Top add-ons go here -->
+        <slot name="topAddons"/>
+      </div>
     </div>
-    <div class="bottom-addons" v-if="isHoverable && hasBottomAddons">
-      <!-- @slot Bottom add-ons go here -->
-      <slot name="bottomAddons">{{ title }}</slot>
+    <div
+      v-if="isHoverable && hasBottomAddons"
+      class="addons bottom">
+      <div class="pad">
+        <!-- @slot Bottom add-ons go here -->
+        <slot name="bottomAddons">
+          {{ title }}
+        </slot>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Roundable from '@/mixins/roundable'
   import Resizable from '@/mixins/resizable'
+  import Roundable from '@/mixins/roundable'
 
   /**
-   * ## An image speaks a thousand words.
+   * ### An image speaks a thousand words.
    *
    * An image is a better way to convey an idea, a message or any piece of
    * information for that matter. Images create an impact deeper than text and
@@ -29,11 +39,11 @@
    */
   export default {
     name: 'ImageView',
-    inheritAttrs: false,
     mixins: [
-      Roundable,
-      Resizable
+      Resizable,
+      Roundable
     ],
+    inheritAttrs: false,
     props: {
       /**
        * _the source of the image_
@@ -77,14 +87,15 @@
         default: false
       },
       size: {
-        default: 'none' // Overrides the default to not be `'normal'`
+        default: '' // Overrides the default to not be `'normal'`
       }
     },
     computed: {
       imageViewClasses: function () {
         return [
+          ...this.roundableClasses,
+
           {
-            'rounded': this.isRounded,
             'centered': this.isCentered,
             'hoverable': this.isHoverable
           }
@@ -92,9 +103,10 @@
       },
       imageClasses: function () {
         return [
-          this.size
+          ...this.resizableClasses
         ]
       },
+
       hasTopAddons: function () {
         return this.$slots.topAddons
       },

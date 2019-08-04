@@ -1,53 +1,75 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
 
 .vocab.statistic
-  --statistic-color $color-tone-black
+  // Color palette
+
+  --statistic-primary $color-tone-black
 
   &.inverted
-    --statistic-color $color-tone-white
+    --statistic-primary $color-tone-white
 
-  colors('--statistic-color')
+  colors('--statistic-primary')
+
+  &.positive-indicating.positive-indicating
+    --statistic-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --statistic-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --statistic-primary $color-context-negative
+
+  --statistic-secondary $color-tone-grey-dark
+
+  &.inverted
+    --statistic-secondary $color-tone-grey-light
+
+  &.positive-indicating.positive-indicating
+    --statistic-secondary $color-context-positive-dark
+
+  &.probably-indicating.probably-indicating
+    --statistic-secondary $color-context-probably-dark
+
+  &.negative-indicating.negative-indicating
+    --statistic-secondary $color-context-negative-dark
+
+  // Color
+
+  --statistic-value-color var(--statistic-primary)
+  --statistic-label-color var(--statistic-secondary)
+
+  // Rules
 
   display inline-flex
   flex-direction column
   align-items center
   justify-content flex-end
 
-  .value-wrapper
-    color var(--statistic-color)
-    font-size $size-gigantic
+  // Children
 
+  .bit
     text-align center
-
-    &.textual
-      font-size $size-huge
-      text-transform uppercase
-
-  .label-wrapper
-    color $color-tone-grey-darker
-    font-weight $weight-bold
-
-    text-align center
-
     text-transform uppercase
+
+    // States
+
+    &.value
+      color var(--statistic-value-color)
+
+      font-size $size-gigantic
+
+      &.textual
+        font-size $size-huge
+
+    &.label
+      color var(--statistic-label-color)
+
+      font-weight $weight-bold
+
+  // States
 
   &.plural
     height 100%
-
-  &.inverted
-    .label
-      color $color-tone-grey-lighter
-
-  &.positive
-    --statistic-color $color-context-positive
-
-    .label
-      color $color-context-positive-dark
-
-  &.negative
-    --statistic-color $color-context-negative
-
-    .label
-      color $color-context-negative-dark
 

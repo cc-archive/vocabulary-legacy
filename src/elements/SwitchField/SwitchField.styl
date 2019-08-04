@@ -1,71 +1,177 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/font-reset.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.switch-field
-  --switch-color $color-tone-near-black
-  colors('--switch-color')
+  // Color palette
 
-  sizes('font-size')
+  --switch-field-primary $color-tone-black
 
-  font-reset()
+  &.inverted
+    --switch-field-primary $color-tone-white
+
+  colors('--switch-field-primary')
+
+  &.positive-indicating.positive-indicating
+    --switch-field-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --switch-field-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --switch-field-primary $color-context-negative
+
+  &.conditional-indicating.conditional-indicating
+    --switch-field-primary $color-context-positive
+
+  --switch-field-secondary $color-tone-grey-dark
+
+  &.inverted
+    --switch-field-secondary $color-tone-grey-light
+
+  &.positive-indicating.positive-indicating
+    --switch-field-secondary $color-context-positive-light
+
+  &.probably-indicating.probably-indicating
+    --switch-field-secondary $color-context-probably-light
+
+  &.negative-indicating.negative-indicating
+    --switch-field-secondary $color-context-negative-light
+
+  &.conditional-indicating.conditional-indicating
+    --switch-field-secondary $color-context-negative
+
+  --switch-field-tertiary $color-tone-white
+
+  &.inverted
+    --switch-field-tertiary $color-tone-black
+
+  // Color
+
+  --switch-field-off-background-color var(--switch-field-secondary)
+  --switch-field-on-background-color var(--switch-field-primary)
+
+  --switch-field-handle-color var(--switch-field-tertiary)
+  --switch-field-text-color var(--switch-field-tertiary)
+
+  &.positive-indicating.positive-indicating
+    &:not(.checked)
+      --switch-field-text-color $color-context-positive-dark
+
+  &.probably-indicating.probably-indicating
+    &:not(.checked)
+      --switch-field-text-color $color-context-probably-dark
+
+  &.negative-indicating.negative-indicating
+    &:not(.checked)
+      --switch-field-text-color $color-context-negative-dark
+
+  // Cursor
+
+  --switch-field-cursor pointer
+
+  &.disabled
+    --switch-field-cursor not-allowed
+
+  &.read-only
+    --switch-field-cursor default
+
+  // Rules
 
   display inline-block
-  vertical-align bottom
+  vertical-align middle
 
-  cursor pointer
+  font-reset()
+  sizes('font-size')
+
+  cursor var(--switch-field-cursor)
+
+  // Children
 
   .field
-
-    display block
-    width 2em
-    height 1em
-
-    background-color $color-tone-grey-dark
-    border 1px solid @background-color
-
     position relative
 
-    transition 0.25s background-color, 0.25s border-color
+    display flex
+    justify-content center
+    align-items center
 
-    &:after
+    background-color var(--switch-field-off-background-color)
+
+    width 3em
+    height 1.25em
+
+    border-width $space-small
+    border-style solid
+    border-color @background-color
+
+    transition-property background-color, border-color
+    transition-duration $duration-shortest
+
+    // Children
+
+    &::after
       content ''
-
-      width 1em
-      height 1em
-
-      background-color $color-tone-white
 
       position absolute
       left 0
 
-      transition 0.25s left, 0.25s transform
+      background-color var(--switch-field-handle-color)
 
-  .field.checked
-    background-color var(--switch-color)
-    border-color @background-color
+      width 1.25em
+      height 1.25em
 
-    &:after
-      left 100%
-      transform translateX(-100%)
+      transition-property left, transform
+      transition-duration $duration-shortest
+      transition-timing-function cubic-bezier(0.85, 1.15, 0.85, 1.15)
 
+    .symbol
+      position absolute
 
-  &.positive
-    --switch-color $color-context-positive
+      color var(--switch-field-text-color)
 
-    .field:not(.checked)
-      background-color $color-context-positive-light
+      user-select none
 
-  &.negative
-    --switch-color $color-context-negative
+      .text
+        text-align center
 
-    .field:not(.checked)
-      background-color $color-context-negative-light
+        width 1.25em
+
+      // States
+
+      &.off
+        right 0
+
+      &.on
+        left 0
+
+  // States
+
+  &.checked
+    .field
+      background-color var(--switch-field-on-background-color)
+
+      border-color @background-color
+
+      &::after
+        left calc(100% - 1.25em)
+
+  &.disabled,
+  &.read-only
+    &.checked
+      .symbol.off
+        opacity 0
+
+    &:not(.checked)
+      .symbol.on
+        opacity 0
 
   &.disabled
-    cursor auto
-
     .field
-      &:after
-        background-color rgb(146, 149, 149)
+      opacity 0.6
+
+  &.read-only
+    .field
+      &::after
+        opacity 0.6

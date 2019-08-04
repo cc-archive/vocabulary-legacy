@@ -1,80 +1,137 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/font-reset.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.button
-  --button-color $color-tone-grey-dark
-  colors('--button-color')
+  // Color palette
 
-  sizes('font-size')
+  --button-primary $color-tone-grey-dark
 
-  color $color-tone-white
-  font-reset()
-  font-weight $weight-bold
-  white-space nowrap
+  &.inverted
+    --button-primary $color-tone-grey-light
 
-  background-color var(--button-color)
-  cursor pointer
+  colors('--button-primary')
+
+  &.positive-indicating.positive-indicating
+    --button-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --button-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --button-primary $color-context-negative
+
+  --button-secondary $color-tone-white
+
+  &.inverted
+    --button-secondary $color-tone-black
+
+  --button-overlay $color-overlay-white-low
+
+  &.inverted
+    --button-overlay $color-overlay-black-low
+
+  // Color
+
+  --button-background-color var(--button-primary)
+  --button-text-color var(--button-secondary)
+  --button-border-color var(--button-primary)
+  --button-background-overlay linear-gradient(
+    var(--button-overlay),
+    var(--button-overlay)
+  )
+
+  &.basic,
+  &.ghost
+    --button-background-color transparent
+    --button-text-color var(--button-primary)
+
+    &:hover
+      --button-background-color var(--button-primary)
+      --button-text-color var(--button-secondary)
+
+  &.ghost
+    --button-border-color transparent
+
+  &.call-to-action
+    --button-border-color transparent
+
+  // Cursor
+
+  --button-cursor pointer
+
+  &.disabled
+    --button-cursor not-allowed
+
+  // Border radius
+
+  --button-border-radius $radius-zero
+
+  &.rounded
+    --button-border-radius $radius-pill
+
+  // Rules
 
   display inline-flex
   flex-direction row
   align-items center
 
+  color var(--button-text-color)
+
+  font-reset()
+  sizes('font-size')
+  font-weight $weight-bold
+
+  white-space nowrap
+
+  cursor var(--button-cursor)
+
+  background-color var(--button-background-color)
+
   padding $space-zero
 
-  border 1px solid var(--button-color)
+  border 1px solid var(--button-border-color)
+  border-radius var(--button-border-radius)
 
-  transition 0.25s background-color, 0.25s background-image, 0.25s color
+  transition-property color, background-color, border-color
+  transition-duration $duration-shortest
 
-  .addons
-    padding $space-normal
+  // Children
 
   .content
     padding $space-normal
 
     &.has-addons
-      border-left 1px solid var(--button-color)
+      border-left 1px solid var(--button-border-color)
 
-      transition 0.25s border
+  .addons
+    padding $space-normal
+
+  // States
 
   &:hover
-    background-image linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0.15) 0%,
-            rgba(255, 255, 255, 0.15) 100%
-    )
+    background-image var(--button-background-overlay)
 
-  &.basic
-    color var(--button-color)
-    background-color transparent
+  &:active
+    background-image none
 
-    &:hover
-      color $color-tone-white
-      background-color var(--button-color)
-
-      .content
-        border-color $color-tone-white
-
-  &.rounded
-    border-radius $radius-pills
-
-  &.negative
-    --button-color $color-context-negative
-
-  &.positive
-    --button-color $color-context-positive
+  // Styles
 
   &.disabled
-    --button-color $color-tone-near-white
-
-    color rgb(146, 149, 149)
-    text-decoration line-through
-
     opacity 0.6
 
-    cursor auto
+    text-decoration line-through
+    background-image none
 
-    &:hover
-      background-image none
+  &.call-to-action
+    padding-right $space-large
 
+    clip-path polygon(
+      0% 0%,
+      calc(100% - 1em) 0%,
+      100% 50%,
+      calc(100% - 1em) 100%,
+      0% 100%
+    )

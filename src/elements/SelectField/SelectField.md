@@ -1,16 +1,16 @@
-## Examples
-
-A dropdown looks like this.
+A select field looks like this.
 
 ```jsx
 <SelectField
+  color="orange"
   icon="vote-yea"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  :option-list="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  is-basic/>
 ```
 
 ### Color set
 
-A dropdown unless colored is grey.
+A select field, unless colored, is grey.
 
 ```jsx
 <SelectField
@@ -21,120 +21,183 @@ Looks quite drab, we know. So they can be colored with any color from the set
 provided by CC Vocabulary.
 
 ```jsx
-<SelectField
-  color="blue"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="green"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="magenta"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="olive"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="orange"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="purple"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="red"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="sand"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="yellow"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
+<Grid>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="blue"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="green"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="magenta"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="olive"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="orange"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="purple"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="red"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="sand"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <SelectField
+      color="yellow"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+</Grid>
 ``` 
 
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<SelectField
-  color="blue"
-  shade="light"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="blue"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="blue"
-  shade="dark"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
-<SelectField
-  color="blue"
-  shade="darker"
-  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
-<br/><br/>
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <SelectField
+      color="blue"
+      shade="light"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <SelectField
+      color="blue"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <SelectField
+      color="blue"
+      shade="dark"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <SelectField
+      color="blue"
+      shade="darker"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
+  </GridCell>
+</Grid>
+```
+
+On a dark or non-white background, the inverted version of the component should
+be used.
+
+```jsx { "props": { "className": "dark-background" } }
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SelectField
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      is-inverted/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SelectField
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      is-inverted
+      is-basic/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SelectField
+      color="magenta"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      is-inverted/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SelectField
+      color="magenta"
+      :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+      is-inverted
+      is-basic/>
+  </GridCell>
+</Grid>
 ```
 
 ### Add-on set
 
-A dropdown can contain an icon to act as a visual aid as to what the choice is 
-about. Note that the icon must be added to the FontAwesome library by the 
+A select field can contain an icon to act as a visual aid as to what the choice
+is about. Note that the icon must be added to the FontAwesome library by the
 application.
 
 ```jsx
 <SelectField
-  color="magenta"
+  color="red"
   icon="vote-yea"
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"/>
 ```
 
 If you'd like your own something there, you can override the add-on slot with 
 something you like. This is not very flexible as there is a `1.25em` width limit
-by default. To increase the limit, increase the value of padding-left on the 
-field.
+by default. To increase the limit, set the CSS custom property 
+`--select-field-addons-space` on the element like so.
 
 ```css
-.vocab.select > .field {
-    padding-left: <new space>;
+.vocab.select-field {
+    ---select-field-addons-space: 2.5em;
 }
 ```
 
+See it in action.
+
 ```jsx
 <SelectField
-  color="magenta"
-  :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]">
-  <template v-slot:addons>
-    <LicenseIconography :iconList="['']"/>
+  color="green"
+  :optionList="[{value: 'by', text: 'CC BY'}, {value: 'oth', text: 'Other license'}]"
+  style="--select-field-addons-space: 2.5em;">
+  <template #addons>
+    <LicenseIconography :icon-list="['', 'by']"/>
   </template>
-</Dropdown>
+</SelectField>
 ```
 
 ### Style set
 
-A dropdown can be defined to not attract attention, unless given attention via 
-means of a hover.
+A select field can be defined to not attract attention, unless given attention
+via means of a hover.
 
 ```jsx
 <SelectField
-  color="red"
+  color="orange"
   icon="vote-yea"
   :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
   is-basic/>
 ```
 
+A select field can be defined to deny attention, unless very specifically given
+attention by the user.
+
+```jsx
+<SelectField
+  color="blue"
+  icon="vote-yea"
+  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  is-ghost/>
+```
+
 
 ### Size set
 
-Dropdowns come in all sizes, from small to mega.
+Select fields come in all sizes, from small to mega.
 
 ```jsx { "props": { "className": "contain-content" } }
 <SelectField
@@ -179,21 +242,27 @@ Dropdowns come in all sizes, from small to mega.
 
 ### Indication set
 
-A dropdown may indicate a negative or positive choice. For example, in this case
-deleting permanently is a destructive action whereas restoring to safety is not.
-The dropdown changes color to reflect this.
+A select field may indicate a negative, ambiguous or positive choice. For
+example, in this case deleting permanently is a destructive action whereas
+restoring to safety is not. The dropdown changes color to reflect this.
 
 ```jsx
-let value = 'del'
+let value = 'meh';
+let options = [
+  {value: 'del', text: 'Delete file'}, 
+  {value: 'meh', text: 'Hide file'}, 
+  {value: 'res', text: 'Keep file'}
+];
+
 <SelectField
-  :optionList="[{value: 'del', text: 'Delete permanently'}, {value: 'res', text: 'Restore to safety'}]"
-  :indication="value === 'res' ? 'positive' : 'negative'"
+  :optionList="options"
+  :indication="value === 'res' ? 'positive' : value === 'del' ? 'negative' : 'probably'"
   v-model="value"/>
 ```
 
 ### State set
 
-A dropdown may be disabled to prevent input altogether.
+A select field may be disabled to prevent input altogether.
 
 ```jsx
 <SelectField
@@ -201,12 +270,21 @@ A dropdown may be disabled to prevent input altogether.
   is-disabled/>
 ```
 
+A select field may be made read-only to prevent input while maintaining 
+readability as an output-only control.
+
+```jsx
+<SelectField
+  :optionList="[{value: 'a', text: 'Option A'}, {value: 'b', text: 'Option B'}]"
+  is-read-only/>
+```
+
 ### Attributes
 
 All attributes that you could pass to an `select` tag can be passed to the 
-`Dropdown` component.
+`SelectField` component.
 
-So a dropdown may have a `name` and a `value`.
+So a select field may have a `name` and a `value`.
 
 ```jsx
 <SelectField

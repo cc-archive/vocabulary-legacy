@@ -1,35 +1,44 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
 
 .vocab.heading
-  margin $space-zero $space-zero $space-small $space-zero
-  color inherit
+  //Color
 
-  colors('color')
+  colors('--heading-color')
 
-  &.inverted
-    color $color-tone-white
+  &.positive-indicating.positive-indicating
+    --heading-color $color-context-positive
 
-  &.positive
-    color $color-context-positive
+  &.probably-indicating.probably-indicating
+    --heading-color $color-context-probably
 
-  &.negative
-    color $color-context-negative
+  &.negative-indicating.negative-indicating
+    --heading-color $color-context-negative
 
-h1.vocab.heading
-  font-size $size-mega
+  // Font size
 
-h2.vocab.heading
-  font-size $size-gigantic
+  h1&
+    --heading-font-size $size-mega
 
-h3.vocab.heading
-  font-size $size-enormous
+  h2&
+    --heading-font-size $size-gigantic
 
-h4.vocab.heading
-  font-size $size-huge
+  h3&
+    --heading-font-size $size-enormous
 
-h5.vocab.heading
-  font-size $size-large
+  h4&
+    --heading-font-size $size-huge
 
-h6.vocab.heading
-  font-size $size-big
+  h5&
+    --heading-font-size $size-large
+
+  h6&
+    --heading-font-size $size-big
+
+  // Rules
+
+  color var(--heading-color)
+  font-size var(--heading-font-size)
+
+  margin $space-zero $space-zero $rspace-normal $space-zero

@@ -1,10 +1,10 @@
 <template>
-  <span class="license-icons">
+  <span class="vocab license-icons">
     <FontAwesomeIcon
-      v-for="(icon, index) in iconList"
+      v-for="(icon, index) in processedIconList"
       :key="index"
-      :icon="['fab', `creative-commons${icon ? '-' : ''}${icon}`]"
-      class="icon"/>
+      :icon="['fab', icon]"
+      fixed-width/>
   </span>
 </template>
 
@@ -44,7 +44,7 @@
   )
 
   /**
-   * ## License icons are hieroglyphs for the aspects of a license.
+   * ### License icons are hieroglyphs for the aspects of a license.
    *
    * A license icon represents an aspect of a license such as shareability and
    * commercial usability in pictorial form.
@@ -83,9 +83,13 @@
           ].includes(icon)
         )
       }
+    },
+    computed: {
+      processedIconList: function () {
+        return this.iconList.map(icon => {
+          return `creative-commons${icon ? '-' : ''}${icon}`
+        })
+      }
     }
   }
 </script>
-
-<style lang="stylus" src="./LicenseIconography.styl">
-</style>

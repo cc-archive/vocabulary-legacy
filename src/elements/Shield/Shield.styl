@@ -1,27 +1,56 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.shield
+  // Color
+
+  --shield-message-color $color-tone-grey-dark
+
+  &.inverted
+    --shield-message-color $color-tone-grey-light
+
+  colors('--shield-message-color')
+
+  &.positive-indicating.positive-indicating
+    --shield-message-color $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --shield-message-color $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --shield-message-color $color-context-negative
+
+  --shield-label-color $color-tone-near-black
+
+  &.inverted
+    --shield-label-color $color-tone-near-white
+
+  --shield-text-color $color-tone-white
+
+  &.inverted
+    --shield-text-color $color-tone-black
+
+  // Rules
+
   display inline-flex
   flex-direction row
   align-items center
 
-  color $color-tone-white
-
-  --chosen-color: $color-tone-grey-light
-  colors('--chosen-color')
+  color var(--shield-text-color)
 
   sizes('font-size')
 
-  .label
-    text-transform lowercase
-
-    background-color $color-tone-near-black
-
+  .bit
     padding $space-normal
 
-  .message
-    background-color var(--chosen-color)
+    &.label
+      background-color var(--shield-label-color)
 
-    padding $space-normal
+    &.message
+      background-color var(--shield-message-color)
+      font-weight $weight-bold
+
+    &.lowercased
+      text-transform lowercase

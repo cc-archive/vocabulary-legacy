@@ -1,29 +1,39 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
 
-p,
 .vocab.paragraph
-  color inherit
-  colors('color')
+  // Color
+  colors('--paragraph-color')
+
+  &.positive-indicating.positive-indicating
+    --paragraph-color $color-context-positive-dark
+
+  &.probably-indicating.probably-indicating
+    --paragraph-color $color-context-probably-dark
+
+  &.negative-indicating.negative-indicating
+    --paragraph-color $color-context-negative-dark
+
+  // Line height
+
+  // Average
+  --paragraph-line-height 1.409
+
+  &.sparse-packed
+    // Golden ratio
+    --paragraph-line-height 1.618
+
+  &.dense-packed
+    // Minimum readable
+    --paragraph-line-height 1.2
+
+  // Rules
+
+  color var(--paragraph-color)
+  line-height var(--paragraph-line-height)
 
   margin $space-zero $space-zero $space-large $space-zero
 
   &:last-of-type
     margin-bottom $space-zero
-
-  line-height 1.5 // most popular
-
-  &.sparse
-    line-height 1.618 // golden ratio
-
-  &.dense
-    line-height 1.2 // minimum comfortable for reading
-
-  &.inverted
-    color $color-tone-white
-
-  &.positive
-    color $color-context-positive-dark
-
-  &.negative
-    color $color-context-negative-dark

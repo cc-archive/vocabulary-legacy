@@ -1,11 +1,11 @@
 <template>
   <div class="vocab statistic" :class="statisticClasses">
-    <div class="value-wrapper" :class="valueWrapperClasses">
-      <span class="value-addons" v-if="hasValueAddons">
+    <div class="bit value" :class="valueWrapperClasses">
+      <span class="value addons" v-if="hasValueAddons">
         <!-- @slot Value addons go here -->
         <slot name="valueAddons">
           <FontAwesomeIcon
-            v-if="hasValueIcon"
+            v-if="iconSet[0]"
             :icon="['fas', iconSet[0]]"
             fixed-width/>
         </slot>
@@ -15,12 +15,12 @@
         <slot>{{ value }}</slot>
       </span>
     </div>
-    <div class="label-wrapper">
-      <span class="label-addons" v-if="hasLabelAddons">
+    <div class="bit label">
+      <span class="addons label" v-if="hasLabelAddons">
         <!-- @slot Label addons go here -->
         <slot name="labelAddons">
           <FontAwesomeIcon
-            v-if="hasLabelIcon"
+            v-if="iconSet[1]"
             :icon="['fas', iconSet[1]]"
             fixed-width/>
         </slot>
@@ -38,9 +38,9 @@
   import { faChartLine } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Colorable from '@/mixins/colorable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
   import Invertible from '@/mixins/invertible'
-  import Indicatable from '@/mixins/indicatable'
 
   library.add(faChartLine)
 
@@ -53,9 +53,9 @@
   export default {
     name: 'Statistic',
     mixins: [
-      Colorable,
-      Invertible,
-      Indicatable
+      Colored,
+      Indicating,
+      Invertible
     ],
     components: {
       FontAwesomeIcon
@@ -97,18 +97,18 @@
       iconSet: {
         type: Array,
         validator: val => val.length === 2,
-        default: () => ['', '']
+        default: () => [null, null]
       }
     },
     computed: {
       statisticClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.indication,
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+
           {
-            'plural': this.isPlural,
-            'inverted': this.isInverted
+            'plural': this.isPlural
           }
         ]
       },
@@ -119,17 +119,12 @@
           }
         ]
       },
-      hasValueIcon: function () {
-        return this.iconSet[0] !== ''
-      },
+
       hasValueAddons: function () {
-        return this.hasValueIcon || this.$slots.valueAddons
-      },
-      hasLabelIcon: function () {
-        return this.iconSet[1] !== ''
+        return this.iconSet[0] || this.$slots.valueAddons
       },
       hasLabelAddons: function () {
-        return this.hasLabelIcon || this.$slots.labelAddons
+        return this.iconSet[1] || this.$slots.labelAddons
       }
     }
   }

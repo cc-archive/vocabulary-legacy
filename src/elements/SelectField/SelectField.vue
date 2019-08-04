@@ -1,11 +1,14 @@
 <template>
   <div class="vocab select-field" :class="selectFieldClasses">
+    <!-- Wrap with label when using -->
     <select
       v-bind="$attrs"
       v-on="selectListeners"
       class="field"
-      :disabled="isDisabled"
-      :class="fieldClasses">
+      :class="fieldClasses"
+      :disabled="isDisabled || isReadOnly"
+      @focus="toggleDropdown"
+      @blur="toggleDropdown">
       <option
         v-for="(option, index) in optionList"
         :key="index"
@@ -13,68 +16,95 @@
         {{ option.text }}
       </option>
     </select>
+
     <div class="addons" v-if="hasAddons">
       <!-- @slot Addons go here -->
       <slot name="addons">
         <FontAwesomeIcon
-          v-if="hasIcon"
+          v-if="icon"
           :icon="['fas', icon]"
           fixed-width/>
       </slot>
     </div>
+
     <div class="caret">
-      <FontAwesomeIcon
-        :icon="['fas', 'angle-down']"
-        fixed-width/>
+      <FontAwesomeLayers>
+        <template v-if="!isDisabled && !isReadOnly">
+          <FontAwesomeIcon
+            :class="{active: isContentVisible}"
+            :icon="['fas', 'angle-up']"
+            fixed-width/>
+          <FontAwesomeIcon
+            :class="{active: !isContentVisible}"
+            :icon="['fas', 'angle-down']"
+            fixed-width/>
+        </template>
+        <template v-else>
+          <FontAwesomeIcon
+            v-if="isDisabled"
+            :icon="['fas', 'ban']"
+            fixed-width/>
+          <FontAwesomeIcon
+            v-if="isReadOnly"
+            :icon="['fas', 'eye']"
+            fixed-width/>
+        </template>
+      </FontAwesomeLayers>
     </div>
   </div>
 </template>
 
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import { faAngleDown, faVoteYea } from '@fortawesome/free-solid-svg-icons'
-  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+  import {
+    faVoteYea,
+    faAngleDown,
+    faAngleUp,
+    faBan,
+    faEye
+  } from '@fortawesome/free-solid-svg-icons'
+  import {
+    FontAwesomeIcon,
+    FontAwesomeLayers
+  } from '@fortawesome/vue-fontawesome'
 
-  import Colorable from '@/mixins/colorable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
+  import Invertible from '@/mixins/invertible'
   import Resizable from '@/mixins/resizable'
-  import Basicable from '@/mixins/basicable'
-  import Disableable from '@/mixins/disableable'
-  import Indicatable from '@/mixins/indicatable'
+  import Simplifiable from '@/mixins/simplifiable'
+  import Unactionable from '@/mixins/unactionable'
 
-  library.add(faVoteYea, faAngleDown)
+  library.add(faVoteYea, faAngleDown, faAngleUp, faBan, faEye)
 
   /**
-   * ## Select fields presents discoverable content.
+   * ### Select fields presents discoverable content.
    *
    * A select field allows a user to choose one or more options from many.
-   * It is an alternative to radio buttons if choosing one and to checkboxes if
-   * choosing many.
+   * It presents a standard alternative to radio buttons if choosing one and to
+   * checkboxes if choosing many.
    */
   export default {
     name: 'SelectField',
-    inheritAttrs: false,
-    mixins: [
-      Colorable,
-      Resizable,
-      Basicable,
-      Disableable,
-      Indicatable
-    ],
     components: {
-      FontAwesomeIcon
+      FontAwesomeIcon,
+      FontAwesomeLayers
     },
-    data: function () {
-      return {
-        isContentVisible: false
-      }
-    },
+    mixins: [
+      Colored,
+      Indicating,
+      Invertible,
+      Resizable,
+      Simplifiable,
+      Unactionable
+    ],
+    inheritAttrs: false,
     props: {
       /**
        * _an icon to use in the dropdown_
        */
       icon: {
-        type: String,
-        default: ''
+        type: String
       },
       /**
        * _the list of options to choose from_
@@ -84,30 +114,32 @@
         required: true
       }
     },
+    data: function () {
+      return {
+        isContentVisible: false
+      }
+    },
     computed: {
       selectFieldClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.size,
-          this.indication,
-          {
-            'basic': this.isBasic,
-            'disabled': this.isDisabled
-          }
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+          ...this.resizableClasses,
+          ...this.simplifiableClasses,
+          ...this.unactionableClasses
         ]
-      },
-      hasIcon: function () {
-        return this.icon !== ''
-      },
-      hasAddons: function () {
-        return this.hasIcon || this.$slots.addons
       },
       fieldClasses: function () {
         return {
           'has-addons': this.hasAddons
         }
       },
+
+      hasAddons: function () {
+        return this.icon || this.$slots.addons
+      },
+
       selectListeners: function () {
         let vm = this
         return Object.assign(

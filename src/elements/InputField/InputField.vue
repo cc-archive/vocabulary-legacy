@@ -1,25 +1,33 @@
 <template>
   <div class="vocab input-field" :class="inputFieldClasses">
+    <!-- Wrap with label when using -->
     <input
       v-bind="$attrs"
       v-on="inputListeners"
       class="field"
+      :class="fieldClasses"
       :disabled="isDisabled"
-      :class="fieldClasses">
-    <div class="left-addons" v-if="hasLeftAddons">
+      :readonly="isReadOnly">
+
+    <div
+      v-if="hasLeftAddons"
+      class="left addons">
       <!-- @slot Left-side addons go here -->
       <slot name="leftAddons">
         <FontAwesomeIcon
-          v-if="hasLeftIcon"
+          v-if="iconSet[0]"
           :icon="['fas', iconSet[0]]"
           fixed-width/>
       </slot>
     </div>
-    <div class="right-addons" v-if="hasRightAddons">
+
+    <div
+      v-if="hasRightAddons"
+      class="right addons">
       <!-- @slot Right-side addons go here -->
       <slot name="rightAddons">
         <FontAwesomeIcon
-          v-if="hasRightIcon"
+          v-if="iconSet[1]"
           :icon="['fas', iconSet[1]]"
           fixed-width/>
       </slot>
@@ -29,38 +37,38 @@
 
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import {
-    faKeyboard
-  } from '@fortawesome/free-solid-svg-icons'
+  import { faKeyboard } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Colorable from '@/mixins/colorable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
+  import Invertible from '@/mixins/invertible'
   import Resizeable from '@/mixins/resizable'
-  import Basicable from '@/mixins/basicable'
-  import Disableable from '@/mixins/disableable'
-  import Indicatable from '@/mixins/indicatable'
+  import Simplifiable from '@/mixins/simplifiable'
+  import Unactionable from '@/mixins/unactionable'
 
   library.add(faKeyboard)
 
   /**
-   * ## Inputs fields accept user input, duh!
+   * ### Inputs fields accept user input, duh!
    *
    * Input fields form the basis of forms, the primary method of receiving input
    * from the user, be it text, email addresses, passwords, dates or numbers.
    */
   export default {
     name: 'InputField',
-    inheritAttrs: false,
-    mixins: [
-      Colorable,
-      Resizeable,
-      Basicable,
-      Disableable,
-      Indicatable
-    ],
     components: {
       FontAwesomeIcon
     },
+    mixins: [
+      Colored,
+      Indicating,
+      Invertible,
+      Resizeable,
+      Simplifiable,
+      Unactionable
+    ],
+    inheritAttrs: false,
     props: {
       /**
        * _an array specifying the left and right icon_
@@ -69,41 +77,37 @@
        */
       iconSet: {
         type: Array,
-        default: () => ['', ''],
-        validator: val => val.length === 2
+        validator: val => val.length === 2,
+        default: () => [null, null]
       }
     },
     computed: {
       inputFieldClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.size,
-          this.indication,
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+          ...this.resizableClasses,
+          ...this.simplifiableClasses,
+          ...this.unactionableClasses
+        ]
+      },
+      fieldClasses: function () {
+        return [
           {
-            'disabled': this.isDisabled,
-            'basic': this.isBasic
+            'has-left-addons': this.hasLeftAddons,
+            'has-right-addons': this.hasRightAddons
           }
         ]
       },
-      hasLeftIcon: function () {
-        return this.iconSet[0] !== ''
-      },
+
       hasLeftAddons: function () {
-        return this.hasLeftIcon || this.$slots.leftAddons
-      },
-      hasRightIcon: function () {
-        return this.iconSet[1] !== ''
+        return this.iconSet[0] || this.$slots.leftAddons
       },
       hasRightAddons: function () {
-        return this.hasRightIcon || this.$slots.rightAddons
+        return this.iconSet[1] || this.$slots.rightAddons
       },
-      fieldClasses: function () {
-        return {
-          'has-left-addons': this.hasLeftAddons,
-          'has-right-addons': this.hasRightAddons
-        }
-      },
+
       inputListeners: function () {
         let vm = this
         return Object.assign(

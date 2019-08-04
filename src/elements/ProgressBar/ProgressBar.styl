@@ -1,63 +1,108 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.progress-bar
-  --progress-color $color-tone-black
-  --bar-color $color-tone-grey-lighter
-  colors('--progress-color')
+  // Color palette
 
-  sizes('font-size')
+  --progress-bar-primary $color-tone-black
+
+  &.inverted
+    --progress-bar-primary $color-tone-white
+
+  colors('--progress-bar-primary')
+
+  &.positive-indicating.positive-indicating
+    --progress-bar-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --progress-bar-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --progress-bar-primary $color-context-negative
+
+  --progress-bar-secondary $color-tone-grey-lighter
+
+  &.inverted
+    --progress-bar-secondary $color-tone-grey-darker
+
+  --progress-bar-tertiary var(--progress-bar-primary)
+
+  &.positive-indicating.positive-indicating
+    --progress-bar-tertiary $color-context-positive-dark
+
+  &.probably-indicating.probably-indicating
+    --progress-bar-tertiary $color-context-probably-dark
+
+  &.negative-indicating.negative-indicating
+    --progress-bar-tertiary $color-context-negative-dark
+
+  // Color
+
+  --progress-bar-bar-color var(--progress-bar-primary)
+  --progress-bar-rail-color var(--progress-bar-secondary)
+  --progress-bar-text-color var(--progress-bar-tertiary)
+
+  // Rules
 
   display inline-flex
   flex-direction row
   align-items center
 
+  sizes('font-size')
+
+  // Children
+
+  .addons
+    color var(--progress-bar-text-color)
+
+    &.left
+      padding-right $space-normal
+
+    &.right
+      padding-left $space-normal
+
   .bar
     appearance none
 
-    background-color var(--bar-color)
+    background-color var(--progress-bar-rail-color)
+
+    cursor progress
 
     border none
 
-    margin-right $space-normal
+    // States
 
     &[value]
-      &::-moz-progress-bar
-        background-color var(--progress-color)
+      &::-moz-progress-bar,
+      &::-webkit-progress-value
+        background-color var(--progress-bar-bar-color)
+        transition width $duration-shortest
 
       &::-webkit-progress-bar
-        background-color var(--bar-color)
-
-      &::-webkit-progress-value
-        background-color var(--progress-color)
+        background-color var(--progress-bar-rail-color)
 
     &:indeterminate
       background-image linear-gradient(
-              90deg,
-              var(--progress-color) 30%,
-              var(--bar-color) 30%
+        90deg,
+        var(--progress-bar-bar-color) 33%,
+        var(--progress-bar-rail-color) 33%
       )
       background-repeat no-repeat
       background-size 150% 150%
 
       animation moveIndeterminate 1s linear infinite
 
-      &::-moz-progress-bar
-        background-color transparent
-
+      &::-moz-progress-bar,
       &::-webkit-progress-bar
         background-color transparent
 
-  &.positive
-    --progress-color $color-context-positive
+    &.has-left-addons
+      margin-left $space-normal
 
-  &.negative
-    --progress-color $color-context-negative
-
-  &.inverted
-    color $color-tone-white
-    --bar-color $color-tone-grey-darker
+    &.has-right-addons
+      margin-right $space-normal
 
 @keyframes moveIndeterminate
   from

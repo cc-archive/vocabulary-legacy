@@ -1,90 +1,167 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/font-reset.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.input-field
-  --input-color $color-tone-grey-dark
-  colors('--input-color')
+  // Color palette
 
-  sizes('font-size')
+  --input-field-primary $color-tone-grey-dark
 
-  font-reset()
+  &.inverted
+    --input-field-primary $color-tone-grey-light
 
-  background-color $color-tone-white
+  colors('--input-field-primary')
+
+  &.positive-indicating.positive-indicating
+    --input-field-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --input-field-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --input-field-primary $color-context-negative
+
+  --input-field-secondary $color-tone-white
+
+  &.inverted
+    --input-field-secondary $color-tone-black
+
+  --input-field-tertiary $color-tone-black
+
+  &.inverted
+    --input-field-tertiary $color-tone-white
+
+  &.positive-indicating.positive-indicating
+    --input-field-tertiary $color-context-positive-dark
+
+  &.probably-indicating.probably-indicating
+    --input-field-tertiary $color-context-probably-dark
+
+  &.negative-indicating.negative-indicating
+    --input-field-tertiary $color-context-negative-dark
+
+  --input-field-overlay $color-overlay-white-low
+
+  &.inverted
+    --input-field-overlay $color-overlay-black-low
+
+  // Color
+
+  --input-field-background-color transparent
+  --input-field-text-color var(--input-field-tertiary)
+
+  --input-field-addons-background-color var(--input-field-primary)
+  --input-field-addons-text-color var(--input-field-secondary)
+  --input-field-addons-background-overlay linear-gradient(
+    var(--input-field-overlay),
+    var(--input-field-overlay)
+  )
+
+  --input-field-border-color var(--input-field-primary)
+
+  &.basic
+    --input-field-addons-background-color transparent
+    --input-field-addons-text-color var(--input-field-primary)
+
+    &:focus-within
+      --input-field-addons-background-color var(--input-field-primary)
+      --input-field-addons-text-color var(--input-field-secondary)
+
+  &.ghost
+    --input-field-addons-background-color transparent
+    --input-field-addons-text-color var(--input-field-tertiary)
+    --input-field-border-color transparent
+
+    &:focus-within
+      --input-field-addons-text-color var(--input-field-primary)
+
+  // Cursor
+
+  --input-field-cursor text
+
+  &.read-only
+    --input-field-cursor default
+
+  &.disabled
+    --input-field-cursor not-allowed
+
+  // Rules
+
+  position relative
 
   display inline-flex
   flex-direction row
 
-  position relative
+  color var(--input-field-text-color)
 
-  border 1px solid var(--input-color)
+  font-reset()
+  sizes('font-size')
+
+  background-color var(--input-field-background-color)
+
+  cursor var(--input-field-cursor)
+
+  border 1px solid var(--input-field-border-color)
+
+  // Children
 
   .field
+    appearance none
+
+    color inherit
+
     font inherit
+
+    cursor inherit
+
     background-color inherit
 
     padding $space-normal
 
     border transparent
 
+    // Children
+
     &::placeholder
       color var(--input-color)
 
-  .left-addons
-    order -1
+    &[type="text"],
+    &[type="email"],
+    &[type="url"],
+    &[type="number"]
+      width 10em
 
-  .right-addons
-    order 1
-
-  .left-addons,
-  .right-addons
-    color $color-tone-white
-    background-color var(--input-color)
-
+  .addons
     display flex
     flex-direction column
     justify-content center
     align-items center
 
+    color var(--input-field-addons-text-color)
+
+    background-color var(--input-field-addons-background-color)
+
     padding $space-normal
 
-    transition 0.25s color, 0.25s background-color
+    transition-property color, background-color
+    transition-duration $duration-shortest
+
+    &.left
+      order -1
+
+    &.right
+      order 1
 
   &:focus-within
-    .left-addons,
-    .right-addons
-      background-image linear-gradient(
-              0deg,
-              rgba(255, 255, 255, 0.15) 0%,
-              rgba(255, 255, 255, 0.15) 100%
-      )
-
-  &.basic
-    .left-addons,
-    .right-addons
-      color var(--input-color)
-      background-color transparent
-
-    &:focus-within
-      .left-addons,
-      .right-addons
-        color $color-tone-white
-        background-color var(--input-color)
-
-  &.negative
-    --input-color $color-context-negative
-    background-color $color-context-negative-light
-
-  &.positive
-    --input-color $color-context-positive
-    background-color $color-context-positive-light
+    .addons
+      background-image var(--input-field-addons-background-overlay)
 
   &.disabled
-    --input-color rgb(146, 149, 149)
-    background-color $color-tone-near-white
-
     opacity 0.6
+
+    background-image none
 
     .field::placeholder
       text-decoration line-through

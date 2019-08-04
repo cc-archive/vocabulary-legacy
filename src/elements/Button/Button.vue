@@ -4,16 +4,22 @@
     class="vocab button"
     :class="buttonClasses"
     :disabled="isDisabled">
-    <div class="addons" v-if="hasAddons">
+    <div
+      v-if="hasAddons"
+      class="addons">
       <!-- @slot Addons go here -->
       <slot name="addons">
         <FontAwesomeIcon
-          v-if="hasIcon"
+          v-if="icon"
           :icon="['fas', icon]"
           fixed-width/>
       </slot>
     </div>
-    <div v-if="$slots.default" class="content" :class="contentClasses">
+
+    <div
+      v-if="$slots.default"
+      class="content"
+      :class="contentClasses">
       <!-- @slot Content goes here -->
       <slot/>
     </div>
@@ -25,69 +31,80 @@
   import { faHandPointUp } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Colorable from '@/mixins/colorable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
+  import Invertible from '@/mixins/invertible'
   import Resizable from '@/mixins/resizable'
-  import Basicable from '@/mixins/basicable'
-  import Disableable from '@/mixins/disableable'
-  import Indicatable from '@/mixins/indicatable'
   import Roundable from '@/mixins/roundable'
+  import Simplifiable from '@/mixins/simplifiable'
+  import Unactionable from '@/mixins/unactionable'
 
   library.add(faHandPointUp)
 
   /**
-   * ## Buttons inspire action.
+   * ### Buttons inspire action.
    *
-   * A button makes a web app interactive. When you see a button, it can evoke
-   * in you an urge to click it. Buttons can either enhance or subdue this
-   * feeling.
+   * A button makes a web app interactive. When you see a button, it intuitively
+   * informs the user of the possibility of an interaction. Buttons, by their
+   * very nature, are the fundamental instruments of interactivity.
    */
   export default {
     name: 'Button',
-    mixins: [
-      Colorable,
-      Resizable,
-      Basicable,
-      Disableable,
-      Indicatable,
-      Roundable
-    ],
     components: {
       FontAwesomeIcon
     },
+    mixins: [
+      Colored,
+      Indicating,
+      Invertible,
+      Resizable,
+      Roundable,
+      Simplifiable,
+      Unactionable
+    ],
     props: {
       /**
        * _an icon to use as an add-on for the button_
        */
       icon: {
-        type: String,
-        default: ''
+        type: String
+      },
+      /**
+       * _whether a button is a call to action button_
+       */
+      isCallToAction: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
       buttonClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.size,
-          this.indication,
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+          ...this.resizableClasses,
+          ...this.roundableClasses,
+          ...this.simplifiableClasses,
+          ...this.unactionableClasses,
+
           {
-            'basic': this.isBasic,
-            'rounded': this.isRounded,
-            'disabled': this.isDisabled
+            'call-to-action': this.isCallToAction
           }
         ]
       },
-      hasIcon: function () {
-        return this.icon !== ''
-      },
-      hasAddons: function () {
-        return this.hasIcon || this.$slots.addons
-      },
       contentClasses: function () {
-        return {
-          'has-addons': this.hasAddons
-        }
+        return [
+          {
+            'has-addons': this.hasAddons
+          }
+        ]
       },
+
+      hasAddons: function () {
+        return this.icon || this.$slots.addons
+      },
+
       buttonListeners: function () {
         let vm = this
         return Object.assign(

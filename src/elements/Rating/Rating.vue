@@ -1,19 +1,20 @@
 <template>
   <div class="vocab rating" :class="ratingClasses">
     <FontAwesomeIcon
-      v-if="!isToggleable && !isDisabled"
+      v-if="!isToggleable && !isReadOnly"
       class="icon dot"
       :icon="['fas', 'circle']"
-      v-on:click="changeRating(0)"
-      fixed-width/>
+      fixed-width
+      @click="changeRating(0)"/>
+
     <FontAwesomeIcon
       v-for="index in max"
       :key="index"
       class="icon unit"
       :class="iconClasses(index)"
       :icon="['fas', computedIcons[index-1]]"
-      v-on:click="changeRating(index)"
-      fixed-width/>
+      fixed-width
+      @click="changeRating(index)"/>
   </div>
 </template>
 
@@ -22,15 +23,16 @@
   import { faCircle, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Colorable from '@/mixins/colorable'
-  import Disableable from '@/mixins/disableable'
-  import Indicatable from '@/mixins/indicatable'
+  import Indicating from '@/mixins/indicating'
+  import Invertible from '@/mixins/invertible'
   import Resizable from '@/mixins/resizable'
+  import Colored from '@/mixins/colored'
+  import Unactionable from '@/mixins/unactionable'
 
   library.add(faCircle, faStar, faHeart)
 
   /**
-   * ## Ratings establish the quality of content.
+   * ### Ratings establish the quality of content.
    *
    * A rating is a quantity that maps to the quality of content. It is a way to
    * pictorially represent if some entity was good or bad, and to what extent
@@ -39,27 +41,16 @@
   export default {
     name: 'Rating',
     mixins: [
-      Colorable,
-      Disableable,
-      Indicatable,
-      Resizable
+      Colored,
+      Invertible,
+      Indicating,
+      Resizable,
+      Unactionable
     ],
     components: {
       FontAwesomeIcon
     },
-    data: function () {
-      return {
-        rating: this.value
-      }
-    },
     props: {
-      /**
-       * _the maximum value to which the ratings can go_
-       */
-      max: {
-        type: Number,
-        default: 5
-      },
       /**
        * _an array of icons to use for the ratings_
        *
@@ -69,6 +60,13 @@
       iconSet: {
         type: Array,
         default: () => ['star']
+      },
+      /**
+       * _the maximum value to which the ratings can go_
+       */
+      max: {
+        type: Number,
+        default: 5
       },
       /**
        * _the initial value to set for the ratings_
@@ -99,18 +97,22 @@
         default: false
       }
     },
+    data: function () {
+      return {
+        rating: this.value
+      }
+    },
     computed: {
       ratingClasses: function () {
         return [
-          this.size,
-          this.color,
-          this.shade,
-          this.indication,
-          {
-            'disabled': this.isDisabled
-          }
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+          ...this.resizableClasses,
+          ...this.unactionableClasses
         ]
       },
+
       computedIcons: function () {
         let arrayLength = this.iconSet.length
         if (arrayLength < this.max) {
@@ -125,24 +127,25 @@
     },
     methods: {
       iconClasses: function (index) {
-        let active = false
+        let isActive = false
         if (this.isSingleSelect) {
           if (index === this.rating) {
-            active = true
+            isActive = true
           }
         } else {
           if (index <= this.rating) {
-            active = true
+            isActive = true
           }
         }
         return [
           {
-            'active': active
+            active: isActive
           }
         ]
       },
+
       changeRating: function (index) {
-        if (!this.isDisabled) {
+        if (!this.isDisabled && !this.isReadOnly) {
           if (this.isToggleable && index === this.rating) {
             this.rating = 0
           } else {

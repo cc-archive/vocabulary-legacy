@@ -1,16 +1,17 @@
 <template>
   <ImageView
+    v-bind="$attrs"
     class="license-badge"
-    :isCentered="isCentered"
-    :source="svg"
-    :alternateText="`${license}`.toUpperCase()"/>
+    :source="svgSource"
+    :alternate-text="`${license}`.toUpperCase()"
+    :is-centered="isCentered"/>
 </template>
 
 <script>
   import ImageView from '@/elements/ImageView/ImageView'
 
   /**
-   * ## License badges are hieroglyphs for licenses.
+   * ### License badges are hieroglyphs for licenses.
    *
    * A license badge represents a license in pictorial form, depicting all the
    * aspects of said license such as shareability and commercial usability.
@@ -20,6 +21,7 @@
     components: {
       ImageView
     },
+    inheritAttrs: false,
     props: {
       /**
        * _the license whose badge is being shown_
@@ -42,11 +44,11 @@
         required: true
       },
       /**
-       * _the size of the badge being displayed_
+       * _the size-based version of the badge being displayed_
        *
        * ∈ {`'large'`, `'small'`}
        */
-      size: {
+      version: {
         type: String,
         default: 'large'
       },
@@ -59,9 +61,9 @@
       }
     },
     computed: {
-      svg: function () {
+      svgSource: function () {
         return require(
-          `@/assets/icons/license/badges_${this.size}/${this.license}.svg`
+          `@/assets/icons/license/badges_${this.version}/${this.license}.svg`
         )
       }
     }

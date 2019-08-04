@@ -1,5 +1,3 @@
-## Examples
-
 Headings are supposed to preside over content.
 
 ```jsx
@@ -7,9 +5,7 @@ Headings are supposed to preside over content.
   I am a title...
 </Heading>
 <Paragraph>
-  And I am a paragraph...
-</Paragraph>
-<Paragraph>
+  And I am a paragraph...<br/>
   This is a <em>haiku</em>!
 </Paragraph>
 ```
@@ -32,82 +28,104 @@ Headings are supposed to preside over content.
 </Paragraph>
 ```
 
-### Size set
+### Color set
 
-Stardard headers look like this. Each level corresponds to its HTML tag, thus
-ranging from `h1` to `h6`.
+Unless a color is specified, headings inherit color from the parent. This is
+usually, but not necessarily, black.
 
 ```jsx
-<Heading :level="1">Heading 1</Heading>
-<Heading :level="2">Heading 2</Heading>
-<Heading :level="3">Heading 3</Heading>
-<Heading :level="4">Heading 4</Heading>
-<Heading :level="5">Heading 5</Heading>
-<Heading :level="6">Heading 6</Heading>
+<Heading>Inherited color heading</Heading>
+<div style="color: rgb(0, 33, 71);">
+  <Heading>Inherited color heading</Heading>
+</div>
 ```
-
-### Color set
 
 Needless to say, headings can be colored with any color from the set provided by
 CC Vocabulary.
 
-<!-- TODO Place them in a grid -->
 ```jsx
-<Heading :level="4" color="blue">
-  Blue heading
-</Heading>
-<Heading :level="4" color="green">
-  Green heading
-</Heading>
-<Heading :level="4" color="magenta">
-  Magenta heading
-</Heading>
-<Heading :level="4" color="olive">
-  Olive heading
-</Heading>
-<Heading :level="4" color="orange">
-  Orange heading
-</Heading>
-<Heading :level="4" color="purple">
-  Purple heading
-</Heading>
-<Heading :level="4" color="red">
-  Red heading
-</Heading>
-<Heading :level="4" color="sand">
-  Sand heading
-</Heading>
-<Heading :level="4" color="yellow">
-  Yellow heading
-</Heading>
+<Grid>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="blue">Blue heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="green">Green heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="magenta">Magenta heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="olive">Olive heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="orange">Orange heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="purple">Purple heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="red">Red heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="sand">Sand heading</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading color="yellow">Yellow heading</Heading>
+  </GridCell>
+</Grid>
 ```
 
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Heading :level="4" color="blue" shade="light">
-  Light blue heading
-</Heading>
-<Heading :level="4" color="blue">
-  Blue heading
-</Heading>
-<Heading :level="4" color="blue" shade="dark">
-  Dark blue heading
-</Heading>
-<Heading :level="4" color="blue" shade="darker">
-  Darker blue heading
-</Heading>
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Heading color="blue" shade="light">Light blue</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Heading color="blue">Blue</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Heading color="blue" shade="dark">Dark blue</Heading>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Heading color="blue" shade="darker">Darker blue</Heading>
+  </GridCell>
+</Grid>
+```
+### Level set
+
+Standard headers look like this. Each level corresponds to its HTML tag, thus
+ranging from `h1` to `h6`. If not specified, the lowest level, the sixth, is
+taken to be the default which may or may not be what you wanted.
+
+```jsx
+<Heading :level="1" color="purple">Heading 1</Heading>
+<Heading :level="2" color="purple">Heading 2</Heading>
+<Heading :level="3" color="purple">Heading 3</Heading>
+<Heading :level="4" color="purple">Heading 4</Heading>
+<Heading :level="5" color="purple">Heading 5</Heading>
+<Heading :level="6" color="purple">Heading 6</Heading>
 ```
 
-If the header is set against a dark or non-white option, the text color can be 
-inverted for readability or aesthetic reasons.
+### Indication set
 
-```jsx { "props": { "className": "dark-background" } }
-<Heading is-inverted :level="1">Heading 1</Heading>
-<Heading is-inverted :level="2">Heading 2</Heading>
-<Heading is-inverted :level="3">Heading 3</Heading>
-<Heading is-inverted :level="4">Heading 4</Heading>
-<Heading is-inverted :level="5">Heading 5</Heading>
-<Heading is-inverted :level="6">Heading 6</Heading>
+Headings can indicate the contextual nature of the content they preside over.
+
+```jsx
+<Grid>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading :level="1" indication="positive">Oh yes!</Heading>
+    <Paragraph indication="positive">That is really terrific news!</Paragraph>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading :level="1" indication="probably">Oh.</Heading>
+    <Paragraph indication="probably">That is news.</Paragraph>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Heading :level="1" indication="negative">Oh no!</Heading>
+    <Paragraph indication="negative">That is really terrible news!</Paragraph>
+  </GridCell>
+</Grid>
 ```

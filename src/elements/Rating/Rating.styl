@@ -1,56 +1,97 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/media.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/media.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.rating
-  --rating-color $color-tone-black
-  colors('--rating-color')
+  // Color palette
+
+  --rating-primary $color-tone-black
+
+  &.inverted
+    --rating-primary $color-tone-white
+
+  colors('--rating-primary')
+
+  &.positive-indicating.positive-indicating
+    --rating-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --rating-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --rating-primary $color-context-negative
+
+  --rating-secondary $color-tone-grey-dark
+
+  &.inverted
+    --rating-secondary $color-tone-grey-light
+
+  --rating-tertiary $color-tone-grey-light
+
+  &.inverted
+    --rating-tertiary $color-tone-grey-dark
+
+  // Color
+
+  --rating-active-icon-color var(--rating-primary)
+  --rating-inactive-icon-color var(--rating-secondary)
+  --rating-inactive-icon-hover-color var(--rating-tertiary)
+
+  &.read-only,
+  &.disabled
+    --rating-inactive-icon-hover-color var(--rating-inactive-icon-color)
+
+  // Cursor
+
+  --rating-cursor pointer
+
+  &.read-only
+    --rating-cursor default
+
+  &.disabled
+    --rating-cursor not-allowed
+
+  // Rules
+
+  display inline-flex
+  align-items center
+
+  color var(--rating-active-icon-color)
 
   sizes('font-size')
 
-  color var(--rating-color)
-
-  display inline-flex
-  flex-direction row
-  align-items center
+  // Children
 
   .icon
-    cursor pointer
+    cursor var(--rating-cursor)
 
     &.dot
-      +touch-only()
-        font-size 0.5em
+      font-size 0.5em
 
-      +mouse-only()
-        font-size 0.25em
-
-      margin-right $rspace-normal
+      margin-right $space-large
 
     &.unit
       margin-right $space-normal
 
-      transition 0.25s color, 0.25s transform
+      transition-property color, transform
+      transition-duration $duration-shortest
 
       &:not(.active)
-        color $color-tone-grey-lighter
-        transform scale(0.9)
+        color var(--rating-inactive-icon-color)
+        transform scale(0.85)
 
         &:hover
-          color $color-tone-grey-light
+          color var(--rating-inactive-icon-hover-color)
           transform scale(1)
 
-  &.positive
-    --rating-color $color-context-positive
-
-  &.negative
-    --rating-color $color-context-negative
-
+  &.read-only,
   &.disabled
     .icon
-      cursor auto
-
       &.unit
         &:not(.active)
-          color rgb(146, 149, 149)
           transform none
+
+  &.disabled
+    opacity 0.6

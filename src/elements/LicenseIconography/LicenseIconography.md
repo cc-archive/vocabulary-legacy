@@ -1,24 +1,25 @@
-## Examples
-
-Simply used, license icons look like a bunch of circular shapes.
+Simply used, license icons look like a bunch of circular shapes. These icons can
+be used in the midst of running text and they will inherit the font size and
+color of their surrounding content.
 
 ```jsx
-<LicenseIconography 
-  :iconList="['', 'by', 'sa', 'nd', 'nc', 'zero', 'pd']"/>
-```
-
-These icons can be used in the midst of running text and they will inherit the
-font size and color of their surrounding content.
-
-```jsx { "props": { "className": "dark-background" } }
 <Heading :level="3" color="orange">
  The CC BY license
-  <LicenseIconography :iconList="['', 'by']"/>:
+  <LicenseIconography :icon-list="['', 'by']"/>:
 </Heading>
-<Paragraph is-inverted>
+<Paragraph>
   The CC BY license
-  (<LicenseIconography :iconList="['', 'by']"/>)
+  (<LicenseIconography :icon-list="['', 'by']"/>)
   is a permissive free-culture license.
+</Paragraph>
+<Heading :level="3" color="green">
+ The CC Zero license
+  <LicenseIconography :icon-list="['', 'zero']"/>:
+</Heading>
+<Paragraph>
+  The CC Zero license
+  (<LicenseIconography :icon-list="['', 'zero']"/>)
+  indicates that content belongs in the public domain.
 </Paragraph>
 ```
 
@@ -29,14 +30,14 @@ that depict CC licenses.
 
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography
-  :iconList="['']"/>
+  :icon-list="['']"/>
 ```
 
 Then there all all the various components that make up the CC license aspects.
 
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography
-  :iconList="['by', 'nc', 'nd', 'sa']"/>
+  :icon-list="['by', 'nc', 'nd', 'sa']"/>
 ```
 
 The non-commercial icon has region specific variants for Europe and Japan (why
@@ -44,19 +45,19 @@ these two regions only and specifically is beyond my understanding).
 
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography
-  :iconList="['nc-eu', 'nc-jp']"/>
+  :icon-list="['nc-eu', 'nc-jp']"/>
 ```
 
 Some very domain specific and niche aspects have also been covered.
 
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography
-  :iconList="['sampling', 'sampling-plus', 'remix', 'share']"/>
+  :icon-list="['sampling', 'sampling-plus', 'remix', 'share']"/>
 ```
 
 Finally there are icons for the CC Zero license and the Public Domain mark.
 
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography
-  :iconList="['zero', 'pd']"/>
+  :icon-list="['zero', 'pd']"/>
 ```

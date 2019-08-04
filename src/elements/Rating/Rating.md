@@ -1,26 +1,12 @@
-## Examples
-
 A rating component looks like this.
 
 ```jsx
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSmile, faMeh, faFrown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
-library.add(faSmile, faMeh, faFrown);
-
-let value = 3;
-
 <Rating
-  color="yellow"
-  size="large"
-  :iconSet="['frown', 'meh', 'smile']"
+  color="red"
+  size="huge"
+  :icon-set="['heart']"
   :value="3"
-  :max="3"
-  v-model="value"
-  :indication="value > 2 ? 'positive': value < 2 ? 'negative': ''"
-  is-toggleable
-  is-single-select/>
+  is-toggleable/>
 ```
 
 ### Color set
@@ -35,25 +21,62 @@ Ratings can be colored using any color from the set provided by CC Vocabulary.
 A black ratings bar, come on!
 
 ```jsx
-<Rating :value="1" :max="9" color="blue"/><br/><br/>
-<Rating :value="2" :max="9" color="green"/><br/><br/>
-<Rating :value="3" :max="9" color="magenta"/><br/><br/>
-<Rating :value="4" :max="9" color="olive"/><br/><br/>
-<Rating :value="5" :max="9" color="orange"/><br/><br/>
-<Rating :value="6" :max="9" color="purple"/><br/><br/>
-<Rating :value="7" :max="9" color="red"/><br/><br/>
-<Rating :value="8" :max="9" color="sand"/><br/><br/>
-<Rating :value="9" :max="9" color="yellow"/>
+<Grid>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="blue"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="green"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="magenta"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="olive"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="orange"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="purple"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="red"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="sand"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
+    <Rating :value="3" color="yellow"/>
+  </GridCell>
+</Grid>
 ```
 
 Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Rating color="blue" :value="1" :max="4" shade="light"/><br/><br/>
-<Rating color="blue" :value="2" :max="4"/><br/><br/>
-<Rating color="blue" :value="3" :max="4" shade="dark"/><br/><br/>
-<Rating color="blue" :value="4" :max="4" shade="darker"/>
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Rating color="blue" :value="1" shade="light"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Rating color="blue" :value="2"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Rating color="blue" :value="3" shade="dark"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Rating color="blue" :value="4" shade="darker"/>
+  </GridCell>
+</GridCell>
+```
+
+On dark or non-white backgrounds use the inverted version of the component.
+
+```jsx { "props": { "className": "dark-background" } }
+<Rating :value="3" is-inverted/><br/><br/>
+<Rating color="magenta" :value="3" is-inverted/>
 ```
 
 ### Size set
@@ -81,7 +104,7 @@ array length is less or more than prop `max`.
 ```jsx
 <Rating
   color="red"
-  :iconSet="['heart']"
+  :icon-set="['heart']"
   :value="3"/>
 ```
 
@@ -108,7 +131,7 @@ library.add(faThumbsDown, faThumbsUp);
 let value = 2;
 
 <Rating
-  :iconSet="['thumbs-down', 'thumbs-up']"
+  :icon-set="['thumbs-down', 'thumbs-up']"
   :value="2"
   :max="2"
   v-model="value"
@@ -131,11 +154,23 @@ You can increase the maximum rating available on the bar.
 A rating can indicate the contextual nature of its value.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSmile, faMeh, faFrown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faSmile, faMeh, faFrown);
+
 let value = 3;
 
 <Rating
+  size="huge"
+  :icon-set="['frown', 'meh', 'smile']"
+  :value="3"
+  :max="3"
   v-model="value"
-  :indication="value >= 4 ? 'positive' : 'negative'"/>
+  :indication="value > 2 ? 'positive': value < 2 ? 'negative': 'probably'"
+  is-toggleable
+  is-single-select/>
 ```
 
 ### State set
@@ -147,4 +182,14 @@ A rating may be disabled to prevent input altogether.
   color="red"
   :value="3"
   is-disabled/>
+```
+
+A rating may be made read-only to prevent input while preserving readability as
+an output component.
+
+```jsx
+<Rating
+  color="red"
+  :value="3"
+  is-read-only/>
 ```

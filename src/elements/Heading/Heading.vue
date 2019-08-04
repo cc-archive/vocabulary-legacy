@@ -9,12 +9,11 @@
 </template>
 
 <script>
-  import Invertible from '@/mixins/invertible'
-  import Colorable from '@/mixins/colorable'
-  import Indicatable from '@/mixins/indicatable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
 
   /**
-   * ## Headings title the content under them.
+   * ### Headings title the content under them.
    *
    * They are often short, punchy and attractive, summarising the content under
    * them as well as keeping a user's attention.
@@ -22,9 +21,8 @@
   export default {
     name: 'Heading',
     mixins: [
-      Colorable,
-      Invertible,
-      Indicatable
+      Colored,
+      Indicating
     ],
     props: {
       /**
@@ -34,24 +32,23 @@
        */
       level: {
         type: Number,
-        required: true,
         default: 6,
         validator: val => val >= 1 && val <= 6
+      },
+      color: {
+        default: 'inherit' // Overriding mixin Colorable
       }
     },
     computed: {
-      tag: function () {
-        return `h${this.level}`
-      },
       headingClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.indication,
-          {
-            'inverted': this.isInverted
-          }
+          ...this.coloredClasses,
+          ...this.indicatingClasses
         ]
+      },
+
+      tag: function () {
+        return `h${this.level}`
       }
     }
   }

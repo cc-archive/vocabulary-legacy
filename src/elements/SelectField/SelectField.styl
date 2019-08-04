@@ -1,36 +1,103 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/font-reset.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.select-field
-  appearance none
+  // Color palette
 
-  --select-color: $color-tone-grey-dark
-  colors('--select-color')
+  --select-field-primary $color-tone-grey-dark
 
-  sizes('font-size')
+  &.inverted
+    --select-field-primary $color-tone-grey-light
 
-  color white
-  font-reset()
-  font-weight $weight-bold
-  white-space nowrap
+  colors('--select-field-primary')
 
-  background-color var(--select-color)
+  &.positive-indicating.positive-indicating
+    --select-field-primary $color-context-positive
+
+  &.probably-indicating.probably-indicating
+    --select-field-primary $color-context-probably
+
+  &.negative-indicating.negative-indicating
+    --select-field-primary $color-context-negative
+
+  --select-field-secondary $color-tone-white
+
+  &.inverted
+    --select-field-secondary $color-tone-black
+
+  --select-field-overlay $color-overlay-white-low
+
+  &.inverted
+    --select-field-overlay $color-overlay-black-low
+
+  // Color
+
+  --select-field-background-color var(--select-field-primary)
+  --select-field-text-color var(--select-field-secondary)
+  --select-field-border-color var(--select-field-primary)
+  --select-field-background-overlay linear-gradient(
+    var(--select-field-overlay),
+    var(--select-field-overlay)
+  )
+
+  &.basic,
+  &.ghost
+    --select-field-background-color transparent
+    --select-field-text-color var(--select-field-primary)
+
+    &:hover
+      --select-field-background-color var(--select-field-primary)
+      --select-field-text-color var(--select-field-secondary)
+
+  &.ghost
+    --select-field-border-color transparent
+
+  // Cursor
+
+  --select-field-cursor pointer
+
+  &.disabled
+    --select-field-cursor not-allowed
+
+  &.read-only
+    --select-field-cursor default
+
+  // Add-on space
+
+  --select-field-addons-space 1.25em
+
+  // Rules
+
+  position relative
 
   display inline-flex
   flex-direction row
   align-items center
 
-  position relative
+  color var(--select-field-text-color)
 
-  border 1px solid var(--select-color)
+  font-reset()
+  sizes('font-size')
+  font-weight $weight-bold
 
-  transition 0.25s background-color, 0.25s background-image, 0.25s color
+  white-space nowrap
+
+  cursor var(--select-field-cursor)
+
+  background-color var(--select-field-background-color)
+
+  border 1px solid var(--select-field-border-color)
+
+  transition-property color, background-color
+  transition-duration $duration-shortest
+
+  // Children
 
   .field
     appearance none
-    cursor pointer
 
     font inherit
     color inherit
@@ -42,19 +109,11 @@
     border transparent
 
     &.has-addons
-      padding-left 'calc(2 * %s + 1.25em)' % $space-normal
-
-  .addons
-    position absolute
-    left $space-zero
-
-  .caret
-    position absolute
-    right $space-zero
+      padding-left 'calc(2 * %s + var(--select-field-addons-space))' % $space-normal
 
   .addons,
   .caret
-    pointer-events none
+    position absolute
 
     display flex
     flex-direction column
@@ -63,36 +122,35 @@
 
     padding $space-normal
 
+    pointer-events none
+
+  .addons
+    left $space-zero
+
+  .caret
+    right $space-zero
+
+    .icon
+      transform scale(0)
+
+      transition transform $duration-shortest
+
+      &.active
+        transform scale(1)
+
+  // States
+
   &:hover
-    background-image linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0.15) 0%,
-            rgba(255, 255, 255, 0.15) 100%
-    )
+    background-image var(--select-field-background-overlay)
 
-  &.basic
-    color var(--select-color)
-    background-color transparent
+  &:focus-within
+    background-image none
 
-    &:hover
-      color $color-tone-white
-      background-color var(--select-color)
-
-  &.negative
-    --select-color $color-context-negative
-
-  &.positive
-    --select-color $color-context-positive
+  // Styles
 
   &.disabled
-    --select-color $color-tone-near-white
-
-    color rgb(146, 149, 149)
+    opacity 0.6
 
     text-decoration line-through
 
-    .field
-      cursor auto
-
-    &:hover
-      background-image none
+    background-image none

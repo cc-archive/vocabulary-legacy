@@ -1,6 +1,4 @@
-## Examples
-
-Here is some example images.
+Here are a bunch of example images.
 
 ```jsx
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
@@ -81,7 +79,8 @@ Styles may be combined.
 
 An image may display information about it on hover. This information can be set
 partly via the `title` prop and partly via the `topAddons` slot. Or you can go
-all out and just populate the `bottomAddons` slot too.
+all out and just populate the `bottomAddons` slot too. If the content is small
+enough, bars on rounded images look cool too.
 
 ```jsx
 import Vue from 'vue';
@@ -96,22 +95,48 @@ library.add(faImage, faUserCircle);
 
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
-<ImageView
-  :source="source"
-  alternateText="7 weeks old"
-  title="7 weeks old"
-  size="huge"
-  is-hoverable>
-  <template v-slot:topAddons>
-    <FontAwesomeIcon
-      :icon="['fas', 'user-circle']"/>
-    Bodlina
-  </template>
-  <template v-slot:bottomAddons>
-    7 weeks old
-    <LicenseIconography :iconList="['', 'by', 'sa']"/>
-  </template>
-<ImageView>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+    <ImageView
+      :source="source"
+      alternateText="7 weeks old"
+      title="7 weeks old"
+      height="192px"
+      width="192px"
+      is-hoverable
+      is-rounded>
+      <template #topAddons>
+        <FontAwesomeIcon
+          :icon="['fas', 'user-circle']"/>
+        Bodlina
+      </template>
+    </ImageView>
+    <Paragraph>
+        This uses the topAddons slot and the title prop.
+    </Paragraph>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]" style="text-align: center;">
+    <ImageView
+      :source="source"
+      alternateText="7 weeks old"
+      title="7 weeks old"
+      size="huge"
+      is-hoverable>
+      <template #topAddons>
+        <FontAwesomeIcon
+          :icon="['fas', 'user-circle']"/>
+        Bodlina
+      </template>
+      <template #bottomAddons>
+        7 weeks old
+        <LicenseIconography :icon-list="['', 'by', 'sa']"/>
+      </template>
+    </ImageView>
+    <Paragraph>
+        This uses the topAddons slot and the bottomAddons slot.
+    </Paragraph>
+  </GridCell>
+</Grid>
 ```
 
 ### Size set
