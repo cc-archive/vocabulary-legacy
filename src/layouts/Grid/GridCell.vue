@@ -9,7 +9,7 @@
 
 <script>
   /**
-   * ## Cells are the pillars of grids.
+   * ### Cells are the pillars of grids.
    *
    * A cell is a block of content, a collection of which forms the grid layout
    * that powers the responsive web. Cells can be stacked based on their
@@ -39,7 +39,7 @@
        * [phone, desktop]
        * [phone, desktop, big desktop]
        * [phone, tablet, desktop, big desktop]
-       * [phone, tablet (portrait), tablet (landscape), desktop, big desktop]
+       * [phone, tablet-portrait, tablet-landscape, desktop, big-desktop]
        * ```
        */
       spanSet: {

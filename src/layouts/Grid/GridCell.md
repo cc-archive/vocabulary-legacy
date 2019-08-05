@@ -1,5 +1,3 @@
-## Examples
-
 For example usage, see [Grid](#/Layouts/Grid).
 
 ### Span set
@@ -15,67 +13,28 @@ The following shows 12 cells that align themselves as follows.
 Resize your browser or visit this page from another device to see them reflow.
 
 ```jsx
+let spanSet = [12, 6, 4, 3, 2];
+let style = {
+  color: 'white',
+  padding: '0.5em',
+  backgroundColor: 'rgb(182, 43, 110)'
+};
+
 <Grid>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    1
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    2
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    3
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    4
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    5
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    6
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    7
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    8
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    9
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    10
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    11
-  </GridCell>
-  <GridCell 
-    :spanSet="[12, 6, 4, 3, 2]" 
-    style="color: white; padding: 0.5em; background-color: rgb(182, 43, 110)">
-    12
-  </GridCell>
+  <GridCell :style="style" :span-set="spanSet">01</GridCell>
+  <GridCell :style="style" :span-set="spanSet">02</GridCell>
+  <GridCell :style="style" :span-set="spanSet">03</GridCell>
+  <GridCell :style="style" :span-set="spanSet">04</GridCell>
+
+  <GridCell :style="style" :span-set="spanSet">05</GridCell>
+  <GridCell :style="style" :span-set="spanSet">06</GridCell>
+  <GridCell :style="style" :span-set="spanSet">07</GridCell>
+  <GridCell :style="style" :span-set="spanSet">08</GridCell>
+
+  <GridCell :style="style" :span-set="spanSet">09</GridCell>
+  <GridCell :style="style" :span-set="spanSet">10</GridCell>
+  <GridCell :style="style" :span-set="spanSet">11</GridCell>
+  <GridCell :style="style" :span-set="spanSet">12</GridCell>
 </Grid>
 ```
 
@@ -83,36 +42,29 @@ You can easily mix and match column spans, while maintaining the same level of
 control over the sizes at various device sizes.
 
 ```jsx
+let style = {
+  color: 'white',
+  padding: '0.5em',
+  backgroundColor: 'rgb(150, 40, 198)'
+};
+
 <Grid>
-  <GridCell
-    :spanSet="[3, 3]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    One third
-  </GridCell>
-  <GridCell
-    :spanSet="[9, 9]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    Two thirds
-  </GridCell>
-  <GridCell
-    :spanSet="[4, 4]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    One fourth
-  </GridCell>
-  <GridCell
-    :spanSet="[8, 8]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    Three fourths
-  </GridCell>
-  <GridCell
-    :spanSet="[5, 5]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    Spans 5 slices
-  </GridCell>
-  <GridCell
-    :spanSet="[7, 7]"
-    style="color: white; padding: 0.5em; background-color: rgb(150, 40, 198)">
-    Spans 7 slices
-  </GridCell>
+  <GridCell :style="style" :span-set="[1, 1]">1</GridCell>
+  <GridCell :style="style" :span-set="[11, 11]">11</GridCell>
+
+  <GridCell :style="style" :span-set="[2, 2]">2</GridCell>
+  <GridCell :style="style" :span-set="[10, 10]">10</GridCell>
+
+  <GridCell :style="style" :span-set="[3, 3]">3</GridCell>
+  <GridCell :style="style" :span-set="[9, 9]">9</GridCell>
+
+  <GridCell :style="style" :span-set="[4, 4]">4</GridCell>
+  <GridCell :style="style" :span-set="[8, 8]">8</GridCell>
+
+  <GridCell :style="style" :span-set="[5, 5]">5</GridCell>
+  <GridCell :style="style" :span-set="[7, 7]">7</GridCell>
+
+  <GridCell :style="style" :span-set="[6, 6]">6</GridCell>
+  <GridCell :style="style" :span-set="[6, 6]">6</GridCell>
 </Grid>
 ```

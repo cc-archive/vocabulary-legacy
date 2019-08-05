@@ -7,7 +7,7 @@
 
 <script>
   /**
-   * ## Grids organise content on a 2D surface.
+   * ### Grids organise content on a 2D surface.
    *
    * A grid is typically organised into rows and columns made up of cells of
    * equal size, which makes it different from a masonry layout where cells have
@@ -19,7 +19,7 @@
       /**
        * _whether the gutter space should be more or less than is default_
        *
-       * ∈ {`'sparser'`, `'sparse'`, `'dense'`, `'denser'`, `'packed'`}
+       * ∈ {`'sparser'`, `'sparse'`, `'dense'`, `'denser'`, `'full'`}
        */
       density: {
         type: String,
@@ -28,14 +28,14 @@
           'sparse',
           'dense',
           'denser',
-          'packed'
+          'full'
         ].includes(val)
       }
     },
     computed: {
       gridClasses: function () {
         return [
-          this.density
+          this.density ? `${this.density}-packed` : ''
         ]
       }
     }
