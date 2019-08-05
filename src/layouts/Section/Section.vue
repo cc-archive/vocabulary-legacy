@@ -1,22 +1,20 @@
 <template>
   <div class="vocab section" :class="sectionClasses">
     <!-- @slot Content goes here -->
-    <slot>
-      &nbsp;
-    </slot>
+    <slot/>
   </div>
 </template>
 
 <script>
-  import Basicable from '@/mixins/basicable'
-  import Roundable from '@/mixins/roundable'
+  import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
   import Invertible from '@/mixins/invertible'
-  import Colorable from '@/mixins/colorable'
   import Raisable from '@/mixins/raisable'
-  import Indicatable from '@/mixins/indicatable'
+  import Roundable from '@/mixins/roundable'
+  import Simplifiable from '@/mixins/simplifiable'
 
   /**
-   * ## Sections are groupings of related content.
+   * ### Sections are groupings of related content.
    *
    * A section marks portions of the screen containing related content by the
    * use of borders, spacing and dividers.
@@ -24,12 +22,12 @@
   export default {
     name: 'Section',
     mixins: [
-      Basicable,
-      Roundable,
-      Colorable,
+      Colored,
+      Indicating,
       Invertible,
+      Roundable,
       Raisable,
-      Indicatable
+      Simplifiable
     ],
     props: {
       /**
@@ -49,32 +47,36 @@
       /**
        * _which side of the div to highlight with the color_
        *
-       * ∈ {`'top'`, `'bottom'`}
+       * ∈ {`'top'`, `'right'`, `'bottom'`, `'left'`}
        */
       colorSide: {
         type: String,
-        validator: val => ['top', 'bottom'].includes(val)
+        validator: val => ['top', 'right', 'bottom', 'left'].includes(val)
       }
     },
     computed: {
       processedColorSide: function () {
-        if (this.color && this.colorSide === '') {
-          return 'top'
+        if (this.color || this.indication) {
+          if (this.colorSide) {
+            return this.colorSide
+          } else {
+            return 'top'
+          }
         } else {
-          return this.colorSide
+          return ''
         }
       },
       sectionClasses: function () {
         return [
-          this.color,
-          this.shade,
-          this.processedColorSide,
-          this.indication,
+          ...this.coloredClasses,
+          ...this.indicatingClasses,
+          ...this.invertibleClasses,
+          ...this.raisableClasses,
+          ...this.roundableClasses,
+          ...this.simplifiableClasses,
+
+          this.processedColorSide ? `${this.processedColorSide}-accented` : '',
           {
-            'basic': this.isBasic,
-            'rounded': this.isRounded,
-            'raised': this.isRaised,
-            'inverted': this.isInverted,
             'compact': this.isCompact,
             'clingy': this.isClingy
           }
