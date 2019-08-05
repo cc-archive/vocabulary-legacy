@@ -1,6 +1,8 @@
 <template>
   <table class="vocab table" :class="tableClasses">
-    <caption v-if="caption" class="caption">
+    <caption
+      v-if="caption"
+      class="caption">
       {{ caption }}
     </caption>
 
@@ -62,12 +64,12 @@
 <script>
   import TableCell from '@/layouts/Table/TableCell'
 
+  import Colored from '@/mixins/colored'
   import Invertible from '@/mixins/invertible'
-  import Colorable from '@/mixins/colorable'
-  import Basicable from '@/mixins/basicable'
+  import Simplifiable from '@/mixins/simplifiable'
 
   /**
-   * ## Tables show related data meaningfully.
+   * ### Tables show related data meaningfully.
    *
    * Tables render lots of related data in two dimensions using a grid of rows
    * and columns.
@@ -76,9 +78,9 @@
     name: 'Table',
     components: { TableCell },
     mixins: [
+      Colored,
       Invertible,
-      Colorable,
-      Basicable
+      Simplifiable
     ],
     props: {
       /**
@@ -91,30 +93,35 @@
         default: () => ({})
       },
       /**
-       * _whether to draw borders on all four sides of the table_
+       * _the caption for the table_
        */
-      isBoxed: {
-        type: Boolean,
-        default: false
+      caption: {
+        type: String
       },
       /**
-       * _whether to draw borders on both sides of a row_
+       * _the list of borders to draw on the table_
+       *
+       * ⊂ {`'column'`, `'row'`, `'edge'`}
        */
-      isSliced: {
-        type: Boolean,
-        default: false
-      },
-      /**
-       * _whether to draw borders on both sides of a cell_
-       */
-      isCelled: {
-        type: Boolean,
-        default: false
+      borderList: {
+        type: Array,
+        default: () => []
       },
       /**
        * _whether to tint alternate rows_
+       *
+       * This makes rows easier to follow in case of large data sets.
        */
       isStriped: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * _whether to highlight the row that has mouseover_
+       *
+       * This colors the row that current has a mouse over it.
+       */
+      isFollowing: {
         type: Boolean,
         default: false
       },
@@ -130,59 +137,44 @@
       },
       /**
        * _whether to limit width to what is necessary_
+       *
+       * This replaces the default behaviour which is to have 100% width.
        */
       isCompact: {
         type: Boolean,
         default: false
-      },
-      /**
-       * _whether to highlight the row that has mouseover_
-       */
-      isFollowing: {
-        type: Boolean,
-        default: false
-      },
-      /**
-       * _the caption for the table_
-       */
-      caption: {
-        type: String
       }
     },
     computed: {
       tableClasses: function () {
         return [
-          this.color,
-          this.shade,
+          ...this.coloredClasses,
+          ...this.simplifiableClasses,
+          ...this.invertibleClasses,
+
+          ...this.borderList.map(aspect => `${aspect}-bordered`),
           {
-            'boxed': this.isBoxed,
-            'sliced': this.isSliced,
-            'celled': this.isCelled,
             'striped': this.isStriped,
             'fixed': this.isFixed,
-            'basic': this.isBasic,
             'compact': this.isCompact,
-            'following': this.isFollowing,
-            'inverted': this.isInverted,
-            'information-powered': this.isInformationPowered
+            'following': this.isFollowing
           }
         ]
       },
+
       hasCols: function () {
         return this.$slots.cols
       },
       hasHead: function () {
-        return this.$slots.head || this.isInformationPowered
+        return this.$slots.head || this.information.head
       },
       hasBody: function () {
-        return this.$slots.default || this.isInformationPowered
+        return this.$slots.default || this.information.body
       },
       hasFoot: function () {
         return this.$slots.foot || this.information.foot
       },
-      isInformationPowered: function () {
-        return this.information.head && this.information.body
-      },
+
       keys: function () {
         if (this.information && this.information.head) {
           return Object.keys(this.information.head)

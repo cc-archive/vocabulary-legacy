@@ -1,16 +1,21 @@
 <template>
-  <div :is="tag" class="cell" :class="cellClasses">
-    <span class="label">{{ label }}</span>
+  <div
+    :is="tag"
+    class="cell"
+    :class="cellClasses">
+    <span class="label">
+      {{ label }}
+    </span>
     <!-- Content goes here -->
     <slot/>
   </div>
 </template>
 
 <script>
-  import Indicatable from '@/mixins/indicatable'
+  import Indicating from '@/mixins/indicating'
 
   /**
-   * ## Cells are the pillars of tables.
+   * ### Cells are the pillars of tables.
    *
    * A cell is the intersection of a row and a column and represents on unit of
    * data. A collection of cells forms a table.
@@ -20,9 +25,15 @@
   export default {
     name: 'TableCell',
     mixins: [
-      Indicatable
+      Indicating
     ],
     props: {
+      /**
+       * _the label for the content of the cell_
+       */
+      label: {
+        type: String
+      },
       /**
        * _whether the cell is of a heading type_
        *
@@ -34,30 +45,25 @@
         default: false
       },
       /**
-       * _the label for the content of the cell_
-       */
-      label: {
-        type: String
-      },
-      /**
        * _whether the cell does something on click_
        */
-      isActive: {
+      isActionable: {
         type: Boolean,
         default: false
       }
     },
     computed: {
-      tag: function () {
-        return this.isHeading ? 'th' : 'td'
-      },
       cellClasses: function () {
         return [
-          this.indication,
+          ...this.indicatingClasses,
           {
-            'active': this.isActive
+            actionable: this.isActionable
           }
         ]
+      },
+
+      tag: function () {
+        return this.isHeading ? 'th' : 'td'
       }
     }
   }

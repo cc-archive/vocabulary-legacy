@@ -1,8 +1,60 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/media.styl"
 
 .vocab.table
   .cell
+    // Color palette
+
+    --table-cell-primary inherit
+
+    &.positive-indicating.positive-indicating
+      --table-cell-primary $color-context-positive-dark
+
+    &.probably-indicating.probably-indicating
+      --table-cell-primary $color-context-probably-dark
+
+    &.negative-indicating.negative-indicating
+      --table-cell-primary $color-context-negative-dark
+
+    --table-cell-secondary inherit
+
+    &.positive-indicating.positive-indicating
+      --table-cell-secondary $color-context-positive-light
+
+    &.probably-indicating.probably-indicating
+      --table-cell-secondary $color-context-probably-light
+
+    &.negative-indicating.negative-indicating
+      --table-cell-secondary $color-context-negative-light
+
+    // Color
+
+    --table-cell-text-color var(--table-cell-primary)
+    --table-cell-background-color var(--table-cell-secondary)
+
+    &.actionable
+      &:hover
+        --table-cell-text-color var(--table-body-following-text-color)
+        --table-cell-background-color var(--table-body-following-background-color)
+        --table-cell-background-overlay var(--table-body-following-background-overlay)
+
+    // Cursor
+
+    --table-cell-cursor default
+
+    &.actionable
+      --table-cell-cursor pointer
+
+    // Rules
+
+    color var(--table-cell-text-color)
+
+    cursor var(--table-cell-cursor)
+
+    background-color var(--table-cell-background-color)
+    background-image var(--table-cell-background-overlay)
+
     padding $space-normal
 
     .label
@@ -13,22 +65,3 @@
 
       +phone-only()
         display inline
-
-    &.active
-      cursor pointer
-
-      &:hover
-        background-color var(--table-color)
-        background-image linear-gradient(
-                0deg,
-                var(--focus-shade) 0%,
-                var(--focus-shade) 100%
-        )
-
-    &.negative
-      color $color-context-negative-dark
-      background-color $color-context-negative-light
-
-    &.positive
-      color $color-context-positive-dark
-      background-color $color-context-positive-light

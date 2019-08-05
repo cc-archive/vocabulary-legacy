@@ -3,22 +3,181 @@
 @import "~@/styles/colors.styl"
 
 .vocab.table
-  --table-color $color-tone-black
-  colors('--table-color')
+  // Color palette
 
-  --stripe-shade rgba(255, 255, 255, 0.85)
-  --focus-shade rgba(255, 255, 255, 0.60)
+  --table-primary $color-tone-black
 
-  width 100%
+  &.inverted
+    --table-primary $color-tone-white
+
+  colors('--table-primary')
+
+  --table-secondary $color-tone-white
+
+  &.inverted
+    --table-secondary $color-tone-black
+
+  --table-tertiary $color-tone-black
+
+  &.inverted
+    --table-tertiary $color-tone-white
+
+  --table-quaternary $color-tone-grey-lighter
+
+  &.inverted
+    --table-quaternary $color-tone-grey-darker
+
+  --table-quinary $color-tone-grey-dark
+
+  &.inverted
+    --table-quinary $color-tone-grey-light
+
+  --table-overlay-low $color-overlay-white-low
+  --table-overlay-high $color-overlay-white-high
+
+  &.inverted
+    --table-overlay-low $color-overlay-black-low
+    --table-overlay-high $color-overlay-black-high
+
+  // Color
+
+  --table-border-color var(--table-primary)
+
+  --table-head-background-color var(--table-primary)
+  --table-head-text-color var(--table-secondary)
+
+  --table-body-background-color transparent
+  --table-body-text-color var(--table-tertiary)
+
+  --table-body-stripe-background-color var(--table-primary)
+  --table-body-stripe-background-overlay linear-gradient(
+    var(--table-overlay-high),
+    var(--table-overlay-high)
+  )
+
+  --table-body-following-text-color var(--table-secondary)
+  --table-body-following-background-color var(--table-primary)
+  --table-body-following-background-overlay linear-gradient(
+    var(--table-overlay-low),
+    var(--table-overlay-low)
+  )
+
+  --table-foot-background-color var(--table-quaternary)
+  --table-foot-text-color var(--table-tertiary)
+
+  --table-caption-text-color var(--table-quinary)
+
+  &.basic,
+  &.ghost
+    --table-head-background-color var(--table-quaternary)
+    --table-head-text-color var(--table-tertiary)
+
+  // Border width palette
+
+  --table-border-width 1px
+  --table-accented-border-width 3px
+
+  // Border width
+
+  --table-head-border-top-width var(--table-accented-border-width)
+  --table-head-border-bottom-width var(--table-border-width)
+
+  --table-foot-border-top-width var(--table-border-width)
+  --table-foot-border-bottom-width var(--table-border-width)
+
+  &.ghost
+    --table-head-border-top-width var(--table-border-width)
+    --table-head-border-bottom-width 0
+
+    --table-foot-border-top-width 0
+    --table-foot-border-bottom-width 0
+
+  &.edge-bordered
+    --table-edge-border-width var(--table-border-width)
+
+  +tablet-portrait-up()
+    &.row-bordered
+      --table-row-border-width var(--table-border-width)
+
+    &.column-bordered
+      --table-column-border-width var(--table-border-width)
+
+  // Rules
 
   text-align left
 
-  background-color $color-tone-white
+  width 100%
 
   caption-side bottom
   border-collapse collapse
 
+  border var(--table-edge-border-width, 0) solid var(--table-border-color)
+
   margin-bottom $space-large
+
+  // Children
+
+  & > .head,
+  & > .body,
+  & > .foot
+    +tablet-portrait-up()
+      tr
+        border-width 0
+        border-style solid
+        border-color var(--table-border-color)
+
+        &:not(:first-of-type)
+          border-top-width var(--table-row-border-width, 0)
+
+        &:not(:last-of-type)
+          border-bottom-width var(--table-row-border-width, 0)
+
+        .cell
+          border-width 0
+          border-style solid
+          border-color var(--table-border-color)
+
+          &:not(:first-child)
+            border-left-width var(--table-column-border-width, 0)
+
+          &:not(:last-child)
+            border-right-width var(--table-column-border-width, 0)
+
+  & > .head
+    color var(--table-head-text-color)
+
+    background-color var(--table-head-background-color)
+
+    border-top-width var(--table-head-border-top-width)
+    border-right-width 0
+    border-bottom-width var(--table-head-border-bottom-width)
+    border-left-width 0
+    border-style solid
+    border-color var(--table-border-color)
+
+  & > .body
+    color var(--table-body-text-color)
+
+    background-color var(--table-body-background-color)
+
+  & > .foot
+    color var(--table-foot-text-color)
+
+    background-color var(--table-foot-background-color)
+
+    border-top-width var(--table-foot-border-top-width)
+    border-right-width 0
+    border-bottom-width var(--table-foot-border-bottom-width)
+    border-left-width 0
+    border-style solid
+    border-color var(--table-border-color)
+
+  & > .caption
+    color var(--table-caption-text-color)
+    font-style italic
+
+    +phone-only()
+      display none
 
   +phone-only()
     display block
@@ -28,102 +187,30 @@
 
     tr
       display block
-      border-bottom 1px solid $color-tone-grey-light
 
-      &:last-of-type
-        border-bottom none
+      &:not(:last-of-type)
+        border-bottom var(--table-border-width) solid var(--table-border-color)
 
-      td, th
+      .cell
         display block
 
-  .head
-    color $color-tone-white
-    background-color var(--table-color)
+  // States
 
-    border-bottom 1px solid var(--table-color)
+  &.striped
+    & > .body
+      tr:nth-child(even)
+        background-color var(--table-body-stripe-background-color)
+        background-image var(--table-body-stripe-background-overlay)
 
-  .foot
-    border-top 1px solid $color-tone-grey-light
-    background-color $color-tone-near-white
-
-  .caption
-    font-weight $weight-light
-    font-style italic
-
-    +phone-only()
-      display none
+  &.following
+    & > .body
+      tr:hover
+        color var(--table-body-following-text-color)
+        background-color var(--table-body-following-background-color)
+        background-image var(--table-body-following-background-overlay)
 
   &.compact
     width auto
 
   &.fixed
     table-layout fixed
-
-  &.information-powered
-    .head
-      +phone-only()
-        display none
-
-  &.basic
-    border-top 3px solid var(--table-color)
-
-    .head
-      color $color-tone-black
-      background-color $color-tone-near-white
-
-  &.inverted
-    color $color-tone-white
-    background-color $color-tone-black
-
-    --stripe-shade rgba(0, 0, 0, 0.85)
-    --focus-shade rgba(0, 0, 0, 0.60)
-
-    .foot
-      background-color $color-tone-near-black
-
-    &.basic
-      .head
-        color $color-tone-white
-        background-color $color-tone-near-black
-
-  &.boxed
-    border-left 1px solid var(--table-color)
-    border-bottom 1px solid var(--table-color)
-    border-right 1px solid var(--table-color)
-
-  &.sliced
-    .body
-      tr:not(:last-of-type)
-        border-bottom 1px solid var(--table-color)
-
-  &.celled
-    .body
-      td, th
-        &:not(:first-of-type)
-          border-left 1px solid var(--table-color)
-
-        &:not(:last-of-type)
-          border-right 1px solid var(--table-color)
-
-  &.striped
-    .body
-      tr:nth-child(even)
-        td, th
-          background-color var(--table-color)
-          background-image linear-gradient(
-                  0deg,
-                  var(--stripe-shade) 0%,
-                  var(--stripe-shade) 100%
-          )
-
-  &.following
-    .body
-      tr:hover
-        td, th
-          background-color var(--table-color)
-          background-image linear-gradient(
-                  0deg,
-                  var(--focus-shade) 0%,
-                  var(--focus-shade) 100%
-          )
-

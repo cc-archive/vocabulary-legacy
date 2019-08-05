@@ -1,5 +1,3 @@
-## Examples
-
 Here is an example of a table.
 
 ```jsx
@@ -50,6 +48,7 @@ let information = {
     }
   ]
 }
+
 <Table 
   :information="information"
   caption="Fruits, their concoctions and their taste"
@@ -60,11 +59,10 @@ let information = {
   is-fixed/>
 ```
 
-### Architectural variant set
-
 The above table can be recreated in a declarative way which offers many more 
-features at the cost of terseness of expression. For example, you may form
-complex-structured tables, use icons and more. 
+features at the cost of terseness of expression. You may form
+complex structured tables, use icons and more if you use the declarative syntax
+but you will lose quite a bit of programmatic control.
 
 ```jsx
 <Table 
@@ -74,7 +72,7 @@ complex-structured tables, use icons and more.
   is-striped
   is-following
   is-fixed>
-  <template v-slot:head>
+  <template #head>
     <tr>
       <TableCell is-heading>Item</TableCell>
       <TableCell is-heading>Taste</TableCell>
@@ -100,7 +98,7 @@ complex-structured tables, use icons and more.
     <TableCell is-heading label="Item:">Lemon</TableCell>
     <TableCell label="Taste:">Sourest</TableCell>
   </tr>
-  <template v-slot:foot>
+  <template #foot>
     <tr>
       <TableCell is-heading label="Item:">Juice</TableCell>
       <TableCell label="Taste:">Sweet</TableCell>
@@ -123,7 +121,7 @@ A table without color specified is colored black.
 
 ```jsx
 <Table is-fixed>
-  <template v-slot:head>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -140,8 +138,10 @@ Much like the rest of CC Vocabulary, tables can be colored using any color from
 the set provided by CC Vocabulary. Black accent, pfft.
 
 ```jsx
-<Table color="blue" is-fixed>
-  <template v-slot:head>
+<Table
+  color="blue"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -152,8 +152,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Blue accent</TableCell>
   </tr>
 </Table>
-<Table color="green" is-fixed>
-  <template v-slot:head>
+<Table
+  color="green"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -164,8 +166,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Green accent</TableCell>
   </tr>
 </Table>
-<Table color="magenta" is-fixed>
-  <template v-slot:head>
+<Table
+  color="magenta"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -176,8 +180,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Magenta accent</TableCell>
   </tr>
 </Table>
-<Table color="olive" is-fixed>
-  <template v-slot:head>
+<Table
+  color="olive"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -188,8 +194,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Olive accent</TableCell>
   </tr>
 </Table>
-<Table color="orange" is-fixed>
-  <template v-slot:head>
+<Table
+  color="orange"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -200,8 +208,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Orange accent</TableCell>
   </tr>
 </Table>
-<Table color="purple" is-fixed>
-  <template v-slot:head>
+<Table
+  color="purple"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -212,8 +222,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Purple accent</TableCell>
   </tr>
 </Table>
-<Table color="red" is-fixed>
-  <template v-slot:head>
+<Table
+  color="red"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -224,8 +236,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Red accent</TableCell>
   </tr>
 </Table>
-<Table color="sand" is-fixed>
-  <template v-slot:head>
+<Table
+  color="sand"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -236,8 +250,10 @@ the set provided by CC Vocabulary. Black accent, pfft.
     <TableCell>Sand accent</TableCell>
   </tr>
 </Table>
-<Table color="yellow" is-fixed>
-  <template v-slot:head>
+<Table
+  color="yellow"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Effect</TableCell>
@@ -254,8 +270,11 @@ Also you may use one of the three shades, namely `light`, `dark` and `darker`,
 to accentuate the color.
 
 ```jsx
-<Table color="blue" shade="light" is-fixed>
-  <template v-slot:head>
+<Table
+  color="blue"
+  shade="light"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Shade</TableCell>
@@ -268,8 +287,10 @@ to accentuate the color.
     <TableCell>Light blue accent</TableCell>
   </tr>
 </Table>
-<Table color="blue" is-fixed>
-  <template v-slot:head>
+<Table
+  color="blue"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Shade</TableCell>
@@ -282,8 +303,11 @@ to accentuate the color.
     <TableCell>Blue accent</TableCell>
   </tr>
 </Table>
-<Table color="blue" shade="dark" is-fixed>
-  <template v-slot:head>
+<Table
+  color="blue"
+  shade="dark"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Shade</TableCell>
@@ -296,8 +320,11 @@ to accentuate the color.
     <TableCell>Dark blue accent</TableCell>
   </tr>
 </Table>
-<Table color="blue" shade="darker" is-fixed>
-  <template v-slot:head>
+<Table
+  color="blue"
+  shade="darker"
+  is-fixed>
+  <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Shade</TableCell>
@@ -315,15 +342,32 @@ to accentuate the color.
 A table can be inverted for use on dark or non-white backgrounds.
 
 ```jsx { "props": { "className": "dark-background" }}
+let isBasic = false;
+let isMagenta = false;
+
+<Paragraph style="color: white;">
+  <SwitchField 
+    v-model="isBasic"
+    is-inverted/>
+  Basic
+</Paragraph>
+<Paragraph color="magenta" is-inverted>
+  <SwitchField
+    v-model="isMagenta"
+    color="magenta"
+    is-inverted/>
+  Magenta
+</Paragraph>
+<br/>
 <Table 
   caption="Fruits, their concoctions and their taste"
-  color="blue"
-  is-basic
+  :color="isMagenta ? 'magenta' : ''"
+  :is-basic="isBasic"
   is-striped
   is-following
   is-fixed
   is-inverted>
-  <template v-slot:head>
+  <template #head>
     <tr>
       <TableCell is-heading>Item</TableCell>
       <TableCell is-heading>Taste</TableCell>
@@ -349,7 +393,7 @@ A table can be inverted for use on dark or non-white backgrounds.
     <TableCell is-heading label="Item:">Lemon</TableCell>
     <TableCell label="Taste:">Sourest</TableCell>
   </tr>
-  <template v-slot:foot>
+  <template #foot>
     <tr>
       <TableCell is-heading label="Item:">Juice</TableCell>
       <TableCell label="Taste:">Sweet</TableCell>
@@ -371,8 +415,12 @@ A table can be inverted for use on dark or non-white backgrounds.
 A table may be striped to enhance the readability of its rows.
 
 ```jsx
-<Table caption="This is a striped table" color="magenta" is-striped>
-  <template v-slot:head>
+<Table
+  caption="This is a striped table"
+  color="magenta"
+  is-fixed
+  is-striped>
+  <template #head>
     <tr>
       <TableCell is-heading>Index</TableCell>
       <TableCell is-heading>Parity</TableCell>
@@ -397,154 +445,17 @@ A table may be striped to enhance the readability of its rows.
 </Table>
 ```
 
-A table may be boxed, sliced or celled to enable separation of content.
-
-```jsx
-<Table caption="This is a boxed table" color="purple" 
-  is-boxed>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Borders</TableCell>
-      <TableCell is-heading>Location</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Boxed</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Around table</TableCell>
-  </tr>
-  <tr>
-    <TableCell>Boxed</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Around table</TableCell>
-  </tr>
-</Table>
-<Table caption="This is a sliced table" color="purple" 
-  is-sliced>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Borders</TableCell>
-      <TableCell is-heading>Location</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Sliced</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Between rows</TableCell>
-  </tr>
-  <tr>
-    <TableCell>Sliced</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Between rows</TableCell>
-  </tr>
-</Table>
-<Table caption="This is a celled table" color="purple" 
-  is-celled>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Borders</TableCell>
-      <TableCell is-heading>Location</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Celled</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Between cells</TableCell>
-  </tr>
-  <tr>
-    <TableCell>Celled</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Between cells</TableCell>
-  </tr>
-</Table>
-<Table caption="This is a fully chopped table" color="purple" 
-  is-boxed 
-  is-sliced 
-  is-celled>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Borders</TableCell>
-      <TableCell is-heading>Location</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Celled</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Everywhere</TableCell>
-  </tr>
-  <tr>
-    <TableCell>Celled</TableCell>
-    <TableCell>Visible</TableCell>
-    <TableCell>Everywhere</TableCell>
-  </tr>
-</Table>
-```
-
-A table may be fixed, which means that column widths will be decided by the
-first row if it has a width set or will be divided equally.
-
-```jsx
-<Table caption="This is a fixed table" color="green" is-fixed>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>
-        What is the effect of this style on the layout of the table? Please 
-        explain in a terse and condensed way.
-      </TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Fixed</TableCell>
-    <TableCell>Equal column widths</TableCell>
-  </tr>
-</Table>
-```
-
-A table can be basic so that the colors are not as pronounced.
-
-```jsx
-<Table caption="This is a basic table" color="red" is-basic>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Color prominence</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Basic</TableCell>
-    <TableCell>Diminished</TableCell>
-  </tr>
-</Table>
-```
-
-A table can be made compact so as to not take the full width of the parent.
-
-```jsx
-<Table caption="This is a compact table" color="yellow" is-compact>
-  <template v-slot:head>
-    <tr>
-      <TableCell is-heading>Style</TableCell>
-      <TableCell is-heading>Width</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Compact</TableCell>
-    <TableCell>Not 100%, only as much as needed</TableCell>
-  </tr>
-</Table>
-```
-
 A table can be directed to highlight the row that has mouseover. The highlight
 is a stronger color than the stripes to avoid confusion.
 
 ```jsx
-<Table caption="This is a following table" color="blue" is-striped is-following>
-  <template v-slot:head>
+<Table
+  caption="This is a following table"
+  color="blue"
+  is-fixed
+  is-striped
+  is-following>
+  <template #head>
     <tr>
       <TableCell is-heading>Cardinal</TableCell>
       <TableCell is-heading>Ordinal</TableCell>
@@ -565,6 +476,189 @@ is a stronger color than the stripes to avoid confusion.
   <tr>
     <TableCell>Four</TableCell>
     <TableCell>Fourth</TableCell>
+  </tr>
+</Table>
+```
+
+A table may be fixed, which means that column widths will be decided by the
+first row if it has a width set or will be divided equally.
+
+```jsx
+<Table 
+  caption="This is a fixed table"
+  color="green"
+  is-fixed>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>
+        What is the effect of this style on the layout of the table? Please 
+        explain in a terse and condensed way.
+      </TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Fixed</TableCell>
+    <TableCell>Equal column widths</TableCell>
+  </tr>
+</Table>
+```
+
+A table can be basic so that the colors are not as pronounced.
+
+```jsx
+<Table
+  caption="This is a basic table"
+  color="red"
+  is-fixed
+  is-basic>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Color prominence</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Basic</TableCell>
+    <TableCell>Diminished</TableCell>
+  </tr>
+</Table>
+```
+
+A table can be ghost so that the colors are even less pronounced.
+
+```jsx
+<Table 
+  caption="This is a ghost table" 
+  color="orange"
+  is-fixed 
+  is-ghost>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Color prominence</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Ghost</TableCell>
+    <TableCell>Nearly gone</TableCell>
+  </tr>
+</Table>
+```
+
+A table can be made compact so as to not take the full width of the parent.
+
+```jsx
+<Table
+  caption="This is a compact table"
+  color="yellow"
+  is-compact>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Width</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Compact</TableCell>
+    <TableCell>Not 100%, only as much as needed</TableCell>
+  </tr>
+</Table>
+```
+
+A table may be boxed, sliced or celled to enable separation of content.
+
+```jsx
+<Table 
+  caption="This is a boxed table" 
+  color="purple" 
+  :border-list="['edge']"
+  is-fixed>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Borders</TableCell>
+      <TableCell is-heading>Location</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Boxed</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Around table</TableCell>
+  </tr>
+  <tr>
+    <TableCell>Boxed</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Around table</TableCell>
+  </tr>
+</Table>
+<Table
+  caption="This is a horizontally sliced table" 
+  color="purple" 
+  :border-list="['row']"
+  is-fixed>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Borders</TableCell>
+      <TableCell is-heading>Location</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Sliced horizontally</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Between rows</TableCell>
+  </tr>
+  <tr>
+    <TableCell>Sliced horizontally</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Between rows</TableCell>
+  </tr>
+</Table>
+<Table 
+  caption="This is a vertically sliced table" 
+  color="purple" 
+  :border-list="['column']"
+  is-fixed>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Borders</TableCell>
+      <TableCell is-heading>Location</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Sliced vertically</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Between cells</TableCell>
+  </tr>
+  <tr>
+    <TableCell>Sliced vertically</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Between cells</TableCell>
+  </tr>
+</Table>
+<Table
+  caption="This is a chopped table" 
+  color="purple" 
+  :border-list="['row', 'column', 'edge']"
+  is-fixed>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Borders</TableCell>
+      <TableCell is-heading>Location</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Chopped</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Everywhere</TableCell>
+  </tr>
+  <tr>
+    <TableCell>Chopped</TableCell>
+    <TableCell>Visible</TableCell>
+    <TableCell>Everywhere</TableCell>
   </tr>
 </Table>
 ```
