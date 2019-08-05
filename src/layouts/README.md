@@ -41,47 +41,98 @@ Here are some available layouts in action. You should probably
 [back to normal](#/Layouts).
 
 ```jsx { "props": { "className": "contain-content" } }
-<div 
-  style="width:100%; 
-  background-image: linear-gradient(45deg, #ddd 25%, #fff 25%, #fff 50%, #ddd 50%, #ddd 75%, #fff 75%, #fff 100%);
-  background-size: 8px 8px;">
-  <Container
-    style="border: 1px solid #ddd; background-color: white;">
-    <Tabbed color="blue">
-      <TabbedPane title="Grid">
-        <Grid>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-          <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
-        </Grid>
-      </TabbedPane>
-      <TabbedPane title="Table">
-        <Table color="purple" is-compact is-basic is-striped is-following>
-          <template #head>
-            <tr>
-              <TableCell is-heading></TableCell>
-              <TableCell is-heading>A</TableCell>
-              <TableCell is-heading>B</TableCell>
-            </tr>
-          </template>
+import Vue from 'vue';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTh, faTable } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+
+library.add(faTh, faTable);
+
+<Tabbed>
+  <TabbedPane color="magenta">
+    <template #tab>
+      <FontAwesomeIcon :icon="['fas', 'th']"/>
+      Grid
+    </template>
+    <template #default>
+      <Grid>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+        <GridCell :span-set="[12, 4, 3, 2]" style="background-color: rgb(182, 43, 110)"/>
+      </Grid>
+    </template>
+  </TabbedPane>
+  <TabbedPane color="purple">
+    <template #tab>
+      <FontAwesomeIcon :icon="['fas', 'table']"/>
+      Table
+    </template>
+    <template #default>
+      <Table
+        color="purple"
+        is-basic
+        is-striped
+        is-following>
+        <template #head>
           <tr>
-            <TableCell is-heading>1</TableCell>
-            <TableCell>A1</TableCell>
-            <TableCell>B1</TableCell>
+            <TableCell is-heading></TableCell>
+            <TableCell is-heading>A</TableCell>
+            <TableCell is-heading>B</TableCell>
+            <TableCell is-heading>C</TableCell>
+            <TableCell is-heading>D</TableCell>
+            <TableCell is-heading>E</TableCell>
           </tr>
-          <tr>
-            <TableCell is-heading>2</TableCell>
-            <TableCell>A2</TableCell>
-            <TableCell>B2</TableCell>
-          </tr>
-        </Table>
-      </TabbedPane>
-    </Tabbed>
-  </Container>
-</div>
+        </template>
+        <tr>
+          <TableCell is-heading>1</TableCell>
+          <TableCell>A1</TableCell>
+          <TableCell>B1</TableCell>
+          <TableCell>C1</TableCell>
+          <TableCell>D1</TableCell>
+          <TableCell>E1</TableCell>
+        </tr>
+        <tr>
+          <TableCell is-heading>2</TableCell>
+          <TableCell>A2</TableCell>
+          <TableCell>B2</TableCell>
+          <TableCell>C2</TableCell>
+          <TableCell>D2</TableCell>
+          <TableCell>E2</TableCell>
+        </tr>
+        <tr>
+          <TableCell is-heading>2</TableCell>
+          <TableCell>A3</TableCell>
+          <TableCell>B3</TableCell>
+          <TableCell>C3</TableCell>
+          <TableCell>D3</TableCell>
+          <TableCell>E3</TableCell>
+        </tr>
+        <tr>
+          <TableCell is-heading>2</TableCell>
+          <TableCell>A4</TableCell>
+          <TableCell>B4</TableCell>
+          <TableCell>C4</TableCell>
+          <TableCell>D4</TableCell>
+          <TableCell>E4</TableCell>
+        </tr>
+        <tr>
+          <TableCell is-heading>2</TableCell>
+          <TableCell>A5</TableCell>
+          <TableCell>B5</TableCell>
+          <TableCell>C5</TableCell>
+          <TableCell>D5</TableCell>
+          <TableCell>E5</TableCell>
+        </tr>
+      </Table>
+    </template>
+  </TabbedPane>
+</Tabbed>
 ```
