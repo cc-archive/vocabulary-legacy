@@ -6,9 +6,14 @@
       height="62px"/>
   </a>
 </p>
-<h2 align="center">
-  Vocabulary
-</h2>
+<p align="center">
+  <a href="https://creativecommons.github.io/cc-vocabulary/" class="readme-vocabulary-logo">
+    <img 
+      alt="Vocabulary logo" 
+      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary.svg?sanitize=true" 
+      height="65px"/>
+  </a>
+</p>
 
 > CC Vocabulary is a cohesive design system to unite the web facing Creative 
 > Commons. CC Vocabulary makes it easier to develop Creative Commons apps while
@@ -74,6 +79,9 @@ another language.
 CC Vocabulary is continuously evolving and improving. You can contribute to the
 project in a number of ways.
 
+- **Use:**
+  The first step on the ladder to help us improve is to use the project, explore
+  and tweak the components and document any shortcomings you observe.
 - **Code:**
   If you are a developer, feel free to resolve open issues, proof PRs, add
   new features to existing components or add new components altogether.
