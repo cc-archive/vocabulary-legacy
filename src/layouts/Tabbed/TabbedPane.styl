@@ -1,88 +1,94 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/media.styl"
 
 .vocab.tabbed
-  .tabs
-    .tab
+  // Color
+
+  --tabbed-pane-background-color var(--tabbed-secondary)
+  --tabbed-pane-border-color var(--tabbed-primary)
+
+  --tabbed-pane-background-overlay linear-gradient(
+    var(--tabbed-overlay),
+    var(--tabbed-overlay)
+  )
+
+  // Border width palette
+
+  --tabbed-pane-tab-border-width 1px
+  --tabbed-pane-tab-accented-border-width 3px
+
+  // Border width
+
+  +tablet-portrait-down()
+    --tabbed-pane-tab-top-border-width 0
+    --tabbed-pane-tab-right-border-width 0
+    --tabbed-pane-tab-bottom-border-width 0
+    --tabbed-pane-tab-left-border-width var(--tabbed-pane-tab-accented-border-width)
+
+  +tablet-landscape-up()
+    --tabbed-pane-tab-top-border-width var(--tabbed-pane-tab-accented-border-width)
+    --tabbed-pane-tab-right-border-width var(--tabbed-pane-tab-border-width)
+    --tabbed-pane-tab-bottom-border-width 0
+    --tabbed-pane-tab-left-border-width var(--tabbed-pane-tab-border-width)
+
+    &.basic,
+    &.ghost
+      --tabbed-pane-tab-top-border-width 0
+      --tabbed-pane-tab-right-border-width 0
+      --tabbed-pane-tab-bottom-border-width var(--tabbed-pane-tab-accented-border-width)
+      --tabbed-pane-tab-left-border-width 0
+
+  & > .tabs
+    & > .tab
+      +tablet-landscape-up()
+        position relative
+        top 1px
+
       user-select none
       cursor pointer
 
       padding $space-large
 
+      border-top-width var(--tabbed-pane-tab-top-border-width)
+      border-right-width var(--tabbed-pane-tab-right-border-width)
+      border-bottom-width var(--tabbed-pane-tab-bottom-border-width)
+      border-left-width var(--tabbed-pane-tab-left-border-width)
       border-style solid
+      border-color transparent
 
-      +tablet-portrait-down()
-        border-width 1px 1px 0 1px
-        border-color $color-tone-grey-lighter
+      transition-property background-color, border-color
+      transition-duration $duration-shortest
 
-        &.active
-          padding-left 'calc(-2px + %s)' % $space-large
+      &.active
+        background-color var(--tabbed-pane-background-color)
 
-          border-left 3px solid var(--tabbed-color)
+        border-color var(--tabbed-pane-border-color)
 
-      +tablet-landscape-up()
-        position relative
-        top 1px
+      &:not(.active):hover
+        background-image var(--tabbed-pane-background-overlay)
 
-        border-width 3px 1px 0 1px
-        border-color transparent
+  &.rounded
+    +tablet-portrait-down()
+      & > .tabs
+        border-top-left-radius $radius-large
+        border-top-right-radius $radius-large
 
-        &.active
-          background-color $color-tone-white
+        overflow hidden
 
-          border-color var(--tabbed-color)
+    +tablet-landscape-up()
+      & > .tabs
+        & > .tab
+          border-top-left-radius $radius-large
+          border-top-right-radius $radius-large
 
-  .contents
-    .content
+          overflow hidden
+
+  & > .contents
+    & > .content
       display none
 
       padding $space-large
 
       &.active
         display block
-
-  &.basic
-    .tabs
-      .tab
-        +tablet-portrait-down()
-          border-color transparent
-
-          &.active
-            border-left 3px solid var(--tabbed-color)
-
-        +tablet-landscape-up()
-          border-bottom 3px solid transparent
-
-          &.active
-            border-color transparent
-            border-bottom 3px solid var(--tabbed-color)
-
-  &.rounded
-    .tabs
-      .tab
-        +tablet-portrait-down()
-          &:first-of-type
-            border-top-left-radius $radius-large
-            border-top-right-radius $radius-large
-
-        +tablet-landscape-up()
-          &.active
-            border-top-left-radius $radius-large
-            border-top-right-radius $radius-large
-
-  &.inverted
-    .tabs
-      .tab
-        +tablet-portrait-down()
-          border-color var(--tabbed-color)
-
-        &.active
-          background-color $color-tone-near-black
-
-    +tablet-landscape-up()
-      for color_group in 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
-        &.{color_group}
-          .tabs
-            .tab
-              &.active
-                background-color var(--tabbed-color)

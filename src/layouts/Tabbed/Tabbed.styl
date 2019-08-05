@@ -1,16 +1,64 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/media.styl"
-@import "~@/styles/list.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/list.styl"
+@import "~@/styles/media.styl"
 
 .vocab.tabbed
-  --tabbed-color $color-tone-black
-  colors('--tabbed-color')
+  // Color palette
 
-  .tabs
+  --tabbed-primary $color-tone-grey-dark
+
+  &.inverted
+    --tabbed-primary $color-tone-grey-light
+
+  colors('--tabbed-primary')
+
+  --tabbed-secondary $color-tone-white
+
+  &.inverted
+    --tabbed-secondary $color-tone-black
+
+  --tabbed-tertiary $color-tone-black
+
+  &.inverted
+    --tabbed-tertiary $color-tone-white
+
+  --tabbed-overlay $color-overlay-black-low
+
+  &.inverted
+    --tabbed-overlay $color-overlay-white-low
+
+  // Color
+
+  --tabbed-text-color var(--tabbed-tertiary)
+  --tabbed-tabs-border-color var(--tabbed-primary)
+  --tabbed-separator-border-color var(--tabbed-primary)
+
+  &.ghost
+    --tabbed-separator-border-color transparent
+
+  // Border width
+
+  --tabbed-tabs-border-width 0
+  --tabbed-separator-border-width 1px
+
+  +tablet-portrait-down()
+    --tabbed-tabs-border-width 1px
+
+    &.basic,
+    &.ghost
+      --tabbed-tabs-border-width 0
+
+  // Rules
+
+  color var(--tabbed-text-color)
+
+  // Children
+
+  & > .tabs
     bland-list()
 
-    width 100%
     display flex
 
     +tablet-portrait-down()
@@ -19,33 +67,23 @@
     +tablet-landscape-up()
       flex-direction row
 
-    border-bottom 1px solid var(--tabbed-color)
+    width 100%
+    box-sizing border-box
 
-  .contents
-    border-color var(--tabbed-color)
+    border-top-width var(--tabbed-tabs-border-width)
+    border-right-width var(--tabbed-tabs-border-width)
+    border-bottom-width var(--tabbed-separator-border-width)
+    border-left-width var(--tabbed-tabs-border-width)
+    border-style solid
+    border-top-color var(--tabbed-tabs-border-color)
+    border-right-color var(--tabbed-tabs-border-color)
+    border-bottom-color var(--tabbed-separator-border-color)
+    border-left-color var(--tabbed-tabs-border-color)
+
+  & > .contents
+    padding-left 0
+    padding-right 0
 
     border-top none
     border-top-left-radius $radius-zero
     border-top-right-radius $radius-zero
-
-  &.basic
-    .tabs
-      border none
-
-    .contents
-      border none
-
-  &.rounded
-    +tablet-portrait-down()
-      .tabs
-        overflow hidden
-        border-top-left-radius $radius-large
-        border-top-right-radius $radius-large
-
-
-  &.inverted
-    .tabs
-      color $color-tone-white
-
-    .contents
-      border-color var(--tabbed-color)

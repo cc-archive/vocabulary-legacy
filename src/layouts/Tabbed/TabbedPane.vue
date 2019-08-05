@@ -8,8 +8,10 @@
 </template>
 
 <script>
+  import Colored from '@/mixins/colored'
+
   /**
-   * ## Panes are the content of tabbed views.
+   * ### Panes are the content of tabbed views.
    *
    * A pane is a part of a tabbed view consisting of content in a
    * [Section](#/Layouts/Section) and a tab that allows switching to it. The
@@ -20,11 +22,12 @@
    */
   export default {
     name: 'TabbedPane',
-    data: function () {
-      return {
-        isActive: false
-      }
-    },
+    mixins: [
+      Colored
+    ],
+    inject: [
+      'tabPaneList'
+    ],
     props: {
       /**
        * _the text that appears in the tab_
@@ -35,13 +38,18 @@
         type: String
       }
     },
+    data: function () {
+      return {
+        isActive: false
+      }
+    },
     created: function () {
-      this.$parent.tabPaneList.push(this)
+      this.tabPaneList.push(this)
     },
     beforeDestroy: function () {
-      const index = this.$parent.tabPaneList.indexOf(this)
+      const index = this.tabPaneList.indexOf(this)
       if (index >= 0) {
-        this.$parent.tabPaneList.splice(index, 1)
+        this.tabPaneList.splice(index, 1)
       }
     }
   }
