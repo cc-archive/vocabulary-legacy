@@ -47,9 +47,9 @@
 
   import Colored from '@/mixins/colored'
   import Invertible from '@/mixins/invertible'
-  import Simplifiable from '@/mixins/simplifiable'
   import Raisable from '@/mixins/raisable'
   import Roundable from '@/mixins/roundable'
+  import Simplifiable from '@/mixins/simplifiable'
 
   /**
    * ### Tabbed views show menu-selected content.
@@ -64,9 +64,9 @@
     mixins: [
       Colored,
       Invertible,
-      Simplifiable,
       Raisable,
-      Roundable
+      Roundable,
+      Simplifiable
     ],
     provide: function () {
       return {
@@ -109,9 +109,9 @@
 
       tabbedClasses: function () {
         return [
-          ...this.simplifiableClasses,
           ...this.invertibleClasses,
           ...this.roundableClasses,
+          ...this.simplifiableClasses,
 
           ...this.processedColoredClasses
         ]
