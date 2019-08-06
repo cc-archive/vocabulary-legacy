@@ -9,9 +9,9 @@
 
 <script>
   /**
-   * ## Crumbs are the basis of trails.
+   * ### Crumbs are the basis of trails.
    *
-   * A crumb represents a level in the heirarchy of the page, site or
+   * A crumb represents a level in the hierarchy of the page, site or
    * application that facilitates a user to go upwards and backwards during the
    * course of their exploration.
    *
@@ -19,11 +19,12 @@
    */
   export default {
     name: 'TrailCrumb',
+    inject: [
+      'trailCrumbList'
+    ],
     props: {
       /**
        * _the icon to show in the trail crumb_
-       *
-       * This option is overridden if the slot `addons` is populated.
        */
       icon: {
         type: String
@@ -36,12 +37,12 @@
       }
     },
     created: function () {
-      this.$parent.trailCrumbList.push(this)
+      this.trailCrumbList.push(this)
     },
     beforeDestroy: function () {
-      const index = this.$parent.trailCrumbList.indexOf(this)
+      const index = this.trailCrumbList.indexOf(this)
       if (index >= 0) {
-        this.$parent.trailCrumbList.splice(index, 1)
+        this.trailCrumbList.splice(index, 1)
       }
     }
   }

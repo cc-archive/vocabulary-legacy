@@ -4,21 +4,31 @@
 @import "~@/styles/list.styl"
 
 .vocab.navigation
-  --navigation-color $color-tone-black
-  --hover-color rgba(255, 255, 255, 0.85)
+  // Color palette
+
+  --navigation-primary $color-tone-black
 
   &.inverted
-    --navigation-color $color-tone-white
-    --hover-color rgba(0, 0, 0, 0.85)
+    --navigation-primary $color-tone-white
 
-  colors('--navigation-color')
+  colors('--navigation-primary')
 
-  .links
+  --navigation-overlay $color-overlay-white-high
+
+  &.inverted
+    --navigation-overlay $color-overlay-black-high
+
+  // Rules
+
+  // Children
+
+  & > .links
     +phone-only()
       bland-list()
 
-      width 100%
       text-align left
+
+      width 100%
 
     +tablet-portrait-up()
       piped-list()

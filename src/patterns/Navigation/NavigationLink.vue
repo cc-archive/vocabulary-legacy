@@ -9,7 +9,7 @@
 
 <script>
   /**
-   * ## Links are the basis of navigation bars.
+   * ### Links are the basis of navigation bars.
    *
    * A link points to a page in a site or a screen in an app, facilitating the
    * user to navigate during the course of their exploration.
@@ -18,11 +18,12 @@
    */
   export default {
     name: 'NavigationLink',
+    inject: [
+      'navigationLinkList'
+    ],
     props: {
       /**
        * _the icon to show in the navigation link_
-       *
-       * This option is overridden if the slot `addons` is populated.
        */
       icon: {
         type: String
@@ -35,12 +36,12 @@
       }
     },
     created: function () {
-      this.$parent.navigationLinkList.push(this)
+      this.navigationLinkList.push(this)
     },
     beforeDestroy: function () {
-      const index = this.$parent.navigationLinkList.indexOf(this)
+      const index = this.navigationLinkList.indexOf(this)
       if (index >= 0) {
-        this.$parent.navigationLinkList.splice(index, 1)
+        this.navigationLinkList.splice(index, 1)
       }
     }
   }

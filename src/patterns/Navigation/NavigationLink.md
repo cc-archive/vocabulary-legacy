@@ -1,5 +1,3 @@
-## Examples
-
 For example usage, see [Navigation](#/Patterns/Navigation).
 
 ### Add-on set
@@ -21,7 +19,7 @@ library.add(faHome, faBook);
   </NavigationLink>
   <NavigationLink icon="book">
     Style guide
-  </Navigation>
+  </NavigationLink>
 </Navigation>
 ```
 
@@ -41,16 +39,16 @@ library.add(faHandshake);
 
 <Navigation color="green">
   <NavigationLink>
-    <template v-slot:addons>
-      <LicenseIconography :iconList="['']"/>
+    <template #addons>
+      <LicenseIconography :icon-list="['']"/>
     </template>
     Creative Commons
   </NavigationLink>
   <NavigationLink>
-    <template v-slot:addons>
+    <template #addons>
       <FontAwesomeIcon :icon="['fas', 'handshake']"/>
     </template>
     Licenses
   </NavigationLink>
-</Trail>
+</Navigation>
 ```

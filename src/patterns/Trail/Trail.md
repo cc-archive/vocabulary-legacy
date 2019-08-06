@@ -1,5 +1,3 @@
-## Examples
-
 A trail of crumbs looks like this.
 
 ```jsx

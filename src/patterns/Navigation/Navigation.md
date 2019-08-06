@@ -1,5 +1,3 @@
-## Examples
-
 A navigation bar of links looks like this.
 
 ```jsx

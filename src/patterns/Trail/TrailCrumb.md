@@ -1,5 +1,3 @@
-## Examples
-
 For nomenclature, see 
 [Hansel and Gretel](https://en.wikipedia.org/wiki/Hansel_and_Gretel).
 
@@ -52,20 +50,25 @@ library.add(faHandshake);
 
 <Trail color="green">
   <TrailCrumb>
-    <template v-slot:addons>
-      <LicenseIconography :iconList="['']"/>
+    <template #addons>
+      <LicenseIconography :icon-list="['']"/>
     </template>
     Creative Commons
   </TrailCrumb>
   <TrailCrumb>
-    <template v-slot:addons>
-      <FontAwesomeIcon :icon="['fas', 'handshake']"/>
+    <template #addons>
+      <FontAwesomeIcon
+        :icon="['fas', 'handshake']"
+        fixed-width/>
     </template>
     Licenses
   </TrailCrumb>
   <TrailCrumb>
-    <template v-slot:addons>
-      <LicenseBadge license="by" size="small" is-centered/>
+    <template #addons>
+      <LicenseBadge
+        license="by"
+        size="small"
+        is-centered/>
     </template>
     Attribution
   </TrailCrumb>

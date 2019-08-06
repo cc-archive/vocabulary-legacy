@@ -17,6 +17,7 @@
             name="addons"
             tag="span">
             <FontAwesomeIcon
+              v-if="trailCrumb.icon"
               :icon="['fas', trailCrumb.icon]"
               fixed-width/>
           </SlotRenderer>
@@ -30,7 +31,7 @@
           fixed-width/>
       </li>
     </ul>
-    <div style="display: none;">
+    <div v-show="false">
       <!-- @slot [`TrailCrumb`](#/Patterns/TrailCrumb) components go here -->
       <slot/>
     </div>
@@ -44,13 +45,13 @@
 
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
 
-  import Colorable from '@/mixins/colorable'
+  import Colored from '@/mixins/colored'
   import Invertible from '@/mixins/invertible'
 
   library.add(faAngleRight)
 
   /**
-   * ## Trail crumbs help you go back.
+   * ### Trail crumbs help you go back.
    *
    * Trail provides a collection of
    * [TrailCrumb](#/Patterns/TrailCrumbs)s in a familiar interface to
@@ -59,17 +60,17 @@
   export default {
     name: 'Trail',
     mixins: [
-      Colorable,
+      Colored,
       Invertible
     ],
+    provide: function () {
+      return {
+        trailCrumbList: this.trailCrumbList
+      }
+    },
     components: {
       SlotRenderer,
       FontAwesomeIcon
-    },
-    data: function () {
-      return {
-        trailCrumbList: []
-      }
     },
     props: {
       /**
@@ -80,14 +81,16 @@
         default: 'angle-right'
       }
     },
+    data: function () {
+      return {
+        trailCrumbList: []
+      }
+    },
     computed: {
       trailClasses: function () {
         return [
-          this.color,
-          this.shade,
-          {
-            'inverted': this.isInverted
-          }
+          ...this.coloredClasses,
+          ...this.invertibleClasses
         ]
       }
     }

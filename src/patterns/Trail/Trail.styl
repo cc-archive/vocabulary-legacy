@@ -1,24 +1,32 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/colors.styl"
-@import "~@/styles/media.styl"
 @import "~@/styles/list.styl"
+@import "~@/styles/media.styl"
 
 .vocab.trail
-  --trail-color $color-tone-black
-  --separator-color $color-tone-grey-light
-  --last-color $color-tone-black
+  // Color palette
+
+  --trail-primary $color-tone-black
+
+  colors('--trail-primary')
 
   &.inverted
-    --trail-color $color-tone-white
-    --separator-color $color-tone-grey-dark
-    --last-color $color-tone-white
+    --trail-primary $color-tone-white
 
-  colors('--trail-color')
+  --trail-secondary $color-tone-grey-light
 
-  .crumbs
+    --trail-secondary $color-tone-grey-dark
+
+  --trail-tertiary $color-tone-black
+
+    --trail-tertiary $color-tone-white
+
+  // Children
+
+  & > .crumbs
     bland-list()
 
-    width 100%
     display flex
 
     +phone-only()
@@ -26,4 +34,7 @@
 
     +tablet-portrait-up()
       flex-direction row
+      align-items center
+
+    width 100%
 
