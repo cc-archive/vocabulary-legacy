@@ -4,10 +4,10 @@
 
 .vocab.section
   // Color palette
-  --section-primary $color-tone-grey-dark
+  --section-primary $color-tone-grey-light
 
   &.inverted
-    --section-primary $color-tone-grey-light
+    --section-primary $color-tone-grey-dark
 
   colors('--section-primary')
 
@@ -121,6 +121,8 @@
 
   background-color var(--section-background-color)
 
+  box-sizing border-box
+
   padding-top var(--section-padding-top)
   padding-right var(--section-padding-right)
   padding-bottom var(--section-padding-bottom)
@@ -141,7 +143,7 @@
     overflow hidden
 
   &.raised
-    box-shadow unquote($shadow-normal) $color-tone-near-white
+    box-shadow unquote($shadow-pronounced) $color-tone-near-white
 
   &.compact
     display inline-block
