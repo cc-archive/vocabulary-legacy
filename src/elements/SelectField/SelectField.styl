@@ -112,6 +112,13 @@
     &.has-addons
       padding-left 'calc(2 * %s + var(--select-field-addons-space))' % $space-normal
 
+    // Stying options only works in Chrome
+    & > option
+      color initial
+
+      &[disabled]
+        opacity 0.6
+
   & > .addons,
   & > .caret
     position absolute
