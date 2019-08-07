@@ -1,0 +1,104 @@
+@import "~@/assets/tokens/tokens.styl"
+
+@import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.choice-field
+  // Color palette
+
+  --choice-field-primary $color-tone-black
+
+  &.inverted
+    --choice-field-primary $color-tone-white
+
+  colors('--choice-field-primary')
+
+  --choice-field-secondary $color-tone-white
+
+  &.inverted
+    --choice-field-secondary $color-tone-black
+
+  // Color
+
+  --choice-field-border-color var(--choice-field-primary)
+  --choice-field-background-color var(--choice-field-primary)
+  --choice-field-fill-color var(--choice-field-secondary)
+
+  &.basic
+    --choice-field-background-color var(--choice-field-secondary)
+    --choice-field-fill-color var(--choice-field-primary)
+
+  &.positive-indicating
+    --choice-field-border-color $color-context-positive
+    --choice-field-background-color $color-context-positive-light
+    --choice-field-fill-color $color-context-positive-dark
+
+  &.probably-indicating
+    --choice-field-border-color $color-context-probably
+    --choice-field-background-color $color-context-probably-light
+    --choice-field-fill-color $color-context-probably-dark
+
+  &.negative-indicating
+    --choice-field-border-color $color-context-negative
+    --choice-field-background-color $color-context-negative-light
+    --choice-field-fill-color $color-context-negative-dark
+
+  // Cursor
+
+  --choice-field-cursor pointer
+
+  &.disabled
+    --choice-field-cursor not-allowed
+
+  &.read-only
+    --choice-field-cursor default
+
+  // Rules
+
+  &[type="checkbox"],
+  &[type="radio"]
+    appearance none
+
+    position relative
+
+    display inline-block
+    vertical-align middle
+
+    font-reset()
+    sizes('font-size')
+
+    cursor var(--choice-field-cursor)
+
+    background-color var(--choice-field-background-color)
+
+    height 1.5em
+    width 1.5em
+
+    border 1px solid var(--choice-field-border-color)
+
+    &::before
+      opacity 0
+
+      content '\0251b'
+
+      position absolute
+      top 0.31em // Trial and error to get here
+      left 0.31em // Trial and error to get here
+
+      color var(--choice-field-fill-color)
+
+      transform rotate(40deg)
+
+    &:checked::before
+      opacity 1
+
+  &[type="radio"]
+    border-radius $radius-pill
+
+  &.disabled
+    opacity 0.6
+
+  &.read-only
+    &:checked::before
+      opacity 0.6
