@@ -1,34 +1,33 @@
 <template>
-  <div class="vocab switch-field" :class="switchFieldClasses">
+  <div
+    class="vocab switch-field"
+    :class="switchFieldClasses"
+    @click="flipSwitch">
     <div
-      class="field"
-      @click="flipSwitch">
+      v-if="isLabelled"
+      class="symbol off">
+      <FontAwesomeIcon
+        v-if="iconSet[0]"
+        :icon="['fas', iconSet[0]]"
+        fixed-width/>
       <div
-        v-if="isLabelled"
-        class="symbol off">
-        <FontAwesomeIcon
-          v-if="iconSet[0]"
-          :icon="['fas', iconSet[0]]"
-          fixed-width/>
-        <div
-          v-else
-          class="text">
-          <strong>O</strong>
-        </div>
+        v-else
+        class="text">
+        <strong>O</strong>
       </div>
+    </div>
 
+    <div
+      v-if="isLabelled"
+      class="symbol on">
+      <FontAwesomeIcon
+        v-if="iconSet[1]"
+        :icon="['fas', iconSet[1]]"
+        fixed-width/>
       <div
-        v-if="isLabelled"
-        class="symbol on">
-        <FontAwesomeIcon
-          v-if="iconSet[1]"
-          :icon="['fas', iconSet[1]]"
-          fixed-width/>
-        <div
-          v-else
-          class="text">
-          <strong>I</strong>
-        </div>
+        v-else
+        class="text">
+        <strong>I</strong>
       </div>
     </div>
   </div>

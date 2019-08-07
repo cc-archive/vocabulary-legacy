@@ -80,7 +80,12 @@
 
   // Rules
 
-  display inline-block
+  position relative
+
+  display inline-flex
+  justify-content center
+  align-items center
+
   vertical-align middle
 
   font-reset()
@@ -88,94 +93,78 @@
 
   cursor var(--switch-field-cursor)
 
+  background-color var(--switch-field-off-background-color)
+
+  width 3em
+  height 1.25em
+
+  border-width $space-small
+  border-style solid
+  border-color @background-color
+
+  transition-property background-color, border-color
+  transition-duration $duration-shortest
+
   // Children
 
-  & > .field
-    position relative
+  &::after
+    content ''
 
-    display flex
-    justify-content center
-    align-items center
+    position absolute
+    left 0
 
-    background-color var(--switch-field-off-background-color)
+    background-color var(--switch-field-handle-color)
 
-    width 3em
+    width 1.25em
     height 1.25em
 
-    border-width $space-small
-    border-style solid
-    border-color @background-color
-
-    transition-property background-color, border-color
+    transition-property left, transform
     transition-duration $duration-shortest
+    transition-timing-function cubic-bezier(0.85, 1.15, 0.85, 1.15)
 
-    // Children
+  & > .symbol
+    position absolute
 
-    &::after
-      content ''
+    color var(--switch-field-text-color)
 
-      position absolute
-      left 0
+    user-select none
 
-      background-color var(--switch-field-handle-color)
+    & > .text
+      text-align center
 
       width 1.25em
-      height 1.25em
 
-      transition-property left, transform
-      transition-duration $duration-shortest
-      transition-timing-function cubic-bezier(0.85, 1.15, 0.85, 1.15)
+    // States
 
-    & > .symbol
-      position absolute
+    &.off
+      right 0
 
-      color var(--switch-field-text-color)
-
-      user-select none
-
-      & > .text
-        text-align center
-
-        width 1.25em
-
-      // States
-
-      &.off
-        right 0
-
-      &.on
-        left 0
+    &.on
+      left 0
 
   // States
 
   &.checked
-    // Children
+    background-color var(--switch-field-on-background-color)
 
-    & > .field
-      background-color var(--switch-field-on-background-color)
+    border-color @background-color
 
-      border-color @background-color
-
-      &::after
-        left calc(100% - 1.25em)
+    &::after
+      left calc(100% - 1.25em)
 
   &.disabled,
   &.read-only
     &.checked
-      & > .field
-        & > .symbol.off
-          opacity 0
+      & > .symbol.off
+        opacity 0
 
     &:not(.checked)
-      & > .field
-        & > .symbol.on
-          opacity 0
+      & > .symbol.on
+        opacity 0
 
   &.disabled
-    & > .field
-      opacity 0.6
+    opacity 0.6
 
   &.read-only
-    & > .field
-      &::after
-        opacity 0.6
+    &::after
+      opacity 0.6
