@@ -86,7 +86,7 @@
   library.add(faVoteYea, faAngleDown, faAngleUp, faBan, faEye)
 
   /**
-   * ### Select fields presents discoverable content.
+   * ### Select fields offer a choice between many options.
    *
    * A select field allows a user to choose one or more options from many.
    * It presents a standard alternative to radio buttons if choosing one and to
