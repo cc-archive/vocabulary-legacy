@@ -1,6 +1,6 @@
-A select field looks like this.
+Select fields look like this. Yes, including the locale switcher.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <SelectField
   color="orange"
   icon="vote-yea"

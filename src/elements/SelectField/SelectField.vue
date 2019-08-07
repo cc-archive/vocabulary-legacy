@@ -10,8 +10,10 @@
       :value="value"
       @focus="toggleDropdown"
       @blur="toggleDropdown">
-      <option disabled value="">
-        Select
+      <option
+        disabled
+        value="">
+        {{ $t('select') }}
       </option>
       <option
         v-for="(option, index) in optionList"
@@ -182,3 +184,6 @@
 
 <style lang="stylus" src="./SelectField.styl">
 </style>
+
+<i18n src="./lang.json">
+</i18n>
