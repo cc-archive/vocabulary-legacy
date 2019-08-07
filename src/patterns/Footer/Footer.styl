@@ -1,41 +1,57 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/list.styl"
 
 .vocab.footer
+  // Color
+
+  --footer-text-color $color-tone-grey-light
+  --footer-highlighted-text-color $color-tone-grey-lighter
+
+  // Rules
+
   color $color-tone-grey-light
+
   background-color $color-tone-grey-darker
 
   padding $space-normal $space-zero
 
+  // Children
+
   a
-    color inherit
+    color $color-tone-grey-lighter
     text-decoration none
 
     &:hover
       color $color-tone-white
 
-  #branding
-    display flex
-    flex-direction column
-    justify-content space-between
+  h6
+    color $color-tone-grey-lighter
 
-    .logo
-      width 15rem
-      max-width 100%
+  & > .container
+    & > .grid
+      & > #branding-column
+        display flex
+        flex-direction column
+        justify-content space-between
 
-      margin $space-small $space-zero $space-large $space-zero
+        & > .logo
+          img
+            max-width 100%
 
-    .links
-      .link-list
-        piped-list-compact()
+          margin $space-small $space-zero
 
-  #contact
-    .address
-      font-style normal
+        & > .links
+          .link-list
+            piped-list-compact()
 
-      margin-bottom $space-normal
+      & > #contact-column
 
-    .contacts
-      bland-list()
+        & > .communication
+          address
+            font-style normal
 
-      color $color-blue
+          margin-bottom $space-normal
+
+        & > .contacts
+          bland-list()

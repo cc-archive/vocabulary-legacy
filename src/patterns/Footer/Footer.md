@@ -1,46 +1,114 @@
-## Examples
-
 The footer has a standard layout and appearance. It sits flush with the 
 [Header](#/Patterns/Header) component, thanks to the use of 
 [Container](#/Layouts/Container).
 
 ```jsx { "props": { "className": "i18n-enabled contain-content" } }
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faHome,
+  faBook
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHome, faBook);
+
 <Header 
-  appName="Search" 
+  appName="Vocabulary" 
   color="blue">
   <InputField
-    type="text"
     color="blue"
-    shade="dark"
-    :iconSet="['keyboard', '']"
+    shade="darker"
+    :icon-set="['keyboard', '']"
+    type="text"
     placeholder="Search..."/>
-  <Navigation
-    is-inverted
-    :linkList="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>
+  <Navigation color="blue" shade="darker" is-inverted>
+    <NavigationLink icon="home">
+    </NavigationLink>
+    <NavigationLink icon="book">
+    </NavigationLink>
+  </Navigation>
 </Header>
 <Footer/>
 ```
 
 ### Add-on set
 
-The third panel contains a slot so that you can populate your own content in it.
+In an ideal world, you'd just use the `Footer` component with no customisation.
+In this world, we have props and slots.
 
-Ideally you would use the panel to cite attributions, give credits and state 
-licenses, if any. The third panel also presents a good location to use the 
-component [Locale](#/Patterns/Locale) allowing people to choose a language 
-they're comfortable with. But those are just suggestions.
+In the first panel, you can customise the logo using the slot `logo`. If your
+site is not a direct sub-entity of Creative Commons, you might want to have the
+entity logo there.
+
+The second panel allows you to change the address via the slot `address`.
+
+The third panel contains the default slot so you can populate your own content
+in it. Ideally you would use the panel to cite attributions, give credits and
+state licenses, if any and use the component [Locale](#/Patterns/Locale)
+allowing people to choose a language they're comfortable with.
 
 Anything goes.
 
-```jsx { "props": { "className": "i18n-enabled contain-content" } }
-<Footer>
-  <Heading :level="6">You really mean anything?</Heading>
-  Yes, <em>literally</em> anything.
-</Footer>
-```
+```jsx
+let style = {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  color: 'white'
+};
+let alternativeLinks = [ 
+  {
+    text: 'GitHub',
+    href: 'https://github.com/creativecommons/cc-vocabulary'
+  },
+  {
+    text: 'Styleguide',
+    href: 'https://creativecommons.github.io/cc-vocabulary'
+  },
+  {
+    text: 'UMD Demo',
+    href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
+  },
+  {
+    text: 'CJS Demo',
+    href: 'https://search.creativecommons.org/'
+  }
+]
+let alternativeContacts = [
+  {
+    text: 'Report bug',
+    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=bug_report.md&title='
+  },
+  {
+    text: 'Request feature',
+    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=feature_request.md&title='
+  }
+]
 
-```jsx { "props": { "className": "i18n-enabled contain-content" } }
-<Footer>
-  <Locale/>
+<Footer
+  :alternative-links="alternativeLinks"
+  :alternative-contacts="alternativeContacts">
+  <template #logo>
+    <div :style="style">
+      <BrandImagery brand="vocabulary" color="white"/>
+    </div>
+  </template>
+
+  <template #communication>
+    <Paragraph>
+      When you are everywhere, you are nowhere.<br/>
+      When you are somewhere, you are everywhere.
+    </Paragraph>
+    <Paragraph>
+      That is to say, all work is done on GitHub.
+    </Paragraph>
+  </template>
+
+  <Heading :level="6">You really mean anything?</Heading>
+  <Paragraph>
+    Yes, <em>literally</em> anything.
+  </Paragraph>
+  <Paragraph>
+    <Locale/>
+  </Paragraph>
 </Footer>
 ```
