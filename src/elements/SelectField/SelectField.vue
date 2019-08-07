@@ -1,14 +1,18 @@
 <template>
   <div class="vocab select-field" :class="selectFieldClasses">
-    <!-- Wrap with label when using -->
+    <!-- Attach label with ID when using -->
     <select
       v-bind="$attrs"
       v-on="selectListeners"
       class="field"
       :class="fieldClasses"
       :disabled="isDisabled || isReadOnly"
+      :value="value"
       @focus="toggleDropdown"
       @blur="toggleDropdown">
+      <option disabled value="">
+        Select
+      </option>
       <option
         v-for="(option, index) in optionList"
         :key="index"
@@ -101,6 +105,10 @@
       Unactionable
     ],
     inheritAttrs: false,
+    model: {
+      prop: 'value',
+      event: 'change'
+    },
     props: {
       /**
        * _an icon to use in the dropdown_
@@ -114,6 +122,15 @@
       optionList: {
         type: Array,
         required: true
+      },
+      /**
+       * _the value of this field_
+       *
+       * The option that matches this value will be shown as the selected
+       * option.
+       */
+      value: {
+        type: String
       }
     },
     data: function () {
@@ -148,8 +165,8 @@
           {},
           vm.$listeners,
           {
-            input: function (event) {
-              vm.$emit('input', event.target.value)
+            change: function (event) {
+              vm.$emit('change', event.target.value)
             }
           }
         )

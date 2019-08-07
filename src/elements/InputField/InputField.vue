@@ -1,6 +1,6 @@
 <template>
   <div class="vocab input-field" :class="inputFieldClasses">
-    <!-- Wrap with label when using -->
+    <!-- Attach label with ID when using -->
     <input
       v-bind="$attrs"
       v-on="inputListeners"
@@ -69,6 +69,10 @@
       Unactionable
     ],
     inheritAttrs: false,
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       /**
        * _an array specifying the left and right icon_

@@ -66,6 +66,10 @@
       Resizeable,
       Unactionable
     ],
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       /**
        * _an array specifying the off and on icon_

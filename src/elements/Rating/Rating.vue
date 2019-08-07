@@ -50,6 +50,10 @@
     components: {
       FontAwesomeIcon
     },
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       /**
        * _an array of icons to use for the ratings_
