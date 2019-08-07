@@ -12,26 +12,28 @@ the `localeList` prop.
 ```jsx
 let localeList = [
   {
-    code: 'hi',
-    englishName: 'Hindi', // For the love of God,
-    nativeName: 'Hindi'   // do not subject your users to this.
+    code: 'en',
+    englishName: 'English',
+    nativeName: 'English'
   },
   {
-    code: 'en',
-    englishName: 'अंग्रेज़ी',  // For the love of God,
-    nativeName: 'अंग्रेज़ी'    // do not subject your users to this.
+    code: 'hi',
+    englishName: 'Hindi',
+    nativeName: 'हिन्दी'
+  },
+  {
+    code: 'ma',
+    englishName: 'Marathi',
+    nativeName: 'मराठी'
+  },
+  {
+    code: 'gu',
+    englishName: 'Gujarati',
+    nativeName: 'ગુજરાતી'
   }
 ];
 
 <Locale :locale-list="localeList"/>
-```
-
-In components that have i18n enabled and translations defined this component
-appears in the preview as well, allowing explorers (like yourself!) to change 
-locales and see the various versions of the component.
-
-```jsx { "props": { "className": "i18n-enabled" } }
-<Hello/>
 ```
 
 You can embed the switcher in any component inside any Vue i18n configured
@@ -44,6 +46,10 @@ toggling between the translations for that application. The
   <Locale/>
 </Footer>
 ```
+
+In components that have i18n enabled and translations defined this component
+appears in the preview as well, allowing explorers (like yourself!) to change 
+locales and see the various versions of the component.
 
 All locale switchers across the documentation (or any application for that
 matter), including those in component previews, are reactively bound to the same
