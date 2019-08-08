@@ -1,21 +1,21 @@
-## Examples
-
-Here is an example of a card.
+Here, look at my card. 
 
 ```jsx
+let dhruvSource = 'https://avatars0.githubusercontent.com/u/16580576';
+let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
+
 <Grid density="sparse">
-  <GridCell :spanSet="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 2]">
     <Card
       color="blue"
-      shade="darker"
-      is-decked
-      is-inverted
       heading="Dhruv Bhanushali"
       subheading="Developer"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/16580576"
-      featuredImageAlternateText="Dhruv Bhanushali's profile picture">
-      <template v-slot:foot>
-        India
+      :featuredImageSource="dhruvSource"
+      :featuredImageAlternateText="dhruvAlt"
+      is-rounded
+      is-raised>
+      <template #foot>
+        🇮🇳 India
       </template>
     </Card>
   </GridCell>
@@ -27,18 +27,20 @@ Here is an example of a card.
 A card can be elevated over the surrounding-content via a shadow.
 
 ```jsx
+let hugoSource = 'https://avatars0.githubusercontent.com/u/894708';
+let hugoAlt = 'Hugo Solar\'s profile picture';
+
 <Grid>
-  <GridCell :spanSet="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 2]">
     <Card
       color="magenta"
-      is-decked
-      is-raised
       heading="Hugo Solar"
       subheading="Mentor"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/894708"
-      featuredImageAlternateText="Hugo Solar's profile picture">
-      <template v-slot:foot>
-        <CountryFlag country=""/>Chile
+      :featuredImageSource="hugoSource"
+      :featuredImageAlternateText="hugoAlt"      
+      is-raised>
+      <template #foot>
+        🇨🇱 Chile
       </template>
     </Card>
   </GridCell>
@@ -49,18 +51,20 @@ A card can be rounded instead of sharp cuts at right angles so as to fit in
 better with more curvy layouts.
 
 ```jsx
+let kritiSource = 'https://avatars0.githubusercontent.com/u/287034';
+let kritiAlt = 'Kriti Godey\'s profile picture';
+
 <Grid>
-  <GridCell :spanSet="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 2]">
     <Card
       color="purple"
-      is-decked
-      is-rounded
       heading="Kriti Godey"
       subheading="Mentor"
-      featuredImageSource="https://avatars0.githubusercontent.com/u/287034"
-      featuredImageAlternateText="Kriti Godey's profile picture">
-      <template v-slot:foot>
-        USA
+      :featuredImageSource="kritiSource"
+      :featuredImageAlternateText="kritiAlt"
+      is-rounded>
+      <template #foot>
+        🇺🇸 USA
       </template>
     </Card>
   </GridCell>
@@ -71,18 +75,43 @@ A card be designed to have more minimalist appearance so as to not be too
 eye-catching or prominent.
 
 ```jsx
+let sophineSource = 'https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg';
+let sophineAlt = 'Sophine Clachar\'s profile picture';
+
 <Grid>
-  <GridCell :spanSet="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 2]">
     <Card
       color="orange"
-      is-decked
-      is-basic
       heading="Sophine Clachar"
       subheading="Mentor"
-      featuredImageSource="https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg"
-      featuredImageAlternateText="Sophine Clachar's profile picture">
-      <template v-slot:foot>
-        USA
+      :featuredImageSource="sophineSource"
+      :featuredImageAlternateText="sophineAlt"
+      is-basic>
+      <template #foot>
+        🇺🇸 USA
+      </template>
+    </Card>
+  </GridCell>
+</Grid>
+```
+
+A card can be ghosted to have the ultimate minimalist appearance.
+
+```jsx
+let brenoSource = 'https://avatars0.githubusercontent.com/u/707019';
+let brenoAlt = 'Breno Ferreira\'s profile picture';
+
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 2]">
+    <Card
+      color="yellow"
+      heading="Breno Ferreira"
+      subheading="Unofficial mentor"
+      :featuredImageSource="brenoSource"
+      :featuredImageAlternateText="brenoAlt"
+      is-ghost>
+      <template #foot>
+        🇧🇷 Brazil
       </template>
     </Card>
   </GridCell>
@@ -95,20 +124,31 @@ Apart from the main content, a card has a heading, a subheading, a featured
 image. These can be set via props `heading`, `subheading`,
 `featuredImageSource` and `featuredImageAlternateText` respectively.
 
+The footer still uses a slot though, so you'll need to populate that. The body
+of the card goes into the default slot.
+
 ```jsx
+let giraffeSource = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Two_Giraffes.PNG/405px-Two_Giraffes.PNG';
+let giraffeAlt = 'Two giraffes in Kenya';
+
 <Grid>
-  <GridCell :spanSet="[12, 6, 4, 4, 3]">
+  <GridCell :span-set="[12, 6, 4, 4, 3]">
     <Card
-      color="yellow"
-      is-rounded
-      is-raised
-      heading="Two giraffes in Kenya"
+      color="red"
+      :heading="giraffeAlt"
       subheading="Brandt Luke Zorn's father"
-      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Two_Giraffes.PNG/405px-Two_Giraffes.PNG"
-      featuredImageAlternateText="Two giraffes in Kenya">
-      <template v-slot:foot>
+      :featuredImageSource="giraffeSource"
+      :featuredImageAlternateText="giraffeAlt">
+      <template #foot>
         CC BY-SA
-      </template
+      </template>
+      <Paragraph>
+        How are unicorns fake but giraffes real? Like, what's more belieavable:
+        a horse with a horn or a leopard-moose-camel with a 40 foot neck?
+      </Paragraph>
+      <Paragraph>
+        - Kyle Brownlee
+      </Paragraph>
     </Card>
   </GridCell>
 </Grid>
@@ -118,44 +158,34 @@ If you'd like something of your own there, you can override the slots to fit
 in your own stuff.
 
 ```jsx
+let hummingbirdSource = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hummingbird.jpg/640px-Hummingbird.jpg';
+let hummingbirdAlt = 'Costa\'s hummingbird';
+
 <Grid>
-  <GridCell :spanSet="[12, 6, 4, 4, 3]">
-    <Card
-      color="orange"
-      is-decked
-      is-rounded
-      is-raised>
-      <template v-slot:feature>
-        <img alt="Royal Bengal tiger" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Royal_Bengal_Tiger.jpg"/>
-      </template>
-      <template v-slot:head>
-        <div class="heading">Royal Bengal tiger</div>
-        <div class="subheading">
-          Sujit Kumar
-        </div>
-      </template>
-      <template v-slot:foot>
-        <LicenseIconography :iconList="['', 'by', 'sa']"/>
-      </template>
-    </Card>
-  </GridCell>
-  <GridCell :spanSet="[12, 6, 4, 4, 3]">
+  <GridCell :span-set="[12, 6, 4, 4, 3]">
     <Card
       color="green"
-      is-decked
-      is-rounded
-      is-raised
-      featuredImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hummingbird.jpg/640px-Hummingbird.jpg"
-      featuredImageAlternateText="Costa's hummingbird">
-      <template v-slot:head>
-        <div class="heading">Costa's hummingbird</div>
-        <div class="subheading">
-          San Diego Zoo
-        </div>
+      is-decked>
+      <template #feature>
+        <img 
+          style="width: 100%;"
+          :src="hummingbirdSource"
+          :alt="hummingbirdAlt"/>
       </template>
-      <template v-slot:foot>
-        <LicenseIconography :iconList="['pd']"/>
+      <template #head>
+        <div class="heading"><u>{{ hummingbirdAlt }}</u></div>
+        <div class="subheading"><i>San Diego Zoo</i></div>
       </template>
+      <template #foot>
+        <LicenseIconography :icon-list="['pd']"/>
+      </template>
+      <Paragraph>
+        It it not the strength of the body that counts, but the strength of the
+        spirit.
+      </Paragraph>
+      <Paragraph>
+        - Tolkien
+      </Paragraph>
     </Card>
   </GridCell>
 </Grid>
@@ -170,8 +200,7 @@ A card without any color looks like this.
 <Card 
   heading="Colorless card"
   subheading="No accent"
-  is-raised
-  is-rounded/>
+  is-raised/>
 ```
 
 Again like any other component, cards can be colored using any color from the
@@ -179,7 +208,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
 
 ```jsx
 <Grid>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="blue"
       heading="Blue card"
@@ -187,7 +216,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="green"
       heading="Green card"
@@ -195,7 +224,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="magenta"
       heading="Magenta card"
@@ -203,7 +232,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="olive"
       heading="Olive card"
@@ -211,7 +240,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="orange"
       heading="Orange card"
@@ -219,7 +248,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="purple"
       heading="Purple card"
@@ -227,7 +256,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="red"
       heading="Red card"
@@ -235,7 +264,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="sand"
       heading="Sand card"
@@ -243,7 +272,7 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="yellow"
       heading="Yellow card"
@@ -259,7 +288,7 @@ to accentuate the color.
 
 ```jsx
 <Grid>
-  <GridCell :spanSet="[12, 6, 3, 3, 3]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="blue"
       shade="light"
@@ -268,7 +297,7 @@ to accentuate the color.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 6, 3, 3, 3]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="blue"
       heading="Blue card"
@@ -276,7 +305,7 @@ to accentuate the color.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 6, 3, 3, 3]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="blue"
       shade="dark"
@@ -285,7 +314,7 @@ to accentuate the color.
       is-raised
       is-rounded/>
   </GridCell>
-  <GridCell :spanSet="[12, 6, 3, 3, 3]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="blue"
       shade="darker"
@@ -293,6 +322,29 @@ to accentuate the color.
       subheading="Darker blue accent"
       is-raised
       is-rounded/>
+  </GridCell>
+</Grid>
+```
+
+On a dark or non-white canvas, you should use the inverted version of the 
+component.
+
+```jsx { "props": { "className": "dark-background" } }
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Card
+      heading="Dark?"
+      subheading="Inverted"
+      is-rounded
+      is-inverted/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Card
+      color="magenta"
+      heading="Dark?"
+      subheading="Inverted"
+      is-rounded
+      is-inverted/>
   </GridCell>
 </Grid>
 ```

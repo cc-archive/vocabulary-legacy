@@ -1,14 +1,14 @@
 <template>
-  <div class="vocab card" :class="cardClasses">
-    <Section
-      v-bind="$attrs"
-      :is-inverted="isInverted"
-      :is-rounded="isRounded"
-      :color="color"
-      :shade="shade"
-      :colorSide="color ? 'bottom': ''"
-      is-clingy>
-      <div class="feature">
+  <Section
+    v-bind="$attrs"
+    class="card"
+    :class="cardClasses"
+    color-side="bottom"
+    is-clingy>
+    <div class="content">
+      <div
+        v-if="hasFeature"
+        class="feature">
         <!-- @slot Featured content goes here -->
         <slot name="feature">
           <ImageView
@@ -17,36 +17,41 @@
             :alternateText="featuredImageAlternateText"/>
         </slot>
       </div>
-      <div class="head" v-if="hasHead">
+
+      <div
+        v-if="hasHead"
+        class="head">
         <!-- @slot Card header goes here -->
         <slot name="head">
           <div class="heading">{{ heading }}</div>
           <div class="subheading">{{ subheading }}</div>
         </slot>
       </div>
-      <div class="body">
+
+      <div
+        v-if="$slots.default"
+        class="body">
         <!-- @slot Content goes here -->
         <slot/>
       </div>
-      <div class="foot" v-if="$slots.foot">
+
+      <div
+        v-if="$slots.foot"
+        class="foot">
         <!-- @slot Card footer goes here -->
         <slot name="foot"/>
       </div>
-    </Section>
-  </div>
+    </div>
+  </Section>
 </template>
 
 <script>
   import ImageView from '@/elements/ImageView/ImageView'
+
   import Section from '@/layouts/Section/Section'
 
-  import Colorable from '@/mixins/colorable'
-  import Invertible from '@/mixins/invertible'
-  import Roundable from '@/mixins/roundable'
-  import Raisable from '@/mixins/raisable'
-
   /**
-   * ## Cards describe singular subjects.
+   * ### Cards describe singular subjects.
    *
    * Cards are surfaces that display content, information and actions on a
    * single topic. They are easy to scan. Cards are the basis of responsive
@@ -54,25 +59,11 @@
    */
   export default {
     name: 'Card',
-    inheritAttrs: false,
-    mixins: [
-      Colorable,
-      Invertible,
-      Roundable,
-      Raisable
-    ],
     components: {
       ImageView,
       Section
     },
     props: {
-      /**
-       * _whether the card appears alongside other cards in a Grid_
-       */
-      isDecked: {
-        type: Boolean,
-        default: false
-      },
       /**
        * _the source of the featured image_
        *
@@ -102,20 +93,26 @@
        */
       subheading: {
         type: String
+      },
+      /**
+       * _whether the card appears alongside other cards in a Grid_
+       */
+      isDecked: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
       cardClasses: function () {
         return [
-          this.color,
-          this.shade,
           {
-            'decked': this.isDecked,
-            'inverted': this.isInverted,
-            'rounded': this.isRounded,
-            'raised': this.isRaised
+            'decked': this.isDecked
           }
         ]
+      },
+
+      hasFeature: function () {
+        return this.$slots.feature || this.featuredImageSource
       },
       hasHead: function () {
         return this.$slots.head || this.heading || this.subheading
