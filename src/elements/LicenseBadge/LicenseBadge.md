@@ -5,13 +5,15 @@ Without frills, badges looks like these.
   color="orange"
   :level="3">
   The CC BY license
-  <LicenseBadge license="by"/>:
+  <LicenseBadge 
+    license="by"
+    is-centered/>:
 </Heading>
 <Paragraph>
   The CC BY license
   (<LicenseBadge 
      license="by" 
-     version="small" 
+     version="reduced" 
      is-centered/>)
   is a permissive free-culture license.
 </Paragraph>
@@ -36,24 +38,42 @@ The badge may be vertically centered with respect to surrounding text.
 To start with we have badges for all CC licenses.
 
 ```jsx
-<Grid>
+<Grid style="text-align: center;">
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by"/>
+    <Paragraph>
+      CC Attribution
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc"/>
+    <Paragraph>
+      CC Attribution-NonCommercial 
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc-nd"/>
+    <Paragraph>
+      CC Attribution-NonCommercial-NoDerivs
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nc-sa"/>
+    <Paragraph>
+      CC Attribution-NonCommercial-ShareAlike
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-nd"/>
+    <Paragraph>
+      CC Attribution-NoDerivs
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <LicenseBadge license="by-sa"/>
+    <Paragraph>
+      CC Attribution-ShareAlike
+    </Paragraph>
   </GridCell>
 </Grid>
 ```
@@ -62,12 +82,18 @@ Apart from these, we also have badges for the CC Zero license and the Public
 Domain mark.
 
 ```jsx
-<Grid>
+<Grid style="text-align: center;">
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="zero"/>
+    <Paragraph>
+      CC Zero
+    </Paragraph>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="pd"/>
+    <Paragraph>
+      Public domain
+    </Paragraph>
   </GridCell>
 </Grid>
 ```
@@ -75,19 +101,19 @@ Domain mark.
 ### Version set
 
 Badges for all licenses come in two variants:
-- a larger one with natural dimensions of 120px &times; 42px
-- a smaller one with natural dimensions of 80px &times; 15px
+- Full (dimensions: 120px &times; 42px)
+- Reduced (dimensions: 80px &times; 15px)
 
 Smaller badges for the licenses use only abbreviations for every individual 
 aspect of the license.
 
 ```jsx
-<Grid>
+<Grid style="text-align: center;">
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="by-sa" version="small"/>
+    <LicenseBadge license="by-sa" version="reduced"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="zero" version="small"/>
+    <LicenseBadge license="zero" version="reduced"/>
   </GridCell>
 </Grid>
 ```
@@ -96,7 +122,7 @@ Larger badges for the licenses use both abbreviations as well as iconography for
 every individual aspect of the license.
 
 ```jsx
-<Grid>
+<Grid style="text-align: center;">
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <LicenseBadge license="by-sa"/>
   </GridCell>
@@ -106,39 +132,18 @@ every individual aspect of the license.
 </Grid>
 ```
 
-### Size set
+### Attribute set
 
-Since a `LicenseBadge` is effectively an `ImageView` component, one can use
-the `size` prop or CSS rules to change the size of the badge.
-And since the images are all SVGs, they can scale beautifully to virtually any
-size.
+Since `LicenseBadge` is a transparent wrapper on `ImageView`, all props that you
+could pass to an `ImageView` will still work. Slots however will not.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="by-sa" height="84" size="big"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="zero" size="big"/>
-  </GridCell>
-</Grid>
-```
-
-The same applies to the smaller versions of the badges, but if you wanted to
-enlarge them, you'd probably be better off using the large versions themselves.
+Here is an example with size.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="by-sa" version="small" size="small"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <LicenseBadge license="zero" version="small" size="small"/>
-  </GridCell>
-</Grid>
+<LicenseBadge license="by" size="large"/>
 ```
 
-### Note
+### Age
 
 These badges have a look of legacy and age about them. If you are not a fan of
 this look, feel free to use [LicenseIconography](#/Elements/LicenseIconography).

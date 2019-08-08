@@ -2,9 +2,10 @@
   <ImageView
     v-bind="$attrs"
     class="license-badge"
+    :class="licenseBadgeClasses"
     :source="svgSource"
     :alternate-text="`${license}`.toUpperCase()"
-    :is-centered="isCentered"/>
+    :size="$attrs.size || 'natural'"/>
 </template>
 
 <script>
@@ -46,21 +47,20 @@
       /**
        * _the size-based version of the badge being displayed_
        *
-       * ∈ {`'large'`, `'small'`}
+       * ∈ {`'reduced'`, `'full'`}
        */
       version: {
         type: String,
-        default: 'large'
-      },
-      /**
-       * _whether to center the badge when inline with text_
-       */
-      isCentered: {
-        type: Boolean,
-        default: false
+        default: 'full'
       }
     },
     computed: {
+      licenseBadgeClasses: function () {
+        return [
+          `${this.version}-version`
+        ]
+      },
+
       svgSource: function () {
         return require(
           `@/assets/icons/license/badges_${this.version}/${this.license}.svg`
@@ -69,3 +69,6 @@
     }
   }
 </script>
+
+<style lang="stylus" src="./LicenseBadge.styl">
+</style>
