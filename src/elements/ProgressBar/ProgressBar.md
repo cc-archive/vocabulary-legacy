@@ -1,5 +1,3 @@
-## Examples
-
 Depending on whether completion value is known, progress bars look like this.
 
 ```jsx

@@ -1,5 +1,3 @@
-## Examples
-
 Here is a paragraph for your reading pleasure.
 
 ```jsx

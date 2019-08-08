@@ -1,5 +1,3 @@
-## Examples
-
 Statistics look like this.
 
 ```jsx

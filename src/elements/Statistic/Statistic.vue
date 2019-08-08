@@ -45,7 +45,7 @@
   library.add(faChartLine)
 
   /**
-   * ## Statistics are bits of math trivia.
+   * ### Statistics are bits of math trivia.
    *
    * Statistics present an aesthetic way to present individual bits of numerical
    * data pertaining to the app or website such as traffic, eyeballs or content.

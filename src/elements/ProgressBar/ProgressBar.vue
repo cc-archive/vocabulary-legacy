@@ -48,7 +48,7 @@
   library.add(faHourglassHalf)
 
   /**
-   * ## Progress bars inspire patience.
+   * ### Progress bars inspire patience.
    *
    * Progress bars inform the user of progress or indicate activity. This gives
    * the user some additional patience to wait.
