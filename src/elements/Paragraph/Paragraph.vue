@@ -35,7 +35,7 @@
         ].includes(val)
       },
       color: {
-        default: 'inherit' // Overriding mixin Colorable
+        default: 'inherit' // Overriding mixin Colored
       }
     },
     computed: {

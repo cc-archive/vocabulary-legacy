@@ -36,7 +36,7 @@
         validator: val => val >= 1 && val <= 6
       },
       color: {
-        default: 'inherit' // Overriding mixin Colorable
+        default: 'inherit' // Overriding mixin Colored
       }
     },
     computed: {
