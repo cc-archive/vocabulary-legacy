@@ -1,5 +1,5 @@
 <template>
-  <Grid>
+  <Grid density="sparse">
     <GridCell
       :span-set="spanSet"
       v-for="(prop, index) in colors"

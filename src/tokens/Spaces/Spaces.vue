@@ -1,5 +1,5 @@
 <template>
-  <Grid>
+  <Grid density="sparse">
     <GridCell
       :span-set="[12, 4, 4, 4, 4]"
       v-for="(prop, index) in spaces"
