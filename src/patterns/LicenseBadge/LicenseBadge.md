@@ -1,4 +1,4 @@
-Without frills, badges looks like these.
+Without frills, license badges looks like these.
 
 ```jsx
 <Heading
