@@ -277,5 +277,5 @@ A section may indicate the positive, unclear or negative nature of its content.
       The operation failed to complete.
     </Section>
   </GridCell>
-<Grid>
+</Grid>
 ```
