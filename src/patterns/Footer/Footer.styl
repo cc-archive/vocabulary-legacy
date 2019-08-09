@@ -5,28 +5,29 @@
 .vocab.footer
   // Color
 
+  --footer-background-color $color-tone-grey-darker
   --footer-text-color $color-tone-grey-light
   --footer-highlighted-text-color $color-tone-grey-lighter
 
   // Rules
 
-  color $color-tone-grey-light
+  color var(--footer-text-color)
 
-  background-color $color-tone-grey-darker
+  background-color var(--footer-background-color)
 
   padding $space-normal $space-zero
 
   // Children
 
   a
-    color $color-tone-grey-lighter
+    color var(--footer-highlighted-text-color)
     text-decoration none
 
     &:hover
       color $color-tone-white
 
   h6
-    color $color-tone-grey-lighter
+    color var(--footer-highlighted-text-color)
 
   & > .container
     & > .grid
@@ -42,7 +43,7 @@
           margin $space-small $space-zero
 
         & > .links
-          .link-list
+          & > ul
             piped-list-compact()
 
       & > #contact-column
@@ -54,4 +55,5 @@
           margin-bottom $space-normal
 
         & > .contacts
-          bland-list()
+          & > ul
+            bland-list()

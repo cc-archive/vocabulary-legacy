@@ -6,15 +6,17 @@
       "policies": "Policies",
       "terms": "Terms"
     },
+    "lovetohear": "We'd love to hear from you!",
+    "address": "Creative Commons<br>PO Box 1866, Mountain View, CA 94042",
     "contacts": {
       "email": "info@creativecommons.org",
       "phone": "1-415-429-6753",
       "faq": "Frequently Asked Questions"
     },
-    "lovetohear": "We'd love to hear from you!",
-    "address": "Creative Commons<br>PO Box 1866, Mountain View, CA 94042",
-    "useless": "\"Computers are useless. They can only give you answers.\"",
-    "picasso": "Pablo Picasso"
+    "quote": {
+      "useless": "Computers are useless.<br/>They can only give you answers.",
+      "picasso": "Pablo Picasso"
+    }
   },
   "hi": {
     "links": {
@@ -23,14 +25,16 @@
       "policies": "नीतियाँ",
       "terms": "शर्तेँ"
     },
+    "lovetohear": "हमे आपसे सुनने में ख़ुशी होगी!",
+    "address": "क्रिएटिव कॉमन्स<br>पी ओ बॉक्स १८६६, माउंटेन व्यू, सी ए ९४०४२",
     "contacts": {
       "email": "info@creativecommons.org",
       "phone": "१-४१५-४२९-६७५३",
       "faq": "अक्सर पूछे जाने वाले प्रश्न"
     },
-    "lovetohear": "हमे आपसे सुनने में ख़ुशी होगी!",
-    "address": "क्रिएटिव कॉमन्स<br>पी ओ बॉक्स १८६६, माउंटेन व्यू, सी ए ९४०४२",
-    "useless": "\"कंप्यूटर बेकार हैं। वे आपको केवल उत्तर दे सकते हैं।\"",
-    "picasso": "पाब्लो पिकासो"
+    "quote": {
+      "useless": "\"कंप्यूटर बेकार हैं। वे आपको केवल उत्तर दे सकते हैं।\"",
+      "picasso": "पाब्लो पिकासो"
+    }
   }
 }

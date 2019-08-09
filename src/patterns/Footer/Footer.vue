@@ -1,8 +1,10 @@
 <template>
   <footer class="vocab footer">
     <Container>
-      <Grid density="sparser">
-        <GridCell :span-set="[12, 12, 4, 4, 4]" id="branding-column">
+      <Grid>
+        <GridCell
+          id="branding-column"
+          :span-set="[12, 12, 4, 4, 4]">
           <div class="logo">
             <!-- @slot Logo goes here -->
             <slot name="logo">
@@ -11,19 +13,24 @@
           </div>
 
           <div class="links">
-            <ul class="link-list">
-              <li
-                v-for="(link, index) in links"
-                :key="index">
-                <a :href="link.href">
-                  {{ link.text }}
-                </a>
-              </li>
-            </ul>
+            <!-- @slot Links go here -->
+            <slot name="links">
+              <ul>
+                <li
+                  v-for="(link, index) in links"
+                  :key="index">
+                  <a :href="link.href">
+                    {{ $t(link.key) }}
+                  </a>
+                </li>
+              </ul>
+            </slot>
           </div>
         </GridCell>
 
-        <GridCell :span-set="[12, 6, 4, 4, 4]" id="contact-column">
+        <GridCell
+          id="contact-column"
+          :span-set="[12, 6, 4, 4, 4]">
           <Heading :level="6">{{ $t('lovetohear') }}</Heading>
 
           <div class="communication">
@@ -32,25 +39,33 @@
             </slot>
           </div>
 
-          <ul class="contacts">
-            <li v-for="(contact, index) in contacts" :key="index">
-              <a :href="contact.href">
-                {{ contact.text }}
-              </a>
-            </li>
-          </ul>
+          <div class="contacts">
+            <!-- @slot Contacts go here -->
+            <slot name="contacts">
+              <ul>
+                <li
+                  v-for="(contact, index) in contacts"
+                  :key="index">
+                  <a :href="contact.href">
+                    {{ $t(contact.key) }}
+                  </a>
+                </li>
+              </ul>
+            </slot>
+          </div>
         </GridCell>
 
-        <GridCell :span-set="[12, 6, 4, 4, 4]" id="custom">
+        <GridCell
+          id="custom"
+          :span-set="[12, 6, 4, 4, 4]">
           <!-- @slot Content goes here -->
           <slot>
             <div>
-              <Paragraph>
-                {{ $t('useless') }}
-              </Paragraph>
-              <Paragraph>
-                &mdash; {{ $t('picasso') }}
-              </Paragraph>
+              <Quote
+                :attribution="$t('quote.picasso')"
+                is-inverted>
+                <span v-html="$t('quote.useless')"></span>
+              </Quote>
             </div>
           </slot>
         </GridCell>
@@ -60,13 +75,14 @@
 </template>
 
 <script>
-  import BrandImagery from '@/elements/BrandImagery/BrandImagery'
   import Heading from '@/elements/Heading/Heading'
-  import Paragraph from '@/elements/Paragraph/Paragraph'
 
   import Container from '@/layouts/Container/Container'
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
+
+  import BrandImagery from '@/patterns/BrandImagery/BrandImagery'
+  import Quote from '@/patterns/Quote/Quote'
 
   /**
    * ### Footer concludes the page.
@@ -79,66 +95,42 @@
     components: {
       BrandImagery,
       Heading,
-      Paragraph,
       Container,
       Grid,
-      GridCell
-    },
-    props: {
-      /**
-       * _an alternative list of links to show below the logo_
-       */
-      alternativeLinks: {
-        type: Array,
-        validator: val => val.every(
-          link => ['text', 'href'].every(
-            key => key in link
-          )
-        )
-      },
-      /**
-       * _an alternative list of contact channels to show below the address_
-       */
-      alternativeContacts: {
-        type: Array,
-        validator: val => val.every(
-          link => ['text', 'href'].every(
-            key => key in link
-          )
-        )
-      }
+      GridCell,
+      Quote
     },
     data: function () {
       return {
-        links: this.alternativeLinks || [
+        links: [
           {
-            text: this.$t('links.contact'),
+            key: 'links.contact',
             href: 'https://creativecommons.org/about/contact/'
           },
           {
-            text: this.$t('links.privacy'),
+            key: 'links.privacy',
             href: 'https://creativecommons.org/privacy/'
           },
           {
-            text: this.$t('links.policies'),
+            key: 'links.policies',
             href: 'https://creativecommons.org/policies'
           },
           {
-            text: this.$t('links.terms'),
+            key: 'links.terms',
             href: 'https://creativecommons.org/terms/'
           }
         ],
-        contacts: this.alternativeContacts || [
+        contacts: [
           {
-            text: this.$t('contacts.email'),
+            key: 'contacts.email',
             href: 'mailto:info@creativecommons.org'
           },
           {
-            text: this.$t('contacts.phone'),
+            key: 'contacts.phone',
             href: 'tel:1-415-429-6753'
           },
           {
-            text: this.$t('contacts.faq'),
+            key: 'contacts.faq',
             href: 'https://creativecommons.org/faq'
           }
         ]

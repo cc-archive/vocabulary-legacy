@@ -20,10 +20,15 @@ library.add(faHome, faBook);
     :icon-set="['keyboard', '']"
     type="text"
     placeholder="Search..."/>
-  <Navigation color="blue" shade="darker" is-inverted>
+  <Navigation
+    color="blue"
+    shade="darker"
+    is-inverted>
     <NavigationLink icon="home">
+      Home page
     </NavigationLink>
     <NavigationLink icon="book">
+      Documentation
     </NavigationLink>
   </Navigation>
 </Header>
@@ -36,10 +41,13 @@ In an ideal world, you'd just use the `Footer` component with no customisation.
 In this world, we have props and slots.
 
 In the first panel, you can customise the logo using the slot `logo`. If your
-site is not a direct sub-entity of Creative Commons, you might want to have the
-entity logo there.
+site has its own branding, you might want to have the entity logo there. 
 
-The second panel allows you to change the address via the slot `address`.
+The links below can be customised via the `links` slot. Links relevant to the 
+site should be placed there as `ul` > `li` > `a`.
+
+The second panel allows you to change the address via the slot `address`. The
+contacts below can be customised via the `contacts` slot.
 
 The third panel contains the default slot so you can populate your own content
 in it. Ideally you would use the panel to cite attributions, give credits and
@@ -49,12 +57,6 @@ allowing people to choose a language they're comfortable with.
 Anything goes.
 
 ```jsx
-let style = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  color: 'white'
-};
 let alternativeLinks = [ 
   {
     text: 'GitHub',
@@ -72,7 +74,7 @@ let alternativeLinks = [
     text: 'CJS Demo',
     href: 'https://search.creativecommons.org/'
   }
-]
+];
 let alternativeContacts = [
   {
     text: 'Report bug',
@@ -82,25 +84,43 @@ let alternativeContacts = [
     text: 'Request feature',
     href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=feature_request.md&title='
   }
-]
+];
 
-<Footer
-  :alternative-links="alternativeLinks"
-  :alternative-contacts="alternativeContacts">
+<Footer>
   <template #logo>
-    <div :style="style">
-      <BrandImagery brand="vocabulary" color="white"/>
-    </div>
+    <BrandImagery brand="vocabulary" color="white"/>
+  </template>
+
+  <template #links>
+    <ul>
+      <li
+        v-for="(link, index) in alternativeLinks"
+        :key="index">
+        <a :href="link.href">{{ link.text }}</a>
+      </li>
+    </ul>
   </template>
 
   <template #communication>
-    <Paragraph>
+    <Quote
+      attribution="Rumi"
+      is-inverted>
       When you are everywhere, you are nowhere.<br/>
       When you are somewhere, you are everywhere.
-    </Paragraph>
+    </Quote>
     <Paragraph>
       That is to say, all work is done on GitHub.
     </Paragraph>
+  </template>
+
+  <template #contacts>
+    <ul>
+      <li
+        v-for="(contact, index) in alternativeContacts"
+        :key="index">
+        <a :href="contact.href">{{ contact.text }}</a>
+      </li>
+    </ul>
   </template>
 
   <Heading :level="6">You really mean anything?</Heading>
