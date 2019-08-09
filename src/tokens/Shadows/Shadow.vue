@@ -1,16 +1,16 @@
 <template>
-    <Card
-            class="vocab shadow"
-            :heading="properName"
-            :subheading="comment"
-            is-decked
-            is-raised>
-        <div class="saucer" :style="saucerStyles"></div>
-        <template #foot>
-            <code>{{ value }}</code><br/>
-            <code>${{ styleName }}</code>
-        </template>
-    </Card>
+  <Card
+    class="vocab shadow"
+    :heading="properName"
+    :subheading="comment"
+    is-decked
+    is-raised>
+    <div class="saucer" :style="saucerStyles"></div>
+    <template #foot>
+      <code>{{ value }}</code><br/>
+      <code>${{ styleName }}</code>
+    </template>
+  </Card>
 </template>
 
 <script>
