@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i&display=swap")
+
+@import "~@/assets/tokens/tokens.styl"
+
+@import "~@/styles/list.styl"
+
+.vocab.dictionary
+  // Children
+
+  & > .heading
+    margin-bottom $space-normal
+
+    & > .word
+      font-size $size-enormous
+      font-family "Libre Baskerville", serif
+      font-weight 400
+
+  & > .definitions
+    & > ul
+      bland-list()
+
+      counter-reset section
+
+      & > li
+        &::before
+          counter-increment section
+          content counter(section) ' '
+
+          vertical-align super
+
+          font-weight $weight-bold
+          font-size $size-small
+
+        &.unimportant
+          opacity 0.6
+
+    .number
+      font-weight $weight-bold
