@@ -1,29 +1,96 @@
 <template>
-  <div class="vocab index" :class="indexClasses">
+  <div class="vocab index">
     <main>
-      <Hello
-        v-if="isComputedEaster"
-        is-inverted
-        logoType="none">
-        <Heading :level="4" is-inverted>{{ $t('welcome') }}!</Heading>
-        <Heading :level="4" is-inverted>{{ $t('everythingisfine') }}</Heading>
-      </Hello>
-      <Hello
-        v-else
-        is-inverted/>
+      <Container>
+        <Definition
+          :pronunciation="$t('pronunciation')"
+          part-of-speech="n.">
+          <template #word>
+            {{ $t('vo_cab_u_lar_y') }}
+          </template>
+          <ul>
+            <li class="unimportant">
+              {{ $t('definition.unimportant') }}
+            </li>
+            <li>
+              <i18n path="definition.cohesive" tag="span">
+                <strong>
+                  {{ $t('creativecommons') }}
+                </strong>
+              </i18n>
+            </li>
+          </ul>
+        </Definition>
+      </Container>
     </main>
+
     <Footer>
+      <template #logo>
+        <span class="logo">
+          <BrandImagery
+            type="lettermark"
+            color="white"
+            size="small"
+            is-centered/>
+          &nbsp;
+          <BrandImagery
+            brand="vocabulary"
+            color="white"
+            size="small"
+            is-centered/>
+        </span>
+      </template>
+
+      <template #links>
+        <ul>
+          <li
+            v-for="(link, index) in alternativeLinks"
+            :key="index">
+            <a :href="link.href">
+              {{ $t(link.key) }}
+            </a>
+          </li>
+        </ul>
+      </template>
+
+      <template #communication>
+        <Quote
+          :attribution="$t('communication.rumi')">
+          <span v-html="$t('communication.quote')"></span>
+        </Quote>
+        <Paragraph>
+          {{ $t('communication.ie') }}
+        </Paragraph>
+      </template>
+
+      <template #contacts>
+        <ul>
+          <li
+            v-for="(contact, index) in alternativeContacts"
+            :key="index">
+            <a :href="contact.href">
+              {{ $t(contact.key) }}
+            </a>
+          </li>
+        </ul>
+      </template>
+
       <div class="panel">
         <div>
-          <Heading :level="6">{{ $t('credits') }}</Heading>
-          <i18n path="builtusing" tag="span">
+          <Heading :level="6">{{ $t('panel.credits') }}</Heading>
+          <i18n path="panel.builtusing" tag="span">
             <a href="https://creativecommons.github.io/cc-vocabulary/">
-              {{ $t('ccvocabulary') }}</a> <!-- for the fullstops -->
+              {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
           </i18n>
           <br/>
-          <i18n path="iconsby" tag="span">
+          <i18n path="panel.iconsby" tag="span">
             <a href="https://fontawesome.com/">
-              {{ $t('fa') }}</a> <!-- for the fullstops -->
+              {{ $t('panel.fa') }}</a> <!-- for the fullstops -->
+          </i18n>
+          <br/>
+          <i18n path="panel.imagesby" tag="span">
+            <a href="https://commons.wikimedia.org/">
+              {{ $t('panel.wikimedia') }}</a> <!-- for the fullstops -->
           </i18n>
         </div>
         <Locale/>
@@ -34,47 +101,65 @@
 
 <script>
   import Heading from '@/elements/Heading/Heading'
+  import Paragraph from '@/elements/Paragraph/Paragraph'
 
-  import Hello from '@/patterns/Hello/Hello'
+  import Container from '@/layouts/Container/Container'
+
+  import BrandImagery from '@/patterns/BrandImagery/BrandImagery'
+  import Definition from '@/patterns/Definition/Definition'
   import Footer from '@/patterns/Footer/Footer'
   import Locale from '@/patterns/Locale/Locale'
+  import Quote from '@/patterns/Quote/Quote'
 
   /**
-   * ## Index is the homepage of CC Vocabulary.
+   * ### Index is the homepage of CC Vocabulary.
    *
    * When people visit the CC Vocabulary homepage, they will see this page.
-   * Just to be clear, this is different from the styleguide.
    */
   export default {
     name: 'Index',
     components: {
-      Locale,
       Heading,
-      Hello,
-      Footer
+      Paragraph,
+      Container,
+      BrandImagery,
+      Definition,
+      Footer,
+      Locale,
+      Quote
     },
-    props: {
-      /**
-       * _whether to force Easter Egg mode on the component_
-       *
-       * This is useful in debugging but should not be enabled in practice.
-       */
-      isEaster: {
-        type: Boolean,
-        default: false
-      }
-    },
-    computed: {
-      indexClasses: function () {
-        return [
-          {
-            'easter-egg': this.isComputedEaster
-          }
-        ]
-      },
-      isComputedEaster: function () {
-        let fraction = 0.01 // Lower value means rarer visibility
-        return this.isEaster || Math.random() <= fraction
+    data: function () {
+      let alternativeLinks = [
+        {
+          key: 'links.github',
+          href: 'https://github.com/creativecommons/cc-vocabulary'
+        },
+        {
+          key: 'links.styleguide',
+          href: 'https://creativecommons.github.io/cc-vocabulary'
+        },
+        {
+          key: 'links.umd',
+          href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
+        },
+        {
+          key: 'links.cjs',
+          href: 'https://search.creativecommons.org/'
+        }
+      ]
+      let alternativeContacts = [
+        {
+          key: 'contacts.report',
+          href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=bug_report.md&title='
+        },
+        {
+          key: 'contacts.request',
+          href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=feature_request.md&title='
+        }
+      ]
+      return {
+        alternativeLinks,
+        alternativeContacts
       }
     }
   }

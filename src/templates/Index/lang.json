@@ -1,18 +1,60 @@
 {
   "en": {
-    "credits": "Credits",
-    "builtusing": "Built using {0}.",
-    "iconsby": "Icons by {0}.",
-    "fa": "Font Awesome",
-    "welcome": "Welcome",
-    "everythingisfine": "Everything is fine."
+    "definition":  {
+      "unimportant": "the body of words used in a particular language",
+      "cohesive": "a cohesive design system to unite the web facing {0}"
+    },
+    "links": {
+      "github": "GitHub",
+      "styleguide": "Styleguide",
+      "umd": "UMD demo",
+      "cjs": "CJS demo"
+    },
+    "communication": {
+      "quote": "When you are everywhere, you are nowhere.<br/>When you are somewhere, you are everywhere.",
+      "rumi": "Rumi",
+      "ie": "That is to say all work is done on GitHub."
+    },
+    "contacts": {
+      "report": "Report bug",
+      "request": "Request feature"
+    },
+    "panel": {
+      "credits": "Credits",
+      "builtusing": "Built using {0}.",
+      "iconsby": "Icons by {0}.",
+      "imagesby": "Images from {0}.",
+      "fa": "Font Awesome",
+      "wikimedia": "Wikimedia Commons"
+    }
   },
   "hi": {
-    "credits": "श्रेय",
-    "builtusing": "{0} का उपयोग कर बनाया गया।",
-    "iconsby": "चिह्न {0} द्वारा।",
-    "fa": "फॉन्ट औसम",
-    "welcome": "नमस्ते",
-    "everythingisfine": "सब कुछ ठीक है।"
+    "definition": {
+      "unimportant":  "किसी विशेष भाषा में प्रयुक्त शब्दों का समूह",
+      "cohesive": "वेब का सामना करने वाले {0} को एकजुट करने के लिए एक सुसंगत डिजाइन प्रणाली"
+    },
+    "links": {
+      "github": "गिटहब",
+      "styleguide": "स्टाइलगाइड",
+      "umd": "यू एम डी डेमो",
+      "cjs": "सी जे एस डेमो"
+    },
+    "communication": {
+      "quote": "जब आप हर जगह होते हैं, तो आप कहीं नहीं होते हैं।<br/>जब आप कहीं होते हैं, तो आप हर जगह होते हैं।",
+      "rumi":  "रूमी",
+      "ie": "कहने का तात्पर्य यह है कि सारा काम गिटहब पर होता है।"
+    },
+    "contacts": {
+      "report": "बग रिपोर्ट करें",
+      "request": "सुविधा का अनुरोध करें"
+    },
+    "panel": {
+      "credits": "श्रेय",
+      "builtusing": "{0} का उपयोग कर बनाया गया।",
+      "iconsby": "चिह्न {0} द्वारा।",
+      "imagesby": "{0} द्वारा चित्र।",
+      "fa": "फॉन्ट औसम",
+      "wikimedia": "विकिमीडिया कॉमन्स"
+    }
   }
 }

@@ -1,14 +1,19 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/page.styl"
 
 .vocab.index
   page()
 
   main
+    background radial-gradient($color-tone-white, $color-tone-near-white)
+
     min-height 100vh
-    background radial-gradient($color-orange, $color-orange-dark)
 
   footer.vocab.footer
+    .logo
+      font-size $size-big // Scales logos up
+
     .panel
       height 100%
 
@@ -18,7 +23,3 @@
 
       .vocab.locale
         margin-top $space-normal
-
-  &.easter-egg
-    main
-      background $color-green-dark
