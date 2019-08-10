@@ -133,6 +133,13 @@
       flipSwitch: function () {
         if (!this.isDisabled && !this.isReadOnly) {
           this.isChecked = !this.isChecked
+          /**
+           * _event fired when the switch is flipped_
+           *
+           * The checked (`true`) or unchecked (`false`) state is passed back.
+           *
+           * @type {boolean}
+           */
           this.$emit('input', this.isChecked)
         }
       }

@@ -155,6 +155,13 @@
           } else {
             this.rating = index
           }
+          /**
+           * _event fired when a rating is changed from the control_
+           *
+           * The numerical value of the rating is passed back.
+           *
+           * @type {number}
+           */
           this.$emit('input', this.rating)
         }
       }
