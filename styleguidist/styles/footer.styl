@@ -1,12 +1,39 @@
 @import "~@/assets/tokens/tokens.styl"
 
+@import "./constants.styl"
+
 footer[class*="rsg--footer"]
-  opacity 0.5
-  transition opacity 0.5s
+  background-color $color-footer-background
 
   padding-left $space-large
   padding-right $space-large
   padding-top $space-large
+  padding-bottom $space-large
 
-  &:hover
-    opacity 1.0
+  & > p[class*="rsg--para"]
+    font-size $size-normal
+
+    color $color-footer-foreground
+
+    margin-bottom $space-zero
+
+    & > a[class*="rsg--link"]
+      color inherit
+
+      font-weight $weight-bold
+
+      background-image linear-gradient(
+        90deg,
+        transparent 50%,
+        $color-footer-foreground 50%
+      )
+      background-size 200%
+
+      padding $space-normal $space-small
+
+      transition color, background-position
+      transition-duration $duration-shortest
+
+      &:hover
+        color $color-footer-highlight
+        background-position -100%

@@ -12,6 +12,7 @@ div[class*="rsg--preview"]
   &.i18n-enabled
     div.actual-preview > div.vocab.locale
       display block
+
       margin-bottom $space-normal
 
   &.no-padding
@@ -19,7 +20,9 @@ div[class*="rsg--preview"]
     padding-right $space-zero
 
   &.dark-background
-    background-color rgb(9,11,10)
+    color $color-tone-white
+
+    background-color $color-tone-black
 
   &.enlarged-text
     font-size 2rem
@@ -30,4 +33,5 @@ div[class*="rsg--preview"]
 
     +phone-only()
       max-width 100%
+
       overflow-x scroll

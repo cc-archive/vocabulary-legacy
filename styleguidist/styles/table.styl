@@ -1,19 +1,29 @@
 @import "~@/assets/tokens/tokens.styl"
 
+@import "./constants.styl"
+
 table[class*="rsg--table"]
-  *
-    font-size 14px
+  & > thead
+    & > tr
+      background-color $color-table-head-background
 
-  tr:hover
-    background-color $color-tone-near-white
+      & > th
+        color $color-table-head-foreground
 
-  th
-    color $color-tone-white
-    text-transform uppercase
+        text-transform uppercase
 
-    background-color $color-blue-darker
+        padding $space-large
 
-    padding $space-large
+  & > tbody
+    & > tr
+      & > td
+        font-size 15px
 
-  td
-    padding $space-normal $space-large
+        padding $space-normal $space-large
+
+        p
+          line-height 1
+          margin-bottom $space-small
+
+      &:hover
+        background-color $color-table-body-hover-background

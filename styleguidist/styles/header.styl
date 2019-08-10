@@ -1,17 +1,54 @@
 @import "~@/assets/tokens/tokens.styl"
+
 @import "~@/styles/media.styl"
+
+@import "./constants.styl"
 
 header[class*="rsg--header"]
   +tablet-portrait-up()
     position sticky
     top 0
-    z-index 5 // CodeMirror uses 4
 
-  background-color $color-tone-near-white
+    // Code mirror uses 4
+    z-index 5
 
-  padding $space-large
+  background-color $color-header-background
 
-  border-bottom 1px solid $color-tone-grey-light
+  +phone-only()
+    padding $space-large $space-normal
 
-  div[class*="rsg--toolbar"]
-    margin-left $space-normal
+  +tablet-portrait-up()
+    padding $space-large $space-larger
+
+  & > div[class*="rsg--wrapper"]
+    h2
+      color $color-header-foreground
+
+      a
+        transition 150ms color ease-in
+
+        &:hover
+          color $color-header-highlight
+          text-decoration none
+
+    div[class*="rsg--toolbar"]
+      color $color-header-foreground
+
+      margin-left $space-normal
+
+      a[class*="rsg--button"]
+        color inherit
+
+        &:hover
+          color $color-header-highlight
+
+  & > div[class*="rsg--pathline"]
+    color $color-header-foreground
+
+    font-size 14px
+
+    button[class*="rsg--button"]
+      color inherit
+
+      &:hover
+        color $color-header-highlight

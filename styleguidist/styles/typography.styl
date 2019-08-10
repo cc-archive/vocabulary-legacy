@@ -7,20 +7,17 @@ h2[class*="rsg--heading2"]
   font-family "Fira Code", monospace
   font-weight $weight-bold
 
-  a
-    transition 150ms color ease-in
-
-    &:hover
-      color $color-orange
-      text-decoration none
-
 h3[class*="rsg--heading3"]
   font-family "Fira Code", monospace
-  font-weight $weight-bold
+  font-weight $weight-medium
+
+  margin-top $space-larger
 
 h4[class*="rsg--heading4"]
   font-family "Fira Code", monospace
-  font-weight $weight-bold
+  font-weight $weight-normal
+
+  margin-top $space-larger
 
 blockquote[class*="rsg--blockquote"]
   padding-left $space-large
@@ -30,10 +27,13 @@ blockquote[class*="rsg--blockquote"]
   margin-left $space-zero
 
 code[class*="rsg--code"]
-  font-size $size-small
+  font-size 14px
 
   background-color $color-tone-grey-lighter
 
-  padding $rspace-small
+  padding $rspace-smaller
 
   border-radius $radius-normal
+
+span[class*="rsg--smallSize"]
+  font-size 15px
