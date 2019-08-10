@@ -75,6 +75,13 @@
       isCallToAction: {
         type: Boolean,
         default: false
+      },
+      /**
+       * _whether to round the button into a pill shape_
+       */
+      isPillShaped: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
@@ -89,7 +96,8 @@
           ...this.unactionableClasses,
 
           {
-            'call-to-action': this.isCallToAction
+            'call-to-action': this.isCallToAction,
+            'pill-shaped': this.isPillShaped
           }
         ]
       },

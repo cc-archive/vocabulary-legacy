@@ -157,7 +157,7 @@ something you like.
 
 A button can be rounded to fit in with more curvy layouts and UI components. 
 Although supported, the use of this is highly unlikely given CC's love for 
-sharp vertices and 90° angles. Looks good with pure icon buttons.
+sharp vertices and 90° angles.
 
 ```jsx
 <Grid>
@@ -179,6 +179,35 @@ sharp vertices and 90° angles. Looks good with pure icon buttons.
       color="magenta"
       icon="hand-point-up"
       is-rounded>
+      Click me
+    </Button>
+  </GridCell>
+</Grid>
+```
+
+Even more rounded is the pill shape. It is in complete contrast to the sharp
+edged CC design but looks really good for icon buttons.
+
+```jsx
+<Grid>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      is-pill-shaped/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      is-pill-shaped>
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      is-pill-shaped>
       Click me
     </Button>
   </GridCell>
