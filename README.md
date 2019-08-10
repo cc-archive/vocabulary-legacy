@@ -10,13 +10,13 @@
   <a href="https://creativecommons.github.io/cc-vocabulary/" class="readme-vocabulary-logo">
     <img 
       alt="Vocabulary logo" 
-      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary.svg?sanitize=true" 
+      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true" 
       height="65px"/>
   </a>
 </p>
 
-> CC Vocabulary is a cohesive design system to unite the web facing Creative 
-> Commons. CC Vocabulary makes it easier to develop Creative Commons apps while
+> Vocabulary is a cohesive design system to unite the web facing Creative 
+> Commons. Vocabulary makes it easier to develop Creative Commons apps while
 > ensuring a consistently familiar experience.
 
 <p align="center">
@@ -37,7 +37,7 @@
   </a>
 </p>
 
-In essence CC Vocabulary is a collection of UI components, which are parts of 
+In essence Vocabulary is a collection of UI components, which are parts of 
 web sites and web apps that have significance as being individual units that
 can be mixed, matched, styled and put together to quickly and effectively 
 develop consistent applications.
@@ -45,7 +45,7 @@ develop consistent applications.
 
 ### Availability
 
-CC Vocabulary is a collection of UI components, available both as 
+Vocabulary is a collection of UI components, available both as 
 **CSS stylesheets** and **minified JS** distributed via unpkg, as well the more
 versatile and flexible (and preferred) **Vue components** distributed via `npm`.
 A lot of features available via `npm` packages might not be supported via UMD.
@@ -76,7 +76,7 @@ We're always looking for contributors to help us find and fix bugs, build new
 features, help us improve the project documentation or translate the project to
 another language.
 
-CC Vocabulary is continuously evolving and improving. You can contribute to the
+Vocabulary is continuously evolving and improving. You can contribute to the
 project in a number of ways.
 
 - **Use:**
