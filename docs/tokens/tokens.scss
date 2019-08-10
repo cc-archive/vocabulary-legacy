@@ -23,6 +23,10 @@ $color-yellow-dark: rgb(176, 154, 17);
 $color-tone-grey-dark: rgb(99, 100, 102);
 /* Base shade of positive context */
 $color-context-positive: rgb(152, 200, 7);
+/* Slightly light shade of intermediate context */
+$color-context-probably-light: rgb(255, 243, 162);
+/* Slightly dark shade of intermediate context */
+$color-context-probably-dark: rgb(176, 154, 17);
 /* Slightly light shade of yellow */
 $color-yellow-light: rgb(255, 243, 162);
 /* Base shade of green */
@@ -55,6 +59,8 @@ $color-magenta: rgb(182, 43, 110);
 $color-tone-black: rgb(0, 0, 0);
 /* Slightly dark shade of green */
 $color-green-dark: rgb(1, 166, 53);
+/* Base shade of intermediate context */
+$color-context-probably: rgb(237, 216, 18);
 /* Slightly light shade of purple */
 $color-purple-light: rgb(214, 180, 214);
 /* Base shade of yellow */
@@ -123,12 +129,24 @@ $size-enormous: 2.5198rem;
 $size-gigantic: 3.1748rem;
 /* Font size for H1 and equivalent */
 $size-mega: 4.0000rem;
-/* Bolder-than-normal font weight */
+/* Extremely thinner-than-normal font weight */
+$weight-thin: 100;
+/* Extremely bolder-than-normal font weight */
+$weight-heavy: 900;
+/* Much bolder-than-normal font weight */
 $weight-bold: 700;
+/* Much thinner-than-normal font weight */
+$weight-extralight: 200;
 /* Normal font weight */
 $weight-normal: 400;
+/* Quite bolder-than-normal font weight */
+$weight-extrabold: 800;
 /* Thinner-than-normal font weight */
 $weight-light: 300;
+/* Bolder-than-normal font weight */
+$weight-semibold: 700;
+/* Slightly bolder-than-normal font weight */
+$weight-medium: 500;
 /* Normal spacing in em units */
 $space-normal: 0.5em;
 /* No spacing at all */
@@ -175,3 +193,13 @@ $shadow-subtle: "0 1px 1px 0";
 $shadow-normal: "0 2px 2px 0";
 /* Object appears more raised */
 $shadow-pronounced: "0 3px 3px 0";
+/* Shortest time duration, barely noticeable */
+$duration-shortest: 0.25s;
+/* Short time duration, noticeable */
+$duration-short: 0.5s;
+/* Normal time duration, observable */
+$duration-normal: 1s;
+/* Long time duration, pronouced */
+$duration-long: 2s;
+/* Longest time duration, very pronounced */
+$duration-longest: 4s;
