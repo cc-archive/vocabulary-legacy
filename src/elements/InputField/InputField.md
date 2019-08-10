@@ -13,7 +13,7 @@ An input field looks like this.
 
 ### Color set
 
-An input field without color is grey.
+An input field without color is black.
 
 ```jsx
 <InputField
