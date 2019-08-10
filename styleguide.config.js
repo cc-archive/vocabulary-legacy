@@ -21,9 +21,20 @@ module.exports = {
 
   theme: {
     color: {
-      linkHover: '#fb7928',
-      name: '#01a635',
-      type: '#7b1b53'
+      linkHover: '#ec4d37',
+
+      // This is painful manual effort
+      // Copied from CodeMirror Material theme
+      // https://codemirror.net/theme/material.css
+      codeBackground: '#263238',
+      codeBase: 'rgb(233, 237, 237)',
+      codeComment: '#546E7A',
+      codePunctuation: 'rgb(233, 237, 237)',
+      codeProperty: '#80CBAE',
+      codeString: '#C3E88D',
+      codeOperator: 'rgb(233, 237, 237)',
+      codeKeyword: 'rgb(199, 146, 234)',
+      codeVariable: '#82B1FF'
     },
     fontFamily: {
       base: ['"Source Sans Pro"', '"Noto Sans"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
