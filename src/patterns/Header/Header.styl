@@ -1,89 +1,116 @@
 @import "~@/assets/tokens/tokens.styl"
-@import "~@/styles/media.styl"
-@import "~@/styles/list.styl"
+
 @import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/list.styl"
+@import "~@/styles/media.styl"
 
 .vocab.header
-  color white
+  // Color palette
 
-  background-color $color-orange
-  colors('background-color')
+  --header-primary $color-tone-near-black
 
+  colors('--header-primary')
+
+  --header-secondary white
+
+  // Color
+
+  --header-background-color var(--header-primary)
+  --header-text-color var(--header-secondary)
+
+  // Rules
+
+  color var(--header-text-color)
+
+  background-color var(--header-background-color)
   background-image linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.15) 0%,
-          rgba(0, 0, 0, 0) 25%,
-          rgba(0, 0, 0, 0) 75%,
-          rgba(0, 0, 0, 0.15) 100%
+    90deg,
+    $color-overlay-black-low,
+    transparent 15%,
+    transparent 85%,
+    $color-overlay-black-low
   )
 
-  .flex
-    display flex
+  // Children
 
-    +tablet-portrait-down()
-      flex-direction column
-      align-items center
+  a
+    color inherit
+    text-decoration none
 
-      padding $space-normal $space-normal
+  & > .container
+    & > .flex
+      display flex
 
-    +tablet-landscape-up()
-      flex-direction row
-      flex-wrap wrap
-      align-items center
-      justify-content space-between
+      +tablet-portrait-down()
+        flex-direction column
 
-      padding $space-normal $space-zero
+        padding $space-normal $space-normal
 
-    #branding
-      flex-grow 0
+      +tablet-landscape-up()
+        flex-direction row
+        flex-wrap wrap
+        justify-content space-between
+        align-items center
 
-      font-size $size-huge
-      font-weight $weight-bold
+        padding $space-normal $space-zero
 
-      margin $rspace-small $space-zero
-
-      .homelink
-        color inherit
+      & > #branding-section
+        flex-grow 0
 
         display flex
         flex-direction row
+        justify-content space-between
         align-items center
 
-        text-decoration none
+        font-size $size-huge
+        font-weight $weight-bold
 
-      .wordmark
-        width 10rem
+        margin $rspace-small $space-zero
 
-      .lettermark
-        width 2.5rem
-        margin-right $rspace-normal
+        .brand-imagery
+          font-reset()
 
-    #hamburger
-      +phone-only()
-        -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+        & > #hamburger
+          +tablet-portrait-up()
+            display none
 
-        .icon
-          transform scale(0)
-          transition 0.25s transform
+          +phone-only()
+            --button-border-color $color-tone-white
 
-          &.active
-            transform scale(1)
+            -webkit-tap-highlight-color rgba(0, 0, 0, 0)
 
-      +tablet-portrait-up()
-        display none
+            .icon
+              transform scale(0)
 
-    #content
-      +tablet-portrait-up()
-        display flex
-        flex-direction row
-        align-items center
+              transition-property transform
+              transition-duration $duration-shortest
 
-      +phone-only()
-        text-align center
+              &.active
+                transform scale(1)
 
-        width 100%
+      & > #content-section
 
-        max-height 0
-        overflow hidden
+        &.collapsed
+          max-height 0
+          margin 0
 
-        transition max-height 0.25s, margin 0.25s
+        &:not(.collapsed)
+          max-height 16em
+          margin $rspace-small $space-zero
+
+        +tablet-portrait-up()
+          display flex
+          flex-direction row
+          align-items center
+
+        +phone-only()
+          text-align center
+
+          width 100%
+          max-height 0
+
+          overflow hidden
+
+          transition-property max-height, margin
+          transition-duration $duration-shortest
