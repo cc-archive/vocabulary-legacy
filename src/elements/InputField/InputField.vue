@@ -3,11 +3,11 @@
     <!-- Attach label with ID when using -->
     <input
       v-bind="$attrs"
-      v-on="inputListeners"
       class="field"
       :class="fieldClasses"
       :disabled="isDisabled"
-      :readonly="isReadOnly">
+      :readonly="isReadOnly"
+      @input="emitInput">
 
     <div
       v-if="hasLeftAddons"
@@ -121,19 +121,18 @@
       },
       hasRightAddons: function () {
         return this.iconSet[1] || this.$slots.rightAddons
-      },
-
-      inputListeners: function () {
-        let vm = this
-        return Object.assign(
-          {},
-          vm.$listeners,
-          {
-            input: function (event) {
-              vm.$emit('input', event.target.value)
-            }
-          }
-        )
+      }
+    },
+    methods: {
+      emitInput: function (event) {
+        /**
+         * _event emitted when input given to field_
+         *
+         * The value of the field is passed back.
+         *
+         * @type {string}
+         */
+        this.$emit('input', event.target.value)
       }
     }
   }
