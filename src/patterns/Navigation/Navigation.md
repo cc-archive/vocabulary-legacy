@@ -1,6 +1,6 @@
-A navigation bar of links looks like this.
+If a navigation bar of links looks like this, _"I'm going on an adventure!"_
 
-```jsx
+```jsx { "props": { "className": "dark-background" } }
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
   faHome,
@@ -9,13 +9,15 @@ import {
 
 library.add(faHome, faBook);
 
-<Navigation color="orange">
+<Navigation
+  color="orange"
+  is-inverted>
   <NavigationLink icon="home" link="https://github.com/creativecommons/cc-vocabulary">
     Home page
   </NavigationLink>
   <NavigationLink icon="book" link="/">
     Style guide
-  </Navigation>
+  </NavigationLink>
 </Navigation>
 ```
 
