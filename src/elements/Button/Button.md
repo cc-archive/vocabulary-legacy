@@ -252,12 +252,12 @@ a certain action.
     <Button
       color="orange"
       icon="hand-point-up"
-      is-call-to-action<br/><br/>/>
+      is-call-to-action/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
       color="orange"
-      is-call-to-action<br/><br/>>
+      is-call-to-action>
       Click me
     </Button>
   </GridCell>
@@ -265,7 +265,7 @@ a certain action.
     <Button
       color="orange"
       icon="hand-point-up"
-      is-call-to-action<br/><br/>>
+      is-call-to-action>
       Click me
     </Button>
   </GridCell>
