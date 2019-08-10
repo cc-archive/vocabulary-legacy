@@ -2,13 +2,13 @@
   <!-- Attach label with ID when using -->
   <input
     v-bind="$attrs"
-    v-on="choiceListeners"
     class="vocab choice-field"
     :value="value"
     :checked="isChecked"
     :class="choiceFieldClasses"
     :disabled="isDisabled || isReadOnly"
-    :type="inputType">
+    :type="inputType"
+    @change="emitChange">
 </template>
 
 <script>
@@ -101,37 +101,38 @@
         } catch (e) {
           return false
         }
-      },
+      }
+    },
+    methods: {
+      emitChange: function (event) {
+        let targetValue = event.target.value
+        let targetIsChecked = event.target.checked
 
-      choiceListeners: function () {
-        let vm = this
-        return Object.assign(
-          {},
-          vm.$listeners,
-          {
-            change: function (event) {
-              let targetValue = event.target.value
-              let targetIsChecked = event.target.checked
+        let result
 
-              if (vm.isSingleSelect) {
-                vm.$emit('change', targetValue)
-              } else {
-                let result
-                if (vm.modelValue === undefined) {
-                  result = []
-                } else {
-                  result = vm.modelValue.slice(0)
-                }
-                if (targetIsChecked) {
-                  result.push(targetValue)
-                } else {
-                  result.splice(result.indexOf(targetValue), 1)
-                }
-                vm.$emit('change', result)
-              }
-            }
+        if (this.isSingleSelect) {
+          result = targetValue
+        } else {
+          if (this.modelValue === undefined) {
+            result = []
+          } else {
+            result = this.modelValue.slice(0)
           }
-        )
+          if (targetIsChecked) {
+            result.push(targetValue)
+          } else {
+            result.splice(result.indexOf(targetValue), 1)
+          }
+        }
+        /**
+         * _event emitted when a choice field is toggled_
+         *
+         * The value of the chosen field if `isSingleSelect` or the array of the
+         * values of all chosen fields if `!isSingleSelect` is passed back.
+         *
+         * @type {string|array}
+         */
+        this.$emit('change', result)
       }
     }
   }
