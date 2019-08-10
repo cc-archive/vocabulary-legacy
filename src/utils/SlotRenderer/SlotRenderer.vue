@@ -1,6 +1,6 @@
 <script>
   /**
-   * ## SlotRenderer renders a VNode slot.
+   * ### SlotRenderer renders a VNode slot.
    *
    * SlotRenderer is used to render a given slot from a given VNode. It is a
    * render()-based functional component that creates a component using the

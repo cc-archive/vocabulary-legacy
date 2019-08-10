@@ -1,5 +1,3 @@
-## Examples
-
 For example usage, go through the source code of the components
 [Tabbed](#/Layouts/Tabbed) and [Navigation](#/Patterns/Navigation).
 
