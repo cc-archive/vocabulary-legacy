@@ -1,7 +1,11 @@
 <template>
-  <div class="vocab dictionary">
+  <div class="vocab definition">
     <div class="heading">
-      <Heading :level="4" class="word">
+      <Heading
+        class="word"
+        :color="color"
+        :shade="shade"
+        :level="4">
         <!-- @slot Word goes here -->
         <slot name="word">
           {{ word }}
@@ -24,6 +28,8 @@
   import Heading from '@/elements/Heading/Heading'
   import Paragraph from '@/elements/Paragraph/Paragraph'
 
+  import Colored from '@/mixins/colored'
+
   /**
    * ### Definitions explain words with words.
    *
@@ -38,6 +44,9 @@
       Heading,
       Paragraph
     },
+    mixins: [
+      Colored
+    ],
     props: {
       /**
        * _the word being defined_
@@ -56,6 +65,13 @@
        */
       partOfSpeech: {
         type: String
+      }
+    },
+    computed: {
+      headingClasses: function () {
+        return [
+          ...this.coloredClasses
+        ]
       }
     }
   }
