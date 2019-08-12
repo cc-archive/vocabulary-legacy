@@ -8,7 +8,7 @@
       "github": "GitHub",
       "styleguide": "Styleguide",
       "umd": "UMD demo",
-      "cjs": "CJS demo"
+      "css": "CSS demo"
     },
     "communication": {
       "quote": "When you are everywhere, you are nowhere.<br/>When you are somewhere, you are everywhere.",
@@ -37,7 +37,7 @@
       "github": "गिटहब",
       "styleguide": "स्टाइलगाइड",
       "umd": "यू एम डी डेमो",
-      "cjs": "सी जे एस डेमो"
+      "css": "सी एस एस डेमो"
     },
     "communication": {
       "quote": "जब आप हर जगह होते हैं, तो आप कहीं नहीं होते हैं।<br/>जब आप कहीं होते हैं, तो आप हर जगह होते हैं।",

@@ -143,8 +143,8 @@
           href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
         },
         {
-          key: 'links.cjs',
-          href: 'https://search.creativecommons.org/'
+          key: 'links.css',
+          href: 'https://codepen.io/dhruvkb/pen/bXmmZE'
         }
       ]
       let alternativeContacts = [

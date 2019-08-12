@@ -71,8 +71,8 @@ let alternativeLinks = [
     href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
   },
   {
-    text: 'CJS Demo',
-    href: 'https://search.creativecommons.org/'
+    text: 'CSS Demo',
+    href: 'https://codepen.io/dhruvkb/pen/bXmmZE'
   }
 ];
 let alternativeContacts = [
