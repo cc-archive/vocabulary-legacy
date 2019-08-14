@@ -301,6 +301,59 @@ a certain action.
 </Grid>
 ```
 
+A button may appear joined to another component such as another button or an
+`InputField`. The border on the join side is dropped to share it with the other
+component.
+
+```jsx
+import Vue from 'vue';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faArrowLeft,
+  faArrowRight
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+
+library.add(faArrowLeft, faArrowRight);
+
+let style = {
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '0' // Replace with '1em' to see how 
+};
+
+<div :style="style">
+  <Button
+    color="blue"
+    shade="dark"
+    join-side="right"
+    is-basic>
+    <template #addons>
+      Joined
+    </template>
+    <FontAwesomeIcon 
+      :icon="['fas', 'arrow-right']"
+      fixed-width/>
+  </Button>
+  <InputField
+    color="blue"
+    shade="dark"
+    :icon-set="['arrow-left', 'arrow-right']"
+    is-basic/>
+  <Button 
+    color="blue"
+    shade="dark"
+    icon="arrow-left"
+    join-side="left"
+    is-basic>
+    Joined
+  </Button>
+</div>
+```
+
 Styles can be combined.
 
 ### Size set

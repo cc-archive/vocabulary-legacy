@@ -91,6 +91,21 @@
   &.disabled
     --input-field-cursor not-allowed
 
+  // Border widths
+
+  --input-field-top-border-width 1px
+  --input-field-right-border-width 1px
+  --input-field-bottom-border-width 1px
+  --input-field-left-border-width 1px
+
+  &.left-joined,
+  &.both-joined
+    --input-field-left-border-width 0px
+
+  &.right-joined,
+  &.both-joined
+    --input-field-right-border-width 0px
+
   // Rules
 
   position relative
@@ -107,11 +122,20 @@
 
   cursor var(--input-field-cursor)
 
-  border 1px solid var(--input-field-border-color)
+  width 16em
+
+  border-top-width var(--input-field-top-border-width)
+  border-right-width var(--input-field-right-border-width)
+  border-bottom-width var(--input-field-bottom-border-width)
+  border-left-width var(--input-field-left-border-width)
+  border-style solid
+  border-color var(--input-field-border-color)
 
   // Children
 
   & > .field
+    flex-grow 1
+
     appearance none
 
     color inherit
@@ -133,12 +157,6 @@
 
     &::placeholder
       color var(--input-field-placeholder-color)
-
-    &[type="text"],
-    &[type="email"],
-    &[type="url"],
-    &[type="number"]
-      width 10em
 
     // States
 

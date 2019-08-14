@@ -34,6 +34,7 @@
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Invertible from '@/mixins/invertible'
+  import Joined from '@/mixins/joined'
   import Resizable from '@/mixins/resizable'
   import Roundable from '@/mixins/roundable'
   import Simplifiable from '@/mixins/simplifiable'
@@ -57,6 +58,7 @@
       Colored,
       Indicating,
       Invertible,
+      Joined,
       Resizable,
       Roundable,
       Simplifiable,
@@ -90,6 +92,7 @@
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.invertibleClasses,
+          ...this.joinClasses,
           ...this.resizableClasses,
           ...this.roundableClasses,
           ...this.simplifiableClasses,

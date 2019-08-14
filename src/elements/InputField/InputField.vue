@@ -7,6 +7,7 @@
       :class="fieldClasses"
       :disabled="isDisabled"
       :readonly="isReadOnly"
+      :size="charCount"
       @input="emitInput">
 
     <div
@@ -43,6 +44,7 @@
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Invertible from '@/mixins/invertible'
+  import Joined from '@/mixins/joined'
   import Resizeable from '@/mixins/resizable'
   import Simplifiable from '@/mixins/simplifiable'
   import Unactionable from '@/mixins/unactionable'
@@ -64,6 +66,7 @@
       Colored,
       Indicating,
       Invertible,
+      Joined,
       Resizeable,
       Simplifiable,
       Unactionable
@@ -90,6 +93,13 @@
       isInfused: {
         type: Boolean,
         default: false
+      },
+      /**
+       * _this is the renamed `size` attribute from the HTML spec_
+       */
+      charCount: {
+        type: Number,
+        default: 1
       }
     },
     computed: {
@@ -98,6 +108,7 @@
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.invertibleClasses,
+          ...this.joinClasses,
           ...this.resizableClasses,
           ...this.simplifiableClasses,
           ...this.unactionableClasses,

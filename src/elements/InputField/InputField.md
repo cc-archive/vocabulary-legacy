@@ -267,6 +267,58 @@ additional streak of color to the field.
   is-infused/>
 ```
 
+An input field may appear joined to another component such as another input
+field or a `Button`. The border on the join side is dropped to share it
+with the other component.
+
+```jsx
+import Vue from 'vue';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faArrowLeft,
+  faArrowRight
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
+
+library.add(faArrowLeft, faArrowRight);
+
+let style = {
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '0' // Replace with '1em' to see how 
+};
+
+<div :style="style">
+  <Button
+    color="blue"
+    shade="dark"
+    is-basic>
+    <template #addons>
+      Joined
+    </template>
+    <FontAwesomeIcon 
+      :icon="['fas', 'arrow-right']"
+      fixed-width/>
+  </Button>
+  <InputField
+    color="blue" 
+    shade="dark"
+    :icon-set="['arrow-left', 'arrow-right']"
+    join-side="both"
+    is-basic/>
+  <Button 
+    color="blue"
+    shade="dark"
+    icon="arrow-left"
+    is-basic>
+    Joined
+  </Button>
+</div>
+```
+
 Styles can be combined.
 
 ### Size set

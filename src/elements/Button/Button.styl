@@ -65,6 +65,21 @@
   &.disabled
     --button-cursor not-allowed
 
+  // Border widths
+
+  --button-top-border-width 1px
+  --button-right-border-width 1px
+  --button-bottom-border-width 1px
+  --button-left-border-width 1px
+
+  &.left-joined,
+  &.both-joined
+    --button-left-border-width 0px
+
+  &.right-joined,
+  &.both-joined
+    --button-right-border-width 0px
+
   // Border radius
 
   --button-border-radius $radius-zero
@@ -95,7 +110,13 @@
 
   padding $space-zero
 
-  border 1px solid var(--button-border-color)
+
+  border-top-width var(--button-top-border-width)
+  border-right-width var(--button-right-border-width)
+  border-bottom-width var(--button-bottom-border-width)
+  border-left-width var(--button-left-border-width)
+  border-style solid
+  border-color var(--button-border-color)
   border-radius var(--button-border-radius)
 
   transition-property color, background-color, border-color
