@@ -79,7 +79,7 @@
       primaryDimension: {
         type: String,
         default: 'height',
-        validator: val => ['height', 'weight'].includes(val)
+        validator: val => ['height', 'width'].includes(val)
       },
       /**
        * _whether to center the image when inline with text_
