@@ -3,30 +3,26 @@
     <Container>
       <div class="flex">
         <div id="branding-section">
-          <span>
+          <a
+            class="homelink"
+            :href="homeUrl">
             <!-- @slot Branding goes here -->
             <slot name="branding">
-              <a
-                class="homelink"
-                :href="homeUrl">
-                <template v-if="title">
-                  <BrandImagery
-                    type="lettermark"
-                    size="small"
-                    color="white"
-                    is-centered/>
-                  {{ title }}
-                </template>
-
+              <template v-if="title">
                 <BrandImagery
-                  v-else
-                  type="wordmark"
+                  type="lettermark"
                   size="small"
-                  color="white"
-                  is-centered/>
-              </a>
+                  color="white"/>
+                {{ title }}
+              </template>
+
+              <BrandImagery
+                v-else
+                type="wordmark"
+                size="small"
+                color="white"/>
             </slot>
-          </span>
+          </a>
 
           <Button
             v-if="$slots.default"

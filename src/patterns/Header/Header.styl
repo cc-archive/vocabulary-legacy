@@ -58,18 +58,20 @@
       & > #branding-section
         flex-grow 0
 
-        display flex
-        flex-direction row
-        justify-content space-between
-        align-items center
-
         font-size $size-huge
         font-weight $weight-bold
 
         margin $rspace-small $space-zero
 
-        .brand-imagery
-          font-reset()
+        & > .homelink
+          display flex
+          flex-direction row
+          align-items center
+
+          gap $space-small
+
+          & > .brand-imagery
+            font-reset()
 
         & > #hamburger
           +tablet-portrait-up()
