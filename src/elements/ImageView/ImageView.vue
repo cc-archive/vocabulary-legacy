@@ -2,7 +2,6 @@
   <div class="vocab image-view" :class="imageViewClasses">
     <img
       v-bind="$attrs"
-      :class="imageClasses"
       :alt="alternateText"
       :src="source"/>
     <div
@@ -73,6 +72,16 @@
         type: String
       },
       /**
+       * _dimension along which size is primarily constrained_
+       *
+       * ∈ {`'height'`, `'width`'}
+       */
+      primaryDimension: {
+        type: String,
+        default: 'height',
+        validator: val => ['height', 'weight'].includes(val)
+      },
+      /**
        * _whether to center the image when inline with text_
        */
       isCentered: {
@@ -93,17 +102,14 @@
     computed: {
       imageViewClasses: function () {
         return [
+          ...this.resizableClasses,
           ...this.roundableClasses,
 
           {
             'centered': this.isCentered,
             'hoverable': this.isHoverable
-          }
-        ]
-      },
-      imageClasses: function () {
-        return [
-          ...this.resizableClasses
+          },
+          this.primaryDimension ? `${this.primaryDimension}-constrained` : ''
         ]
       },
 

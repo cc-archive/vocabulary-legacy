@@ -22,6 +22,44 @@
     var(--image-view-overlay)
   )
 
+  // Measurement palette
+
+  &.small-sized
+    --image-view-measurement 2em
+
+  &.normal-sized
+    --image-view-measurement 4em
+
+  &.big-sized
+    --image-view-measurement 6em
+
+  &.large-sized
+    --image-view-measurement 8em
+
+  &.huge-sized
+    --image-view-measurement 12em
+
+  &.enormous-sized
+    --image-view-measurement 16em
+
+  &.gigantic-sized
+    --image-view-measurement 24em
+
+  &.mega-sized
+    --image-view-measurement 32em
+
+  // Measurement
+
+  &.height-constrained,
+  &.rounded
+    --image-view-height var(--image-view-measurement)
+    --image-height var(--image-view-height)
+
+  &.width-constrained,
+  &.rounded
+    --image-view-width var(--image-view-measurement)
+    --image-width var(--image-view-width)
+
   // Rules
 
   position relative
@@ -30,34 +68,18 @@
 
   overflow hidden
 
+  height var(--image-view-height)
+  width var(--image-view-width)
+
   // Children
 
   & > img
-    // Height
+    display block
 
-    &.small-sized
-      height 2em
+    height var(--image-height)
+    width var(--image-width)
 
-    &.normal-sized
-      height 4em
-
-    &.big-sized
-      height 6em
-
-    &.large-sized
-      height 8em
-
-    &.huge-sized
-      height 12em
-
-    &.enormous-sized
-      height 16em
-
-    &.gigantic-sized
-      height 24em
-
-    &.mega-sized
-      height 32em
+    object-fit cover
 
   & > .addons
     position absolute
@@ -122,7 +144,4 @@
 
     & > .addons
       text-align center
-
-    img
-      object-fit cover
 

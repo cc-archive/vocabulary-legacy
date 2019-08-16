@@ -1,35 +1,73 @@
-Here are a bunch of example images.
+Here is an image. Nothing really extraordinary, right? Scroll on.
 
 ```jsx
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
 <ImageView
-  alternateText="7 weeks old"
+  alternate-text="7 weeks old"
   :source="source"
   title="7 weeks old"
-  height="64"
-  width="64"
-  is-centered
-  is-rounded/>
-<br/><br/>
-<ImageView
-  alternateText="7 weeks old"
-  :source="source"
-  title="7 weeks old"
-  height="128"
-  width="128"
-  is-centered
-  is-rounded/>
-<br/><br/>
-<ImageView
-  alternateText="7 weeks old"
-  :source="source"
-  title="7 weeks old"
-  height="256"
-  width="256"
+  size="big"
   is-centered
   is-rounded/>
 ```
+
+### Size and constrain set
+
+Image views come in all sizes, from small to mega.  An image can be constrained
+to match the view's width or height. The prop `size` only affects the 
+constrained dimension.
+
+```jsx { "props": { "className": "contain-content" } }
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faRuler, faRulerCombined } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faRuler, faRulerCombined);
+
+let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
+
+let size = '';
+let sizeOptions = [
+  { value: '', text: 'Natural' },
+  { value: 'small', text: 'Small' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'big', text: 'Big' },
+  { value: 'large', text: 'Large' },
+  { value: 'huge', text: 'Huge' },
+  { value: 'enormous', text: 'Enormous' },
+  { value: 'gigantic', text: 'Gigantic' },
+  { value: 'mega', text: 'Mega' }
+];
+
+let primaryDimension = 'height';
+let primaryDimensionOptions = [
+  { value: 'height', text: 'Height' },
+  { value: 'width', text: 'Width' }
+];
+
+<SelectField
+  v-model="size"
+  color="blue"
+  icon="ruler"
+  :option-list="sizeOptions"/>
+<SelectField
+  v-model="primaryDimension"
+  color="blue"
+  icon="ruler-combined"
+  :option-list="primaryDimensionOptions"/>
+<br/>
+<br/>
+<ImageView
+  :size="size ? size : null"
+  :primary-dimension="primaryDimension ? primaryDimension : null"
+  :source="source"
+  alternate-text="7 weeks old"/>
+```
+
+To set the dimensions other than those supported by `size` you may set the CSS
+variables `--image-view-height` and `--image-view-width`. To set the dimensions
+of the image inside the view, you may set the variables `--image-height` and
+`--image-width`.
 
 ### Style set
 
@@ -46,7 +84,7 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
 </Heading>
 <Paragraph>
   <ImageView 
-    alternateText="7 weeks old"
+    alternate-text="7 weeks old"
     :source="source"
     title="7 weeks old"
     size="big"
@@ -60,22 +98,22 @@ Non-square images leave spaces around the sides when cropped, the solution being
 to specify `height` and `width` attributes in pixels instead of the `size` prop.
 
 ```jsx
-let dhruvSource = "https://avatars0.githubusercontent.com/u/16580576";
-let pupperSource = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
+let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
-<ImageView
-  alternateText="Dhruv Bhanushali"
-  :source="dhruvSource"
-  title="Dhruv Bhanushali"
-  size="large"
-  is-rounded/>
-<ImageView
-  alternateText="7 weeks old"
-  :source="pupperSource"
-  title="7 weeks old"
-  height="128"
-  width="128"
-  is-rounded/>
+<Button
+  color="blue"
+  is-basic
+  is-pill-shaped>
+  <template #addons>
+    <ImageView
+      :source="source"
+      alternate-text="7 weeks old"
+      size="small"
+      is-rounded
+      is-centered/>
+  </template>
+  7 weeks old
+</Button>
 ```
 
 Styles may be combined.
@@ -104,10 +142,9 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <ImageView
       :source="source"
-      alternateText="7 weeks old"
+      alternate-text="7 weeks old"
       title="7 weeks old"
-      height="192px"
-      width="192px"
+      size="huge"
       is-hoverable
       is-rounded>
       <template #topAddons>
@@ -123,7 +160,7 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <ImageView
       :source="source"
-      alternateText="7 weeks old"
+      alternate-text="7 weeks old"
       title="7 weeks old"
       size="huge"
       is-hoverable>
@@ -142,52 +179,4 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
     </Paragraph>
   </GridCell>
 </Grid>
-```
-
-### Size set
-
-Images come in all sizes, from small to mega.
-
-```jsx { "props": { "className": "contain-content" } }
-let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Mausoleo_de_Baha-ud-Din_Naqshbandi_07.jpg/768px-Mausoleo_de_Baha-ud-Din_Naqshbandi_07.jpg";
-
-<ImageView
-  :source="source"
-  alternateText="Small"
-  size="small"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Normal"
-  size="normal"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Big"
-  size="big"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Large"
-  size="large"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Huge"
-  size="huge"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Enormous"
-  size="enormous"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Gigantic"
-  size="gigantic"/>
-<br/><br/>
-<ImageView
-  :source="source"
-  alternateText="Mega"
-  size="mega"/>
 ```
