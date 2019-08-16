@@ -6,7 +6,8 @@
     :disabled="isDisabled">
     <div
       v-if="hasAddons"
-      class="addons">
+      class="addons"
+      :class="addonClasses">
       <!-- @slot Addons go here -->
       <slot name="addons">
         <FontAwesomeIcon
@@ -66,10 +67,17 @@
     ],
     props: {
       /**
-       * _an icon to use as an add-on for the button_
+       * _an icon to use as an add-on_
        */
       icon: {
         type: String
+      },
+      /**
+       * _whether to pad the add-on_
+       */
+      isAddonPadded: {
+        type: Boolean,
+        default: true
       },
       /**
        * _whether a button is a call to action button_
@@ -108,6 +116,13 @@
         return [
           {
             'has-addons': this.hasAddons
+          }
+        ]
+      },
+      addonClasses: function () {
+        return [
+          {
+            'padded': this.isAddonPadded
           }
         ]
       },

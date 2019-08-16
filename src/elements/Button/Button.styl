@@ -110,7 +110,6 @@
 
   padding $space-zero
 
-
   border-top-width var(--button-top-border-width)
   border-right-width var(--button-right-border-width)
   border-bottom-width var(--button-bottom-border-width)
@@ -131,7 +130,8 @@
       border-left 1px solid var(--button-border-color)
 
   & > .addons
-    padding $space-normal
+    &.padded
+      padding $space-normal
 
   // States
 

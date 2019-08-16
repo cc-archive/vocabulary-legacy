@@ -177,10 +177,11 @@
 
     background-color var(--input-field-addons-background-color)
 
-    padding $space-normal
-
     transition-property color, background-color
     transition-duration $duration-shortest
+
+    &.padded
+      padding $space-normal
 
     &.left
       order -1

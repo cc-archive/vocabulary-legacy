@@ -12,7 +12,8 @@
 
     <div
       v-if="hasLeftAddons"
-      class="left addons">
+      class="left addons"
+      :class="leftAddonClasses">
       <!-- @slot Left-side addons go here -->
       <slot name="leftAddons">
         <FontAwesomeIcon
@@ -24,7 +25,8 @@
 
     <div
       v-if="hasRightAddons"
-      class="right addons">
+      class="right addons"
+      :class="rightAddonClasses">
       <!-- @slot Right-side addons go here -->
       <slot name="rightAddons">
         <FontAwesomeIcon
@@ -78,7 +80,7 @@
     },
     props: {
       /**
-       * _an array specifying the left and right icon_
+       * _an array specifying the left and right icon to use as add-ons_
        *
        * Use '' to omit the icon.
        */
@@ -86,6 +88,14 @@
         type: Array,
         validator: val => val.length === 2,
         default: () => [null, null]
+      },
+      /**
+       * _whether to pad the left and right add-ons_
+       */
+      isAddonPaddedSet: {
+        type: Array,
+        validator: val => val.length === 2,
+        default: () => [true, true]
       },
       /**
        * _whether to increase the coloration of the input field_
@@ -123,6 +133,20 @@
           {
             'has-left-addons': this.hasLeftAddons,
             'has-right-addons': this.hasRightAddons
+          }
+        ]
+      },
+      leftAddonClasses: function () {
+        return [
+          {
+            'padded': this.isAddonPaddedSet[0]
+          }
+        ]
+      },
+      rightAddonClasses: function () {
+        return [
+          {
+            'padded': this.isAddonPaddedSet[1]
           }
         ]
       },
