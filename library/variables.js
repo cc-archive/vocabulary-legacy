@@ -14,6 +14,8 @@ const libraryDir = path.resolve(rootDir, 'library')
 
 const destDir = path.resolve(distDir, `${packageScope}-${packageName}`)
 const metafilesDir = path.resolve(libraryDir, 'metafiles')
+const tokensDir = path.resolve(srcDir, 'assets', 'tokens')
+const stylesDir = path.resolve(srcDir, 'styles')
 
 const srcIndexPath = path.join(srcDir, 'index.js')
 
@@ -24,5 +26,7 @@ module.exports = {
   libraryDir,
   destDir,
   metafilesDir,
+  stylesDir,
+  tokensDir,
   srcIndexPath
 }

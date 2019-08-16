@@ -1,16 +1,47 @@
 {
+  "utils": [
+    "SlotRenderer"
+  ],
   "elements": [
-    "Badge",
-    "Container",
+    "Button",
+    "ChoiceField",
     "Heading",
+    "ImageView",
+    "InputField",
+    "LicenseIconography",
     "Paragraph",
-    "Input"
+    "ProgressBar",
+    "Rating",
+    "SelectField",
+    "Shield",
+    "Statistic",
+    "SwitchField"
+  ],
+  "layouts": [
+    "Container",
+    "Grid",
+    ["Grid", "Cell"],
+    "Section",
+    "Tabbed",
+    ["Tabbed", "Pane"],
+    "Table",
+    ["Table", "Cell"]
   ],
   "patterns": [
+    "BrandImagery",
+    "Card",
+    "Definition",
     "Footer",
     "Header",
-    "Hello",
+    "LicenseBadge",
     "Locale",
-    "Navigation"
+    "Navigation",
+    ["Navigation", "Link"],
+    "Quote",
+    "Trail",
+    ["Trail", "Crumb"]
+  ],
+  "templates": [
+    "Index"
   ]
 }
