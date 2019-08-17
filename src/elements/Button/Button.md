@@ -13,7 +13,7 @@ Here's a sample button. If you intuitively feel to click it, it's working.
 
 ### Color set
 
-A button without color is grey.
+A button without color is black.
 
 ```jsx
 <Button>Click me</Button>

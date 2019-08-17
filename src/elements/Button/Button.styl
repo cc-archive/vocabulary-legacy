@@ -7,10 +7,10 @@
 .vocab.button
   // Color palette
 
-  --button-primary $color-tone-grey-dark
+  --button-primary $color-tone-black
 
   &.inverted
-    --button-primary $color-tone-grey-light
+    --button-primary $color-tone-white
 
   colors('--button-primary')
 
@@ -43,8 +43,7 @@
     var(--button-overlay)
   )
 
-  &.basic,
-  &.ghost
+  &.basic
     --button-background-color transparent
     --button-text-color var(--button-primary)
 
@@ -54,6 +53,8 @@
 
   &.ghost
     --button-border-color transparent
+    --button-background-color transparent
+    --button-text-color var(--button-primary)
 
   &.call-to-action
     --button-border-color transparent
