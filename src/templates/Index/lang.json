@@ -2,7 +2,8 @@
   "en": {
     "definition":  {
       "unimportant": "the body of words used in a particular language",
-      "cohesive": "a cohesive design system to unite the web facing {0}"
+      "cohesive": "{0} to unite the web facing {1}",
+      "ds": "a cohesive design system"
     },
     "links": {
       "github": "GitHub",
@@ -31,7 +32,8 @@
   "hi": {
     "definition": {
       "unimportant":  "किसी विशेष भाषा में प्रयुक्त शब्दों का समूह",
-      "cohesive": "वेब का सामना करने वाले {0} को एकजुट करने के लिए एक सुसंगत डिजाइन प्रणाली"
+      "cohesive": "वेब का सामना करने वाले {1} को एकजुट करने के लिए {0}",
+      "ds": "एक सुसंगत डिजाइन प्रणाली"
     },
     "links": {
       "github": "गिटहब",

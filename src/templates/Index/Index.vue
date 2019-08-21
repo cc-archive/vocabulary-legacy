@@ -14,9 +14,10 @@
             </li>
             <li>
               <i18n path="definition.cohesive" tag="span">
-                <strong>
-                  {{ $t('creativecommons') }}
-                </strong>
+                <a href="/docs" class="styleguide-link">
+                  {{ $t('definition.ds') }}
+                </a>
+                {{ $t('creativecommons') }}
               </i18n>
             </li>
           </ul>
