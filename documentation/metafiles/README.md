@@ -6,12 +6,14 @@
       height="62px"/>
   </a>
 </p>
-<h2 align="center">
-  Vocabulary
-</h2>
-<h3 align="center">
-  Code style
-</h3>
+<p align="center">
+  <a href="https://creativecommons.github.io/cc-vocabulary/" class="readme-vocabulary-logo">
+    <img 
+      alt="Vocabulary logo" 
+      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true" 
+      height="65px"/>
+  </a>
+</p>
 
 As CC Vocabulary grows, so does the effort for maintaining code quality and 
 keeping technical debt to a minimum. Having a set of rules makes sure that some

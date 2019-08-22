@@ -6,12 +6,14 @@
       height="62px"/>
   </a>
 </p>
-<h2 align="center">
-  Vocabulary
-</h2>
-<h3 align="center">
-  User guide
-</h3>
+<p align="center">
+  <a href="https://creativecommons.github.io/cc-vocabulary/" class="readme-vocabulary-logo">
+    <img 
+      alt="Vocabulary logo" 
+      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true" 
+      height="65px"/>
+  </a>
+</p>
 
 There are two ways to use this package, via a package manager such as `npm` or
 in the browser via a CDN. If you are developing a Vue SPA, going the `npm` route
@@ -21,7 +23,7 @@ also provide script bundles and stylesheet to be able to use these components
 in your own apps.
 
 
-### via npm
+### via `npm`
 
 This is a more powerful, flexible and versatile way of using Vocabulary, at the
 cost of simplicity.

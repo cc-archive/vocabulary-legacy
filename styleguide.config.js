@@ -96,7 +96,7 @@ module.exports = {
       sections: [
         {
           name: 'Code style',
-          content: 'src/metafiles/README.md',
+          content: 'documentation/metafiles/README.md',
           sectionDepth: 1
         },
         {
