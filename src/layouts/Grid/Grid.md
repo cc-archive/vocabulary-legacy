@@ -8,20 +8,11 @@ let style = {
 let spanSet = [1, 1];
 
 <Grid>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
-  <GridCell :style="style" :span-set="spanSet"/>
+  <GridCell
+    v-for="index in 12"
+    :key="index"
+    :style="style"
+    :span-set="spanSet"/>
 </Grid>
 ```
 
