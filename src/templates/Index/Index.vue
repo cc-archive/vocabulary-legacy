@@ -14,7 +14,7 @@
             </li>
             <li>
               <i18n path="definition.cohesive" tag="span">
-                <a href="/docs" class="styleguide-link">
+                <a :href="docsHref" class="styleguide-link">
                   {{ $t('definition.ds') }}
                 </a>
                 {{ $t('creativecommons') }}
@@ -130,6 +130,7 @@
       Quote
     },
     data: function () {
+      let docsHref = 'https://creativecommons.github.io/cc-vocabulary/docs'
       let alternativeLinks = [
         {
           key: 'links.github',
@@ -137,7 +138,7 @@
         },
         {
           key: 'links.styleguide',
-          href: 'https://creativecommons.github.io/cc-vocabulary'
+          href: docsHref
         },
         {
           key: 'links.umd',
@@ -159,6 +160,7 @@
         }
       ]
       return {
+        docsHref,
         alternativeLinks,
         alternativeContacts
       }
