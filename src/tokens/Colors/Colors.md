@@ -16,7 +16,7 @@
 Vocabulary has a rich set of colors, covering the both primary and secondary 
 colors on the spectrum along with their darker and lighter hues.
 
-```jsx
+```jsx noeditor
 <Colors category="hue"/>
 ```
 
@@ -25,7 +25,7 @@ colors on the spectrum along with their darker and lighter hues.
 Apart from all the vibrant hues, Vocabular provides a diverse set of tones to 
 choose from, covering the grey spectrum from white to black.
 
-```jsx
+```jsx noeditor
 <Colors category="tone"/>
 ```
 
@@ -35,7 +35,7 @@ Vue also covers the contextual colors that attach a connotation with an action
 such as red for a dangerous action with negative consequences and green for a
 safe one with positive consequences.
 
-```jsx
+```jsx noeditor
 <Colors category="context"/>
 ```
 
@@ -49,6 +49,6 @@ images.
 The following demonstrates different overlays laid out on **Oxford Blue**. The
 left half is the actual color and the right half has the overlay color overlaid. 
 
-```jsx
+```jsx noeditor
 <Colors category="overlay"/>
 ```

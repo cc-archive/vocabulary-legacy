@@ -1,6 +1,7 @@
 ```jsx
 <Section
-  is-rounded>
+  is-rounded
+  is-compact>
   <Heading 
     :level="1">
     Hello World!
@@ -16,7 +17,7 @@
 Vocabulary provides a number of radii calculated as a fraction of the font size
 of the root element. This is set to 16 pixels by default but can be overridden.
 
-```jsx
+```jsx noeditor
 <Radii category="rem"/>
 ```
 
@@ -27,7 +28,7 @@ of the element. So in an element with `font-size: 2em`, the sizes are
 doubled as compared to the above `rem` based spaces. Try changing the font size
 of the div in the example to see how these spaces change.
 
-```jsx
+```jsx noeditor
 <Radii category="em"/>
 ```
 
@@ -37,6 +38,6 @@ Some radii values have a special purpose and meaning. For example, setting
 border radius to 50% converts rectangles into ellipses and setting it to an 
 insanely large size converts rectangles to pills.
 
-```jsx
+```jsx noeditor
 <Radii category="special"/>
 ```

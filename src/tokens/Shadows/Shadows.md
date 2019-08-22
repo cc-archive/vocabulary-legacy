@@ -1,6 +1,7 @@
 ```jsx
 <Section
-  is-raised>
+  is-raised
+  is-compact>
   <Heading 
     :level="1">
     Hello World!
@@ -16,6 +17,6 @@
 Vocabulary provides a number of altitudes at which an object can be placed. 
 This altitude determines the blur and spread of the shadow. 
 
-```jsx
+```jsx noeditor
 <Shadows/>
 ```

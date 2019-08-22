@@ -38,7 +38,7 @@ which follow a strict naming scheme.
 Take a look at how tokens replace a value with a stylesheet variable
 (distributed as variable files for both Stylus and SASS).
 
-```jsx
+```jsx noeditor
 import Vue from 'vue';
 import Color from './Colors/Color';
 import Font from './Fonts/Font';
@@ -52,43 +52,47 @@ Vue.component('Space', Space);
 Vue.component('Radius', Radius);
 Vue.component('Shadow', Shadow);
 
+let spanSet = [12, 3, 3, 3, 3];
+
 <Grid>
-  <GridCell :span-set="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="spanSet">
     <Color
       category="color-group-oxford"
       name="color_oxford_blue" 
       value="rgb(0, 33, 71)"
       comment="Official color of the University of Oxford"/>
   </GridCell>
-  <GridCell :span-set="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="spanSet">
     <Space
       name="rspace_dedh"
       value="1.5rem"
       comment="Extreme spacing in rem units"/>
   </GridCell>
-  <GridCell :span-set="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="spanSet">
     <Radius
       name="rradius_dedh"
       value="1.5rem"
       comment="Extremely rounded radius in rem units"/>
   </GridCell>
-  <GridCell :span-set="[12, 3, 3, 3, 3]">
+  <GridCell :span-set="spanSet">
     <Shadow
-      name="shadow_plane"
+      name="shadow_aeroplane"
       value="0 1em 1em 0"
       comment="Object appears flying"/>
   </GridCell>
+  <GridCell :span-set="[12]">
+    <Font
+      property="size"
+      name="size_dedh"
+      value="1.5000rem"
+      comment="Font size for <~H5 and equivalent"/>
+  </GridCell>
+  <GridCell :span-set="[12]">
+    <Font
+      property="weight"
+      name="weight_black"
+      value="900"
+      comment="Bolder-than-bolder-than-normal weight"/>
+  </GridCell>
 </Grid>
-<br/>
-<Font
-  property="size"
-  name="size_dedh"
-  value="1.5000rem"
-  comment="Font size for <~H5 and equivalent"/>
-<br/>
-<Font
-  property="weight"
-  name="weight_black"
-  value="900"
-  comment="Bolder-than-bolder-than-normal weight"/>
 ```

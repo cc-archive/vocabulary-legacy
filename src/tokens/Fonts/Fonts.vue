@@ -25,9 +25,13 @@
   /**
    * ### Fonts add personality to text.
    *
-   * Vocabulary is completely based on 'Source Sans Pro' by Adobe as the body
-   * font, with fallback on 'Arial', 'Helvetica Neue', 'Helvetica' and finally,
-   * if all else fails, the generic `sans-serif` font family.
+   * Vocabulary is completely based on [Source Sans Pro by
+   * Adobe](https://fonts.google.com/specimen/Source+Sans+Pro) as the body font,
+   * with fallback on Arial, Helvetica Neue, Helvetica and finally, if all else
+   * fails, the generic `sans-serif` font family. For monospaced content,
+   * content [Fira Code by tonsky](https://github.com/tonsky/FiraCode) is
+   * preferred for its ligatures, with fallback on the generic `monospace`
+   * family.
    */
   export default {
     name: 'Fonts',
