@@ -1,5 +1,6 @@
-/* Import fonts used by Creative Commons */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap");
+/* Import fonts used by Vocabulary */
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap");
 
 /* Page level resets */
 html,
