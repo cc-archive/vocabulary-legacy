@@ -9,15 +9,17 @@ const componentsRegistry = require('./components.json')
 
 const families = ['utils', 'elements', 'layouts', 'patterns', 'templates']
 
-console.log(chalk.blue.inverse('● Bundling CC Vocabulary\n'))
+console.log(
+  chalk.blue.inverse(`● Bundling ${variables.verboseName} library\n`)
+)
 
 clearDir(variables.distDir)
 
 indexComponents()
 
-buildLibrary(variables.destDir)
+buildLibrary(variables.distDir)
 
-putMetafiles(variables.destDir)
+putMetafiles(variables.distDir)
 
 console.log(chalk.green.inverse('\n✔ Done.'))
 
@@ -46,9 +48,7 @@ function indexComponents () {
 
 function buildLibrary (directory) {
   process.stdout.write(chalk.yellow(
-    'Building library',
-    chalk.bold(variables.verboseName),
-    'to',
+    'Building library to',
     chalk.bold(directory),
     '... '
   ))
@@ -70,7 +70,6 @@ function putMetafiles (directory) {
 
   files = [
     'README.md',
-    'LICENSE',
     'package.json',
     'root.css'
   ]
@@ -92,6 +91,11 @@ function putMetafiles (directory) {
     'tokens.styl'
   ]
   put(files, variables.tokensDir, directory)
+
+  files = [
+    'LICENSE'
+  ]
+  put(files, variables.rootDir, directory)
 
   process.stdout.write(chalk.green('done\n'))
 }
