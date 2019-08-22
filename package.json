@@ -22,10 +22,9 @@
     "test:unit": "vue-cli-service test:unit",
     "serve:website": "vue-cli-service serve",
     "serve:styleguide": "vue-cli-service styleguidist",
-    "build:website": "vue-cli-service build --dest build/",
-    "build:styleguide": "vue-cli-service styleguidist:build",
     "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,raw.json --dest ./src/assets/tokens",
-    "build:library": "node library/build.js"
+    "build:library": "node library/build.js",
+    "build:documentation": "node documentation/build.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
