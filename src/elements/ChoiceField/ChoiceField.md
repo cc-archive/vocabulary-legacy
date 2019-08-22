@@ -189,7 +189,7 @@ On a dark or non-white background, use the inverted choice field.
  
 Choice fields come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <ChoiceField
   color="purple"
   size="small"/>

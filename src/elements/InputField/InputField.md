@@ -325,7 +325,7 @@ Styles can be combined.
 
 Input fields come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <InputField
   color="purple"
   :icon-set="['keyboard', '']"

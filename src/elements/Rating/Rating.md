@@ -118,7 +118,7 @@ On dark or non-white backgrounds use the inverted version of the component.
 
 Ratings come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <Rating
   color="purple"
   size="small"

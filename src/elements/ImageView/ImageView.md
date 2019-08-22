@@ -18,7 +18,7 @@ Image views come in all sizes, from small to mega.  An image can be constrained
 to match the view's width or height. The prop `size` only affects the 
 constrained dimension.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faRuler, faRulerCombined } from '@fortawesome/free-solid-svg-icons'
 

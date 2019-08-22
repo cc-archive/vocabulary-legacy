@@ -122,7 +122,7 @@ On a dark or non-white background, use the inverted form of the switch.
 
 Switches come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <SwitchField
   color="purple"
   size="small"

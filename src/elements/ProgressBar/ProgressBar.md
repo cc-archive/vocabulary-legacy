@@ -165,7 +165,7 @@ demands, you can swap them out for things that do.
 
 Progress bars come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <ProgressBar
   color="purple"
   size="small"

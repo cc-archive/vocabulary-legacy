@@ -155,7 +155,7 @@ needed or desired.
 
 Shields come in all sizes.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <Shield
   color="purple"
   size="small"

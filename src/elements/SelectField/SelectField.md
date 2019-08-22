@@ -298,7 +298,7 @@ let optionList = [
 
 Select fields come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 let optionList = [
   {
     value: 'a',

@@ -360,7 +360,7 @@ Styles can be combined.
 
 Buttons come in all sizes, from small to mega.
 
-```jsx { "props": { "className": "contain-content" } }
+```jsx
 <Button color="purple" size="small">Click me</Button>
 <br/><br/>
 <Button color="purple">Click me</Button>
