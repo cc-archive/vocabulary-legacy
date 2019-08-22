@@ -1,13 +1,17 @@
 @import "~@/assets/tokens/tokens.styl"
 
 div[class*="rsg--preview"]
-  border-top none
-  border-right none
-  border-bottom 1px solid $color-tone-grey-lighter
-  border-left none
+  color $color-tone-black
 
-  div.actual-preview > div.vocab.locale
-    display none
+  background-color $color-tone-white
+
+  max-width calc(100vw - 1em)
+  overflow-x scroll
+
+  padding-left $space-small
+  padding-right $space-small
+
+  border 1px solid $color-tone-grey-lighter
 
   &.i18n-enabled
     div.actual-preview > div.vocab.locale
@@ -28,10 +32,25 @@ div[class*="rsg--preview"]
     font-size 2rem
 
   &.contain-content
-    width auto
-    min-width 100%
+    // Width
 
     +phone-only()
-      max-width 100%
+      --preview-width 'calc(100% - 2 * %s + 12px)' % $space-normal
 
-      overflow-x scroll
+    +tablet-portrait-only()
+      --preview-width 'calc(600px - 2 * %s + 12px)' % $space-normal
+
+    +tablet-landscape-only()
+      --preview-width 'calc(900px - 2 * %s - 17px + 12px)' % $space-normal
+
+    +desktop-only()
+      --preview-width 'calc(1200px - 2 * %s - 17px + 12px)' % $space-normal
+
+    +big-desktop-up()
+      --preview-width 'calc(1800px - 2 * %s - 17px + 12px)' % $space-normal
+
+    // Rules
+    width var(--preview-width)
+
+div.actual-preview > div.vocab.locale
+  display none

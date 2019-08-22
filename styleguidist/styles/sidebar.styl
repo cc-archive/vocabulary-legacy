@@ -10,35 +10,26 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
   border none
 
   overflow-y scroll
-  scrollbar-color $scroll-foreground $color-sidebar-scroll-background
+  scrollbar-color $color-scroll-foreground $color-scroll-background
   scrollbar-width thin
+
+  transition transform $duration-shortest
 
   & > div[class*="rsg--logo"]
     text-align center
 
     border none
 
-    & > h1[class*="rsg--logo"],
-    & > p[class*="rsg--version"]
+    & > h1[class*="rsg--logo"]
       text-align center
 
       color $color-sidebar-highlight
 
-      font-family "Fira Code", monospace
-      font-weight $weight-bold
-
-    & > h1[class*="rsg--logo"]
-      font-size $size-large
+      font-family "Libre Baskerville", monospace
+      font-size $size-huge
 
     & > p[class*="rsg--version"]
-      display inline-block
-
-      font-size $size-small
-
-      padding $space-normal
-
-      border 1px solid @color
-      border-radius $radius-normal
+      display none
 
   & > div > div
     & > nav
@@ -47,12 +38,8 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
           color $color-sidebar-highlight
 
           background-color transparent
-          background-image linear-gradient(
-            $color-overlay-black-low,
-            $color-overlay-black-low
-          )
 
-          border 1px solid transparent
+          border 1px solid $color-tone-grey-lighter
           border-radius $radius-normal
 
           transition border-color $duration-shortest
@@ -72,6 +59,12 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
       & > ul
         & > li
           color $color-sidebar-foreground
+
+          padding $space-normal $space-zero
+
+          border-bottom 1px solid $color-tone-near-white
+
+          margin $space-zero
 
           & > a[class*="rsg--heading"]
             color inherit
@@ -96,12 +89,24 @@ div[class*="rsg--sidebar"][class*="rsg--sidebar"]
                 & > a
                   color $color-sidebar-highlight
 
+                  font-weight $weight-bold
+
           &.cc-active
             & > a[class*="rsg--heading"]
               color $color-sidebar-highlight
+
+          &[class*="rsg--isChild"]
+            display none
 
         &.cc-collapsing
           & > li:not(.cc-active)
             & > ul
               +tablet-portrait-up()
                 display none
+
+  &.cc-drawout
+    +tablet-landscape-up()
+      transform translateX(-100%)
+
+    &.cc-visible
+      transform translateX(0)

@@ -4,69 +4,93 @@
 
 @import "./constants.styl"
 
-html
-  scrollbar-color $scroll-foreground $color-main-scroll-background
-  scrollbar-width thin
+div[class*="rsg--root"][class*="rsg--hasSidebar"]
+  & > main[class*="rsg--content"]
+    // Rules
 
-  +mouse-only()
-    ::-webkit-scrollbar
-      width 0.5em
-      height 0.5em
+    position relative
 
-    ::-webkit-scrollbar-track
-      background-color $color-main-scroll-background
+    min-height 100vh
 
-    ::-webkit-scrollbar-thumb
-      background-color $scroll-foreground
+    padding-left $space-zero
+    padding-right $space-zero
+    padding-top $space-zero
+    padding-bottom $space-zero
 
-main[class*="rsg--content"]
-  padding-left $space-zero
-  padding-right $space-zero
-  padding-top $space-zero
-  padding-bottom $space-zero
+    background-color $color-main-background
 
-  div[class*="rsg--docs"]
-    +phone-only()
-      padding-left $space-normal
-      padding-right $space-normal
+    & > section[class*="rsg--root"]
+      & > section[class*="rsg--root"]
+        margin-bottom 0
 
-    +tablet-portrait-up()
-      padding-left $space-larger
-      padding-right $space-larger
+        // For non-component Markdown files like README.md,
+        // this is not contained in a <header> tag.
+        & > div[class*="rsg--wrapper"]
+          display none
 
-  div[class*="rsg--tabs"]
-    +phone-only()
-      display none
+          & > div[class*="rsg--toolbar"]
+            padding-top $space-normal
 
-    +tablet-portrait-up()
-      padding-left $space-larger
-      padding-right $space-larger
+            margin-left $space-larger
 
-  article[class*="rsg--root"]
-    +phone-only()
-      padding-left $space-normal
-      padding-right $space-normal
+        & > div > div[id*="-container"][class*="rsg--root"]
+          display inline-block
+          min-width 100%
 
-    +tablet-portrait-up()
-      padding-left $space-larger
-      padding-right $space-larger
+          // Only in component Markdown files
+          & > div[class*="rsg--docs"]
+            max-width $max-content-width
 
-    & > div[class*="rsg--root"]
-      a[title="Open isolated"]
-        display none
+            +phone-only()
+              padding-left $space-normal
+              padding-right $space-normal
 
-  div[class*="rsg--wrapper"]
-    h1
-      & ~ div[class*="rsg--toolbar"]
-        display none
+            +tablet-portrait-up()
+              padding-left $space-larger
+              padding-right $space-larger
 
-  div[id*="-container"][class*="rsg--root"]
-    +tablet-portrait-up()
-      display inline-block
+          // Only in component Markdown files
+          & > div[class*="rsg--tabs"]
+            +phone-only()
+              display none
 
-    min-width 100%
+            max-width $max-content-width
 
-  div[class*="rsg--root"]
-    & > div
-      & > p[class*="rsg--para"]
-        margin-left $space-large
+            +tablet-portrait-up()
+              padding-left $space-larger
+              padding-right $space-larger
+
+          // Only in component Markdown files
+          & > article[class*="rsg--root"]
+            // Nothing for now; placeholder rule
+            visibility visible
+
+        // Only in non-component Markdown files
+        & > article[class*="rsg--root"]
+          padding-top $space-large
+          padding-bottom 'calc(4em + %s)' % $space-normal
+
+        // Common to both component and non-component Markdown files
+        article[class*="rsg--root"]
+          max-width $max-content-width
+
+          +phone-only()
+            padding-left $space-normal
+            padding-right $space-normal
+
+          +tablet-portrait-up()
+            padding-left $space-larger
+            padding-right $space-larger
+
+          & > div[class*="rsg--root"]
+            a[title="Open isolated"]
+              display none
+
+  &.cc-drawout
+    padding-left 0
+
+    & > main[class*="rsg--content"]
+      & > section[class*="rsg--root"]
+        & > section[class*="rsg--root"]
+          & > div[class*="rsg--wrapper"]
+            display unset

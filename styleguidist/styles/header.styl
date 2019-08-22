@@ -4,6 +4,7 @@
 
 @import "./constants.styl"
 
+// Only in component Markdown files
 header[class*="rsg--header"]
   +tablet-portrait-up()
     position sticky
@@ -21,8 +22,10 @@ header[class*="rsg--header"]
     padding $space-large $space-larger
 
   & > div[class*="rsg--wrapper"]
+    align-items end
+
     h2
-      color $color-header-foreground
+      color $color-header-highlight
 
       a
         transition 150ms color ease-in
@@ -32,11 +35,15 @@ header[class*="rsg--header"]
           text-decoration none
 
     div[class*="rsg--toolbar"]
+      display none
+
       color $color-header-foreground
 
       margin-left $space-normal
 
       a[class*="rsg--button"]
+        display block
+
         color inherit
 
         &:hover
@@ -52,3 +59,9 @@ header[class*="rsg--header"]
 
       &:hover
         color $color-header-highlight
+
+.cc-drawout
+  header[class*="rsg--header"]
+    & > div[class*="rsg--wrapper"]
+      div[class*="rsg--toolbar"]
+        display unset

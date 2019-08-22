@@ -3,19 +3,26 @@
 @import "./constants.styl"
 
 footer[class*="rsg--footer"]
+  position absolute
+  bottom 0
+
+  font-size $size-normal
+
   background-color $color-footer-background
 
-  padding-left $space-large
-  padding-right $space-large
-  padding-top $space-large
-  padding-bottom $space-large
+  +phone-only()
+    padding $space-large $space-normal
+
+  +tablet-portrait-up()
+    padding $space-large $space-larger
 
   & > p[class*="rsg--para"]
-    font-size $size-normal
-
     color $color-footer-foreground
 
     margin-bottom $space-zero
+
+    transition color, background-position
+    transition-duration $duration-shortest
 
     & > a[class*="rsg--link"]
       color inherit
