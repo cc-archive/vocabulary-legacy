@@ -1,22 +1,48 @@
 const path = require('path')
+const capitalize = require('lodash/capitalize')
+
+let viewportMeta = [
+  'width=device-width',
+  'initial-scale=1.0',
+  'user-scalable=no',
+  'viewport-fit=cover'
+].join(', ')
+let rootCss = 'https://unpkg.com/@creativecommons/vocabulary/root.css'
+
+let families = [
+  'tokens',
+  'utils',
+  'elements',
+  'layouts',
+  'patterns',
+  'templates'
+]
+let regularFonts = [
+  '"Source Sans Pro"',
+  '"Noto Sans"',
+  'Arial',
+  '"Helvetica Neue"',
+  'Helvetica',
+  'sans-serif'
+]
+let monospaceFonts = [
+  '"Fira Code"',
+  'Consolas',
+  '"Liberation Mono"',
+  'Menlo',
+  'monospace'
+]
 
 module.exports = {
+  // Text
   title: 'vo·cab·u·lar·y',
   version: 'latest',
 
-  components: 'src/**/[A-Z]*.vue',
-  skipComponentsWithoutExample: true,
-
-  defaultExample: false,
-  pagePerSection: true,
-  getComponentPathLine: function (componentPath) {
-    const name = path.basename(componentPath, '.vue')
-    return `import { ${name} } from '@creativecommons/vocabulary'`
-  },
-
+  // Directory structure
   assetsDir: 'src/assets/',
-  styleguideDir: 'docs', // For easy push to GitHub Pages
+  styleguideDir: 'docs/docs',
 
+  // Customisation
   theme: {
     color: {
       linkHover: '#000000',
@@ -35,8 +61,8 @@ module.exports = {
       codeVariable: '#82B1FF'
     },
     fontFamily: {
-      base: ['"Source Sans Pro"', '"Noto Sans"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
-      monospace: ['"Fira Code"', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace']
+      base: regularFonts,
+      monospace: monospaceFonts
     },
     borderRadius: 0,
     sidebarWidth: 256,
@@ -44,8 +70,8 @@ module.exports = {
   },
   styles: {
     StyleGuide: {
-      '@global html': {
-        fontFamily: ['"Source Sans Pro"', '"Noto Sans"', 'Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
+      '@global html': { // Copied from root.css
+        fontFamily: regularFonts,
         fontSize: 16,
         lineHeight: 1.2
       }
@@ -56,6 +82,7 @@ module.exports = {
     lineNumbers: true
   },
 
+  // Additional dependencies
   require: [
     path.join(__dirname, 'src/icons.js'),
     path.join(__dirname, 'styleguidist/i18n.js'),
@@ -65,29 +92,29 @@ module.exports = {
   template: {
     head: {
       meta: [
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover'
-        }
+        { name: 'viewport', content: viewportMeta }
       ],
       links: [
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400|Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap'
-        },
-        {
-          rel: 'icon',
-          href: 'icons/favicon.png'
-        }
+        { rel: 'stylesheet', href: rootCss },
+        { rel: 'icon', href: 'icons/favicon.png' }
       ]
     }
   },
+
+  // Replaced components
+  getComponentPathLine: function (componentPath) {
+    const name = path.basename(componentPath, '.vue')
+    return `import { ${name} } from '@creativecommons/vocabulary'`
+  },
   renderRootJsx: path.join(__dirname, 'styleguidist/styleguide.root.js'),
 
+  // Organisation
+  defaultExample: false,
+  pagePerSection: true,
+
+  // Contents
+  components: 'src/**/[A-Z]*.vue',
+  skipComponentsWithoutExample: true,
   sections: [
     {
       name: 'Vocabulary',
@@ -106,41 +133,11 @@ module.exports = {
         }
       ]
     },
-    {
-      name: 'Tokens',
-      content: 'src/tokens/README.md',
+    ...families.map(family => ({
+      name: capitalize(family),
+      content: `src/${family}/README.md`,
       sectionDepth: 1,
-      components: 'src/tokens/[A-Z]*/[A-Z]*.vue'
-    },
-    {
-      name: 'Utils',
-      content: 'src/utils/README.md',
-      sectionDepth: 1,
-      components: 'src/utils/[A-Z]*/[A-Z]*.vue'
-    },
-    {
-      name: 'Elements',
-      content: 'src/elements/README.md',
-      sectionDepth: 1,
-      components: 'src/elements/[A-Z]*/[A-Z]*.vue'
-    },
-    {
-      name: 'Layouts',
-      content: 'src/layouts/README.md',
-      sectionDepth: 1,
-      components: 'src/layouts/[A-Z]*/[A-Z]*.vue'
-    },
-    {
-      name: 'Patterns',
-      content: 'src/patterns/README.md',
-      sectionDepth: 1,
-      components: 'src/patterns/[A-Z]*/[A-Z]*.vue'
-    },
-    {
-      name: 'Templates',
-      content: 'src/templates/README.md',
-      sectionDepth: 1,
-      components: 'src/templates/[A-Z]*/[A-Z]*.vue'
-    }
+      components: `src/${family}/[A-Z]*/[A-Z]*.vue`
+    }))
   ]
 }
