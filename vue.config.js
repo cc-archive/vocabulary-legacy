@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/cc-vocabulary/',
   pluginOptions: {
     i18n: {
       locale: 'en',
