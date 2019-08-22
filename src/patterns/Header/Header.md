@@ -6,21 +6,21 @@ The header has a standard layout and appearance. It sits flush with the
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
   faHome,
-  faBook,
-  faSearch
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faSearch, faHome, faBook);
+library.add(faHome, faBook);
 
 <Header 
-  title="Vocabulary" 
+  appName="Vocabulary" 
   color="blue">
   <InputField
     color="blue"
-    :icon-set="['', 'search']"
-    is-basic
+    shade="dark"
+    :icon-set="['keyboard', '']"
+    is-ghost
     is-infused
-    type="text"
+    type="search"
     placeholder="Search..."/>
   <Navigation
     is-inverted>

@@ -16,13 +16,13 @@ library.add(faHome, faBook);
   color="blue">
   <InputField
     color="blue"
-    shade="darker"
+    shade="dark"
     :icon-set="['keyboard', '']"
-    type="text"
+    is-ghost
+    is-infused
+    type="search"
     placeholder="Search..."/>
   <Navigation
-    color="blue"
-    shade="darker"
     is-inverted>
     <NavigationLink icon="home">
       Home page
@@ -56,8 +56,8 @@ allowing people to choose a language they're comfortable with.
 
 Anything goes.
 
-```jsx
-let alternativeLinks = [ 
+```jsx { "props": { "className": "i18n-enabled contain-content" } }
+let alternativeLinks = [
   {
     text: 'GitHub',
     href: 'https://github.com/creativecommons/cc-vocabulary'
