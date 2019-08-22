@@ -1,7 +1,7 @@
-## Layouts
+## lay·outs
 
 <center>
-<img 
+<img
   src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/src/assets/icons/ds_nomenclature/layout.svg?sanitize=true"
   width="64px"/>
 </center>

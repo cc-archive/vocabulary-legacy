@@ -1,7 +1,7 @@
-## Elements
+## el·e·ments
 
 <center>
-<img 
+<img
   src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/src/assets/icons/ds_nomenclature/element.svg?sanitize=true"
   width="64px"/>
 </center>
