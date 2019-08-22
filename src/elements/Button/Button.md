@@ -385,8 +385,8 @@ clicking the button that calls itself dangerous will lead to much agony and
 unpleasantness.
 
 ```jsx
-<Button indication="positive">I'm safe to click</Button><br/><br/>
-<Button indication="probably">I'm not sure what I am</Button><br/><br/>
+<Button indication="positive">I'm safe to click</Button>
+<Button indication="probably">I'm not sure what I am</Button>
 <Button indication="negative">I'm dangerous to click</Button>
 ```
 
