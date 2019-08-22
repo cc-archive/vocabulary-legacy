@@ -1,8 +1,7 @@
 const path = require('path')
-const packageConfig = require('./package.json')
 
 module.exports = {
-  title: packageConfig.verboseName,
+  title: 'vo·cab·u·lar·y',
   version: 'latest',
 
   components: 'src/**/[A-Z]*.vue',
@@ -10,7 +9,6 @@ module.exports = {
 
   defaultExample: false,
   pagePerSection: true,
-  usageMode: 'expand',
   getComponentPathLine: function (componentPath) {
     const name = path.basename(componentPath, '.vue')
     return `import { ${name} } from '@creativecommons/vocabulary'`
@@ -21,7 +19,7 @@ module.exports = {
 
   theme: {
     color: {
-      linkHover: '#ec4d37',
+      linkHover: '#000000',
 
       // This is painful manual effort
       // Copied from CodeMirror Material theme
@@ -79,7 +77,7 @@ module.exports = {
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap'
+          href: 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400|Noto+Sans:400,700|Source+Sans+Pro:300,400,700&display=swap'
         },
         {
           rel: 'icon',
