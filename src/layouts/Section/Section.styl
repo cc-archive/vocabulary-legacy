@@ -20,7 +20,6 @@
   &.negative-indicating.negative-indicating
     --section-primary $color-context-negative
 
-  // Secondary color
   --section-secondary $color-tone-white
 
   &.inverted
@@ -48,6 +47,11 @@
 
   &.negative-indicating.negative-indicating
     --section-tertiary $color-context-negative-dark
+
+  --section-shadow $color-tone-grey-lighter
+
+  &.inverted
+    --section-shadow $color-tone-grey-darker
 
   // Color
 
@@ -143,7 +147,7 @@
     overflow hidden
 
   &.raised
-    box-shadow unquote($shadow-pronounced) $color-tone-near-white
+    box-shadow unquote($shadow-pronounced) var(--section-shadow)
 
   &.compact
     display inline-block
