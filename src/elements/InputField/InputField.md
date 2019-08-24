@@ -1,12 +1,14 @@
 An input field looks like this.
 
 ```jsx
+let value="It is awesome";
+
 <InputField
+  v-model="value"
   color="orange"
   :icon-set="['keyboard', '']"
   type="text"
   placeholder="How is CC Vocabulary?"
-  value="It is awesome!"
   is-basic
   is-infused/>
 ```
@@ -218,12 +220,12 @@ add-on slots with something you like.
   placeholder="Not even icons">
   <template #leftAddons>
     <div style="width: 1.25em; text-align: center;">
-      <strong>:-)</strong>
+      <strong>:‑)</strong>
     </div>
   </template>
   <template #rightAddons>
     <div style="width: 1.25em; text-align: center;">
-      <strong>:-D</strong>
+      <strong>:‑D</strong>
     </div>
   </template>
 </InputField>
@@ -468,6 +470,12 @@ The `type` attribute works as you would expect.
 <InputField
   color="orange"
   type="time">
+</InputField><br/><br/>
+<InputField
+  color="red"
+  type="range"
+  max="5"
+  min="0">
 </InputField><br/><br/>
 <InputField
   color="yellow"

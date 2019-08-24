@@ -122,7 +122,7 @@
 
   cursor var(--input-field-cursor)
 
-  width 16em
+  width 20em
 
   border-top-width var(--input-field-top-border-width)
   border-right-width var(--input-field-right-border-width)
@@ -138,7 +138,7 @@
 
     appearance none
 
-    color inherit
+    color var(--input-field-text-color)
 
     font inherit
 
@@ -156,6 +156,8 @@
     // Children
 
     &::placeholder
+      opacity 0.6
+
       color var(--input-field-placeholder-color)
 
     // States
@@ -166,6 +168,51 @@
       background-color $color-context-negative-light
 
       box-shadow none
+
+    &[type="range"]
+      appearance none
+
+      cursor pointer
+
+      --input-field-track-height 0.125em
+      --input-field-thumb-height 1em
+
+      track()
+        background-color var(--input-field-tertiary)
+
+        height var(--input-field-track-height)
+
+        border none
+        border-radius $radius-pill
+
+      &::-webkit-slider-runnable-track
+        track()
+
+      &::-moz-range-track
+        track()
+
+      thumb()
+        appearance none
+
+        background-color var(--input-field-primary)
+
+        height var(--input-field-thumb-height)
+        width 1em
+
+        border none
+        border-radius $radius-pill
+
+        margin-top calc(
+          (
+          -1 * var(--input-field-thumb-height) + var(--input-field-track-height)
+          ) / 2
+        )
+
+      &::-webkit-slider-thumb
+        thumb()
+
+      &::-moz-range-thumb
+        thumb()
 
   & > .addons
     display flex
