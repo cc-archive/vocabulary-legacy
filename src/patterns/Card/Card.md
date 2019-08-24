@@ -5,9 +5,8 @@ let dhruvSource = 'https://avatars0.githubusercontent.com/u/16580576';
 let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
 
 <Grid density="sparse">
-  <GridCell :span-set="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="blue"
       heading="Dhruv Bhanushali"
       subheading="Developer"
       :featuredImageSource="dhruvSource"
@@ -31,7 +30,7 @@ let hugoSource = 'https://avatars0.githubusercontent.com/u/894708';
 let hugoAlt = 'Hugo Solar\'s profile picture';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="magenta"
       heading="Hugo Solar"
@@ -55,7 +54,7 @@ let kritiSource = 'https://avatars0.githubusercontent.com/u/287034';
 let kritiAlt = 'Kriti Godey\'s profile picture';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="purple"
       heading="Kriti Godey"
@@ -79,7 +78,7 @@ let sophineSource = 'https://creativecommons.org/wp-content/uploads/2018/03/Soph
 let sophineAlt = 'Sophine Clachar\'s profile picture';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="orange"
       heading="Sophine Clachar"
@@ -102,7 +101,7 @@ let brenoSource = 'https://avatars0.githubusercontent.com/u/707019';
 let brenoAlt = 'Breno Ferreira\'s profile picture';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 2]">
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="yellow"
       heading="Breno Ferreira"
@@ -132,7 +131,7 @@ let giraffeSource = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/T
 let giraffeAlt = 'Two giraffes in Kenya';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 3]">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Card
       color="red"
       :heading="giraffeAlt"
@@ -162,7 +161,7 @@ let hummingbirdSource = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/
 let hummingbirdAlt = 'Costa\'s hummingbird';
 
 <Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 3]">
+  <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Card
       color="green"
       is-decked>
@@ -200,7 +199,11 @@ A card without any color looks like this.
 <Card 
   heading="Colorless card"
   subheading="No accent"
-  is-raised/>
+  is-raised>
+  <template #foot>
+    BORING!
+  </template>
+</Card>
 ```
 
 Again like any other component, cards can be colored using any color from the
@@ -213,72 +216,63 @@ set provided by CC Vocabulary. Let's jazz it up a little.
       color="blue"
       heading="Blue card"
       subheading="Blue accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="green"
       heading="Green card"
       subheading="Green accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="magenta"
       heading="Magenta card"
       subheading="Magenta accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="olive"
       heading="Olive card"
       subheading="Olive accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="orange"
       heading="Orange card"
       subheading="Orange accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="purple"
       heading="Purple card"
       subheading="Purple accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="red"
       heading="Red card"
       subheading="Red accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="sand"
       heading="Sand card"
       subheading="Sand accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Card
       color="yellow"
       heading="Yellow card"
       subheading="Yellow accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
 </Grid>
 ```
@@ -294,16 +288,14 @@ to accentuate the color.
       shade="light"
       heading="Light blue card"
       subheading="Light blue accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="blue"
       heading="Blue card"
       subheading="Default blue accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
@@ -311,8 +303,7 @@ to accentuate the color.
       shade="dark"
       heading="Dark blue card"
       subheading="Dark blue accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
@@ -320,8 +311,7 @@ to accentuate the color.
       shade="darker"
       heading="Darker blue card"
       subheading="Darker blue accent"
-      is-raised
-      is-rounded/>
+      is-raised/>
   </GridCell>
 </Grid>
 ```
@@ -335,7 +325,6 @@ component.
     <Card
       heading="Dark?"
       subheading="Inverted"
-      is-rounded
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
@@ -343,7 +332,6 @@ component.
       color="magenta"
       heading="Dark?"
       subheading="Inverted"
-      is-rounded
       is-inverted/>
   </GridCell>
 </Grid>
