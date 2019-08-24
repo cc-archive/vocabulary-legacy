@@ -266,3 +266,9 @@ an output component.
   :value="3"
   is-read-only/>
 ```
+
+### Similarity
+
+The component is functionally similar to [InputField](#/Elements/InputField)
+with `type="range"`. Do make sure to see which of the two components is a better
+fit for your use case.
