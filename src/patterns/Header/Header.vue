@@ -3,26 +3,28 @@
     <Container>
       <div class="flex">
         <div id="branding-section">
-          <a
-            class="homelink"
-            :href="homeUrl">
-            <!-- @slot Branding goes here -->
-            <slot name="branding">
-              <template v-if="title">
-                <BrandImagery
-                  type="lettermark"
-                  size="small"
-                  color="white"/>
-                {{ title }}
-              </template>
+          <div id="branding-content">
+            <a
+              class="homelink"
+              :href="homeUrl">
+              <!-- @slot Branding goes here -->
+              <slot name="branding">
+                <template v-if="title">
+                  <BrandImagery
+                    type="lettermark"
+                    size="small"
+                    color="white"/>
+                  {{ title }}
+                </template>
 
-              <BrandImagery
-                v-else
-                type="wordmark"
-                size="small"
-                color="white"/>
-            </slot>
-          </a>
+                <BrandImagery
+                  v-else
+                  type="wordmark"
+                  size="normal"
+                  color="white"/>
+              </slot>
+            </a>
+          </div>
 
           <Button
             v-if="$slots.default"
@@ -47,7 +49,9 @@
 
         <div
           :class="contentClasses"
-          id="content-section">
+          :style="contentStyles"
+          id="content-section"
+          ref="contentSection">
           <!-- @slot Content goes here -->
           <slot/>
         </div>
@@ -59,10 +63,7 @@
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
   import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-  import {
-    FontAwesomeIcon,
-    FontAwesomeLayers
-  } from '@fortawesome/vue-fontawesome'
+  import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
   import Button from '@/elements/Button/Button'
 
@@ -94,7 +95,8 @@
     },
     data: function () {
       return {
-        isContentVisible: false
+        isContentVisible: true,
+        contentExpandedHeight: 'unset'
       }
     },
     props: {
@@ -137,12 +139,25 @@
             'collapsed': !this.isContentVisible
           }
         ]
+      },
+      contentStyles: function () {
+        const customProperty = '--header-content-expanded-height'
+        return {
+          [customProperty]: this.contentExpandedHeight
+        }
       }
     },
     methods: {
       toggleDropdown: function () {
         this.isContentVisible = !this.isContentVisible
       }
+    },
+    mounted: function () {
+      this.$nextTick(() => {
+        const height = this.$refs.contentSection.clientHeight
+        this.contentExpandedHeight = `${height}px`
+        this.isContentVisible = false
+      })
     }
   }
 </script>

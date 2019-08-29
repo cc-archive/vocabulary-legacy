@@ -4,7 +4,7 @@ The footer has a standard layout and appearance. It sits flush with the
 
 ```jsx { "props": { "className": "i18n-enabled contain-content" } }
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { 
+import {
   faHome,
   faBook
 } from '@fortawesome/free-solid-svg-icons';
@@ -14,14 +14,6 @@ library.add(faHome, faBook);
 <Header 
   appName="Vocabulary" 
   color="blue">
-  <InputField
-    color="blue"
-    shade="dark"
-    :icon-set="['keyboard', '']"
-    is-ghost
-    is-infused
-    type="search"
-    placeholder="Search..."/>
   <Navigation
     is-inverted>
     <NavigationLink icon="home">

@@ -40,18 +40,26 @@ Here are some available patterns. You should probably
 [back to normal](#/Patterns).
 
 ```jsx { "props": { "className": "i18n-enabled contain-content" } }
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faHome,
+  faBook
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHome, faBook);
+
 <Header 
-  appName="Search" 
+  appName="Vocabulary" 
   color="blue">
-  <InputField
-    type="text"
-    color="blue"
-    shade="dark"
-    :icon-set="['keyboard', '']"
-    placeholder="Search..."/>
   <Navigation
-    is-inverted
-    :linkList="[{text: 'About', href:'#1'}, {text: 'Browse', href:'#2'}, {text: 'Feedback', href:'#3'}]"/>
+    is-inverted>
+    <NavigationLink icon="home">
+      Home page
+    </NavigationLink>
+    <NavigationLink icon="book">
+      Documentation
+    </NavigationLink>
+  </Navigation>
 </Header>
 <Footer/>
 ```

@@ -12,7 +12,7 @@
 
   colors('--header-primary')
 
-  --header-secondary white
+  --header-secondary $color-tone-white
 
   // Color
 
@@ -42,36 +42,48 @@
     & > .flex
       display flex
 
-      +tablet-portrait-down()
+      +tablet-landscape-down()
         flex-direction column
 
-        padding $space-normal $space-normal
-
-      +tablet-landscape-up()
+      +desktop-up()
         flex-direction row
-        flex-wrap wrap
-        justify-content space-between
         align-items center
+        justify-content space-between
+        flex-wrap wrap
 
-        padding $space-normal $space-zero
+      gap $space-normal
+
+      padding $space-normal $space-zero
 
       & > #branding-section
-        flex-grow 0
+        // To vertically align branding content with button
+        display flex
+        flex-direction row
+        align-items center
 
-        font-size $size-huge
-        font-weight $weight-bold
+        & > #branding-content
+          flex-grow 1
+          flex-shrink 0
 
-        margin $rspace-small $space-zero
+          +tablets-only()
+            // To horizontally justify logo in the middle
+            display flex
+            flex-direction row
+            justify-content center
 
-        & > .homelink
-          display flex
-          flex-direction row
-          align-items center
+          font-size $size-huge
+          font-weight $weight-bold
 
-          gap $space-small
+          & > .homelink
+            // To vertically align parts of the branding with each other
+            display flex
+            flex-direction row
+            align-items center
 
-          & > .brand-imagery
-            font-reset()
+            gap $space-small
+
+            & > .brand-imagery
+              font-reset()
 
         & > #hamburger
           +tablet-portrait-up()
@@ -92,25 +104,18 @@
                 transform scale(1)
 
       & > #content-section
-
-        &.collapsed
-          max-height 0
-          margin 0
-
-        &:not(.collapsed)
-          max-height 16em
-          margin $rspace-small $space-zero
-
-        +tablet-portrait-up()
-          display flex
-          flex-direction row
-          align-items center
+        text-align center
 
         +phone-only()
-          text-align center
+          &.collapsed
+            max-height 0
+            margin 0
+
+          &:not(.collapsed)
+            max-height var(--header-content-expanded-height)
+            margin $rspace-small $space-zero
 
           width 100%
-          max-height 0
 
           overflow hidden
 
