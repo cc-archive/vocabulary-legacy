@@ -14,6 +14,8 @@ buildWebsite(variables.docsDir)
 
 buildStyleguide()
 
+buildStorybook()
+
 console.log(chalk.green.inverse('\n✔ Done.'))
 
 // Top level functions
@@ -41,11 +43,21 @@ function buildWebsite () {
 function buildStyleguide () {
   process.stdout.write(chalk.yellow(
     'Building styleguide to',
-    chalk.bold(`${variables.docsDir}/docs`),
+    chalk.bold(`${variables.styleguideDir}`),
     '... '
   ))
   // Destination for build is specified in styleguide.config.js
   build('vue-cli-service styleguidist:build')
+  process.stdout.write(chalk.green('done\n'))
+}
+
+function buildStorybook () {
+  process.stdout.write(chalk.yellow(
+    'Building storybook to',
+    chalk.bold(`${variables.storybookDir}`),
+    '... '
+  ))
+  build(`vue-cli-service storybook:build -c storybook -s src/assets -o ${variables.storybookDir}`)
   process.stdout.write(chalk.green('done\n'))
 }
 

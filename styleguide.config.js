@@ -40,7 +40,7 @@ module.exports = {
 
   // Directory structure
   assetsDir: 'src/assets/',
-  styleguideDir: 'docs/docs',
+  styleguideDir: 'docs/styleguide/',
 
   // Customisation
   theme: {
