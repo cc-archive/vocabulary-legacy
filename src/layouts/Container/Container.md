@@ -51,20 +51,20 @@ best in the isolated view.
 
 Formulae for width calculation are
 
-- phone: `100% - 2×<spacing>`
-- other devices: `<min width> - 2×<spacing> - <scroll>`
+- touch-input devices: `100% - 2×<spacing>`
+- mouse-input devices: `<min width> - 2×<spacing> - <scroll>`
 
 where
 
 - spacing: `0.5em`
 - scrollbar: `17px`
 
-Device name      | Min width | Max width | Width
------------------|-----------|-----------|----------------
-Phone            |           | `·600px`  | Fluid
-Tablet portrait  | `·600px`  | `·900px`  | `·567px`
-Tablet landscape | `·900px`  | `1200px`  | `·867px`
-Desktop          | `1200px`  | `1800px`  | `1167px`
-Big desktop      | `1800px`  |           | `1767px`
+Device name      | Min width | Max width | Scrollbar | Width
+-----------------|-----------|-----------|-----------|----------
+Phone            |           | `·600px`  | No        | Fluid
+Tablet portrait  | `·600px`  | `·900px`  | No        | `·584px`
+Tablet landscape | `·900px`  | `1200px`  | No        | `·884px`
+Desktop          | `1200px`  | `1800px`  | Yes       | `1167px`
+Big desktop      | `1800px`  |           | Yes       | `1767px`
 
 Note that the devices lie in the range [min-width, max-width).
