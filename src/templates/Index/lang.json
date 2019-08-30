@@ -1,13 +1,16 @@
 {
   "en": {
     "definition":  {
+      "noun": "noun",
       "unimportant": "the body of words used in a particular language",
-      "cohesive": "{0} to unite the web facing {1}",
-      "ds": "a cohesive design system"
+      "cohesive": "a cohesive design system to unite the web facing {0}",
+      "seealso": {
+        "styleguide": "Styleguide",
+        "storybook": "Storybook"
+      }
     },
     "links": {
       "github": "GitHub",
-      "styleguide": "Styleguide",
       "umd": "UMD demo",
       "css": "CSS demo"
     },
@@ -31,13 +34,16 @@
   },
   "hi": {
     "definition": {
+      "noun": "संज्ञा",
       "unimportant":  "किसी विशेष भाषा में प्रयुक्त शब्दों का समूह",
-      "cohesive": "वेब का सामना करने वाले {1} को एकजुट करने के लिए {0}",
-      "ds": "एक सुसंगत डिजाइन प्रणाली"
+      "cohesive": "वेब का सामना करने वाले {0} को एकजुट करने के लिए एक सुसंगत डिजाइन प्रणाली",
+      "seealso": {
+        "styleguide": "स्टाइलगाइड",
+        "storybook": "स्टोरीबूक"
+      }
     },
     "links": {
       "github": "गिटहब",
-      "styleguide": "स्टाइलगाइड",
       "umd": "यू एम डी डेमो",
       "css": "सी एस एस डेमो"
     },

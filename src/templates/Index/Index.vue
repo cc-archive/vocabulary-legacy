@@ -4,7 +4,7 @@
       <Container>
         <Definition
           :pronunciation="$t('pronunciation')"
-          part-of-speech="n.">
+          :part-of-speech="$t('definition.noun')">
           <template #word>
             {{ $t('vo_cab_u_lar_y') }}
           </template>
@@ -14,13 +14,16 @@
             </li>
             <li>
               <i18n path="definition.cohesive" tag="span">
-                <a :href="docsHref" class="styleguide-link">
-                  {{ $t('definition.ds') }}
-                </a>
                 {{ $t('creativecommons') }}
               </i18n>
             </li>
           </ul>
+          <template #seeAlso>
+            <a :href="styleguideHref">
+              {{ $t('definition.seealso.styleguide') }}</a>,
+            <a :href="storybookHref">
+              {{ $t('definition.seealso.storybook') }}</a>
+          </template>
         </Definition>
       </Container>
     </main>
@@ -130,15 +133,14 @@
       Quote
     },
     data: function () {
-      let docsHref = 'https://creativecommons.github.io/cc-vocabulary/docs'
+      const baseUrl = 'https://creativecommons.github.io/cc-vocabulary'
+      const styleguideHref = `${baseUrl}/styleguide`
+      const storybookHref = `${baseUrl}/storybook`
+
       let alternativeLinks = [
         {
           key: 'links.github',
           href: 'https://github.com/creativecommons/cc-vocabulary'
-        },
-        {
-          key: 'links.styleguide',
-          href: docsHref
         },
         {
           key: 'links.umd',
@@ -160,7 +162,8 @@
         }
       ]
       return {
-        docsHref,
+        styleguideHref,
+        storybookHref,
         alternativeLinks,
         alternativeContacts
       }
