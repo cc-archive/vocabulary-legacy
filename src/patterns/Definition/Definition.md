@@ -1,9 +1,9 @@
-A definition looks like this. Note how 'Source Sans Pro' gives way to the
+A definition looks like this. Note how Adobe's Source Sans Pro gives way to the
 elegant [Libre Baskerville by Impallari
 Type](https://fonts.google.com/specimen/Libre+Baskerville). Look at the `fi`
 ligature and tell me you are not impressed.
 
-```jsx
+```jsx { "props": { "className": "i18n-enabled" } }
 <Definition
   word="definition"
   pronunciation="dɛfɪˈnɪʃ(ə)n"
@@ -13,23 +13,26 @@ ligature and tell me you are not impressed.
       a statement of the exact meaning of a word, especially in a dictionary
     </li>
   </ul>
+  <template #seeAlso>
+    <a href="#">dictionary</a>
+  </template>
 </Definition>
 ```
 
-Interpuncts at syllable breaks look really awesome.
+Interpuncts at syllable breaks look really awesome, which is why they made their
+way into our wordmark.
 
 ```jsx { "props": { "className": "dark-background" } }
 <Definition
   word="vo·cab·u·lar·y"
   pronunciation="və(ʊ)ˈkabjʊləri"
-  part-of-speech="n.">
+  part-of-speech="noun">
   <ul>
     <li class="unimportant">
       the body of words used in a particular language
     </li>
     <li>
-      a cohesive design system to unite the web facing
-      <strong>Creative Commons</strong> 
+      a cohesive design system to unite the web facing Creative Commons 
     </li>
   </ul>
 </Definition>

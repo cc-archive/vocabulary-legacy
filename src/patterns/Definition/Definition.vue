@@ -12,14 +12,30 @@
         </slot>
       </Heading>
       <Paragraph class="usage">
-        /{{ pronunciation }}/
-        <em><strong>{{ partOfSpeech }}</strong></em>
+        <span
+          v-if="pronunciation"
+          class="pronunciation">
+          /{{ pronunciation }}/
+        </span>
+        <span
+          v-if="partOfSpeech"
+          class="part-of-speech">
+          {{ partOfSpeech }}
+        </span>
       </Paragraph>
     </div>
 
     <div class="definitions">
       <!-- @slot Content goes here -->
       <slot/>
+    </div>
+
+    <div
+      v-if="$slots.seeAlso"
+      class="see-also">
+      <span class="ornament">{{ $t('seealso') }}:</span>
+      <!-- @slot Content to also see goes here -->
+      <slot name="seeAlso"/>
     </div>
   </div>
 </template>
@@ -79,3 +95,6 @@
 
 <style lang="stylus" src="./Definition.styl">
 </style>
+
+<i18n src="./lang.json">
+</i18n>

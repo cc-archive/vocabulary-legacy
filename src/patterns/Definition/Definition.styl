@@ -5,13 +5,26 @@
 .vocab.definition
   // Children
 
+  a
+    color inherit
+
+    text-decoration-style dotted
+
+    &:hover
+      text-decoration-style solid
+
   & > .heading
-    margin-bottom $space-normal
+    margin $space-normal $space-zero
 
     & > .word
       font-size $size-enormous
       font-family "Libre Baskerville", serif
       font-weight 400
+
+    & > .usage
+      & > .part-of-speech
+        font-weight $weight-bold
+        font-style italic
 
   & > .definitions
     & > ul
@@ -22,15 +35,26 @@
       & > li
         &::before
           counter-increment section
-          content counter(section) ' '
+          content counter(section) " "
 
           vertical-align super
 
           font-weight $weight-bold
           font-size $size-small
+          font-style italic
 
         &.unimportant
           opacity 0.6
 
     .number
       font-weight $weight-bold
+
+  & > .see-also
+    margin $space-large $space-zero
+
+    & > .ornament
+      font-weight $weight-bold
+      font-size $size-small
+      font-style italic
+
+      margin-right $space-normal
