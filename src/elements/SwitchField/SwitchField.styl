@@ -78,6 +78,13 @@
   &.read-only
     --switch-field-cursor default
 
+  // Border radius
+
+  --switch-field-border-radius 0
+
+  &.rounded
+    --switch-field-border-radius $radius-pill
+
   // Rules
 
   position relative
@@ -101,6 +108,7 @@
   border-width $space-small
   border-style solid
   border-color @background-color
+  border-radius var(--switch-field-border-radius)
 
   transition-property background-color, border-color
   transition-duration $duration-shortest
@@ -117,6 +125,8 @@
 
     width 1.25em
     height 1.25em
+
+    border-radius var(--switch-field-border-radius)
 
     transition-property left, transform
     transition-duration $duration-shortest

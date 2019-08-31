@@ -42,6 +42,7 @@
   import Indicating from '@/mixins/indicating'
   import Invertible from '@/mixins/invertible'
   import Resizeable from '@/mixins/resizable'
+  import Roundable from '@/mixins/roundable'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faCheck, faTimes)
@@ -63,6 +64,7 @@
       Indicating,
       Invertible,
       Resizeable,
+      Roundable,
       Unactionable
     ],
     model: {
@@ -121,6 +123,7 @@
           ...this.indicatingClasses,
           ...this.invertibleClasses,
           ...this.resizableClasses,
+          ...this.roundableClasses,
           ...this.unactionableClasses,
 
           {
