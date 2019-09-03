@@ -1,4 +1,5 @@
-import { addParameters, configure } from '@storybook/vue'
+import { addDecorator, addParameters, configure } from '@storybook/vue'
+import { withA11y } from '@storybook/addon-a11y'
 
 import vocabularyTheme from './theme'
 
@@ -9,6 +10,10 @@ addParameters({
     theme: vocabularyTheme
   }
 })
+
+// Customise stories
+
+addDecorator(withA11y)
 
 // Register stories
 
