@@ -7,7 +7,7 @@ let viewportMeta = [
   'user-scalable=no',
   'viewport-fit=cover'
 ].join(', ')
-let rootCss = 'https://unpkg.com/@creativecommons/vocabulary/root.css'
+let rootCss = 'https://unpkg.com/@creativecommons/vocabulary/css/root.css'
 
 let families = [
   'tokens',

@@ -59,8 +59,8 @@ Note the difference between 'must' and 'should' in the last paragraph.
 In your `App.vue` file, import the base CSS files for CC Vocabulary.
 
 ```js static
-import '@creativecommons/vocabulary/root.css'
-import '@creativecommons/vocabulary/vocabulary.css'
+import '@creativecommons/vocabulary/css/root.css'
+import '@creativecommons/vocabulary/css/vocabulary.css'
 ```
 
 Set up the i18n instance.
@@ -163,11 +163,11 @@ is).
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/root.css">
+  href="https://unpkg.com/@creativecommons/vocabulary/css/root.css">
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/vocabulary.css">
+  href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
 ```
 
 If you have a build pipeline, you should also transpile the Stylus or SASS token
