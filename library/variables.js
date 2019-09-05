@@ -14,6 +14,7 @@ const metafilesDir = path.resolve(libraryDir, 'metafiles')
 const tokensDir = path.resolve(srcDir, 'assets', 'tokens')
 const stylesDir = path.resolve(srcDir, 'styles')
 
+const libraryStencilPath = path.join(libraryDir, 'index-stencil.txt')
 const srcIndexPath = path.join(srcDir, 'index.js')
 
 module.exports = {
@@ -25,5 +26,6 @@ module.exports = {
   metafilesDir,
   stylesDir,
   tokensDir,
+  libraryStencilPath,
   srcIndexPath
 }
