@@ -43,8 +43,8 @@
     var(--select-field-overlay)
   )
 
-  &.basic,
-  &.ghost
+  &.slightly-simple,
+  &.extremely-simple
     --select-field-background-color transparent
     --select-field-text-color var(--select-field-primary)
 
@@ -53,7 +53,7 @@
       --select-field-background-color var(--select-field-primary)
       --select-field-text-color var(--select-field-secondary)
 
-  &.ghost
+  &.extremely-simple
     --select-field-border-color transparent
 
   // Cursor
@@ -65,6 +65,16 @@
 
   &.read-only
     --select-field-cursor default
+
+  // Border radius
+
+  --select-field-border-radius 0
+
+  &.slightly-rounded
+    --select-field-border-radius $radius-normal
+
+  &.completely-rounded
+    --select-field-border-radius $radius-pill
 
   // Add-on space
 
@@ -92,6 +102,9 @@
 
   border 1px solid var(--select-field-border-color)
 
+  border-radius var(--select-field-border-radius)
+  overflow hidden
+
   transition-property color, background-color
   transition-duration $duration-shortest
 
@@ -103,6 +116,8 @@
     font inherit
     color inherit
     background-color transparent
+
+    min-width 10em
 
     padding $space-normal
     padding-right 'calc(2 * %s + 1.25em)' % $space-normal

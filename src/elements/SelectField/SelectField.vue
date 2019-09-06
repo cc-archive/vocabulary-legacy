@@ -64,23 +64,16 @@
 
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import {
-    faVoteYea,
-    faAngleDown,
-    faAngleUp,
-    faBan,
-    faEye
-  } from '@fortawesome/free-solid-svg-icons'
-  import {
-    FontAwesomeIcon,
-    FontAwesomeLayers
-  } from '@fortawesome/vue-fontawesome'
+  import { faAngleDown, faAngleUp, faBan, faEye, faVoteYea } from '@fortawesome/free-solid-svg-icons'
+  import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+  import Rounded from '@/mixins/rounded'
+  import Scaled from '@/mixins/scaled'
+  import Simplified from '@/mixins/simplified'
+
   import Invertible from '@/mixins/invertible'
-  import Resizable from '@/mixins/resizable'
-  import Simplifiable from '@/mixins/simplifiable'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faVoteYea, faAngleDown, faAngleUp, faBan, faEye)
@@ -101,9 +94,11 @@
     mixins: [
       Colored,
       Indicating,
+      Rounded,
+      Scaled,
+      Simplified,
+
       Invertible,
-      Resizable,
-      Simplifiable,
       Unactionable
     ],
     inheritAttrs: false,
@@ -145,9 +140,11 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+          ...this.roundedClasses,
+          ...this.scaledClasses,
+          ...this.simplifiedClasses,
+
           ...this.invertibleClasses,
-          ...this.resizableClasses,
-          ...this.simplifiableClasses,
           ...this.unactionableClasses
         ]
       },

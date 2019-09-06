@@ -53,7 +53,7 @@ let information = {
   :information="information"
   caption="Fruits, their concoctions and their taste"
   color="orange"
-  is-basic
+  simplicity="slight"
   is-striped
   is-following
   is-fixed/>
@@ -68,7 +68,7 @@ but you will lose quite a bit of programmatic control.
 <Table 
   caption="Fruits, their concoctions and their taste"
   color="orange"
-  is-basic
+  simplicity="slight"
   is-striped
   is-following
   is-fixed>
@@ -342,14 +342,26 @@ to accentuate the color.
 A table can be inverted for use on dark or non-white backgrounds.
 
 ```jsx { "props": { "className": "dark-background" }}
-let isBasic = false;
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBrain } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faBrain);
+
 let isMagenta = false;
 
+let simplicity = '';
+let simplicityOptions = [
+  { value: '', text: 'None' },
+  { value: 'slight', text: 'Slightly simple' },
+  { value: 'extreme', text: 'Extremely simple' }
+];
+
 <Paragraph style="color: white;">
-  <SwitchField 
-    v-model="isBasic"
-    is-inverted/>
-  Basic
+  <SelectField
+    v-model="simplicity"
+    color="blue"
+    icon="brain"
+    :option-list="simplicityOptions"/>
 </Paragraph>
 <Paragraph color="magenta" is-inverted>
   <SwitchField
@@ -362,7 +374,7 @@ let isMagenta = false;
 <Table 
   caption="Fruits, their concoctions and their taste"
   :color="isMagenta ? 'magenta' : ''"
-  :is-basic="isBasic"
+  :simplicity="simplicity ? simplicity : null"
   is-striped
   is-following
   is-fixed
@@ -504,14 +516,15 @@ first row if it has a width set or will be divided equally.
 </Table>
 ```
 
-A table can be basic so that the colors are not as pronounced.
+A table can be simplified so that the colors are not as pronounced. A table can
+be extremely simplified so that the colors are even less pronounced.
 
 ```jsx
 <Table
-  caption="This is a basic table"
+  caption="This is a slightly simplified table"
   color="red"
-  is-fixed
-  is-basic>
+  simplicity="slight"
+  is-fixed>
   <template #head>
     <tr>
       <TableCell is-heading>Style</TableCell>
@@ -519,20 +532,16 @@ A table can be basic so that the colors are not as pronounced.
     </tr>
   </template>
   <tr>
-    <TableCell>Basic</TableCell>
+    <TableCell>Slightly simplified</TableCell>
     <TableCell>Diminished</TableCell>
   </tr>
 </Table>
-```
-
-A table can be ghost so that the colors are even less pronounced.
-
-```jsx
+<br/>
 <Table 
-  caption="This is a ghost table" 
+  caption="This is an extremely simplified table" 
   color="orange"
-  is-fixed 
-  is-ghost>
+  simplicity="extreme"
+  is-fixed>
   <template #head>
     <tr>
       <TableCell is-heading>Style</TableCell>
@@ -540,11 +549,32 @@ A table can be ghost so that the colors are even less pronounced.
     </tr>
   </template>
   <tr>
-    <TableCell>Ghost</TableCell>
+    <TableCell>Extremely simplified</TableCell>
     <TableCell>Nearly gone</TableCell>
   </tr>
 </Table>
 ```
+
+A table can be rounded for extra cohesiveness in curvy designs.
+
+```jsx
+<Table
+  caption="This is a fixed table"
+  color="blue"
+  is-fixed
+  is-rounded>
+  <template #head>
+    <tr>
+      <TableCell is-heading>Style</TableCell>
+      <TableCell is-heading>Roundness</TableCell>
+    </tr>
+  </template>
+  <tr>
+    <TableCell>Rounded</TableCell>
+    <TableCell>Present</TableCell>
+  </tr>
+</Table>
+``` 
 
 A table can be made compact so as to not take the full width of the parent.
 

@@ -67,8 +67,8 @@
 
   --table-caption-text-color var(--table-quinary)
 
-  &.basic,
-  &.ghost
+  &.slightly-simple,
+  &.extremely-simple
     --table-head-background-color var(--table-quaternary)
     --table-head-text-color var(--table-tertiary)
 
@@ -85,7 +85,7 @@
   --table-foot-border-top-width var(--table-border-width)
   --table-foot-border-bottom-width var(--table-border-width)
 
-  &.ghost
+  &.extremely-simple
     --table-head-border-top-width var(--table-border-width)
     --table-head-border-bottom-width 0
 
@@ -101,6 +101,13 @@
 
     &.column-bordered
       --table-column-border-width var(--table-border-width)
+
+  // Border radius
+
+  --table-border-radius 0
+
+  &.rounded
+    --table-border-radius $radius-large
 
   // Rules
 

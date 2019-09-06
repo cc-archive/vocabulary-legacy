@@ -26,8 +26,9 @@
 </template>
 
 <script>
-  import Resizable from '@/mixins/resizable'
-  import Roundable from '@/mixins/roundable'
+  import Scaled from '@/mixins/scaled'
+
+  import Circleable from '@/mixins/circleable'
 
   /**
    * ### An image speaks a thousand words.
@@ -39,8 +40,9 @@
   export default {
     name: 'ImageView',
     mixins: [
-      Resizable,
-      Roundable
+      Scaled,
+
+      Circleable
     ],
     inheritAttrs: false,
     props: {
@@ -102,8 +104,9 @@
     computed: {
       imageViewClasses: function () {
         return [
-          ...this.resizableClasses,
-          ...this.roundableClasses,
+          ...this.scaledClasses,
+
+          ...this.circleableClasses,
 
           {
             'centered': this.isCentered,

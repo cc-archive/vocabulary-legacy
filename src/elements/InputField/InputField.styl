@@ -65,21 +65,18 @@
 
   --input-field-border-color var(--input-field-primary)
 
-  &.basic
+  &.slightly-simple,
+  &.extremely-simple
     --input-field-addons-background-color transparent
     --input-field-addons-text-color var(--input-field-primary)
 
+  &.slightly-simple
     &:focus-within
       --input-field-addons-background-color var(--input-field-primary)
       --input-field-addons-text-color var(--input-field-secondary)
 
-  &.ghost
-    --input-field-addons-background-color transparent
-    --input-field-addons-text-color var(--input-field-tertiary)
+  &.extremely-simple
     --input-field-border-color transparent
-
-    &:focus-within
-      --input-field-addons-text-color var(--input-field-primary)
 
   // Cursor
 
@@ -106,6 +103,16 @@
   &.both-joined
     --input-field-right-border-width 0px
 
+  // Border radius
+
+  --input-field-border-radius 0
+
+  &.slightly-rounded
+    --input-field-border-radius $radius-normal
+
+  &.completely-rounded
+    --input-field-border-radius $radius-pill
+
   // Rules
 
   position relative
@@ -130,6 +137,9 @@
   border-left-width var(--input-field-left-border-width)
   border-style solid
   border-color var(--input-field-border-color)
+  border-radius var(--input-field-border-radius)
+
+  overflow hidden
 
   // Children
 
@@ -224,6 +234,8 @@
 
     background-color var(--input-field-addons-background-color)
 
+    overflow hidden
+
     transition-property color, background-color
     transition-duration $duration-shortest
 
@@ -233,8 +245,14 @@
     &.left
       order -1
 
+      border-top-right-radius var(--input-field-border-radius)
+      border-bottom-right-radius var(--input-field-border-radius)
+
     &.right
       order 1
+
+      border-top-left-radius var(--input-field-border-radius)
+      border-bottom-left-radius var(--input-field-border-radius)
 
   &:focus-within
     .addons

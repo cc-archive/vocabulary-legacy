@@ -16,7 +16,7 @@ let optionList = [
   color="orange"
   icon="vote-yea"
   :option-list="optionList"
-  is-basic/>
+  simplicity="slight"/>
 ```
 
 ### Color set
@@ -169,8 +169,8 @@ let optionList = [
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
       :option-list="optionList"
-      is-inverted
-      is-basic/>
+      simplicity="slight"
+      is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
@@ -182,8 +182,8 @@ let optionList = [
     <SelectField
       color="magenta"
       :option-list="optionList"
-      is-inverted
-      is-basic/>
+      simplicity="slight"
+      is-inverted/>
   </GridCell>
 </Grid>
 ```
@@ -250,29 +250,8 @@ let optionList = [
 ### Style set
 
 A select field can be defined to not attract attention, unless given attention
-via means of a hover.
-
-```jsx
-let optionList = [
-  {
-    value: 'a',
-    text: 'Option A'
-  },
-  {
-    value: 'b',
-    text: 'Option B'
-  }
-];
-
-<SelectField
-  color="orange"
-  icon="vote-yea"
-  :option-list="optionList"
-  is-basic/>
-```
-
-A select field can be defined to deny attention, unless very specifically given
-attention by the user.
+via means of a hover. Or it can be defined to deny attention, unless very
+specifically given attention by the user.
 
 ```jsx
 let optionList = [
@@ -290,7 +269,41 @@ let optionList = [
   color="blue"
   icon="vote-yea"
   :option-list="optionList"
-  is-ghost/>
+  simplicity="slight"/>
+<br/><br/>
+<SelectField
+  color="blue"
+  icon="vote-yea"
+  :option-list="optionList"
+  simplicity="extreme"/>
+```
+
+A select field may be rounded either slightly, to fit in better with curvy 
+layouts or completely, to fit in better with very curvy layouts.
+
+```jsx
+let optionList = [
+  {
+    value: 'a',
+    text: 'Option A'
+  },
+  {
+    value: 'b',
+    text: 'Option B'
+  }
+];
+
+<SelectField
+  color="green"
+  icon="vote-yea"
+  :option-list="optionList"
+  roundness="slight"/>
+<br/><br/>
+<SelectField
+  color="green"
+  icon="vote-yea"
+  :option-list="optionList"
+  roundness="complete"/>
 ```
 
 

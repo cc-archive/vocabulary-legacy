@@ -40,6 +40,7 @@
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+
   import Invertible from '@/mixins/invertible'
 
   library.add(faChartLine)
@@ -55,6 +56,7 @@
     mixins: [
       Colored,
       Indicating,
+
       Invertible
     ],
     components: {
@@ -105,6 +107,7 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+
           ...this.invertibleClasses,
 
           {

@@ -9,7 +9,7 @@ contains.
 <Table 
   caption="Fruits and their taste"
   color="blue"
-  is-basic
+  simplicity="slight"
   is-fixed>
   <template #head>
     <tr>

@@ -82,7 +82,10 @@
 
   --switch-field-border-radius 0
 
-  &.rounded
+  &.slightly-rounded
+    --switch-field-border-radius $radius-normal
+
+  &.completely-rounded
     --switch-field-border-radius $radius-pill
 
   // Rules
@@ -108,7 +111,7 @@
   border-width $space-small
   border-style solid
   border-color @background-color
-  border-radius var(--switch-field-border-radius)
+  border-radius calc(1.25 * var(--switch-field-border-radius))
 
   transition-property background-color, border-color
   transition-duration $duration-shortest

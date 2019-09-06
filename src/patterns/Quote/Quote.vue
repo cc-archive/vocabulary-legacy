@@ -28,6 +28,7 @@
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
   import Colored from '@/mixins/colored'
+
   import Invertible from '@/mixins/invertible'
 
   library.add(faQuoteLeft, faQuoteRight)
@@ -47,6 +48,7 @@
     },
     mixins: [
       Colored,
+
       Invertible
     ],
     props: {
@@ -75,6 +77,7 @@
       quoteClasses: function () {
         return [
           ...this.coloredClasses,
+
           ...this.invertibleClasses,
 
           {

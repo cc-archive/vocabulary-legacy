@@ -32,6 +32,16 @@
   &.inverted
     --shield-text-color $color-tone-black
 
+  // Border radius
+
+  --shield-border-radius 0
+
+  &.slightly-rounded
+    --shield-border-radius $radius-normal
+
+  &.completely-rounded
+    --shield-border-radius $radius-pill
+
   // Rules
 
   display inline-flex
@@ -41,6 +51,9 @@
   color var(--shield-text-color)
 
   sizes('font-size')
+
+  border-radius var(--shield-border-radius)
+  overflow hidden
 
   // Children
 

@@ -9,7 +9,7 @@ let value="It is awesome";
   :icon-set="['keyboard', '']"
   type="text"
   placeholder="How is CC Vocabulary?"
-  is-basic
+  simplicity="slight"
   is-infused/>
 ```
 
@@ -29,63 +29,63 @@ provided by CC Vocabulary. Grey is nobody's favourite.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="blue"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="green"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="magenta"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="olive"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="orange"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="purple"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="red"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="sand"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
       color="yellow"
       :icon-set="['keyboard', '']"
@@ -151,7 +151,7 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
       type="text"
       placeholder="Answer..."
       is-inverted
-      is-basic/>
+      simplicity="slight"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
@@ -168,7 +168,7 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
       type="text"
       placeholder="Answer..."
       is-inverted
-      is-basic/>
+      simplicity="slight"/>
   </GridCell>
 </Grid>
 ``` 
@@ -234,27 +234,28 @@ add-on slots with something you like.
 ### Style set
 
 An input field can be defined to not attract attention, unless given attention
-via means of a focus.
+via means of a focus. Or it can be defined to deny attention, unless it is
+absolutely what the user wanted.
 
 ```jsx
-<InputField
-  type="text"
-  :icon-set="['keyboard', '']"
-  color="orange"
-  placeholder="Answer"
-  is-basic/>
-```
-
-An input field can also be defined to deny attention, unless it is absolutely
-what the user wanted.
-
-```jsx
-<InputField
-  type="text"
-  :icon-set="['keyboard', '']"
-  color="orange"
-  placeholder="Answer"
-  is-ghost/>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="orange"
+      placeholder="Answer"
+      simplicity="slight"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="orange"
+      placeholder="Answer"
+      simplicity="extreme"/>
+  </GridCell>
+</Grid>
 ```
 
 An input field can be defined to color the text inside as well adding an
@@ -297,7 +298,7 @@ let style = {
   <Button
     color="blue"
     shade="dark"
-    is-basic>
+    simplicity="slight">
     <template #addons>
       Joined
     </template>
@@ -310,15 +311,39 @@ let style = {
     shade="dark"
     :icon-set="['arrow-left', 'arrow-right']"
     join-side="both"
-    is-basic/>
+    simplicity="slight"/>
   <Button 
     color="blue"
     shade="dark"
     icon="arrow-left"
-    is-basic>
+    simplicity="slight">
     Joined
   </Button>
 </div>
+```
+
+An input field may be slighly rounded for extra compatibility with curvy
+layouts. Or it can be completely rounded if that is something you like.
+
+```jsx
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="blue"
+      roundness="slight"
+      placeholder="Answer"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="blue"
+      roundness="complete"
+      placeholder="Answer"/>
+  </GridCell>
+</Grid>
 ```
 
 Styles can be combined.

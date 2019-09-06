@@ -141,7 +141,7 @@ to it.
 <ProgressBar 
   color="red"
   icon="hourglass-half"
-  :value="33"
+  :value="20"
   is-percent-visible/>
 ```
 
@@ -151,7 +151,7 @@ demands, you can swap them out for things that do.
 ```jsx
 <ProgressBar 
   color="green" 
-  :value="67">
+  :value="20">
   <template #leftAddons>
     <strong>:-(</strong>
   </template>
@@ -219,6 +219,28 @@ Progress bars come in all sizes, from small to mega.
   size="mega"
   icon="hourglass-half"
   :value="20"
+  is-percent-visible/>
+```
+
+### Style set
+
+A progress bar may be rounded slightly to fit in better amongst curvy layouts.
+Or it can be taken to an extreme and made completely round, completely
+antithetical to the traditional CC design aesthetic.
+
+```jsx
+<ProgressBar
+  color="blue"
+  icon="hourglass-half"
+  :value="20"
+  roundness="slight"
+  is-percent-visible/>
+<br/><br/>
+<ProgressBar
+  color="blue"
+  icon="hourglass-half"
+  :value="20"
+  roundness="complete"
   is-percent-visible/>
 ```
 

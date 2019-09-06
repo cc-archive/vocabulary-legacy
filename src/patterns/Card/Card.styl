@@ -32,17 +32,20 @@
   --card-foot-background-color var(--card-tertiary)
   --card-foot-text-color var(--card-secondary)
 
-  &.ghost
-    --card-separator-color var(--card-primary)
-
-  &.basic,
-  &.ghost
+  &.slightly-simple,
+  &.extremely-simple
     --card-foot-background-color transparent
+
+  &.extremely-simple
+    --card-separator-color var(--card-primary)
 
   // Rules
 
   display flex
   flex-direction column
+
+  &.completely-rounded
+    text-align center
 
   padding-top $space-zero
   padding-left $space-zero
@@ -57,6 +60,8 @@
       flex-shrink 0
 
       & > .image-view
+        display block
+
         width 100%
 
         & > img

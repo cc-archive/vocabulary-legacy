@@ -34,6 +34,7 @@
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
 
   import Colored from '@/mixins/colored'
+
   import Invertible from '@/mixins/invertible'
 
   /**
@@ -47,6 +48,7 @@
     name: 'Navigation',
     mixins: [
       Colored,
+
       Invertible
     ],
     provide: function () {
@@ -67,6 +69,7 @@
       navigationClasses: function () {
         return [
           ...this.coloredClasses,
+
           ...this.invertibleClasses
         ]
       }

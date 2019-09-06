@@ -51,12 +51,12 @@
   // Measurement
 
   &.height-constrained,
-  &.rounded
+  &.circular
     --image-view-height var(--image-view-measurement)
     --image-height var(--image-view-height)
 
   &.width-constrained,
-  &.rounded
+  &.circular
     --image-view-width var(--image-view-measurement)
     --image-width var(--image-view-width)
 
@@ -139,7 +139,7 @@
   &.centered
     vertical-align middle
 
-  &.rounded
+  &.circular
     clip-path circle()
 
     & > .addons

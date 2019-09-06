@@ -100,8 +100,8 @@ inverted variant.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Button 
-      is-inverted 
-      is-basic>
+      is-inverted
+      simplicity="slight">
       Click me
     </Button>
   </GridCell>
@@ -115,8 +115,8 @@ inverted variant.
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Button 
       color="magenta" 
-      is-inverted 
-      is-basic>
+      is-inverted
+      simplicity="slight">
       Click me
     </Button>
   </GridCell>
@@ -155,9 +155,11 @@ something you like.
 
 ### Style set
 
-A button can be rounded to fit in with more curvy layouts and UI components. 
-Although supported, the use of this is highly unlikely given CC's love for 
-sharp vertices and 90° angles.
+A button can be slightly rounded to fit in with more curvy layouts and UI
+components. Although supported, the use of this is highly unlikely given CC's
+love for sharp vertices and 90° angles. Even more rounded is the pill shape. It
+is in complete contrast to the sharp edged CC design but looks really good for
+icon buttons.
 
 ```jsx
 <Grid>
@@ -165,12 +167,12 @@ sharp vertices and 90° angles.
     <Button
       color="magenta"
       icon="hand-point-up"
-      is-rounded/>
+      roundness="slight"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
       color="magenta"
-      is-rounded>
+      roundness="slight">
       Click me
     </Button>
   </GridCell>
@@ -178,44 +180,37 @@ sharp vertices and 90° angles.
     <Button
       color="magenta"
       icon="hand-point-up"
-      is-rounded>
+      roundness="slight">
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      roundness="complete"/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      roundness="complete">
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="magenta"
+      icon="hand-point-up"
+      roundness="complete">
       Click me
     </Button>
   </GridCell>
 </Grid>
 ```
 
-Even more rounded is the pill shape. It is in complete contrast to the sharp
-edged CC design but looks really good for icon buttons.
-
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Button
-      color="magenta"
-      icon="hand-point-up"
-      is-pill-shaped/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Button
-      color="magenta"
-      is-pill-shaped>
-      Click me
-    </Button>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Button
-      color="magenta"
-      icon="hand-point-up"
-      is-pill-shaped>
-      Click me
-    </Button>
-  </GridCell>
-</Grid>
-```
-
-A button can be defined to not attract attention, unless given attention via 
-means of a hover.
+A button can be defined to not attract attention, unless given attention via
+means of a hover. A button can be defined to deny attention, unless that is
+really what the user wanted.
 
 ```jsx
 <Grid>
@@ -223,12 +218,12 @@ means of a hover.
     <Button
       color="purple"
       icon="hand-point-up"
-      is-basic/>
+      simplicity="slight"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
       color="purple"
-      is-basic>
+      simplicity="slight">
       Click me
     </Button>
   </GridCell>
@@ -236,36 +231,28 @@ means of a hover.
     <Button
       color="purple"
       icon="hand-point-up"
-      is-basic>
-      Click me
-    </Button>
-  </GridCell>
-</Grid>
-```
-
-A button can be defined to deny attention, unless that is really what the user
-wanted.
-
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Button
-      color="blue"
-      icon="hand-point-up"
-      is-ghost/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Button
-      color="blue"
-      is-ghost>
+      simplicity="slight">
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="blue"
+      color="purple"
       icon="hand-point-up"
-      is-ghost>
+      simplicity="extreme"/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="purple"
+      simplicity="extreme">
+      Click me
+    </Button>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <Button
+      color="purple"
+      icon="hand-point-up"
+      simplicity="extreme">
       Click me
     </Button>
   </GridCell>
@@ -330,7 +317,7 @@ let style = {
     color="blue"
     shade="dark"
     join-side="right"
-    is-basic>
+    simplicity="slight">
     <template #addons>
       Joined
     </template>
@@ -342,13 +329,13 @@ let style = {
     color="blue"
     shade="dark"
     :icon-set="['arrow-left', 'arrow-right']"
-    is-basic/>
+    simplicity="slight"/>
   <Button 
     color="blue"
     shade="dark"
     icon="arrow-left"
     join-side="left"
-    is-basic>
+    simplicity="slight">
     Joined
   </Button>
 </div>

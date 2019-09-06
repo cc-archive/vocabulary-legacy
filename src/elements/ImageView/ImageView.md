@@ -9,7 +9,7 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
   title="7 weeks old"
   size="big"
   is-centered
-  is-rounded/>
+  is-circular/>
 ```
 
 ### Size and constrain set
@@ -93,23 +93,22 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
 </Paragraph>
 ```
 
-An image may be rounded off, as you would see in profile pictures for example.
-Non-square images leave spaces around the sides when cropped, the solution being
-to specify `height` and `width` attributes in pixels instead of the `size` prop.
+An image may be cropped into a circle, as you would see in profile pictures for
+example.
 
 ```jsx
 let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_old.JPG/1024px-7weeks_old.JPG";
 
 <Button
   color="blue"
-  is-basic
-  is-pill-shaped>
+  simplicity="slight"
+  roundness="pill-shaped">
   <template #addons>
     <ImageView
       :source="source"
       alternate-text="7 weeks old"
       size="small"
-      is-rounded
+      is-circular
       is-centered/>
   </template>
   7 weeks old
@@ -123,7 +122,7 @@ Styles may be combined.
 An image may display information about it on hover. This information can be set
 partly via the `title` prop and partly via the `topAddons` slot. Or you can go
 all out and just populate the `bottomAddons` slot too. If the content is small
-enough, bars on rounded images look cool too.
+enough, bars on circular images look cool too.
 
 ```jsx
 import Vue from 'vue';
@@ -146,7 +145,7 @@ let source = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/7weeks_o
       title="7 weeks old"
       size="huge"
       is-hoverable
-      is-rounded>
+      is-circular>
       <template #topAddons>
         <FontAwesomeIcon
           :icon="['fas', 'user-circle']"/>

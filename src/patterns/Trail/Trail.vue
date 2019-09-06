@@ -46,6 +46,7 @@
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
 
   import Colored from '@/mixins/colored'
+
   import Invertible from '@/mixins/invertible'
 
   library.add(faAngleRight)
@@ -61,6 +62,7 @@
     name: 'Trail',
     mixins: [
       Colored,
+
       Invertible
     ],
     provide: function () {
@@ -90,6 +92,7 @@
       trailClasses: function () {
         return [
           ...this.coloredClasses,
+
           ...this.invertibleClasses
         ]
       }

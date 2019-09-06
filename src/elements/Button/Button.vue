@@ -34,11 +34,12 @@
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
-  import Invertible from '@/mixins/invertible'
   import Joined from '@/mixins/joined'
-  import Resizable from '@/mixins/resizable'
-  import Roundable from '@/mixins/roundable'
-  import Simplifiable from '@/mixins/simplifiable'
+  import Rounded from '@/mixins/rounded'
+  import Scaled from '@/mixins/scaled'
+  import Simplified from '@/mixins/simplified'
+
+  import Invertible from '@/mixins/invertible'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faHandPointUp)
@@ -57,12 +58,14 @@
     },
     mixins: [
       Colored,
-      Indicating,
-      Invertible,
       Joined,
-      Resizable,
-      Roundable,
-      Simplifiable,
+      Rounded,
+      Scaled,
+      Simplified,
+
+      Indicating,
+
+      Invertible,
       Unactionable
     ],
     props: {
@@ -85,13 +88,6 @@
       isCallToAction: {
         type: Boolean,
         default: false
-      },
-      /**
-       * _whether to round the button into a pill shape_
-       */
-      isPillShaped: {
-        type: Boolean,
-        default: false
       }
     },
     computed: {
@@ -99,16 +95,16 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
-          ...this.invertibleClasses,
           ...this.joinClasses,
-          ...this.resizableClasses,
-          ...this.roundableClasses,
-          ...this.simplifiableClasses,
+          ...this.roundedClasses,
+          ...this.scaledClasses,
+          ...this.simplifiedClasses,
+
+          ...this.invertibleClasses,
           ...this.unactionableClasses,
 
           {
-            'call-to-action': this.isCallToAction,
-            'pill-shaped': this.isPillShaped
+            'call-to-action': this.isCallToAction
           }
         ]
       },

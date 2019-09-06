@@ -22,7 +22,7 @@ export default {
     }
   },
   computed: {
-    resizableClasses: function () {
+    scaledClasses: function () {
       let classes = []
       if (this.size) {
         classes.push(`${this.size}-sized`)

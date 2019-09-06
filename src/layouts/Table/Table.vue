@@ -65,8 +65,9 @@
   import TableCell from '@/layouts/Table/TableCell'
 
   import Colored from '@/mixins/colored'
+  import Simplified from '@/mixins/simplified'
+
   import Invertible from '@/mixins/invertible'
-  import Simplifiable from '@/mixins/simplifiable'
 
   /**
    * ### Tables show related data meaningfully.
@@ -79,8 +80,9 @@
     components: { TableCell },
     mixins: [
       Colored,
-      Invertible,
-      Simplifiable
+      Simplified,
+
+      Invertible
     ],
     props: {
       /**
@@ -143,13 +145,21 @@
       isCompact: {
         type: Boolean,
         default: false
+      },
+      /**
+       * _whether to have curvature on the vertices of the component_
+       */
+      isRounded: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
       tableClasses: function () {
         return [
           ...this.coloredClasses,
-          ...this.simplifiableClasses,
+          ...this.simplifiedClasses,
+
           ...this.invertibleClasses,
 
           ...this.borderList.map(aspect => `${aspect}-bordered`),
@@ -157,7 +167,8 @@
             'striped': this.isStriped,
             'fixed': this.isFixed,
             'compact': this.isCompact,
-            'following': this.isFollowing
+            'following': this.isFollowing,
+            'rounded': this.isRounded
           }
         ]
       },

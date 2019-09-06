@@ -83,7 +83,7 @@ let numSet = 5;
       <Table
         color="purple"
         :border-list="['edge']"
-        is-basic
+        simplicity="slight"
         is-striped
         is-following>
         <template #head>

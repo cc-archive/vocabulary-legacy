@@ -85,7 +85,7 @@ A tabbed view looks and works like this.
 
 ### Color set
 
-A tabbed view without a color specified is black.
+A tabbed view without a color specified is grey.
 
 ```jsx
 <Tabbed>
@@ -285,21 +285,17 @@ one color will act as a fallback for panes that do not specify color and shade.
 ### Style set
 
 A tabbed view can be set to look simplistic by getting rid of all borders except
-separator and the accents.
+separator and the accents. Or it can be set to look extremely simplistic by also
+getting rid of the separator and the the accents.
 
 ```jsx
-<Tabbed color="green" is-basic>
+<Tabbed color="green" simplicity="slight">
   <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
   <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
   <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
 </Tabbed>
-```
-
-A tabbed view can be set to look extremely simplistic by also getting rid of the
-separator and the the accents.
-
-```jsx
-<Tabbed color="green" is-ghost>
+<br/>
+<Tabbed color="green" simplicity="extreme">
   <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
   <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
   <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>

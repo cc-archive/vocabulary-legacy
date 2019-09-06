@@ -1,5 +1,8 @@
 ```jsx
-<Section color="red" is-raised is-rounded>
+<Section
+  color="red"
+  roundness="rounded"
+  is-raised>
   <Heading :level="1" color="red">Heading</Heading>
   <Paragraph color="blue" shade="dark">
     This is a paragraph of content that pertains to the heading above. This 
@@ -107,7 +110,9 @@ A section can change the side on which the color appears.
 ```jsx
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Section color="blue" color-side="top">
+    <Section
+      color="blue"
+      color-side="top">
       <Heading :level="4" color="blue">Top accent</Heading>
       <Paragraph>
         This section has accent on the top side which is the default.
@@ -115,7 +120,9 @@ A section can change the side on which the color appears.
     </Section>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Section color="blue" color-side="bottom">
+    <Section
+      color="blue"
+      color-side="bottom">
       <Heading :level="4" color="blue">Bottom accent</Heading>
       <Paragraph>
         This section has accent on the bottom side as opposed to the top.
@@ -123,7 +130,9 @@ A section can change the side on which the color appears.
     </Section>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Section color="blue" color-side="left">
+    <Section
+      color="blue"
+      color-side="left">
       <Heading :level="4" color="blue">Left accent</Heading>
       <Paragraph>
         This section has accent on the left side as opposed to the top.
@@ -131,61 +140,90 @@ A section can change the side on which the color appears.
     </Section>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Section color="blue" color-side="right">
+    <Section
+      color="blue"
+      color-side="right">
       <Heading :level="4" color="blue">Right accent</Heading>
       <Paragraph>
         This section has accent on the right side as opposed to the top.
       </Paragraph>
     </Section>
   </GridCell>
+  <GridCell :span-set="[12, 12, 12, 12, 12]">
+    <Section
+      color="blue"
+      color-side="none">
+      <Heading :level="4" color="blue">No accent</Heading>
+      <Paragraph>
+        This section has no accent on any side.
+      </Paragraph>
+    </Section>
+  </GridCell>
 </Grid>
 ```
 
-A section can be made basic to hide the borders and give it a more toned-down
-look and feel. 
+A section can be simplified to hide the borders and give it a more toned-down
+look and feel. A section can also be made extremely simple to hide the borders
+and diminish the accents tone it down to the limit.
 
 ```jsx
-<Section color="green" is-basic>
-  <Heading
-    color="green"
-    :level="4">
-    Basic
-  </Heading>
-  <Paragraph>
-    This section has just an accented border.
-  </Paragraph>
-</Section>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Section
+      color="green"
+      simplicity="slight">
+      <Heading
+        color="green"
+        :level="4">
+        Slightly basic
+      </Heading>
+      <Paragraph>
+        This section has just an accented border.
+      </Paragraph>
+    </Section>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Section
+      simplicity="extreme">
+      <Heading
+        color="green"
+        :level="4">
+        Extremely basic
+      </Heading>
+      <Paragraph>
+        This section has no borders.
+      </Paragraph>
+    </Section>
+  </GridCell>
+</Grid>
 ```
 
-A section can also be made ghost to hide the borders and diminish the accents
-tone it down to the extreme.
+A section can be given rounded borders. Or going completely against the CC
+aesthetic, a section can be made into a perfect pill shape.
 
 ```jsx
-<Section color="green" is-ghost>
-  <Heading
-    color="green"
-    :level="4">
-    Ghost
-  </Heading>
-  <Paragraph>
-    This section has just a minimally accented border.
-  </Paragraph>
-</Section>
-```
-
-A section can be given rounded borders.
-
-```jsx
-<Section color="purple" is-rounded>
-  <Heading
-    color="purple"
-    :level="4">
-    Rounded
-  </Heading>
-  <Paragraph>
-    The vertices of the section have been rounded for a smoother feel.
-  </Paragraph>
-</Section>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Section
+      color="purple"
+      color-side="none"
+      roundness="slight">
+      <Paragraph>
+        The vertices of the section have been rounded.
+      </Paragraph>
+    </Section>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <Section
+      color="purple"
+      color-side="none"
+      roundness="complete">
+      <Paragraph>
+        The vertices of the section have been eliminated.
+      </Paragraph>
+    </Section>
+  </GridCell>
+</Grid>
 ```
 
 A section can be raised to convey some height using a shadow.
@@ -243,8 +281,7 @@ A section may indicate the positive, unclear or negative nature of its content.
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Section
-      indication="positive"
-      is-rounded>
+      indication="positive">
       <Heading 
         :level="4"
         indication="positive">
@@ -255,8 +292,7 @@ A section may indicate the positive, unclear or negative nature of its content.
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Section
-      indication="probably"
-      is-rounded>
+      indication="probably">
       <Heading 
         :level="4"
         indication="probably">
@@ -267,8 +303,7 @@ A section may indicate the positive, unclear or negative nature of its content.
   </GridCell>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Section
-      indication="negative"
-      is-rounded>
+      indication="negative">
       <Heading 
         :level="4"
         indication="negative">

@@ -31,7 +31,7 @@
             id="hamburger"
             :color="color"
             :shade="shade"
-            is-rounded
+            roundness="rounded"
             type="button"
             @click="toggleDropdown">
             <FontAwesomeLayers>

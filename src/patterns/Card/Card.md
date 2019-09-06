@@ -11,7 +11,7 @@ let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
       subheading="Developer"
       :featuredImageSource="dhruvSource"
       :featuredImageAlternateText="dhruvAlt"
-      is-rounded
+      roundness="slight"
       is-raised>
       <template #foot>
         🇮🇳 India
@@ -26,30 +26,6 @@ let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
 A card can be elevated over the surrounding-content via a shadow.
 
 ```jsx
-let hugoSource = 'https://avatars0.githubusercontent.com/u/894708';
-let hugoAlt = 'Hugo Solar\'s profile picture';
-
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="magenta"
-      heading="Hugo Solar"
-      subheading="Mentor"
-      :featuredImageSource="hugoSource"
-      :featuredImageAlternateText="hugoAlt"      
-      is-raised>
-      <template #foot>
-        🇨🇱 Chile
-      </template>
-    </Card>
-  </GridCell>
-</Grid>
-```
-
-A card can be rounded instead of sharp cuts at right angles so as to fit in 
-better with more curvy layouts.
-
-```jsx
 let kritiSource = 'https://avatars0.githubusercontent.com/u/287034';
 let kritiAlt = 'Kriti Godey\'s profile picture';
 
@@ -61,7 +37,7 @@ let kritiAlt = 'Kriti Godey\'s profile picture';
       subheading="Mentor"
       :featuredImageSource="kritiSource"
       :featuredImageAlternateText="kritiAlt"
-      is-rounded>
+      is-raised>
       <template #foot>
         🇺🇸 USA
       </template>
@@ -70,37 +46,31 @@ let kritiAlt = 'Kriti Godey\'s profile picture';
 </Grid>
 ```
 
-A card be designed to have more minimalist appearance so as to not be too 
-eye-catching or prominent.
+A card be designed to have more minimalist appearance so as to not be too
+eye-catching or prominent. A card can be ghosted to have the ultimate minimalist
+appearance.
 
 ```jsx
-let sophineSource = 'https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg';
-let sophineAlt = 'Sophine Clachar\'s profile picture';
+let hugoSource = 'https://avatars0.githubusercontent.com/u/894708';
+let hugoAlt = 'Hugo Solar\'s profile picture';
 
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="orange"
-      heading="Sophine Clachar"
-      subheading="Mentor"
-      :featuredImageSource="sophineSource"
-      :featuredImageAlternateText="sophineAlt"
-      is-basic>
-      <template #foot>
-        🇺🇸 USA
-      </template>
-    </Card>
-  </GridCell>
-</Grid>
-```
-
-A card can be ghosted to have the ultimate minimalist appearance.
-
-```jsx
 let brenoSource = 'https://avatars0.githubusercontent.com/u/707019';
 let brenoAlt = 'Breno Ferreira\'s profile picture';
 
 <Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Card
+      color="magenta"
+      heading="Hugo Solar"
+      subheading="Mentor"
+      :featuredImageSource="hugoSource"
+      :featuredImageAlternateText="hugoAlt"      
+      simplicity="slight">
+      <template #foot>
+        🇨🇱 Chile
+      </template>
+    </Card>
+  </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
       color="yellow"
@@ -108,9 +78,51 @@ let brenoAlt = 'Breno Ferreira\'s profile picture';
       subheading="Unofficial mentor"
       :featuredImageSource="brenoSource"
       :featuredImageAlternateText="brenoAlt"
-      is-ghost>
+      simplicity="extreme">
       <template #foot>
         🇧🇷 Brazil
+      </template>
+    </Card>
+  </GridCell>
+</Grid>
+```
+
+A card can be made slightly rounded instead of sharp cuts at right angles so as
+to fit in better with more curvy layouts. Or it can be completely rounded and
+made into a pill-shape if that's more your thing. To be fair, completely rounded
+cards look awful. 
+
+```jsx
+let timidSource = 'https://avatars0.githubusercontent.com/u/691322';
+let timidAlt = 'Timid Robot\'s profile picture';
+
+let sophineSource = 'https://creativecommons.org/wp-content/uploads/2018/03/Sophine-Clachar_avatar_1520861079.jpg';
+let sophineAlt = 'Sophine Clachar\'s profile picture';
+
+<Grid>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Card
+      color="purple"
+      heading="Timid Robot"
+      subheading="Mentor"
+      :featuredImageSource="timidSource"
+      :featuredImageAlternateText="timidAlt"
+      roundness="slight">
+      <template #foot>
+        🇺🇸 USA
+      </template>
+    </Card>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 3, 3, 3]">
+    <Card
+      color="orange"
+      heading="Sophine Clachar"
+      subheading="Mentor"
+      :featuredImageSource="sophineSource"
+      :featuredImageAlternateText="sophineAlt"
+      roundness="complete">
+      <template #foot>
+        🇺🇸 USA
       </template>
     </Card>
   </GridCell>

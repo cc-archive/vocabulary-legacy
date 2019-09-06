@@ -151,6 +151,23 @@ needed or desired.
   message="When we share, everyone wins"/>
 ```
 
+A shield can be rounded slightly to fit in better with curvy layouts. And you
+can go against the CC design aesthetic and make it completely rounded.
+
+```jsx
+<Shield
+  color="blue"
+  label="Roundness"
+  message="Slight"
+  roundness="slight"/>
+<br/><br/>
+<Shield
+  color="blue"
+  label="Roundness"
+  message="Complete"
+  roundness="complete"/>
+```  
+
 ### Size set
 
 Shields come in all sizes.

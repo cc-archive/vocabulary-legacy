@@ -20,11 +20,10 @@
       :color="processedColor"
       :shade="processedShade"
       color-side="bottom"
+      :roundness="roundness ? 'rounded' : null"
       :is-raised="isRaised"
-      :is-rounded="isRounded"
       :is-inverted="isInverted"
-      :is-basic="isBasic"
-      :is-ghost="isGhost"
+      :simplicity="simplicity"
       is-clingy>
       <SlotRenderer
         v-for="(tabPane, index) in tabPaneList"
@@ -46,10 +45,11 @@
   import Section from '@/layouts/Section/Section'
 
   import Colored from '@/mixins/colored'
+  import Rounded from '@/mixins/rounded'
+  import Simplified from '@/mixins/simplified'
+
   import Invertible from '@/mixins/invertible'
   import Raisable from '@/mixins/raisable'
-  import Roundable from '@/mixins/roundable'
-  import Simplifiable from '@/mixins/simplifiable'
 
   /**
    * ### Tabbed views show menu-selected content.
@@ -63,10 +63,11 @@
     name: 'Tabbed',
     mixins: [
       Colored,
+      Rounded,
+      Simplified,
+
       Invertible,
-      Raisable,
-      Roundable,
-      Simplifiable
+      Raisable
     ],
     provide: function () {
       return {
@@ -86,6 +87,13 @@
       initialActiveTabIndex: {
         type: Number,
         default: 0
+      },
+      /**
+       * _whether to have curvature on the vertices of the component_
+       */
+      isRounded: {
+        type: Boolean,
+        default: false
       }
     },
     data: function () {
@@ -109,11 +117,14 @@
 
       tabbedClasses: function () {
         return [
-          ...this.invertibleClasses,
-          ...this.roundableClasses,
-          ...this.simplifiableClasses,
+          ...this.simplifiedClasses,
 
-          ...this.processedColoredClasses
+          ...this.invertibleClasses,
+
+          ...this.processedColoredClasses,
+          {
+            'rounded': this.isRounded
+          }
         ]
       },
 

@@ -1,18 +1,18 @@
 export default {
   props: {
     /**
-     * _whether to round the corner of the component_
+     * _whether to change the shape of the component into a circle_
      */
-    isRounded: {
+    isCircular: {
       type: Boolean,
       default: false
     }
   },
   computed: {
-    roundableClasses: function () {
+    circleableClasses: function () {
       return [
         {
-          'rounded': this.isRounded
+          'circular': this.isCircular
         }
       ]
     }

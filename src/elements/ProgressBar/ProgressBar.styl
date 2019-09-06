@@ -44,6 +44,16 @@
   --progress-bar-rail-color var(--progress-bar-secondary)
   --progress-bar-text-color var(--progress-bar-tertiary)
 
+  // Border radius
+
+  --progress-bar-border-radius 0
+
+  &.slightly-rounded
+    --progress-bar-border-radius $radius-normal
+
+  &.completely-rounded
+    --progress-bar-border-radius $radius-pill
+
   // Rules
 
   display inline-flex
@@ -73,6 +83,9 @@
     cursor progress
 
     border none
+    border-radius var(--progress-bar-border-radius)
+
+    overflow hidden
 
     // States
 
@@ -80,10 +93,13 @@
       &::-moz-progress-bar,
       &::-webkit-progress-value
         background-color var(--progress-bar-bar-color)
+
         transition width $duration-shortest
 
       &::-webkit-progress-bar
         background-color var(--progress-bar-rail-color)
+
+        border-radius var(--progress-bar-border-radius)
 
     &:indeterminate
       background-image linear-gradient(

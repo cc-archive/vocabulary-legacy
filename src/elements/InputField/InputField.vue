@@ -45,10 +45,12 @@
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
-  import Invertible from '@/mixins/invertible'
   import Joined from '@/mixins/joined'
-  import Resizeable from '@/mixins/resizable'
-  import Simplifiable from '@/mixins/simplifiable'
+  import Rounded from '@/mixins/rounded'
+  import Scaled from '@/mixins/scaled'
+  import Simplified from '@/mixins/simplified'
+
+  import Invertible from '@/mixins/invertible'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faKeyboard)
@@ -67,10 +69,12 @@
     mixins: [
       Colored,
       Indicating,
-      Invertible,
       Joined,
-      Resizeable,
-      Simplifiable,
+      Rounded,
+      Scaled,
+      Simplified,
+
+      Invertible,
       Unactionable
     ],
     inheritAttrs: false,
@@ -117,10 +121,12 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
-          ...this.invertibleClasses,
           ...this.joinClasses,
-          ...this.resizableClasses,
-          ...this.simplifiableClasses,
+          ...this.roundedClasses,
+          ...this.scaledClasses,
+          ...this.simplifiedClasses,
+
+          ...this.invertibleClasses,
           ...this.unactionableClasses,
 
           {

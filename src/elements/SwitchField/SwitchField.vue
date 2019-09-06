@@ -40,9 +40,10 @@
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+  import Rounded from '@/mixins/rounded'
+  import Scaled from '@/mixins/scaled'
+
   import Invertible from '@/mixins/invertible'
-  import Resizeable from '@/mixins/resizable'
-  import Roundable from '@/mixins/roundable'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faCheck, faTimes)
@@ -62,9 +63,10 @@
     mixins: [
       Colored,
       Indicating,
+      Rounded,
+      Scaled,
+
       Invertible,
-      Resizeable,
-      Roundable,
       Unactionable
     ],
     model: {
@@ -121,9 +123,10 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+          ...this.roundedClasses,
+          ...this.scaledClasses,
+
           ...this.invertibleClasses,
-          ...this.resizableClasses,
-          ...this.roundableClasses,
           ...this.unactionableClasses,
 
           {

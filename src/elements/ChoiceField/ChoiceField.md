@@ -12,7 +12,7 @@ let picked = 'C';
       color="blue"
       name="choice"
       value="A"
-      is-basic
+      simplicity="slight"
       is-single-select/>
     <label for="a">A</label>
     <br/>
@@ -22,7 +22,7 @@ let picked = 'C';
       color="blue"
       name="choice"
       value="B"
-      is-basic
+      simplicity="slight"
       is-single-select/>
     <label for="b">B</label>
     <br/>
@@ -32,7 +32,7 @@ let picked = 'C';
       color="blue"
       name="choice"
       value="C"
-      is-basic
+      simplicity="slight"
       is-single-select/>
     <label for="c">C</label>
   </GridCell>
@@ -63,7 +63,7 @@ let picked = ['C'];
       color="purple"
       name="choice"
       value="A"
-      is-basic/>
+      simplicity="slight"/>
     <label for="a">A</label>
     <br/>
     <ChoiceField
@@ -72,7 +72,7 @@ let picked = ['C'];
       color="purple"
       name="choice"
       value="B"
-      is-basic/>
+      simplicity="slight"/>
     <label for="b">B</label>
     <br/>
     <ChoiceField
@@ -81,7 +81,7 @@ let picked = ['C'];
       color="purple"
       name="choice"
       value="C"
-      is-basic/>
+      simplicity="slight"/>
     <label for="c">C</label>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
@@ -183,6 +183,20 @@ On a dark or non-white background, use the inverted choice field.
       is-inverted/>
   </GridCell>
 </Grid>
+```
+
+### Style set
+
+A choice field can be made simple to not attract attention. Or you can max that
+up and make a choice field deny attention.
+
+```jsx
+<ChoiceField
+  color="blue"
+  simplicity="slight"/>
+<ChoiceField
+  color="blue"
+  simplicity="extreme"/>
 ```
 
 ### Size set

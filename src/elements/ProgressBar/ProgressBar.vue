@@ -42,8 +42,10 @@
 
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+  import Rounded from '@/mixins/rounded'
+  import Scaled from '@/mixins/scaled'
+
   import Invertible from '@/mixins/invertible'
-  import Resizeable from '@/mixins/resizable'
 
   library.add(faHourglassHalf)
 
@@ -61,8 +63,10 @@
     mixins: [
       Colored,
       Indicating,
-      Invertible,
-      Resizeable
+      Rounded,
+      Scaled,
+
+      Invertible
     ],
     props: {
       /**
@@ -103,8 +107,10 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
-          ...this.invertibleClasses,
-          ...this.resizableClasses
+          ...this.roundedClasses,
+          ...this.scaledClasses,
+
+          ...this.invertibleClasses
         ]
       },
       barClasses: function () {

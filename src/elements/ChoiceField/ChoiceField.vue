@@ -14,9 +14,10 @@
 <script>
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+  import Scaled from '@/mixins/scaled'
+  import Simplified from '@/mixins/simplified'
+
   import Invertible from '@/mixins/invertible'
-  import Resizable from '@/mixins/resizable'
-  import Simplifiable from '@/mixins/simplifiable'
   import Unactionable from '@/mixins/unactionable'
 
   /**
@@ -31,9 +32,10 @@
     mixins: [
       Colored,
       Indicating,
+      Scaled,
+      Simplified,
+
       Invertible,
-      Resizable,
-      Simplifiable,
       Unactionable
     ],
     inheritAttrs: false,
@@ -77,9 +79,10 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+          ...this.scaledClasses,
+          ...this.simplifiedClasses,
+
           ...this.invertibleClasses,
-          ...this.resizableClasses,
-          ...this.simplifiableClasses,
           ...this.unactionableClasses
         ]
       },

@@ -1,6 +1,6 @@
 ```jsx
 <Section
-  is-rounded
+  roundness="rounded"
   is-compact>
   <Heading 
     :level="1">

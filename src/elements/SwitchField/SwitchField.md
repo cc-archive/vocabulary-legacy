@@ -165,13 +165,26 @@ Switches come in all sizes, from small to mega.
 
 ### Style set
 
-A switch field can be rounded to be more compatible with curvy layouts.
+A switch field can be rounded to be more compatible with curvy layouts. Even
+more rounded is the pill shape. It is in complete contrast to the sharp edged CC
+design but looks really good.
 
 ```jsx
-<SwitchField
-  color="purple"
-  is-rounded/>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="blue"
+      roundness="slight"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="blue"
+      roundness="complete"/>
+  </GridCell>
+</Grid>
 ```
+
+### Add-on set
 
 A switch may indicate the state with on/off icons for clarity. If the standard
 I and O don't meet your expectations, you can supply the off and on icons 
@@ -179,12 +192,12 @@ yourself.
 
 ```jsx
 <SwitchField
-  color="blue" 
+  color="red" 
   size="huge" 
   :value="true"
   is-labelled/>
 <SwitchField
-  color="blue" 
+  color="red" 
   size="huge"
   :value="true"
   :iconSet="['times', 'check']"

@@ -8,10 +8,11 @@
 <script>
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
+  import Rounded from '@/mixins/rounded'
+  import Simplified from '@/mixins/simplified'
+
   import Invertible from '@/mixins/invertible'
   import Raisable from '@/mixins/raisable'
-  import Roundable from '@/mixins/roundable'
-  import Simplifiable from '@/mixins/simplifiable'
 
   /**
    * ### Sections are groupings of related content.
@@ -24,10 +25,11 @@
     mixins: [
       Colored,
       Indicating,
+      Rounded,
+      Simplified,
+
       Invertible,
-      Roundable,
-      Raisable,
-      Simplifiable
+      Raisable
     ],
     props: {
       /**
@@ -47,10 +49,11 @@
       /**
        * _which side of the div to highlight with the color_
        *
-       * ∈ {`'top'`, `'right'`, `'bottom'`, `'left'`}
+       * ∈ {`'top'`, `'right'`, `'bottom'`, `'left'`, `'none'`}
        */
       colorSide: {
         type: String,
+        default: 'top',
         validator: val => ['top', 'right', 'bottom', 'left'].includes(val)
       }
     },
@@ -70,10 +73,11 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+          ...this.roundedClasses,
+          ...this.simplifiedClasses,
+
           ...this.invertibleClasses,
           ...this.raisableClasses,
-          ...this.roundableClasses,
-          ...this.simplifiableClasses,
 
           this.processedColorSide ? `${this.processedColorSide}-accented` : '',
           {

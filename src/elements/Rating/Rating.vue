@@ -23,10 +23,11 @@
   import { faCircle, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Indicating from '@/mixins/indicating'
-  import Invertible from '@/mixins/invertible'
-  import Resizable from '@/mixins/resizable'
   import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
+  import Scaled from '@/mixins/scaled'
+
+  import Invertible from '@/mixins/invertible'
   import Unactionable from '@/mixins/unactionable'
 
   library.add(faCircle, faStar, faHeart)
@@ -42,9 +43,10 @@
     name: 'Rating',
     mixins: [
       Colored,
-      Invertible,
       Indicating,
-      Resizable,
+      Scaled,
+
+      Invertible,
       Unactionable
     ],
     components: {
@@ -111,8 +113,9 @@
         return [
           ...this.coloredClasses,
           ...this.indicatingClasses,
+          ...this.scaledClasses,
+
           ...this.invertibleClasses,
-          ...this.resizableClasses,
           ...this.unactionableClasses
         ]
       },
