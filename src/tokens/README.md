@@ -54,7 +54,7 @@ Vue.component('Shadow', Shadow);
 
 let spanSet = [12, 3, 3, 3, 3];
 
-<Grid>
+<Grid density="sparse">
   <GridCell :span-set="spanSet">
     <Color
       category="color-group-oxford"
