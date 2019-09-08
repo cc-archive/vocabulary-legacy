@@ -166,6 +166,8 @@ All imports must be structured as follows.
     - Others [grouped by package scope, ordered alphabetically]
 - Vocabulary components [grouped by families, ordered alphabetically]
 - Mixins in alphabetical order
+    - x-ed mixins
+    - y-able mixins
 
 The groups should be demarcated using newlines.
 
@@ -333,6 +335,22 @@ above list. For example `:active` and `:hover`.
     
 This is followed by style overrides which will usually override some rules as
 well as the states. For example, `.basic` and `.disabled`.
+
+### Nomenclature
+
+A lot about the quality of code essentially comes down to the names we give
+things such as files, variables or code blocks. This section deals with
+explaining the rationale behind many naming choices to allow you to understand
+and comply with them in the future.
+
+#### Mixin names
+
+Mixins are named according to which category they fall into.
+
+| Name | Why |
+|-|-|
+| **x-ed/ing**    | These mixins provide choice based props, so a button capable of having color is Colored |
+| **y-able/ible** | These mixins usually provide Boolean props, so a card capable of being raised is Raisable |
 
 ---
 
