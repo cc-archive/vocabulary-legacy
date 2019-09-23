@@ -14,7 +14,7 @@ services:
     build: .
 
     # The command to run in the container
-    command: npm run serve
+    command: npm run serve:website
 
     # Volumes attached to the container
     volumes:
@@ -34,7 +34,7 @@ services:
     build: .
 
     # The command to run in the container
-    command: npm run styleguide
+    command: npm run serve:styleguide
 
     # Volumes attached to the container
     volumes:

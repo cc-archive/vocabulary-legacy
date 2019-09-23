@@ -47,12 +47,12 @@ $ npm install
 **Step 4:**
 Start the servers.
 
-To start the CC Vocabulary website or documentation, run the `serve` or
-`styleguide` task respectively.
+To start the CC Vocabulary website or documentation, run the `serve:website` or
+`serve:styleguide` task respectively.
 
 ```
-$ npm run serve
-$ npm run styleguide
+$ npm run serve:website
+$ npm run serve:styleguide
 ```
 
 ## Requesting changes
