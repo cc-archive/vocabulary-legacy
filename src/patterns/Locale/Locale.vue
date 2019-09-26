@@ -1,11 +1,12 @@
 <template>
   <div class="vocab locale">
     <SelectField
-      v-model="$i18n.locale"
+      v-model="language"
       v-bind="$attrs"
       color="orange"
       icon="globe"
-      :option-list="localeOptions"/>
+      :option-list="localeOptions"
+      @change="setLocale"/>
   </div>
 </template>
 
@@ -68,7 +69,17 @@
         }
       ]
       return {
+        language: 'en',
         locales: this.localeList || defaultLocales
+      }
+    },
+    methods: {
+      /**
+       * Stores the selected locale in local storage
+       */
+      setLocale () {
+        localStorage.setItem('locale', this.language)
+        this.$i18n.locale = this.language
       }
     },
     computed: {
@@ -78,6 +89,9 @@
           text: locale.nativeName
         }))
       }
+    },
+    created () {
+      this.$i18n.locale = localStorage.getItem('locale') || this.language
     }
   }
 </script>
