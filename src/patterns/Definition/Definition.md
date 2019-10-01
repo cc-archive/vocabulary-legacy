@@ -53,189 +53,112 @@ A definition without a specified color is black.
 
 Like other components, definitions can be colored using any color from the set
 provided by CC Vocabulary. Unlike other components, definitions look terrible in
-colors other than black. 
+colors other than black. Also you may use one of the three shades, namely `light`,
+`dark` and `darker`, to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="blue"
-      is-decked>
-      <Definition
-        color="blue"
-        word="blue"
-        pronunciation="bluː"
-        part-of-speech="adj.">
-        of a colour intermediate between green and violet, as of the sky or sea on a sunny day
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="green"
-      is-decked>
-      <Definition
-        color="green"
-        word="green"
-        pronunciation="ɡriːn"
-        part-of-speech="adj.">
-        of the colour between blue and yellow in the spectrum, as of grass or emeralds
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="magenta"
-      is-decked>
-      <Definition
-        color="magenta"
-        word="magenta"
-        pronunciation="məˈdʒɛntə"
-        part-of-speech="adj.">
-        a light mauvish-crimson which is one of the primary subtractive colours, complementary to green
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="olive"
-      is-decked>
-      <Definition
-        color="olive"
-        word="olive"
-        pronunciation="ˈɒlɪv"
-        part-of-speech="adj.">
-        greyish-green
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="orange"
-      is-decked>
-      <Definition
-        color="orange"
-        word="orange"
-        pronunciation="ˈɒrɪn(d)ʒ"
-        part-of-speech="adj.">
-        reddish yellow
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="purple"
-      is-decked>
-      <Definition
-        color="purple"
-        word="purple"
-        pronunciation="ˈpəːp(ə)l"
-        part-of-speech="adj.">
-        of a colour intermediate between red and blue
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="red"
-      is-decked>
-      <Definition
-        color="red"
-        word="red"
-        pronunciation="rɛd"
-        part-of-speech="adj.">
-        of a colour at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="sand"
-      is-decked>
-      <Definition
-        color="sand"
-        word="sand"
-        pronunciation="sand"
-        part-of-speech="adj.">
-        a light yellow-brown colour like that of sand
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="yellow"
-      is-decked>
-      <Definition
-        color="yellow"
-        word="yellow"
-        pronunciation="ˈjɛləʊ"
-        part-of-speech="adj.">
-        of the colour between green and orange in the spectrum, a primary subtractive colour complementary to blue, as of ripe lemons or egg yolks
-      </Definition>
-    </Card>
-  </GridCell>
-</Grid>
-```
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
 
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
-to accentuate the color.
+library.add(faFillDrip, faSwatchbook);
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card 
-      color="blue"
-      shade="light">
-      <Definition
-        color="blue"
-        shade="light"
-        word="blue"
-        pronunciation="bluː"
-        part-of-speech="adj.">
-        of a colour intermediate between green and violet, as of the sky or sea on a sunny day
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card color="blue">
-      <Definition
-        color="blue"
-        word="blue"
-        pronunciation="bluː"
-        part-of-speech="adj.">
-        of a colour intermediate between green and violet, as of the sky or sea on a sunny day
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="blue"
-      shade="dark">
-      <Definition
-        color="blue"
-        shade="dark"
-        word="blue"
-        pronunciation="bluː"
-        part-of-speech="adj.">
-        of a colour intermediate between green and violet, as of the sky or sea on a sunny day
-      </Definition>
-    </Card>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <Card
-      color="blue"
-      shade="darker">
-      <Definition
-        color="blue"
-        shade="darker"
-        word="blue"
-        pronunciation="bluː"
-        part-of-speech="adj.">
-        of a colour intermediate between green and violet, as of the sky or sea on a sunny day
-      </Definition>
-    </Card>
-  </GridCell>
-</Grid>
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'green', text: 'Green' },
+  { value: 'magenta', text: 'Magenta' },
+  { value: 'olive', text: 'Olive' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'purple', text: 'Purple' },
+  { value: 'red', text: 'Red' },
+  { value: 'sand', text: 'Sand' },
+  { value: 'yellow', text: 'Yellow' }
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: 'light', text: 'Light' },
+  { value: '', text: 'Default' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+let definitions = {
+  '': {
+    word: 'black',
+    pronunciation: 'blak',
+    definition: 'of the very darkest colour owing to the absence of or complete absorption of light'
+  },
+  blue: {
+    word: 'blue',
+    pronunciation: 'bluː',
+    definition: 'of a colour intermediate between green and violet, as of the sky or sea on a sunny day'
+  },
+  green: {
+    word: 'green',
+    pronunciation: 'ɡriːn',
+    definition: 'of the colour between blue and yellow in the spectrum, as of grass or emeralds'
+  },
+  magenta: {
+    word: 'magenta',
+    pronunciation: 'məˈdʒɛntə',
+    definition: 'a light mauvish-crimson which is one of the primary subtractive colours, complementary to green'
+  },
+  olive: {
+    word: 'olive',
+    pronunciation: 'ɒlɪv',
+    definition: 'greyish-green'
+  },
+  orange: {
+    word: 'orange',
+    pronunciation: 'ɒrɪn(d)ʒ',
+    definition: 'reddish yellow'
+  },
+  purple: {
+    word: 'purple',
+    pronunciation: 'ˈpəːp(ə)l',
+    definition: 'of a colour intermediate between red and blue'
+  },
+  red: {
+    word: 'red',
+    pronunciation: 'rɛd',
+    definition: 'of a colour at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies'
+  },
+  sand: {
+    word: 'sand',
+    pronunciation: 'sand',
+    definition: 'a light yellow-brown colour like that of sand'
+  },
+  yellow: {
+    word: 'yellow',
+    pronunciation: 'ˈjɛləʊ',
+    definition: 'of the colour between green and orange in the spectrum, a primary subtractive colour complementary to blue, as of ripe lemons or egg yolks'
+  }
+}
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Definition
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :word="definitions[color].word"
+  :pronunciation="definitions[color].pronunciation"
+  part-of-speech="adj.">
+  {{ definitions[color].definition }}
+</Definition>
 ```
 
 ### Add-on set
