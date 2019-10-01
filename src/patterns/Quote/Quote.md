@@ -92,144 +92,116 @@ the heights of their companions.
 
 ### Color set
 
+A quote without a defined color set is black.
+
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="blue"
-      attribution="Siouxsie Sioux"
-      is-lined
-      is-analected>
-      I love the ocean. I've always liked the <b>blue</b>, so tranquil and 
-      peaceful and gliding. And the fear of it.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="green"
-      attribution="Martin Luther"
-      is-lined
-      is-analected>
-      For in the true nature of things, if we rightly consider, every 
-      <b>green</b> tree is far more glorious than if it were made of gold and
-      silver.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="magenta"
-      attribution="Joni Mitchell"
-      is-lined
-      is-analected>
-      I wanted <b>magenta</b> and turquoise and silver and gold.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="olive"
-      attribution="Boris Johnson"
-      is-lined
-      is-analected>
-      My chances of being PM are about as good as the chances of finding Elvis
-      on Mars, or my being reincarnated as an <b>olive</b>.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="orange"
-      attribution="Vincent Van Gogh"
-      is-lined
-      is-analected>
-      There is no blue without yellow and without <b>orange</b>.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="purple"
-      attribution="Alice Walker"
-      is-lined
-      is-analected>
-      I think it pisses God off if you walk by the color <b>purple</b> in a
-      field somewhere and don't notice it.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="red"
-      attribution="Thomas Holcroft"
-      is-lined
-      is-analected>
-      Love and a <b>red</b> rose can't be hid.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="sand"
-      attribution="William Blake"
-      is-lined
-      is-analected>
-      To see a world in a grain of <b>sand</b> and heaven in a wild flower,
-      hold infinity in the palm of your hand and eternity in an hour.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Quote
-      color="yellow"
-      attribution="Michy Batshuayi"
-      is-lined
-      is-analected>
-      I love black and <b>yellow</b>. Black and yellow is Batman; black and 
-      yellow is Spongebob!
-    </Quote>
-  </GridCell>
-</Grid>
+<Quote
+  attribution="Douglas Adams"
+  is-lined>
+  A common mistake that people make when trying<br/>
+  to design something completely foolproof is<br/>
+  to underestimate the ingenuity of complete fools.
+</Quote>
 ```
 
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
-to accentuate the color.
+As is the case with all of Vocabulary, definitions can be colored using any
+color from the set provided by CC Vocabulary. Black looks so plain! Also you
+may use one of the three shades, namely `light`, `dark` and `darker`, to
+accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 3]">
-    <Quote
-      color="blue"
-      shade="light"
-      attribution="Tory Burch"
-      is-lined>
-      I love blue in all its <b>shades</b> and textures. I wear navy like others 
-      wear black, and I love the blue in flowers - cornflowers, delphiniums.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 3]">
-    <Quote
-      color="blue"
-      attribution="Tory Burch"
-      is-lined>
-      I love blue in all its <b>shades</b> and textures. I wear navy like others 
-      wear black, and I love the blue in flowers - cornflowers, delphiniums.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 3]">
-    <Quote
-      color="blue"
-      shade="dark"
-      attribution="Tory Burch"
-      is-lined>
-      I love blue in all its <b>shades</b> and textures. I wear navy like others 
-      wear black, and I love the blue in flowers - cornflowers, delphiniums.
-    </Quote>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 3]">
-    <Quote
-      color="blue"
-      shade="darker"
-      attribution="Tory Burch"
-      is-lined>
-      I love blue in all its <b>shades</b> and textures. I wear navy like others 
-      wear black, and I love the blue in flowers - cornflowers, delphiniums.
-    </Quote>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'green', text: 'Green' },
+  { value: 'magenta', text: 'Magenta' },
+  { value: 'olive', text: 'Olive' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'purple', text: 'Purple' },
+  { value: 'red', text: 'Red' },
+  { value: 'sand', text: 'Sand' },
+  { value: 'yellow', text: 'Yellow' }
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: 'light', text: 'Light' },
+  { value: '', text: 'Default' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+let quotes = {
+  '': {
+    attribution: 'Douglas Adams',
+    quote: 'A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.'
+  },
+  blue: {
+    attribution: 'Siouxsie Sioux',
+    quote: 'I love the ocean. I\'ve always liked the <b>blue</b>, so tranquil and peaceful and gliding. And the fear of it.'
+  },
+  green: {
+    attribution: 'Martin Luther',
+    quote: 'For in the true nature of things, if we rightly consider, every <b>green</b> tree is far more glorious than if it were made of gold and silver.'
+  },
+  magenta: {
+    attribution: 'Joni Mitchell',
+    quote: 'I wanted <b>magenta</b> and turquoise and silver and gold.'
+  },
+  olive: {
+    attribution: 'Boris Johnson',
+    quote: 'My chances of being PM are about as good as the chances of finding Elvis on Mars, or my being reincarnated as an <b>olive</b>.'
+  },
+  orange: {
+    attribution: 'Vincent Van Gogh',
+    quote: 'There is no blue without yellow and without <b>orange</b>.'
+  },
+  purple: {
+    attribution: 'Alice Walker',
+    quote: 'I think it pisses God off if you walk by the color <b>purple</b> in a field somewhere and don\'t notice it.'
+  },
+  red: {
+    attribution: 'Thomas Holcroft',
+    quote: 'Love and a <b>red</b> rose can\'t be hid.'
+  },
+  sand: {
+    attribution: 'William Blake',
+    quote: ' To see a world in a grain of <b>sand</b> and heaven in a wild flower, hold infinity in the palm of your hand and eternity in an hour.'
+  },
+  yellow: {
+    attribution: 'Michy Batshuayi',
+    quote: 'I love black and <b>yellow</b>. Black and yellow is Batman; black and yellow is Spongebob!'
+  }
+}
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Quote
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :attribution="quotes[color].attribution"
+  is-lined
+  is-analected>
+  <span v-html="quotes[color].quote"></span>
+</Quote>
 ```
 
 For placement on dark or non-white backgrounds, use the inverted version.
