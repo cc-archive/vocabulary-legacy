@@ -37,87 +37,55 @@ A navigation bar is black colored by default.
 ```
 
 Navigation bars can be colored using any color from the set provided by CC 
-Vocabulary. Nothing to discourage exploration like the color black.
+Vocabulary. Nothing to discourage exploration like the color black. Also you
+may use one of the three shades, namely `light`, `dark` and `darker`, to 
+accentuate the color.
 
 ```jsx
-<Navigation color="blue">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="green">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="magenta">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="olive">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="orange">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="purple">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="red">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="sand">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="yellow">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-```
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
 
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
-to accentuate the color.
+library.add(faFillDrip, faSwatchbook);
 
-```jsx
-<Navigation color="blue" shade="light">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'green', text: 'Green' },
+  { value: 'magenta', text: 'Magenta' },
+  { value: 'olive', text: 'Olive' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'purple', text: 'Purple' },
+  { value: 'red', text: 'Red' },
+  { value: 'sand', text: 'Sand' },
+  { value: 'yellow', text: 'Yellow' }
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: 'light', text: 'Light' },
+  { value: '', text: 'Default' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
 <br/>
-<Navigation color="blue">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
 <br/>
-<Navigation color="blue" shade="dark">
-  <NavigationLink>One</NavigationLink>
-  <NavigationLink>Two</NavigationLink>
-  <NavigationLink>Three</NavigationLink>
-</Navigation>
-<br/>
-<Navigation color="blue" shade="darker">
+<Navigation
+  :color="color ? color : null"
+  :shade="shade ? shade : null">
   <NavigationLink>One</NavigationLink>
   <NavigationLink>Two</NavigationLink>
   <NavigationLink>Three</NavigationLink>
