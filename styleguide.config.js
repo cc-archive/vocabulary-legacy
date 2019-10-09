@@ -7,6 +7,11 @@ let viewportMeta = [
   'user-scalable=no',
   'viewport-fit=cover'
 ].join(', ')
+let titleMeta = 'vo·cab·u·lar·y'
+let urlMeta = 'https://creativecommons.github.io/cc-vocabulary/'
+let descriptionMeta = 'A cohesive design system to unite the web-facing Creative Commons'
+let imageMeta = `${urlMeta}titlecard.png`
+
 let rootCss = 'https://unpkg.com/@creativecommons/vocabulary/css/root.css'
 
 let families = [
@@ -92,7 +97,18 @@ module.exports = {
   template: {
     head: {
       meta: [
-        { name: 'viewport', content: viewportMeta }
+        { name: 'viewport', content: viewportMeta },
+        // Open Graph
+        { property: 'og:title', content: titleMeta },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: urlMeta },
+        { property: 'og:description', content: descriptionMeta },
+        { property: 'og:image', content: imageMeta },
+        // Twitter
+        { name: 'twitter:title', content: titleMeta },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: descriptionMeta },
+        { name: 'twitter:image', content: imageMeta }
       ],
       links: [
         { rel: 'stylesheet', href: rootCss },
