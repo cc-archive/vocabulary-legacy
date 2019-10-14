@@ -32,66 +32,87 @@
     },
     props: {
       /**
-       * _an array of locale objects defining the app's supported locales_
+       * _an object of locale objects defining the app's supported locales_
        *
-       * Each object must contain `code`, `englishName` and `nativeName`.
+       * Each object must contain `direction`, `englishName` and
+       * `nativeName` and must be the value for key being the locale `code`.
        *
        * ```js
-       * let localeList = [
-       *   {
-       *     code: 'fr',
+       * let locales = {
+       *   fr: {
+       *     direction: 'ltr',
        *     englishName: 'French',
-       *     nativeName: 'le français'
+       *     nativeName: 'le Français'
        *   }
-       * ]
+       * }
        * ```
        */
-      localeList: {
-        type: Array,
-        validator: val => val.every(
-          locale => ['code', 'englishName', 'nativeName'].every(
-            key => key in locale
-          )
-        )
+      locales: {
+        type: Object,
+        validator: val =>
+          Object.keys(val).every(code => {
+            let locale = val[code]
+            return [
+              'direction',
+              'englishName',
+              'nativeName'
+            ].every(key => key in locale)
+          })
       }
     },
     data: function () {
-      let defaultLocales = [
-        {
-          code: 'hi',
+      let defaultLocales = {
+        'hi': {
+          direction: 'ltr',
           englishName: 'Hindi',
           nativeName: 'हिन्दी'
         },
-        {
-          code: 'en',
+        'en': {
+          direction: 'ltr',
           englishName: 'English',
           nativeName: 'English'
         }
-      ]
-      return {
-        language: 'en',
-        locales: this.localeList || defaultLocales
       }
-    },
-    methods: {
-      /**
-       * Stores the selected locale in local storage
-       */
-      setLocale () {
-        localStorage.setItem('locale', this.language)
-        this.$i18n.locale = this.language
+      return {
+        language: null,
+        localeMap: this.locales || defaultLocales
       }
     },
     computed: {
       localeOptions: function () {
-        return this.locales.map(locale => ({
-          value: locale.code,
-          text: locale.nativeName
-        }))
+        return Object.keys(this.localeMap).map(code => {
+          let locale = this.localeMap[code]
+          return {
+            value: code,
+            text: locale.nativeName
+          }
+        })
+      }
+    },
+    watch: {
+      // Set up a two-way sync between language and $i18n.locale
+      language (to, from) {
+        if (to !== from) { // Breaks recursion
+          this.$i18n.locale = to
+        }
+      },
+      '$i18n.locale': function (to, from) {
+        if (to !== from) { // Breaks recursion
+          this.language = to
+        }
+      }
+    },
+    methods: {
+      setLocale () {
+        localStorage.setItem('locale', this.language)
+        document.documentElement.setAttribute(
+          'dir',
+          this.localeMap[this.language].direction
+        )
       }
     },
     created () {
-      this.$i18n.locale = localStorage.getItem('locale') || this.language
+      this.language = localStorage.getItem('locale') || 'en'
     }
   }
 </script>
