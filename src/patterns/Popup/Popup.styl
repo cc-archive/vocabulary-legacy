@@ -1,0 +1,40 @@
+@import "~@/assets/tokens/tokens.styl"
+
+@import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.popup
+  position relative
+
+  display inline
+
+  & > .trigger
+    display inline-block
+
+  & > .content
+    position absolute
+
+    z-index 2
+
+    white-space nowrap
+
+    &.to-top
+      left 50%
+      top 0
+      transform scale(1) 'translate(-50%, calc(-100% - %s))' % $space-small
+
+    &.to-right
+      top 50%
+      left 100%
+      transform scale(1) 'translate(%s, -50%)' % $space-small
+
+    &.to-bottom
+      left 50%
+      top 100%
+      transform scale(1) 'translate(-50%, %s)' % $space-small
+
+    &.to-left
+      top 50%
+      left 0
+      transform scale(1) 'translate(calc(-100% - %s), -50%)' % $space-small
