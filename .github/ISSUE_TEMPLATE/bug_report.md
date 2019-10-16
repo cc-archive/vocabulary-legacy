@@ -1,6 +1,7 @@
 ---
 name: Bug report
 about: Report a bug to help us improve
+labels: 'improvement: bug'
 title: ''
 ---
 
@@ -23,7 +24,7 @@ title: ''
  - Version [e.g. 22]
 
 **Additional context**
-<-- Add any other context about the problem here. -->
+<!-- Add any other context about the problem here. -->
 
 **Want to take up?**
 <!-- Are you interested in tackling this issue yourself? -->

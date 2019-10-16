@@ -1,11 +1,5 @@
----
-name: Pull request
-about: Submit a patch to help us improve
-title: ''
----
-
 **Fixes**
-Fixes #XX by @
+Fixes #XX by @YY
 <!-- If PR only partly solves the issue, replace 'Fixes' with 'Partially addresses' -->
 
 **Describe the pull request**
