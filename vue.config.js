@@ -1,5 +1,13 @@
+let publicPath
+
+if (process.env.NODE_ENV === 'production') {
+  publicPath = process.env.PUBLIC_PATH || '/cc-vocabulary'
+} else {
+  publicPath = '/'
+}
+
 module.exports = {
-  publicPath: '/cc-vocabulary/',
+  publicPath: publicPath,
   pluginOptions: {
     i18n: {
       locale: 'en',
