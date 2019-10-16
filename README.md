@@ -67,10 +67,13 @@ it doesn't and you think more people would love to have this feature open an
 issue. If something peculiar happens, open a bug report. If you just love it,
 contribute in some way.
 
-The website, styleguide and storybook are powered by Netlify.
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
-</a>
+<p align="center">
+  <a href="https://www.netlify.com">
+    <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+  </a>
+  <br/>
+  Documentation powered by Netlify.
+</p>
 
 ### Contributing
 
