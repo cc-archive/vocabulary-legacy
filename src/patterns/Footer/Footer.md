@@ -55,10 +55,6 @@ let alternativeLinks = [
     href: 'https://github.com/creativecommons/cc-vocabulary'
   },
   {
-    text: 'Styleguide',
-    href: 'https://creativecommons.github.io/cc-vocabulary'
-  },
-  {
     text: 'UMD Demo',
     href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
   },
@@ -70,11 +66,11 @@ let alternativeLinks = [
 let alternativeContacts = [
   {
     text: 'Report bug',
-    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=bug_report.md&title='
+    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
   },
   {
     text: 'Request feature',
-    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?template=feature_request.md&title='
+    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
   }
 ];
 
