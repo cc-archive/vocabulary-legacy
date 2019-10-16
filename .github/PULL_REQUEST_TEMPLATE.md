@@ -1,8 +1,8 @@
 **Fixes**
-Fixes #XX by @YY
 <!-- If PR only partly solves the issue, replace 'Fixes' with 'Partially addresses' -->
+Fixes #XX by @YY
 
-**Describe the pull request**
+**Description**
 <!-- A clear and concise description of what the pull request does. -->
 
 **Type of PR** 

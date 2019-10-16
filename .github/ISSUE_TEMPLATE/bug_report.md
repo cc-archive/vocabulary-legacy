@@ -5,10 +5,10 @@ labels: 'improvement: bug'
 title: ''
 ---
 
-**Describe the bug**
+**Description**
 <!-- A clear and concise description of what the bug is. -->
 
-**Describe the steps to reproduce the bug**
+**Reproduction**
 <!-- Steps to reproduce the behavior. -->
 
 **Expected behavior**
@@ -17,7 +17,7 @@ title: ''
 **Screenshots**
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-**Operating System:**
+**Conditions:**
 <!-- Remove this section if the bug is independent of use conditions. -->
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]

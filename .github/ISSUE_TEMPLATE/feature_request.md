@@ -5,13 +5,13 @@ labels: 'improvement: feature'
 title: ''
 ---
 
-**Describe the feature**
+**Description**
 <!-- A clear and concise description of what the feature is. -->
 
-**Describe any problem solved by the feature**
+**Problems solved**
 <!-- A clear and concise description of what the problem is. -->
 
-**Describe alternatives**
+**Alternatives**
 <!-- A clear and concise description of any alternative solutions or features you've considered. -->
 
 **Additional context**
