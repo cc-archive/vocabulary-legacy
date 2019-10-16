@@ -28,8 +28,10 @@
       "builtusing": "Built using {0}.",
       "iconsby": "Icons by {0}.",
       "imagesby": "Images from {0}.",
+      "deploysby": "Deploys by {0}.",
       "fa": "Font Awesome",
-      "wikimedia": "Wikimedia Commons"
+      "wikimedia": "Wikimedia Commons",
+      "netlify": "Netlify"
     }
   },
   "hi": {
@@ -59,10 +61,12 @@
     "panel": {
       "credits": "श्रेय",
       "builtusing": "{0} का उपयोग कर बनाया गया।",
-      "iconsby": "चिह्न {0} द्वारा।",
+      "iconsby": "{0} द्वारा चिह्न।",
       "imagesby": "{0} द्वारा चित्र।",
+      "deploysby": "{0} द्वारा तैनात।",
       "fa": "फॉन्ट औसम",
-      "wikimedia": "विकिमीडिया कॉमन्स"
+      "wikimedia": "विकिमीडिया कॉमन्स",
+      "netlify": "नेटलिफ़ी"
     }
   }
 }

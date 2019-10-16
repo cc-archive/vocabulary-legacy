@@ -87,6 +87,11 @@
               {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
           </i18n>
           <br/>
+          <i18n path="panel.deploysby" tag="span">
+            <a href="https://netlify.com/">
+              {{ $t('panel.netlify') }}</a> <!-- for the fullstops -->
+          </i18n>
+          <br/>
           <i18n path="panel.iconsby" tag="span">
             <a href="https://fontawesome.com/">
               {{ $t('panel.fa') }}</a> <!-- for the fullstops -->
