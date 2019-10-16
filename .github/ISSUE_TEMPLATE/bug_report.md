@@ -5,24 +5,26 @@ title: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+<!-- A clear and concise description of what the bug is. -->
 
 **Describe the steps to reproduce the bug**
-Steps to reproduce the behavior.
+<!-- Steps to reproduce the behavior. -->
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+<!-- A clear and concise description of what you expected to happen. -->
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+<!-- If applicable, add screenshots to help explain your problem. -->
 
 **Operating System:**
+<!-- Remove this section if the bug is independent of use conditions. -->
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 
 **Additional context**
-Add any other context about the problem here.
+<-- Add any other context about the problem here. -->
 
 **Want to take up?**
-Are you interested in and capable of tackling this issue? [yes|no]
+<!-- Are you interested in tackling this issue yourself? -->
+[Yes|No]

@@ -4,23 +4,38 @@ about: Submit a patch to help us improve
 title: ''
 ---
 
+**Fixes**
+Fixes #XX by @
+<!-- If PR only partly solves the issue, replace 'Fixes' with 'Partially addresses' -->
+
 **Describe the pull request**
-A clear and concise description of what the pull request does.
+<!-- A clear and concise description of what the pull request does. -->
 
 **Type of PR** 
-[feature|hotfix|refactor]
-
-**Fixes**
-Issue # by @
+This PR is a [feature|hotfix|refactor].
 
 **Technicalities**
-Notable technical details about the implementation.
+<!-- Notable technical details about the implementation. -->
 
 **Tests**
-Steps for the reviewer to verify that this PR fixes the problem.
+<!-- Steps for the reviewer to verify that this PR fixes the problem. -->
 
 **Screenshots**
-If applicable, add screenshots to show the problem and the solution.
+<!-- If applicable, add screenshots to show the problem and the solution. -->
+
+**Checklist:**
+<!-- Replace  the [ ] with [x] to check the boxes --> 
+- [ ] My pull request has a descriptive title (not a vague title like `Update
+  index.md`).
+- [ ] My pull request targets the `master` branch of the repository.
+- [ ] My commit messages follow [best practices][best_practices].
+- [ ] My code follows the established code style of the repository.
+- [ ] I added tests for the changes I made (if applicable).
+- [ ] I added or updated documentation (if applicable).
+- [ ] I tried running the project locally and verified that there are no
+  visible errors.
+
+[best_practices]:https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53
 
 **Legal**
 By submitting this PR, I agree to abide by the terms of the Developer 
