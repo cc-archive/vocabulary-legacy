@@ -53,13 +53,11 @@ A lot of features available via `npm` packages might not be supported via UMD.
 
 ### Demo
 
-A **[demo](https://codepen.io/dhruvkb/pen/dxRJYV)** of Vocabulary is hosted on
-CodePen. It does show some components in action so I guess you should check
-it out.
-
-However, the showcase of the true extent of Vocabulary can be found in the
-**[live styleguide](https://creativecommons.github.io/cc-vocabulary/)** for the
-library, showcasing the components therein and variants thereof, on GitHub
+The showcase of the true extent of Vocabulary can be found in the
+**[live styleguide](https://creativecommons.github.io/cc-vocabulary/styleguide)**
+and the
+**[interactive storybook](https://creativecommons.github/io/cc-vocabulary/storybook)**
+for the library, showcasing the components therein and variants thereof, on GitHub
 Pages. Search for a particular component using the search field or just explore
 the collection of components. If you find one that catches your fancy, play with
 it on the playground and tweak its knobs.
@@ -69,6 +67,10 @@ it doesn't and you think more people would love to have this feature open an
 issue. If something peculiar happens, open a bug report. If you just love it,
 contribute in some way.
 
+The website, styleguide and storybook are powered by Netlify.
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+</a>
 
 ### Contributing
 
