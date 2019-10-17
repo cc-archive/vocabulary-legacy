@@ -56,20 +56,22 @@
       padding $space-normal $space-zero
 
       & > #branding-section
+
         // To vertically align branding content with button
         display flex
         flex-direction row
         align-items center
 
         & > #branding-content
-          flex-grow 1
-          flex-shrink 0
+          +phone-only()
+            margin-right auto
 
           +tablets-only()
             // To horizontally justify logo in the middle
             display flex
             flex-direction row
             justify-content center
+            margin auto
 
           font-size $size-huge
           font-weight $weight-bold
