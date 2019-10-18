@@ -4,33 +4,50 @@
 @import "~@/styles/sizes.styl"
 
 .vocab.shield
-  // Color
+  // Color palette
 
-  --shield-message-color $color-tone-grey-dark
+  --shield-primary $color-tone-grey-dark
+  --shield-secondary $color-tone-near-black
+  --shield-tertiary $color-tone-white
 
   &.inverted
-    --shield-message-color $color-tone-grey-light
+    --shield-primary $color-tone-grey-light
+    --shield-secondary $color-tone-near-white
+    --shield-tertiary $color-tone-black
 
-  colors('--shield-message-color')
+  colors('--shield-primary')
 
   &.positive-indicating.positive-indicating
-    --shield-message-color $color-context-positive
+    --shield-primary $color-context-positive
 
   &.probably-indicating.probably-indicating
-    --shield-message-color $color-context-probably
+    --shield-primary $color-context-probably
 
   &.negative-indicating.negative-indicating
-    --shield-message-color $color-context-negative
+    --shield-primary $color-context-negative
 
-  --shield-label-color $color-tone-near-black
+  // Color
+  --shield-label-background-color var(--shield-secondary)
+  --shield-label-text-color var(--shield-tertiary)
+  --shield-message-background-color var(--shield-primary)
+  --shield-message-text-color var(--shield-tertiary)
 
-  &.inverted
-    --shield-label-color $color-tone-near-white
+  &.slightly-simple,
+  &.extremely-simple
+    --shield-label-background-color transparent
+    --shield-label-text-color var(--shield-secondary)
 
-  --shield-text-color $color-tone-white
+  &.extremely-simple
+    --shield-message-text-color var(--shield-primary)
+    --shield-message-background-color transparent
 
-  &.inverted
-    --shield-text-color $color-tone-black
+  // Border width
+
+  --shield-border-width 0
+
+  &.slightly-simple,
+  &.extremely-simple
+    --shield-border-width 1px
 
   // Border radius
 
@@ -46,28 +63,41 @@
 
   display inline-flex
   flex-direction row
-  align-items center
-
-  color var(--shield-text-color)
 
   sizes('font-size')
 
+  height 2.25em
+
+  box-sizing border-box
+
+  border var(--shield-border-width) solid var(--shield-primary)
   border-radius var(--shield-border-radius)
+
   overflow hidden
 
   // Children
 
   & > .bit
+    display inline-flex
+    flex-direction row
+    align-items center
+    justify-content center
+
     padding $space-normal
 
     // States
 
     &.label
-      background-color var(--shield-label-color)
+      color var(--shield-label-text-color)
+
+      background-color var(--shield-label-background-color)
 
     &.message
-      background-color var(--shield-message-color)
+      color var(--shield-message-text-color)
       font-weight $weight-bold
+
+      background-color var(--shield-message-background-color)
+      border-left 1px solid var(--shield-primary)
 
     &.lowercased
       text-transform lowercase

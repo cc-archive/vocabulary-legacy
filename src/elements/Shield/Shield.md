@@ -168,6 +168,24 @@ can go against the CC design aesthetic and make it completely rounded.
   roundness="complete"/>
 ```  
 
+A shield can be made slightly simple version, which is not too much prominent
+or extremely simple, which is even less eye-catching.
+
+```jsx
+<Shield
+  color="magenta"
+  label="Simplicity"
+  message="Slight"
+  simplicity="slight"/>
+<br/><br/>
+<Shield
+  color="magenta"
+  label="Simplicity"
+  message="Extreme"
+  simplicity="extreme"/>
+```  
+
+
 ### Size set
 
 Shields come in all sizes.
