@@ -174,12 +174,35 @@ design but looks really good.
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
       color="blue"
-      roundness="slight"/>
+      roundness="slight"
+      :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
       color="blue"
-      roundness="complete"/>
+      roundness="complete"
+      :value="true"/>
+  </GridCell>
+</Grid>
+```
+
+The switch field can be defined so that it does not attract attention or it can 
+defined to actively deny it. This ensures that other content on the page gets
+the prominence it deserves.
+
+```jsx
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="magenta"
+      simplicity="slight"
+      :value="true"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="magenta"
+      simplicity="extreme"
+      :value="true"/>
   </GridCell>
 </Grid>
 ```
@@ -191,17 +214,23 @@ I and O don't meet your expectations, you can supply the off and on icons
 yourself.
 
 ```jsx
-<SwitchField
-  color="red" 
-  size="huge" 
-  :value="true"
-  is-labelled/>
-<SwitchField
-  color="red" 
-  size="huge"
-  :value="true"
-  :iconSet="['times', 'check']"
-  is-labelled/>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="red" 
+      size="huge" 
+      :value="true"
+      is-labelled/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField
+      color="red" 
+      size="huge"
+      :value="true"
+      :iconSet="['times', 'check']"
+      is-labelled/>
+  </GridCell>
+</Grid>
 ```
 
 ### Indication set

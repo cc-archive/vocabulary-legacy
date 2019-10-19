@@ -50,10 +50,20 @@
 
   // Color
 
-  --switch-field-off-background-color var(--switch-field-secondary)
-  --switch-field-on-background-color var(--switch-field-primary)
-
+  --switch-field-background-color var(--switch-field-secondary)
   --switch-field-handle-color var(--switch-field-tertiary)
+
+  &.checked
+    --switch-field-background-color var(--switch-field-primary)
+
+  &.slightly-simple,
+  &.extremely-simple
+    --switch-field-background-color white
+    --switch-field-handle-color var(--switch-field-secondary)
+
+    &.checked
+      --switch-field-handle-color var(--switch-field-primary)
+
   --switch-field-text-color var(--switch-field-tertiary)
 
   &.positive-indicating.positive-indicating
@@ -68,6 +78,20 @@
     &:not(.checked)
       --switch-field-text-color $color-context-negative-dark
 
+  &.slightly-simple
+    --switch-field-text-color var(--switch-field-secondary)
+
+    &.checked
+      --switch-field-text-color var(--switch-field-primary)
+
+  &.extremely-simple
+    --switch-field-text-color transparent // Hide text because space inadequate
+
+  --switch-field-border-color var(--switch-field-secondary)
+
+  &.checked
+    --switch-field-border-color var(--switch-field-primary)
+
   // Cursor
 
   --switch-field-cursor pointer
@@ -78,6 +102,14 @@
   &.read-only
     --switch-field-cursor default
 
+  // Border width
+
+  --switch-field-border-width 0
+
+  &.slightly-simple,
+  &.extremely-simple
+    --switch-field-border-width 1px
+
   // Border radius
 
   --switch-field-border-radius 0
@@ -87,6 +119,15 @@
 
   &.completely-rounded
     --switch-field-border-radius $radius-pill
+
+  // Size
+
+  $handle-size = 1.75em
+
+  --track-size 2.25em
+
+  &.extremely-simple
+    --track-size 0.25em
 
   // Rules
 
@@ -103,14 +144,14 @@
 
   cursor var(--switch-field-cursor)
 
-  background-color var(--switch-field-off-background-color)
+  background-color var(--switch-field-background-color)
 
-  width 3em
-  height 1.25em
+  width 4.5em
+  height var(--track-size)
 
-  border-width $space-small
-  border-style solid
-  border-color @background-color
+  box-sizing border-box
+
+  border var(--switch-field-border-width) solid var(--switch-field-border-color)
   border-radius calc(1.25 * var(--switch-field-border-radius))
 
   transition-property background-color, border-color
@@ -118,20 +159,22 @@
 
   // Children
 
-  &::after
+  &::after // Handle
     content ''
 
     position absolute
-    left 0
+    left $space-small
 
     background-color var(--switch-field-handle-color)
 
-    width 1.25em
-    height 1.25em
+    width $handle-size
+    height $handle-size
+
+    box-sizing border-box
 
     border-radius var(--switch-field-border-radius)
 
-    transition-property left, transform
+    transition-property left, background-color, transform
     transition-duration $duration-shortest
     transition-timing-function cubic-bezier(0.85, 1.15, 0.85, 1.15)
 
@@ -150,20 +193,20 @@
     // States
 
     &.off
-      right 0
+      right $space-normal
 
     &.on
-      left 0
+      left $space-normal
 
   // States
 
+  &.extremely-simple
+    margin-top 1em
+    margin-bottom 1em
+
   &.checked
-    background-color var(--switch-field-on-background-color)
-
-    border-color @background-color
-
     &::after
-      left calc(100% - 1.25em)
+      left 'calc(100% - %s - %s)' % ($space-small $handle-size)
 
   &.disabled,
   &.read-only
