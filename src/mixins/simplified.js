@@ -2,7 +2,7 @@ export default {
   props: {
     /**
      * _the amount of simplicity in the appearance of the component_
-     *t
+     *
      * ∈ {`'slight'`, `'extreme'`}
      */
     simplicity: {

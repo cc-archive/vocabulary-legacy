@@ -2,7 +2,7 @@ export default {
   props: {
     /**
      * _the amount of curvature on the vertices of the component_
-     *t
+     *
      * ∈ {`'slight'`, `'complete'`}
      */
     roundness: {
