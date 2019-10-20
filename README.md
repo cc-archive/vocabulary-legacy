@@ -61,7 +61,7 @@ A lot of features available via `npm` packages might not be supported via UMD.
 The showcase of the true extent of Vocabulary can be found in the
 **[live styleguide](https://creativecommons.github.io/cc-vocabulary/styleguide)**
 and the
-**[interactive storybook](https://creativecommons.github/io/cc-vocabulary/storybook)**
+**[interactive storybook](https://creativecommons.github.io/cc-vocabulary/storybook)**
 for the library, showcasing the components therein and variants thereof, on GitHub
 Pages. Search for a particular component using the search field or just explore
 the collection of components. If you find one that catches your fancy, play with
