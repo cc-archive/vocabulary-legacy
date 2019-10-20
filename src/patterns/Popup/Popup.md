@@ -74,9 +74,9 @@ A popup can be directed to react to one of two actions:
 
 ```jsx
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faMouse } from '@fortawesome/free-solid-svg-icons'
+import { faMousePointer } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faMouse);
+library.add(faMousePointer);
 
 let action = 'hover';
 let actionOptions = [
@@ -87,7 +87,7 @@ let actionOptions = [
 <SelectField
   v-model="action"
   color="blue"
-  icon="mouse"
+  icon="mouse-pointer"
   :option-list="actionOptions"/>
 <div style="padding: 100px 200px;">
   <Popup :action="action">
