@@ -9,7 +9,7 @@ let viewportMeta = [
 ].join(', ')
 let titleMeta = 'vo·cab·u·lar·y'
 let urlMeta = 'https://creativecommons.github.io/cc-vocabulary/'
-let descriptionMeta = 'A cohesive design system to unite the web-facing Creative Commons'
+let descriptionMeta = 'A cohesive design system to unite the web facing Creative Commons'
 let imageMeta = `${urlMeta}titlecard.png`
 
 let rootCss = 'https://unpkg.com/@creativecommons/vocabulary/css/root.css'
