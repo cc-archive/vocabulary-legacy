@@ -122,7 +122,10 @@ module.exports = {
     const name = path.basename(componentPath, '.vue')
     return `import { ${name} } from '@creativecommons/vocabulary'`
   },
-  renderRootJsx: path.join(__dirname, 'styleguidist/styleguide.root.js'),
+  renderRootJsx: path.join(
+    __dirname,
+    'styleguidist/components/styleguide.root.js'
+  ),
 
   // Organisation
   defaultExample: false,
