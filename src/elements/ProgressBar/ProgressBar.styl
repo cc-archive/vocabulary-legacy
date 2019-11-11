@@ -84,13 +84,18 @@
 
     border none
     border-radius var(--progress-bar-border-radius)
+    color var(--progress-bar-bar-color)
 
     overflow hidden
 
     // States
 
     &[value]
-      &::-moz-progress-bar,
+      &::-moz-progress-bar
+        background-color var(--progress-bar-bar-color)
+
+        transition width $duration-shortest
+        
       &::-webkit-progress-value
         background-color var(--progress-bar-bar-color)
 
@@ -112,7 +117,9 @@
 
       animation moveIndeterminate 1s linear infinite
 
-      &::-moz-progress-bar,
+      &::-moz-progress-bar
+        background-color transparent
+        
       &::-webkit-progress-bar
         background-color transparent
 
