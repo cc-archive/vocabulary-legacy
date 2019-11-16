@@ -3,7 +3,7 @@ Take a gander at this text. Now hover on it.
 ```jsx
 <br/>
 <br/>
-<span>The most restrictive license is the</span>
+<span>The most permissive CC license is the</span>
 <Popup
   to="top"
   color="orange">
