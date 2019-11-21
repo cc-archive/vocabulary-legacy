@@ -19,7 +19,7 @@ let imageStyle = {
     size="large"
     is-centered/>
   <Quote
-    color="blue"
+    color="orange"
     attribution="Douglas Adams">
     A common mistake that people make when trying<br/>
     to design something completely foolproof is<br/>
@@ -51,7 +51,7 @@ let imageStyle = {
     size="large"
     is-centered/>
   <Quote
-    color="blue"
+    color="green"
     attribution="Douglas Adams"
     is-lined>
     A common mistake that people make when trying<br/>
@@ -68,7 +68,7 @@ the heights of their companions.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Quote
-      color="orange"
+      color="green"
       attribution="The Bhagvad Gita"
       is-lined
       is-analected>
@@ -80,7 +80,7 @@ the heights of their companions.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Quote
-      color="magenta"
+      color="green"
       attribution="The Bhagvad Gita"
       is-lined
       is-analected>
@@ -105,9 +105,10 @@ A quote without a defined color set is black.
 ```
 
 As is the case with all of Vocabulary, definitions can be colored using any
-color from the set provided by CC Vocabulary. Black looks so plain! Also you
-may use one of the three shades, namely `light`, `dark` and `darker`, to
-accentuate the color.
+color from the set provided by CC Vocabulary. Black looks so plain!
+
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
+to accentuate the color.
 
 ```jsx
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -118,21 +119,20 @@ library.add(faFillDrip, faSwatchbook);
 let color = '';
 let colorOptions = [
   { value: '', text: 'None' },
-  { value: 'blue', text: 'Blue' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
   { value: 'green', text: 'Green' },
-  { value: 'magenta', text: 'Magenta' },
-  { value: 'olive', text: 'Olive' },
+  { value: 'blue', text: 'Blue' },
   { value: 'orange', text: 'Orange' },
-  { value: 'purple', text: 'Purple' },
-  { value: 'red', text: 'Red' },
-  { value: 'sand', text: 'Sand' },
-  { value: 'yellow', text: 'Yellow' }
+  { value: 'turquoise', text: 'Turquoise' },
 ];
 
 let shade = '';
 let shadeOptions = [
-  { value: 'light', text: 'Light' },
   { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
   { value: 'dark', text: 'Dark' },
   { value: 'darker', text: 'Darker' }
 ];
@@ -144,39 +144,27 @@ let quotes = {
   },
   blue: {
     attribution: 'Siouxsie Sioux',
-    quote: 'I love the ocean. I\'ve always liked the <b>blue</b>, so tranquil and peaceful and gliding. And the fear of it.'
+    quote: 'I love the ocean. I\'ve always liked the blue, so tranquil and peaceful and gliding. And the fear of it.'
   },
   green: {
     attribution: 'Martin Luther',
-    quote: 'For in the true nature of things, if we rightly consider, every <b>green</b> tree is far more glorious than if it were made of gold and silver.'
-  },
-  magenta: {
-    attribution: 'Joni Mitchell',
-    quote: 'I wanted <b>magenta</b> and turquoise and silver and gold.'
-  },
-  olive: {
-    attribution: 'Boris Johnson',
-    quote: 'My chances of being PM are about as good as the chances of finding Elvis on Mars, or my being reincarnated as an <b>olive</b>.'
+    quote: 'For in the true nature of things, if we rightly consider, every green tree is far more glorious than if it were made of gold and silver.'
   },
   orange: {
     attribution: 'Vincent Van Gogh',
-    quote: 'There is no blue without yellow and without <b>orange</b>.'
+    quote: 'There is no blue without yellow and without orange.'
   },
-  purple: {
-    attribution: 'Alice Walker',
-    quote: 'I think it pisses God off if you walk by the color <b>purple</b> in a field somewhere and don\'t notice it.'
-  },
-  red: {
+  tomato: {
     attribution: 'Thomas Holcroft',
-    quote: 'Love and a <b>red</b> rose can\'t be hid.'
+    quote: 'Love and a red rose can\'t be hid.'
   },
-  sand: {
-    attribution: 'William Blake',
-    quote: ' To see a world in a grain of <b>sand</b> and heaven in a wild flower, hold infinity in the palm of your hand and eternity in an hour.'
-  },
-  yellow: {
+  gold: {
     attribution: 'Michy Batshuayi',
-    quote: 'I love black and <b>yellow</b>. Black and yellow is Batman; black and yellow is Spongebob!'
+    quote: 'I love black and yellow. Black and yellow is Batman; black and yellow is Spongebob!'
+  },
+  turquoise: {
+    attribution: 'Christian Dior',
+    quote: 'The tones of grey, pale turquoise and pink will prevail.'
   }
 }
 
@@ -200,7 +188,7 @@ let quotes = {
   :attribution="quotes[color].attribution"
   is-lined
   is-analected>
-  <span v-html="quotes[color].quote"></span>
+  <span>{{ quotes[color].quote }}</span>
 </Quote>
 ```
 
@@ -219,7 +207,7 @@ For placement on dark or non-white backgrounds, use the inverted version.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Quote
-      color="magenta"
+      color="turqoise"
       attribution="Robert Frost"
       is-lined
       is-inverted>

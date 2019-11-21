@@ -13,7 +13,7 @@ import {
 
 library.add(faHome, faBook);
 
-<Navigation color="red">
+<Navigation color="tomato">
   <NavigationLink icon="home">
     Home page
   </NavigationLink>
@@ -37,7 +37,7 @@ Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 
 library.add(faHandshake);
 
-<Navigation color="green">
+<Navigation color="tomato">
   <NavigationLink>
     <template #addons>
       <LicenseIconography :icon-list="['']"/>

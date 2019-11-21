@@ -1,9 +1,9 @@
 ```jsx
 <Section
-  color="red"
-  roundness="rounded"
+  color="orange"
+  roundness="slight"
   is-raised>
-  <Heading :level="1" color="red">Heading</Heading>
+  <Heading :level="1" color="orange">Heading</Heading>
   <Paragraph color="blue" shade="dark">
     This is a paragraph of content that pertains to the heading above. This 
     makes enough justification for both of them to be grouped into a section. A
@@ -25,70 +25,55 @@ Without a color specified, the segment has no accent.
 Sections can be colored using any color from the set provided by CC Vocabulary.
 Variety is, after all, the spice of life.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="blue">Blue color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="green">Green color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="orange">Orange color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="olive">Olive color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="orange">Orange color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="purple">Purple color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="red">Red color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="sand">Sand color</Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Section color="yellow">Yellow color</Section>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Section
-      color="blue"
-      shade="light">
-      Light blue color
-    </Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Section color="blue">
-      Default blue color
-    </Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Section
-      color="blue"
-      shade="dark">
-      Dark blue color
-    </Section>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Section
-      color="blue"
-      shade="darker">
-      Darker blue color
-    </Section>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Section
+  :color="color ? color : null"
+  :shade="shade ? shade : null">
+  Blue color
+</Section>
 ```
 
 You can invert the section to create non-white backgrounds for content.
@@ -98,7 +83,7 @@ You can invert the section to create non-white backgrounds for content.
   <Paragraph is-inverted>Such readable. Much wow.</Paragraph> 
 </Section>
 <br/>
-<Section color="magenta" is-inverted>
+<Section color="turquoise" is-inverted>
   <Paragraph is-inverted>Such readable. Much wow.</Paragraph> 
 </Section>
 ```
@@ -111,9 +96,9 @@ A section can change the side on which the color appears.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="blue"
+      color="green"
       color-side="top">
-      <Heading :level="4" color="blue">Top accent</Heading>
+      <Heading :level="4" color="green">Top accent</Heading>
       <Paragraph>
         This section has accent on the top side which is the default.
       </Paragraph>
@@ -121,9 +106,9 @@ A section can change the side on which the color appears.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="blue"
+      color="green"
       color-side="bottom">
-      <Heading :level="4" color="blue">Bottom accent</Heading>
+      <Heading :level="4" color="green">Bottom accent</Heading>
       <Paragraph>
         This section has accent on the bottom side as opposed to the top.
       </Paragraph>
@@ -131,9 +116,9 @@ A section can change the side on which the color appears.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="blue"
+      color="green"
       color-side="left">
-      <Heading :level="4" color="blue">Left accent</Heading>
+      <Heading :level="4" color="green">Left accent</Heading>
       <Paragraph>
         This section has accent on the left side as opposed to the top.
       </Paragraph>
@@ -141,9 +126,9 @@ A section can change the side on which the color appears.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="blue"
+      color="green"
       color-side="right">
-      <Heading :level="4" color="blue">Right accent</Heading>
+      <Heading :level="4" color="green">Right accent</Heading>
       <Paragraph>
         This section has accent on the right side as opposed to the top.
       </Paragraph>
@@ -151,9 +136,9 @@ A section can change the side on which the color appears.
   </GridCell>
   <GridCell :span-set="[12, 12, 12, 12, 12]">
     <Section
-      color="blue"
+      color="green"
       color-side="none">
-      <Heading :level="4" color="blue">No accent</Heading>
+      <Heading :level="4" color="green">No accent</Heading>
       <Paragraph>
         This section has no accent on any side.
       </Paragraph>
@@ -205,7 +190,7 @@ aesthetic, a section can be made into a perfect pill shape.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="purple"
+      color="green"
       color-side="none"
       roundness="slight">
       <Paragraph>
@@ -215,7 +200,7 @@ aesthetic, a section can be made into a perfect pill shape.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Section
-      color="purple"
+      color="green"
       color-side="none"
       roundness="complete">
       <Paragraph>
@@ -229,9 +214,9 @@ aesthetic, a section can be made into a perfect pill shape.
 A section can be raised to convey some height using a shadow.
 
 ```jsx
-<Section color="magenta" is-raised>
+<Section color="green" is-raised>
   <Heading
-    color="magenta"
+    color="green"
     :level="4">
     Raised
   </Heading>
@@ -244,9 +229,9 @@ A section can be raised to convey some height using a shadow.
 A section can be compact so that it only takes the required amount of space.
 
 ```jsx
-<Section color="orange" is-compact>
+<Section color="green" is-compact>
   <Heading
-    color="orange"
+    color="green"
     :level="4">
     Compact
   </Heading>
@@ -259,9 +244,9 @@ A section can be compact so that it only takes the required amount of space.
 A section can be clingy so that it has _(close to)_ zero internal padding.
 
 ```jsx
-<Section color="sand" is-clingy>
+<Section color="green" is-clingy>
   <Heading
-    color="sand"
+    color="green"
     :level="4">
     Clingy
   </Heading>

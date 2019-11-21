@@ -13,7 +13,7 @@ library.add(faHome, faBook);
 
 <Header 
   appName="Vocabulary" 
-  color="blue">
+  color="orange">
   <Navigation
     is-inverted>
     <NavigationLink icon="home">
@@ -41,7 +41,7 @@ the CC lettermark.
 
 ```jsx { "props": { "className": "contain-content" } }
 <Header
-  color="red"
+  color="tomato"
   title="Vocabulary"
   homeUrl="https://opensource.creativecommons.org/"/>
 ```
@@ -57,7 +57,7 @@ component or a search box or the user profile. But those are just suggestions.
 Anything goes.
 
 ```jsx { "props": { "className": "contain-content" } }
-<Header color="green">
+<Header color="tomato">
   <template #branding>
     <BrandImagery
       color="white"
@@ -85,8 +85,9 @@ After having seen so many component you already know, the header can be colored
 using any color from the set provided by CC Vocabulary.
 
 Also you may use one of the two shades, namely `dark` and `darker`, to
-accentuate the color. Note that `light` is present and works, just looks
-terrible and it is not recommended unless you heavily customise the component.
+accentuate the color. Note that while `lighter` and `light` are present and work,
+they just look terrible and their use is not recommended unless you heavily 
+customise the component.
 
 Feel free to choose any color and shade of your choice, except maybe orange.
 Let's leave orange for the [main site](https://creativecommons.org), shall we?
@@ -100,20 +101,20 @@ library.add(faFillDrip, faSwatchbook);
 let color = '';
 let colorOptions = [
   { value: '', text: 'None' },
-  { value: 'blue', text: 'Blue' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
   { value: 'green', text: 'Green' },
-  { value: 'magenta', text: 'Magenta' },
-  { value: 'olive', text: 'Olive' },
+  { value: 'blue', text: 'Blue' },
   { value: 'orange', text: 'Orange' },
-  { value: 'purple', text: 'Purple' },
-  { value: 'red', text: 'Red' },
-  { value: 'sand', text: 'Sand' },
-  { value: 'yellow', text: 'Yellow' }
+  { value: 'turquoise', text: 'Turquoise' },
 ];
 
 let shade = '';
 let shadeOptions = [
   { value: '', text: 'Default' },
+  { value: 'lighter', text: '❌ Lighter' },
+  { value: 'light', text: '❌ Light' },
+  { value: 'normal', text: 'Normal' },
   { value: 'dark', text: 'Dark' },
   { value: 'darker', text: 'Darker' }
 ];

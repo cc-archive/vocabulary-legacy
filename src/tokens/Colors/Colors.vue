@@ -1,5 +1,6 @@
 <template>
-  <Grid density="sparse">
+  <Grid
+    :class="gridClasses">
     <GridCell
       :span-set="spanSet"
       v-for="(prop, index) in colors"
@@ -55,8 +56,13 @@
       }
     },
     computed: {
+      gridClasses: function () {
+        return [
+          `${this.category}-category`
+        ]
+      },
       spanSet: function () {
-        if (this.category === 'context') {
+        if (this.category === 'context' || this.category === 'hue') {
           return [12, 6, 4, 4, 4]
         } else {
           return [12, 6, 3, 3, 3]
@@ -71,6 +77,7 @@
             'category',
             function (color) {
               let shadeLevels = [
+                'default',
                 'tone_white', 'near_white', 'lighter', 'light',
                 'white_low', 'white_high',
                 'normal',

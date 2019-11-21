@@ -4,12 +4,12 @@ colors(property)
   &.inherit-colored
     {property} inherit
 
-  $colors = 'blue' 'green' 'magenta' 'olive' 'orange' 'purple' 'red' 'sand' 'yellow'
-  $shades = 'light' 'dark' 'darker'
+  $colors = 'tomato' 'blue' 'green' 'orange' 'gold' 'turquoise'
+  $shades = 'lighter' 'light' 'normal' 'dark' 'darker'
 
   for color in $colors
     &.{color}-colored
-      {property} lookup('$color-' + color)
+      {property} lookup('$color-' + color + '-default')
 
       for shade in $shades
         &.{shade}-shaded

@@ -19,11 +19,11 @@ aliases:
 
 props:
   color_tomato_lighter:
-    value: "hsl({!tomato}, 85%)"
+    value: "hsl({!tomato}, 70%)"
     category: color-group-hue-tomato
     comment: Lighter shade of tomato
   color_tomato_light:
-    value: "hsl({!tomato}, 70%)"
+    value: "hsl({!tomato}, 63%)"
     category: color-group-hue-tomato
     comment: Light shade of tomato
   color_tomato_normal:
@@ -31,11 +31,11 @@ props:
     category: color-group-hue-tomato
     comment: Normal shade of tomato
   color_tomato_dark:
-    value: "hsl({!tomato}, 40%)"
+    value: "hsl({!tomato}, 47%)"
     category: color-group-hue-tomato
     comment: Dark shade of tomato
   color_tomato_darker:
-    value: "hsl({!tomato}, 25%)"
+    value: "hsl({!tomato}, 40%)"
     category: color-group-hue-tomato
     comment: Darker shade of tomato
   color_tomato_default:
@@ -44,19 +44,19 @@ props:
     comment: Default shade of tomato
 
   color_gold_lighter:
-    value: "hsl({!gold}, 91%)"
+    value: "hsl({!gold}, 61%)"
     category: color-group-hue-gold
     comment: Lighter shade of gold
   color_gold_light:
-    value: "hsl({!gold}, 76%)"
+    value: "hsl({!gold}, 54%)"
     category: color-group-hue-gold
     comment: Light shade of gold
   color_gold_normal:
-    value: "hsl({!gold}, 61%)"
+    value: "hsl({!gold}, 46%)"
     category: color-group-hue-gold
     comment: Normal shade of gold
   color_gold_dark:
-    value: "hsl({!gold}, 46%)"
+    value: "hsl({!gold}, 38%)"
     category: color-group-hue-gold
     comment: Dark shade of gold
   color_gold_darker:
@@ -69,23 +69,23 @@ props:
     comment: Default shade of gold
 
   color_green_lighter:
-    value: "hsl({!green}, 93%)"
+    value: "hsl({!green}, 48%)"
     category: color-group-hue-green
     comment: Lighter shade of green
   color_green_light:
-    value: "hsl({!green}, 78%)"
+    value: "hsl({!green}, 41%)"
     category: color-group-hue-green
     comment: Light shade of green
   color_green_normal:
-    value: "hsl({!green}, 63%)"
+    value: "hsl({!green}, 33%)"
     category: color-group-hue-green
     comment: Normal shade of green
   color_green_dark:
-    value: "hsl({!green}, 48%)"
+    value: "hsl({!green}, 25%)"
     category: color-group-hue-green
     comment: Dark shade of green
   color_green_darker:
-    value: "hsl({!green}, 33%)"
+    value: "hsl({!green}, 18%)"
     category: color-group-hue-green
     comment: Darker shade of green
   color_green_default:
@@ -94,36 +94,36 @@ props:
     comment: Default shade of green
 
   color_blue_lighter:
-    value: "hsl({!blue}, 86%)"
+    value: "hsl({!blue}, 66%)"
     category: color-group-hue-blue
     comment: Lighter shade of blue
   color_blue_light:
-    value: "hsl({!blue}, 71%)"
+    value: "hsl({!blue}, 59%)"
     category: color-group-hue-blue
     comment: Light shade of blue
   color_blue_normal:
-    value: "hsl({!blue}, 56%)"
+    value: "hsl({!blue}, 51%)"
     category: color-group-hue-blue
     comment: Normal shade of blue
   color_blue_dark:
-    value: "hsl({!blue}, 41%)"
+    value: "hsl({!blue}, 43%)"
     category: color-group-hue-blue
     comment: Dark shade of blue
   color_blue_darker:
-    value: "hsl({!blue}, 26%)"
+    value: "hsl({!blue}, 36%)"
     category: color-group-hue-blue
     comment: Darker shade of blue
   color_blue_default:
-    value: "hsl({!blue}, 41%)"
+    value: "hsl({!blue}, 43%)"
     category: color-group-hue-blue
     comment: Default shade of blue
 
   color_orange_lighter:
-    value: "hsl({!orange}, 87%)"
+    value: "hsl({!orange}, 72%)"
     category: color-group-hue-orange
     comment: Lighter shade of orange
   color_orange_light:
-    value: "hsl({!orange}, 72%)"
+    value: "hsl({!orange}, 65%)"
     category: color-group-hue-orange
     comment: Light shade of orange
   color_orange_normal:
@@ -131,11 +131,11 @@ props:
     category: color-group-hue-orange
     comment: Normal shade of orange
   color_orange_dark:
-    value: "hsl({!orange}, 42%)"
+    value: "hsl({!orange}, 49%)"
     category: color-group-hue-orange
     comment: Dark shade of orange
   color_orange_darker:
-    value: "hsl({!orange}, 27%)"
+    value: "hsl({!orange}, 42%)"
     category: color-group-hue-orange
     comment: Darker shade of orange
   color_orange_default:
@@ -144,58 +144,58 @@ props:
     comment: Default shade of orange
 
   color_turquoise_lighter:
-    value: "hsl({!turquoise}, 88%)"
+    value: "hsl({!turquoise}, 68%)"
     category: color-group-hue-turquoise
     comment: Lighter shade of turquoise
   color_turquoise_light:
-    value: "hsl({!turquoise}, 73%)"
+    value: "hsl({!turquoise}, 61%)"
     category: color-group-hue-turquoise
     comment: Light shade of turquoise
   color_turquoise_normal:
-    value: "hsl({!turquoise}, 58%)"
+    value: "hsl({!turquoise}, 53%)"
     category: color-group-hue-turquoise
     comment: Normal shade of turquoise
   color_turquoise_dark:
-    value: "hsl({!turquoise}, 43%)"
+    value: "hsl({!turquoise}, 45%)"
     category: color-group-hue-turquoise
     comment: Dark shade of turquoise
   color_turquoise_darker:
-    value: "hsl({!turquoise}, 28%)"
+    value: "hsl({!turquoise}, 38%)"
     category: color-group-hue-turquoise
     comment: Darker shade of turquoise
   color_turquoise_default:
-    value: "hsl({!turquoise}, 43%)"
+    value: "hsl({!turquoise}, 45%)"
     category: color-group-hue-turquoise
     comment: Default shade of turquoise
 
   color_context_positive_light:
-    value: "hsl({!green}, 93%)"
+    value: "hsl({!green}, 58%)"
     category: color-group-context-positive
     comment: Slightly light shade of positive context
   color_context_positive:
-    value: "hsl({!green}, 63%)"
+    value: "hsl({!green}, 33%)"
     category: color-group-context-positive
     comment: Base shade of positive context
   color_context_positive_dark:
-    value: "hsl({!green}, 33%)"
+    value: "hsl({!green}, 08%)"
     category: color-group-context-positive
     comment: Slightly dark shade of positive context
 
   color_context_probably_light:
-    value: "hsl({!gold}, 91%)"
+    value: "hsl({!gold}, 71%)"
     category: color-group-context-probably
     comment: Slightly light shade of intermediate context
   color_context_probably:
-    value: "hsl({!gold}, 61%)"
+    value: "hsl({!gold}, 46%)"
     category: color-group-context-probably
     comment: Base shade of intermediate context
   color_context_probably_dark:
-    value: "hsl({!gold}, 31%)"
+    value: "hsl({!gold}, 21%)"
     category: color-group-context-probably
     comment: Slightly dark shade of intermediate context
 
   color_context_negative_light:
-    value: "hsl({!tomato}, 85%)"
+    value: "hsl({!tomato}, 80%)"
     category: color-group-context-negative
     comment: Slightly light shade of negative context
   color_context_negative:
@@ -203,7 +203,7 @@ props:
     category: color-group-context-negative
     comment: Base shade of negative context
   color_context_negative_dark:
-    value: "hsl({!tomato}, 25%)"
+    value: "hsl({!tomato}, 30%)"
     category: color-group-context-negative
     comment: Slightly dark shade of negative context
 
@@ -212,28 +212,28 @@ props:
     category: color-group-tone-white
     comment: Pure white color
   color_tone_near_white:
-    value: "hsl({!none}, 90%)"
+    value: "hsl({!none}, 86%)"
     category: color-group-tone-white
     comment: Lightest grey, near white
   color_tone_grey_lighter:
-    value: "hsl({!none}, 80%)"
+    value: "hsl({!none}, 72%)"
     category: color-group-tone-white
     comment: Lighter grey
   color_tone_grey_light:
-    value: "hsl({!none}, 60%)"
+    value: "hsl({!none}, 58%)"
     category: color-group-tone-white
     comment: Slightly light grey
 
   color_tone_grey_dark:
-    value: "hsl({!none}, 40%)"
+    value: "hsl({!none}, 42%)"
     category: color-group-tone-black
     comment: Slightly dark grey
   color_tone_grey_darker:
-    value: "hsl({!none}, 20%)"
+    value: "hsl({!none}, 28%)"
     category: color-group-tone-black
     comment: Darker grey
   color_tone_near_black:
-    value: "hsl({!none}, 10%)"
+    value: "hsl({!none}, 14%)"
     category: color-group-tone-black
     comment: Darkest grey, near black
   color_tone_black:

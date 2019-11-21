@@ -58,12 +58,12 @@ let indication = (value) => {
 <Heading
   color="green"
   :level="4">
-  Submit the <em>'Right answer'</em>
+  Try entering <em>'Right answer'</em>
 </Heading>
 <Heading
-  color="red"
+  color="tomato"
   :level="4">
-  But do try the <em>'Wrong answer'</em>
+  Try entering <em>'Wrong answer'</em>
 </Heading>
 <InputField
   v-model="value"

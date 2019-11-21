@@ -20,72 +20,57 @@ A button without color is black.
 ```
 
 As is tradition, buttons can be colored with any color from the set provided by
-CC Vocabulary. We know you hate that grey button.
+CC Vocabulary. We know you hate that black button.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="blue">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="green">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="magenta">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="olive">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="orange">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="purple">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="red">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="sand">Click me</Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Button color="yellow">Click me</Button>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button 
-      color="blue" 
-      shade="light">
-      Click me
-    </Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button color="blue">
-      Click me
-    </Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button 
-      color="blue" 
-      shade="dark">
-      Click me
-    </Button>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Button 
-      color="blue" 
-      shade="darker">
-      Click me
-    </Button>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Button
+  :color="color ? color : null"
+  :shade="shade ? shade : null">
+  Click me
+</Button>
 ```
 
 If the button is to be placed on a dark or non-white background, we use the 
@@ -107,14 +92,14 @@ inverted variant.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Button 
-      color="magenta" 
+      color="turquoise" 
       is-inverted>
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Button 
-      color="magenta" 
+      color="turquoise" 
       is-inverted
       simplicity="slight">
       Click me
@@ -131,11 +116,11 @@ FontAwesome library by the application.
 
 ```jsx
 <Button 
-  color="red" 
+  color="tomato" 
   icon="hand-point-up"/>
 <br/><br/>
 <Button 
-  color="red" 
+  color="tomato" 
   icon="hand-point-up">
   Click me
 </Button>
@@ -145,7 +130,7 @@ If you'd like your own something there, you can override the add-on slot with
 something you like.
 
 ```jsx
-<Button color="green">
+<Button color="tomato">
   <template #addons>
     <LicenseBadge license="by-sa"/>
   </template>
@@ -165,20 +150,20 @@ icon buttons.
 <Grid>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       icon="hand-point-up"
       roundness="slight"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       roundness="slight">
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       icon="hand-point-up"
       roundness="slight">
       Click me
@@ -186,20 +171,20 @@ icon buttons.
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       icon="hand-point-up"
       roundness="complete"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       roundness="complete">
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="magenta"
+      color="green"
       icon="hand-point-up"
       roundness="complete">
       Click me
@@ -216,20 +201,20 @@ really what the user wanted.
 <Grid>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       icon="hand-point-up"
       simplicity="slight"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       simplicity="slight">
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       icon="hand-point-up"
       simplicity="slight">
       Click me
@@ -237,20 +222,20 @@ really what the user wanted.
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       icon="hand-point-up"
       simplicity="extreme"/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       simplicity="extreme">
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="purple"
+      color="green"
       icon="hand-point-up"
       simplicity="extreme">
       Click me
@@ -266,20 +251,20 @@ a certain action.
 <Grid>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="orange"
+      color="green"
       icon="hand-point-up"
       is-call-to-action/>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="orange"
+      color="green"
       is-call-to-action>
       Click me
     </Button>
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Button
-      color="orange"
+      color="green"
       icon="hand-point-up"
       is-call-to-action>
       Click me
@@ -314,8 +299,7 @@ let style = {
 
 <div :style="style">
   <Button
-    color="blue"
-    shade="dark"
+    color="green"
     join-side="right"
     simplicity="slight">
     <template #addons>
@@ -326,13 +310,11 @@ let style = {
       fixed-width/>
   </Button>
   <InputField
-    color="blue"
-    shade="dark"
+    color="green"
     :icon-set="['arrow-left', 'arrow-right']"
     simplicity="slight"/>
   <Button 
-    color="blue"
-    shade="dark"
+    color="green"
     icon="arrow-left"
     join-side="left"
     simplicity="slight">
@@ -348,21 +330,21 @@ Styles can be combined.
 Buttons come in all sizes, from small to mega.
 
 ```jsx
-<Button color="purple" size="small">Click me</Button>
+<Button color="blue" size="small">Click me</Button>
 <br/><br/>
-<Button color="purple">Click me</Button>
+<Button color="blue">Click me</Button>
 <br/><br/>
-<Button color="purple" size="big">Click me</Button>
+<Button color="blue" size="big">Click me</Button>
 <br/><br/>
-<Button color="purple" size="large">Click me</Button>
+<Button color="blue" size="large">Click me</Button>
 <br/><br/>
-<Button color="purple" size="huge">Click me</Button>
+<Button color="blue" size="huge">Click me</Button>
 <br/><br/>
-<Button color="purple" size="enormous">Click me</Button>
+<Button color="blue" size="enormous">Click me</Button>
 <br/><br/>
-<Button color="purple" size="gigantic">Click me</Button>
+<Button color="blue" size="gigantic">Click me</Button>
 <br/><br/>
-<Button color="purple" size="mega">Click me</Button>
+<Button color="blue" size="mega">Click me</Button>
 ```
 
 ### Indication set

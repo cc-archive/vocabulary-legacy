@@ -13,7 +13,7 @@ library.add(faHome, faBook);
 
 <Header 
   appName="Vocabulary" 
-  color="blue">
+  color="orange">
   <Navigation
     is-inverted>
     <NavigationLink icon="home">

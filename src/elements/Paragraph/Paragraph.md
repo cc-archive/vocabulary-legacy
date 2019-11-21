@@ -28,7 +28,7 @@ decreased as per the needs of the situation.
   <GridCell :spanSet="[12, 6, 4, 4, 4]">
     <Heading
       :level="3"
-      color="red">
+      color="tomato">
       Dense
     </Heading>
     <Paragraph density="dense">
@@ -40,7 +40,7 @@ decreased as per the needs of the situation.
   <GridCell :spanSet="[12, 6, 4, 4, 4]">
     <Heading
       :level="3"
-      color="yellow">
+      color="gold">
       Default
     </Heading>
     <Paragraph>
@@ -81,58 +81,54 @@ A paragraph without a specified color, inherits it from the parent.
 
 Paragraphs can be colored for some reason.
 
-```jsx
-<Paragraph color="blue">
-  This is a paragraph colored blue.
-</Paragraph>
-<Paragraph color="green">
-  This is a paragraph colored green.
-</Paragraph>
-<Paragraph color="magenta">
-  This is a paragraph colored magenta.
-</Paragraph>
-<Paragraph color="olive">
-  This is a paragraph colored olive.
-</Paragraph>
-<Paragraph color="orange">
-  This is a paragraph colored orange.
-</Paragraph>
-<Paragraph color="purple">
-  This is a paragraph colored purple.
-</Paragraph>
-<Paragraph color="red">
-  This is a paragraph colored red.
-</Paragraph>
-<Paragraph color="sand">
-  This is a paragraph colored sand.
-</Paragraph>
-<Paragraph color="yellow">
-  This is a paragraph colored yellow.
-</Paragraph>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
 <Paragraph
-  color="blue"
-  shade="light">
-  This is a paragraph colored the light shade of blue.
-</Paragraph>
-<Paragraph
-  color="blue">
-  This is a paragraph colored blue.
-</Paragraph>
-<Paragraph
-  color="blue"
-  shade="dark">
-  This is a paragraph colored the dark shade of blue.
-</Paragraph>
-<Paragraph
-  color="blue"
-  shade="darker">
-  This is a paragraph colored the darker shade of blue.
+  :color="color ? color : null"
+  :shade="shade ? shade : null">
+  This is a paragraph.
 </Paragraph>
 ```
 

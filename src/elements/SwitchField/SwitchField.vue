@@ -103,7 +103,7 @@
       /**
        * _the state to indicate the component in_
        *
-       * ∈ {`'negative'`, `'positive'`, `'probably'`, `'conditional'`}
+       * ∈ {`'negative'`, `'positive'`, `'probably'`, `'conditional'`, `'anticonditional'`}
        */
       indication: {
         type: String,
@@ -111,7 +111,8 @@
           'negative',
           'positive',
           'probably',
-          'conditional'
+          'conditional',
+          'anticonditional'
         ].includes(val)
       }
     },

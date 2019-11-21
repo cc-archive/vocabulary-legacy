@@ -23,85 +23,54 @@ A progress bar without the color specified indicates progress in black.
 You already know that the progress bar can be colored using any color from the 
 set provided by CC Vocabulary. Black is no fit color for a progress bar. 
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="blue"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="green"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="magenta"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="olive"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="orange"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="purple"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="red"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="sand"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <ProgressBar
-      color="yellow"
-      :value="20"/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <ProgressBar 
-      color="blue"
-      shade="light"
-      :value="20"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <ProgressBar 
-      color="blue"
-      :value="40"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <ProgressBar 
-      color="blue"
-      shade="dark"
-      :value="60"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <ProgressBar 
-      color="blue"
-      shade="darker"
-      :value="80"/>
-  </GridCell>
-</GridCell>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<ProgressBar
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :value="20"/>
 ```
 
 On dark and non-white backgrounds, use the inverted option.
@@ -119,14 +88,14 @@ On dark and non-white backgrounds, use the inverted option.
   </GridCell>
   <GridCell :spanSet="[12, 6, 6, 6, 6]">
     <ProgressBar
-      color="magenta"
+      color="turquoise"
       :value="20" 
       is-percent-visible 
       is-inverted/>
   </GridCell>
   <GridCell :spanSet="[12, 6, 6, 6, 6]">
     <ProgressBar
-      color="magenta"
+      color="turquoise"
       is-inverted/>
   </GridCell>
 </Grid>
@@ -139,7 +108,7 @@ to it.
 
 ```jsx
 <ProgressBar 
-  color="red"
+  color="tomato"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
@@ -150,7 +119,7 @@ demands, you can swap them out for things that do.
 
 ```jsx
 <ProgressBar 
-  color="green" 
+  color="tomato" 
   :value="20">
   <template #leftAddons>
     <strong>:-(</strong>
@@ -167,55 +136,55 @@ Progress bars come in all sizes, from small to mega.
 
 ```jsx
 <ProgressBar
-  color="purple"
+  color="blue"
   size="small"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="big"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="large"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="huge"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="enormous"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="gigantic"
   icon="hourglass-half"
   :value="20"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="purple"
+  color="blue"
   size="mega"
   icon="hourglass-half"
   :value="20"
@@ -230,14 +199,14 @@ antithetical to the traditional CC design aesthetic.
 
 ```jsx
 <ProgressBar
-  color="blue"
+  color="green"
   icon="hourglass-half"
   :value="20"
   roundness="slight"
   is-percent-visible/>
 <br/><br/>
 <ProgressBar
-  color="blue"
+  color="green"
   icon="hourglass-half"
   :value="20"
   roundness="complete"

@@ -3,7 +3,8 @@
   is-raised
   is-compact>
   <Heading 
-    :level="1">
+    :level="1"
+    color="orange">
     Hello World!
   </Heading>
   <Paragraph>

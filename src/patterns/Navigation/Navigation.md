@@ -1,6 +1,6 @@
 If a navigation bar of links looks like this, _"I'm going on an adventure!"_
 
-```jsx { "props": { "className": "dark-background" } }
+```jsx
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
   faHome,
@@ -37,9 +37,10 @@ A navigation bar is black colored by default.
 ```
 
 Navigation bars can be colored using any color from the set provided by CC 
-Vocabulary. Nothing to discourage exploration like the color black. Also you
-may use one of the three shades, namely `light`, `dark` and `darker`, to 
-accentuate the color.
+Vocabulary. Nothing to discourage exploration like the color black.
+
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
+to accentuate the color.
 
 ```jsx
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -50,21 +51,20 @@ library.add(faFillDrip, faSwatchbook);
 let color = '';
 let colorOptions = [
   { value: '', text: 'None' },
-  { value: 'blue', text: 'Blue' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
   { value: 'green', text: 'Green' },
-  { value: 'magenta', text: 'Magenta' },
-  { value: 'olive', text: 'Olive' },
+  { value: 'blue', text: 'Blue' },
   { value: 'orange', text: 'Orange' },
-  { value: 'purple', text: 'Purple' },
-  { value: 'red', text: 'Red' },
-  { value: 'sand', text: 'Sand' },
-  { value: 'yellow', text: 'Yellow' }
+  { value: 'turquoise', text: 'Turquoise' },
 ];
 
 let shade = '';
 let shadeOptions = [
-  { value: 'light', text: 'Light' },
   { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
   { value: 'dark', text: 'Dark' },
   { value: 'darker', text: 'Darker' }
 ];
@@ -101,7 +101,7 @@ On dark backgrounds, the component can be inverted.
   <NavigationLink>Three</NavigationLink>
 </Navigation>
 <br/>
-<Navigation color="magenta" is-inverted>
+<Navigation color="turquoise" is-inverted>
   <NavigationLink>One</NavigationLink>
   <NavigationLink>Two</NavigationLink>
   <NavigationLink>Three</NavigationLink>

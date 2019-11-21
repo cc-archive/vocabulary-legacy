@@ -2,7 +2,7 @@ A rating component looks like this.
 
 ```jsx
 <Rating
-  color="red"
+  color="orange"
   size="huge"
   :icon-set="['heart']"
   :value="3"
@@ -20,85 +20,54 @@ A rating bar without a color specified is black.
 Ratings can be colored using any color from the set provided by CC Vocabulary.
 A black ratings bar, come on!
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="blue"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="green"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="magenta"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="olive"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="orange"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="purple"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="red"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="sand"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Rating
-      color="yellow"
-      :value="3"/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating
-      color="blue"
-      shade="light"
-      :value="1"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating
-      color="blue" 
-      :value="2"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating
-      color="blue"
-      shade="dark"
-      :value="3"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Rating
-      color="blue"
-      shade="darker"
-      :value="4"/>
-  </GridCell>
-</GridCell>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Rating
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :value="3"/>
 ```
 
 On dark or non-white backgrounds use the inverted version of the component.
@@ -109,7 +78,7 @@ On dark or non-white backgrounds use the inverted version of the component.
   is-inverted/>
 <br/><br/>
 <Rating
-  color="magenta"
+  color="turquoise"
   :value="3"
   is-inverted/>
 ```
@@ -120,48 +89,48 @@ Ratings come in all sizes, from small to mega.
 
 ```jsx
 <Rating
-  color="purple"
+  color="blue"
   size="small"
   :max="8"
   :value="1"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   :max="8"
   :value="2"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="big"
   :max="8"
   :value="3"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="large"
   :max="8"
   :value="4"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="huge"
   :max="8"
   :value="5"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="enormous"
   :max="8"
   :value="6"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="gigantic"
   :max="8"
   :value="7"/>
 <br/><br/>
 <Rating
-  color="purple"
+  color="blue"
   size="mega"
   :max="8"
   :value="8"/>
@@ -176,7 +145,7 @@ array length is less or more than prop `max`.
 
 ```jsx
 <Rating
-  color="red"
+  color="green"
   :icon-set="['heart']"
   :value="3"/>
 ```
@@ -186,7 +155,7 @@ the current rating will clear it altogether.
 
 ```jsx
 <Rating
-  color="yellow"
+  color="green"
   :value="3"
   is-toggleable/>
 ```
@@ -217,7 +186,7 @@ You can increase the maximum rating available on the bar.
 
 ```jsx
 <Rating
-  color="yellow"
+  color="green"
   :max="10"
   :value="5"/>
 ```

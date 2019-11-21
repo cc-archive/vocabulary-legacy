@@ -1,20 +1,20 @@
 ```jsx
 <Heading
   :level="1"
-  color="green"
-  shade="dark">
+  color="orange">
   Hello World!
 </Heading>
 <Paragraph>
-  The heading above is colored a <strong>dark</strong> shade of 
-  <strong>green</strong>.
+  The heading above is colored <strong>orange</strong>.
 </Paragraph> 
 ```
 
 ### Color set
 
 Vocabulary has a rich set of colors, covering the both primary and secondary 
-colors on the spectrum along with their darker and lighter hues.
+colors on the spectrum along with their darker and lighter hues. Each color also
+has a default shade, not necessarily the normal one) that the styleguide specifies
+as preferred.
 
 ```jsx noeditor
 <Colors category="hue"/>

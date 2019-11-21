@@ -41,59 +41,58 @@ let spanSet = [12, 6];
 <Heading
   :level="3"
   color="green"
-  shade="dark">
+  shade="darker">
   Sparser
 </Heading>
 <Grid density="sparser">
-  <GridCell :style="style('#01a635')" :span-set="spanSet"/>
-  <GridCell :style="style('#01a635')" :span-set="spanSet"/>
+  <GridCell :style="style('#04a434')" :span-set="spanSet"/>
+  <GridCell :style="style('#04a434')" :span-set="spanSet"/>
 </Grid>
 <Heading
   :level="3"
-  color="green">
+  color="green"
+  shade="dark">
   Sparse
 </Heading>
 <Grid density="sparse">
-  <GridCell :style="style('#98c807')" :span-set="spanSet"/>
-  <GridCell :style="style('#98c807')" :span-set="spanSet"/>
+  <GridCell :style="style('#06ef4c')" :span-set="spanSet"/>
+  <GridCell :style="style('#06ef4c')" :span-set="spanSet"/>
 </Grid>
 <Heading
   :level="3"
-  color="yellow">
+  color="gold">
   Default
 </Heading>
 <Grid>
-  <GridCell :style="style('#edd812')" :span-set="spanSet"/>
-  <GridCell :style="style('#edd812')" :span-set="spanSet"/>
+  <GridCell :style="style('#ebb800')" :span-set="spanSet"/>
+  <GridCell :style="style('#ebb800')" :span-set="spanSet"/>
 </Grid>
 <Heading
   :level="3"
-  color="red">
+  color="tomato"
+  shade="dark">
   Dense
 </Heading>
 <Grid density="dense">
-  <GridCell :style="style('#d13814')" :span-set="spanSet"/>
-  <GridCell :style="style('#d13814')" :span-set="spanSet"/>
+  <GridCell :style="style('#bc3510')" :span-set="spanSet"/>
+  <GridCell :style="style('#bc3510')" :span-set="spanSet"/>
 </Grid>
 <Heading
   :level="3"
-  color="red"
-  shade="dark">
+  color="tomato"
+  shade="darker">
   Denser
 </Heading>
 <Grid density="denser">
-  <GridCell :style="style('#912b10')" :span-set="spanSet"/>
-  <GridCell :style="style('#912b10')" :span-set="spanSet"/>
+  <GridCell :style="style('#75210a')" :span-set="spanSet"/>
+  <GridCell :style="style('#75210a')" :span-set="spanSet"/>
 </Grid>
-<Heading
-  :level="3"
-  color="red"
-  shade="darker">
+<Heading :level="3">
   Full
 </Heading>
 <Grid density="full">
-  <GridCell :style="style('#5a1c0e')" :span-set="spanSet"/>
-  <GridCell :style="style('#5a1c0e')" :span-set="spanSet"/>
+  <GridCell :style="style('#000000')" :span-set="spanSet"/>
+  <GridCell :style="style('#000000')" :span-set="spanSet"/>
 </Grid>
 ```
 

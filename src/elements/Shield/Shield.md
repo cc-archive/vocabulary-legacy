@@ -5,14 +5,6 @@ A set of shields look like this.
   color="orange"
   label="CC"
   message="vocabulary"/>
-<Shield
-  color="green" shade="dark"
-  label="Build"
-  message="passing"/>
-<Shield
-  color="blue"
-  label="License"
-  message="MIT"/>
 ```
 
 ### Color set
@@ -28,98 +20,55 @@ A shield without any given color is grey.
 The message part of the shield can be colored with any color from the set
 provided by CC Vocabulary. No one likes grey.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="blue"
-      label="Color"
-      message="Blue"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="green"
-      label="Color"
-      message="Green"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="magenta"
-      label="Color"
-      message="Magenta"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="olive"
-      label="Color"
-      message="Olive"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="orange"
-      label="Color"
-      message="Orange"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="purple"
-      label="Color"
-      message="Purple"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="red"
-      label="Color"
-      message="Red"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="sand"
-      label="Color"
-      message="Sand"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Shield
-      color="yellow"
-      label="Color"
-      message="Yellow"/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield
-      color="blue"
-      shade="light"
-      label="Shade"
-      message="Light" />
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield
-      color="blue"
-      label="Shade"
-      message="Default" />
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield
-      color="blue"
-      shade="dark"
-      label="Shade"
-      message="Dark" />
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Shield
-      color="blue"
-      shade="darker"
-      label="Shade"
-      message="Darker" />
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Shield
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  label="Color"
+  :message="color ? color : 'color'"/>
 ```
 
 On a dark or non-white background, use the inverted type of shield.
@@ -131,7 +80,7 @@ On a dark or non-white background, use the inverted type of shield.
   is-inverted/>
 <br/><br/>
 <Shield
-  color="magenta"
+  color="turquoise"
   label="Dark?"
   message="Inverted"
   is-inverted/>
@@ -145,7 +94,7 @@ needed or desired.
 
 ```jsx
 <Shield
-  color="orange"
+  color="green"
   :lowercase-set="[false, true]"
   label="Creative Commons"
   message="When we share, everyone wins"/>
@@ -156,13 +105,13 @@ can go against the CC design aesthetic and make it completely rounded.
 
 ```jsx
 <Shield
-  color="blue"
+  color="green"
   label="Roundness"
   message="Slight"
   roundness="slight"/>
 <br/><br/>
 <Shield
-  color="blue"
+  color="green"
   label="Roundness"
   message="Complete"
   roundness="complete"/>
@@ -173,13 +122,13 @@ or extremely simple, which is even less eye-catching.
 
 ```jsx
 <Shield
-  color="magenta"
+  color="green"
   label="Simplicity"
   message="Slight"
   simplicity="slight"/>
 <br/><br/>
 <Shield
-  color="magenta"
+  color="green"
   label="Simplicity"
   message="Extreme"
   simplicity="extreme"/>
@@ -192,48 +141,48 @@ Shields come in all sizes.
 
 ```jsx
 <Shield
-  color="purple"
+  color="blue"
   size="small"
   label="Size"
   message="Level 1"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   label="Size"
   message="Level 2"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="big"
   label="Size"
   message="Level 3"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="large"
   label="Size"
   message="Level 4"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="huge"
   label="Size"
   message="Level 5"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="enormous"
   label="Size"
   message="Level 6"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="gigantic"
   label="Size"
   message="Level 7"/>
 <br/><br/>
 <Shield
-  color="purple"
+  color="blue"
   size="mega"
   label="Size"
   message="Level 8"/>
@@ -246,7 +195,7 @@ A label accepts strings for the label and the message via the `label` and
 
 ```jsx
 <Shield
-  color="red"
+  color="tomato"
   label="Customisation"
   message="None"/>
 ``` 
@@ -255,7 +204,7 @@ But there are times when you just want to control the formatting of the text or
 want some additional stuff to go in those sections.
 
 ```jsx
-<Shield color="green">
+<Shield color="tomato">
   <template #label>
      <LicenseIconography :icon-list="['', 'by']"/>
   </template>

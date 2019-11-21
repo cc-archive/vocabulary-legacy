@@ -1,6 +1,7 @@
 ```jsx
 <Heading
-  :level="1">
+  :level="1"
+  color="orange">
   Hello World!
 </Heading>
 <Paragraph>
@@ -14,7 +15,8 @@
 Vocabulary provides a number of font sizes calculated using a harmonic scale 
 that scales `4em` over 6 harmonics.
 
-The examples below demonstrate font sizes on 'Fira Sans'.
+The examples below demonstrate font sizes on
+[Fira Sans by Mozilla](https://fonts.google.com/specimen/Fira+Sans).
 
 ```jsx noeditor
 <Fonts property="size"/>
@@ -25,7 +27,8 @@ The examples below demonstrate font sizes on 'Fira Sans'.
 In each of these sizes, Vocabulary uses provides three distinct font weights, 
 namely light, normal and bold.
 
-The examples below demonstrate font weights on 'Fira Sans'.
+The examples below demonstrate font weights on
+[Fira Sans by Mozilla](https://fonts.google.com/specimen/Fira+Sans).
 
 ```jsx noeditor
 <Fonts property="weight"/>

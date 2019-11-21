@@ -3,7 +3,7 @@
     <SelectField
       v-model="language"
       v-bind="$attrs"
-      color="orange"
+      :color="$attrs.color || 'orange'"
       icon="globe"
       :option-list="localeOptions"
       @change="setLocale"/>

@@ -42,71 +42,36 @@ let optionList = [
 Looks quite drab, we know. So they can be colored with any color from the set 
 provided by CC Vocabulary.
 
-```jsx
-let optionList = [
-  {
-    value: 'a',
-    text: 'Option A'
-  },
-  {
-    value: 'b',
-    text: 'Option B'
-  }
-];
-
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="blue"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="green"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="magenta"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="olive"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="orange"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="purple"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="red"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="sand"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SelectField
-      color="yellow"
-      :option-list="optionList"/>
-  </GridCell>
-</Grid>
-``` 
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
 let optionList = [
   {
     value: 'a',
@@ -118,31 +83,25 @@ let optionList = [
   }
 ];
 
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SelectField
-      color="blue"
-      shade="light"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SelectField
-      color="blue"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SelectField
-      color="blue"
-      shade="dark"
-      :option-list="optionList"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SelectField
-      color="blue"
-      shade="darker"
-      :option-list="optionList"/>
-  </GridCell>
-</Grid>
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+
+<SelectField
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :option-list="optionList"/>
 ```
 
 On a dark or non-white background, the inverted version of the component should
@@ -174,13 +133,13 @@ let optionList = [
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
-      color="magenta"
+      color="turquoise"
       :option-list="optionList"
       is-inverted/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SelectField
-      color="magenta"
+      color="turquoise"
       :option-list="optionList"
       simplicity="slight"
       is-inverted/>
@@ -207,7 +166,7 @@ let optionList = [
 ];
 
 <SelectField
-  color="red"
+  color="tomato"
   icon="vote-yea"
   :option-list="optionList"/>
 ```
@@ -238,7 +197,7 @@ let optionList = [
 ];
 
 <SelectField
-  color="green"
+  color="tomato"
   style="--select-field-addons-space: 2.5em;"
   :option-list="optionList">
   <template #addons>
@@ -266,13 +225,13 @@ let optionList = [
 ];
 
 <SelectField
-  color="blue"
+  color="green"
   icon="vote-yea"
   :option-list="optionList"
   simplicity="slight"/>
 <br/><br/>
 <SelectField
-  color="blue"
+  color="green"
   icon="vote-yea"
   :option-list="optionList"
   simplicity="extreme"/>
@@ -324,41 +283,41 @@ let optionList = [
 ];
 
 <SelectField
-  color="purple"
+  color="blue"
   size="small"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="big"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="large"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="huge"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="enormous"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="gigantic"
   :option-list="optionList"/>
 <br/><br/>
 <SelectField
-  color="purple"
+  color="blue"
   size="mega"
   :option-list="optionList"/>
 ```

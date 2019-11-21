@@ -10,7 +10,7 @@ library.add(faImage, faUserCircle);
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Statistic
-      color="magenta"
+      color="orange"
       label="Providers"
       value="Twenty two"
       is-textual-value
@@ -18,7 +18,7 @@ library.add(faImage, faUserCircle);
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Statistic
-      color="purple"
+      color="orange"
       :icon-set="['', 'image']"
       label="Images"
       value="300M"
@@ -26,7 +26,7 @@ library.add(faImage, faUserCircle);
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Statistic
-      color="blue"
+      color="orange"
       :icon-set="['user-circle', '']"
       label="Contributors"
       value="25"
@@ -56,111 +56,56 @@ A statistic without a color specified is black.
 Statistics can be colored using any color from the set provided by CC 
 Vocabulary. Writing this for every component is getting tiresome now.
 
-```jsx
-<Grid style="text-align: center;">
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="blue"
-      label="Color"
-      value="blue"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="green"
-      label="Color"
-      value="green"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="magenta"
-      label="Color"
-      value="magenta"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="olive"
-      label="Color"
-      value="olive"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="orange"
-      label="Color"
-      value="orange"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="purple"
-      label="Color"
-      value="purple"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="red"
-      label="Color"
-      value="red"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="sand"
-      label="Color"
-      value="sand"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Statistic
-      color="yellow"
-      label="Color"
-      value="yellow"
-      is-textual-value/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid style="text-align: center;">
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Statistic
-      color="blue"
-      shade="light"
-      label="Color"
-      value="Light"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Statistic
-      color="blue"
-      label="Color"
-      value="Default"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Statistic
-      color="blue"
-      shade="dark"
-      label="Color"
-      value="Dark"
-      is-textual-value/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Statistic
-      color="blue"
-      shade="darker"
-      label="Color"
-      value="Darker"
-      is-textual-value/>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Statistic
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  label="Color"
+  :value="color ? color : 'default'"
+  is-textual-value/>
 ```
 
 There is an inverted option when the statistic is being displayed on a dark or
@@ -177,7 +122,7 @@ non-white background.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Statistic
-      color="purple"
+      color="turquoise"
       label="Dark outside?"
       value="Colored"
       is-inverted
@@ -195,7 +140,7 @@ that the icon must be added to the FontAwesome library by the application.
 <Grid style="text-align: center;">
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
-      color="red"
+      color="tomato"
       :icon-set="['chart-line', '']"
       label="Icon"
       value="Value"
@@ -203,7 +148,7 @@ that the icon must be added to the FontAwesome library by the application.
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
-      color="red"
+      color="tomato"
       :icon-set="['', 'chart-line']"
       label="Icon"
       value="Label"
@@ -211,7 +156,7 @@ that the icon must be added to the FontAwesome library by the application.
   </GridCell>
   <GridCell :span-set="[12, 4, 4, 4, 4]">
     <Statistic
-      color="red"
+      color="tomato"
       :icon-set="['chart-line', 'chart-line']"
       label="Icon"
       value="Both"
@@ -236,7 +181,7 @@ Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 
 library.add(faCertificate);
 
-<Statistic color="green">
+<Statistic color="tomato">
   <template #labelAddons>
     <FontAwesomeIcon 
       :icon="['fas', 'certificate']"
@@ -258,7 +203,7 @@ A statistic can be formatted to have text-based value.
 
 ```jsx
 <Statistic
-  color="blue" 
+  color="green" 
   value="Forty two"
   is-textual-value>
   <template #label>

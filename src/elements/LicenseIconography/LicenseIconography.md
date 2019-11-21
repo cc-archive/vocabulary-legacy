@@ -14,17 +14,6 @@ color of their surrounding content.
   (<LicenseIconography :icon-list="['', 'by']"/>)
   is a permissive free-culture license.
 </Paragraph>
-<Heading
-  color="green"
-  :level="3">
-  The CC Zero license
-  <LicenseIconography :icon-list="['', 'zero']"/>:
-</Heading>
-<Paragraph>
-  The CC Zero license
-  (<LicenseIconography :icon-list="['', 'zero']"/>)
-  indicates that content belongs in the public domain.
-</Paragraph>
 ```
 
 ### Icon set

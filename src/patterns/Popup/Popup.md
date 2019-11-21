@@ -125,12 +125,12 @@ Here is an example with roundness.
 </Popup>
 <Popup
   to="top"
-  color="red"
+  color="tomato"
   color-side="none"
   roundness="slight">
   BY-NC-ND
   <template #popup>
-    <Paragraph color="red">
+    <Paragraph color="tomato">
       <LicenseIconography :icon-list="['by', 'nc', 'nd']"/>
       Attribution-NonCommercial-NoDerivatives
     </Paragraph>

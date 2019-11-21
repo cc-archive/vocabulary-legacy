@@ -9,7 +9,7 @@ let picked = 'C';
     <ChoiceField
       v-model="picked"
       id="a"
-      color="blue"
+      color="orange"
       name="choice"
       value="A"
       simplicity="slight"
@@ -19,7 +19,7 @@ let picked = 'C';
     <ChoiceField
       v-model="picked"
       id="b"
-      color="blue"
+      color="orange"
       name="choice"
       value="B"
       simplicity="slight"
@@ -29,7 +29,7 @@ let picked = 'C';
     <ChoiceField
       v-model="picked"
       id="c"
-      color="blue"
+      color="orange"
       name="choice"
       value="C"
       simplicity="slight"
@@ -39,7 +39,7 @@ let picked = 'C';
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Heading
       :level="4"
-      color="blue">
+      color="orange">
       Choice
     </Heading>
     <Paragraph v-if="picked">
@@ -60,7 +60,7 @@ let picked = ['C'];
     <ChoiceField
       v-model="picked"
       id="a"
-      color="purple"
+      color="orange"
       name="choice"
       value="A"
       simplicity="slight"/>
@@ -69,7 +69,7 @@ let picked = ['C'];
     <ChoiceField
       v-model="picked"
       id="b"
-      color="purple"
+      color="orange"
       name="choice"
       value="B"
       simplicity="slight"/>
@@ -78,7 +78,7 @@ let picked = ['C'];
     <ChoiceField
       v-model="picked"
       id="c"
-      color="purple"
+      color="orange"
       name="choice"
       value="C"
       simplicity="slight"/>
@@ -87,7 +87,7 @@ let picked = ['C'];
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Heading
       :level="4"
-      color="purple">
+      color="orange">
       Choice
     </Heading>
     <Paragraph v-if="picked.length !== 0">
@@ -111,62 +111,53 @@ A choice field without color is black.
 Not a good color, sure. Choice fields can be colored using any color from the
 set provided by CC Vocabulary.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="blue"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="green"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="magenta"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="olive"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="orange"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="purple"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="red"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="sand"/>
-  </GridCell>
-  <GridCell :span-set="[6, 4, 4, 4, 4]">
-    <ChoiceField color="yellow"/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[6, 6, 3, 3, 3]">
-    <ChoiceField
-      color="blue"
-      shade="light"/>
-  </GridCell>
-  <GridCell :span-set="[6, 6, 3, 3, 3]">
-    <ChoiceField color="blue"/>
-  </GridCell>
-  <GridCell :span-set="[6, 6, 3, 3, 3]">
-    <ChoiceField
-      color="blue"
-      shade="dark"/>
-  </GridCell>
-  <GridCell :span-set="[6, 6, 3, 3, 3]">
-    <ChoiceField
-      color="blue"
-      shade="darker"/>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<ChoiceField
+  :color="color ? color : null"
+  :shade="shade ? shade : null"/>
 ```
 
 On a dark or non-white background, use the inverted choice field.
@@ -179,7 +170,7 @@ On a dark or non-white background, use the inverted choice field.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <ChoiceField
-      color="magenta"
+      color="turquoise"
       is-inverted/>
   </GridCell>
 </Grid>
@@ -188,14 +179,15 @@ On a dark or non-white background, use the inverted choice field.
 ### Style set
 
 A choice field can be made simple to not attract attention. Or you can max that
-up and make a choice field deny attention.
+up and make a choice field deny attention (there are two checkboxes below and
+the second one is invisible). 
 
 ```jsx
 <ChoiceField
-  color="blue"
+  color="green"
   simplicity="slight"/>
 <ChoiceField
-  color="blue"
+  color="green"
   simplicity="extreme"/>
 ```
 
@@ -205,33 +197,34 @@ Choice fields come in all sizes, from small to mega.
 
 ```jsx
 <ChoiceField
-  color="purple"
+  color="blue"
   size="small"/>
 <br/><br/>
-<ChoiceField color="purple"/>
+<ChoiceField
+  color="blue"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="big"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="large"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="huge"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="enormous"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="gigantic"/>
 <br/><br/>
 <ChoiceField
-  color="purple"
+  color="blue"
   size="mega"/>
 ```
 
@@ -242,12 +235,12 @@ with the same `name`.
 
 ```jsx
 <ChoiceField
-  color="orange"
+  color="tomato"
   name="name"
   value="value-one"
   is-single-select/>
 <ChoiceField
-  color="orange"
+  color="tomato"
   name="name"
   value="value-two"
   is-single-select/>

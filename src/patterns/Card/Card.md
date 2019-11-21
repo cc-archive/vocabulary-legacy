@@ -7,6 +7,7 @@ let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
 <Grid density="sparse">
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
+      color="orange"
       heading="Dhruv Bhanushali"
       subheading="Developer"
       :featuredImageSource="dhruvSource"
@@ -32,7 +33,7 @@ let kritiAlt = 'Kriti Godey\'s profile picture';
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="purple"
+      color="green"
       heading="Kriti Godey"
       subheading="Mentor"
       :featuredImageSource="kritiSource"
@@ -60,7 +61,7 @@ let brenoAlt = 'Breno Ferreira\'s profile picture';
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="magenta"
+      color="green"
       heading="Hugo Solar"
       subheading="Mentor"
       :featuredImageSource="hugoSource"
@@ -73,7 +74,7 @@ let brenoAlt = 'Breno Ferreira\'s profile picture';
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="yellow"
+      color="green"
       heading="Breno Ferreira"
       subheading="Unofficial mentor"
       :featuredImageSource="brenoSource"
@@ -102,7 +103,7 @@ let sophineAlt = 'Sophine Clachar\'s profile picture';
 <Grid>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="purple"
+      color="green"
       heading="Timid Robot"
       subheading="Mentor"
       :featuredImageSource="timidSource"
@@ -115,7 +116,7 @@ let sophineAlt = 'Sophine Clachar\'s profile picture';
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="orange"
+      color="green"
       heading="Sophine Clachar"
       subheading="Mentor"
       :featuredImageSource="sophineSource"
@@ -145,7 +146,7 @@ let giraffeAlt = 'Two giraffes in Kenya';
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Card
-      color="red"
+      color="tomato"
       :heading="giraffeAlt"
       subheading="Brandt Luke Zorn's father"
       :featuredImageSource="giraffeSource"
@@ -175,7 +176,7 @@ let hummingbirdAlt = 'Costa\'s hummingbird';
 <Grid>
   <GridCell :span-set="[12, 6, 4, 4, 4]">
     <Card
-      color="green"
+      color="tomato"
       is-decked>
       <template #feature>
         <img 
@@ -221,111 +222,59 @@ A card without any color looks like this.
 Again like any other component, cards can be colored using any color from the
 set provided by CC Vocabulary. Let's jazz it up a little.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="blue"
-      heading="Blue card"
-      subheading="Blue accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="green"
-      heading="Green card"
-      subheading="Green accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="magenta"
-      heading="Magenta card"
-      subheading="Magenta accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="olive"
-      heading="Olive card"
-      subheading="Olive accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="orange"
-      heading="Orange card"
-      subheading="Orange accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="purple"
-      heading="Purple card"
-      subheading="Purple accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="red"
-      heading="Red card"
-      subheading="Red accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="sand"
-      heading="Sand card"
-      subheading="Sand accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
-    <Card
-      color="yellow"
-      heading="Yellow card"
-      subheading="Yellow accent"
-      is-raised/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="blue"
-      shade="light"
-      heading="Light blue card"
-      subheading="Light blue accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="blue"
-      heading="Blue card"
-      subheading="Default blue accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="blue"
-      shade="dark"
-      heading="Dark blue card"
-      subheading="Dark blue accent"
-      is-raised/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Card
-      color="blue"
-      shade="darker"
-      heading="Darker blue card"
-      subheading="Darker blue accent"
-      is-raised/>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Card
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  is-raised>
+  <template #head>
+    <Heading>Card with {{ color ? color : 'no' }} accent</Heading>
+    <s>BORING!</s>
+  </template>
+</Card>
 ```
 
 On a dark or non-white canvas, you should use the inverted version of the 
@@ -341,7 +290,7 @@ component.
   </GridCell>
   <GridCell :span-set="[12, 6, 3, 3, 3]">
     <Card
-      color="magenta"
+      color="turquoise"
       heading="Dark?"
       subheading="Inverted"
       is-inverted/>

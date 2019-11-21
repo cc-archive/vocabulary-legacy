@@ -67,7 +67,7 @@ A tabbed view looks and works like this.
       This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
     </template>   
   </TabbedPane>
-  <TabbedPane color="red">
+  <TabbedPane color="tomato">
     <template #tab>
       <LicenseBadge license="by-nc-nd"/>  
     </template>
@@ -98,114 +98,57 @@ A tabbed view without a color specified is grey.
 Tabbed views can be colored using any color from the set provided by CC 
 Vocabulary. Nobody likes to have just one color. Boring!
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="blue">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="green">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="magenta">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="olive">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="orange">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="purple">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="red">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="sand">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <Tabbed color="yellow">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Tabbed
-      color="blue"
-      shade="light">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Tabbed color="blue">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Tabbed
-      color="blue"
-      shade="dark">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <Tabbed
-      color="blue"
-      shade="darker">
-      <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
-      <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
-      <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
-    </Tabbed>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<Tabbed
+  :color="color ? color : null"
+  :shade="shade ? shade : null">
+  <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
+  <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
+  <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
+</Tabbed>
 ```
 
 You can invert the tabbed view to create non-white backgrounds for content.
@@ -221,7 +164,7 @@ You can invert the tabbed view to create non-white backgrounds for content.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <Tabbed
-      color="magenta"
+      color="turquoise"
       is-inverted>
       <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
       <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
@@ -236,47 +179,34 @@ will adopt that color and shade for as long as it is active. The tabbed view's
 one color will act as a fallback for panes that do not specify color and shade.
 
 ```jsx
-<Tabbed color="purple">
+<Tabbed color="blue">
   <TabbedPane 
-    title="Inherited V">
+    title="Inherited Blue">
     I'm not colored.<br/>
-    Guess I'll just be violet.
+    Guess I'll just be blue.
   </TabbedPane>
   <TabbedPane
-    color="blue"
-    shade="dark"
-    title="I">
-    I'm indigo.<br/>
-    So is the tabbed view now!
-  </TabbedPane>
-  <TabbedPane
-    color="blue"
-    title="B">
-    I'm blue.<br/>
-    So is the tabbed view now!
-  </TabbedPane>
-  <TabbedPane
-    color="green" 
-    title="G">
-    I'm green.<br/>
-    So is the tabbed view now!
-  </TabbedPane>
-  <TabbedPane
-    color="yellow" 
-    title="Y">
-    I'm yellow.<br/>
-    So is the tabbed view now!
-  </TabbedPane>
-  <TabbedPane
-    color="orange" 
-    title="O">
+    color="orange"
+    title="Orange">
     I'm orange.<br/>
     So is the tabbed view now!
   </TabbedPane>
   <TabbedPane
-    color="red" 
-    title="R">
-    I'm red.<br/>
+    color="gold"
+    title="Gold">
+    I'm gold.<br/>
+    So is the tabbed view now!
+  </TabbedPane>
+  <TabbedPane
+    color="green" 
+    title="Green">
+    I'm green.<br/>
+    So is the tabbed view now!
+  </TabbedPane>
+  <TabbedPane
+    color="tomato" 
+    title="Tomato">
+    I'm tomato.<br/>
     So is the tabbed view now!
   </TabbedPane>
 </Tabbed>
@@ -306,7 +236,7 @@ A tabbed view can take on a slightly more curved look instead of the usual 90°
 sharp cuts.
 
 ```jsx
-<Tabbed color="purple" is-rounded>
+<Tabbed color="green" is-rounded>
   <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
   <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
   <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>
@@ -316,7 +246,7 @@ sharp cuts.
 A tabbed view can be raised to look elevated above its surroundings.
 
 ```jsx
-<Tabbed color="magenta" is-raised>
+<Tabbed color="green" is-raised>
   <TabbedPane title="Tab 1">This is the first tab.</TabbedPane>
   <TabbedPane title="Tab 2">This is the second tab.</TabbedPane>
   <TabbedPane title="Tab 3">This is the third tab.</TabbedPane>

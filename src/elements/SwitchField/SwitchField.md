@@ -19,85 +19,54 @@ A switch without color is black.
 But as always, switches can be colored with any color from the set provided by
 CC Vocabulary. Sometimes, black doesn't indicate on.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="blue"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="green"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="magenta"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="olive"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="orange"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="purple"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="red"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="sand"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 4, 4, 4]">
-    <SwitchField
-      color="yellow"
-      :value="true"/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField
-       color="blue"
-       shade="light"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField
-       color="blue"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField
-       color="blue"
-       shade="dark"
-      :value="true"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 3, 3, 3]">
-    <SwitchField
-       color="blue"
-       shade="darker"
-      :value="true"/>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<SwitchField
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :value="true"/>
 ```
 
 On a dark or non-white background, use the inverted form of the switch.
@@ -111,7 +80,7 @@ On a dark or non-white background, use the inverted form of the switch.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="magenta"
+      color="turquoise"
       :value="true"
       is-inverted/>
   </GridCell>
@@ -124,41 +93,41 @@ Switches come in all sizes, from small to mega.
 
 ```jsx
 <SwitchField
-  color="purple"
+  color="blue"
   size="small"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="big"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="large"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="huge"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="enormous"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="gigantic"
   :value="true"/>
 <br/><br/>
 <SwitchField
-  color="purple"
+  color="blue"
   size="mega"
   :value="true"/>
 ```
@@ -173,13 +142,13 @@ design but looks really good.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="blue"
+      color="green"
       roundness="slight"
       :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="blue"
+      color="green"
       roundness="complete"
       :value="true"/>
   </GridCell>
@@ -194,13 +163,13 @@ the prominence it deserves.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="magenta"
+      color="green"
       simplicity="slight"
       :value="true"/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="magenta"
+      color="green"
       simplicity="extreme"
       :value="true"/>
   </GridCell>
@@ -217,14 +186,14 @@ yourself.
 <Grid>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="red" 
+      color="tomato" 
       size="huge" 
       :value="true"
       is-labelled/>
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <SwitchField
-      color="red" 
+      color="tomato" 
       size="huge"
       :value="true"
       :iconSet="['times', 'check']"
@@ -251,10 +220,17 @@ A switch can indicate the nature of the consequences if flipped.
 </Grid>
 ```
 
-A special kind of conditional indication has also been provided.
+Two special kinds of conditional indication have also been provided.
 
 ```jsx
-<SwitchField indication="conditional"/>
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField indication="conditional"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <SwitchField indication="anticonditional"/>
+  </GridCell>
+</Grid>
 ```
 
 ### State set

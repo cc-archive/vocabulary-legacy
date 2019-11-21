@@ -27,111 +27,56 @@ An input field without color is black.
 But in classic fashion, input fields can be colored with any color from the set 
 provided by CC Vocabulary. Grey is nobody's favourite.
 
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="blue"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="green"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="magenta"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="olive"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="orange"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="purple"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="red"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="sand"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="yellow"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-</Grid>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="blue"
-      shade="light"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="blue"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="blue"
-      shade="dark"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      color="blue"
-      shade="darker"
-      :icon-set="['keyboard', '']"
-      type="text"
-      placeholder="Answer..."/>
-  </GridCell>
-</Grid>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
+<InputField
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  :icon-set="['keyboard', '']"
+  type="text"
+  placeholder="Answer..."/>
 ```
 
 For use on dark or non-white backgrounds, we provided an inverted variant.
@@ -155,7 +100,7 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      color="magenta"
+      color="turquoise"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."
@@ -163,7 +108,7 @@ For use on dark or non-white backgrounds, we provided an inverted variant.
   </GridCell>
   <GridCell :span-set="[12, 6, 6, 6, 6]">
     <InputField
-      color="magenta"
+      color="turquoise"
       :icon-set="['keyboard', '']"
       type="text"
       placeholder="Answer..."
@@ -180,19 +125,19 @@ that the icon must be added to the FontAwesome library by the application.
 
 ```jsx
 <InputField
-  color="red"
+  color="tomato"
   :icon-set="['keyboard', '']"
   type="text"
   placeholder="Left"/>
 <br/><br/>
 <InputField
-  color="red"
+  color="tomato"
   :icon-set="['', 'keyboard']"
   type="text"
   placeholder="Right"/>
 <br/><br/>
 <InputField
-  color="red"
+  color="tomato"
   :icon-set="['keyboard', 'keyboard']"
   type="text"
   placeholder="Both"/>
@@ -203,7 +148,7 @@ add-on slots with something you like.
 
 ```jsx
 <InputField
-  color="green"
+  color="tomato"
   type="text"
   placeholder="License iconography">
   <template #leftAddons>
@@ -215,7 +160,7 @@ add-on slots with something you like.
 </InputField>
 <br/><br/>
 <InputField
-  color="green"
+  color="tomato"
   type="text"
   placeholder="Not even icons">
   <template #leftAddons>
@@ -243,7 +188,7 @@ absolutely what the user wanted.
     <InputField
       type="text"
       :icon-set="['keyboard', '']"
-      color="orange"
+      color="green"
       placeholder="Answer"
       simplicity="slight"/>
   </GridCell>
@@ -251,9 +196,33 @@ absolutely what the user wanted.
     <InputField
       type="text"
       :icon-set="['keyboard', '']"
-      color="orange"
+      color="green"
       placeholder="Answer"
       simplicity="extreme"/>
+  </GridCell>
+</Grid>
+```
+
+An input field may be slighly rounded for extra compatibility with curvy
+layouts. Or it can be completely rounded if that is something you like.
+
+```jsx
+<Grid>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="green"
+      roundness="slight"
+      placeholder="Answer"/>
+  </GridCell>
+  <GridCell :span-set="[12, 6, 6, 6, 6]">
+    <InputField
+      type="text"
+      :icon-set="['keyboard', '']"
+      color="green"
+      roundness="complete"
+      placeholder="Answer"/>
   </GridCell>
 </Grid>
 ```
@@ -265,7 +234,7 @@ additional streak of color to the field.
 <InputField
   type="text"
   :icon-set="['keyboard', '']"
-  color="orange"
+  color="green"
   placeholder="Answer"
   is-infused/>
 ```
@@ -296,8 +265,7 @@ let style = {
 
 <div :style="style">
   <Button
-    color="blue"
-    shade="dark"
+    color="green"
     simplicity="slight">
     <template #addons>
       Joined
@@ -307,43 +275,17 @@ let style = {
       fixed-width/>
   </Button>
   <InputField
-    color="blue" 
-    shade="dark"
+    color="green"
     :icon-set="['arrow-left', 'arrow-right']"
     join-side="both"
     simplicity="slight"/>
   <Button 
-    color="blue"
-    shade="dark"
+    color="green"
     icon="arrow-left"
     simplicity="slight">
     Joined
   </Button>
 </div>
-```
-
-An input field may be slighly rounded for extra compatibility with curvy
-layouts. Or it can be completely rounded if that is something you like.
-
-```jsx
-<Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      type="text"
-      :icon-set="['keyboard', '']"
-      color="blue"
-      roundness="slight"
-      placeholder="Answer"/>
-  </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
-    <InputField
-      type="text"
-      :icon-set="['keyboard', '']"
-      color="blue"
-      roundness="complete"
-      placeholder="Answer"/>
-  </GridCell>
-</Grid>
 ```
 
 Styles can be combined.
@@ -354,55 +296,55 @@ Input fields come in all sizes, from small to mega.
 
 ```jsx
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="small"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="big"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="large"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="huge"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="enormous"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="gigantic"
   type="text"
   placeholder="Answer..."/>
 <br/><br/>
 <InputField
-  color="purple"
+  color="blue"
   :icon-set="['keyboard', '']"
   size="mega"
   type="text"
@@ -462,7 +404,7 @@ An initial `value` can be provided for the field.
 
 ```jsx
 <InputField
-  color="sand"
+  color="tomato"
   type="text"
   placeholder="Placeholder"
   value="Value"/>
@@ -477,33 +419,33 @@ The `type` attribute works as you would expect.
   placeholder="Email address...">
 </InputField><br/><br/>
 <InputField
-  color="purple"
+  color="green"
   type="url"
   placeholder="Website URL...">
 </InputField><br/><br/>
 <InputField
-  color="green"
+  color="orange"
   type="number"
   placeholder="Age in years..."
   min="0"
   max="122">
 </InputField><br/><br/>
 <InputField
-  color="magenta"
+  color="tomato"
   type="date">
 </InputField><br/><br/>
 <InputField
-  color="orange"
+  color="gold"
   type="time">
 </InputField><br/><br/>
 <InputField
-  color="red"
+  color="turquoise"
   type="range"
   max="5"
   min="0">
 </InputField><br/><br/>
 <InputField
-  color="yellow"
+  color="blue"
   type="file">
 </InputField>
 ```

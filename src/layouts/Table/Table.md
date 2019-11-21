@@ -137,204 +137,63 @@ A table without color specified is colored black.
 Much like the rest of CC Vocabulary, tables can be colored using any color from
 the set provided by CC Vocabulary. Black accent, pfft.
 
-```jsx
-<Table
-  color="blue"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Blue</TableCell>
-    <TableCell>Blue accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="green"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Green</TableCell>
-    <TableCell>Green accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="magenta"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Magenta</TableCell>
-    <TableCell>Magenta accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="olive"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Olive</TableCell>
-    <TableCell>Olive accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="orange"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Orange </TableCell>
-    <TableCell>Orange accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="purple"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Purple</TableCell>
-    <TableCell>Purple accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="red"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Red</TableCell>
-    <TableCell>Red accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="sand"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Sand</TableCell>
-    <TableCell>Sand accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="yellow"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell is-heading>Yellow</TableCell>
-    <TableCell>Yellow accent</TableCell>
-  </tr>
-</Table>
-```
-
-Also you may use one of the three shades, namely `light`, `dark` and `darker`, 
+Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFillDrip, faSwatchbook } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faFillDrip, faSwatchbook);
+
+let color = '';
+let colorOptions = [
+  { value: '', text: 'None' },
+  { value: 'tomato', text: 'Tomato' },
+  { value: 'gold', text: 'Gold' },
+  { value: 'green', text: 'Green' },
+  { value: 'blue', text: 'Blue' },
+  { value: 'orange', text: 'Orange' },
+  { value: 'turquoise', text: 'Turquoise' },
+];
+
+let shade = '';
+let shadeOptions = [
+  { value: '', text: 'Default' },
+  { value: 'lighter', text: 'Lighter' },
+  { value: 'light', text: 'Light' },
+  { value: 'normal', text: 'Normal' },
+  { value: 'dark', text: 'Dark' },
+  { value: 'darker', text: 'Darker' }
+];
+
+<SelectField
+  v-model="color"
+  :color="color ? color : null"
+  icon="fill-drip"
+  :option-list="colorOptions"/>
+<SelectField
+  v-model="shade"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
+  icon="swatchbook"
+  :option-list="shadeOptions"
+  :is-disabled="color === ''"/>
+<br/>
+<br/>
 <Table
-  color="blue"
-  shade="light"
+  :color="color ? color : null"
+  :shade="shade ? shade : null"
   is-fixed>
   <template #head>
     <tr>
       <TableCell is-heading>Color</TableCell>
       <TableCell is-heading>Shade</TableCell>
-      <TableCell is-heading>Effect</TableCell>
     </tr>
   </template>
   <tr>
-    <TableCell>Blue</TableCell>
-    <TableCell is-heading>Light</TableCell>
-    <TableCell>Light blue accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="blue"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Shade</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Blue</TableCell>
-    <TableCell is-heading>Default</TableCell>
-    <TableCell>Blue accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="blue"
-  shade="dark"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Shade</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Blue</TableCell>
-    <TableCell is-heading>Dark</TableCell>
-    <TableCell>Dark blue accent</TableCell>
-  </tr>
-</Table>
-<Table
-  color="blue"
-  shade="darker"
-  is-fixed>
-  <template #head>
-    <tr>
-      <TableCell is-heading>Color</TableCell>
-      <TableCell is-heading>Shade</TableCell>
-      <TableCell is-heading>Effect</TableCell>
-    </tr>
-  </template>
-  <tr>
-    <TableCell>Blue</TableCell>
-    <TableCell is-heading>Darker</TableCell>
-    <TableCell>Darker blue accent</TableCell>
+    <TableCell is-heading>{{ color ? color : 'default' }}</TableCell>
+    <TableCell>{{ shade ? shade : 'default' }}</TableCell>
   </tr>
 </Table>
 ```
@@ -342,39 +201,18 @@ to accentuate the color.
 A table can be inverted for use on dark or non-white backgrounds.
 
 ```jsx { "props": { "className": "dark-background" }}
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBrain } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faBrain);
-
-let isMagenta = false;
-
-let simplicity = '';
-let simplicityOptions = [
-  { value: '', text: 'None' },
-  { value: 'slight', text: 'Slightly simple' },
-  { value: 'extreme', text: 'Extremely simple' }
-];
-
-<Paragraph style="color: white;">
-  <SelectField
-    v-model="simplicity"
-    color="blue"
-    icon="brain"
-    :option-list="simplicityOptions"/>
-</Paragraph>
-<Paragraph color="magenta" is-inverted>
+let isTurquoise = false;
+<Paragraph color="turquoise" is-inverted>
   <SwitchField
-    v-model="isMagenta"
-    color="magenta"
+    v-model="isTurquoise"
+    color="turquoise"
     is-inverted/>
-  Magenta
+  Turquoise
 </Paragraph>
 <br/>
 <Table 
   caption="Fruits, their concoctions and their taste"
-  :color="isMagenta ? 'magenta' : ''"
-  :simplicity="simplicity ? simplicity : null"
+  :color="isTurquoise ? 'turquoise' : ''"
   is-striped
   is-following
   is-fixed
@@ -429,7 +267,7 @@ A table may be striped to enhance the readability of its rows.
 ```jsx
 <Table
   caption="This is a striped table"
-  color="magenta"
+  color="green"
   is-fixed
   is-striped>
   <template #head>
@@ -463,7 +301,7 @@ is a stronger color than the stripes to avoid confusion.
 ```jsx
 <Table
   caption="This is a following table"
-  color="blue"
+  color="green"
   is-fixed
   is-striped
   is-following>
@@ -522,7 +360,7 @@ be extremely simplified so that the colors are even less pronounced.
 ```jsx
 <Table
   caption="This is a slightly simplified table"
-  color="red"
+  color="green"
   simplicity="slight"
   is-fixed>
   <template #head>
@@ -539,7 +377,7 @@ be extremely simplified so that the colors are even less pronounced.
 <br/>
 <Table 
   caption="This is an extremely simplified table" 
-  color="orange"
+  color="green"
   simplicity="extreme"
   is-fixed>
   <template #head>
@@ -560,7 +398,7 @@ A table can be rounded for extra cohesiveness in curvy designs.
 ```jsx
 <Table
   caption="This is a fixed table"
-  color="blue"
+  color="green"
   is-fixed
   is-rounded>
   <template #head>
@@ -581,7 +419,7 @@ A table can be made compact so as to not take the full width of the parent.
 ```jsx
 <Table
   caption="This is a compact table"
-  color="yellow"
+  color="green"
   is-compact>
   <template #head>
     <tr>
@@ -601,7 +439,7 @@ A table may be boxed, sliced or celled to enable separation of content.
 ```jsx
 <Table 
   caption="This is a boxed table" 
-  color="purple" 
+  color="green" 
   :border-list="['edge']"
   is-fixed>
   <template #head>
@@ -624,7 +462,7 @@ A table may be boxed, sliced or celled to enable separation of content.
 </Table>
 <Table
   caption="This is a horizontally sliced table" 
-  color="purple" 
+  color="green" 
   :border-list="['row']"
   is-fixed>
   <template #head>
@@ -647,7 +485,7 @@ A table may be boxed, sliced or celled to enable separation of content.
 </Table>
 <Table 
   caption="This is a vertically sliced table" 
-  color="purple" 
+  color="green" 
   :border-list="['column']"
   is-fixed>
   <template #head>
@@ -670,7 +508,7 @@ A table may be boxed, sliced or celled to enable separation of content.
 </Table>
 <Table
   caption="This is a chopped table" 
-  color="purple" 
+  color="green" 
   :border-list="['row', 'column', 'edge']"
   is-fixed>
   <template #head>

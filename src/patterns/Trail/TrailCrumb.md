@@ -18,7 +18,7 @@ import {
 
 library.add(faHome, faBook, faCubes, faCube);
 
-<Trail color="red">
+<Trail color="tomato">
   <TrailCrumb icon="home">
     CC Vocabulary
   </TrailCrumb>
@@ -48,7 +48,7 @@ Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 
 library.add(faHandshake);
 
-<Trail color="green">
+<Trail color="tomato">
   <TrailCrumb>
     <template #addons>
       <LicenseIconography :icon-list="['']"/>

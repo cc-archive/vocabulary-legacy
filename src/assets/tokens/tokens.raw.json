@@ -1,60 +1,74 @@
 {
-  "aliases": {},
-  "props": {
-    "color_red_dark": {
-      "type": "color",
-      "value": "rgb(145, 43, 16)",
-      "category": "color-group-hue-red",
-      "comment": "Slightly dark shade of red",
-      "originalValue": "#912B10",
-      "name": "color_red_dark"
+  "aliases": {
+    "tomato": {
+      "value": "13, 84%"
     },
-    "color_sand": {
+    "gold": {
+      "value": "47, 100%"
+    },
+    "green": {
+      "value": "138, 95%"
+    },
+    "blue": {
+      "value": "219, 43%"
+    },
+    "orange": {
+      "value": "22, 96%"
+    },
+    "turquoise": {
+      "value": "190, 95%"
+    },
+    "none": {
+      "value": "0, 0%"
+    }
+  },
+  "props": {
+    "color_gold_lighter": {
       "type": "color",
-      "value": "rgb(177, 162, 74)",
-      "category": "color-group-hue-sand",
-      "comment": "Base shade of sand",
-      "originalValue": "#B1A24A",
-      "name": "color_sand"
+      "value": "rgb(255, 245, 209)",
+      "category": "color-group-hue-gold",
+      "comment": "Lighter shade of gold",
+      "originalValue": "hsl({!gold}, 91%)",
+      "name": "color_gold_lighter"
+    },
+    "color_tomato_normal": {
+      "type": "color",
+      "value": "rgb(237, 86, 44)",
+      "category": "color-group-hue-tomato",
+      "comment": "Normal shade of tomato",
+      "originalValue": "hsl({!tomato}, 55%)",
+      "name": "color_tomato_normal"
+    },
+    "color_turquoise_normal": {
+      "type": "color",
+      "value": "rgb(46, 216, 250)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Normal shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 58%)",
+      "name": "color_turquoise_normal"
     },
     "color_context_negative": {
       "type": "color",
-      "value": "rgb(209, 56, 20)",
+      "value": "rgb(237, 86, 44)",
       "category": "color-group-context-negative",
       "comment": "Base shade of negative context",
-      "originalValue": "#D13814",
+      "originalValue": "hsl({!tomato}, 55%)",
       "name": "color_context_negative"
     },
     "color_orange_light": {
       "type": "color",
-      "value": "rgb(255, 216, 158)",
+      "value": "rgb(252, 165, 115)",
       "category": "color-group-hue-orange",
-      "comment": "Slightly light shade of orange",
-      "originalValue": "#FFD89E",
+      "comment": "Light shade of orange",
+      "originalValue": "hsl({!orange}, 72%)",
       "name": "color_orange_light"
-    },
-    "color_sand_darker": {
-      "type": "color",
-      "value": "rgb(68, 65, 31)",
-      "category": "color-group-hue-sand",
-      "comment": "Darker shade of sand",
-      "originalValue": "#44411F",
-      "name": "color_sand_darker"
-    },
-    "color_olive_darker": {
-      "type": "color",
-      "value": "rgb(42, 55, 47)",
-      "category": "color-group-hue-olive",
-      "comment": "Darker shade of olive",
-      "originalValue": "#2A372F",
-      "name": "color_olive_darker"
     },
     "color_tone_near_white": {
       "type": "color",
-      "value": "rgb(237, 237, 238)",
+      "value": "rgb(230, 230, 230)",
       "category": "color-group-tone-white",
       "comment": "Lightest grey, near white",
-      "originalValue": "#EDEDEE",
+      "originalValue": "hsl({!none}, 90%)",
       "name": "color_tone_near_white"
     },
     "color_overlay_white_high": {
@@ -65,85 +79,69 @@
       "originalValue": "rgba(255, 255, 255, 0.85)",
       "name": "color_overlay_white_high"
     },
-    "color_magenta_light": {
-      "type": "color",
-      "value": "rgb(247, 178, 204)",
-      "category": "color-group-hue-magenta",
-      "comment": "Slightly light shade of magenta",
-      "originalValue": "#F7B2CC",
-      "name": "color_magenta_light"
-    },
-    "color_yellow_dark": {
-      "type": "color",
-      "value": "rgb(176, 154, 17)",
-      "category": "color-group-hue-yellow",
-      "comment": "Slightly dark shade of yellow",
-      "originalValue": "#B09A11",
-      "name": "color_yellow_dark"
-    },
     "color_tone_grey_dark": {
       "type": "color",
-      "value": "rgb(99, 100, 102)",
+      "value": "rgb(102, 102, 102)",
       "category": "color-group-tone-black",
       "comment": "Slightly dark grey",
-      "originalValue": "#636466",
+      "originalValue": "hsl({!none}, 40%)",
       "name": "color_tone_grey_dark"
     },
     "color_context_positive": {
       "type": "color",
-      "value": "rgb(152, 200, 7)",
+      "value": "rgb(71, 250, 125)",
       "category": "color-group-context-positive",
       "comment": "Base shade of positive context",
-      "originalValue": "#98C807",
+      "originalValue": "hsl({!green}, 63%)",
       "name": "color_context_positive"
+    },
+    "color_gold_darker": {
+      "type": "color",
+      "value": "rgb(158, 124, 0)",
+      "category": "color-group-hue-gold",
+      "comment": "Darker shade of gold",
+      "originalValue": "hsl({!gold}, 31%)",
+      "name": "color_gold_darker"
     },
     "color_context_probably_light": {
       "type": "color",
-      "value": "rgb(255, 243, 162)",
+      "value": "rgb(255, 245, 209)",
       "category": "color-group-context-probably",
       "comment": "Slightly light shade of intermediate context",
-      "originalValue": "#FFF3A2",
+      "originalValue": "hsl({!gold}, 91%)",
       "name": "color_context_probably_light"
     },
     "color_context_probably_dark": {
       "type": "color",
-      "value": "rgb(176, 154, 17)",
+      "value": "rgb(158, 124, 0)",
       "category": "color-group-context-probably",
       "comment": "Slightly dark shade of intermediate context",
-      "originalValue": "#B09A11",
+      "originalValue": "hsl({!gold}, 31%)",
       "name": "color_context_probably_dark"
     },
-    "color_yellow_light": {
+    "color_turquoise_default": {
       "type": "color",
-      "value": "rgb(255, 243, 162)",
-      "category": "color-group-hue-yellow",
-      "comment": "Slightly light shade of yellow",
-      "originalValue": "#FFF3A2",
-      "name": "color_yellow_light"
-    },
-    "color_green": {
-      "type": "color",
-      "value": "rgb(152, 200, 7)",
-      "category": "color-group-hue-green",
-      "comment": "Base shade of green",
-      "originalValue": "#98C807",
-      "name": "color_green"
+      "value": "rgb(5, 179, 214)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Default shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 43%)",
+      "name": "color_turquoise_default"
     },
     "color_tone_grey_light": {
       "type": "color",
-      "value": "rgb(167, 169, 172)",
+      "value": "rgb(153, 153, 153)",
       "category": "color-group-tone-white",
       "comment": "Slightly light grey",
-      "originalValue": "#A7A9AC",
+      "originalValue": "hsl({!none}, 60%)",
       "name": "color_tone_grey_light"
     },
-    "color_magenta_dark": {
+    "color_tomato_default": {
       "type": "color",
-      "value": "rgb(123, 27, 83)",
-      "category": "color-group-hue-magenta",
-      "comment": "Slightly dark shade of magenta",
-      "originalValue": "#7B1B53",
-      "name": "color_magenta_dark"
+      "value": "rgb(237, 86, 44)",
+      "category": "color-group-hue-tomato",
+      "comment": "Default shade of tomato",
+      "originalValue": "hsl({!tomato}, 55%)",
+      "name": "color_tomato_default"
     },
     "color_overlay_black_low": {
       "type": "color",
@@ -153,60 +151,76 @@
       "originalValue": "rgba(0, 0, 0, 0.15)",
       "name": "color_overlay_black_low"
     },
-    "color_purple_darker": {
+    "color_green_default": {
       "type": "color",
-      "value": "rgb(66, 25, 79)",
-      "category": "color-group-hue-purple",
-      "comment": "Darker shade of purple",
-      "originalValue": "#42194F",
-      "name": "color_purple_darker"
+      "value": "rgb(4, 164, 52)",
+      "category": "color-group-hue-green",
+      "comment": "Default shade of green",
+      "originalValue": "hsl({!green}, 33%)",
+      "name": "color_green_default"
     },
-    "color_orange": {
+    "color_turquoise_lighter": {
       "type": "color",
-      "value": "rgb(251, 121, 40)",
-      "category": "color-group-hue-orange",
-      "comment": "Base shade of orange",
-      "originalValue": "#FB7928",
-      "name": "color_orange"
+      "value": "rgb(195, 244, 253)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Lighter shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 88%)",
+      "name": "color_turquoise_lighter"
+    },
+    "color_tomato_lighter": {
+      "type": "color",
+      "value": "rgb(249, 199, 185)",
+      "category": "color-group-hue-tomato",
+      "comment": "Lighter shade of tomato",
+      "originalValue": "hsl({!tomato}, 85%)",
+      "name": "color_tomato_lighter"
+    },
+    "color_gold_normal": {
+      "type": "color",
+      "value": "rgb(255, 212, 56)",
+      "category": "color-group-hue-gold",
+      "comment": "Normal shade of gold",
+      "originalValue": "hsl({!gold}, 61%)",
+      "name": "color_gold_normal"
     },
     "color_orange_dark": {
       "type": "color",
-      "value": "rgb(238, 91, 50)",
+      "value": "rgb(210, 80, 4)",
       "category": "color-group-hue-orange",
-      "comment": "Slightly dark shade of orange",
-      "originalValue": "#EE5B32",
+      "comment": "Dark shade of orange",
+      "originalValue": "hsl({!orange}, 42%)",
       "name": "color_orange_dark"
     },
-    "color_red_light": {
+    "color_green_lighter": {
       "type": "color",
-      "value": "rgb(250, 180, 153)",
-      "category": "color-group-hue-red",
-      "comment": "Slightly light shade of red",
-      "originalValue": "#FAB499",
-      "name": "color_red_light"
+      "value": "rgb(220, 254, 230)",
+      "category": "color-group-hue-green",
+      "comment": "Lighter shade of green",
+      "originalValue": "hsl({!green}, 93%)",
+      "name": "color_green_lighter"
+    },
+    "color_orange_default": {
+      "type": "color",
+      "value": "rgb(251, 117, 40)",
+      "category": "color-group-hue-orange",
+      "comment": "Default shade of orange",
+      "originalValue": "hsl({!orange}, 57%)",
+      "name": "color_orange_default"
     },
     "color_blue_darker": {
       "type": "color",
-      "value": "rgb(16, 37, 72)",
+      "value": "rgb(38, 58, 95)",
       "category": "color-group-hue-blue",
       "comment": "Darker shade of blue",
-      "originalValue": "#102548",
+      "originalValue": "hsl({!blue}, 26%)",
       "name": "color_blue_darker"
-    },
-    "color_red_darker": {
-      "type": "color",
-      "value": "rgb(90, 28, 14)",
-      "category": "color-group-hue-red",
-      "comment": "Darker shade of red",
-      "originalValue": "#5A1C0E",
-      "name": "color_red_darker"
     },
     "color_blue_light": {
       "type": "color",
-      "value": "rgb(191, 206, 234)",
+      "value": "rgb(149, 172, 213)",
       "category": "color-group-hue-blue",
-      "comment": "Slightly light shade of blue",
-      "originalValue": "#BFCEEA",
+      "comment": "Light shade of blue",
+      "originalValue": "hsl({!blue}, 71%)",
       "name": "color_blue_light"
     },
     "color_overlay_black_high": {
@@ -217,77 +231,85 @@
       "originalValue": "rgba(0, 0, 0, 0.85)",
       "name": "color_overlay_black_high"
     },
-    "color_magenta": {
-      "type": "color",
-      "value": "rgb(182, 43, 110)",
-      "category": "color-group-hue-magenta",
-      "comment": "Base shade of magenta",
-      "originalValue": "#B62B6E",
-      "name": "color_magenta"
-    },
     "color_tone_black": {
       "type": "color",
       "value": "rgb(0, 0, 0)",
       "category": "color-group-tone-black",
       "comment": "Pure black color",
-      "originalValue": "#000000",
+      "originalValue": "hsl({!none}, 0%)",
       "name": "color_tone_black"
     },
     "color_green_dark": {
       "type": "color",
-      "value": "rgb(1, 166, 53)",
+      "value": "rgb(6, 239, 76)",
       "category": "color-group-hue-green",
-      "comment": "Slightly dark shade of green",
-      "originalValue": "#01A635",
+      "comment": "Dark shade of green",
+      "originalValue": "hsl({!green}, 48%)",
       "name": "color_green_dark"
+    },
+    "color_orange_lighter": {
+      "type": "color",
+      "value": "rgb(254, 213, 190)",
+      "category": "color-group-hue-orange",
+      "comment": "Lighter shade of orange",
+      "originalValue": "hsl({!orange}, 87%)",
+      "name": "color_orange_lighter"
     },
     "color_context_probably": {
       "type": "color",
-      "value": "rgb(237, 216, 18)",
+      "value": "rgb(255, 212, 56)",
       "category": "color-group-context-probably",
       "comment": "Base shade of intermediate context",
-      "originalValue": "#EDD812",
+      "originalValue": "hsl({!gold}, 61%)",
       "name": "color_context_probably"
     },
-    "color_purple_light": {
+    "color_tomato_dark": {
       "type": "color",
-      "value": "rgb(214, 180, 214)",
-      "category": "color-group-hue-purple",
-      "comment": "Slightly light shade of purple",
-      "originalValue": "#D6B4D6",
-      "name": "color_purple_light"
+      "value": "rgb(188, 53, 16)",
+      "category": "color-group-hue-tomato",
+      "comment": "Dark shade of tomato",
+      "originalValue": "hsl({!tomato}, 40%)",
+      "name": "color_tomato_dark"
     },
-    "color_yellow": {
+    "color_blue_normal": {
       "type": "color",
-      "value": "rgb(237, 216, 18)",
-      "category": "color-group-hue-yellow",
-      "comment": "Base shade of yellow",
-      "originalValue": "#EDD812",
-      "name": "color_yellow"
+      "value": "rgb(95, 128, 191)",
+      "category": "color-group-hue-blue",
+      "comment": "Normal shade of blue",
+      "originalValue": "hsl({!blue}, 56%)",
+      "name": "color_blue_normal"
+    },
+    "color_turquoise_dark": {
+      "type": "color",
+      "value": "rgb(5, 179, 214)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Dark shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 43%)",
+      "name": "color_turquoise_dark"
     },
     "color_context_positive_dark": {
       "type": "color",
-      "value": "rgb(1, 166, 53)",
+      "value": "rgb(4, 164, 52)",
       "category": "color-group-context-positive",
       "comment": "Slightly dark shade of positive context",
-      "originalValue": "#01A635",
+      "originalValue": "hsl({!green}, 33%)",
       "name": "color_context_positive_dark"
-    },
-    "color_yellow_darker": {
-      "type": "color",
-      "value": "rgb(78, 73, 23)",
-      "category": "color-group-hue-yellow",
-      "comment": "Darker shade of yellow",
-      "originalValue": "#4E4917",
-      "name": "color_yellow_darker"
     },
     "color_tone_grey_darker": {
       "type": "color",
-      "value": "rgb(57, 56, 57)",
+      "value": "rgb(51, 51, 51)",
       "category": "color-group-tone-black",
       "comment": "Darker grey",
-      "originalValue": "#393839",
+      "originalValue": "hsl({!none}, 20%)",
       "name": "color_tone_grey_darker"
+    },
+    "color_gold_light": {
+      "type": "color",
+      "value": "rgb(255, 228, 133)",
+      "category": "color-group-hue-gold",
+      "comment": "Light shade of gold",
+      "originalValue": "hsl({!gold}, 76%)",
+      "name": "color_gold_light"
     },
     "color_overlay_white_low": {
       "type": "color",
@@ -299,90 +321,26 @@
     },
     "color_tone_grey_lighter": {
       "type": "color",
-      "value": "rgb(220, 221, 222)",
+      "value": "rgb(204, 204, 204)",
       "category": "color-group-tone-white",
       "comment": "Lighter grey",
-      "originalValue": "#DCDDDE",
+      "originalValue": "hsl({!none}, 80%)",
       "name": "color_tone_grey_lighter"
     },
     "color_context_negative_dark": {
       "type": "color",
-      "value": "rgb(145, 43, 16)",
+      "value": "rgb(117, 33, 10)",
       "category": "color-group-context-negative",
       "comment": "Slightly dark shade of negative context",
-      "originalValue": "#912B10",
+      "originalValue": "hsl({!tomato}, 25%)",
       "name": "color_context_negative_dark"
-    },
-    "color_sand_dark": {
-      "type": "color",
-      "value": "rgb(109, 97, 24)",
-      "category": "color-group-hue-sand",
-      "comment": "Slightly dark shade of sand",
-      "originalValue": "#6D6118",
-      "name": "color_sand_dark"
-    },
-    "color_red": {
-      "type": "color",
-      "value": "rgb(209, 56, 20)",
-      "category": "color-group-hue-red",
-      "comment": "Base shade of red",
-      "originalValue": "#D13814",
-      "name": "color_red"
-    },
-    "color_magenta_darker": {
-      "type": "color",
-      "value": "rgb(79, 16, 53)",
-      "category": "color-group-hue-magenta",
-      "comment": "Darker shade of magenta",
-      "originalValue": "#4F1035",
-      "name": "color_magenta_darker"
-    },
-    "color_olive_dark": {
-      "type": "color",
-      "value": "rgb(67, 89, 74)",
-      "category": "color-group-hue-olive",
-      "comment": "Slightly dark shade of olive",
-      "originalValue": "#43594A",
-      "name": "color_olive_dark"
-    },
-    "color_olive_light": {
-      "type": "color",
-      "value": "rgb(224, 228, 225)",
-      "category": "color-group-hue-olive",
-      "comment": "Slightly light shade of olive",
-      "originalValue": "#E0E4E1",
-      "name": "color_olive_light"
-    },
-    "color_blue": {
-      "type": "color",
-      "value": "rgb(67, 116, 183)",
-      "category": "color-group-hue-blue",
-      "comment": "Base shade of blue",
-      "originalValue": "#4374B7",
-      "name": "color_blue"
-    },
-    "color_sand_light": {
-      "type": "color",
-      "value": "rgb(235, 224, 178)",
-      "category": "color-group-hue-sand",
-      "comment": "Slightly light shade of sand",
-      "originalValue": "#EBE0B2",
-      "name": "color_sand_light"
-    },
-    "color_purple": {
-      "type": "color",
-      "value": "rgb(150, 40, 198)",
-      "category": "color-group-hue-purple",
-      "comment": "Base shade of purple",
-      "originalValue": "#9628C6",
-      "name": "color_purple"
     },
     "color_context_negative_light": {
       "type": "color",
-      "value": "rgb(250, 180, 153)",
+      "value": "rgb(249, 199, 185)",
       "category": "color-group-context-negative",
       "comment": "Slightly light shade of negative context",
-      "originalValue": "#FAB499",
+      "originalValue": "hsl({!tomato}, 85%)",
       "name": "color_context_negative_light"
     },
     "color_tone_white": {
@@ -390,71 +348,135 @@
       "value": "rgb(255, 255, 255)",
       "category": "color-group-tone-white",
       "comment": "Pure white color",
-      "originalValue": "#FFFFFF",
+      "originalValue": "hsl({!none}, 100%)",
       "name": "color_tone_white"
     },
     "color_orange_darker": {
       "type": "color",
-      "value": "rgb(164, 104, 16)",
+      "value": "rgb(135, 51, 3)",
       "category": "color-group-hue-orange",
       "comment": "Darker shade of orange",
-      "originalValue": "#A46810",
+      "originalValue": "hsl({!orange}, 27%)",
       "name": "color_orange_darker"
+    },
+    "color_blue_default": {
+      "type": "color",
+      "value": "rgb(60, 91, 150)",
+      "category": "color-group-hue-blue",
+      "comment": "Default shade of blue",
+      "originalValue": "hsl({!blue}, 41%)",
+      "name": "color_blue_default"
     },
     "color_tone_near_black": {
       "type": "color",
-      "value": "rgb(18, 21, 19)",
+      "value": "rgb(26, 26, 26)",
       "category": "color-group-tone-black",
       "comment": "Darkest grey, near black",
-      "originalValue": "#121513",
+      "originalValue": "hsl({!none}, 10%)",
       "name": "color_tone_near_black"
+    },
+    "color_gold_dark": {
+      "type": "color",
+      "value": "rgb(235, 184, 0)",
+      "category": "color-group-hue-gold",
+      "comment": "Dark shade of gold",
+      "originalValue": "hsl({!gold}, 46%)",
+      "name": "color_gold_dark"
+    },
+    "color_blue_lighter": {
+      "type": "color",
+      "value": "rgb(204, 215, 235)",
+      "category": "color-group-hue-blue",
+      "comment": "Lighter shade of blue",
+      "originalValue": "hsl({!blue}, 86%)",
+      "name": "color_blue_lighter"
     },
     "color_green_darker": {
       "type": "color",
-      "value": "rgb(61, 80, 36)",
+      "value": "rgb(4, 164, 52)",
       "category": "color-group-hue-green",
       "comment": "Darker shade of green",
-      "originalValue": "#3D5024",
+      "originalValue": "hsl({!green}, 33%)",
       "name": "color_green_darker"
+    },
+    "color_orange_normal": {
+      "type": "color",
+      "value": "rgb(251, 117, 40)",
+      "category": "color-group-hue-orange",
+      "comment": "Normal shade of orange",
+      "originalValue": "hsl({!orange}, 57%)",
+      "name": "color_orange_normal"
     },
     "color_context_positive_light": {
       "type": "color",
-      "value": "rgb(228, 235, 160)",
+      "value": "rgb(220, 254, 230)",
       "category": "color-group-context-positive",
       "comment": "Slightly light shade of positive context",
-      "originalValue": "#E4EBA0",
+      "originalValue": "hsl({!green}, 93%)",
       "name": "color_context_positive_light"
     },
-    "color_purple_dark": {
+    "color_tomato_darker": {
       "type": "color",
-      "value": "rgb(102, 41, 120)",
-      "category": "color-group-hue-purple",
-      "comment": "Slightly dark shade of purple",
-      "originalValue": "#662978",
-      "name": "color_purple_dark"
+      "value": "rgb(117, 33, 10)",
+      "category": "color-group-hue-tomato",
+      "comment": "Darker shade of tomato",
+      "originalValue": "hsl({!tomato}, 25%)",
+      "name": "color_tomato_darker"
+    },
+    "color_turquoise_light": {
+      "type": "color",
+      "value": "rgb(121, 230, 252)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Light shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 73%)",
+      "name": "color_turquoise_light"
+    },
+    "color_turquoise_darker": {
+      "type": "color",
+      "value": "rgb(4, 117, 139)",
+      "category": "color-group-hue-turquoise",
+      "comment": "Darker shade of turquoise",
+      "originalValue": "hsl({!turquoise}, 28%)",
+      "name": "color_turquoise_darker"
+    },
+    "color_tomato_light": {
+      "type": "color",
+      "value": "rgb(243, 142, 114)",
+      "category": "color-group-hue-tomato",
+      "comment": "Light shade of tomato",
+      "originalValue": "hsl({!tomato}, 70%)",
+      "name": "color_tomato_light"
+    },
+    "color_gold_default": {
+      "type": "color",
+      "value": "rgb(235, 184, 0)",
+      "category": "color-group-hue-gold",
+      "comment": "Default shade of gold",
+      "originalValue": "hsl({!gold}, 46%)",
+      "name": "color_gold_default"
     },
     "color_green_light": {
       "type": "color",
-      "value": "rgb(228, 235, 160)",
+      "value": "rgb(146, 252, 178)",
       "category": "color-group-hue-green",
-      "comment": "Slightly light shade of green",
-      "originalValue": "#E4EBA0",
+      "comment": "Light shade of green",
+      "originalValue": "hsl({!green}, 78%)",
       "name": "color_green_light"
     },
-    "color_olive": {
+    "color_green_normal": {
       "type": "color",
-      "value": "rgb(171, 184, 175)",
-      "category": "color-group-hue-olive",
-      "comment": "Base shade of olive",
-      "originalValue": "#ABB8AF",
-      "name": "color_olive"
+      "value": "rgb(71, 250, 125)",
+      "category": "color-group-hue-green",
+      "comment": "Normal shade of green",
+      "originalValue": "hsl({!green}, 63%)",
+      "name": "color_green_normal"
     },
     "color_blue_dark": {
       "type": "color",
-      "value": "rgb(33, 65, 132)",
+      "value": "rgb(60, 91, 150)",
       "category": "color-group-hue-blue",
-      "comment": "Slightly dark shade of blue",
-      "originalValue": "#214184",
+      "comment": "Dark shade of blue",
+      "originalValue": "hsl({!blue}, 41%)",
       "name": "color_blue_dark"
     },
     "size_small": {
