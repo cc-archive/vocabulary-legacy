@@ -1,5 +1,5 @@
 **Fixes**
-<!-- If PR only partly solves the issue, replace 'Fixes' with 'Partially addresses' -->
+<!-- If PR only partly solves the issue, replace 'Fixes' below with 'Partially addresses' -->
 Fixes #XX by @YY
 
 **Description**
