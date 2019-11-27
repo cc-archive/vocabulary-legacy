@@ -21,17 +21,17 @@
 
 <p align="center">
   <a 
-    href="https://github.com/creativecommons/cc-vocabulary/blob/master/LICENSE"
+    href="https://github.com/creativecommons/vue-vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
-    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/cc-vocabulary.svg?color=brightgreen"/>
+    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vue-vocabulary.svg?color=brightgreen"/>
   </a>
   <a 
-    href="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master"
+    href="https://circleci.com/gh/creativecommons/vue-vocabulary/tree/master"
     style="margin-right: 1em;">
-    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/cc-vocabulary/tree/master.svg?style=shield"/>
+    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/vue-vocabulary/tree/master.svg?style=shield"/>
   </a>
   <a 
-    href="https://github.com/creativecommons/cc-vocabulary/blob/master/CONTRIBUTING.md"
+    href="https://github.com/creativecommons/vue-vocabulary/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
   </a>
