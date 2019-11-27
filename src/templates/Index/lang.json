@@ -2,8 +2,7 @@
   "en": {
     "definition":  {
       "noun": "noun",
-      "unimportant": "the body of words used in a particular language",
-      "cohesive": "a cohesive design system to unite the web facing {0}",
+      "cohesive": "{vue} components that implement a cohesive design system to unite the web facing {creativecommons}",
       "seealso": {
         "styleguide": "Styleguide",
         "storybook": "Storybook"
@@ -37,8 +36,7 @@
   "hi": {
     "definition": {
       "noun": "संज्ञा",
-      "unimportant":  "किसी विशेष भाषा में प्रयुक्त शब्दों का समूह",
-      "cohesive": "वेब का सामना करने वाले {0} को एकजुट करने के लिए एक सुसंगत डिजाइन प्रणाली",
+      "cohesive": "{vue} घटक जो वेब का सामना करने वाले {creativecommons} को एकजुट करने के लिए एक सुसंगत डिजाइन प्रणाली को लागू करते हैं",
       "seealso": {
         "styleguide": "स्टाइलगाइड",
         "storybook": "स्टोरीबूक"

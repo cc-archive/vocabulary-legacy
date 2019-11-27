@@ -6,19 +6,19 @@
           :pronunciation="$t('pronunciation')"
           :part-of-speech="$t('definition.noun')">
           <template #word>
-            {{ $t('vo_cab_u_lar_y') }}
+            {{ $t('vue').toLocaleLowerCase() }}-{{ $t('vo_cab_u_lar_y') }}
           </template>
           <ul>
-            <li class="unimportant">
-              {{ $t('definition.unimportant') }}
-            </li>
             <li>
               <i18n path="definition.cohesive" tag="span">
-                {{ $t('creativecommons') }}
+                <template #vue>{{ $t('vue') }}</template>
+                <template #creativecommons>{{ $t('creativecommons') }}</template>
               </i18n>
             </li>
           </ul>
           <template #seeAlso>
+            <a :href="baseLibraryHref">
+              {{ $t('vo_cab_u_lar_y') }}</a>,
             <a :href="styleguideHref">
               {{ $t('definition.seealso.styleguide') }}</a>,
             <a :href="storybookHref">
@@ -30,25 +30,27 @@
 
     <Footer>
       <template #logo>
-        <span class="logo">
-          <BrandImagery
-            type="lettermark"
-            color="white"
-            size="small"
-            is-centered/>
-          &nbsp;
-          <BrandImagery
-            brand="vocabulary"
-            color="white"
-            size="small"
-            is-centered/>
-        </span>
+        <a :href="baseLibraryHref">
+          <span class="logo">
+            <BrandImagery
+              type="lettermark"
+              color="white"
+              size="small"
+              is-centered/>
+            &nbsp;
+            <BrandImagery
+              brand="vocabulary"
+              color="white"
+              size="small"
+              is-centered/>
+          </span>
+        </a>
       </template>
 
       <template #links>
         <ul>
           <li
-            v-for="(link, index) in alternativeLinks"
+            v-for="(link, index) in links"
             :key="index">
             <a :href="link.href">
               {{ $t(link.key) }}
@@ -60,7 +62,7 @@
       <template #communication>
         <Quote
           :attribution="$t('communication.rumi')">
-          <span v-html="$t('communication.quote')"></span>
+          <span v-html="$t('communication.quote')"/>
         </Quote>
         <Paragraph>
           {{ $t('communication.ie') }}
@@ -70,7 +72,7 @@
       <template #contacts>
         <ul>
           <li
-            v-for="(contact, index) in alternativeContacts"
+            v-for="(contact, index) in contacts"
             :key="index">
             <a :href="contact.href">
               {{ $t(contact.key) }}
@@ -83,8 +85,8 @@
         <div>
           <Heading :level="6">{{ $t('panel.credits') }}</Heading>
           <i18n path="panel.builtusing" tag="span">
-            <a href="https://creativecommons.github.io/cc-vocabulary/">
-              {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
+            <a href="https://creativecommons.github.io/vue-vocabulary/">
+              {{ $t('vue') }} {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
           </i18n>
           <br/>
           <i18n path="panel.deploysby" tag="span">
@@ -140,22 +142,19 @@
     data: function () {
       const styleguideHref = 'styleguide'
       const storybookHref = 'storybook'
+      const baseLibraryHref = 'https://creativecommons.github.io/vocabulary'
 
-      let alternativeLinks = [
+      let links = [
         {
           key: 'links.github',
-          href: 'https://github.com/creativecommons/cc-vocabulary'
+          href: 'https://github.com/creativecommons/vue-vocabulary'
         },
         {
           key: 'links.umd',
           href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
-        },
-        {
-          key: 'links.css',
-          href: 'https://codepen.io/dhruvkb/pen/bXmmZE'
         }
       ]
-      let alternativeContacts = [
+      let contacts = [
         {
           key: 'contacts.report',
           href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
@@ -166,10 +165,11 @@
         }
       ]
       return {
+        baseLibraryHref,
         styleguideHref,
         storybookHref,
-        alternativeLinks,
-        alternativeContacts
+        links,
+        contacts
       }
     }
   }
