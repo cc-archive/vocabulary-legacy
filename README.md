@@ -1,16 +1,16 @@
 <p align="center">
   <a href="https://creativecommons.org/" class="readme-cc-logo">
-    <img 
-      alt="Creative Commons logo" 
-      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/cc_logo.png"
+    <img
+      alt="Creative Commons logo"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/cc_logo.png"
       height="62px"/>
   </a>
 </p>
 <p align="center">
-  <a href="https://creativecommons.github.io/vue-vocabulary/" class="readme-vocabulary-logo">
-    <img 
-      alt="Vocabulary logo" 
-      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
+  <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
+    <img
+      alt="Vocabulary logo"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="65px"/>
   </a>
 </p>
@@ -20,26 +20,30 @@
 > ensuring a consistently familiar experience.
 
 <p align="center">
-  <a 
-    href="https://github.com/creativecommons/vue-vocabulary/blob/master/LICENSE"
+  <a
+    href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
-    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vue-vocabulary.svg?color=brightgreen"/>
+    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vocabulary.svg?color=brightgreen"/>
   </a>
-  <a 
-    href="https://circleci.com/gh/creativecommons/vue-vocabulary/tree/master"
+  <!--
+  <a
+    href="https://circleci.com/gh/creativecommons/vocabulary/tree/master"
     style="margin-right: 1em;">
-    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/vue-vocabulary/tree/master.svg?style=shield"/>
+    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/vocabulary/tree/master.svg?style=shield"/>
   </a>
-  <a 
-    href="https://github.com/creativecommons/vue-vocabulary/blob/master/CONTRIBUTING.md"
+  -->
+  <a
+    href="https://github.com/creativecommons/vocabulary/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
   </a>
+  <!--
   <a 
     href="https://cc-vocabulary.netlify.com"
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
   </a>
+  -->
 </p>
 
 In essence Vocabulary is a collection of UI components, which are parts of 
@@ -57,15 +61,6 @@ Vocabulary is available as
 
 ### Demo
 
-The showcase of the true extent of Vocabulary can be found in the
-**[live styleguide](https://vue-vocabulary.netlify.com/styleguide)**
-and the
-**[interactive storybook](https://vue-vocabulary.netlify.com/storybook)**
-for the library, showcasing the components therein and variants thereof, on GitHub
-Pages. Search for a particular component using the search field or just explore
-the collection of components. If you find one that catches your fancy, play with
-it on the playground and tweak its knobs.
-
 If it works for you, just pick the code and use it in your own application. If 
 it doesn't and you think more people would love to have this feature open an 
 issue. If something peculiar happens, open a bug report. If you just love it,
@@ -82,7 +77,7 @@ contribute in some way.
 ### Contributing
 
 
-**[GitHub repository](https://github.com/creativecommons/vue-vocabulary")**
+**[GitHub repository](https://github.com/creativecommons/vocabulary")**
 
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
