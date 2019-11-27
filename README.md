@@ -50,10 +50,9 @@ develop consistent applications.
 
 ### Availability
 
-Vocabulary is a collection of UI components, available both as 
-**CSS stylesheets** and **minified JS** distributed via unpkg, as well the more
-versatile and flexible (and preferred) **Vue components** distributed via `npm`.
-A lot of features available via `npm` packages might not be supported via UMD.
+Vocabulary is available as
+- [stylesheets](https://github.com/creativecommons/vocabulary)
+- Vue components _(this repo)_
 
 
 ### Demo
