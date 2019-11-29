@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
-  "homepage": "https://creativecommons.github.io/cc-vocabulary/",
-  "repository": "github:creativecommons/cc-vocabulary",
-  "bugs": "https://github.com/creativecommons/cc-vocabulary/issues/",
+  "homepage": "https://creativecommons.github.io/vue-vocabulary/",
+  "repository": "github:creativecommons/vue-vocabulary",
+  "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
   "license": "MIT",
   "keywords": [
     "ui",

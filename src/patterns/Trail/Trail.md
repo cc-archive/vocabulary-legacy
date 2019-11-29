@@ -12,7 +12,7 @@ import {
 library.add(faHome, faBook, faCubes, faCube);
 
 <Trail color="orange">
-  <TrailCrumb icon="home" link="https://github.com/creativecommons/cc-vocabulary">
+  <TrailCrumb icon="home" link="https://github.com/creativecommons/vue-vocabulary">
     CC Vocabulary
   </TrailCrumb>
   <TrailCrumb icon="book" link="/">

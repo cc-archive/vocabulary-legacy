@@ -9,14 +9,14 @@ Fork the project. This will be useful if you intend to submit PRs.
 repository in step 1, clone the fork instead.
 
 ```
-$ git clone https://github.com/creativecommmons/cc-vocabulary.git
+$ git clone https://github.com/creativecommmons/vue-vocabulary.git
 ```
 
 **Step 2:**
 Change into the project directory.
 
 ```
-$ cd cc-vocabulary/
+$ cd vue-vocabulary/
 ```
 
 After this step, there are two ways to proceed. Choose the one that suits your

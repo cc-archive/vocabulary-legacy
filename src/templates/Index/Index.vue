@@ -157,11 +157,11 @@
       let contacts = [
         {
           key: 'contacts.report',
-          href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
+          href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
         },
         {
           key: 'contacts.request',
-          href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
+          href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
         }
       ]
       return {

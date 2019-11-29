@@ -52,7 +52,7 @@ Anything goes.
 let alternativeLinks = [
   {
     text: 'GitHub',
-    href: 'https://github.com/creativecommons/cc-vocabulary'
+    href: 'https://github.com/creativecommons/vue-vocabulary'
   },
   {
     text: 'UMD Demo',
@@ -66,11 +66,11 @@ let alternativeLinks = [
 let alternativeContacts = [
   {
     text: 'Report bug',
-    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
+    href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
   },
   {
     text: 'Request feature',
-    href: 'https://github.com/creativecommons/cc-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
+    href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
   }
 ];
 

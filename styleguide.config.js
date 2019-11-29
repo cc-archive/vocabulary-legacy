@@ -8,7 +8,7 @@ let viewportMeta = [
   'viewport-fit=cover'
 ].join(', ')
 let titleMeta = 'vo·cab·u·lar·y'
-let urlMeta = 'https://creativecommons.github.io/cc-vocabulary/'
+let urlMeta = 'https://creativecommons.github.io/vue-vocabulary/'
 let descriptionMeta = 'A cohesive design system to unite the web facing Creative Commons'
 let imageMeta = `${urlMeta}titlecard.png`
 

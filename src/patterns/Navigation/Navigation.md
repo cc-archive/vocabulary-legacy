@@ -12,7 +12,7 @@ library.add(faHome, faBook);
 <Navigation
   color="orange"
   is-inverted>
-  <NavigationLink icon="home" link="https://github.com/creativecommons/cc-vocabulary">
+  <NavigationLink icon="home" link="https://github.com/creativecommons/vue-vocabulary">
     Home page
   </NavigationLink>
   <NavigationLink icon="book" link="/">

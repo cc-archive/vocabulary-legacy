@@ -2,15 +2,15 @@
   <a href="https://creativecommons.org/" class="readme-cc-logo">
     <img 
       alt="Creative Commons logo" 
-      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/cc_logo.png" 
+      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/cc_logo.png"
       height="62px"/>
   </a>
 </p>
 <p align="center">
-  <a href="https://creativecommons.github.io/cc-vocabulary/" class="readme-vocabulary-logo">
+  <a href="https://creativecommons.github.io/vue-vocabulary/" class="readme-vocabulary-logo">
     <img 
       alt="Vocabulary logo" 
-      src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true" 
+      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="65px"/>
   </a>
 </p>
@@ -58,9 +58,9 @@ Vocabulary is available as
 ### Demo
 
 The showcase of the true extent of Vocabulary can be found in the
-**[live styleguide](https://creativecommons.github.io/cc-vocabulary/styleguide)**
+**[live styleguide](https://creativecommons.github.io/vue-vocabulary/styleguide)**
 and the
-**[interactive storybook](https://creativecommons.github.io/cc-vocabulary/storybook)**
+**[interactive storybook](https://creativecommons.github.io/vue-vocabulary/storybook)**
 for the library, showcasing the components therein and variants thereof, on GitHub
 Pages. Search for a particular component using the search field or just explore
 the collection of components. If you find one that catches your fancy, play with

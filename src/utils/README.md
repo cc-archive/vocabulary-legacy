@@ -2,7 +2,7 @@
 
 <center>
 <img
-  src="https://raw.githubusercontent.com/creativecommons/cc-vocabulary/master/src/assets/icons/ds_nomenclature/util.svg?sanitize=true"
+  src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/src/assets/icons/ds_nomenclature/util.svg?sanitize=true"
   width="64px"/>
 </center>
 
