@@ -1,0 +1,65 @@
+@import "~@/assets/tokens/tokens.styl"
+
+@import "~@/styles/colors.styl"
+@import "~@/styles/font-reset.styl"
+@import "~@/styles/sizes.styl"
+
+.vocab.github-corner
+  // Color palette
+
+  --github-corner-primary $color-tone-black
+
+  &.inverted
+    --github-corner-primary $color-tone-white
+
+  colors('--github-corner-primary')
+
+  --github-corner-secondary $color-tone-white
+
+  &.inverted
+    --github-corner-secondary $color-tone-black
+
+  // Color
+
+  --github-corner-background-color var(--github-corner-primary)
+  --github-corner-text-color var(--github-corner-secondary)
+
+  // Rules
+
+  display inline-flex
+  flex-direction row
+  align-items center
+
+  color var(--github-corner-text-color)
+  top $space-zero
+  fill var(--github-corner-background-color)
+
+  &.left-cornered
+    left 0
+    transform scale(-1, 1)
+
+  &.right-cornered
+    right 0
+
+  &.relatively-positioned
+    position relative
+
+  &.absolutely-positioned
+    position absolute
+
+  &:hover
+    .octo-arm
+      animation octocat-wave 560ms ease-in-out
+
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  20%, 60% {
+    transform: rotate(-25deg)
+  }
+  40%, 80% {
+    transform: rotate(10deg)
+  }
+}
