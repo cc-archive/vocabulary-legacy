@@ -6,7 +6,7 @@
         <slot name="valueAddons">
           <FontAwesomeIcon
             v-if="iconSet[0]"
-            :icon="['fas', iconSet[0]]"
+            :icon="iconSet[0]"
             fixed-width/>
         </slot>
       </span>
@@ -21,7 +21,7 @@
         <slot name="labelAddons">
           <FontAwesomeIcon
             v-if="iconSet[1]"
-            :icon="['fas', iconSet[1]]"
+            :icon="iconSet[1]"
             fixed-width/>
         </slot>
       </span>

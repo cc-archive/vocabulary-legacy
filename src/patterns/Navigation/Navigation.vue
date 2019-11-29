@@ -12,7 +12,7 @@
             tag="span">
             <FontAwesomeIcon
               v-if="navigationLink.icon"
-              :icon="['fas', navigationLink.icon]"
+              :icon="navigationLink.icon"
               fixed-width/>
           </SlotRenderer>
           <SlotRenderer

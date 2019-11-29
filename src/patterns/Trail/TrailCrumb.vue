@@ -27,7 +27,7 @@
        * _the icon to show in the trail crumb_
        */
       icon: {
-        type: String
+        type: [String, Array]
       },
       /**
        * _the link that this crumb should point to_

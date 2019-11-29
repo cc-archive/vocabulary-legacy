@@ -184,19 +184,27 @@ yourself.
 
 ```jsx
 <Grid>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <SwitchField
-      color="tomato" 
+      color="tomato"
       size="huge" 
       :value="true"
       is-labelled/>
   </GridCell>
-  <GridCell :span-set="[12, 6, 6, 6, 6]">
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
     <SwitchField
-      color="tomato" 
+      color="tomato"
       size="huge"
       :value="true"
       :iconSet="['times', 'check']"
+      is-labelled/>
+  </GridCell>
+  <GridCell :span-set="[12, 4, 4, 4, 4]">
+    <SwitchField
+      color="tomato"
+      size="huge"
+      :value="true"
+      :iconSet="[['fab', 'bluetooth-b'], ['fab', 'bluetooth-b']]"
       is-labelled/>
   </GridCell>
 </Grid>

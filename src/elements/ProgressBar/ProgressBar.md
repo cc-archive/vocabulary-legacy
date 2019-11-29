@@ -107,9 +107,20 @@ A progress bar may include an icon as well as show the percentage value adjacent
 to it.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faAccessibleIcon);
+
 <ProgressBar 
   color="tomato"
   icon="hourglass-half"
+  :value="20"
+  is-percent-visible/>
+<br/><br/>
+<ProgressBar
+  color="tomato"
+  :icon="['fab', 'accessible-icon']"
   :value="20"
   is-percent-visible/>
 ```

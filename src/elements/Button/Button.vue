@@ -12,7 +12,7 @@
       <slot name="addons">
         <FontAwesomeIcon
           v-if="icon"
-          :icon="['fas', icon]"
+          :icon="icon"
           fixed-width/>
       </slot>
     </div>
@@ -73,7 +73,7 @@
        * _an icon to use as an add-on_
        */
       icon: {
-        type: String
+        type: [String, Array]
       },
       /**
        * _whether to pad the add-on_

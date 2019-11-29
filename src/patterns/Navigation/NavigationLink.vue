@@ -26,7 +26,7 @@
        * _the icon to show in the navigation link_
        */
       icon: {
-        type: String
+        type: [String, Array]
       },
       /**
        * _the link that this link should point to_

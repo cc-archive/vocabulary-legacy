@@ -6,18 +6,16 @@ A navigation link can have an icon attached to it via the `icon` prop.
 
 ```jsx
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { 
-  faHome,
-  faBook
-} from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faReadme } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faHome, faBook);
+library.add(faHome, faReadme);
 
 <Navigation color="tomato">
   <NavigationLink icon="home">
     Home page
   </NavigationLink>
-  <NavigationLink icon="book">
+  <NavigationLink :icon="['fab', 'readme']">
     Style guide
   </NavigationLink>
 </Navigation>

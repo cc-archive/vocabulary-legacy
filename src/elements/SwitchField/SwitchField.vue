@@ -8,7 +8,7 @@
       class="symbol off">
       <FontAwesomeIcon
         v-if="iconSet[0]"
-        :icon="['fas', iconSet[0]]"
+        :icon="iconSet[0]"
         fixed-width/>
       <div
         v-else
@@ -22,7 +22,7 @@
       class="symbol on">
       <FontAwesomeIcon
         v-if="iconSet[1]"
-        :icon="['fas', iconSet[1]]"
+        :icon="iconSet[1]"
         fixed-width/>
       <div
         v-else

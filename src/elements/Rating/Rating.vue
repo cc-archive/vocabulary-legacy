@@ -12,7 +12,7 @@
       :key="index"
       class="icon unit"
       :class="iconClasses(index)"
-      :icon="['fas', computedIcons[index-1]]"
+      :icon="computedIcons[index-1]"
       fixed-width
       @click="changeRating(index)"/>
   </div>

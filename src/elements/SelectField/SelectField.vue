@@ -28,7 +28,7 @@
       <slot name="addons">
         <FontAwesomeIcon
           v-if="icon"
-          :icon="['fas', icon]"
+          :icon="icon"
           fixed-width/>
       </slot>
     </div>
@@ -111,7 +111,7 @@
        * _an icon to use in the dropdown_
        */
       icon: {
-        type: String
+        type: [String, Array]
       },
       /**
        * _the list of options to choose from_

@@ -124,6 +124,11 @@ A field can also contain two icons, one on the left and right side each. Note
 that the icon must be added to the FontAwesome library by the application.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faGithub);
+
 <InputField
   color="tomato"
   :icon-set="['keyboard', '']"
@@ -141,6 +146,12 @@ that the icon must be added to the FontAwesome library by the application.
   :icon-set="['keyboard', 'keyboard']"
   type="text"
   placeholder="Both"/>
+<br/><br/>
+<InputField
+  color="tomato"
+  :icon-set="[['fab', 'github']]"
+  type="text"
+  placeholder="Brand Icon"/>
 ```
 
 If you'd like your own something there, you can override the left and the right

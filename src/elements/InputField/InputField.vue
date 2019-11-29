@@ -18,7 +18,7 @@
       <slot name="leftAddons">
         <FontAwesomeIcon
           v-if="iconSet[0]"
-          :icon="['fas', iconSet[0]]"
+          :icon="iconSet[0]"
           fixed-width/>
       </slot>
     </div>
@@ -31,7 +31,7 @@
       <slot name="rightAddons">
         <FontAwesomeIcon
           v-if="iconSet[1]"
-          :icon="['fas', iconSet[1]]"
+          :icon="iconSet[1]"
           fixed-width/>
       </slot>
     </div>

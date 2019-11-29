@@ -10,19 +10,20 @@ A trail crumb can have an icon attached to it via the `icon` prop.
 ```jsx
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
+  faAngleDoubleRight,
   faHome,
-  faBook,
   faCubes,
   faCube
 } from '@fortawesome/free-solid-svg-icons';
+import { faReadme } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faHome, faBook, faCubes, faCube);
+library.add(faAngleDoubleRight, faHome, faReadme, faCubes, faCube);
 
-<Trail color="tomato">
+<Trail color="tomato" :icon="['fas', 'angle-double-right']">
   <TrailCrumb icon="home">
     CC Vocabulary
   </TrailCrumb>
-  <TrailCrumb icon="book">
+  <TrailCrumb :icon="['fab', 'readme']">
     Styleguide
   </TrailCrumb>
   <TrailCrumb icon="cubes">

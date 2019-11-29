@@ -18,7 +18,7 @@
             tag="span">
             <FontAwesomeIcon
               v-if="trailCrumb.icon"
-              :icon="['fas', trailCrumb.icon]"
+              :icon="trailCrumb.icon"
               fixed-width/>
           </SlotRenderer>
           <SlotRenderer
@@ -27,7 +27,7 @@
         </a>
         <FontAwesomeIcon
           class="separator"
-          :icon="['fas', icon]"
+          :icon="icon"
           fixed-width/>
       </li>
     </ul>
@@ -79,7 +79,7 @@
        * _the icon to use as the separator between crumbs_
        */
       icon: {
-        type: String,
+        type: [String, Array],
         default: 'angle-right'
       }
     },

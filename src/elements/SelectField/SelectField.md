@@ -154,6 +154,11 @@ is about. Note that the icon must be added to the FontAwesome library by the
 application.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faGitAlt);
+
 let optionList = [
   {
     value: 'a',
@@ -168,6 +173,11 @@ let optionList = [
 <SelectField
   color="tomato"
   icon="vote-yea"
+  :option-list="optionList"/>
+<br/><br/>
+<SelectField
+  color="tomato"
+  :icon="['fab', 'git-alt']"
   :option-list="optionList"/>
 ```
 

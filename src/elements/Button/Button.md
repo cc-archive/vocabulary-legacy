@@ -115,6 +115,11 @@ visual aid as to what it does. Note that the icon must be added to the
 FontAwesome library by the application.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faReadme } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faReadme);
+
 <Button 
   color="tomato" 
   icon="hand-point-up"/>
@@ -123,6 +128,12 @@ FontAwesome library by the application.
   color="tomato" 
   icon="hand-point-up">
   Click me
+</Button>
+<br/><br/>
+<Button
+  color="tomato"
+  :icon="['fab', 'readme']">
+  Read me
 </Button>
 ```
 

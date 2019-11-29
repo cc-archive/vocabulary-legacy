@@ -137,8 +137,13 @@ A statistic can be contain two icons, one for the value and the label each. Note
 that the icon must be added to the FontAwesome library by the application.
 
 ```jsx
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFontAwesomeFlag } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faFontAwesomeFlag);
+
 <Grid style="text-align: center;">
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 12, 6, 3, 3]">
     <Statistic
       color="tomato"
       :icon-set="['chart-line', '']"
@@ -146,7 +151,7 @@ that the icon must be added to the FontAwesome library by the application.
       value="Value"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 12, 6, 3, 3]">
     <Statistic
       color="tomato"
       :icon-set="['', 'chart-line']"
@@ -154,12 +159,20 @@ that the icon must be added to the FontAwesome library by the application.
       value="Label"
       is-textual-value/>
   </GridCell>
-  <GridCell :span-set="[12, 4, 4, 4, 4]">
+  <GridCell :span-set="[12, 12, 6, 3, 3]">
     <Statistic
       color="tomato"
       :icon-set="['chart-line', 'chart-line']"
       label="Icon"
       value="Both"
+      is-textual-value/>
+  </GridCell>
+  <GridCell :span-set="[12, 12, 6, 3, 3]">
+    <Statistic
+      color="tomato"
+      :icon-set="['', ['fab', 'font-awesome-flag']]"
+      label="Icon"
+      value="Any"
       is-textual-value/>
   </GridCell>
 </Grid>
