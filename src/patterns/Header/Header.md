@@ -82,7 +82,7 @@ A header without the color specified is black.
 ```
 
 After having seen so many component you already know, the header can be colored
-using any color from the set provided by CC Vocabulary.
+using any color from the set provided by Vocabulary.
 
 Also you may use one of the two shades, namely `dark` and `darker`, to
 accentuate the color. Note that while `lighter` and `light` are present and work,

@@ -36,7 +36,7 @@ A navigation bar is black colored by default.
 </Navigation>
 ```
 
-Navigation bars can be colored using any color from the set provided by CC 
+Navigation bars can be colored using any color from the set provided by
 Vocabulary. Nothing to discourage exploration like the color black.
 
 Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 

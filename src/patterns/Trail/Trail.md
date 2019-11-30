@@ -13,7 +13,7 @@ library.add(faHome, faBook, faCubes, faCube);
 
 <Trail color="orange">
   <TrailCrumb icon="home" link="https://github.com/creativecommons/vue-vocabulary">
-    CC Vocabulary
+    Vocabulary
   </TrailCrumb>
   <TrailCrumb icon="book" link="/">
     Styleguide
@@ -39,7 +39,7 @@ A trail is black colored by default.
 </Trail>
 ```
 
-Trails can be colored using any color from the set provided by CC Vocabulary. I
+Trails can be colored using any color from the set provided by Vocabulary. I
 wouldn't follow a black trail.
 
 Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 

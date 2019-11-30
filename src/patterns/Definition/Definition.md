@@ -52,7 +52,7 @@ A definition without a specified color is black.
 ```
 
 Like other components, definitions can be colored using any color from the set
-provided by CC Vocabulary. Unlike other components, definitions look terrible in
+provided by Vocabulary. Unlike other components, definitions look terrible in
 colors other than black. Also you may use one of the three shades, namely `light`,
 `dark` and `darker`, to accentuate the color.
 
@@ -204,7 +204,7 @@ a special italic style that will make you go weak at the knees.
     </li>
     <li class="unimportant">
       <em>the vocabulary wordmark may not be italicised when referring to the
-      CC Vocabulary brand identity</em>
+      Vocabulary brand identity</em>
     </li>
   </ul>
 </Definition>

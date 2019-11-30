@@ -31,7 +31,7 @@ provided just in case.
 ### Examples
 
 Although not much, take a look at the `Index` template (which is kind of what 
-we're building to be the home page of CC Vocabulary). It uses the `Footer` 
+we're building to be the home page of Vocabulary). It uses the `Footer`
 and `Hello` patterns and styles the vibrant orange background using color 
 tokens, illustrating what we're talking about. 
 

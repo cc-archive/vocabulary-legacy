@@ -3,7 +3,7 @@ repository on GitHub.
 
 ```jsx
 <GitHubCorner 
-  repo="creativecommons/cc-vocabulary" 
+  repo="creativecommons/vue-vocabulary"
   color="orange"> 
 </GitHubCorner>
 ```
@@ -45,7 +45,7 @@ A GitHub corner without color is black.
 ```
 
 GitHub corners can be colored with any color from the set provided by
-CC Vocabulary. Black, in one of rare cases like this, looks best though.
+Vocabulary. Black, in one of rare cases like this, looks best though.
 
 Also you may use one of the four shades, namely `lighter`, `light`, `dark` and `darker`, 
 to accentuate the color.
