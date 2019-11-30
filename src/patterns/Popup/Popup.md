@@ -100,6 +100,35 @@ let actionOptions = [
 </div>
 ```
 
+The popup can be delayed by a specified number of milliseconds. This is useful
+in the case of hover-triggered popups.
+
+```jsx
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faClock);
+
+let delay = 0;
+
+<InputField
+  :icon-set="['clock', '']"
+  v-model="delay"
+  color="orange"
+  type="number"
+  simplicity="slight"
+  is-infused/>
+<div style="padding: 100px 200px;">
+  <Popup action="click" :delay="Number(delay)">
+    I'm clickable!
+    <template #popup>
+      This when the trigger is <strong>clicked</strong>.<br/>
+      That's super cool!
+    </template>
+  </Popup>
+</div>
+```
+
 ### Attribute set
 
 Since `Popup` is a transparent wrapper on `Section`, all props that you could

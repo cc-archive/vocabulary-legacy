@@ -21,6 +21,8 @@
 </template>
 
 <script>
+  import { debounce } from 'lodash'
+
   import Section from '@/layouts/Section/Section'
 
   /**
@@ -62,6 +64,14 @@
           'hover',
           'click'
         ].includes(val)
+      },
+      /**
+       * _the number of milliseconds by which to delay the popup state change_
+       */
+      delay: {
+        type: Number,
+        default: 0,
+        validator: val => (val >= 0)
       }
     },
     data: function () {
@@ -75,18 +85,18 @@
 
         if (this.action === 'click') {
           return {
-            click: function () {
+            click: debounce(() => {
               vm.isVisible = !vm.isVisible
-            }
+            }, this.delay)
           }
         } else { // this.action === 'hover'
           return {
-            mouseover: function () {
+            mouseover: debounce(() => {
               vm.isVisible = true
-            },
-            mouseleave: function () {
+            }, this.delay),
+            mouseleave: debounce(() => {
               vm.isVisible = false
-            }
+            }, this.delay)
           }
         }
       },
