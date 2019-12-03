@@ -15,7 +15,7 @@
   </a>
 </p>
 
-As CC Vocabulary grows, so does the effort for maintaining code quality and 
+As Vocabulary grows, so does the effort for maintaining code quality and
 keeping technical debt to a minimum. Having a set of rules makes sure that some
 semblance of order is maintained in the chaos that is developing and maintaining
 a component library.
