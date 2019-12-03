@@ -55,8 +55,8 @@ develop consistent applications.
 ### Availability
 
 Vocabulary is available as
-- [stylesheets](https://github.com/creativecommons/vocabulary)
-- Vue components _(this repo)_
+- stylesheets _(this repo)_
+- [Vue components](https://github.com/creativecommons/vue-vocabulary)
 
 
 ### Demo
