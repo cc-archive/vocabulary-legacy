@@ -1,19 +1,19 @@
 {
-  "name": "@creativecommons/vue-vocabulary",
+  "name": "@creativecommons/vocabulary",
   "version": "0.0.0",
-  "description": "Vue components that implement a cohesive design system to unite the web facing Creative Commons",
+  "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
-  "homepage": "https://creativecommons.github.io/vue-vocabulary/",
-  "repository": "github:creativecommons/vue-vocabulary",
-  "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
+  "homepage": "https://creativecommons.github.io/vocabulary/",
+  "repository": "github:creativecommons/vocabulary",
+  "bugs": "https://github.com/creativecommons/vocabulary/issues/",
   "license": "MIT",
   "keywords": [
     "ui",
     "ux",
     "design",
     "design system",
-    "components",
-    "vue components",
+    "stylesheets",
+    "stylus stylesheets",
     "library"
   ],
   "peerDependencies": {
