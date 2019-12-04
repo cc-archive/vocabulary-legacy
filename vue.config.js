@@ -19,11 +19,19 @@ module.exports = {
   chainWebpack: config => {
     // Embed SVGs using data URLs
     config.module
-      .rule('svg').uses.clear()
+      .rule('svg')
+      .uses
+      .clear()
 
     config.module
       .rule('svg')
       .use('url-loader')
       .loader('url-loader')
+
+    config.module
+      .rule('story')
+      .test(/\.stories\.jsx?$/)
+      .use('source-loader')
+      .loader('@storybook/source-loader')
   }
 }
