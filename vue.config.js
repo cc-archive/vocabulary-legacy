@@ -1,7 +1,7 @@
 let publicPath
 
 if (process.env.NODE_ENV === 'production') {
-  publicPath = process.env.PUBLIC_PATH || '/vue-vocabulary'
+  publicPath = process.env.PUBLIC_PATH || '/vocabulary'
 } else {
   publicPath = '/'
 }
