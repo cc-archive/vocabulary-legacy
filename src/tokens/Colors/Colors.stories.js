@@ -3,21 +3,17 @@ import Colors from '@/tokens/Colors/Colors'
 export default { title: 'Tokens|Colors' }
 
 export const hues = () => ({
-  components: { Colors },
-  template: '<Colors category="hue"/>'
+  render: (h) => <Colors category="hue"/>
 })
 
 export const tones = () => ({
-  components: { Colors },
-  template: '<Colors category="tone"/>'
+  render: (h) => <Colors category="tone"/>
 })
 
 export const contexts = () => ({
-  components: { Colors },
-  template: '<Colors category="context"/>'
+  render: (h) => <Colors category="context"/>
 })
 
 export const overlays = () => ({
-  components: { Colors },
-  template: '<Colors category="overlay"/>'
+  render: (h) => <Colors category="overlay"/>
 })
