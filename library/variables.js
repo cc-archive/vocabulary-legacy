@@ -15,7 +15,7 @@ const tokensDir = path.resolve(srcDir, 'assets', 'tokens')
 const stylesDir = path.resolve(srcDir, 'styles')
 
 const libraryStencilPath = path.join(libraryDir, 'index-stencil.txt')
-const srcIndexPath = path.join(srcDir, 'index.js')
+const srcIndexPath = path.join(srcDir, 'index.styl')
 
 module.exports = {
   verboseName,

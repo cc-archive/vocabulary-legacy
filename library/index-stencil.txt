@@ -6,15 +6,3 @@
  */
 
 {{imports}}
-
-// Export individual components
-export {
-{{components}}
-}
-
-// Export as plugin
-export default {
-  install: function (Vue) {
-{{registrations}}
-  }
-}

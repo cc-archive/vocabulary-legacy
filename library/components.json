@@ -1,14 +1,10 @@
 {
-  "utils": [
-    "SlotRenderer"
-  ],
   "elements": [
     "Button",
     "ChoiceField",
     "Heading",
     "ImageView",
     "InputField",
-    "LicenseIconography",
     "Paragraph",
     "ProgressBar",
     "Rating",
@@ -28,13 +24,11 @@
     ["Table", "Cell"]
   ],
   "patterns": [
-    "BrandImagery",
     "Card",
     "Definition",
     "Footer",
     "Header",
     "LicenseBadge",
-    "Locale",
     "Navigation",
     ["Navigation", "Link"],
     "Quote",
