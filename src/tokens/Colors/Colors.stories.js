@@ -1,23 +1,23 @@
-import { storiesOf } from '@storybook/vue'
+import Colors from '@/tokens/Colors/Colors'
 
-import Colors from './Colors'
+export default { title: 'Tokens|Colors' }
 
-const stories = storiesOf('Tokens/Colors', module)
+export const hues = () => ({
+  components: { Colors },
+  template: '<Colors category="hue"/>'
+})
 
-stories
-  .add('Hues', () => ({
-    components: { Colors },
-    template: '<Colors category="hue"/>'
-  }))
-  .add('Tones', () => ({
-    components: { Colors },
-    template: '<Colors category="tone"/>'
-  }))
-  .add('Contexts', () => ({
-    components: { Colors },
-    template: '<Colors category="context"/>'
-  }))
-  .add('Overlays', () => ({
-    components: { Colors },
-    template: '<Colors category="overlay"/>'
-  }))
+export const tones = () => ({
+  components: { Colors },
+  template: '<Colors category="tone"/>'
+})
+
+export const contexts = () => ({
+  components: { Colors },
+  template: '<Colors category="context"/>'
+})
+
+export const overlays = () => ({
+  components: { Colors },
+  template: '<Colors category="overlay"/>'
+})
