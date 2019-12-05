@@ -6,23 +6,18 @@
           :pronunciation="$t('pronunciation')"
           :part-of-speech="$t('definition.noun')">
           <template #word>
-            {{ $t('vue').toLocaleLowerCase() }}-{{ $t('vo_cab_u_lar_y') }}
+            {{ $t('vo_cab_u_lar_y') }}
           </template>
           <ul>
             <li>
               <i18n path="definition.cohesive" tag="span">
-                <template #vue>{{ $t('vue') }}</template>
                 <template #creativecommons>{{ $t('creativecommons') }}</template>
               </i18n>
             </li>
           </ul>
           <template #seeAlso>
-            <a :href="baseLibraryHref">
-              {{ $t('vo_cab_u_lar_y') }}</a>,
-            <a :href="styleguideHref">
-              {{ $t('definition.seealso.styleguide') }}</a>,
-            <a :href="storybookHref">
-              {{ $t('definition.seealso.storybook') }}</a>
+            <a :href="vueLibraryHref">
+              {{ $t('vue').toLocaleLowerCase() }}-{{ $t('vo_cab_u_lar_y') }}</a>
           </template>
         </Definition>
       </Container>
@@ -85,7 +80,7 @@
         <div>
           <Heading :level="6">{{ $t('panel.credits') }}</Heading>
           <i18n path="panel.builtusing" tag="span">
-            <a href="https://creativecommons.github.io/vue-vocabulary/">
+            <a :href="vueLibraryHref">
               {{ $t('vue') }} {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
           </i18n>
           <br/>
@@ -98,11 +93,6 @@
             <a href="https://fontawesome.com/">
               {{ $t('panel.fa') }}</a> <!-- for the fullstops -->
           </i18n>
-          <br/>
-          <i18n path="panel.imagesby" tag="span">
-            <a href="https://commons.wikimedia.org/">
-              {{ $t('panel.wikimedia') }}</a> <!-- for the fullstops -->
-          </i18n>
         </div>
         <Locale/>
       </div>
@@ -111,16 +101,17 @@
 </template>
 
 <script>
-  import Heading from '@/elements/Heading/Heading'
-  import Paragraph from '@/elements/Paragraph/Paragraph'
-
-  import Container from '@/layouts/Container/Container'
-
-  import BrandImagery from '@/patterns/BrandImagery/BrandImagery'
-  import Definition from '@/patterns/Definition/Definition'
-  import Footer from '@/patterns/Footer/Footer'
-  import Locale from '@/patterns/Locale/Locale'
-  import Quote from '@/patterns/Quote/Quote'
+  import {
+    Heading,
+    Paragraph,
+    Container,
+    BrandImagery,
+    Definition,
+    Footer,
+    Locale,
+    Quote
+  } from '@creativecommons/vue-vocabulary'
+  import '@/index.styl'
 
   /**
    * ### Index is the homepage of Vocabulary.
@@ -137,46 +128,40 @@
       Definition,
       Footer,
       Locale,
-      Quote
+      Quote,
     },
     data: function () {
-      const styleguideHref = 'styleguide'
-      const storybookHref = 'storybook'
-      const baseLibraryHref = 'https://creativecommons.github.io/vocabulary'
+      const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
+      const vueLibraryHref = 'https://creativecommons.github.io/cc-vue-vocabulary'
+
+      const repoHref = 'https://github.com/creativecommons/vocabulary'
 
       let links = [
         {
           key: 'links.github',
-          href: 'https://github.com/creativecommons/vue-vocabulary'
-        },
-        {
-          key: 'links.umd',
-          href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
+          href: repoHref
         }
       ]
       let contacts = [
         {
           key: 'contacts.report',
-          href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
+          href: 'https://github.com/creativecommons/vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
         },
         {
           key: 'contacts.request',
-          href: 'https://github.com/creativecommons/vue-vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
+          href: 'https://github.com/creativecommons/vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
         }
       ]
       return {
         baseLibraryHref,
-        styleguideHref,
-        storybookHref,
+        repoHref,
+        vueLibraryHref,
         links,
         contacts
       }
     }
   }
 </script>
-
-<style scoped lang="stylus" src="./Index.styl">
-</style>
 
 <i18n src="./lang.json">
 </i18n>
