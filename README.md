@@ -38,7 +38,7 @@
   <a 
     href="https://cc-vue-vocabulary.netlify.com"
     style="margin-right: 1em;">
-    <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
+    <img alt="Netlify" src="https://img.shields.io/netlify/262faad2-c93b-4bca-94e2-3c16f85f8a64"/>
   </a>
   <a
     href="https://www.npmjs.com/package/@creativecommons/vue-vocabulary"
