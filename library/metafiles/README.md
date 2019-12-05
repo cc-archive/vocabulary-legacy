@@ -17,9 +17,9 @@
 
 There are two ways to use this package, via a package manager such as `npm` or
 in the browser via a CDN. If you are developing a Vue SPA, going the `npm` route
-might be a better approach as it would allow you to make full use of the Vue
-components such as `v-model` and `events`. But if that is not your platform, we
-also provide script bundles and stylesheet to be able to use these components 
+might be a better approach as it would allow you to make full use of Vue
+capabilities such as `v-model` and `events`. But if that is not your platform, we
+also provide CDNs for script bundles to be able to use these components 
 in your own apps.
 
 
@@ -31,7 +31,7 @@ cost of simplicity.
 #### Installation
 
 ```bash
-$ npm install --save @creativecommons/vocabulary
+$ npm install --save @creativecommons/vue-vocabulary
 ```
 
 That's basically it! I know, I know, I'm just kidding. Nothing about JavaScript 
