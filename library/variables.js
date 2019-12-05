@@ -16,6 +16,7 @@ const stylesDir = path.resolve(srcDir, 'styles')
 
 const libraryStencilPath = path.join(libraryDir, 'index-stencil.txt')
 const srcIndexPath = path.join(srcDir, 'index.styl')
+const srcRootPath = path.join(srcDir, 'root.styl')
 
 module.exports = {
   verboseName,
@@ -27,5 +28,6 @@ module.exports = {
   stylesDir,
   tokensDir,
   libraryStencilPath,
-  srcIndexPath
+  srcIndexPath,
+  srcRootPath
 }

@@ -2,24 +2,24 @@
   <a href="https://creativecommons.org/" class="readme-cc-logo">
     <img 
       alt="Creative Commons logo" 
-      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/cc_logo.png"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/cc_logo.png"
       height="62px"/>
   </a>
 </p>
 <p align="center">
-  <a href="https://creativecommons.github.io/vue-vocabulary/" class="readme-vocabulary-logo">
+  <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
     <img 
       alt="Vocabulary logo" 
-      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="65px"/>
   </a>
 </p>
 
 There are two ways to use this package, via a package manager such as `npm` or
-in the browser via a CDN. If you are developing a Vue SPA, going the `npm` route
-might be a better approach as it would allow you to make full use of the Vue
-components such as `v-model` and `events`. But if that is not your platform, we
-also provide script bundles and stylesheet to be able to use these components 
+in the browser via a CDN. If you are developing an SPA, going the `npm` route
+might be a better approach as it would allow you to make full use of Stylus
+capabilities such as `mixins`. But if that is not your platform, we
+also provide compiled stylesheets to be able to use these components 
 in your own apps.
 
 

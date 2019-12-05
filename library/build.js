@@ -7,7 +7,7 @@ const variables = require('./variables')
 
 const componentsRegistry = require('./components.json')
 
-const families = ['utils', 'elements', 'layouts', 'patterns', 'templates']
+const families = ['elements', 'layouts', 'patterns', 'templates']
 
 console.log(
   chalk.blue.inverse(`● Bundling ${variables.verboseName} library\n`)
@@ -17,9 +17,9 @@ clearDir(variables.distDir)
 
 indexComponents()
 
-buildLibrary(variables.distDir)
+buildLibrary(path.join(variables.distDir, 'css'))
 
-organiseLibrary(variables.distDir)
+copySources(variables.distDir)
 
 putMetafiles(variables.distDir)
 
@@ -54,46 +54,49 @@ function buildLibrary (directory) {
     chalk.bold(directory),
     '... '
   ))
+  families.forEach(
+    family => {
+      build(
+        path.join(variables.srcDir, family),
+        path.join(directory, family)
+      )
+    }
+  )
   build(
     variables.srcIndexPath,
+    directory
+  )
+  build(
+    variables.srcRootPath,
     directory
   )
   process.stdout.write(chalk.green('done\n'))
 }
 
-function organiseLibrary (directory) {
+function copySources (directory) {
   process.stdout.write(chalk.yellow(
-    'Organising library in',
+    'Copying sources to',
     chalk.bold(directory),
     '... '
   ))
 
   let files
 
-  // Delete the useless demo
-  fs.remove(path.join(directory, 'demo.html'))
-
-  // Move UMD files to their own directory
+  // Copy Stylus files to their own directory
   files = [
-    'vocabulary.umd.js',
-    'vocabulary.umd.js.map',
-    'vocabulary.umd.min.js',
-    'vocabulary.umd.min.js.map'
+    'index.styl',
+    'root.styl',
+    'styles',
+    ...families.filter(family => family !== 'templates'),
+    'templates/Index.styl'
   ]
-  put(files, directory, path.join(directory, 'umd'), true)
+  put(files, variables.srcDir, path.join(directory, 'styl'))
 
-  // Move CJS files to their own directory
+  // Copy assets to their own directory
   files = [
-    'vocabulary.common.js',
-    'vocabulary.common.js.map'
+    'assets'
   ]
-  put(files, directory, path.join(directory, 'cjs'), true)
-
-  // Move stylesheets to their own directory
-  files = [
-    'vocabulary.css'
-  ]
-  put(files, directory, path.join(directory, 'css'), true)
+  put(files, variables.srcDir, directory)
 
   process.stdout.write(chalk.green('done\n'))
 }
@@ -119,17 +122,6 @@ function putMetafiles (directory) {
   ]
   put(files, variables.rootDir, directory)
 
-  // Copy Stylus styles to their own directory
-  files = [
-    'colors.styl',
-    'font-reset.styl',
-    'list.styl',
-    'media.styl',
-    'page.styl',
-    'sizes.styl'
-  ]
-  put(files, variables.stylesDir, path.join(directory, 'styl'))
-
   // Copy token datafiles to their own directory
   files = [
     'tokens.raw.json',
@@ -137,12 +129,6 @@ function putMetafiles (directory) {
     'tokens.styl'
   ]
   put(files, variables.tokensDir, path.join(directory, 'tokens'))
-
-  // Copy stylesheets to their own directory
-  files = [
-    'root.css'
-  ]
-  put(files, variables.metafilesDir, path.join(directory, 'css'))
 
   process.stdout.write(chalk.green('done\n'))
 }
@@ -159,37 +145,11 @@ function index () {
   const imports = families.map(
     family => componentsRegistry[family].map(
       component => {
-        let directory = component
-        let name = component
-        if (name instanceof Array) {
-          directory = component[0]
-          name = name.join('')
-        }
-        return `import ${name} from './${family}/${directory}/${name}'`
-      }
-    ).join('\n')
-  ).join('\n\n')
-
-  const components = families.map(
-    family => componentsRegistry[family].map(
-      component => {
         let name = component
         if (name instanceof Array) {
           name = name.join('')
         }
-        return `  ${name}`
-      }
-    ).join(',\n')
-  ).join(',\n\n')
-
-  const registrations = families.map(
-    family => componentsRegistry[family].map(
-      component => {
-        let name = component
-        if (name instanceof Array) {
-          name = name.join('')
-        }
-        return `    Vue.component('${name}', ${name})`
+        return `@import "./${family}/${name}.styl"`
       }
     ).join('\n')
   ).join('\n\n')
@@ -201,23 +161,17 @@ function index () {
       encoding: 'utf-8'
     }
   )
-  return indexStencilContent
-    .replace('{{imports}}', imports)
-    .replace('{{components}}', components)
-    .replace('{{registrations}}', registrations)
+  return indexStencilContent.replace('{{imports}}', imports)
 }
 
 function build (source, destination) {
-  let target = '--target lib'
-  let name = '--name vocabulary'
-  let dest = `--dest ${destination}`
+  let dest = `--out ${destination}`
   let options = [
-    target,
-    name,
+    '--compress',
     dest
   ].join(' ')
 
-  const cmd = `vue-cli-service build ${options} ${source}`
+  const cmd = `stylus ${options} ${source}`
 
   childProcess.execSync(cmd, { stdio: 'ignore' })
 }

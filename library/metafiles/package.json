@@ -16,22 +16,14 @@
     "stylus stylesheets",
     "library"
   ],
-  "peerDependencies": {
-    "vue": ">=2.0.0",
-    "vue-i18n": ">=8.0.0"
-  },
-  "main": "cjs/vocabulary.common.js",
-  "browser": "umd/vocabulary.umd.min.js",
-  "unpkg": "umd/vocabulary.umd.min.js",
-  "jsdelivr": "umd/vocabulary.umd.min.js",
+  "unpkg": "css/index.css",
+  "jsdelivr": "css/index.css",
   "files": [
-    "cjs/*",
-    "umd/*",
+    "assets/*",
     "css/*",
     "tokens/*",
     "styl/*",
     "package.json",
-    "demo.html",
     "README.md",
     "LICENSE"
   ]
