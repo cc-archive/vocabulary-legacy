@@ -12,9 +12,9 @@ clearDir(variables.docsDir)
 
 buildWebsite(variables.docsDir)
 
-buildStyleguide()
-
-buildStorybook()
+// buildStyleguide()
+//
+// buildStorybook()
 
 console.log(chalk.green.inverse('\n✔ Done.'))
 
