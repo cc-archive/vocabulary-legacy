@@ -9,9 +9,7 @@
       }
     },
     "links": {
-      "github": "GitHub",
-      "umd": "UMD demo",
-      "css": "CSS demo"
+      "github": "GitHub"
     },
     "communication": {
       "quote": "When you are everywhere, you are nowhere.<br/>When you are somewhere, you are everywhere.",
@@ -43,9 +41,7 @@
       }
     },
     "links": {
-      "github": "गिटहब",
-      "umd": "यू एम डी डेमो",
-      "css": "सी एस एस डेमो"
+      "github": "गिटहब"
     },
     "communication": {
       "quote": "जब आप हर जगह होते हैं, तो आप कहीं नहीं होते हैं।<br/>जब आप कहीं होते हैं, तो आप हर जगह होते हैं।",

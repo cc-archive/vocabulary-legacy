@@ -1,5 +1,9 @@
 <template>
   <div class="vocab index">
+    <GitHubCorner
+      :repo="repoHref"
+      position="absolute"/>
+
     <main>
       <Container>
         <Definition
@@ -17,8 +21,6 @@
             </li>
           </ul>
           <template #seeAlso>
-            <a :href="baseLibraryHref">
-              {{ $t('vo_cab_u_lar_y') }}</a>,
             <a :href="styleguideHref">
               {{ $t('definition.seealso.styleguide') }}</a>,
             <a :href="storybookHref">
@@ -85,7 +87,7 @@
         <div>
           <Heading :level="6">{{ $t('panel.credits') }}</Heading>
           <i18n path="panel.builtusing" tag="span">
-            <a href="https://creativecommons.github.io/vue-vocabulary/">
+            <a :href="vueLibraryHref">
               {{ $t('vue') }} {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
           </i18n>
           <br/>
@@ -111,6 +113,7 @@
 </template>
 
 <script>
+  import GitHubCorner from '@/elements/GitHubCorner/GitHubCorner'
   import Heading from '@/elements/Heading/Heading'
   import Paragraph from '@/elements/Paragraph/Paragraph'
 
@@ -130,6 +133,7 @@
   export default {
     name: 'Index',
     components: {
+      GitHubCorner,
       Heading,
       Paragraph,
       Container,
@@ -142,16 +146,20 @@
     data: function () {
       const styleguideHref = 'styleguide'
       const storybookHref = 'storybook'
-      const baseLibraryHref = 'https://creativecommons.github.io/vocabulary'
+
+      const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
+      const vueLibraryHref = 'https://creativecommons.github.io/cc-vue-vocabulary/'
+
+      const repoHref = 'https://github.com/creativecommons/vue-vocabulary'
 
       let links = [
         {
           key: 'links.github',
-          href: 'https://github.com/creativecommons/vue-vocabulary'
+          href: repoHref
         },
         {
-          key: 'links.umd',
-          href: 'https://codepen.io/dhruvkb/pen/dxRJYV'
+          key: 'vo_cab_u_lar_y',
+          href: baseLibraryHref
         }
       ]
       let contacts = [
@@ -165,9 +173,11 @@
         }
       ]
       return {
-        baseLibraryHref,
         styleguideHref,
         storybookHref,
+        baseLibraryHref,
+        vueLibraryHref,
+        repoHref,
         links,
         contacts
       }
