@@ -128,7 +128,7 @@
       Definition,
       Footer,
       Locale,
-      Quote,
+      Quote
     },
     data: function () {
       const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
