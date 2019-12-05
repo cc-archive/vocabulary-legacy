@@ -25,25 +25,26 @@
     style="margin-right: 1em;">
     <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vocabulary.svg?color=brightgreen"/>
   </a>
-  <!--
   <a
     href="https://circleci.com/gh/creativecommons/vocabulary/tree/master"
     style="margin-right: 1em;">
     <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/vocabulary/tree/master.svg?style=shield"/>
   </a>
-  -->
   <a
     href="https://github.com/creativecommons/vocabulary/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
   </a>
-  <!--
   <a 
     href="https://cc-vocabulary.netlify.com"
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
   </a>
-  -->
+  <a
+    href="https://www.npmjs.com/package/@creativecommons/vocabulary"
+    style="margin-right: 1em;">
+    <img alt="npm version" src="https://img.shields.io/npm/v/@creativecommons/vocabulary?color=brightgreen"/>
+  </a>
 </p>
 
 In essence Vocabulary is a collection of UI components, which are parts of 
