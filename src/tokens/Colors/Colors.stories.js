@@ -2,8 +2,12 @@ import Colors from '@/tokens/Colors/Colors'
 
 export default { title: 'Tokens|Colors' }
 
-export const hues = () => ({
-  render: (h) => <Colors category="hue"/>
+export const brands = () => ({
+  render: (h) => <Colors category="brand"/>
+})
+
+export const functions = () => ({
+  render: (h) => <Colors category="function"/>
 })
 
 export const tones = () => ({

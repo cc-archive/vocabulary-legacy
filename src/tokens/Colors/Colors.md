@@ -9,20 +9,27 @@
 </Paragraph> 
 ```
 
-### Color set
+### Brand set
 
-Vocabulary has a rich set of colors, covering the both primary and secondary 
-colors on the spectrum along with their darker and lighter hues. Each color also
-has a default shade, not necessarily the normal one) that the styleguide specifies
-as preferred.
+Vocabulary includes the Creative Commons brand colours, which are six colours
+that represent strong values for the CC brand.
 
 ```jsx noeditor
-<Colors category="hue"/>
+<Colors category="brand"/>
+```
+
+### Function set
+
+Vocabulary has a rich set of colors, covering the both primary and secondary 
+colors on the spectrum along with their darker and lighter hues.
+
+```jsx noeditor
+<Colors category="function"/>
 ```
 
 ### Tone set
 
-Apart from all the vibrant hues, Vocabular provides a diverse set of tones to 
+Apart from all the vibrant hues, Vocabulary provides a diverse set of tones to 
 choose from, covering the grey spectrum from white to black.
 
 ```jsx noeditor

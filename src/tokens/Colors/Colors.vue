@@ -1,22 +1,15 @@
 <template>
-  <Grid
-    :class="gridClasses">
-    <GridCell
-      :span-set="spanSet"
-      v-for="(prop, index) in colors"
-      :key="index">
-      <Color
-        :name="prop.name"
-        :value="prop.value"
-        :comment="prop.comment"
-        :category="category"/>
-    </GridCell>
-  </Grid>
+  <div class="vocab colors">
+    <Color
+      v-for="(value, key) in colors"
+      :key="key"
+      :category="category"
+      :subcategory="key"
+      :colors="value"/>
+  </div>
 </template>
 
 <script>
-  import sortBy from 'lodash/sortBy'
-
   import Color from '@/tokens/Colors/Color'
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
@@ -36,23 +29,29 @@
     components: {
       GridCell,
       Grid,
-      Color
+      Color,
     },
     props: {
       /**
        * _the substring of the category to filter based on_
        *
-       * ∈ {`'hue'`, `'tone'`, `'context'`, `'overlay'`}
+       * ∈ {`'brand'`, `'function'`, `'tone'`, `'context'`, `'overlay'`}
        */
       category: {
         type: String,
-        validator: val => ['hue', 'tone', 'context', 'overlay'].includes(val),
+        validator: val => [
+          'brand',
+          'function',
+          'tone',
+          'context',
+          'overlay'
+        ].includes(val),
         required: true
       }
     },
     data: function () {
       return {
-        colors: this.extractColors(designTokens.props)
+        colors: {}
       }
     },
     computed: {
@@ -60,43 +59,29 @@
         return [
           `${this.category}-category`
         ]
-      },
-      spanSet: function () {
-        if (this.category === 'context' || this.category === 'hue') {
-          return [12, 6, 4, 4, 4]
-        } else {
-          return [12, 6, 3, 3, 3]
-        }
       }
     },
     methods: {
       extractColors: function (data) {
-        return sortBy(
-          data,
-          [
-            'category',
-            function (color) {
-              let shadeLevels = [
-                'default',
-                'tone_white', 'near_white', 'lighter', 'light',
-                'white_low', 'white_high',
-                'normal',
-                'black_high', 'black_low',
-                'dark', 'darker', 'near_black', 'tone_black'
-              ]
-              for (let i = 0; i < shadeLevels.length; i++) {
-                if (color.name.endsWith(shadeLevels[i])) {
-                  return i
-                }
-              }
-              return Math.floor(shadeLevels.length / 2)
+        Object.keys(data)
+          .map(key => data[key])
+          .filter(token => token.type === 'color' &&
+            token.category.includes(`color-group-${this.category}`))
+          .forEach(color => {
+            let subcategory = color.category.replace(
+              new RegExp(`color-group-${this.category}-?`, 'g'),
+              ''
+            )
+            if (!this.colors[subcategory]) {
+              this.colors[subcategory] = []
             }
-          ]
-        ).filter(
-          token => token.type === 'color' &&
-            token.category.includes(`color-group-${this.category}`)
-        )
+            this.colors[subcategory].push(color)
+          })
       }
+    },
+    created: function () {
+      this.extractColors(designTokens.props)
+      console.log(this.colors)
     }
   }
 </script>

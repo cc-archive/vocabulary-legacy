@@ -1,118 +1,178 @@
 
-/* Lighter shade of gold */
-$color-gold-lighter: rgb(255, 245, 209);
-/* Normal shade of tomato */
-$color-tomato-normal: rgb(237, 86, 44);
-/* Normal shade of turquoise */
-$color-turquoise-normal: rgb(46, 216, 250);
-/* Base shade of negative context */
-$color-context-negative: rgb(237, 86, 44);
-/* Light shade of orange */
-$color-orange-light: rgb(252, 165, 115);
+$color-context-probably-0: rgb(255, 249, 219);
+$color-brand-turqoise: rgb(5, 181, 218);
+$color-function-teal-8: rgb(9, 146, 104);
+$color-function-red-9: rgb(201, 42, 42);
+$color-function-violet-5: rgb(132, 94, 247);
+$color-function-cyan-1: rgb(197, 246, 250);
+$color-context-probably-1: rgb(255, 243, 191);
+$color-function-teal-9: rgb(8, 127, 91);
+$color-function-violet-6: rgb(121, 80, 242);
+$color-tone-grey-0: rgb(248, 249, 250);
+$color-function-cyan-2: rgb(153, 233, 242);
+$color-context-probably-2: rgb(255, 236, 153);
+$color-brand-orange: rgb(251, 119, 41);
+$color-function-violet-7: rgb(112, 72, 232);
+$color-tone-grey-1: rgb(241, 243, 245);
+$color-function-cyan-3: rgb(102, 217, 232);
+$color-context-probably-3: rgb(255, 224, 102);
 /* Lightest grey, near white */
 $color-tone-near-white: rgb(230, 230, 230);
-/* 85% opaque shade of white, hint of color on white */
+/* 85% opaque shade of white */
 $color-overlay-white-high: rgba(255, 255, 255, 0.85);
+$color-function-violet-8: rgb(103, 65, 217);
+$color-tone-grey-2: rgb(233, 236, 239);
+$color-function-cyan-4: rgb(59, 201, 219);
+$color-context-probably-4: rgb(255, 212, 59);
+$color-function-violet-9: rgb(95, 61, 196);
+$color-tone-grey-3: rgb(222, 226, 230);
+$color-function-cyan-5: rgb(34, 184, 207);
+$color-context-probably-5: rgb(252, 196, 25);
 /* Slightly dark grey */
 $color-tone-grey-dark: rgb(102, 102, 102);
-/* Base shade of positive context */
-$color-context-positive: rgb(71, 250, 125);
-/* Darker shade of gold */
-$color-gold-darker: rgb(158, 124, 0);
-/* Slightly light shade of intermediate context */
-$color-context-probably-light: rgb(255, 245, 209);
-/* Slightly dark shade of intermediate context */
-$color-context-probably-dark: rgb(158, 124, 0);
-/* Default shade of turquoise */
-$color-turquoise-default: rgb(5, 179, 214);
+$color-tone-grey-4: rgb(206, 212, 218);
+$color-function-cyan-6: rgb(21, 170, 191);
+$color-context-probably-6: rgb(250, 176, 5);
+$color-tone-grey-5: rgb(173, 181, 189);
+$color-function-cyan-7: rgb(16, 152, 173);
+$color-context-probably-7: rgb(245, 159, 0);
+$color-tone-grey-6: rgb(134, 142, 150);
+$color-function-cyan-8: rgb(12, 133, 153);
 /* Slightly light grey */
 $color-tone-grey-light: rgb(153, 153, 153);
-/* Default shade of tomato */
-$color-tomato-default: rgb(237, 86, 44);
-/* 15% opaque shade of black, overlay makes darker */
+$color-context-probably-8: rgb(240, 140, 0);
+$color-tone-grey-7: rgb(73, 80, 87);
+$color-function-cyan-9: rgb(11, 114, 133);
+/* 15% opaque shade of black */
 $color-overlay-black-low: rgba(0, 0, 0, 0.15);
-/* Default shade of green */
-$color-green-default: rgb(4, 164, 52);
-/* Lighter shade of turquoise */
-$color-turquoise-lighter: rgb(195, 244, 253);
-/* Lighter shade of tomato */
-$color-tomato-lighter: rgb(249, 199, 185);
-/* Normal shade of gold */
-$color-gold-normal: rgb(255, 212, 56);
-/* Dark shade of orange */
-$color-orange-dark: rgb(210, 80, 4);
-/* Lighter shade of green */
-$color-green-lighter: rgb(220, 254, 230);
-/* Default shade of orange */
-$color-orange-default: rgb(251, 117, 40);
-/* Darker shade of blue */
-$color-blue-darker: rgb(38, 58, 95);
-/* Light shade of blue */
-$color-blue-light: rgb(149, 172, 213);
-/* 85% opaque shade of black, hint of color on black */
+$color-context-probably-9: rgb(230, 119, 0);
+$color-function-green-0: rgb(235, 251, 238);
+$color-tone-grey-8: rgb(52, 58, 64);
+$color-function-green-1: rgb(211, 249, 216);
+$color-tone-grey-9: rgb(33, 37, 41);
+$color-function-green-2: rgb(178, 242, 187);
+$color-function-green-3: rgb(140, 233, 154);
+$color-function-green-4: rgb(105, 219, 124);
+/* 85% opaque shade of black */
 $color-overlay-black-high: rgba(0, 0, 0, 0.85);
+$color-brand-blue: rgb(60, 92, 153);
+$color-function-indigo-0: rgb(231, 245, 255);
 /* Pure black color */
 $color-tone-black: rgb(0, 0, 0);
-/* Dark shade of green */
-$color-green-dark: rgb(6, 239, 76);
-/* Lighter shade of orange */
-$color-orange-lighter: rgb(254, 213, 190);
-/* Base shade of intermediate context */
-$color-context-probably: rgb(255, 212, 56);
-/* Dark shade of tomato */
-$color-tomato-dark: rgb(188, 53, 16);
-/* Normal shade of blue */
-$color-blue-normal: rgb(95, 128, 191);
-/* Dark shade of turquoise */
-$color-turquoise-dark: rgb(5, 179, 214);
-/* Slightly dark shade of positive context */
-$color-context-positive-dark: rgb(4, 164, 52);
+$color-function-green-5: rgb(81, 207, 102);
+$color-function-indigo-1: rgb(208, 235, 255);
+$color-function-green-6: rgb(64, 192, 87);
+$color-function-indigo-2: rgb(165, 216, 255);
+$color-function-yellow-0: rgb(255, 249, 219);
+$color-function-green-7: rgb(55, 178, 77);
+$color-function-indigo-3: rgb(116, 192, 252);
+$color-function-yellow-1: rgb(255, 243, 191);
+$color-function-green-8: rgb(47, 158, 68);
+$color-function-grape-0: rgb(248, 240, 252);
+$color-brand-forest: rgb(4, 166, 53);
+$color-function-lime-0: rgb(244, 252, 227);
+$color-function-indigo-4: rgb(77, 171, 247);
+$color-function-pink-0: rgb(255, 240, 246);
+$color-context-negative-0: rgb(255, 245, 245);
+$color-function-yellow-2: rgb(255, 236, 153);
+$color-function-green-9: rgb(43, 138, 62);
 /* Darker grey */
 $color-tone-grey-darker: rgb(51, 51, 51);
-/* Light shade of gold */
-$color-gold-light: rgb(255, 228, 133);
-/* 15% opaque shade of white, overlay makes lighter */
+$color-function-grape-1: rgb(243, 217, 250);
+$color-function-lime-1: rgb(233, 250, 200);
+$color-function-indigo-5: rgb(51, 154, 240);
+$color-function-pink-1: rgb(255, 222, 235);
+$color-context-negative-1: rgb(255, 227, 227);
+$color-function-yellow-3: rgb(255, 224, 102);
+$color-function-grape-2: rgb(238, 190, 250);
+/* 15% opaque shade of white */
 $color-overlay-white-low: rgba(255, 255, 255, 0.15);
+$color-function-lime-2: rgb(216, 245, 162);
+$color-brand-gold: rgb(239, 190, 0);
+$color-function-indigo-6: rgb(34, 139, 230);
+$color-function-pink-2: rgb(252, 194, 215);
+$color-context-negative-2: rgb(255, 201, 201);
+$color-function-yellow-4: rgb(255, 212, 59);
+$color-function-grape-3: rgb(229, 153, 247);
 /* Lighter grey */
 $color-tone-grey-lighter: rgb(204, 204, 204);
-/* Slightly dark shade of negative context */
-$color-context-negative-dark: rgb(117, 33, 10);
-/* Slightly light shade of negative context */
-$color-context-negative-light: rgb(249, 199, 185);
+$color-function-lime-3: rgb(192, 235, 117);
+$color-function-indigo-7: rgb(28, 126, 214);
+$color-function-pink-3: rgb(250, 162, 193);
+$color-context-negative-3: rgb(255, 168, 168);
+$color-function-yellow-5: rgb(252, 196, 25);
+$color-function-grape-4: rgb(218, 119, 242);
+$color-function-lime-4: rgb(169, 227, 75);
+$color-function-indigo-8: rgb(25, 113, 194);
+$color-function-pink-4: rgb(247, 131, 172);
+$color-context-negative-4: rgb(255, 135, 135);
+$color-function-yellow-6: rgb(250, 176, 5);
+$color-function-grape-5: rgb(204, 93, 232);
+$color-context-positive-0: rgb(244, 252, 227);
+$color-function-lime-5: rgb(148, 216, 45);
+$color-function-indigo-9: rgb(24, 100, 171);
+$color-function-pink-5: rgb(240, 101, 149);
+$color-function-red-0: rgb(255, 245, 245);
+$color-context-negative-5: rgb(255, 107, 107);
+$color-function-yellow-7: rgb(245, 159, 0);
+$color-function-grape-6: rgb(190, 75, 219);
+$color-context-positive-1: rgb(233, 250, 200);
+$color-function-lime-6: rgb(130, 201, 30);
+$color-function-teal-0: rgb(230, 252, 245);
+$color-function-pink-6: rgb(230, 73, 128);
+$color-function-red-1: rgb(255, 227, 227);
 /* Pure white color */
 $color-tone-white: rgb(255, 255, 255);
-/* Darker shade of orange */
-$color-orange-darker: rgb(135, 51, 3);
-/* Default shade of blue */
-$color-blue-default: rgb(60, 91, 150);
+$color-context-negative-6: rgb(250, 82, 82);
+$color-function-yellow-8: rgb(240, 140, 0);
+$color-function-grape-7: rgb(174, 62, 201);
+$color-context-positive-2: rgb(216, 245, 162);
+$color-function-lime-7: rgb(116, 184, 22);
+$color-function-teal-1: rgb(195, 250, 232);
+$color-function-pink-7: rgb(214, 51, 108);
 /* Darkest grey, near black */
 $color-tone-near-black: rgb(26, 26, 26);
-/* Dark shade of gold */
-$color-gold-dark: rgb(235, 184, 0);
-/* Lighter shade of blue */
-$color-blue-lighter: rgb(204, 215, 235);
-/* Darker shade of green */
-$color-green-darker: rgb(4, 164, 52);
-/* Normal shade of orange */
-$color-orange-normal: rgb(251, 117, 40);
-/* Slightly light shade of positive context */
-$color-context-positive-light: rgb(220, 254, 230);
-/* Darker shade of tomato */
-$color-tomato-darker: rgb(117, 33, 10);
-/* Light shade of turquoise */
-$color-turquoise-light: rgb(121, 230, 252);
-/* Darker shade of turquoise */
-$color-turquoise-darker: rgb(4, 117, 139);
-/* Light shade of tomato */
-$color-tomato-light: rgb(243, 142, 114);
-/* Default shade of gold */
-$color-gold-default: rgb(235, 184, 0);
-/* Light shade of green */
-$color-green-light: rgb(146, 252, 178);
-/* Normal shade of green */
-$color-green-normal: rgb(71, 250, 125);
-/* Dark shade of blue */
-$color-blue-dark: rgb(60, 91, 150);
+$color-function-red-2: rgb(255, 201, 201);
+$color-context-negative-7: rgb(240, 62, 62);
+$color-function-yellow-9: rgb(230, 119, 0);
+$color-function-grape-8: rgb(156, 54, 181);
+$color-context-positive-3: rgb(192, 235, 117);
+$color-function-lime-8: rgb(102, 168, 15);
+$color-function-teal-2: rgb(150, 242, 215);
+$color-function-pink-8: rgb(194, 37, 92);
+$color-function-red-3: rgb(255, 168, 168);
+/* Pure white color */
+$color-tone-pure-0: rgb(255, 255, 255);
+$color-context-negative-8: rgb(224, 49, 49);
+$color-function-grape-9: rgb(134, 46, 156);
+$color-context-positive-4: rgb(169, 227, 75);
+$color-function-lime-9: rgb(92, 148, 13);
+$color-function-teal-3: rgb(99, 230, 190);
+$color-function-pink-9: rgb(166, 30, 77);
+$color-function-red-4: rgb(255, 135, 135);
+/* Pure black color */
+$color-tone-pure-1: rgb(0, 0, 0);
+$color-context-negative-9: rgb(201, 42, 42);
+$color-context-positive-5: rgb(148, 216, 45);
+$color-function-violet-0: rgb(243, 240, 255);
+$color-function-teal-4: rgb(56, 217, 169);
+$color-function-red-5: rgb(255, 107, 107);
+$color-context-positive-6: rgb(130, 201, 30);
+$color-function-violet-1: rgb(229, 219, 255);
+$color-function-teal-5: rgb(32, 201, 151);
+$color-function-red-6: rgb(250, 82, 82);
+$color-context-positive-7: rgb(116, 184, 22);
+$color-function-violet-2: rgb(208, 191, 255);
+$color-function-teal-6: rgb(18, 184, 134);
+$color-function-red-7: rgb(240, 62, 62);
+$color-context-positive-8: rgb(102, 168, 15);
+$color-function-violet-3: rgb(177, 151, 252);
+$color-brand-tomato: rgb(237, 89, 47);
+$color-function-teal-7: rgb(12, 166, 120);
+$color-function-red-8: rgb(224, 49, 49);
+$color-context-positive-9: rgb(92, 148, 13);
+$color-function-violet-4: rgb(151, 117, 250);
+$color-function-cyan-0: rgb(227, 250, 252);
 /* Font size for footnotes */
 $size-small: 0.7937rem;
 /* Font size for normal copy */
