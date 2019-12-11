@@ -9,6 +9,7 @@ import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
 
 import Button from './elements/Button/Button'
 import ChoiceField from './elements/ChoiceField/ChoiceField'
+import GitHubCorner from './elements/GitHubCorner/GitHubCorner'
 import Heading from './elements/Heading/Heading'
 import ImageView from './elements/ImageView/ImageView'
 import InputField from './elements/InputField/InputField'
@@ -51,6 +52,7 @@ export {
 
   Button,
   ChoiceField,
+  GitHubCorner,
   Heading,
   ImageView,
   InputField,
@@ -95,6 +97,7 @@ export default {
 
     Vue.component('Button', Button)
     Vue.component('ChoiceField', ChoiceField)
+    Vue.component('GitHubCorner', GitHubCorner)
     Vue.component('Heading', Heading)
     Vue.component('ImageView', ImageView)
     Vue.component('InputField', InputField)

@@ -5,6 +5,7 @@
   "elements": [
     "Button",
     "ChoiceField",
+    "GitHubCorner",
     "Heading",
     "ImageView",
     "InputField",
