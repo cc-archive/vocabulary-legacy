@@ -1,5 +1,6 @@
 import { addDecorator, addParameters, configure } from '@storybook/vue'
 import { withA11y } from '@storybook/addon-a11y'
+import { withKnobs } from '@storybook/addon-knobs'
 
 import vocabularyTheme from './theme'
 
@@ -14,6 +15,7 @@ addParameters({
 // Customise stories
 
 addDecorator(withA11y)
+addDecorator(withKnobs)
 
 // Register stories
 
