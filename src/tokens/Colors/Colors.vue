@@ -11,8 +11,6 @@
 
 <script>
   import Color from '@/tokens/Colors/Color'
-  import Grid from '@/layouts/Grid/Grid'
-  import GridCell from '@/layouts/Grid/GridCell'
 
   import designTokens from '@/assets/tokens/tokens.raw.json'
 
@@ -27,9 +25,7 @@
   export default {
     name: 'Colors',
     components: {
-      GridCell,
-      Grid,
-      Color,
+      Color
     },
     props: {
       /**
@@ -81,7 +77,6 @@
     },
     created: function () {
       this.extractColors(designTokens.props)
-      console.log(this.colors)
     }
   }
 </script>
