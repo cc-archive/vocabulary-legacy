@@ -27,11 +27,5 @@ module.exports = {
       .rule('svg')
       .use('url-loader')
       .loader('url-loader')
-
-    config.module
-      .rule('story')
-      .test(/\.stories\.jsx?$/)
-      .use('source-loader')
-      .loader('@storybook/source-loader')
   }
 }
