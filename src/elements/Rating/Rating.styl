@@ -1,6 +1,8 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 @import "~@/styles/media.styl"
 @import "~@/styles/sizes.styl"
 
@@ -13,15 +15,8 @@
     --rating-primary $color-tone-white
 
   colors('--rating-primary')
-
-  &.positive-indicating.positive-indicating
-    --rating-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --rating-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --rating-primary $color-context-negative
+  brands('--rating-primary')
+  indications('--rating-primary')
 
   --rating-secondary $color-tone-grey-dark
 

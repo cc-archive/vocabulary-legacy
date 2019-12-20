@@ -1,19 +1,14 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 
 .vocab.paragraph
   // Color
   colors('--paragraph-color')
-
-  &.positive-indicating.positive-indicating
-    --paragraph-color $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --paragraph-color $color-context-probably-dark
-
-  &.negative-indicating.negative-indicating
-    --paragraph-color $color-context-negative-dark
+  brands('--paragraph-color')
+  indications('--paragraph-color')
 
   // Line height
 

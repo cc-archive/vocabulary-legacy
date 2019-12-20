@@ -1,6 +1,8 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.shield
@@ -16,15 +18,8 @@
     --shield-tertiary $color-tone-black
 
   colors('--shield-primary')
-
-  &.positive-indicating.positive-indicating
-    --shield-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --shield-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --shield-primary $color-context-negative
+  brands('--shield-primary')
+  indications('--shield-primary')
 
   // Color
   --shield-label-background-color var(--shield-secondary)

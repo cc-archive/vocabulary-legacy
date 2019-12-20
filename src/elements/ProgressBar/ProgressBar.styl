@@ -1,6 +1,8 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 @import "~@/styles/sizes.styl"
 
 .vocab.progress-bar
@@ -12,15 +14,8 @@
     --progress-bar-primary $color-tone-white
 
   colors('--progress-bar-primary')
-
-  &.positive-indicating.positive-indicating
-    --progress-bar-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --progress-bar-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --progress-bar-primary $color-context-negative
+  brands('--progress-bar-primary')
+  indications('--progress-bar-primary')
 
   --progress-bar-secondary $color-tone-grey-lighter
 
@@ -95,7 +90,7 @@
         background-color var(--progress-bar-bar-color)
 
         transition width $duration-shortest
-        
+
       &::-webkit-progress-value
         background-color var(--progress-bar-bar-color)
 
@@ -119,7 +114,7 @@
 
       &::-moz-progress-bar
         background-color transparent
-        
+
       &::-webkit-progress-bar
         background-color transparent
 
