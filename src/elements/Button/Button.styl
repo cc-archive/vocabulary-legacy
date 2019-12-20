@@ -1,6 +1,8 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 @import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
@@ -13,15 +15,8 @@
     --button-primary $color-tone-white
 
   colors('--button-primary')
-
-  &.positive-indicating.positive-indicating
-    --button-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --button-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --button-primary $color-context-negative
+  brands('--button-primary')
+  indications('--button-primary')
 
   --button-secondary $color-tone-white
 
