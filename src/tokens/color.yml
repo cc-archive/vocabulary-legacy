@@ -20,7 +20,7 @@ props:
   color_orange:
     value: '#fb7729'
     category: color-group-brand-creative-commons
-  color_turqoise:
+  color_turquoise:
     value: '#05b5da'
     category: color-group-brand-creative-commons
 
