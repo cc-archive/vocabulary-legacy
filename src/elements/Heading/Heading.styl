@@ -1,20 +1,15 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/colors.styl"
+@import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 
 .vocab.heading
   //Color
 
   colors('--heading-color')
-
-  &.positive-indicating.positive-indicating
-    --heading-color $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --heading-color $color-context-probably-dark
-
-  &.negative-indicating.negative-indicating
-    --heading-color $color-context-negative-dark
+  brands('--heading-color')
+  indications('--heading-color')
 
   // Font size
 

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
 
@@ -21,6 +22,7 @@
   export default {
     name: 'Heading',
     mixins: [
+      Branded,
       Colored,
       Indicating
     ],
@@ -42,6 +44,7 @@
     computed: {
       headingClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses
         ]

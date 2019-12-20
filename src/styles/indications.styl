@@ -1,0 +1,13 @@
+// Generate given property for all indications
+
+indications(property)
+  $indications = 'positive' 'probably' 'negative'
+  $shades = 0 1 2 3 4 5 6 7 8 9
+
+  for indication in $indications
+    &.{indication}-indicating
+      {property} lookup('$color-' + indication) || lookup('$color-' + indication + '-9') // Highest valued default
+
+      for shade in $shades
+        &.s{shade}-shaded
+          {property} lookup('$color-' + indication + '-' + shade)

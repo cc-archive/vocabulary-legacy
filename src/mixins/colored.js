@@ -3,39 +3,37 @@ export default {
     /**
      * _the primary color for the component_
      *
-     * ∈ {`'blue'`, `'green'`, `'magenta'`, `'olive'`, `'orange'`, `'purple'`,
-     * `'red'`, `'sand'`, `'yellow'`}
+     * ∈ {`'red'`, `'pink'`, `'grape'`, `'violet'`, `'indigo'`, `'cyan'`,
+     * `'teal'`, `'green'`, `'lime'`, `'yellow'`}
      *
      * If the color is not specified, a default one is chosen as described.
      */
     color: {
       type: String,
       validator: val => [
-        'blue',
-        'green',
-        'magenta',
-        'olive',
-        'orange',
-        'purple',
         'red',
-        'sand',
+        'pink',
+        'grape',
+        'violet',
+        'indigo',
+        'cyan',
+        'teal',
+        'green',
+        'lime',
         'yellow'
       ].includes(val)
     },
     /**
      * _the accentuating shade of the primary color to use_
      *
-     * ∈ {`'light'`, `'dark'`, `'darker'`}
+     *  ⩾ 0 and ⩽ 9
      *
-     * If the shade is not specified, the base color will be used.
+     * If the shade is not specified, the darkest shade of color will be used.
      */
     shade: {
-      type: String,
-      validator: val => [
-        'light',
-        'dark',
-        'darker'
-      ].includes(val)
+      type: Number,
+      default: 9,
+      validator: val => val >= 0 && val <= 9
     }
   },
   computed: {
@@ -44,9 +42,7 @@ export default {
       if (this.color) {
         classes.push(`${this.color}-colored`)
       }
-      if (this.shade) {
-        classes.push(`${this.shade}-shaded`)
-      }
+      classes.push(`s${this.shade}-shaded`) // Classes cannot start with number
       return classes
     }
   }
