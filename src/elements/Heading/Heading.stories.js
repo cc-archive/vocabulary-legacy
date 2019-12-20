@@ -45,6 +45,6 @@ export const levels = () => ({
     }
   },
   template: `
-    <Heading :level="level">Heading {{ level }}</Heading>
+    <Heading :level="level">{{ level }}</Heading>
   `
 })
