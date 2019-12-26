@@ -40,13 +40,21 @@ describe('Heading.vue', () => {
   })
 
   it('renders correct color', () => {
-    options.propsData.color = 'blue'
-    options.propsData.shade = 'dark'
+    options.propsData.color = 'indigo'
+    options.propsData.shade = 9
 
     const wrapper = shallowMount(Heading, options)
 
-    expect(wrapper.element.classList).toContain('blue-colored')
-    expect(wrapper.element.classList).toContain('dark-shaded')
+    expect(wrapper.element.classList).toContain('indigo-colored')
+    expect(wrapper.element.classList).toContain('s9-shaded')
+  })
+
+  it('renders correct brand', () => {
+    options.propsData.brand = 'blue'
+
+    const wrapper = shallowMount(Heading, options)
+
+    expect(wrapper.element.classList).toContain('blue-branded')
   })
 
   it('renders correct indication', () => {
