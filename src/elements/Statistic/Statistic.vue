@@ -38,6 +38,7 @@
   import { faChartLine } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
 
@@ -54,6 +55,7 @@
   export default {
     name: 'Statistic',
     mixins: [
+      Branded,
       Colored,
       Indicating,
 
@@ -105,6 +107,7 @@
     computed: {
       statisticClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
 

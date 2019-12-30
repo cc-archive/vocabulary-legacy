@@ -19,6 +19,12 @@ addDecorator(withKnobs)
 
 // Register stories
 
-const req = require.context('../src', true, /.stories.js$/)
-
-configure(req, module)
+configure([
+  require.context(`../src/stories`, true, /.stories.js$/),
+  require.context(`../src/tokens`, true, /.stories.js$/),
+  require.context(`../src/utils`, true, /.stories.js$/),
+  require.context(`../src/elements`, true, /.stories.js$/),
+  require.context(`../src/layouts`, true, /.stories.js$/),
+  require.context(`../src/patterns`, true, /.stories.js$/),
+  require.context(`../src/templates`, true, /.stories.js$/)
+], module)

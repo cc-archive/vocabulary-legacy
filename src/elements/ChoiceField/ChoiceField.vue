@@ -12,6 +12,7 @@
 </template>
 
 <script>
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Scaled from '@/mixins/scaled'
@@ -30,6 +31,7 @@
   export default {
     name: 'ChoiceField',
     mixins: [
+      Branded,
       Colored,
       Indicating,
       Scaled,
@@ -77,6 +79,7 @@
     computed: {
       choiceFieldClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.scaledClasses,

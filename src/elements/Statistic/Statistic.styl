@@ -2,6 +2,7 @@
 
 @import "~@/styles/colors.styl"
 @import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 
 .vocab.statistic
   // Color palette
@@ -13,29 +14,12 @@
 
   colors('--statistic-primary')
   brands('--statistic-primary')
-
-  &.positive-indicating.positive-indicating
-    --statistic-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --statistic-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --statistic-primary $color-context-negative
+  indications('--statistic-primary')
 
   --statistic-secondary $color-tone-grey-dark
 
   &.inverted
     --statistic-secondary $color-tone-grey-light
-
-  &.positive-indicating.positive-indicating
-    --statistic-secondary $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --statistic-secondary $color-context-probably-dark
-
-  &.negative-indicating.negative-indicating
-    --statistic-secondary $color-context-negative-dark
 
   // Color
 

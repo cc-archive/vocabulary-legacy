@@ -2,6 +2,7 @@
 
 @import "~@/styles/colors.styl"
 @import "~@/styles/brands.styl"
+@import "~@/styles/indications.styl"
 @import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
@@ -15,15 +16,7 @@
 
   colors('--input-field-primary')
   brands('--input-field-primary')
-
-  &.positive-indicating.positive-indicating
-    --input-field-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --input-field-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --input-field-primary $color-context-negative
+  indications('--input-field-primary')
 
   --input-field-secondary $color-tone-white
 
@@ -37,15 +30,6 @@
 
   &.infused
     --input-field-tertiary var(--input-field-primary)
-
-  &.positive-indicating.positive-indicating
-    --input-field-tertiary $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --input-field-tertiary $color-context-probably-dark
-
-  &.negative-indicating.negative-indicating
-    --input-field-tertiary $color-context-negative-dark
 
   --input-field-overlay $color-overlay-white-low
 
@@ -175,9 +159,9 @@
     // States
 
     &:invalid
-      color $color-context-negative-dark
+      color $color-negative-9
 
-      background-color $color-context-negative-light
+      background-color $color-negative-2
 
       box-shadow none
 

@@ -71,6 +71,7 @@
 
   import BrandImagery from '@/patterns/BrandImagery/BrandImagery'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
 
   library.add(faBars, faTimes)
@@ -84,6 +85,7 @@
   export default {
     name: 'Header',
     mixins: [
+      Branded,
       Colored
     ],
     components: {
@@ -130,6 +132,7 @@
     computed: {
       headerClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses
         ]
       },

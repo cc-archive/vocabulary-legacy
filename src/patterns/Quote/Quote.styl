@@ -1,6 +1,8 @@
 @import "~@/assets/tokens/tokens.styl"
 
+@import "~@/styles/brands.styl"
 @import "~@/styles/colors.styl"
+@import "~@/styles/indications.styl"
 
 .vocab.quote
   // Color palette
@@ -10,7 +12,9 @@
   &.inverted
     --quote-primary $color-tone-grey-light
 
+  brands('--quote-primary')
   colors('--quote-primary')
+  indications('--quote-primary')
 
   // Color
 

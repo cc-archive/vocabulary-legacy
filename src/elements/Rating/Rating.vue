@@ -23,6 +23,7 @@
   import { faCircle, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Scaled from '@/mixins/scaled'
@@ -42,6 +43,7 @@
   export default {
     name: 'Rating',
     mixins: [
+      Branded,
       Colored,
       Indicating,
       Scaled,
@@ -111,6 +113,7 @@
     computed: {
       ratingClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.scaledClasses,

@@ -59,7 +59,7 @@
           'white',
           'black'
         ],
-        required: true
+        default: 'black'
       }
     },
     computed: {

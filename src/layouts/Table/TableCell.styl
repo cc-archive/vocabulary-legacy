@@ -1,6 +1,7 @@
 @import "~@/assets/tokens/tokens.styl"
 
 @import "~@/styles/media.styl"
+@import "~@/styles/indications.styl"
 
 .vocab.table
   .cell
@@ -8,25 +9,11 @@
 
     --table-cell-primary inherit
 
-    &.positive-indicating.positive-indicating
-      --table-cell-primary $color-context-positive-dark
-
-    &.probably-indicating.probably-indicating
-      --table-cell-primary $color-context-probably-dark
-
-    &.negative-indicating.negative-indicating
-      --table-cell-primary $color-context-negative-dark
+    indications('--table-cell-primary', 9)
 
     --table-cell-secondary inherit
 
-    &.positive-indicating.positive-indicating
-      --table-cell-secondary $color-context-positive-light
-
-    &.probably-indicating.probably-indicating
-      --table-cell-secondary $color-context-probably-light
-
-    &.negative-indicating.negative-indicating
-      --table-cell-secondary $color-context-negative-light
+    indications('--table-cell-secondary', 1)
 
     // Color
 

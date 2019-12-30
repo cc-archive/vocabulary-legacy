@@ -64,6 +64,7 @@
 <script>
   import TableCell from '@/layouts/Table/TableCell'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Simplified from '@/mixins/simplified'
 
@@ -79,6 +80,7 @@
     name: 'Table',
     components: { TableCell },
     mixins: [
+      Branded,
       Colored,
       Simplified,
 
@@ -157,6 +159,7 @@
     computed: {
       tableClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.simplifiedClasses,
 

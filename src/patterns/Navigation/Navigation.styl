@@ -1,4 +1,6 @@
 @import "~@/assets/tokens/tokens.styl"
+
+@import "~@/styles/brands.styl"
 @import "~@/styles/colors.styl"
 @import "~@/styles/media.styl"
 @import "~@/styles/list.styl"
@@ -11,6 +13,7 @@
   &.inverted
     --navigation-primary $color-tone-white
 
+  brands('--navigation-primary')
   colors('--navigation-primary')
 
   --navigation-overlay $color-overlay-black-low

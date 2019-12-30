@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
 
@@ -18,6 +19,7 @@
   export default {
     name: 'Paragraph',
     mixins: [
+      Branded,
       Colored,
       Indicating
     ],
@@ -41,6 +43,7 @@
     computed: {
       paragraphClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
 

@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Rounded from '@/mixins/rounded'
@@ -35,6 +36,7 @@
   export default {
     name: 'Shield',
     mixins: [
+      Branded,
       Colored,
       Indicating,
       Rounded,
@@ -67,6 +69,7 @@
     computed: {
       shieldClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.roundedClasses,

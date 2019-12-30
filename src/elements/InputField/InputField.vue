@@ -43,6 +43,7 @@
   import { faKeyboard } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Joined from '@/mixins/joined'
@@ -67,6 +68,7 @@
       FontAwesomeIcon
     },
     mixins: [
+      Branded,
       Colored,
       Indicating,
       Joined,
@@ -119,6 +121,7 @@
     computed: {
       inputFieldClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.joinClasses,

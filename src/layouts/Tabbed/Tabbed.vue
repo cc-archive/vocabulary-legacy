@@ -17,8 +17,10 @@
     </ul>
     <Section
       class="contents"
+      :brand="processedBrand"
       :color="processedColor"
       :shade="processedShade"
+      :indication="processedIndication"
       color-side="bottom"
       :roundness="roundness ? 'rounded' : null"
       :is-raised="isRaised"
@@ -44,7 +46,9 @@
 
   import Section from '@/layouts/Section/Section'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
   import Rounded from '@/mixins/rounded'
   import Simplified from '@/mixins/simplified'
 
@@ -62,7 +66,9 @@
   export default {
     name: 'Tabbed',
     mixins: [
+      Branded,
       Colored,
+      Indicating,
       Rounded,
       Simplified,
 
@@ -103,9 +109,20 @@
       }
     },
     computed: {
+      processedBrandedClasses: function () {
+        try {
+          let activeTab = this.activeTab
+          if (activeTab.brand) {
+            return activeTab.brandedClasses
+          }
+        } catch (e) {
+          // Do nothing
+        }
+        return this.brandedClasses
+      },
       processedColoredClasses: function () {
         try {
-          let activeTab = this.tabPaneList[this.activeTabIndex]
+          let activeTab = this.activeTab
           if (activeTab.color) {
             return activeTab.coloredClasses
           }
@@ -114,6 +131,17 @@
         }
         return this.coloredClasses
       },
+      processedIndicatingClasses: function () {
+        try {
+          let activeTab = this.activeTab
+          if (activeTab.indication) {
+            return activeTab.indicatingClasses
+          }
+        } catch (e) {
+          // Do nothing
+        }
+        return this.indicatingClasses
+      },
 
       tabbedClasses: function () {
         return [
@@ -121,16 +149,29 @@
 
           ...this.invertibleClasses,
 
+          ...this.processedBrandedClasses,
           ...this.processedColoredClasses,
+          ...this.processedIndicatingClasses,
           {
             'rounded': this.isRounded
           }
         ]
       },
 
+      processedBrand: function () {
+        try {
+          let activeTab = this.activeTab
+          if (activeTab.brand) {
+            return activeTab.brand
+          }
+        } catch (e) {
+          // Do nothing
+        }
+        return this.brand
+      },
       processedColor: function () {
         try {
-          let activeTab = this.tabPaneList[this.activeTabIndex]
+          let activeTab = this.activeTab
           if (activeTab.color) {
             return activeTab.color
           }
@@ -141,7 +182,7 @@
       },
       processedShade: function () {
         try {
-          let activeTab = this.tabPaneList[this.activeTabIndex]
+          let activeTab = this.activeTab
           if (activeTab.shade) {
             return activeTab.shade
           }
@@ -149,6 +190,21 @@
           // Do nothing
         }
         return this.shade
+      },
+      processedIndication: function () {
+        try {
+          let activeTab = this.activeTab
+          if (activeTab.indication) {
+            return activeTab.indication
+          }
+        } catch (e) {
+          // Do nothing
+        }
+        return this.indication
+      },
+
+      activeTab: function () {
+        return this.tabPaneList[this.activeTabIndex]
       }
     },
     methods: {

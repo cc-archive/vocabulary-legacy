@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
   import Rounded from '@/mixins/rounded'
@@ -23,6 +24,7 @@
   export default {
     name: 'Section',
     mixins: [
+      Branded,
       Colored,
       Indicating,
       Rounded,
@@ -59,7 +61,7 @@
     },
     computed: {
       processedColorSide: function () {
-        if (this.color || this.indication) {
+        if (this.brand || this.color || this.indication) {
           if (this.colorSide) {
             return this.colorSide
           } else {
@@ -71,6 +73,7 @@
       },
       sectionClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
           ...this.indicatingClasses,
           ...this.roundedClasses,

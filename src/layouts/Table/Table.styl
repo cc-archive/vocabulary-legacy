@@ -1,5 +1,6 @@
 @import "~@/assets/tokens/tokens.styl"
 @import "~@/styles/media.styl"
+@import "~@/styles/brands.styl"
 @import "~@/styles/colors.styl"
 
 .vocab.table
@@ -10,6 +11,7 @@
   &.inverted
     --table-primary $color-tone-white
 
+  brands('--table-primary')
   colors('--table-primary')
 
   --table-secondary $color-tone-white
@@ -32,12 +34,12 @@
   &.inverted
     --table-quinary $color-tone-grey-light
 
-  --table-overlay-low $color-overlay-white-low
-  --table-overlay-high $color-overlay-white-high
+  --table-overlay-low $color-white-low
+  --table-overlay-high $color-white-high
 
   &.inverted
-    --table-overlay-low $color-overlay-black-low
-    --table-overlay-high $color-overlay-black-high
+    --table-overlay-low $color-black-low
+    --table-overlay-high $color-black-high
 
   // Color
 

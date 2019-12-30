@@ -33,6 +33,7 @@
 
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
 
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
 
   import Invertible from '@/mixins/invertible'
@@ -47,6 +48,7 @@
   export default {
     name: 'Navigation',
     mixins: [
+      Branded,
       Colored,
 
       Invertible
@@ -68,6 +70,7 @@
     computed: {
       navigationClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
 
           ...this.invertibleClasses

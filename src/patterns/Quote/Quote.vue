@@ -6,8 +6,10 @@
         :icon="['fas', 'quote-left']"
         size="lg"
         fixed-width/>
-      <!-- @slot Content goes here -->
-      <slot/>
+      <Section :is-inverted="isInverted" simplicity="extreme">
+        <!-- @slot Content goes here -->
+        <slot/>
+      </Section>
       <FontAwesomeIcon
         class="icon closing"
         :icon="['fas', 'quote-right']"
@@ -27,7 +29,11 @@
   import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+  import Section from '@/layouts/Section/Section'
+
+  import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
+  import Indicating from '@/mixins/indicating'
 
   import Invertible from '@/mixins/invertible'
 
@@ -44,10 +50,13 @@
   export default {
     name: 'Quote',
     components: {
+      Section,
       FontAwesomeIcon
     },
     mixins: [
+      Branded,
       Colored,
+      Indicating,
 
       Invertible
     ],
@@ -76,7 +85,9 @@
     computed: {
       quoteClasses: function () {
         return [
+          ...this.brandedClasses,
           ...this.coloredClasses,
+          ...this.indicatingClasses,
 
           ...this.invertibleClasses,
 
