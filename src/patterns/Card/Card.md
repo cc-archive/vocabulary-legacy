@@ -15,7 +15,7 @@ let dhruvAlt = 'Dhruv Bhanushali\'s profile picture';
       roundness="slight"
       is-raised>
       <template #foot>
-        🇮🇳 India
+        <Emoji>🇮🇳</Emoji> India
       </template>
     </Card>
   </GridCell>
@@ -40,7 +40,7 @@ let kritiAlt = 'Kriti Godey\'s profile picture';
       :featuredImageAlternateText="kritiAlt"
       is-raised>
       <template #foot>
-        🇺🇸 USA
+        <Emoji>🇺🇸</Emoji> USA
       </template>
     </Card>
   </GridCell>
@@ -68,7 +68,7 @@ let brenoAlt = 'Breno Ferreira\'s profile picture';
       :featuredImageAlternateText="hugoAlt"      
       simplicity="slight">
       <template #foot>
-        🇨🇱 Chile
+        <Emoji>🇨🇱</Emoji> Chile
       </template>
     </Card>
   </GridCell>
@@ -81,7 +81,7 @@ let brenoAlt = 'Breno Ferreira\'s profile picture';
       :featuredImageAlternateText="brenoAlt"
       simplicity="extreme">
       <template #foot>
-        🇧🇷 Brazil
+        <Emoji>🇧🇷</Emoji> Brazil
       </template>
     </Card>
   </GridCell>
@@ -110,7 +110,7 @@ let sophineAlt = 'Sophine Clachar\'s profile picture';
       :featuredImageAlternateText="timidAlt"
       roundness="slight">
       <template #foot>
-        🇺🇸 USA
+        <Emoji>🇺🇸</Emoji> USA
       </template>
     </Card>
   </GridCell>
@@ -123,7 +123,7 @@ let sophineAlt = 'Sophine Clachar\'s profile picture';
       :featuredImageAlternateText="sophineAlt"
       roundness="complete">
       <template #foot>
-        🇺🇸 USA
+        <Emoji>🇺🇸</Emoji> USA
       </template>
     </Card>
   </GridCell>
