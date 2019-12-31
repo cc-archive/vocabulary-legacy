@@ -27,8 +27,6 @@
   import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Section from '@/layouts/Section/Section'
-
   import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
   import Indicating from '@/mixins/indicating'
@@ -48,7 +46,6 @@
   export default {
     name: 'Quote',
     components: {
-      Section,
       FontAwesomeIcon
     },
     mixins: [
