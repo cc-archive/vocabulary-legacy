@@ -6,10 +6,8 @@
         :icon="['fas', 'quote-left']"
         size="lg"
         fixed-width/>
-      <Section :is-inverted="isInverted" simplicity="extreme">
-        <!-- @slot Content goes here -->
-        <slot/>
-      </Section>
+      <!-- @slot Content goes here -->
+      <slot/>
       <FontAwesomeIcon
         class="icon closing"
         :icon="['fas', 'quote-right']"
