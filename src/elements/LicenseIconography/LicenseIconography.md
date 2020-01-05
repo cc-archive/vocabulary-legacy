@@ -49,3 +49,34 @@ Finally there are icons for the CC Zero license and the Public Domain mark.
 ```jsx { "props": { "className": "enlarged-text" } }
 <LicenseIconography :icon-list="['zero', 'pd']"/>
 ```
+
+### Add-on set
+
+License icons can contain popups with additional content.
+
+```jsx
+<div style="padding: 100px 200px;">
+  <LicenseIconography
+    :icon-list="['', 'zero']"
+    :string-list="['Creative Commons', 'Zero']"/>
+</div>
+```
+
+But if plain strings are not cutting it for you, feel free to populate slots,
+named after icon indices.
+
+```jsx
+<div style="padding: 100px 200px;">
+  <LicenseIconography
+    :icon-list="['', 'zero']">
+    <template #0>
+      <Heading :level="5">Creative Commons</Heading>
+      <Paragraph>When we share, everyone wins.</Paragraph>
+    </template>
+    <template #1>
+      <Heading :level="5">Zero</Heading>
+      <Paragraph>No rights reserved.</Paragraph>
+    </template>
+  </LicenseIconography>
+</div>
+```
