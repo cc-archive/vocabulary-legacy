@@ -6,6 +6,7 @@ import Indicating from '@/knobs/indicating'
 import Rounded from '@/knobs/rounded'
 import Scaled from '@/knobs/scaled'
 import Simplified from '@/knobs/simplified'
+import Toned from '@/knobs/toned'
 
 import Invertible from '@/knobs/invertible'
 import Unactionable from '@/knobs/unactionable'
@@ -61,6 +62,14 @@ export const simplified = () => ({
   components: { Button },
   template: `
     <Button :simplicity="simplicity">Click Me</Button>
+  `
+})
+
+export const toned = () => ({
+  mixins: [Toned],
+  components: { Button },
+  template: `
+    <Button :tone="tone">Click me</Button>
   `
 })
 

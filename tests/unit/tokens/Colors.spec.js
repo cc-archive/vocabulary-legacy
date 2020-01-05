@@ -22,7 +22,7 @@ describe('Colors.vue', () => {
     const wrapper = shallowMount(Colors, options)
 
     expect(Object.keys(wrapper.vm.colors).length).toBe(1)
-    expect(wrapper.vm.colors['creative-commons'].length).toBe(6)
+    expect(wrapper.vm.colors['creative-commons'].length).toBe(7)
   })
 
   it('finds all functions', () => {

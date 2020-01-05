@@ -1102,6 +1102,13 @@
       "originalValue": "#51cf66",
       "name": "color_green_5"
     },
+    "color_slate": {
+      "type": "color",
+      "value": "rgb(51, 51, 51)",
+      "category": "color-group-brand-creative-commons",
+      "originalValue": "#333333",
+      "name": "color_slate"
+    },
     "color_black_high": {
       "type": "color",
       "value": "rgba(0, 0, 0, 0.85)",

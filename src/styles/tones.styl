@@ -1,0 +1,8 @@
+// Generate given property for all greys
+
+tones(property)
+  $tones = 0 1 2 3 4 5 6 7 8 9
+
+  for tone in $tones
+    &.t{tone}-toned
+      {property} lookup('$color-grey-' + tone) || lookup('$color-grey-' + '-9') // Highest valued default

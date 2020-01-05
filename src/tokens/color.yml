@@ -17,6 +17,9 @@ props:
   color_blue:
     value: '#3c5c99'
     category: color-group-brand-creative-commons
+  color_slate:
+    value: '#333333'
+    category: color-group-brand-creative-commons
   color_orange:
     value: '#fb7729'
     category: color-group-brand-creative-commons

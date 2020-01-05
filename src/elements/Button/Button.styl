@@ -2,6 +2,7 @@
 
 @import "~@/styles/colors.styl"
 @import "~@/styles/brands.styl"
+@import "~@/styles/tones.styl"
 @import "~@/styles/indications.styl"
 @import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
@@ -16,6 +17,7 @@
 
   colors('--button-primary')
   brands('--button-primary')
+  tones('--button-primary')
   indications('--button-primary')
 
   --button-secondary $color-tone-white
@@ -63,10 +65,10 @@
 
   // Border widths
 
-  --button-top-border-width 1px
-  --button-right-border-width 1px
-  --button-bottom-border-width 1px
-  --button-left-border-width 1px
+  --button-top-border-width 2px
+  --button-right-border-width 2px
+  --button-bottom-border-width 2px
+  --button-left-border-width 2px
 
   &.left-joined,
   &.both-joined
@@ -81,7 +83,7 @@
   --button-border-radius $radius-zero
 
   &.slightly-rounded
-    --button-border-radius $radius-large
+    --button-border-radius $rradius-normal
 
   &.completely-rounded
     --button-border-radius $radius-pill
@@ -120,7 +122,7 @@
   // Children
 
   & > .content
-    padding $space-normal
+    padding $space-normal $space-large
 
     &.has-addons
       border-left 1px solid var(--button-border-color)

@@ -3,7 +3,7 @@ export default {
     /**
      * _the brand color for the component_
      *
-     * ∈ {`'blue'`, `'forest'`, `'gold'`, `'orange'`, `'tomato'`, `'turquoise'`}
+     * ∈ {`'blue'`, `'forest'`, `'gold'`, `'orange'`, `'tomato'`, `'turquoise'`, `'slate'`}
      */
     brand: {
       type: String,
@@ -13,7 +13,8 @@ export default {
         'gold',
         'orange',
         'tomato',
-        'turquoise'
+        'turquoise',
+        'slate'
       ].includes(val)
     }
   },
