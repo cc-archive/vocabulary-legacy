@@ -3,7 +3,7 @@
     <SelectField
       v-model="language"
       v-bind="$attrs"
-      :color="$attrs.color || 'orange'"
+      :brand="computedBrand ? computedBrand : null"
       icon="globe"
       :option-list="localeOptions"
       @change="setLocale"/>
@@ -87,6 +87,17 @@
             text: locale.nativeName
           }
         })
+      },
+      computedBrand: function () {
+        if (!(this.$attrs.color ||
+          this.$attrs.brand ||
+          this.$attrs.indication ||
+          this.$attrs.tone
+        )) {
+          return 'orange'
+        } else {
+          return null
+        }
       }
     },
     watch: {
