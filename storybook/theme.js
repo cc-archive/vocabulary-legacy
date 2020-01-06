@@ -1,27 +1,30 @@
 import { create } from '@storybook/theming'
 
+import tokens from '@/assets/tokens/tokens.raw'
+
 export default create({
   // Inherit
   base: 'light',
 
   // Color scheme
-  colorPrimary: '#000000', // No known usage
-  colorSecondary: '#121513',
+  colorPrimary: tokens.props.color_pure_black.value, // No known usage
+  colorSecondary: tokens.props.color_orange.value, // Accent color
 
   // UI colors
-  appBg: '#f6f6f7',
+  appBg: tokens.props.color_grey_0.value,
 
-  barTextColor: '#393839',
-  barSelectedColor: '#000000',
-  barBg: '#ffffff',
+  // Rows of controls
+  barTextColor: tokens.props.color_grey_7.value,
+  barSelectedColor: tokens.props.color_pure_black.value,
+  barBg: tokens.props.color_pure_white.value,
 
   // Typography
-  fontBase: '"Source Sans Pro"',
-  fontCode: '"Fira Code"',
+  fontBase: '"Source Sans Pro", sans-serif',
+  fontCode: '"Fira Code", monospace',
 
   // Text colors
-  textColor: 'black',
-  textInverseColor: 'white',
+  textColor: tokens.props.color_pure_black.value,
+  textInverseColor: tokens.props.color_pure_white.value,
 
   // Branding
   brandTitle: 'Vocabulary',
