@@ -6,15 +6,13 @@ bland-list()
   padding-left $space-zero
   margin $space-zero
 
+/*We should rename this to inline-list since we're not using pipes anymore*/
 piped-list()
   bland-list()
   display inline
 
   li
     display inline-block
-
-    padding $space-zero $space-normal
-    border-right 1px solid @color
 
     &:last-of-type
       border-right none

@@ -1,6 +1,57 @@
 @import "../assets/tokens/tokens.styl"
 @import "../styles/media.styl"
 
+/*
+  Separate functions in case we need to adapt the styles with differents layouts
+*/
+navigation-links(color)
+  color var(color)
+  font-size $size-big
+  font-weight $weight-bold
+  &:hover
+    & > ul
+      display block
+  a
+    color inherit
+    font-family $font-title
+    text-decoration inherit
+    text-transform uppercase
+    &:hover
+      text-decoration underline
+
+  +phone-only()
+    border-bottom 1px solid @color
+
+    &:last-of-type
+      border none
+
+    a
+      display block
+      padding $space-normal $space-zero
+
+  +tablet-portrait-up()
+    a
+      padding $space-small $space-large
+
+navigation-links-sub-menu()
+  position absolute
+  display none
+  padding $space-normal
+  left 0
+  width 100%
+  box-shadow $shadow-light $color-overlay-black-lowest
+  li
+    display block
+    a
+      display block
+      padding $space-small $space-zero 
+ 
+has-children()
+  padding-right 1.5rem
+  background-repeat no-repeat
+  background-position center right
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41IDEzLjVMMi4wMDQ4MSA2TDE0Ljk5NTIgNkw4LjUgMTMuNVoiIGZpbGw9IiNCMEIwQjAiLz48L3N2Zz4=');
+  
 .vocab.navigation
   // Color
 
@@ -16,28 +67,9 @@
 
   & > .links
     & > .link
-      color var(--navigation-link-text-color)
-
-      font-size $size-big
-      font-weight $weight-bold
-
-      a
-        color inherit
-
-        text-decoration inherit
-
-      +phone-only()
-        border-bottom 1px solid @color
-
-        &:last-of-type
-          border none
-
-        a
-          display block
-          padding $space-normal $space-zero
-
-      +tablet-portrait-up()
-        padding $space-small $space-large
-
-      &:hover
-        background-image var(--navigation-link-background-overlay)
+      position relative
+      &.menu-item-has-children
+        has-children()
+      navigation-links(--navigation-link-text-color)
+      .sub-menu
+        navigation-links-sub-menu()
