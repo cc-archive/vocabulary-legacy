@@ -39,12 +39,12 @@
           <FontAwesomeIcon
             class="icon"
             :class="{active: isContentVisible}"
-            :icon="['fas', 'angle-up']"
+            :icon="['fas', 'caret-up']"
             fixed-width/>
           <FontAwesomeIcon
             class="icon"
             :class="{active: !isContentVisible}"
-            :icon="['fas', 'angle-down']"
+            :icon="['fas', 'caret-down']"
             fixed-width/>
         </template>
         <template v-else>
@@ -64,7 +64,7 @@
 
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
-  import { faAngleDown, faAngleUp, faBan, faEye, faVoteYea } from '@fortawesome/free-solid-svg-icons'
+  import { faCaretDown, faCaretUp, faBan, faEye, faVoteYea } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 
   import Branded from '@/mixins/branded'
@@ -78,7 +78,7 @@
   import Invertible from '@/mixins/invertible'
   import Unactionable from '@/mixins/unactionable'
 
-  library.add(faVoteYea, faAngleDown, faAngleUp, faBan, faEye)
+  library.add(faVoteYea, faCaretDown, faCaretUp, faBan, faEye)
 
   /**
    * ### Select fields offer a choice between many options.

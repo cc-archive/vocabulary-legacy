@@ -6,6 +6,7 @@ import Indicating from '@/knobs/indicating'
 import Rounded from '@/knobs/rounded'
 import Scaled from '@/knobs/scaled'
 import Simplified from '@/knobs/simplified'
+import Toned from '@/knobs/toned'
 
 import Invertible from '@/knobs/invertible'
 import Unactionable from '@/knobs/unactionable'
@@ -57,6 +58,14 @@ export const simplified = () => ({
   components: { InputField },
   template: `
     <InputField :simplicity="simplicity" type="text" placeholder="Input..."/>
+  `
+})
+
+export const toned = () => ({
+  mixins: [Toned],
+  components: { InputField },
+  template: `
+    <InputField :tone="tone" type="text" placeholder="Input..."/>
   `
 })
 

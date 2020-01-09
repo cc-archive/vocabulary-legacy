@@ -3,6 +3,7 @@
 @import "~@/styles/colors.styl"
 @import "~@/styles/brands.styl"
 @import "~@/styles/indications.styl"
+@import "~@/styles/tones.styl"
 @import "~@/styles/font-reset.styl"
 @import "~@/styles/sizes.styl"
 
@@ -17,6 +18,7 @@
   colors('--input-field-primary')
   brands('--input-field-primary')
   indications('--input-field-primary')
+  tones('--input-field-primary')
 
   --input-field-secondary $color-tone-white
 
@@ -76,10 +78,10 @@
 
   // Border widths
 
-  --input-field-top-border-width 1px
-  --input-field-right-border-width 1px
-  --input-field-bottom-border-width 1px
-  --input-field-left-border-width 1px
+  --input-field-top-border-width 2px
+  --input-field-right-border-width 2px
+  --input-field-bottom-border-width 2px
+  --input-field-left-border-width 2px
 
   &.left-joined,
   &.both-joined
@@ -94,7 +96,7 @@
   --input-field-border-radius 0
 
   &.slightly-rounded
-    --input-field-border-radius $radius-normal
+    --input-field-border-radius $rradius-normal
 
   &.completely-rounded
     --input-field-border-radius $radius-pill
@@ -142,7 +144,7 @@
 
     background-color inherit
 
-    padding $space-normal
+    padding $space-normal $space-large
 
     border transparent
 
@@ -245,7 +247,7 @@
       background-image var(--input-field-addons-background-overlay)
 
   &.disabled
-    opacity 0.6
+    opacity 0.2
 
     background-image none
 
