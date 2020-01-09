@@ -1,6 +1,9 @@
 @import "../assets/tokens/tokens.styl"
 
 @import "../styles/colors.styl"
+@import "../styles/brands.styl"
+@import "../styles/indications.styl"
+@import "../styles/tones.styl"
 @import "../styles/font-reset.styl"
 @import "../styles/sizes.styl"
 
@@ -13,15 +16,9 @@
     --input-field-primary $color-tone-white
 
   colors('--input-field-primary')
-
-  &.positive-indicating.positive-indicating
-    --input-field-primary $color-context-positive
-
-  &.probably-indicating.probably-indicating
-    --input-field-primary $color-context-probably
-
-  &.negative-indicating.negative-indicating
-    --input-field-primary $color-context-negative
+  brands('--input-field-primary')
+  indications('--input-field-primary')
+  tones('--input-field-primary')
 
   --input-field-secondary $color-tone-white
 
@@ -35,15 +32,6 @@
 
   &.infused
     --input-field-tertiary var(--input-field-primary)
-
-  &.positive-indicating.positive-indicating
-    --input-field-tertiary $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --input-field-tertiary $color-context-probably-dark
-
-  &.negative-indicating.negative-indicating
-    --input-field-tertiary $color-context-negative-dark
 
   --input-field-overlay $color-overlay-white-low
 
@@ -90,10 +78,10 @@
 
   // Border widths
 
-  --input-field-top-border-width 1px
-  --input-field-right-border-width 1px
-  --input-field-bottom-border-width 1px
-  --input-field-left-border-width 1px
+  --input-field-top-border-width 2px
+  --input-field-right-border-width 2px
+  --input-field-bottom-border-width 2px
+  --input-field-left-border-width 2px
 
   &.left-joined,
   &.both-joined
@@ -108,7 +96,7 @@
   --input-field-border-radius 0
 
   &.slightly-rounded
-    --input-field-border-radius $radius-normal
+    --input-field-border-radius $rradius-normal
 
   &.completely-rounded
     --input-field-border-radius $radius-pill
@@ -156,7 +144,7 @@
 
     background-color inherit
 
-    padding $space-normal
+    padding $space-normal $space-large
 
     border transparent
 
@@ -173,9 +161,9 @@
     // States
 
     &:invalid
-      color $color-context-negative-dark
+      color $color-negative-9
 
-      background-color $color-context-negative-light
+      background-color $color-negative-2
 
       box-shadow none
 
@@ -259,7 +247,7 @@
       background-image var(--input-field-addons-background-overlay)
 
   &.disabled
-    opacity 0.6
+    opacity 0.2
 
     background-image none
 
