@@ -31,7 +31,7 @@ cost of simplicity.
 #### Installation
 
 ```bash
-$ npm install --save @creativecommons/vocabulary
+$ npm install --save @creativecommons/vue-vocabulary
 ```
 
 That's basically it! I know, I know, I'm just kidding. Nothing about JavaScript 
@@ -59,8 +59,8 @@ Note the difference between 'must' and 'should' in the last paragraph.
 In your `App.vue` file, import the base CSS files for CC Vocabulary.
 
 ```js static
-import '@creativecommons/vocabulary/css/root.css'
-import '@creativecommons/vocabulary/css/vocabulary.css'
+import '@creativecommons/vue-vocabulary/css/root.css'
+import '@creativecommons/vue-vocabulary/css/vocabulary.css'
 ```
 
 Set up the i18n instance.
@@ -79,7 +79,7 @@ global registration or in the `components` dictionary within your component
 definition.
 
 ```js static
-import { Header, Footer, Locale } from '@creativecommons/vocabulary'
+import { Header, Footer, Locale } from '@creativecommons/vue-vocabulary'
 
 export default {
   components: {
@@ -152,7 +152,7 @@ i18n](https://kazupon.github.io/vue-i18n/) and the Vocabulary package itself.
   src="https://unpkg.com/vue-i18n"></script>
 <script
   type="text/javascript" 
-  src="https://unpkg.com/@creativecommons/vocabulary"></script>
+  src="https://unpkg.com/@creativecommons/vue-vocabulary"></script>
 ```
 
 Import the CSS files via `<link>` tags. Unlike the JavaScript imports, this is
@@ -163,11 +163,11 @@ is).
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/css/root.css">
+  href="https://unpkg.com/@creativecommons/vue-vocabulary/css/root.css">
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+  href="https://unpkg.com/@creativecommons/vue-vocabulary/css/vocabulary.css">
 ```
 
 If you have a build pipeline, you should also transpile the Stylus or SASS token
