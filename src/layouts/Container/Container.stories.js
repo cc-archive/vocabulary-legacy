@@ -4,16 +4,36 @@ export default { title: 'Layouts|Container' }
 
 export const concept = () => ({
   components: { Container },
+  data: function () {
+    return {
+      containerWidth: null
+    }
+  },
+  methods: {
+    updateWidth: function () {
+      this.containerWidth = this.$refs.container.$el.clientWidth
+    }
+  },
+  mounted: function () {
+    this.updateWidth()
+    window.addEventListener('resize', this.updateWidth)
+  },
   template: `
     <Container
+      ref="container"
       style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; background-color: white;">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <p>
+        Width: {{ containerWidth }}px
+      </p>
     </Container>
   `
 })
