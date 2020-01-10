@@ -119,31 +119,6 @@ function putMetafiles (directory) {
   ]
   put(files, variables.rootDir, directory)
 
-  // Copy Stylus styles to their own directory
-  files = [
-    'colors.styl',
-    'font-reset.styl',
-    'list.styl',
-    'media.styl',
-    'page.styl',
-    'sizes.styl'
-  ]
-  put(files, variables.stylesDir, path.join(directory, 'styl'))
-
-  // Copy token datafiles to their own directory
-  files = [
-    'tokens.raw.json',
-    'tokens.scss',
-    'tokens.styl'
-  ]
-  put(files, variables.tokensDir, path.join(directory, 'tokens'))
-
-  // Copy stylesheets to their own directory
-  files = [
-    'root.css'
-  ]
-  put(files, variables.metafilesDir, path.join(directory, 'css'))
-
   process.stdout.write(chalk.green('done\n'))
 }
 
