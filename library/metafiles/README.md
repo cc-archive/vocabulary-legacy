@@ -34,95 +34,30 @@ cost of simplicity.
 $ npm install --save @creativecommons/vocabulary
 ```
 
-That's basically it! I know, I know, I'm just kidding. Nothing about JavaScript 
-is that easy.
-
-You must satisfy the peer-dependency that is [Vue
-i18n](https://kazupon.github.io/vue-i18n/). Refer to its documentation on how to
-go about setting it up. Also, for an optimal experience, you should install
-FontAwesome packages from `npm` too. These would be the following.
-
-```js static
-[
-  '@fortawesome/fontawesome-svg-core',  // Required
-  '@fortawesome/free-solid-svg-icons',  // Required
-  '@fortawesome/vue-fontawesome',       // Required
-  '@fortawesome/free-brands-svg-icons', // For social media or other brand icons
-  '@fortawesome/free-regular-svg-icons' // For the free subset of regular icons
-]
-```
-
-Note the difference between 'must' and 'should' in the last paragraph.
+That's basically it!
 
 #### Usage
 
-In your `App.vue` file, import the base CSS files for CC Vocabulary.
+In your `App.vue` file, import the base CSS files for Vocabulary.
 
 ```js static
 import '@creativecommons/vocabulary/css/root.css'
-import '@creativecommons/vocabulary/css/vocabulary.css'
+import '@creativecommons/vocabulary/css/index.css'
 ```
 
-Set up the i18n instance.
-
-```js static
-const i18n = new VueI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages: {}
-})
-```
-
-Then in the component containing CC Vocabulary components, import the required
-components. You will need to register these components using `Vue.component` for
-global registration or in the `components` dictionary within your component
-definition.
-
-```js static
-import { Header, Footer, Locale } from '@creativecommons/vocabulary'
-
-export default {
-  components: {
-    Header,
-    Footer,
-    Locale
-  }
-  ...
-}
-```
-
-And your template can go like this.
-
-```html
-<Header app-name="My App"/>
-<Footer>
-  <Locale/>
-</Footer>
-```
-
-#### Additional features
-
-A lot of these components accept `icon` props, but they do not register icons.
-That onus is on your apps. That step looks like this.
-
-```js static
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faGlobe)
-```
-
-You should also import the Stylus or SASS token variables file so that you can
+You should also import the Stylus or SASS or JSON token file so that you can
 use the tokens in your own app components for consistency.
 
 ```js static
-import '@creativecommons/vocabulary/tokens.styl'
+import '@creativecommons/vocabulary/tokens/tokens.styl'
+import '@creativecommons/vocabulary/tokens/tokens.scss'
+import '@creativecommons/vocabulary/tokens/tokens.raw.json'
 ```
 
 #### Example
 
 See the codebase of 
-[CC Search](https://github.com/creativecommons/cccatalog-frontend/) for an 
+[Vue Vocabulary](https://github.com/creativecommons/vue-vocabulary/) for an 
 example of the library in use.
 
 
@@ -150,9 +85,6 @@ i18n](https://kazupon.github.io/vue-i18n/) and the Vocabulary package itself.
 <script
   type="text/javascript" 
   src="https://unpkg.com/vue-i18n"></script>
-<script
-  type="text/javascript" 
-  src="https://unpkg.com/@creativecommons/vocabulary"></script>
 ```
 
 Import the CSS files via `<link>` tags. Unlike the JavaScript imports, this is
@@ -167,7 +99,7 @@ is).
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+  href="https://unpkg.com/@creativecommons/vocabulary/css/index.css">
 ```
 
 If you have a build pipeline, you should also transpile the Stylus or SASS token
@@ -175,43 +107,14 @@ variables file so that you can use the tokens in your own CSS for consistency.
 
 #### Usage
 
-You need to setup i18n before taking off.
-
-```js static
-const i18n = new VueI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages: {}
-})
-```
-
-Then CC Vocabulary components can be accessed in `<script>` tags using dot
-notation and must be remapped to lowercase names that do not conflict with
-existing HTML tags inside the `components` dictionary in any component
-definition.
-
-```js static
-new Vue({
-  i18n,
-  components: {
-    'vocab-header': vocabulary.Header,
-    'vocab-footer': vocabulary.Footer,
-    'vocab-locale': vocabulary.Locale
-  }
-}).$mount('div#app')
-```
-
-Your HTML contain a chunk that looks like this.
+Your HTML must contain code with class names like this for Vocabulary to match
+and style
 
 ```html
 <body>
-  <div id="app">
-    <vocab-header app-name="My App">
-    </vocab-header>
-    <vocab-footer>
-      <vocab-locale></vocab-locale>
-    </vocab-footer>
-  </div>
+  <button class="vocab orange-branded slighly-rounded button">
+    Click me
+  </button>
 </body>
 ```
 
