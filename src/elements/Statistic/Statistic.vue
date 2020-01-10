@@ -136,5 +136,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Statistic.styl">
+<style src="@creativecommons/vocabulary/css/elements/Statistic.css">
 </style>

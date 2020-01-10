@@ -47,5 +47,5 @@
   }
 </script>
 
-<style lang="stylus" src="./NavigationLink.styl">
+<style src="@creativecommons/vocabulary/css/patterns/NavigationLink.css">
 </style>

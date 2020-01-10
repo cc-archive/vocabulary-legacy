@@ -121,5 +121,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Card.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Card.css">
 </style>

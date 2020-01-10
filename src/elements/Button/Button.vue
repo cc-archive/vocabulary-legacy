@@ -149,5 +149,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Button.styl">
+<style src="@creativecommons/vocabulary/css/elements/Button.css">
 </style>

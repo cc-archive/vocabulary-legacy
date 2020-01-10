@@ -48,5 +48,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Emoji.styl">
+<style src="@creativecommons/vocabulary/css/elements/Emoji.css">
 </style>

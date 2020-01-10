@@ -57,5 +57,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Heading.styl">
+<style src="@creativecommons/vocabulary/css/elements/Heading.css">
 </style>

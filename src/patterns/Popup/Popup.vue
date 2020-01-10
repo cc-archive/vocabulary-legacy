@@ -109,5 +109,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Popup.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Popup.css">
 </style>

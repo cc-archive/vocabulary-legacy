@@ -143,5 +143,5 @@
   }
 </script>
 
-<style lang="stylus" src="./ProgressBar.styl">
+<style src="@creativecommons/vocabulary/css/elements/ProgressBar.css">
 </style>

@@ -92,5 +92,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Shield.styl">
+<style src="@creativecommons/vocabulary/css/elements/Shield.css">
 </style>

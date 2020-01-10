@@ -185,5 +185,5 @@
   }
 </script>
 
-<style lang="stylus" src="./InputField.styl">
+<style src="@creativecommons/vocabulary/css/elements/InputField.css">
 </style>

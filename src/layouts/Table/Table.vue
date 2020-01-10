@@ -200,5 +200,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Table.styl">
+<style src="@creativecommons/vocabulary/css/layouts/Table.css">
 </style>

@@ -110,5 +110,5 @@
   }
 </script>
 
-<style lang="stylus" src="./GitHubCorner.styl">
+<style src="@creativecommons/vocabulary/css/elements/GitHubCorner.css">
 </style>

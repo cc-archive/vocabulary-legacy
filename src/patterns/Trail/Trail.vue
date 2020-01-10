@@ -103,5 +103,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Trail.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Trail.css">
 </style>

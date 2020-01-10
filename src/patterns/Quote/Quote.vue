@@ -96,5 +96,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Quote.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Quote.css">
 </style>

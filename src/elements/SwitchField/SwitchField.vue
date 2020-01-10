@@ -160,5 +160,5 @@
   }
 </script>
 
-<style lang="stylus" src="./SwitchField.styl">
+<style src="@creativecommons/vocabulary/css/elements/SwitchField.css">
 </style>

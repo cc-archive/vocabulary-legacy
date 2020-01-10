@@ -185,7 +185,7 @@
   }
 </script>
 
-<style lang="stylus" src="./SelectField.styl">
+<style src="@creativecommons/vocabulary/css/elements/SelectField.css">
 </style>
 
 <i18n src="./lang.json">

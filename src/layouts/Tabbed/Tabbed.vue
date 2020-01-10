@@ -220,5 +220,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Tabbed.styl">
+<style src="@creativecommons/vocabulary/css/layouts/Tabbed.css">
 </style>

@@ -139,7 +139,7 @@
   }
 </script>
 
-<style lang="stylus" src="./Footer.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Footer.css">
 </style>
 
 <i18n src="./lang.json">

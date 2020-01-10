@@ -80,5 +80,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Navigation.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Navigation.css">
 </style>

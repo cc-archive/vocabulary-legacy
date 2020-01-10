@@ -17,5 +17,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Container.styl">
+<style src="@creativecommons/vocabulary/css/layouts/Container.css">
 </style>

@@ -93,5 +93,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Section.styl">
+<style src="@creativecommons/vocabulary/css/layouts/Section.css">
 </style>

@@ -175,5 +175,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Rating.styl">
+<style src="@creativecommons/vocabulary/css/elements/Rating.css">
 </style>

@@ -42,5 +42,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Grid.styl">
+<style src="@creativecommons/vocabulary/css/layouts/Grid.css">
 </style>

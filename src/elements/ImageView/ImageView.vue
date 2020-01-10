@@ -126,5 +126,5 @@
   }
 </script>
 
-<style lang="stylus" src="./ImageView.styl">
+<style src="@creativecommons/vocabulary/css/elements/ImageView.css">
 </style>

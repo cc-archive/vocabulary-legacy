@@ -59,5 +59,5 @@
   }
 </script>
 
-<style lang="stylus" src="./TabbedPane.styl">
+<style src="@creativecommons/vocabulary/css/layouts/TabbedPane.css">
 </style>

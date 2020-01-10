@@ -157,5 +157,5 @@
   }
 </script>
 
-<style lang="stylus" src="./ChoiceField.styl">
+<style src="@creativecommons/vocabulary/css/elements/ChoiceField.css">
 </style>

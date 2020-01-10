@@ -128,5 +128,5 @@
   }
 </script>
 
-<style lang="stylus" src="./GridCell.styl">
+<style src="@creativecommons/vocabulary/css/layouts/GridCell.css">
 </style>

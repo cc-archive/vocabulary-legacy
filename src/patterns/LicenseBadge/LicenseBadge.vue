@@ -70,5 +70,5 @@
   }
 </script>
 
-<style lang="stylus" src="./LicenseBadge.styl">
+<style src="@creativecommons/vocabulary/css/patterns/LicenseBadge.css">
 </style>

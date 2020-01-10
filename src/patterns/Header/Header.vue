@@ -165,5 +165,5 @@
   }
 </script>
 
-<style lang="stylus" src="./Header.styl">
+<style src="@creativecommons/vocabulary/css/patterns/Header.css">
 </style>

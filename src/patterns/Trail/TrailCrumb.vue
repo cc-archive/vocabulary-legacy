@@ -48,5 +48,5 @@
   }
 </script>
 
-<style lang="stylus" src="./TrailCrumb.styl">
+<style src="@creativecommons/vocabulary/css/patterns/TrailCrumb.css">
 </style>

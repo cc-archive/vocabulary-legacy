@@ -69,5 +69,5 @@
   }
 </script>
 
-<style lang="stylus" src="./TableCell.styl">
+<style src="@creativecommons/vocabulary/css/layouts/TableCell.css">
 </style>
