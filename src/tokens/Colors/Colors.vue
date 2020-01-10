@@ -12,7 +12,7 @@
 <script>
   import Color from '@/tokens/Colors/Color'
 
-  import designTokens from '@/assets/tokens/tokens.raw.json'
+  import designTokens from '@creativecommons/vocabulary/tokens/tokens.raw.json'
 
   /**
    * ### Colors add pizzazz.

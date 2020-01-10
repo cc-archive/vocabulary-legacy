@@ -20,7 +20,7 @@
   import Grid from '@/layouts/Grid/Grid'
   import GridCell from '@/layouts/Grid/GridCell'
 
-  import designTokens from '@/assets/tokens/tokens.raw.json'
+  import designTokens from '@creativecommons/vocabulary/tokens/tokens.raw.json'
 
   /**
    * ### Fonts add personality to text.
