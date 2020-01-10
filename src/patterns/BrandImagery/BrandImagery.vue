@@ -65,7 +65,7 @@
     computed: {
       svgSource: function () {
         return require(
-          `@/assets/logo/${this.brand}/${this.type}_${this.color}.svg`
+          `@creativecommons/vocabulary/assets/logo/${this.brand}/${this.type}_${this.color}.svg`
         )
       }
     }

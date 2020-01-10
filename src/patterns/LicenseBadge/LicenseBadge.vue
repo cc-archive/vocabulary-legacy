@@ -63,7 +63,7 @@
 
       svgSource: function () {
         return require(
-          `@/assets/icons/license/badges_${this.version}/${this.license}.svg`
+          `@creativecommons/vocabulary/assets/icons/license/badges_${this.version}/${this.license}.svg`
         )
       }
     }
