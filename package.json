@@ -26,7 +26,7 @@
     "build:documentation": "node documentation/build.js"
   },
   "dependencies": {
-    "@creativecommons/vue-vocabulary": "0.0.0",
+    "@creativecommons/vue-vocabulary": "0.0.0-alpha.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
