@@ -1,30 +1,16 @@
 {
   "name": "vue-vocabulary",
-  "verboseName": "CC Vocabulary",
-  "description": "A cohesive design system to unite the web facing Creative Commons",
-  "homepage": "https://creativecommons.github.io/vue-vocabulary/",
-  "repository": "github:creativecommons/vue-vocabulary",
-  "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
-  "license": "MIT",
-  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
-  "keywords": [
-    "ui",
-    "ux",
-    "design",
-    "design system",
-    "components",
-    "vue components",
-    "library"
-  ],
   "private": true,
+  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
   "scripts": {
-    "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "serve:website": "vue-cli-service serve",
-    "serve:styleguide": "vue-cli-service styleguidist",
+    "lint": "vue-cli-service lint",
+    "build:documentation": "node documentation/build.js",
     "build:library": "node library/build.js",
     "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
-    "build:documentation": "node documentation/build.js"
+    "serve:styleguide": "vue-cli-service styleguidist",
+    "serve:website": "vue-cli-service serve"
   },
   "dependencies": {
     "@creativecommons/vocabulary": "0.0.0-alpha.26",
@@ -35,7 +21,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.8",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
-    "core-js": "^2.6.10",
+    "core-js": "^3.4.4",
     "lodash": "^4.17.15",
     "twemoji": "^12.1.4",
     "vue": "^2.6.10",
@@ -50,10 +36,10 @@
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addon-viewport": "^5.2.8",
-    "@vue/cli-plugin-babel": "^3.12.1",
-    "@vue/cli-plugin-eslint": "^3.12.1",
-    "@vue/cli-plugin-unit-jest": "^3.12.1",
-    "@vue/cli-service": "^3.12.1",
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
@@ -69,8 +55,22 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-i18n": "^0.6.0",
-    "vue-cli-plugin-storybook": "^0.6.1",
-    "vue-cli-plugin-styleguidist": "^3.26.2",
+    "vue-cli-plugin-storybook": "^1.0.0",
+    "vue-cli-plugin-styleguidist": "^4.4.2",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
+  "homepage": "https://creativecommons.github.io/vue-vocabulary/",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "vue components",
+    "library"
+  ],
+  "license": "MIT",
+  "repository": "github:creativecommons/vue-vocabulary",
+  "verboseName": "CC Vocabulary"
 }
