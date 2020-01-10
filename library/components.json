@@ -2,6 +2,8 @@
   "elements": [
     "Button",
     "ChoiceField",
+    "Emoji",
+    "GitHubCorner",
     "Heading",
     "ImageView",
     "InputField",
@@ -31,6 +33,7 @@
     "LicenseBadge",
     "Navigation",
     ["Navigation", "Link"],
+    "Popup",
     "Quote",
     "Trail",
     ["Trail", "Crumb"]
