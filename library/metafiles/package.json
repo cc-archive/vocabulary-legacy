@@ -28,10 +28,7 @@
     "cjs/*",
     "umd/*",
     "css/*",
-    "tokens/*",
-    "styl/*",
     "package.json",
-    "demo.html",
     "README.md",
     "LICENSE"
   ]
