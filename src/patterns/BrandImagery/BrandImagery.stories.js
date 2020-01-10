@@ -24,17 +24,9 @@ export const creativeCommons = () => ({
 
 export const vocabulary = () => ({
   components: { BrandImagery },
-  props: {
-    type: {
-      default: () => select('Type', {
-        Wordmark: 'wordmark',
-        Lettermark: 'lettermark'
-      }, 'wordmark')
-    }
-  },
   template: `
     <div>
-      <BrandImagery brand="vocabulary" :type="type"/>
+      <BrandImagery brand="vocabulary" type="wordmark"/>
     </div>
   `
 })
