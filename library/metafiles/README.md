@@ -31,6 +31,7 @@ cost of simplicity.
 #### Installation
 
 ```bash
+$ npm install --save @creativecommons/vocabulary
 $ npm install --save @creativecommons/vue-vocabulary
 ```
 
@@ -56,11 +57,20 @@ Note the difference between 'must' and 'should' in the last paragraph.
 
 #### Usage
 
-In your `App.vue` file, import the base CSS files for CC Vocabulary.
+In your `App.vue` file, import the base CSS files for Vocabulary.
 
 ```js static
 import '@creativecommons/vocabulary/css/root.css'
-import '@creativecommons/vocabulary/css/vocabulary.css'
+import '@creativecommons/vocabulary/css/index.css'
+```
+
+You should also import the Stylus or SASS or JSON token file so that you can
+use the tokens in your own app components for consistency.
+
+```js static
+import '@creativecommons/vocabulary/tokens/tokens.styl'
+import '@creativecommons/vocabulary/tokens/tokens.scss'
+import '@creativecommons/vocabulary/tokens/tokens.raw.json'
 ```
 
 Set up the i18n instance.
@@ -73,13 +83,13 @@ const i18n = new VueI18n({
 })
 ```
 
-Then in the component containing CC Vocabulary components, import the required
+Then in the component containing Vocabulary components, import the required
 components. You will need to register these components using `Vue.component` for
 global registration or in the `components` dictionary within your component
 definition.
 
 ```js static
-import { Header, Footer, Locale } from '@creativecommons/vocabulary'
+import { Header, Footer, Locale } from '@creativecommons/vue-vocabulary'
 
 export default {
   components: {
@@ -91,13 +101,22 @@ export default {
 }
 ```
 
+If you are planning to use a hefty chunk of the components, you can
+install Vocabulary as a plugin too.
+
+```js static
+import VueVocabulary from '@creativecommons/vue-vocabulary'
+
+Vue.use(VueVocabulary)
+```
+
 And your template can go like this.
 
 ```html
-<Header app-name="My App"/>
-<Footer>
-  <Locale/>
-</Footer>
+<div class="index">
+  <Header app-name="My App"/>
+  <Footer><Locale/></Footer>
+</div>
 ```
 
 #### Additional features
@@ -110,13 +129,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faGlobe)
-```
-
-You should also import the Stylus or SASS token variables file so that you can
-use the tokens in your own app components for consistency.
-
-```js static
-import '@creativecommons/vocabulary/tokens.styl'
 ```
 
 #### Example
@@ -152,7 +164,7 @@ i18n](https://kazupon.github.io/vue-i18n/) and the Vocabulary package itself.
   src="https://unpkg.com/vue-i18n"></script>
 <script
   type="text/javascript" 
-  src="https://unpkg.com/@creativecommons/vocabulary"></script>
+  src="https://unpkg.com/@creativecommons/vue-vocabulary"></script>
 ```
 
 Import the CSS files via `<link>` tags. Unlike the JavaScript imports, this is
@@ -167,7 +179,7 @@ is).
 <link
   type="text/css"
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+  href="https://unpkg.com/@creativecommons/vocabulary/css/index.css">
 ```
 
 If you have a build pipeline, you should also transpile the Stylus or SASS token
@@ -185,8 +197,8 @@ const i18n = new VueI18n({
 })
 ```
 
-Then CC Vocabulary components can be accessed in `<script>` tags using dot
-notation and must be remapped to lowercase names that do not conflict with
+Then Vocabulary components can be accessed in `<script>` tags using dot
+notation and must be remapped to component names that do not conflict with
 existing HTML tags inside the `components` dictionary in any component
 definition.
 
@@ -194,24 +206,27 @@ definition.
 new Vue({
   i18n,
   components: {
-    'vocab-header': vocabulary.Header,
-    'vocab-footer': vocabulary.Footer,
-    'vocab-locale': vocabulary.Locale
-  }
+    'Header': vocabulary.Header,
+    'Footer': vocabulary.Footer,
+    'Locale': vocabulary.Locale
+  },
+  template: `
+    <div id="app>
+      <div class="index">
+        <Header app-name="My App"/>
+        <Footer><Locale/></Footer>
+      </div>
+    </div>
+  `
 }).$mount('div#app')
 ```
 
-Your HTML contain a chunk that looks like this.
+Your HTML must contain a skeleton chunk that looks like this for Vue to latch
+on to.
 
 ```html
 <body>
-  <div id="app">
-    <vocab-header app-name="My App">
-    </vocab-header>
-    <vocab-footer>
-      <vocab-locale></vocab-locale>
-    </vocab-footer>
-  </div>
+  <div id="app"></div>
 </body>
 ```
 
