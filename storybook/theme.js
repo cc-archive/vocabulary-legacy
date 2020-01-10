@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming'
 
-import tokens from '@/assets/tokens/tokens.raw'
+import tokens from '@creativecommons/vocabulary/tokens/tokens.raw'
 
 export default create({
   // Inherit
