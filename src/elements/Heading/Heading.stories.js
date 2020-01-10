@@ -18,7 +18,7 @@ export const branded = () => ({
 export const colored = () => ({
   mixins: [ Colored ],
   template: `
-    <h6 :class="\`vocab heading $\{color}-colored $s\{shade}-shaded\`">Vocabulary</Heading>
+    <h6 :class="\`vocab heading $\{color}-colored s$\{shade}-shaded\`">Vocabulary</Heading>
   `
 })
 
