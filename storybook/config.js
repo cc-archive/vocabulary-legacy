@@ -7,6 +7,9 @@ import i18n from '@/i18n'
 import theme from './theme'
 import viewports from './viewport'
 
+import '@/root.styl'
+import '@/index.styl'
+
 // Customise storybook
 
 addParameters({
