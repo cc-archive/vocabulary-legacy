@@ -103,3 +103,6 @@
 
 <style src="@creativecommons/vocabulary/css/patterns/Definition.css">
 </style>
+
+<i18n src="./lang.json">
+</i18n>
