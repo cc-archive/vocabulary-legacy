@@ -10,7 +10,8 @@
     "build:library": "node library/build.js",
     "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,raw.json --dest ./src/assets/tokens",
     "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
-    "serve:website": "vue-cli-service serve"
+    "serve:website": "vue-cli-service serve",
+    "prefix-test": "stylus -u autoprefixer-stylus -c ./src/elements/Button.styl --out ./src/elements/Button2.css"
   },
   "dependencies": {
     "@creativecommons/vue-vocabulary": "0.0.0-alpha.1",
@@ -19,6 +20,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "^0.1.8",
+    "autoprefixer-stylus": "^1.0.0",
     "core-js": "^3.4.4",
     "lodash": "^4.17.15",
     "vue": "^2.6.10",
