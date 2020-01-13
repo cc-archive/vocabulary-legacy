@@ -13,8 +13,8 @@ clearDir(variables.docsDir)
 buildWebsite(variables.docsDir)
 
 // buildStyleguide()
-//
-// buildStorybook()
+
+buildStorybook()
 
 console.log(chalk.green.inverse('\n✔ Done.'))
 

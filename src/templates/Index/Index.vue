@@ -1,5 +1,9 @@
 <template>
   <div class="vocab index">
+    <GitHubCorner
+      :repo="repoHref"
+      position="absolute"/>
+
     <main>
       <Container>
         <Definition
@@ -17,7 +21,9 @@
           </ul>
           <template #seeAlso>
             <a :href="vueLibraryHref">
-              {{ $t('vue').toLocaleLowerCase() }}-{{ $t('vo_cab_u_lar_y') }}</a>
+              {{ $t('vue').toLocaleLowerCase() }}-{{ $t('vo_cab_u_lar_y') }}</a>,
+            <a :href="storybookHref">
+              {{ $t('definition.seealso.storybook') }}</a>
           </template>
         </Definition>
       </Container>
@@ -108,6 +114,7 @@
     BrandImagery,
     Definition,
     Footer,
+    GitHubCorner,
     Locale,
     Quote
   } from '@creativecommons/vue-vocabulary'
@@ -127,10 +134,13 @@
       BrandImagery,
       Definition,
       Footer,
+      GitHubCorner,
       Locale,
       Quote
     },
     data: function () {
+      const storybookHref = 'storybook'
+
       const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
       const vueLibraryHref = 'https://creativecommons.github.io/cc-vue-vocabulary'
 
@@ -153,6 +163,7 @@
         }
       ]
       return {
+        storybookHref,
         baseLibraryHref,
         repoHref,
         vueLibraryHref,
