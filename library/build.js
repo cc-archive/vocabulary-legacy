@@ -27,7 +27,7 @@ console.log(chalk.green.inverse('\n✔ Done.'))
 
 // Top level functions
 
-function clearDir (directory) {
+function clearDir(directory) {
   process.stdout.write(chalk.yellow(
     'Clearing folder',
     chalk.bold(directory),
@@ -37,7 +37,7 @@ function clearDir (directory) {
   process.stdout.write(chalk.green('done\n'))
 }
 
-function indexComponents () {
+function indexComponents() {
   const fileContent = index()
   process.stdout.write(chalk.yellow(
     'Writing library exports to',
@@ -48,7 +48,7 @@ function indexComponents () {
   process.stdout.write(chalk.green('done\n'))
 }
 
-function buildLibrary (directory) {
+function buildLibrary(directory) {
   process.stdout.write(chalk.yellow(
     'Building library to',
     chalk.bold(directory),
@@ -73,7 +73,7 @@ function buildLibrary (directory) {
   process.stdout.write(chalk.green('done\n'))
 }
 
-function copySources (directory) {
+function copySources(directory) {
   process.stdout.write(chalk.yellow(
     'Copying sources to',
     chalk.bold(directory),
@@ -101,7 +101,7 @@ function copySources (directory) {
   process.stdout.write(chalk.green('done\n'))
 }
 
-function putMetafiles (directory) {
+function putMetafiles(directory) {
   process.stdout.write(chalk.yellow(
     'Adding metafiles to',
     chalk.bold(directory),
@@ -135,7 +135,7 @@ function putMetafiles (directory) {
 
 // Helper functions
 
-function index () {
+function index() {
   process.stdout.write(chalk.yellow(
     'Forming content for index at',
     chalk.bold(variables.srcIndexPath),
@@ -164,19 +164,19 @@ function index () {
   return indexStencilContent.replace('{{imports}}', imports)
 }
 
-function build (source, destination) {
+function build(source, destination) {
   let dest = `--out ${destination}`
   let options = [
     '--compress',
     dest
   ].join(' ')
 
-  const cmd = `stylus ${options} ${source}`
+  const cmd = `stylus -u autoprefixer-stylus ${options} ${source}`
 
   childProcess.execSync(cmd, { stdio: 'ignore' })
 }
 
-function put (files, source, destination, move = false) {
+function put(files, source, destination, move = false) {
   files.forEach(file => {
     if (move) {
       fs.moveSync(
