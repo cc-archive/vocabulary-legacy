@@ -10,8 +10,7 @@
     "build:library": "node library/build.js",
     "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,raw.json --dest ./src/assets/tokens",
     "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
-    "serve:website": "vue-cli-service serve",
-    "prefix-test": "stylus -u autoprefixer-stylus -c ./src/elements/Button.styl --out ./src/elements/Button2.css"
+    "serve:website": "vue-cli-service serve"
   },
   "dependencies": {
     "@creativecommons/vue-vocabulary": "0.0.0-alpha.1",
