@@ -171,7 +171,7 @@ function build (source, destination) {
     dest
   ].join(' ')
 
-  const cmd = `stylus ${options} ${source}`
+  const cmd = `stylus -u autoprefixer-stylus ${options} ${source}`
 
   childProcess.execSync(cmd, { stdio: 'ignore' })
 }
