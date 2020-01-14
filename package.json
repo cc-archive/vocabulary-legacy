@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "build:documentation": "node documentation/build.js",
     "build:library": "node library/build.js",
-    "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,raw.json --dest ./src/assets/tokens",
+    "build:tokens": "theo ./src/tokens/tokens.yml --transform web --format styl,scss,custom-properties.css,raw.json --dest ./src/assets/tokens",
     "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
     "serve:website": "vue-cli-service serve"
   },
