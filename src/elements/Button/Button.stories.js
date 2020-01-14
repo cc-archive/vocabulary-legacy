@@ -11,3 +11,5 @@ export const Action = () => '<button class="vocab button action small">Button</b
 export const TagWhite = () => '<button class="vocab button tag-white">Button</button>'
 
 export const TagGray = () => '<button class="vocab button tag-gray">Button</button>'
+
+export const Donate = () => '<button class="vocab button donate big">Button</button>'
