@@ -6,7 +6,7 @@ export const BigPrimary = () => '<button class="vocab button primary big">Button
 
 export const MediumPrimary = () => '<button class="vocab button primary medium">Button</button>'
 
-export const Action = () => '<button class="vocab button action small">Button</button>'
+export const Action = () => '<button class="vocab button action">Button</button>'
 
 export const TagWhite = () => '<button class="vocab button tag-white">Button</button>'
 
