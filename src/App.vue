@@ -14,6 +14,3 @@
     }
   }
 </script>
-
-<style lang="stylus" src="./App.styl">
-</style>
