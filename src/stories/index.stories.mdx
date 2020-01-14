@@ -1,0 +1,16 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+
+import Welcome from '@/stories/Welcome.vue'
+
+<Meta title="Vocabulary|Welcome" component={ Welcome } />
+
+# Welcome
+
+`Welcome` is just a dummy component to welcome the viewers to the Storybook.
+
+<Story name="Welcome" inline>{{
+  components: { Welcome },
+  template: `
+    <Welcome/>
+  `
+}}</Story>
