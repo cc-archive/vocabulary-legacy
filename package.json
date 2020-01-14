@@ -1,0 +1,61 @@
+{
+  "name": "fonts-landing",
+  "private": true,
+  "description": "Typefaces that lend personality to the web facing Creative Commons",
+  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
+  "scripts": {
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build:documentation": "node documentation/build.js",
+    "build:library": "node library/build.js",
+    "serve:website": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "@creativecommons/vocabulary": "0.0.0-alpha.30",
+    "@creativecommons/vue-vocabulary": "0.0.0-alpha.30",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/vue-fontawesome": "^0.1.8",
+    "core-js": "^3.4.4",
+    "lodash": "^4.17.15",
+    "stylus": "^0.54.7",
+    "vue": "^2.6.10",
+    "vue-i18n": "^8.15.1"
+  },
+  "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^23.6.0",
+    "chalk": "^2.4.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fs-extra": "^8.0.1",
+    "lerna": "^3.15.0",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-i18n": "^0.6.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "bugs": "https://github.com/creativecommons/fonts/issues/",
+  "homepage": "https://creativecommons.github.io/cc-fonts/",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "fonts",
+    "web fonts",
+    "library"
+  ],
+  "license": "MIT",
+  "repository": "github:creativecommons/fonts",
+  "verboseName": "Fonts"
+}

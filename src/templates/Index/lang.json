@@ -1,0 +1,54 @@
+{
+  "en": {
+    "definition":  {
+      "noun": "noun",
+      "personality": "Typefaces that lend personality to the web facing {creativecommons}"
+    },
+    "links": {
+      "github": "GitHub"
+    },
+    "communication": {
+      "quote": "When you are everywhere, you are nowhere.<br/>When you are somewhere, you are everywhere.",
+      "rumi": "Rumi",
+      "ie": "That is to say all work is done on GitHub."
+    },
+    "contacts": {
+      "report": "Report bug",
+      "request": "Request feature"
+    },
+    "panel": {
+      "credits": "Credits",
+      "builtusing": "Built using {0}.",
+      "iconsby": "Icons by {0}.",
+      "deploysby": "Deploys by {0}.",
+      "fa": "Font Awesome",
+      "netlify": "Netlify"
+    }
+  },
+  "hi": {
+    "definition": {
+      "noun": "संज्ञा",
+      "personality": "वेब का सामना करने वाले {creativecommons} को व्यक्तित्व देने वाली लिपियाँ"
+    },
+    "links": {
+      "github": "गिटहब"
+    },
+    "communication": {
+      "quote": "जब आप हर जगह होते हैं, तो आप कहीं नहीं होते हैं।<br/>जब आप कहीं होते हैं, तो आप हर जगह होते हैं।",
+      "rumi":  "रूमी",
+      "ie": "कहने का तात्पर्य यह है कि सारा काम गिटहब पर होता है।"
+    },
+    "contacts": {
+      "report": "बग रिपोर्ट करें",
+      "request": "सुविधा का अनुरोध करें"
+    },
+    "panel": {
+      "credits": "श्रेय",
+      "builtusing": "{0} का उपयोग कर बनाया गया।",
+      "iconsby": "{0} द्वारा चिह्न।",
+      "deploysby": "{0} द्वारा तैनात।",
+      "fa": "फॉन्ट औसम",
+      "netlify": "नेटलिफ़ी"
+    }
+  }
+}
