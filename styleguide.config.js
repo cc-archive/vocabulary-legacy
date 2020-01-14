@@ -82,10 +82,6 @@ module.exports = {
       }
     }
   },
-  editorConfig: {
-    theme: 'material',
-    lineNumbers: true
-  },
 
   // Additional dependencies
   require: [
