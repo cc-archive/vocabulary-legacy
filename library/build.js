@@ -7,7 +7,7 @@ const variables = require('./variables')
 
 const componentsRegistry = require('./components.json')
 
-const families = ['elements', 'layouts', 'patterns', 'templates']
+const families = ['elements', 'layouts', 'patterns']
 
 console.log(
   chalk.blue.inverse(`● Bundling ${variables.verboseName} library\n`)
@@ -87,8 +87,7 @@ function copySources (directory) {
     'index.styl',
     'root.styl',
     'styles',
-    ...families.filter(family => family !== 'templates'),
-    'templates/Index.styl'
+    ...families
   ]
   put(files, variables.srcDir, path.join(directory, 'styl'))
 

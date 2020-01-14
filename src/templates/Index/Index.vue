@@ -1,7 +1,7 @@
 <template>
   <div class="vocab index">
     <GitHubCorner
-      :repo="repoHref"
+      :repo="repoSlug"
       position="absolute"/>
 
     <main>
@@ -118,6 +118,7 @@
     Locale,
     Quote
   } from '@creativecommons/vue-vocabulary'
+
   import '@/index.styl'
 
   /**
@@ -144,7 +145,8 @@
       const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
       const vueLibraryHref = 'https://creativecommons.github.io/cc-vue-vocabulary'
 
-      const repoHref = 'https://github.com/creativecommons/vocabulary'
+      const repoSlug = 'creativecommons/vocabulary'
+      const repoHref = `https://github.com/${repoSlug}`
 
       let links = [
         {
@@ -155,16 +157,17 @@
       let contacts = [
         {
           key: 'contacts.report',
-          href: 'https://github.com/creativecommons/vocabulary/issues/new?labels=improvement%3A+bug&template=bug_report.md&title='
+          href: `${repoHref}/issues/new?labels=improvement%3Abug&template=bug_report.md&title=`
         },
         {
           key: 'contacts.request',
-          href: 'https://github.com/creativecommons/vocabulary/issues/new?labels=improvement%3A+feature&template=feature_request.md&title='
+          href: `${repoHref}/issues/new?labels=improvement%3Afeature&template=feature_request.md&title=`
         }
       ]
       return {
         storybookHref,
         baseLibraryHref,
+        repoSlug,
         repoHref,
         vueLibraryHref,
         links,
@@ -173,6 +176,9 @@
     }
   }
 </script>
+
+<style lang="stylus" src="./Index.styl">
+</style>
 
 <i18n src="./lang.json">
 </i18n>
