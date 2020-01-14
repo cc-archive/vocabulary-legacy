@@ -1,6 +1,6 @@
 export default { title: 'Elements|Button' }
 
-export const Button = () => '<button class="vocab button big">Button</button>'
+export const Button = () => '<button class="vocab button">Button</button>'
 
 export const BigPrimary = () => '<button class="vocab button primary big">Button</button>'
 
