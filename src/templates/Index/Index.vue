@@ -1,7 +1,7 @@
 <template>
   <div class="vocab index">
     <GitHubCorner
-      :repo="repoHref"
+      :repo="repoSlug"
       position="absolute"/>
 
     <main>
@@ -150,7 +150,8 @@
       const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
       const vueLibraryHref = 'https://creativecommons.github.io/cc-vue-vocabulary/'
 
-      const repoHref = 'https://github.com/creativecommons/vue-vocabulary'
+      const repoSlug = 'creativecommons/vue-vocabulary'
+      const repoHref = `https://github.com/${repoSlug}`
 
       let links = [
         {
@@ -177,6 +178,7 @@
         storybookHref,
         baseLibraryHref,
         vueLibraryHref,
+        repoSlug,
         repoHref,
         links,
         contacts
