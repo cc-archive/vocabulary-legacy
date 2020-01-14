@@ -3,13 +3,22 @@ import Spaces from '@/tokens/Spaces/Spaces'
 export default { title: 'Tokens|Spaces' }
 
 export const remBased = () => ({
-  render: (h) => <Spaces category="rem"/>
+  components: { Spaces },
+  template: `
+    <Spaces category="rem"/>
+  `
 })
 
 export const emBased = () => ({
-  render: (h) => <Spaces category="em"/>
+  components: { Spaces },
+  template: `
+    <Spaces category="em"/>
+  `
 })
 
 export const special = () => ({
-  render: (h) => <Spaces category="special"/>
+  components: { Spaces },
+  template: `
+    <Spaces category="special"/>
+  `
 })

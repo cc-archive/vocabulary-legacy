@@ -3,21 +3,36 @@ import Colors from '@/tokens/Colors/Colors'
 export default { title: 'Tokens|Colors' }
 
 export const brands = () => ({
-  render: (h) => <Colors category="brand"/>
+  components: { Colors },
+  template: `
+    <Colors category="brand"/>
+  `
 })
 
 export const functions = () => ({
-  render: (h) => <Colors category="function"/>
+  components: { Colors },
+  template: `
+    <Colors category="function"/>
+  `
 })
 
 export const tones = () => ({
-  render: (h) => <Colors category="tone"/>
+  components: { Colors },
+  template: `
+    <Colors category="tone"/>
+  `
 })
 
 export const contexts = () => ({
-  render: (h) => <Colors category="context"/>
+  components: { Colors },
+  template: `
+    <Colors category="context"/>
+  `
 })
 
 export const overlays = () => ({
-  render: (h) => <Colors category="overlay"/>
+  components: { Colors },
+  template: `
+    <Colors category="overlay"/>
+  `
 })
