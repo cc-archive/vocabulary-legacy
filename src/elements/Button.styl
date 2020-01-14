@@ -8,152 +8,56 @@
 @import "../styles/sizes.styl"
 
 .vocab.button
-  // Color palette
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: $color-pure-white;
+  border: 2px solid $color-grey-6;
+  font-weight: 600;
+  font-family: Roboto Condensed;
+  color: $color-grey-6;
+  
+  &.primary
+    background-color: $color-tomato
+    color: $color-pure-white
+    border: none;
+  
+  &.action
+    background-color: $color-forest
+    color: $color-pure-white
+    border: none;
 
-  --button-primary $color-tone-black
+  &.tag-white
+    border-radius: 15.5px;
+    color: #B0B0B0;
+    border: 1.5px solid #D8D8D8;
+    text-transform: none;
+    height: 1.8rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
 
-  &.inverted
-    --button-primary $color-tone-white
+  &.tag-gray
+    border-radius: 15.5px;
+    color: $color-pure-white;
+    background: #B0B0B0;
+    border: none;
+    text-transform: none;
+    height: 1.8rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
 
-  colors('--button-primary')
-  brands('--button-primary')
-  tones('--button-primary')
-  indications('--button-primary', 9)
 
-  --button-secondary $color-tone-white
+  &.big
+    height: 5rem;
+    font-size: 1.75rem;
+    padding: 1.5rem 2.5rem;
 
-  &.inverted
-    --button-secondary $color-tone-black
+  &.medium
+    height: 3.9rem;
+    font-size: 1.4rem;
+    padding: 1rem 2.5rem;
 
-  --button-overlay $color-overlay-white-low
-
-  &.inverted
-    --button-overlay $color-overlay-black-low
-
-  // Color
-
-  --button-background-color var(--button-primary)
-  --button-text-color var(--button-secondary)
-  --button-border-color var(--button-primary)
-  --button-background-overlay linear-gradient(
-    var(--button-overlay),
-    var(--button-overlay)
-  )
-
-  &.slightly-simple
-    --button-background-color transparent
-    --button-text-color var(--button-primary)
-
-    &:hover
-      --button-background-color var(--button-primary)
-      --button-text-color var(--button-secondary)
-
-  &.extremely-simple
-    --button-border-color transparent
-    --button-background-color transparent
-    --button-text-color var(--button-primary)
-
-  &.call-to-action
-    --button-border-color transparent
-
-  // Cursor
-
-  --button-cursor pointer
-
-  &.disabled
-    --button-cursor not-allowed
-
-  // Border widths
-
-  --button-top-border-width 2px
-  --button-right-border-width 2px
-  --button-bottom-border-width 2px
-  --button-left-border-width 2px
-
-  &.left-joined,
-  &.both-joined
-    --button-left-border-width 0px
-
-  &.right-joined,
-  &.both-joined
-    --button-right-border-width 0px
-
-  // Border radius
-
-  --button-border-radius $radius-zero
-
-  &.slightly-rounded
-    --button-border-radius $rradius-normal
-
-  &.completely-rounded
-    --button-border-radius $radius-pill
-
-  // Rules
-
-  display inline-flex
-  flex-direction row
-  align-items center
-
-  color var(--button-text-color)
-
-  font-reset()
-  sizes('font-size')
-  font-weight $weight-bold
-
-  white-space nowrap
-
-  cursor var(--button-cursor)
-
-  background-color var(--button-background-color)
-
-  padding $space-zero
-
-  border-top-width var(--button-top-border-width)
-  border-right-width var(--button-right-border-width)
-  border-bottom-width var(--button-bottom-border-width)
-  border-left-width var(--button-left-border-width)
-  border-style solid
-  border-color var(--button-border-color)
-  border-radius var(--button-border-radius)
-
-  transition-property color, background-color, border-color
-  transition-duration $duration-shortest
-
-  // Children
-
-  & > .content
-    padding $space-normal $space-large
-
-    &.has-addons
-      border-left 1px solid var(--button-border-color)
-
-  & > .addons
-    &.padded
-      padding $space-normal
-
-  // States
-
-  &:hover
-    background-image var(--button-background-overlay)
-
-  &:active
-    background-image none
-
-  // Styles
-
-  &.disabled
-    opacity 0.2
-
-    text-decoration line-through
-    background-image none
-
-  &.call-to-action
-    padding-right $space-large
-
-    clip-path polygon(
-      0% 0%,
-      calc(100% - 1em) 0%,
-      100% 50%,
-      calc(100% - 1em) 100%,
-      0% 100%
-    )
+  &.small
+    height: 2.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
