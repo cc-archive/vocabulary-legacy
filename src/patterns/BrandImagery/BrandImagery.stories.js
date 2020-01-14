@@ -30,3 +30,12 @@ export const vocabulary = () => ({
     </div>
   `
 })
+
+export const fonts = () => ({
+  components: { BrandImagery },
+  template: `
+    <div>
+      <BrandImagery brand="fonts" type="wordmark"/>
+    </div>
+  `
+})
