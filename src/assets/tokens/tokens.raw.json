@@ -210,13 +210,6 @@
       "originalValue": "#ffa8a8",
       "name": "color_negative_3"
     },
-    "color_turquoise": {
-      "type": "color",
-      "value": "rgb(5, 181, 218)",
-      "category": "color-group-brand-creative-commons",
-      "originalValue": "#05b5da",
-      "name": "color_turquoise"
-    },
     "color_grape_5": {
       "type": "color",
       "value": "rgb(204, 93, 232)",
@@ -428,6 +421,13 @@
       "category": "color-group-function-indigo",
       "originalValue": "#1864ab",
       "name": "color_indigo_9"
+    },
+    "color_turquoise": {
+      "type": "color",
+      "value": "rgb(5, 181, 218)",
+      "category": "color-group-brand-creative-commons",
+      "originalValue": "#05b5da",
+      "name": "color_turquoise"
     },
     "color_pink_6": {
       "type": "color",
