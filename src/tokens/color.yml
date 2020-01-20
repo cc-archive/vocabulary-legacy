@@ -59,23 +59,5 @@ props:
     value: '#74b816'
     category: color-group-context
 
-  color_white_low:
-    value: 'rgba(255, 255, 255, 0.15)'
-    category: color-group-overlay-white
-    comment: 15% opaque shade of white
-  color_white_high:
-    value: 'rgba(255, 255, 255, 0.85)'
-    category: color-group-overlay-white
-    comment: 85% opaque shade of white
-
-  color_black_low:
-    value: 'rgba(0, 0, 0, 0.15)'
-    category: color-group-overlay-black
-    comment: 15% opaque shade of black
-  color_black_high:
-    value: 'rgba(0, 0, 0, 0.85)'
-    category: color-group-overlay-black
-    comment: 85% opaque shade of black
-
 global:
   type: color
