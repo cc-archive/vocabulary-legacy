@@ -49,98 +49,15 @@ props:
     value: '#F5F5F5'
     category: color-group-gray-scale
 
-  color_negative_0:
-    value: '#fff5f5'
-    category: color-group-context-negative
-  color_negative_1:
-    value: '#ffe3e3'
-    category: color-group-context-negative
-  color_negative_2:
-    value: '#ffc9c9'
-    category: color-group-context-negative
-  color_negative_3:
-    value: '#ffa8a8'
-    category: color-group-context-negative
-  color_negative_4:
-    value: '#ff8787'
-    category: color-group-context-negative
-  color_negative_5:
-    value: '#ff6b6b'
-    category: color-group-context-negative
-  color_negative_6:
-    value: '#fa5252'
-    category: color-group-context-negative
-  color_negative_7:
+  color_error:
     value: '#f03e3e'
-    category: color-group-context-negative
-  color_negative_8:
-    value: '#e03131'
-    category: color-group-context-negative
-  color_negative_9:
-    value: '#c92a2a'
-    category: color-group-context-negative
-
-  color_probably_0:
-    value: '#fff9db'
-    category: color-group-context-probably
-  color_probably_1:
-    value: '#fff3bf'
-    category: color-group-context-probably
-  color_probably_2:
-    value: '#ffec99'
-    category: color-group-context-probably
-  color_probably_3:
-    value: '#ffe066'
-    category: color-group-context-probably
-  color_probably_4:
-    value: '#ffd43b'
-    category: color-group-context-probably
-  color_probably_5:
-    value: '#fcc419'
-    category: color-group-context-probably
-  color_probably_6:
-    value: '#fab005'
-    category: color-group-context-probably
-  color_probably_7:
+    category: color-group-context
+  color_warning:
     value: '#f59f00'
-    category: color-group-context-probably
-  color_probably_8:
-    value: '#f08c00'
-    category: color-group-context-probably
-  color_probably_9:
-    value: '#e67700'
-    category: color-group-context-probably
-
-  color_positive_0:
-    value: '#f4fce3'
-    category: color-group-context-positive
-  color_positive_1:
-    value: '#e9fac8'
-    category: color-group-context-positive
-  color_positive_2:
-    value: '#d8f5a2'
-    category: color-group-context-positive
-  color_positive_3:
-    value: '#c0eb75'
-    category: color-group-context-positive
-  color_positive_4:
-    value: '#a9e34b'
-    category: color-group-context-positive
-  color_positive_5:
-    value: '#94d82d'
-    category: color-group-context-positive
-  color_positive_6:
-    value: '#82c91e'
-    category: color-group-context-positive
-  color_positive_7:
+    category: color-group-context
+  color_success:
     value: '#74b816'
-    category: color-group-context-positive
-  color_positive_8:
-    value: '#66a80f'
-    category: color-group-context-positive
-  color_positive_9:
-    value: '#5c940d'
-    category: color-group-context-positive
+    category: color-group-context
 
   color_white_low:
     value: 'rgba(255, 255, 255, 0.15)'
