@@ -27,11 +27,11 @@ props:
     value: '#05b5da'
     category: color-group-brand-creative-commons
 
-  color_pure_white:
+  color_white:
     value: '#ffffff'
     category: color-group-tone-pure
     comment: Pure white color
-  color_pure_black:
+  color_black:
     value: '#000000'
     category: color-group-tone-pure
     comment: Pure black color
