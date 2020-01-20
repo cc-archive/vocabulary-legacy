@@ -17,9 +17,6 @@ props:
   color_blue:
     value: '#3c5c99'
     category: color-group-brand-creative-commons
-  color_slate:
-    value: '#333333'
-    category: color-group-brand-creative-commons
   color_orange:
     value: '#fb7729'
     category: color-group-brand-creative-commons
@@ -36,36 +33,21 @@ props:
     category: color-group-tone-pure
     comment: Pure black color
 
-  color_grey_0:
-    value: '#f8f9fa'
-    category: color-group-tone-grey
-  color_grey_1:
-    value: '#f1f3f5'
-    category: color-group-tone-grey
-  color_grey_2:
-    value: '#e9ecef'
-    category: color-group-tone-grey
-  color_grey_3:
-    value: '#dee2e6'
-    category: color-group-tone-grey
-  color_grey_4:
-    value: '#ced4da'
-    category: color-group-tone-grey
-  color_grey_5:
-    value: '#adb5bd'
-    category: color-group-tone-grey
-  color_grey_6:
-    value: '#868e96'
-    category: color-group-tone-grey
-  color_grey_7:
-    value: '#495057'
-    category: color-group-tone-grey
-  color_grey_8:
-    value: '#343a40'
-    category: color-group-tone-grey
-  color_grey_9:
-    value: '#212529'
-    category: color-group-tone-grey
+  color_dark_slate_gray:
+    value: '#333333'
+    category: color-group-gray-scale
+  color_light_slate_gray:
+    value: '#787878'
+    category: color-group-gray-scale
+  color_gray:
+    value: '#B0B0B0'
+    category: color-group-gray-scale
+  color_light_gray:
+    value: '#D8D8D8'
+    category: color-group-gray-scale
+  color_lighter_gray:
+    value: '#F5F5F5'
+    category: color-group-gray-scale
 
   color_negative_0:
     value: '#fff5f5'
