@@ -26,6 +26,15 @@ props:
   color_dark_slate_gray:
     value: '#333333'
     category: color-group-brand-creative-commons
+  color_tomato_brighter:
+    value: '#FF6933'
+    category: color-group-brand-creative-commons
+  color_gold_brighter:
+    value: '#F5D400'
+    category: color-group-brand-creative-commons
+  color_forest_brighter:
+    value: '#00B850'
+    category: color-group-brand-creative-commons
 
   color_white:
     value: '#ffffff'
