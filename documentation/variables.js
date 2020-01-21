@@ -10,7 +10,6 @@ const srcDir = path.resolve(rootDir, 'src')
 const docsDir = path.resolve(rootDir, 'docs')
 const storybookDir = path.resolve(docsDir, 'storybook')
 
-
 module.exports = {
   verboseName,
   srcDir,
