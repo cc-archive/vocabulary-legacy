@@ -23,20 +23,20 @@ props:
   color_turquoise:
     value: '#05b5da'
     category: color-group-brand-creative-commons
+  color_dark_slate_gray:
+    value: '#333333'
+    category: color-group-brand-creative-commons
 
   color_white:
     value: '#ffffff'
-    category: color-group-tone-pure
+    category: color-group-black-white
     comment: Pure white color
   color_black:
     value: '#000000'
-    category: color-group-tone-pure
+    category: color-group-black-white
     comment: Pure black color
 
-  color_dark_slate_gray:
-    value: '#333333'
-    category: color-group-gray-scale
-  color_light_slate_gray:
+  color_dark_gray:
     value: '#787878'
     category: color-group-gray-scale
   color_gray:
