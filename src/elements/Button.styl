@@ -1,5 +1,4 @@
 @import "../assets/tokens/tokens.styl"
-
 @import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/tones.styl"
@@ -8,152 +7,83 @@
 @import "../styles/sizes.styl"
 
 .vocab.button
-  // Color palette
+  text-align: center;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  background-color: $color-pure-white;
+  border: 0.125rem solid $color-grey-6;
+  font-weight: 600;
+  font-family: inherit;
+  color: $color-grey-6;
+  font-size: $size-big;
+  padding: 0.5rem 1rem;
 
-  --button-primary $color-tone-black
+  &.tomato
+    background-color: $color-tomato;
+    border: none;
+    color: $color-pure-white;
 
-  &.inverted
-    --button-primary $color-tone-white
+  &.forest
+    background-color: $color-forest;
+    border: none;
+    color: $color-pure-white;
 
-  colors('--button-primary')
-  brands('--button-primary')
-  tones('--button-primary')
-  indications('--button-primary', 9)
+  &.gold
+    background-color: $color-gold
+    border: none;
+    color: $color-pure-black;
 
-  --button-secondary $color-tone-white
+  &.orange
+    background-color: $color-orange;
+    border: none;
+    color: $color-pure-white;
 
-  &.inverted
-    --button-secondary $color-tone-black
+  &.turquoise
+    background-color: $color-turquoise;
+    border: none;
+    color: $color-pure-black;
 
-  --button-overlay $color-overlay-white-low
+  &.blue
+    background-color: $color-blue;
+    border: none;
+    color: $color-pure-white;
+  
+  &.primary
+    background-color: $color-tomato
+    color: $color-pure-white
+    border: none;
+  
+  &.secondary
+    background-color: $color-forest
+    color: $color-pure-white
+    border: none;
 
-  &.inverted
-    --button-overlay $color-overlay-black-low
+  &.tag-white
+    border-radius: 1rem;
+    color: $color-grey-5;
+    border: 0.125rem solid $color-grey-3;
+    text-transform: none;
+    font-size: $size-small;
+    padding: 0.3rem 1rem;
 
-  // Color
+  &.tag-gray
+    border-radius: 1rem;
+    color: $color-pure-white;
+    background: $color-grey-5;
+    border: none;
+    text-transform: none;
+    font-size: $size-small;
+    padding: 0.3rem 1rem;
 
-  --button-background-color var(--button-primary)
-  --button-text-color var(--button-secondary)
-  --button-border-color var(--button-primary)
-  --button-background-overlay linear-gradient(
-    var(--button-overlay),
-    var(--button-overlay)
-  )
+  &.donate
+    background-color: $color-gold
+    color: $color-pure-black;
+    border: none;
 
-  &.slightly-simple
-    --button-background-color transparent
-    --button-text-color var(--button-primary)
+  &.big
+    font-size: $size-large;
+    padding: 1.5rem 2.5rem;
 
-    &:hover
-      --button-background-color var(--button-primary)
-      --button-text-color var(--button-secondary)
-
-  &.extremely-simple
-    --button-border-color transparent
-    --button-background-color transparent
-    --button-text-color var(--button-primary)
-
-  &.call-to-action
-    --button-border-color transparent
-
-  // Cursor
-
-  --button-cursor pointer
-
-  &.disabled
-    --button-cursor not-allowed
-
-  // Border widths
-
-  --button-top-border-width 2px
-  --button-right-border-width 2px
-  --button-bottom-border-width 2px
-  --button-left-border-width 2px
-
-  &.left-joined,
-  &.both-joined
-    --button-left-border-width 0px
-
-  &.right-joined,
-  &.both-joined
-    --button-right-border-width 0px
-
-  // Border radius
-
-  --button-border-radius $radius-zero
-
-  &.slightly-rounded
-    --button-border-radius $rradius-normal
-
-  &.completely-rounded
-    --button-border-radius $radius-pill
-
-  // Rules
-
-  display inline-flex
-  flex-direction row
-  align-items center
-
-  color var(--button-text-color)
-
-  font-reset()
-  sizes('font-size')
-  font-weight $weight-bold
-
-  white-space nowrap
-
-  cursor var(--button-cursor)
-
-  background-color var(--button-background-color)
-
-  padding $space-zero
-
-  border-top-width var(--button-top-border-width)
-  border-right-width var(--button-right-border-width)
-  border-bottom-width var(--button-bottom-border-width)
-  border-left-width var(--button-left-border-width)
-  border-style solid
-  border-color var(--button-border-color)
-  border-radius var(--button-border-radius)
-
-  transition-property color, background-color, border-color
-  transition-duration $duration-shortest
-
-  // Children
-
-  & > .content
-    padding $space-normal $space-large
-
-    &.has-addons
-      border-left 1px solid var(--button-border-color)
-
-  & > .addons
-    &.padded
-      padding $space-normal
-
-  // States
-
-  &:hover
-    background-image var(--button-background-overlay)
-
-  &:active
-    background-image none
-
-  // Styles
-
-  &.disabled
-    opacity 0.2
-
-    text-decoration line-through
-    background-image none
-
-  &.call-to-action
-    padding-right $space-large
-
-    clip-path polygon(
-      0% 0%,
-      calc(100% - 1em) 0%,
-      100% 50%,
-      calc(100% - 1em) 100%,
-      0% 100%
-    )
+  &.medium
+    font-size: $size-big;
+    padding: 1rem 2.5rem;
