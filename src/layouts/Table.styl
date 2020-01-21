@@ -33,13 +33,6 @@
   &.inverted
     --table-quinary $color-gray
 
-  --table-overlay-low $color-white-low
-  --table-overlay-high $color-white-high
-
-  &.inverted
-    --table-overlay-low $color-black-low
-    --table-overlay-high $color-black-high
-
   // Color
 
   --table-border-color var(--table-primary)
@@ -51,17 +44,9 @@
   --table-body-text-color var(--table-tertiary)
 
   --table-body-stripe-background-color var(--table-primary)
-  --table-body-stripe-background-overlay linear-gradient(
-    var(--table-overlay-high),
-    var(--table-overlay-high)
-  )
 
   --table-body-following-text-color var(--table-secondary)
   --table-body-following-background-color var(--table-primary)
-  --table-body-following-background-overlay linear-gradient(
-    var(--table-overlay-low),
-    var(--table-overlay-low)
-  )
 
   --table-foot-background-color var(--table-quaternary)
   --table-foot-text-color var(--table-tertiary)
@@ -208,14 +193,12 @@
     & > .body
       tr:nth-child(even)
         background-color var(--table-body-stripe-background-color)
-        background-image var(--table-body-stripe-background-overlay)
 
   &.following
     & > .body
       tr:hover
         color var(--table-body-following-text-color)
         background-color var(--table-body-following-background-color)
-        background-image var(--table-body-following-background-overlay)
 
   &.compact
     width auto
