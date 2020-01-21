@@ -28,6 +28,6 @@ export default create({
 
   // Branding
   brandTitle: 'Vocabulary',
-  brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary',
+  brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
   brandImage: 'https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true'
 })
