@@ -56,7 +56,7 @@ props:
     value: '#f59f00'
     category: color-group-context
   color_success:
-    value: '#74b816'
+    value: '#E0F2BF'
     category: color-group-context
 
 global:
