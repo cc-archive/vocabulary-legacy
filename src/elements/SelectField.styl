@@ -23,20 +23,11 @@
   &.inverted
     --select-field-secondary $color-black
 
-  --select-field-overlay $color-overlay-white-low
-
-  &.inverted
-    --select-field-overlay $color-overlay-black-low
-
   // Color
 
   --select-field-background-color var(--select-field-primary)
   --select-field-text-color var(--select-field-secondary)
   --select-field-border-color var(--select-field-primary)
-  --select-field-background-overlay linear-gradient(
-    var(--select-field-overlay),
-    var(--select-field-overlay)
-  )
 
   &.slightly-simple,
   &.extremely-simple
@@ -157,9 +148,6 @@
         transform scale(1)
 
   // States
-
-  &:hover
-    background-image var(--select-field-background-overlay)
 
   &:focus-within
     background-image none

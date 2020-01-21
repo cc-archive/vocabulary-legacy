@@ -31,11 +31,6 @@
   &.infused
     --input-field-tertiary var(--input-field-primary)
 
-  --input-field-overlay $color-overlay-white-low
-
-  &.inverted
-    --input-field-overlay $color-overlay-black-low
-
   // Color
 
   --input-field-background-color var(--input-field-secondary)
@@ -44,10 +39,6 @@
 
   --input-field-addons-background-color var(--input-field-primary)
   --input-field-addons-text-color var(--input-field-secondary)
-  --input-field-addons-background-overlay linear-gradient(
-    var(--input-field-overlay),
-    var(--input-field-overlay)
-  )
 
   --input-field-border-color var(--input-field-primary)
 
@@ -238,10 +229,6 @@
 
       border-top-left-radius var(--input-field-border-radius)
       border-bottom-left-radius var(--input-field-border-radius)
-
-  &:focus-within
-    .addons
-      background-image var(--input-field-addons-background-overlay)
 
   &.disabled
     opacity 0.2
