@@ -29,11 +29,11 @@ props:
 
   color_white:
     value: '#ffffff'
-    category: color-group-black-white
+    category: color-group-binary
     comment: Pure white color
   color_black:
     value: '#000000'
-    category: color-group-black-white
+    category: color-group-binary
     comment: Pure black color
 
   color_dark_gray:
