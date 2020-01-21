@@ -25,5 +25,10 @@ module.exports = {
       .rule('svg')
       .use('url-loader')
       .loader('url-loader')
+
+    config.module
+      .rule('eslint')
+      .exclude
+      .add(/storybook\/generated-entry\.js/)
   }
 }

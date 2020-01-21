@@ -11,21 +11,21 @@ export default { title: 'Elements|Heading' }
 export const branded = () => ({
   mixins: [ Branded ],
   template: `
-    <h6 :class="\`vocab heading $\{brand}-branded\`">Vocabulary</Heading>
+    <h6 :class="\`vocab heading $\{brand}-branded\`">Vocabulary</h6>
   `
 })
 
 export const colored = () => ({
   mixins: [ Colored ],
   template: `
-    <h6 :class="\`vocab heading $\{color}-colored s$\{shade}-shaded\`">Vocabulary</Heading>
+    <h6 :class="\`vocab heading $\{color}-colored s$\{shade}-shaded\`">Vocabulary</h6>
   `
 })
 
 export const indicating = () => ({
   mixins: [ Indicating ],
   template: `
-    <h6 :class="\`vocab heading $\{indication}-indicating\`">Vocabulary</Heading>
+    <h6 :class="\`vocab heading $\{indication}-indicating\`">Vocabulary</h6>
   `
 })
 

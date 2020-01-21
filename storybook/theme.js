@@ -1,6 +1,6 @@
-import { create } from '@storybook/theming'
+import { create } from '@storybook/theming/create'
 
-import tokens from '@/assets/tokens/tokens.raw'
+import tokens from '../src/assets/tokens/tokens.raw'
 
 export default create({
   // Inherit
