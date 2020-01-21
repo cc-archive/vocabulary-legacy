@@ -53,7 +53,7 @@ props:
     value: '#FFC9C9'
     category: color-group-context
   color_warning:
-    value: '#f59f00'
+    value: '#FAECBC'
     category: color-group-context
   color_success:
     value: '#E0F2BF'
