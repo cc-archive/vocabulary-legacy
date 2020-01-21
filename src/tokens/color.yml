@@ -50,7 +50,7 @@ props:
     category: color-group-gray-scale
 
   color_error:
-    value: '#f03e3e'
+    value: '#FFC9C9'
     category: color-group-context
   color_warning:
     value: '#f59f00'
