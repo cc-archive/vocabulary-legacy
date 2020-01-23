@@ -1,6 +1,5 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 @import "../styles/tones.styl"
@@ -10,33 +9,27 @@
 .vocab.input-field
   // Color palette
 
-  --input-field-primary $color-tone-black
+  --input-field-primary $color-black
 
   &.inverted
-    --input-field-primary $color-tone-white
+    --input-field-primary $color-white
 
-  colors('--input-field-primary')
   brands('--input-field-primary')
   indications('--input-field-primary', 9)
   tones('--input-field-primary')
 
-  --input-field-secondary $color-tone-white
+  --input-field-secondary $color-white
 
   &.inverted
-    --input-field-secondary $color-tone-black
+    --input-field-secondary $color-black
 
-  --input-field-tertiary $color-tone-black
+  --input-field-tertiary $color-black
 
   &.inverted
-    --input-field-tertiary $color-tone-white
+    --input-field-tertiary $color-white
 
   &.infused
     --input-field-tertiary var(--input-field-primary)
-
-  --input-field-overlay $color-overlay-white-low
-
-  &.inverted
-    --input-field-overlay $color-overlay-black-low
 
   // Color
 
@@ -46,10 +39,6 @@
 
   --input-field-addons-background-color var(--input-field-primary)
   --input-field-addons-text-color var(--input-field-secondary)
-  --input-field-addons-background-overlay linear-gradient(
-    var(--input-field-overlay),
-    var(--input-field-overlay)
-  )
 
   --input-field-border-color var(--input-field-primary)
 
@@ -161,9 +150,8 @@
     // States
 
     &:invalid
-      color $color-negative-9
 
-      background-color $color-negative-2
+      background-color $color-error
 
       box-shadow none
 
@@ -241,10 +229,6 @@
 
       border-top-left-radius var(--input-field-border-radius)
       border-bottom-left-radius var(--input-field-border-radius)
-
-  &:focus-within
-    .addons
-      background-image var(--input-field-addons-background-overlay)
 
   &.disabled
     opacity 0.2

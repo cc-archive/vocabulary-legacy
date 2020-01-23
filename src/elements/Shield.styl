@@ -1,6 +1,5 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 @import "../styles/sizes.styl"
@@ -8,16 +7,15 @@
 .vocab.shield
   // Color palette
 
-  --shield-primary $color-tone-grey-dark
-  --shield-secondary $color-tone-near-black
-  --shield-tertiary $color-tone-white
+  --shield-primary $color-light-slate-gray
+  --shield-secondary $color-dark-slate-gray
+  --shield-tertiary $color-white
 
   &.inverted
-    --shield-primary $color-tone-grey-light
-    --shield-secondary $color-tone-near-white
-    --shield-tertiary $color-tone-black
+    --shield-primary $color-gray
+    --shield-secondary $color-lighter-gray
+    --shield-tertiary $color-black
 
-  colors('--shield-primary')
   brands('--shield-primary')
   indications('--shield-primary', 9)
 

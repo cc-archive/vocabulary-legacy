@@ -1,38 +1,36 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 
 .vocab.section
   // Color palette
-  --section-primary $color-tone-grey-light
+  --section-primary $color-gray
 
   &.inverted
-    --section-primary $color-tone-grey-dark
+    --section-primary $color-light-slate-gray
 
-  colors('--section-primary')
   brands('--section-primary')
   indications('--section-primary', 9)
 
-  --section-secondary $color-tone-white
+  --section-secondary $color-white
 
   &.inverted
-    --section-secondary $color-tone-black
+    --section-secondary $color-black
 
   indications('--section-secondary', 1)
 
-  --section-tertiary $color-tone-black
+  --section-tertiary $color-black
 
   &.inverted
-    --section-tertiary $color-tone-white
+    --section-tertiary $color-white
 
   indications('--section-tertiary', 9)
 
-  --section-shadow $color-tone-grey-lighter
+  --section-shadow $color-light-gray
 
   &.inverted
-    --section-shadow $color-tone-grey-darker
+    --section-shadow $color-dark-slate-gray
 
   // Color
 

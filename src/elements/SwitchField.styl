@@ -1,6 +1,5 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 @import "../styles/font-reset.styl"
@@ -9,36 +8,35 @@
 .vocab.switch-field
   // Color palette
 
-  --switch-field-primary $color-tone-black
+  --switch-field-primary $color-black
 
   &.inverted
-    --switch-field-primary $color-tone-white
+    --switch-field-primary $color-white
 
-  colors('--switch-field-primary')
   brands('--switch-field-primary')
   indications('--switch-field-primary', 9)
 
   &.conditional-indicating.conditional-indicating
-    --switch-field-primary $color-positive-9
+    --switch-field-primary $color-success
 
   &.anticonditional-indicating.anticonditional-indicating
-    --switch-field-primary $color-negative-9
+    --switch-field-primary $color-error
 
-  --switch-field-secondary $color-tone-grey-dark
+  --switch-field-secondary $color-light-slate-gray
 
   &.inverted
-    --switch-field-secondary $color-tone-grey-light
+    --switch-field-secondary $color-gray
 
   &.conditional-indicating.conditional-indicating
-    --switch-field-secondary $color-negative-9
+    --switch-field-secondary $color-error
 
   &.anticonditional-indicating.anticonditional-indicating
-    --switch-field-secondary $color-positive-9
+    --switch-field-secondary $color-success
 
-  --switch-field-tertiary $color-tone-white
+  --switch-field-tertiary $color-white
 
   &.inverted
-    --switch-field-tertiary $color-tone-black
+    --switch-field-tertiary $color-black
 
   // Color
 

@@ -2,45 +2,36 @@
 
 @import "../styles/media.styl"
 @import "../styles/brands.styl"
-@import "../styles/colors.styl"
 
 .vocab.table
   // Color palette
 
-  --table-primary $color-tone-black
+  --table-primary $color-black
 
   &.inverted
-    --table-primary $color-tone-white
+    --table-primary $color-white
 
   brands('--table-primary')
-  colors('--table-primary')
 
-  --table-secondary $color-tone-white
-
-  &.inverted
-    --table-secondary $color-tone-black
-
-  --table-tertiary $color-tone-black
+  --table-secondary $color-white
 
   &.inverted
-    --table-tertiary $color-tone-white
+    --table-secondary $color-black
 
-  --table-quaternary $color-tone-grey-lighter
-
-  &.inverted
-    --table-quaternary $color-tone-grey-darker
-
-  --table-quinary $color-tone-grey-dark
+  --table-tertiary $color-black
 
   &.inverted
-    --table-quinary $color-tone-grey-light
+    --table-tertiary $color-white
 
-  --table-overlay-low $color-white-low
-  --table-overlay-high $color-white-high
+  --table-quaternary $color-light-gray
 
   &.inverted
-    --table-overlay-low $color-black-low
-    --table-overlay-high $color-black-high
+    --table-quaternary $color-dark-slate-gray
+
+  --table-quinary $color-light-slate-gray
+
+  &.inverted
+    --table-quinary $color-gray
 
   // Color
 
@@ -53,17 +44,9 @@
   --table-body-text-color var(--table-tertiary)
 
   --table-body-stripe-background-color var(--table-primary)
-  --table-body-stripe-background-overlay linear-gradient(
-    var(--table-overlay-high),
-    var(--table-overlay-high)
-  )
 
   --table-body-following-text-color var(--table-secondary)
   --table-body-following-background-color var(--table-primary)
-  --table-body-following-background-overlay linear-gradient(
-    var(--table-overlay-low),
-    var(--table-overlay-low)
-  )
 
   --table-foot-background-color var(--table-quaternary)
   --table-foot-text-color var(--table-tertiary)
@@ -210,14 +193,12 @@
     & > .body
       tr:nth-child(even)
         background-color var(--table-body-stripe-background-color)
-        background-image var(--table-body-stripe-background-overlay)
 
   &.following
     & > .body
       tr:hover
         color var(--table-body-following-text-color)
         background-color var(--table-body-following-background-color)
-        background-image var(--table-body-following-background-overlay)
 
   &.compact
     width auto

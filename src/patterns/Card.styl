@@ -1,26 +1,22 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
-
 .vocab.card
   // Color palette
 
-  --card-primary $color-tone-black
+  --card-primary $color-black
 
   &.inverted
-    --card-primary $color-tone-white
+    --card-primary $color-white
 
-  colors('--card-primary')
-
-  --card-secondary $color-tone-grey-dark
+  --card-secondary $color-light-slate-gray
 
   &.inverted
-    --card-secondary $color-tone-grey-light
+    --card-secondary $color-gray
 
-  --card-tertiary $color-tone-near-white + 50%
+  --card-tertiary $color-lighter-gray + 50%
 
   &.inverted
-    --card-tertiary $color-tone-near-black - 50%
+    --card-tertiary $color-dark-slate-gray - 50%
 
   // Color
 

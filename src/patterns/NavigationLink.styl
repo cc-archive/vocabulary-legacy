@@ -7,11 +7,6 @@
   --navigation-link-text-color var(--navigation-primary)
   --navigation-link-background-color var(--navigation-primary)
 
-  --navigation-link-background-overlay linear-gradient(
-    var(--navigation-overlay),
-    var(--navigation-overlay)
-  )
-
   // Rules
 
   & > .links
@@ -38,6 +33,3 @@
 
       +tablet-portrait-up()
         padding $space-small $space-large
-
-      &:hover
-        background-image var(--navigation-link-background-overlay)

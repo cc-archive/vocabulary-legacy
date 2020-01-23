@@ -1,6 +1,5 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/tones.styl"
 @import "../styles/indications.styl"
@@ -10,35 +9,25 @@
 .vocab.select-field
   // Color palette
 
-  --select-field-primary $color-tone-grey-dark
+  --select-field-primary $color-light-slate-gray
 
   &.inverted
-    --select-field-primary $color-tone-grey-light
+    --select-field-primary $color-gray
 
   brands('--select-field-primary')
-  colors('--select-field-primary')
   tones('--select-field-primary')
   indications('--select-field-primary', 9)
 
-  --select-field-secondary $color-tone-white
+  --select-field-secondary $color-white
 
   &.inverted
-    --select-field-secondary $color-tone-black
-
-  --select-field-overlay $color-overlay-white-low
-
-  &.inverted
-    --select-field-overlay $color-overlay-black-low
+    --select-field-secondary $color-black
 
   // Color
 
   --select-field-background-color var(--select-field-primary)
   --select-field-text-color var(--select-field-secondary)
   --select-field-border-color var(--select-field-primary)
-  --select-field-background-overlay linear-gradient(
-    var(--select-field-overlay),
-    var(--select-field-overlay)
-  )
 
   &.slightly-simple,
   &.extremely-simple
@@ -159,9 +148,6 @@
         transform scale(1)
 
   // States
-
-  &:hover
-    background-image var(--select-field-background-overlay)
 
   &:focus-within
     background-image none
