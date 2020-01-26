@@ -1,5 +1,4 @@
 import Branded from '@/knobs/branded'
-import Colored from '@/knobs/colored'
 import Indicating from '@/knobs/indicating'
 
 import Text from '@/knobs/text'
@@ -12,13 +11,6 @@ export const branded = () => ({
   mixins: [ Branded ],
   template: `
     <h6 :class="\`vocab heading $\{brand}-branded\`">Vocabulary</h6>
-  `
-})
-
-export const colored = () => ({
-  mixins: [ Colored ],
-  template: `
-    <h6 :class="\`vocab heading $\{color}-colored s$\{shade}-shaded\`">Vocabulary</h6>
   `
 })
 

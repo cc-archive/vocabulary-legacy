@@ -1,25 +1,18 @@
 @import "../assets/tokens/tokens.styl"
 
 @import "../styles/brands.styl"
-@import "../styles/colors.styl"
 @import "../styles/media.styl"
 @import "../styles/list.styl"
 
 .vocab.navigation
   // Color palette
 
-  --navigation-primary $color-tone-black
+  --navigation-primary $color-black
 
   &.inverted
-    --navigation-primary $color-tone-white
+    --navigation-primary $color-white
 
   brands('--navigation-primary')
-  colors('--navigation-primary')
-
-  --navigation-overlay $color-overlay-black-low
-
-  &.inverted
-    --navigation-overlay $color-overlay-white-low
 
   // Rules
 

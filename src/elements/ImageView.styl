@@ -6,21 +6,11 @@
 .vocab.image-view
   // Color palette
 
-  --image-view-primary $color-tone-white
-  --image-view-overlay $color-overlay-black-high
+  --image-view-primary $color-white
 
   // Color
 
   --image-view-text var(--image-view-primary)
-
-  --image-view-background-overlay-o2t linear-gradient(
-    var(--image-view-overlay),
-    transparent
-  )
-  --image-view-background-overlay-t2o linear-gradient(
-    transparent,
-    var(--image-view-overlay)
-  )
 
   // Measurement palette
 
@@ -100,12 +90,8 @@
     &.top
       top 0
 
-      background-image var(--image-view-background-overlay-o2t)
-
     &.bottom
       bottom 0
-
-      background-image var(--image-view-background-overlay-t2o)
 
   // States
 

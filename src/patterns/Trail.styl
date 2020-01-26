@@ -1,30 +1,28 @@
 @import "../assets/tokens/tokens.styl"
 
 @import "../styles/brands.styl"
-@import "../styles/colors.styl"
 @import "../styles/list.styl"
 @import "../styles/media.styl"
 
 .vocab.trail
   // Color palette
 
-  --trail-primary $color-tone-black
+  --trail-primary $color-black
 
   &.inverted
-    --trail-primary $color-tone-white
+    --trail-primary $color-white
 
   brands('--trail-primary')
-  colors('--trail-primary')
 
-  --trail-secondary $color-tone-grey-light
-
-  &.inverted
-    --trail-secondary $color-tone-grey-dark
-
-  --trail-tertiary $color-tone-black
+  --trail-secondary $color-gray
 
   &.inverted
-    --trail-tertiary $color-tone-white
+    --trail-secondary $color-light-slate-gray
+
+  --trail-tertiary $color-black
+
+  &.inverted
+    --trail-tertiary $color-white
 
   // Children
 

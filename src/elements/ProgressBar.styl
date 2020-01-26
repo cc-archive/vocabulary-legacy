@@ -1,6 +1,5 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 @import "../styles/sizes.styl"
@@ -8,30 +7,23 @@
 .vocab.progress-bar
   // Color palette
 
-  --progress-bar-primary $color-tone-black
+  --progress-bar-primary $color-black
 
   &.inverted
-    --progress-bar-primary $color-tone-white
+    --progress-bar-primary $color-white
 
-  colors('--progress-bar-primary')
   brands('--progress-bar-primary')
   indications('--progress-bar-primary', 9)
 
-  --progress-bar-secondary $color-tone-grey-lighter
+  --progress-bar-secondary $color-light-gray
 
   &.inverted
-    --progress-bar-secondary $color-tone-grey-darker
+    --progress-bar-secondary $color-dark-slate-gray
 
   --progress-bar-tertiary var(--progress-bar-primary)
 
-  &.positive-indicating.positive-indicating
-    --progress-bar-tertiary $color-context-positive-dark
-
-  &.probably-indicating.probably-indicating
-    --progress-bar-tertiary $color-context-probably-dark
-
   &.negative-indicating.negative-indicating
-    --progress-bar-tertiary $color-negative-9
+    --progress-bar-tertiary $color-error
 
   // Color
 

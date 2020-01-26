@@ -8,11 +8,6 @@
   --tabbed-pane-background-color var(--tabbed-secondary)
   --tabbed-pane-border-color var(--tabbed-primary)
 
-  --tabbed-pane-background-overlay linear-gradient(
-    var(--tabbed-overlay),
-    var(--tabbed-overlay)
-  )
-
   // Border width palette
 
   --tabbed-pane-tab-border-width 1px
@@ -64,9 +59,6 @@
         background-color var(--tabbed-pane-background-color)
 
         border-color var(--tabbed-pane-border-color)
-
-      &:not(.active):hover
-        background-image var(--tabbed-pane-background-overlay)
 
   &.rounded
     +tablet-portrait-down()

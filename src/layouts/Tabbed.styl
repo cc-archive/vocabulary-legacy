@@ -1,7 +1,6 @@
 @import "../assets/tokens/tokens.styl"
 
 @import "../styles/brands.styl"
-@import "../styles/colors.styl"
 @import "../styles/indications.styl"
 @import "../styles/list.styl"
 @import "../styles/media.styl"
@@ -9,29 +8,23 @@
 .vocab.tabbed
   // Color palette
 
-  --tabbed-primary $color-tone-grey-light
+  --tabbed-primary $color-gray
 
   &.inverted
-    --tabbed-primary $color-tone-grey-dark
+    --tabbed-primary $color-light-slate-gray
 
   brands('--tabbed-primary')
-  colors('--tabbed-primary')
   indications('--tabbed-primary')
 
-  --tabbed-secondary $color-tone-white
+  --tabbed-secondary $color-white
 
   &.inverted
-    --tabbed-secondary $color-tone-black
+    --tabbed-secondary $color-black
 
-  --tabbed-tertiary $color-tone-black
-
-  &.inverted
-    --tabbed-tertiary $color-tone-white
-
-  --tabbed-overlay $color-overlay-black-low
+  --tabbed-tertiary $color-black
 
   &.inverted
-    --tabbed-overlay $color-overlay-white-low
+    --tabbed-tertiary $color-white
 
   // Color
 

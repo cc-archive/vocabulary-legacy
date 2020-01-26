@@ -1,25 +1,23 @@
 @import "../assets/tokens/tokens.styl"
 
-@import "../styles/colors.styl"
 @import "../styles/brands.styl"
 @import "../styles/indications.styl"
 
 .vocab.statistic
   // Color palette
 
-  --statistic-primary $color-tone-black
+  --statistic-primary $color-black
 
   &.inverted
-    --statistic-primary $color-tone-white
+    --statistic-primary $color-white
 
-  colors('--statistic-primary')
   brands('--statistic-primary')
   indications('--statistic-primary', 9)
 
-  --statistic-secondary $color-tone-grey-dark
+  --statistic-secondary $color-light-slate-gray
 
   &.inverted
-    --statistic-secondary $color-tone-grey-light
+    --statistic-secondary $color-gray
 
   // Color
 
