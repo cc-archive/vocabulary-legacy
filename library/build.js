@@ -164,13 +164,13 @@ function index () {
 }
 
 function build (source, destination) {
-  let dest = `--out ${destination}`
+  let dest = `--out '${destination}'`
   let options = [
     '--compress',
     dest
   ].join(' ')
 
-  const cmd = `stylus -u autoprefixer-stylus ${options} ${source}`
+  const cmd = `stylus -u autoprefixer-stylus ${options} '${source}'`
 
   childProcess.execSync(cmd, { stdio: 'ignore' })
 }

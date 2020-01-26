@@ -36,7 +36,7 @@ function buildWebsite () {
     chalk.bold(variables.docsDir),
     '... '
   ))
-  build(`vue-cli-service build --dest ${variables.docsDir}`)
+  build(`vue-cli-service build --dest '${variables.docsDir}'`)
   process.stdout.write(chalk.green('done\n'))
 }
 
@@ -57,7 +57,7 @@ function buildStorybook () {
     chalk.bold(`${variables.storybookDir}`),
     '... '
   ))
-  build(`vue-cli-service storybook:build -c storybook -s src/assets -o ${variables.storybookDir}`)
+  build(`vue-cli-service storybook:build -c storybook -s src/assets -o '${variables.storybookDir}'`)
   process.stdout.write(chalk.green('done\n'))
 }
 
