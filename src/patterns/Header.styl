@@ -8,11 +8,11 @@
 .vocab.header
   // Color palette
 
-  --header-primary $color-dark-slate-gray
+  --header-primary $color-white
 
   brands('--header-primary')
 
-  --header-secondary $color-white
+  --header-secondary $color-black
 
   // Color
 
@@ -24,6 +24,20 @@
   color var(--header-text-color)
 
   background-color var(--header-background-color)
+&.small
+  & > .container
+    & > .flex
+      padding $space-normal $space-zero
+      & > #content-section
+        padding-right 9rem 
+&.gradient
+    background-image linear-gradient(
+      90deg,
+      $color-overlay-black-low,
+      transparent 15%,
+      transparent 85%,
+      $color-overlay-black-low
+    )
 
   // Children
 
@@ -46,7 +60,7 @@
 
       gap $space-normal
 
-      padding $space-normal $space-zero
+      padding $space-larger $space-zero
 
       & > #branding-section
 
@@ -66,8 +80,13 @@
             justify-content center
             margin auto
 
+          display flex
+          align-items center
           font-size $size-huge
           font-weight $weight-bold
+          & .branding-text
+            margin-left pxtorem(2.95px)
+            font-size pxtorem(30px)
 
           & > .homelink
             // To vertically align parts of the branding with each other

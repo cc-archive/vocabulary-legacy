@@ -9,3 +9,9 @@ sizes(property)
   for size in $sizes
     &.{size}-sized
       {property} lookup('$size-' + size)
+/*
+  convert px to rem
+*/
+pxtorem(value) {
+    return unit(value/16, 'rem');
+}

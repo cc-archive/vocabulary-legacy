@@ -4,7 +4,7 @@ module.exports = {
     '../src/tokens/**/*.stories.js',
     '../src/elements/**/*.stories.js',
     '../src/layouts/**/*.stories.js',
-    '../src/patterns/**/*.stories.js',
+    '../src/patterns/**/*.stories.(js|mdx)',
     '../src/templates/**/*.stories.js'
   ],
   addons: [
