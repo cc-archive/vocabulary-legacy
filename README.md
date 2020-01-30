@@ -15,9 +15,7 @@
   </a>
 </p>
 
-> Vocabulary is a cohesive design system to unite the web facing Creative 
-> Commons. Vocabulary makes it easier to develop Creative Commons apps while
-> ensuring a consistently familiar experience.
+> Vocabulary is a component library that uses and extends [Bulma](https://bulma.io/) CSS library. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
 <p align="center">
   <a
@@ -47,33 +45,15 @@
   </a>
 </p>
 
-In essence Vocabulary is a collection of UI components, which are parts of 
-web sites and web apps that have significance as being individual units that
-can be mixed, matched, styled and put together to quickly and effectively 
-develop consistent applications.
+### Getting started
 
+Install it
 
-### Availability
+`$ npm install @creativecommons/vocabulary`
 
-Vocabulary is available as
-- stylesheets _(this repo)_
-- [Vue components](https://github.com/creativecommons/vue-vocabulary)
+Import it
 
-
-### Demo
-
-If it works for you, just pick the code and use it in your own application. If 
-it doesn't and you think more people would love to have this feature open an 
-issue. If something peculiar happens, open a bug report. If you just love it,
-contribute in some way.
-
-<p align="center">
-  <a href="https://www.netlify.com">
-    <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
-  </a>
-  <br/>
-  Documentation powered by Netlify.
-</p>
+`import '@creativecommons/vocabulary/css/vocabulary.css'`
 
 ### Contributing
 
