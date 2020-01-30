@@ -4,26 +4,17 @@ orbs:
   node: circleci/node@1.0.1  # Use node elements in existing workflows and jobs
 
 jobs:
-  lint:
+  build:
     docker:
       - image: node:8.12.0-alpine
     steps:
       - checkout
       - run: npm install
-      - run: npm run lint
-
-  unit:
-    docker:
-      - image: node:8.12.0-alpine
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run test:unit
+      - run: npm run build
 
 workflows:
   version: 2
 
   test:
     jobs:
-      - lint
-      - unit
+      - build
