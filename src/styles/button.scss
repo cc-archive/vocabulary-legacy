@@ -1,0 +1,26 @@
+@import "../../node_modules/bulma/sass/elements/button.sass";
+
+.button {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  line-height: 0;
+  border: 0.125rem solid $color-light-slate-gray;
+  color: $color-light-slate-gray;
+
+  &.big {
+    font-size: 1.75rem;
+    padding: 1.5rem 2.5rem;
+  }
+
+  &.medium {
+    font-size: 1.43rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+.donate {
+  background-color: $color-gold;
+  border: none;
+  color: $color-white;
+}

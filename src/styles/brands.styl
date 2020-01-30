@@ -1,9 +1,0 @@
-// Generate given property for all brands
-
-brands(property)
-  $brands = 'blue' 'forest' 'gold' 'orange' 'tomato' 'turquoise'
-
-  for brand in $brands
-    &.{brand}-branded.{brand}-branded
-      {property} lookup('$color-' + brand)
-

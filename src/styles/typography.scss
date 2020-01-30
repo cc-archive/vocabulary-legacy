@@ -1,0 +1,57 @@
+$font-size-normal: 1rem;
+$font-size-small: 0.8rem;
+$font-size-big: 1.12rem;
+$font-size-bigger: 1.43rem;
+
+$font-sizes: (
+    "-normal": $font-size-normal,
+    "-small": $font-size-small,
+    "-big": $font-size-big,
+    "-bigger": $font-size-bigger,
+);
+
+@each $font-size-namespace, $size in $font-sizes {
+    .text#{$font-size-namespace} {
+        font-size: $size;
+        font-family: Source Sans Pro;
+    }
+}
+
+.caption {
+    font-size: $font-size-small;
+}
+
+$header-font-sizes: (
+    "h1": 3.56rem,
+    "h2": 2.25rem,
+    "h3": 1.75rem,
+    "h4": 1.43rem,
+    "h5": 1.25rem,
+    "h6": 1rem
+);
+
+@each $header-name, $header-font-size in $header-font-sizes {
+    #{$header-name} {
+        font-size: $header-font-size;
+        font-weight: bold;
+        color: $color-dark-slate-gray;
+        text-transform: uppercase;
+        letter-spacing: 0.02rem;
+        line-height: 3rem;
+        font-family: Roboto Condensed;
+
+        &.b-header {
+            text-transform: none;
+            font-family: Source Sans Pro;
+        }
+    }
+}
+
+.value {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.37rem;
+    line-height: 5rem;
+    letter-spacing: 0.02em;
+}
