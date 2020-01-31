@@ -1,6 +1,18 @@
+import ConsiderationNotes from './md/Typography/Considerations.md';
+import SpecificationNotes from './md/Typography/Specifications.md';
+
 import { withKnobs, number, select } from '@storybook/addon-knobs';
 
-export default { title: 'Typography', decorators: [withKnobs] };
+export default { 
+    title: 'Typography', 
+    decorators: [withKnobs],
+    parameters: {
+        notes: {
+            Considerations: ConsiderationNotes,
+            Specifications: SpecificationNotes
+        }
+    }
+};
 
 const generateKnob = () => {
     const defaultValue = 1;

@@ -1,4 +1,11 @@
-export default { title: 'Buttons' };
+import ButtonNotes from './md/Buttons/Buttons.md';
+
+export default { 
+    title: 'Buttons',
+    parameters: {
+        notes: { ButtonNotes }
+    }
+};
 
 export const Button = () => '<button class="button big">Button</button>';
 
