@@ -10,18 +10,18 @@ const generateKnob = () => {
         max: 6,
         step: 1,
     };
-    return number('Header Size', defaultValue, options);
+    return number('Heading Size', defaultValue, options);
 }
 
 
-export const HeaderAs = () => {
-    const headerSize = generateKnob();
-    return `<h${headerSize}>This is a text</h${headerSize}>`;
+export const HeadingAs = () => {
+    const headingSize = generateKnob();
+    return `<h${headingSize}>This is a text</h${headingSize}>`;
 };
 
-export const HeaderBs = () => {
-    const headerSize = generateKnob();
-    return `<h${headerSize} class="b-header">This is a text</h${headerSize}>`;
+export const HeadingBs = () => {
+    const headingSize = generateKnob();
+    return `<h${headingSize} class="b-heading">This is a text</h${headingSize}>`;
 };
 
 export const BodyText = () => {
