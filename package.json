@@ -1,5 +1,5 @@
 {
-  "name": "bulma_vocabulary",
+  "name": "@creativecommons/vocabulary",
   "version": "1.0.0-beta.1",
   "description": "Creative Commons Vocabulary",
   "main": "index.js",
