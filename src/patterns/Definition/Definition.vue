@@ -13,7 +13,7 @@
           {{ word }}
         </slot>
       </Heading>
-      <Paragraph class="usage">
+      <p class="usage">
         <span
           v-if="pronunciation"
           class="pronunciation">
@@ -24,7 +24,7 @@
           class="part-of-speech">
           {{ partOfSpeech }}
         </span>
-      </Paragraph>
+      </p>
     </div>
 
     <div class="definitions">
@@ -44,7 +44,6 @@
 
 <script>
   import Heading from '@/elements/Heading/Heading'
-  import Paragraph from '@/elements/Paragraph/Paragraph'
 
   import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
@@ -61,8 +60,7 @@
   export default {
     name: 'Definition',
     components: {
-      Heading,
-      Paragraph
+      Heading
     },
     mixins: [
       Branded,
