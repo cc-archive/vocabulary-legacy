@@ -1,20 +1,7 @@
 <template>
   <span class="vocab license-icons">
     <template v-for="(icon, index) in processedIconList">
-      <template v-if="showsPopup(index)">
-        <Popup
-          :key="index"
-          v-bind="$attrs">
-          <FontAwesomeIcon
-            :icon="['fab', icon]"
-            fixed-width/>
-          <template #popup>
-            <!-- @slot Popup content goes here -->
-            <slot :name="index">{{ computedStrings[index] }}</slot>
-          </template>
-        </Popup>
-      </template>
-      <template v-else>
+      <template>
         <FontAwesomeIcon
           :key="index"
           :icon="['fab', icon]"
@@ -43,8 +30,6 @@
   } from '@fortawesome/free-brands-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-  import Popup from '@/patterns/Popup/Popup'
-
   library.add(
     faCreativeCommons,
     faCreativeCommonsBy,
@@ -70,8 +55,7 @@
   export default {
     name: 'LicenseIconography',
     components: {
-      FontAwesomeIcon,
-      Popup
+      FontAwesomeIcon
     },
     inheritAttrs: false,
     props: {
@@ -132,11 +116,6 @@
         } else {
           return stringList.slice(0, max)
         }
-      }
-    },
-    methods: {
-      showsPopup: function (index) {
-        return this.computedStrings[index] || this.$slots[index]
       }
     }
   }
