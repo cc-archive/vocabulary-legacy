@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://creativecommons.org/" class="readme-cc-logo">
     <img
-      alt="Creative Commons logo"
-      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/cc_logo.png"
+      alt=""
+      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/cc_logo.png"
       height="62px"/>
   </a>
 </p>
