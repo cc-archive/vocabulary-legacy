@@ -58,7 +58,7 @@ Import it
 ### Contributing
 
 
-**[GitHub repository](https://github.com/creativecommons/vocabulary")**
+**[GitHub repository](https://github.com/creativecommons/vocabulary)**
 
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
