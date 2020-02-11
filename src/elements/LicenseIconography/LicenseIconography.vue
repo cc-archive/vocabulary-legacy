@@ -1,11 +1,10 @@
 <template>
   <span class="vocab license-icons">
-    <template v-for="(icon, index) in processedIconList">
-        <FontAwesomeIcon
-          :key="index"
-          :icon="['fab', icon]"
-          fixed-width/>
-    </template>
+    <FontAwesomeIcon
+      v-for="(icon, index) in processedIconList"
+      :key="index"
+      :icon="['fab', icon]"
+      fixed-width/>
   </span>
 </template>
 
