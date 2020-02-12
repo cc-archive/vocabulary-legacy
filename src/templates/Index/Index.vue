@@ -85,7 +85,7 @@
 
       <div class="panel">
         <div>
-          <Heading :level="6">{{ $t('panel.credits') }}</Heading>
+          <h6>{{ $t('panel.credits') }}</h6>
           <i18n path="panel.builtusing" tag="span">
             <a :href="vueLibraryHref">
               {{ $t('vue') }} {{ $t('vocabulary') }}</a> <!-- for the fullstops -->
@@ -114,7 +114,6 @@
 
 <script>
   import GitHubCorner from '@/elements/GitHubCorner/GitHubCorner'
-  import Heading from '@/elements/Heading/Heading'
 
   import Container from '@/layouts/Container/Container'
 
@@ -133,7 +132,6 @@
     name: 'Index',
     components: {
       GitHubCorner,
-      Heading,
       Container,
       BrandImagery,
       Definition,

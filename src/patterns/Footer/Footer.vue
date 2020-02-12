@@ -31,7 +31,7 @@
         <GridCell
           id="contact-column"
           :span-set="[12, 6, 4, 4, 4]">
-          <Heading :level="6">{{ $t('lovetohear') }}</Heading>
+          <h4>{{ $t('lovetohear') }}</h4>
 
           <div class="communication">
             <slot name="communication">
@@ -75,7 +75,6 @@
 </template>
 
 <script>
-  import Heading from '@/elements/Heading/Heading'
 
   import Container from '@/layouts/Container/Container'
   import Grid from '@/layouts/Grid/Grid'
@@ -94,7 +93,6 @@
     name: 'Footer',
     components: {
       BrandImagery,
-      Heading,
       Container,
       Grid,
       GridCell,

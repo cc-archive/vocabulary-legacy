@@ -1,7 +1,5 @@
 import Footer from '@/patterns/Footer/Footer'
 
-import Heading from '@/elements/Heading/Heading'
-
 import BrandImagery from '@/patterns/BrandImagery/BrandImagery'
 import Locale from '@/patterns/Locale/Locale'
 
@@ -17,8 +15,6 @@ export const standard = () => ({
 export const customised = () => ({
   components: {
     Footer,
-
-    Heading,
 
     BrandImagery,
     Locale
@@ -92,7 +88,7 @@ export const customised = () => ({
         </ul>
       </template>
 
-      <Heading :level="6">You really mean anything?</Heading>
+      <h4>You really mean anything?</h4>
       <p>
         Yes, <em>literally</em> anything.
       </p>
