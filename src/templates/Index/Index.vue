@@ -21,8 +21,6 @@
             </li>
           </ul>
           <template #seeAlso>
-            <a :href="styleguideHref">
-              {{ $t('definition.seealso.styleguide') }}</a>,
             <a :href="storybookHref">
               {{ $t('definition.seealso.storybook') }}</a>
           </template>
@@ -140,7 +138,6 @@
       Quote
     },
     data: function () {
-      const styleguideHref = 'styleguide'
       const storybookHref = 'storybook'
 
       const baseLibraryHref = 'https://creativecommons.github.io/cc-vocabulary'
@@ -170,7 +167,6 @@
         }
       ]
       return {
-        styleguideHref,
         storybookHref,
         baseLibraryHref,
         vueLibraryHref,

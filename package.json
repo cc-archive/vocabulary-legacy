@@ -9,7 +9,6 @@
     "build:documentation": "node documentation/build.js",
     "build:library": "node library/build.js",
     "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
-    "serve:styleguide": "vue-cli-service styleguidist",
     "serve:website": "vue-cli-service serve"
   },
   "dependencies": {
@@ -58,7 +57,6 @@
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-i18n": "^0.6.0",
     "vue-cli-plugin-storybook": "^1.0.0",
-    "vue-cli-plugin-styleguidist": "^4.4.2",
     "vue-template-compiler": "^2.6.10"
   },
   "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
