@@ -12,8 +12,6 @@ clearDir(variables.docsDir)
 
 buildWebsite(variables.docsDir)
 
-buildStyleguide()
-
 buildStorybook()
 
 console.log(chalk.green.inverse('\n✔ Done.'))
@@ -37,17 +35,6 @@ function buildWebsite () {
     '... '
   ))
   build(`vue-cli-service build --dest ${variables.docsDir}`)
-  process.stdout.write(chalk.green('done\n'))
-}
-
-function buildStyleguide () {
-  process.stdout.write(chalk.yellow(
-    'Building styleguide to',
-    chalk.bold(`${variables.styleguideDir}`),
-    '... '
-  ))
-  // Destination for build is specified in styleguide.config.js
-  build('vue-cli-service styleguidist:build')
   process.stdout.write(chalk.green('done\n'))
 }
 
