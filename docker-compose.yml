@@ -30,30 +30,6 @@ services:
       # Map 8080 in the container to the same port on the host
       - 8080:8080
 
-  # The documentation is the guide on how to use CC Vocabulary components
-  styleguide:
-    # Name of the container
-    container_name: vocabulary-styleguide
-    # Use the CC Vocabulary image
-    image: ccvocabulary:latest
-    # Restart build if it fails
-    restart: always
-    # If the image is not found, build it
-    build: .
-
-    # The command to run in the container
-    command: npm run serve:styleguide
-
-    # Volumes attached to the container
-    volumes:
-      # Enable code changes to reflect in the container
-      - .:/codebase
-      # Ensures that host node_modules are not mounted
-      - node_modules:/codebase/node_modules
-    ports:
-      # Map 6060 in the container to the same port on the host
-      - 6060:6060
-
   storybook:
     # Name of the container
     container_name: vocabulary-storybook

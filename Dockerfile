@@ -15,5 +15,4 @@ RUN npm install
 # Expose ports on the container
 # 8080 - Website
 # 6006 - Storybook
-# 6060 - Styleguide
-EXPOSE 8080 6006 6060
+EXPOSE 8080 6006
