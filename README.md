@@ -63,9 +63,7 @@ Vocabulary is available as
 ### Demo
 
 The showcase of the true extent of Vocabulary can be found in the
-**[live styleguide](https://vue-vocabulary.netlify.com/styleguide)**
-and the
-**[interactive storybook](https://vue-vocabulary.netlify.com/storybook)**
+**[interactive storybook](https://cc-vue-vocabulary.netlify.com/storybook)**
 for the library, showcasing the components therein and variants thereof, on GitHub
 Pages. Search for a particular component using the search field or just explore
 the collection of components. If you find one that catches your fancy, play with
