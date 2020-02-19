@@ -22,7 +22,7 @@ $ cd vue-vocabulary/
 After this step, there are two ways to proceed. Choose the one that suits your
 needs best.
 
-### Dockerised setup
+### Dockerised setup (recommended)
 
 _Requires Docker and Docker Compose to be installed._
 
@@ -48,11 +48,11 @@ $ npm install
 Start the servers.
 
 To start the CC Vocabulary website or documentation, run the `serve:website` or
-`serve:styleguide` task respectively.
+`serve:storybook` task respectively.
 
 ```
 $ npm run serve:website
-$ npm run serve:styleguide
+$ npm run serve:storybook
 ```
 
 ## Requesting changes
@@ -71,15 +71,14 @@ the changes are in alignment with the short and long term goals of the project.
 **Step 1:** 
 Create a branch named after the changes. Use underscores. Be descriptive.
 
+```
+$ git checkout -b branch_name
+```
+
 **Step 2:**
 Resolve the issue by changing the code. Update tests if need be.
 
 **Step 3:**
-If tokens were updated, build new token files using the `theo` task.
-
-```
-$ npm run theo
-```
 
 Run the `lint` and `test:unit` tasks to ensure code quality and functionality.
 
@@ -97,3 +96,9 @@ New locales must be manually added to the `Locale` component.
 **Step 4:**
 Push the commits to your branch on the fork and submit a PR. Fill all relevant 
 fields in the PR template.
+
+```
+$ git add file_name
+$ git commit
+$ git push --set-upstream fork branch_name
+```
