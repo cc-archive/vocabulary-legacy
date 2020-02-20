@@ -2,7 +2,7 @@
   "name": "vue-vocabulary-landing",
   "private": true,
   "description": "A cohesive design system to unite the web facing Creative Commons",
-  "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
+  "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
