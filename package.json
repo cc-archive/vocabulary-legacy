@@ -6,11 +6,12 @@
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
-    "storybook": "start-storybook -s ./dist -p 8080"
+    "storybook": "start-storybook -s ./dist,./src/assets -p 8080"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@storybook/addon-knobs": "^5.3.9",
+    "@storybook/addon-backgrounds": "^5.3.13",
     "@storybook/html": "^5.3.9",
     "babel-loader": "^8.0.6",
     "bulma": "^0.8.0",
