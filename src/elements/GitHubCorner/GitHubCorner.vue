@@ -29,9 +29,6 @@
 </template>
 
 <script >
-  import Branded from '@/mixins/branded'
-  import Colored from '@/mixins/colored'
-
   import Invertible from '@/mixins/invertible'
 
   /**
@@ -43,9 +40,6 @@
   export default {
     name: 'GitHubCorner',
     mixins: [
-      Branded,
-      Colored,
-
       Invertible
     ],
     props: {
@@ -72,16 +66,6 @@
         type: String,
         default: 'right',
         validator: val => ['left', 'right'].includes(val)
-      },
-      /**
-       * _the positioning of GitHub corner_
-       *
-       * ∈ {`'absolute'`, `'relative'`}
-       */
-      position: {
-        type: String,
-        default: 'relative',
-        validator: val => ['absolute', 'relative'].includes(val)
       }
     },
     computed: {
@@ -91,13 +75,9 @@
       },
       gitHubCornerClasses: function () {
         return [
-          ...this.brandedClasses,
-          ...this.coloredClasses,
-
           ...this.invertibleClasses,
 
-          `${this.corner}-cornered`,
-          `${this.position}ly-positioned`
+          `${this.corner}-cornered`
         ]
       },
       target: function () {
