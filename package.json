@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
-    "storybook": "start-storybook -s ./dist -p 8080"
+    "storybook": "start-storybook -s ./dist -p 8080",
+    "build:documentation": "npm run build && build-storybook -s ./dist -o ./docs"
   },
   "author": "Breno Ferreira",
   "license": "MIT",
