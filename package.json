@@ -1,15 +1,14 @@
 {
-  "name": "vue-vocabulary-landing",
-  "private": true,
-  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "name": "@creativecommons/vue-vocabulary",
+  "version": "1.0.0-beta.0",
+  "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Dhruv Bhanushali (https://dhruvkb.github.io/)",
   "scripts": {
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build:documentation": "node documentation/build.js",
-    "build:library": "node library/build.js",
-    "serve:storybook": "vue-cli-service storybook:serve -p 6006 -c storybook -s src/assets --ci",
-    "serve:website": "vue-cli-service serve"
+    "build": "node library/build.js",
+    "storybook": "vue-cli-service storybook:serve -s ./src/assets -p 8080",
+    "build:documentation": "vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
     "@creativecommons/vocabulary": "0.0.0-alpha.30",
@@ -33,7 +32,6 @@
     "@storybook/addon-backgrounds": ">=5.3.13",
     "@storybook/addon-docs": ">=5.3.13",
     "@storybook/addon-knobs": ">=5.3.13",
-    "@storybook/addon-links": ">=5.3.13",
     "@storybook/addon-notes": ">=5.3.13",
     "@storybook/addon-viewport": ">=5.3.13",
     "@storybook/vue": ">=5.3.13",
@@ -71,6 +69,5 @@
     "library"
   ],
   "license": "MIT",
-  "repository": "github:creativecommons/vue-vocabulary",
-  "verboseName": "CC Vocabulary"
+  "repository": "github:creativecommons/vue-vocabulary"
 }
