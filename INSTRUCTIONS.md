@@ -9,28 +9,14 @@ Fork the project. This will be useful if you intend to submit PRs.
 repository in step 1, clone the fork instead.
 
 ```
-$ git clone https://github.com/creativecommmons/vue-vocabulary.git
+$ git clone https://github.com/creativecommmons/vocabulary.git
 ```
 
 **Step 2:**
 Change into the project directory.
 
 ```
-$ cd vue-vocabulary/
-```
-
-After this step, there are two ways to proceed. Choose the one that suits your
-needs best.
-
-### Dockerised setup
-
-_Requires Docker and Docker Compose to be installed._
-
-**Step 3:**
-Start the Docker containers for the project.
-
-```
-$ docker-compose up
+$ cd vocabulary/
 ```
 
 ### Manual setup
@@ -45,14 +31,10 @@ $ npm install
 ```
 
 **Step 4:**
-Start the servers.
-
-To start the CC Vocabulary website or documentation, run the `serve:website` or
-`serve:styleguide` task respectively.
+Start the Vocabulary storybook by running the `storybook` task.
 
 ```
-$ npm run serve:website
-$ npm run serve:styleguide
+$ npm run storybook
 ```
 
 ## Requesting changes
@@ -71,29 +53,26 @@ the changes are in alignment with the short and long term goals of the project.
 **Step 1:** 
 Create a branch named after the changes. Use underscores. Be descriptive.
 
+```
+$ git checkout -b branch_name
+```
+
 **Step 2:**
 Resolve the issue by changing the code. Update tests if need be.
 
 **Step 3:**
-If tokens were updated, build new token files using the `theo` task.
-
-```
-$ npm run theo
-```
-
-Run the `lint` and `test:unit` tasks to ensure code quality and functionality.
+Run the `lint` task to ensure code quality.
 
 ```
 $ npm run lint
-$ npm run test:unit
 ```
-
-If translations are to be changed, update the `.json` files under individual 
-components for component-level translations or the `.json` files in `locales/` 
-for global-level translations.
-
-New locales must be manually added to the `Locale` component.
 
 **Step 4:**
 Push the commits to your branch on the fork and submit a PR. Fill all relevant 
 fields in the PR template.
+
+```
+$ git add file_name
+$ git commit
+$ git push --set-upstream fork branch_name
+```
