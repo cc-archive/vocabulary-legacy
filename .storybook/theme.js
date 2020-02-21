@@ -27,7 +27,7 @@ export default create({
   textInverseColor: tokens.props.color_pure_white.value,
 
   // Branding
-  brandTitle: 'Vocabulary',
-  brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
+  brandTitle: 'Vue Vocabulary',
+  brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary',
   brandImage: 'https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true'
 })

@@ -6,30 +6,6 @@
 version: '3.4'
 
 services:
-  # The website is the landing page for the CC Vocabulary project
-  website:
-    # Name of the container
-    container_name: vocabulary-website
-    # Use the CC Vocabulary image
-    image: ccvocabulary:latest
-    # Restart build if it fails
-    restart: always
-    # If the image is not found, build it
-    build: .
-
-    # The command to run in the container
-    command: npm run serve:website
-
-    # Volumes attached to the container
-    volumes:
-      # Enable code changes to reflect in the container
-      - .:/codebase
-      # Ensures that host node_modules are not mounted
-      - node_modules:/codebase/node_modules
-    ports:
-      # Map 8080 in the container to the same port on the host
-      - 8080:8080
-
   storybook:
     # Name of the container
     container_name: vocabulary-storybook
@@ -41,7 +17,7 @@ services:
     build: .
 
     # The command to run in the container
-    command: npm run serve:storybook
+    command: npm run storybook
     
     # Volumes attached to the container
     volumes:
@@ -49,7 +25,7 @@ services:
       - node_modules:/codebase/node_modules
     ports:
       # Map 6006 in the container to the same port on the host
-      - 6006:6006
+      - 8080:8080
 
 volumes:
   # Holds the node_modules directory

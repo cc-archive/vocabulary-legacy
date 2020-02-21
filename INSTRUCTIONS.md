@@ -45,14 +45,10 @@ $ npm install
 ```
 
 **Step 4:**
-Start the servers.
-
-To start the CC Vocabulary website or documentation, run the `serve:website` or
-`serve:storybook` task respectively.
+Start the Vocabulary storybook by running the `storybook` task.
 
 ```
-$ npm run serve:website
-$ npm run serve:storybook
+$ npm run storybook
 ```
 
 ## Requesting changes
@@ -79,7 +75,6 @@ $ git checkout -b branch_name
 Resolve the issue by changing the code. Update tests if need be.
 
 **Step 3:**
-
 Run the `lint` and `test:unit` tasks to ensure code quality and functionality.
 
 ```
