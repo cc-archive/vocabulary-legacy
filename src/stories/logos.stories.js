@@ -9,13 +9,13 @@ const invertedBackground = {
   }
 }
 
-const wordmark = '' +
+const logomark = '' +
   '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/cc/wordmark.svg#creativecommons"></use>' +
+  '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
   '</svg>'
-export const CCWordmark = () => `<div class="has-text-black">${wordmark}</div>`
-export const CCWordmarkWhite = () => `<div class="has-text-white">${wordmark}</div>`
-CCWordmarkWhite.story = invertedBackground
+export const CCLogomark = () => `<div class="has-text-black">${logomark}</div>`
+export const CCLogomarkWhite = () => `<div class="has-text-white">${logomark}</div>`
+CCLogomarkWhite.story = invertedBackground
 
 const lettermark = '' +
   '<svg width="64" height="64" viewBox="5.5 -3.5 64 64" xmlns="http://www.w3.org/2000/svg">' +
