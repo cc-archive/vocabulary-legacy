@@ -1,8 +1,8 @@
 {
   "name": "@creativecommons/vocabulary",
   "version": "1.0.0-beta.3",
-  "description": "Creative Commons Vocabulary",
-  "main": "index.js",
+  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
     "lint": "eslint src/**/*.js",
     "build": "webpack --mode production",
@@ -10,11 +10,10 @@
     "storybook": "start-storybook -s ./dist,./src/assets -p 8080",
     "build:documentation": "npm run build && build-storybook -s ./dist,./src/assets -o ./docs"
   },
-  "author": "Breno Ferreira",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@storybook/addon-knobs": "^5.3.9",
+    "@storybook/addon-backgrounds": "^5.3.13",
     "@storybook/html": "^5.3.9",
     "babel-loader": "^8.0.6",
     "bulma": "^0.8.0",
@@ -33,5 +32,19 @@
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
-  }
+  },
+  "bugs": "https://github.com/creativecommons/vocabulary/issues/",
+  "homepage": "https://creativecommons.github.io/vocabulary/",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "sass stylesheets",
+    "library"
+  ],
+  "license": "MIT",
+  "repository": "github:creativecommons/vocabulary",
+  "main": "index.js"
 }
