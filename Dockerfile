@@ -13,6 +13,4 @@ COPY package-lock.json ./
 RUN npm install
 
 # Expose ports on the container
-# 8080 - Website
-# 6006 - Storybook
-EXPOSE 8080 6006
+EXPOSE 8080
