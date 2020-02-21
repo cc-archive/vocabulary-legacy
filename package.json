@@ -11,7 +11,7 @@
     "build:documentation": "vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/vocabulary": "0.0.0-alpha.30",
+    "@creativecommons/vocabulary": "^1.0.0-beta.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
