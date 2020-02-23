@@ -1,4 +1,4 @@
-export default { title: 'Vocabulary' }
+export default { title: 'Vue Vocabulary' }
 
 export const Welcome = () => ({
   template: `
