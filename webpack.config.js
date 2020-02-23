@@ -9,28 +9,42 @@ module.exports = {
     filename: 'js/bundle.js'
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader'
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
           }
-        }
-      ]
-    }]
+        ]
+      },
+      {
+        test: /\.otf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '../fonts'
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/fonts.css'
     }),
     new CopyPlugin([
-      { from: 'src/styles', to: 'scss' },
+      { from: 'src/fonts', to: 'fonts' },
       { from: 'src/assets', to: 'assets' }
     ]),
   ]
