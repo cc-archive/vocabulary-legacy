@@ -30,6 +30,16 @@
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
   </a>
+  <a 
+    href="https://cc-fonts.netlify.com"
+    style="margin-right: 1em;">
+    <img alt="Netlify" src="https://img.shields.io/netlify/c7f9d312-b3ff-4b28-a032-bc6b937a5603"/>
+  </a>
+  <a
+    href="https://www.npmjs.com/package/@creativecommons/fonts"
+    style="margin-right: 1em;">
+    <img alt="npm version" src="https://img.shields.io/npm/v/@creativecommons/fonts?color=brightgreen"/>
+  </a>
 </p>
 
 In essence Fonts is a collection of typefaces, each with a distinctively unique
