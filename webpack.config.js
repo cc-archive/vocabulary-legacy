@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -29,8 +28,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/vocabulary.css'
     }),
-    new CopyPlugin([
-      { from: 'src/styles', to: 'scss' },
-    ]),
   ]
 };
