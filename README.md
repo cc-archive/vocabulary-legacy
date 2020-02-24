@@ -55,10 +55,9 @@ Import it
 
 `import '@creativecommons/vocabulary/css/vocabulary.css'`
 
-### Contributing
+### For Contribution
 
-
-**[GitHub repository](https://github.com/creativecommons/vocabulary)**
+**[Instruction Manual](INSTRUCTIONS.md)**
 
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
@@ -75,9 +74,6 @@ project in a number of ways.
 | **Translate** | If you speak a language other than, and in addition to, English, you can help make the project accessible to your community with your words. |
 | **Write**     | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand. |
 | **Share**     | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
-
-If you're interested, read the file `INSTRUCTIONS.md` in the 
-repository for instructions regarding contributing to the project.
 
 
 ### Disclaimer
