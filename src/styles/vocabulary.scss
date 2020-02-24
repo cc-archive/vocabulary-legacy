@@ -1,15 +1,17 @@
 @charset "utf-8";
 
-$family-sans-serif: Roboto Condensed;
+$family-sans-serif: "Roboto Condensed";
+$family-paragraph: "Source Sans Pro";
 $button-family: $family-sans-serif;
 
 body {
-    font-family: $family-sans-serif;
+    font-family: $family-paragraph;
 }
 
-@import "./colors.scss";
-@import "./spaces.scss";
-@import "./layout.scss";
-@import "./typography.scss";
-@import "./button.scss";
-@import "./form.scss";
+@import "colors";
+@import "spaces";
+@import "layout";
+@import "typography";
+@import "button";
+@import "form";
+@import "globalheader"

@@ -1,0 +1,82 @@
+$navbar-background-color: $color-black;
+$navbar-item-color: $color-white;
+$navbar-padding-vertical: 1rem;
+$navbar-item-hover-color: darken($color-white,10);
+$navbar-item-hover-background-color: transparent;
+
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/level.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+
+.cc-global-header {
+    background-color: $color-black;
+    margin-top: -16.4rem;
+    transition: all .4s ease-in;
+    &.is-active {
+        margin-top: 0;
+    }
+    .container {
+        .open-tab {
+            position: absolute;
+            padding: .5rem 1rem;
+            right: 0;
+            bottom: -2rem;
+            background-color: $color-black;
+            color: $white;
+            border-radius: 0 0 .25rem .25rem;
+        }
+        .level {
+            .level-left {
+                color: $color-white;
+            }
+            .level-right {
+                .donate {
+                    color: $color-black;
+                    svg {
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+        .navbar {
+            .navbar-menu {
+                width: 100%;
+                .navbar-item {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    flex-shrink: 1;
+                    h5 {
+                        color: $color-white;
+                        line-height: 1.7rem;
+                        margin-bottom: .5rem;
+                    }
+                    &:hover {
+                        h5 {
+                            color: darken($color-white,10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+     @include mobile() {
+         margin-top: -38.4rem;
+         .container {
+            padding-right: $space-normal;
+            padding-left: $space-normal;
+            .global-header-header {
+                text-align: center;
+            }
+            .navbar {
+                 .navbar-menu {
+                    display: flex;
+                    flex-wrap: wrap;
+                     .navbar-item {
+                         flex: 0 50%;
+                     }
+                 }
+             }
+         }
+     }   
+}
