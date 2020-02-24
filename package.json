@@ -5,9 +5,9 @@
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
     "lint": "eslint src/**/*.js",
-    "build": "eslint src/**/*.js && webpack --mode production",
+    "build": "npm run lint && webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
-    "storybook": "eslint src/**/*.js && start-storybook -s ./dist,./src/assets -p 8080",
+    "storybook": "npm run lint && start-storybook -s ./dist,./src/assets -p 8080",
     "build:documentation": "npm run build && build-storybook -s ./dist,./src/assets -o ./docs"
   },
   "devDependencies": {

@@ -60,7 +60,7 @@ $ git checkout -b branch_name
 **Step 2:**
 Resolve the issue by changing the code. Update tests if need be.
 
-**Step 4:**
+**Step 3:**
 Push the commits to your branch on the fork and submit a PR. Fill all relevant 
 fields in the PR template.
 
