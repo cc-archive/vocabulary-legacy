@@ -11,7 +11,7 @@ export const Welcome = () => ({
   <a href="https://github.com/creativecommons/vocabulary" target="_blank">
     <button class="button is-primary">GitHub repository</button>
   </a>
-  <a href="https://cc-vue-vocabulary.netlify.com" style="position: absolute; bottom: 0.5em; left: 0.5em;">
+  <a href="https://www.netlify.com" style="position: absolute; bottom: 0.5em; left: 0.5em;">
     <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
   </a>
 </div>
