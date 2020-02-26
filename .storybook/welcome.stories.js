@@ -25,7 +25,7 @@ export const Welcome = () => `
     <button class="button is-primary">GitHub repository</button>
   </a>
 </div>
-<a class="netlify" href="https://cc-vocabulary.netlify.com">
+<a class="netlify" href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
 </a>
 `
