@@ -1,0 +1,39 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { CCVocabulary } from '../src/stories/logos.stories'
+
+<Meta title="Vocabulary" />
+
+Welcome to Vocabulary!
+
+<Preview>
+  <Story name="Welcome">{`
+    <style>
+      .welcome {
+        text-align: center;
+      }
+      .welcome p {
+        margin: 0.5em;
+      }
+      .netlify {
+        position: absolute;
+        bottom: 0.5em;
+        left: 0.5em;
+      }
+    </style>
+    <div class="welcome">
+      ${CCVocabulary()}
+      <p class="text-normal">
+        Vocabulary is a design system to unify the web-facing Creative Commons.
+      </p>
+      <a href="https://github.com/creativecommons/vocabulary" target="_blank">
+        <button class="button is-primary">GitHub repository</button>
+      </a>
+    </div>
+    <a class="netlify" href="https://cc-vocabulary.netlify.com">
+      <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+    </a>
+  `}</Story>
+</Preview>
+
+This is the Storybook for Vocabulary. Choose a component from the left panel to know more about it and explore the
+various customisations it has to offer.
