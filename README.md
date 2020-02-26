@@ -84,9 +84,6 @@ contribute in some way.
 
 ### Contributing
 
-
-**[GitHub repository](https://github.com/creativecommons/vue-vocabulary)**
-
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
 another language.
@@ -103,7 +100,7 @@ project in a number of ways.
 | **Write**     | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand. |
 | **Share**     | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
 
-If you're interested, read the file `INSTRUCTIONS.md` in the 
+If you're interested, read the file [`INSTRUCTIONS.md`](INSTRUCTIONS.md) in the 
 repository for instructions regarding contributing to the project.
 
 
