@@ -22,11 +22,26 @@ const GithubCornerSVG = `
 </svg>
 `
 
-const invertedBackground = {
-  parameters: {
-    backgrounds: [
-      { name: 'dark background', value: '#000', default: true },
-      { name: 'light background', value: '#fff', default: false }
-    ]
-  }
-}
+export const GithubCorner = () => `
+<a
+  class="vocab github-corner"
+  :class="gitHubCornerClasses"
+  :href="url"
+  :target="target"
+  :rel="rel"
+  aria-label="View source on GitHub">
+    ${GithubCornerSVG}
+</a>
+` 
+
+export const GithubCornerInverted = () => `
+<a
+  class="vocab github-corner is-inverted"
+  :class="gitHubCornerClasses"
+  :href="url"
+  :target="target"
+  :rel="rel"
+  aria-label="View source on GitHub">
+    ${GithubCornerSVG}
+</a>
+`
