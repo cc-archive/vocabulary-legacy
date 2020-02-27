@@ -32,7 +32,7 @@ export const GithubCorner = () => `
   aria-label="View source on GitHub">
     ${GithubCornerSVG}
 </a>
-` 
+`
 
 export const GithubCornerInverted = () => `
 <a
