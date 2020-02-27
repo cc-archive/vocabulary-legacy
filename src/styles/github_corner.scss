@@ -12,6 +12,7 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  position: absolute;
   top: 0;
 
   &.left-cornered {
