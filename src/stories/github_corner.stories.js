@@ -45,3 +45,27 @@ export const GithubCornerInverted = () => `
     ${GithubCornerSVG}
 </a>
 `
+
+export const GithubCornerLeft = () => `
+<a
+  class="vocab github-corner left-cornered"
+  :class="gitHubCornerClasses"
+  :href="url"
+  :target="target"
+  :rel="rel"
+  aria-label="View source on GitHub">
+    ${GithubCornerSVG}
+</a>
+`
+
+export const GithubCornerRight = () => `
+<a
+  class="vocab github-corner left-cornered"
+  :class="gitHubCornerClasses"
+  :href="url"
+  :target="target"
+  :rel="rel"
+  aria-label="View source on GitHub">
+    ${GithubCornerSVG}
+</a>
+`
