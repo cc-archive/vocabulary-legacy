@@ -9,39 +9,27 @@
     padding: 1.25rem 5.8rem;
   }
 
-  .container {
-    .explore-tab {
+  .navbar {
+    background-color: $color-white;
+    .navbar-dropdown {
+      padding: $space-small 0;
+      width: 12.5rem;
+      border-top: none;
       position: absolute;
-      z-index: 1000;
-      padding: 0.5rem 1rem;
-      right: 5.8rem;
-      top: 0.5rem;
-      background-color: $color-black;
-      color: $white;
-      border-radius: 0 0 0.25rem 0.25rem;
+      top: 75%;
+
+      h5 {
+        line-height: 1.875rem;
+      }
+
+      h6 {
+        line-height: $space-small;
+      }
     }
-    .navbar {
-      background-color: $color-white;
-      .navbar-dropdown {
-        padding: 1rem 0;
-        width: 12.5rem;
-        border-top: none;
-        position: absolute;
-        top: 75%;
 
-        h5 {
-          line-height: 1.875rem;
-        }
-
-        h6 {
-          line-height: 1rem;
-        }
-      }
-
-      .navbar-burger span {
-        height: 0.1875rem;
-        width: 1.375rem;
-      }
+    .navbar-burger span {
+      height: 0.1875rem;
+      width: 1.375rem;
     }
   }
 
@@ -52,11 +40,6 @@
 
     &.small {
       padding: 0;
-    }
-    .container {
-      .explore-tab {
-        display: none;
-      }
     }
   }
 }

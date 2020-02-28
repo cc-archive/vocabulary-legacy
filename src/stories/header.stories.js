@@ -5,7 +5,6 @@ export default { title: 'Header' }
 export const bigHeader = () =>
     `<header class="header big">
         <div class="container">
-            <a href="#" class="explore-tab">Explore CC</a>
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="#" >
@@ -64,7 +63,6 @@ export const bigHeader = () =>
 export const smallHeader = () =>
     `<header class="header small">
         <div class="container">
-            <a href="#" class="explore-tab">Explore CC</a>
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="#" >
