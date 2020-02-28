@@ -5,7 +5,7 @@ const GithubCornerSVG = '' +
 '<use href="logos/github_corner.svg"></use>' +
 '</svg>'
 
-export const GithubCorner = () => `
+export const Default = () => `
 <a
   class="vocab github-corner"
   :class="gitHubCornerClasses"
@@ -17,7 +17,7 @@ export const GithubCorner = () => `
 </a>
 `
 
-export const GithubCornerInverted = () => `
+export const Inverted = () => `
 <a
   class="vocab github-corner is-inverted"
   :class="gitHubCornerClasses"
@@ -29,7 +29,7 @@ export const GithubCornerInverted = () => `
 </a>
 `
 
-export const GithubCornerLeft = () => `
+export const LeftAligned = () => `
 <a
   class="vocab github-corner left-cornered"
   :class="gitHubCornerClasses"
@@ -43,7 +43,7 @@ export const GithubCornerLeft = () => `
 
 export const GithubCornerRight = () => `
 <a
-  class="vocab github-corner left-cornered"
+  class="vocab github-corner right-cornered"
   :class="gitHubCornerClasses"
   :href="url"
   :target="target"
