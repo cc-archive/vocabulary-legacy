@@ -1,0 +1,58 @@
+.content {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-details {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    opacity: 0;
+}
+
+.content:hover .content-details{
+    opacity: 1;
+}
+
+.content-details h6 {
+    color: #fff;
+    background-color: black;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.content-icons {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding-left: 16px;
+    padding-top: 8px;
+    opacity: 0;
+}
+
+.content:hover .content-icons{
+    opacity: 1;
+}
+
+
