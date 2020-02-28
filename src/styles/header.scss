@@ -11,6 +11,12 @@
 
   .navbar {
     background-color: $color-white;
+
+    .navbar-item:hover,
+    .navbar-link:hover,
+    .navbar-link:visited {
+      background-color: $color-white;
+    }
     .navbar-dropdown {
       padding: $space-small 0;
       width: 12.5rem;

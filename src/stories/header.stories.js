@@ -21,7 +21,7 @@ export const bigHeader = () =>
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a href="#" class="navbar-link" is-active>
+                        <a href="#" class="navbar-link">
                             <h5>lorem </h5>
                         </a>
                         <div class="navbar-dropdown">
@@ -79,7 +79,7 @@ export const smallHeader = () =>
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a href="#" class="navbar-link" is-active>
+                        <a href="#" class="navbar-link">
                             <h6>lorem </h6>
                         </a>
                         <div class="navbar-dropdown">
