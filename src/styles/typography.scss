@@ -13,7 +13,7 @@ $font-sizes: (
 @each $font-size-namespace, $size in $font-sizes {
     .text#{$font-size-namespace} {
         font-size: $size;
-        font-family: Source Sans Pro;
+        font-family: $family-source;
     }
 }
 
@@ -38,11 +38,11 @@ $header-font-sizes: (
         text-transform: uppercase;
         letter-spacing: 0.02rem;
         line-height: 3rem;
-        font-family: Roboto Condensed;
+        font-family: $family-roboto;
 
         &.b-header {
             text-transform: none;
-            font-family: Source Sans Pro;
+            font-family: $family-source;
         }
     }
 }

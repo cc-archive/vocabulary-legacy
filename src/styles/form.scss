@@ -7,8 +7,40 @@ $input-color: $color-dark-slate-gray;
 // text input
 
 .input {
-    border-width: .125rem;
-    padding-left: 1.5rem;
-    font-family: Source Sans Pro;
+  font-family: $family-source;
+  font-weight: 600;
+
+  border-width: .125rem;
+  padding-left: 1.5rem;
+}
+
+.select {
+  select {
+    font-family: "Source Sans Pro", $family-os;
+
     font-weight: 600;
+
+    border-color: $color-light-gray;
+    border-width: .125rem;
+
+    option {
+      font-weight: 400;
+    }
+
+    &[disabled] {
+      background-color: $color-lighter-gray;
+      border-color: $color-light-gray;
+
+      &:hover {
+        border-color: $color-light-gray;
+      }
+    }
+  }
+
+  &:not(.is-multiple):not(.is-loading)::after {
+    background: linear-gradient(45deg, $color-black 50%, transparent 50%);
+
+    border: none;
+    border-radius: 0;
+  }
 }
