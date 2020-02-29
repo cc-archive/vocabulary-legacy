@@ -7,8 +7,8 @@
     "lint": "eslint src/**/*.js",
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
-    "storybook": "start-storybook -s ./dist,./src/assets -p 8080",
-    "build:documentation": "npm run build && build-storybook -s ./dist,./src/assets -o ./docs"
+    "storybook": "start-storybook -s ./src/assets -p 8080",
+    "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

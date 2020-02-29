@@ -10,6 +10,11 @@ export const Welcome = () => `
   .welcome p {
     margin: 0.5em;
   }
+  .netlify {
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+  }
 </style>
 <div class="welcome">
   ${CCVocabulary()}
@@ -20,4 +25,7 @@ export const Welcome = () => `
     <button class="button is-primary">GitHub repository</button>
   </a>
 </div>
+<a class="netlify" href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+</a>
 `
