@@ -2,7 +2,7 @@ export default { title: 'SelectField' }
 
 export const Normal = () => `
 <div class="select">
-  <select id="input1">
+  <select>
     <option disabled>Select</option>
     <option>Option A</option>
     <option>Option B</option>
@@ -11,7 +11,7 @@ export const Normal = () => `
 
 export const Disabled = () => `
 <div class="select">
-  <select id="input1" disabled>
+  <select disabled>
     <option disabled>Select</option>
     <option>Option A</option>
     <option>Option B</option>
