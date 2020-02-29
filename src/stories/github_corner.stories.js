@@ -28,11 +28,3 @@ export const LeftAligned = () => `
     ${GitHubCornerSVG}
 </a>
 `
-
-export const GithubCornerRight = () => `
-<a
-  class="vocab github-corner right-cornered"
-  aria-label="View source on GitHub">
-    ${GitHubCornerSVG}
-</a>
-`
