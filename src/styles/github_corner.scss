@@ -1,42 +1,37 @@
-.vocab.github-corner {
-  --github-corner-primary: $color-black;
-  --github-corner-secondary: $color-white;
-
-  &.is-inverted {
-    --github-corner-primary: $color-white;
-    --github-corner-secondary: $color-black;
-  }
-
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
+.github-corner {
   position: absolute;
   top: 0;
 
-  &.left-cornered {
+  &.is-left-aligned {
     left: 0;
-    transform: scale(0,0);
+    transform: scaleX(-1);
   }
 
-  &.right-cornered {
+  &:not(.is-left-aligned) {
     right: 0;
   }
 
-  &:hover {
-    .octo-arm {
-      animation: octocat-wave 500ms ease-in-out;
+  &.is-inverted {
+    color: $color-black;
+
+    svg {
+      fill: $color-white;
+    }
+
+    &:hover {
+      color: $color-black;
     }
   }
-}
 
-@keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0)
-  }
-  20%, 60% {
-    transform: rotate(-25deg)
-  }
-  40%, 80% {
-    transform: rotate(10deg)
+  &:not(.is-inverted) {
+    color: $color-white;
+
+    svg {
+      fill: $color-black;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
   }
 }
