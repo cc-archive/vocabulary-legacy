@@ -53,3 +53,51 @@ const byncndeu = '' +
   '<use href="license_badges/big/by_nc_nd.eu.svg#layer1"></use>' +
   '</svg>'
 export const BYNCNDEU = () => `<div>${byncndeu}</div>`
+
+const bySmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by.svg#layer1"></use>' +
+  '</svg>'
+export const BYSmall = () => `<div>${bySmall}</div>`
+
+const bysaSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by_sa.svg#layer1"></use>' +
+  '</svg>'
+export const BYSASmall = () => `<div>${bysaSmall}</div>`
+
+const byndSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by_nd.svg#layer1"></use>' +
+  '</svg>'
+export const BYNDSmall = () => `<div>${byndSmall}</div>`
+
+const byncSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by_nc.svg#layer1"></use>' +
+  '</svg>'
+export const BYNCSmall = () => `<div>${byncSmall}</div>`
+
+const byncsaSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by_nc_sa.svg#layer1"></use>' +
+  '</svg>'
+export const BYNCSASmall = () => `<div>${byncsaSmall}</div>`
+
+const byncndSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/by_nc_nd.svg#layer1"></use>' +
+  '</svg>'
+export const BYNCNDSmall = () => `<div>${byncndSmall}</div>`
+
+const ccZeroSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/cc_zero.svg#Layer_1"></use>' +
+  '</svg>'
+export const CCZeroSmall = () => `<div>${ccZeroSmall}</div>`
+
+const publicdomainSmall = '' +
+  '<svg xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="license_badges/small/publicdomain.svg#Layer_1"></use>' +
+  '</svg>'
+export const PublicDomainSmall = () => `<div>${publicdomainSmall}</div>`
