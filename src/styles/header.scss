@@ -19,8 +19,14 @@
     }
 
     .navbar-link:not(.is-arrowless)::after {
-      // content: none;
-      content: fa-content($fa-var-caret-down);
+      position: absolute;
+      top: 53%;
+      border-color: black transparent;
+      border-style: solid;
+      border-width: $space-smaller $space-smaller 0 $space-smaller;
+      height: 0;
+      width: 0;
+      transform: none;
     }
 
     .navbar-dropdown {
