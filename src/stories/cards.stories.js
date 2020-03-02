@@ -176,3 +176,27 @@ export const PostEventNarrow = () => {
         </article>
     `
 }
+
+export const PostStatistic = () => {
+    return `
+        <style>
+            .card {
+                width: 600px;
+            }
+        </style>
+        <article class="card entry-post entry-statistic horizontal no-border">
+            <header class="card-header">
+                <div class="card-statistic">
+                    <span class="number">600+</span>
+                    <span class="caption">Lorem ipsum</span>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+        </article>
+    `
+}

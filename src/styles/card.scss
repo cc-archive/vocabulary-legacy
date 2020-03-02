@@ -31,6 +31,22 @@ $card-header-shadow: none;
                     padding: $space-small 0;
                 }
             }
+            .read-more {
+                position: relative;
+                margin-top: $space-small;
+                text-transform: uppercase;
+                color: $color-gray;
+                letter-spacing: 2%;
+                &:after {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    right: -1.5rem;
+                    top: .01rem;
+                }
+            }
         }
         &.horizontal {
             display: flex;
@@ -109,7 +125,7 @@ $card-header-shadow: none;
                         color: $color-light-slate-gray;
                     }
                     .day {
-                        font-size: 70px;
+                        font-size: 4.4rem;
                         font-weight: 600;
                         line-height: 4rem;
                     }
@@ -122,20 +138,33 @@ $card-header-shadow: none;
                 .content {
                     padding-bottom: $space-small;
                 }
-                .read-more {
-                    position: relative;
-                    text-transform: uppercase;
-                    color: $color-gray;
-                    letter-spacing: 2%;
-                    &:after {
-                        content: '';
-                        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
-                        position: absolute;
-                        width: 1rem;
-                        height: 1rem;
-                        right: -1.5rem;
-                        top: .01rem;
+            }
+        }
+        &.entry-statistic {
+            .card-header {
+                width: 65%;
+                padding: $space-small;
+                align-items: center;
+                .card-statistic {
+                    &>* {
+                        display: block;
                     }
+                    .number {
+                        font-size: 4.4rem;
+                        font-weight: 600;
+                        line-height: 4rem;
+                    }
+                    .caption {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .card-content {
+                .content {
+                    padding-bottom: 1rem;
+                    padding-top: 0;
                 }
             }
         }
