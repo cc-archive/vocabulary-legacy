@@ -31,7 +31,14 @@ $ npm install
 ```
 
 **Step 4:**
-Start the Vocabulary storybook by running the `storybook` task.
+Instruct the webpack to compile the code whenever a file is updated within the dependency graph by running the `watch` task. 
+
+```
+$ npm run watch
+```
+
+**Step 5:**
+Start the Vocabulary storybook by running the `storybook` task in a separate terminal window.
 
 ```
 $ npm run storybook
