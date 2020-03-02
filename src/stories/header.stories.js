@@ -23,7 +23,13 @@ export const bigHeader = () =>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a href="#" class="navbar-link">
                             <h5>lorem </h5>
+                                <span class="icon">
+                                    <i class="fas fa-home"></i>
+                                </span>
                         </a>
+                        <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
                         <div class="navbar-dropdown">
                             <a class="navbar-item"><h5> item one </h5></a>
                             <a class="navbar-item"><h5> item two </h5></a>

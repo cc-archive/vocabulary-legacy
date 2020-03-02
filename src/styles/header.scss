@@ -17,6 +17,12 @@
     .navbar-link:visited {
       background-color: $color-white;
     }
+
+    .navbar-link:not(.is-arrowless)::after {
+      // content: none;
+      content: fa-content($fa-var-caret-down);
+    }
+
     .navbar-dropdown {
       padding: $space-small 0;
       width: 12.5rem;
