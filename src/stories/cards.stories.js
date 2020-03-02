@@ -200,3 +200,53 @@ export const PostStatistic = () => {
         </article>
     `
 }
+
+export const PostQuote = () => {
+    return `
+        <style>
+            .card {
+                width: 600px;
+            }
+        </style>
+        <article class="card entry-post entry-quote horizontal no-border">
+            <header class="card-image">
+                <figure class="image is-1by1">
+                    <img src="http://placekitten.com/182/182" alt="Header image">
+                </figure>
+            </header>
+            <div class="card-content">
+                <span class="quote"></span>
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat viverra in tellus etiam tellus sed ultrices donec dapibus. Lacus risus et, ut tortor eros id et sollicitudin. Feugiat sit faucibus urna.
+                    <div class="quote-author">
+                        <strong class="title"> Lorem ipsum dolor sit.</strong>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    `
+}
+
+export const ImageTop = () => {
+    return `
+        <style>
+            .card {
+                width: 340px;
+            }
+        </style>
+        <article class="card entry-post entry-image vertical">
+            <header class="card-image">
+                <a href="#">
+                    <figure class="image is-4by5">
+                        <img src="http://placekitten.com/350/370" alt="Header image">
+                    </figure>
+                </a>
+            </header>
+            <div class="card-content">
+                <h4 class="card-title"><a href="#">This is a label</a></h4>
+                <span class="subtitle">This is a short description</span>
+            </div>
+        </article>
+    `
+}
