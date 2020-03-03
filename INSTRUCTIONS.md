@@ -31,7 +31,7 @@ $ npm install
 ```
 
 **Step 4:**
-Instruct the webpack to compile the code whenever a file is updated within the dependency graph by running the `watch` task. 
+Watch Sass files for changes, and recompile stylesheets whenever a file is updated, by running the `watch` task. 
 
 ```
 $ npm run watch
