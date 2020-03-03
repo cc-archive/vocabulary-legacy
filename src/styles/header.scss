@@ -16,12 +16,13 @@
     .navbar-link:hover,
     .navbar-link:visited {
       background-color: $color-white;
+      color: $color-black;
     }
 
     .navbar-link:not(.is-arrowless)::after {
       position: absolute;
       top: 53%;
-      border-color: black transparent;
+      border-color: $color-light-slate-gray transparent;
       border-style: solid;
       border-width: $space-smaller $space-smaller 0 $space-smaller;
       height: 0;
@@ -35,6 +36,14 @@
       border-top: none;
       position: absolute;
       top: 75%;
+
+      h5,
+      h6 {
+        color: $color-black;
+        &:hover {
+          color: $color-light-slate-gray;
+        }
+      }
 
       h5 {
         line-height: 1.875rem;
@@ -59,5 +68,14 @@
     &.small {
       padding: 0;
     }
+  }
+}
+
+h5,
+h6 {
+  color: $color-light-slate-gray;
+  &:hover,
+  &:active {
+    color: $color-black;
   }
 }
