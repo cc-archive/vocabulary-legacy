@@ -58,7 +58,7 @@ $brand-colors: (
 @each $color-namespace, $brand-color in $brand-colors {
 
     .has-background-#{$color-namespace} {
-        background-color: $brand-color;
+        background-color: $brand-color !important;
     }
 
     .has-color-#{$color-namespace} {

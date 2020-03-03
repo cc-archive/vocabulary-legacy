@@ -39,12 +39,12 @@ $card-header-shadow: none;
                 letter-spacing: 2%;
                 &:after {
                     content: '';
-                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
                     position: absolute;
                     width: 1rem;
                     height: 1rem;
                     right: -1.5rem;
                     top: .01rem;
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
                 }
             }
         }
@@ -214,6 +214,66 @@ $card-header-shadow: none;
                     color: $color-gray;
                     font-weight: 600;
                     letter-spacing: .1rem;
+                }
+            }
+        }
+        &.link {
+            a {
+                display: block;
+                padding: $space-normal;
+                color: $color-black;
+                background-color: $color-white;
+                @each $color-namespace, $brand-color in $brand-colors {
+                    &.has-background-#{$color-namespace} {
+                        @if $color-namespace == 'gold' or $color-namespace == 'turquoise' {
+                            color: $color-black;
+                        } @else {
+                            color: $color-white;
+                            .card-content {
+                                .card-title {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card-content {
+                    display: block;
+                    position: relative;
+                    &.has-bottom-link {
+                        padding: 0 0 6rem 0;
+                    }
+                    .card-title {
+                        text-transform: uppercase;
+                        line-height: 2.5rem;
+                    }
+                    .content {
+                        display: block;
+                        font-weight: 600;
+                    }
+                    .link-arrow {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        text-transform: uppercase;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 1rem;
+                            height: 1rem;
+                            right: -1.3rem;
+                            top: .22rem;
+                            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+                &:hover {
+                    @each $color-namespace, $brand-color in $brand-colors {
+                        &.has-background-#{$color-namespace} {
+                            background-color: lighten($brand-color,10) !important;
+                        }
+                    }
                 }
             }
         }

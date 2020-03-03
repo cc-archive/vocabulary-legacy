@@ -1,4 +1,5 @@
-export default { title: 'Cards' }
+import { withKnobs, select } from '@storybook/addon-knobs'
+export default { title: 'Cards', decorators: [withKnobs] }
 
 export const PostVertical = () => {
     return `
@@ -247,6 +248,53 @@ export const ImageTop = () => {
                 <h4 class="card-title"><a href="#">This is a label</a></h4>
                 <span class="subtitle">This is a short description</span>
             </div>
+        </article>
+    `
+}
+
+export const Link = () => {
+    const Brands = {
+        Blue: 'blue',
+        Forest: 'forest',
+        Gold: 'gold',
+        Orange: 'orange',
+        Tomato: 'tomato',
+        Turquoise: 'turquoise'
+    }
+    const brands = select('Brand', Brands, Brands.Tomato)
+    return `
+        <style>
+            .card {
+                width: 400px;
+            }
+        </style>
+        <article class="card entry-post link no-border">
+            <a href="#" class="has-background-${brands}">
+                <span class="card-content has-bottom-link">
+                    <h2 class="card-title">This is a Title of a page or section</h2>
+                    <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+                    <span class="link-arrow">Loren ipsum dolor</span>
+                </span>
+            </a>
+        </article>
+    `
+}
+
+export const LinkBorder = () => {
+    return `
+        <style>
+            .card {
+                width: 400px;
+            }
+        </style>
+        <article class="card entry-post link">
+            <a href="#">
+                <span class="card-content has-bottom-link">
+                    <h2 class="card-title">This is a Title of a page or section</h2>
+                    <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+                    <span class="link-arrow">Loren ipsum dolor</span>
+                </span>
+            </a>
         </article>
     `
 }
