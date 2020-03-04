@@ -1,0 +1,31 @@
+@import "../../node_modules/bulma/sass/components/tabs.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+
+$tabs-border-bottom-width: 3px;
+
+.tabs a {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  border-bottom-color: #dbdbdb;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: #888282;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5em 1em;
+  vertical-align: top;
+}
+
+.tabs li.is-active a {
+  border-bottom-color: black;
+
+  color: black;
+}
+.tabs a:hover {
+  border-bottom-color: hsl(0, 0%, 86%);
+  color: #363636;
+}
