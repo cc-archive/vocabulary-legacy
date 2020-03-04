@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,kBAAkB;EAC/B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,mCAAmC,CAAC,kBAAkB",
+    "sources": [
+        "accidenz_commons.scss"
+    ],
+    "names": [],
+    "file": "accidenz_commons.css"
+}
