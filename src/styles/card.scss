@@ -11,17 +11,22 @@ $card-header-shadow: none;
             border: none;
         }
         .card-content {
+            padding: $space-small $space-normal;
             .card-title {
                 text-transform: none;
                 line-height: 1.6rem;
                 a {
-                    color: $color-light-slate-gray;
+                    color: $color-black;
                 }
             }
             .subtitle {
-                margin-bottom: $space-small;
-                font-size: .8rem;
+                display: block;
+                margin-top: $space-smaller;
+                color: $color-gray;
+                font-size: .9rem;
+                font-weight: 700;
                 text-transform: uppercase;
+                letter-spacing: .1rem;
             }
             .content {
                 padding-top: $space-small;
@@ -50,6 +55,9 @@ $card-header-shadow: none;
         }
         &.horizontal {
             display: flex;
+            .card-content {
+                padding: $space-normal;
+            }
             .card-image {
                 .image {
                     height: 100%;
@@ -155,7 +163,7 @@ $card-header-shadow: none;
                         line-height: 4rem;
                     }
                     .caption {
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         font-weight: 600;
                         text-transform: uppercase;
                     }
@@ -222,7 +230,6 @@ $card-header-shadow: none;
                 display: block;
                 padding: $space-normal;
                 color: $color-black;
-                background-color: $color-white;
                 @each $color-namespace, $brand-color in $brand-colors {
                     &.has-background-#{$color-namespace} {
                         @if $color-namespace == 'gold' or $color-namespace == 'turquoise' {
