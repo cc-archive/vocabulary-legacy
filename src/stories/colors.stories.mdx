@@ -15,8 +15,8 @@ export const color = (name, hex, r, g, b) => `
       margin: 0.5em;
     }
     .box-${hex} {
-      width: 120px;
-      height: 80px;
+      width: 10em;
+      height: 5em;
       background-color: #${hex};
     }
   </style>
@@ -78,7 +78,7 @@ export const color = (name, hex, r, g, b) => `
 <Preview>
   <Story name="Feedback">{
     color('Success', 'E0F2BF', 224, 242, 191) +
-    color('Warning', 'FFC9C9', 255, 201, 201) +
-    color('Error', 'FAECBC', 250, 236, 188)
+    color('Warning', 'FAECBC', 250, 236, 188) +
+    color('Error', 'FFC9C9', 255, 201, 201)
   }</Story>
 </Preview>
