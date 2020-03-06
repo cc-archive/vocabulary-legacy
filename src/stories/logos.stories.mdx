@@ -1,0 +1,187 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+<Meta title="Logos" />
+
+# Logos
+
+export const logomark = '' +
+  '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Logomark">{`
+    <div class="has-text-black">${logomark}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Logomark Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${logomark}</div>
+  `}</Story>
+</Preview>
+
+export const lettermark = '' +
+  '<svg width="64" height="64" viewBox="5.5 -3.5 64 64" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/cc/lettermark.svg#creativecommons"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Lettermark">{`
+    <div class="has-text-black">${lettermark}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Lettermark Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${lettermark}</div>
+  `}</Story>
+</Preview>
+
+export const letterheart = '' +
+  '<svg width="64" height="64" viewBox="0 0 46296.26 40689.13" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/cc/letterheart.svg#creativecommons"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Letterheart">{`
+    <div class="has-text-black">${letterheart}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Letterheart Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${letterheart}</div>
+  `}</Story>
+</Preview>
+
+export const globalNetwork = '' +
+  '<svg width="250" height="79" viewBox="0 0 250 79" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/global_network.svg#globalnetwork"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Global Network">{`
+    <div class="has-text-black">${globalNetwork}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Global Network Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${globalNetwork}</div>
+  `}</Story>
+</Preview>
+
+export const openSource = '' +
+  '<svg width="250" height="76" viewBox="0 0 250 76" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/open_source.svg#opensource"></use>' +
+  '</svg>'
+
+
+<Preview>
+  <Story name="CC Open Source">{`
+    <div class="has-text-black">${openSource}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Open Source Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${openSource}</div>
+  `}</Story>
+</Preview>
+
+export const certificates = '' +
+  '<svg width="160" height="174" viewBox="0 0 160 174" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/certificates.svg#content"></use>' +
+  '<use href="logos/products/certificates.svg#dots"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Certificates">{`
+    ${certificates}
+  `}</Story>
+</Preview>
+
+export const certificatesMonochrome = '' +
+  '<svg width="160" height="174" viewBox="0 0 160 174" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/certificates.svg#content"></use>' +
+  '<use href="logos/products/certificates.svg#monochrome"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Certificates Monochrome">{`
+    <div class="has-text-black">${certificatesMonochrome}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Certificates Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${certificatesMonochrome}</div>
+  `}</Story>
+</Preview>
+
+export const vocabulary = '' +
+  '<svg width="250" height="41" viewBox="0 0 250 41" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/vocabulary.svg#vocabulary"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Vocabulary">{`
+    <div class="has-text-black">${vocabulary}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Vocabulary Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${vocabulary}</div>
+  `}</Story>
+</Preview>
+
+export const search = '' +
+  '<svg width="250" height="81" viewBox="0 0 250 81" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/search.svg#search"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Search">{`
+    <div class="has-text-black">${search}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Search Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ]
+  }}>{`
+    <div class="has-text-white">${search}</div>
+  `}</Story>
+</Preview>
