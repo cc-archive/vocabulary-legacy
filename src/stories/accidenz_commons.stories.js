@@ -1,4 +1,4 @@
-export default { title: "Accidenz Commons" };
+export default { title: 'Accidenz Commons' };
 
 export const demo = () => `
   <style>
@@ -10,7 +10,7 @@ export const demo = () => `
     The quick brown fox jumps over the lazy dog.
   </p>
 
-`;
+`
 
 export const UpperCaseLetters = () => `
   <table>
@@ -52,7 +52,7 @@ export const UpperCaseLetters = () => `
 
   <h3 class="exampleHeader">Example</h3>
   <p class="fontEg">THE QUICK BROWN FOX JUMPS OVER LAZY DOG</p>
-`;
+`
 
 export const LowerCaseLetters = () => `
   <table>
@@ -95,7 +95,7 @@ export const LowerCaseLetters = () => `
   
 <h3 class="exampleHeader">Example</h3>
   <p class="fontEg">the quick brown fox jumps over the lazy dog </p>
-`;
+`
 
 export const Numbers = () => `
   <table class="table">
@@ -119,4 +119,4 @@ export const Numbers = () => `
 
   <h3 class="exampleHeader">Example</h3>
   <h4 class="fontEg">0123456789</h4>
-`;
+`
