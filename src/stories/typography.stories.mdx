@@ -1,0 +1,137 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+<Meta title="Typography" />
+
+# Text styles
+
+The main fonts used across all Creative Commons' sites are Source Sans Pro and Roboto Condensed. Both are available on
+Google Fonts, support a wide range of languages, and were designed to be displayed digitally.
+
+The text styles defined should be used depending on the content displayed. For titles and short-length calls, Roboto
+Condensed is the option. For long reads and descriptive sentences, Source Sans Pro. To not to risk the content
+legibility, Roboto Condensed was adapted by adding 2% of kerning. In both cases, the main color for white background is
+DarkSlateGray color.
+
+Depending on the situation, some styles can be adapted having in mind that the number of styles implemented should keep
+simple. The criteria used to apply Roboto or Source Sans Pro for titles must put legibility over aesthetic. Based on
+that, we created title styles for both fonts.
+
+## Text styles, descriptions and examples
+
+export const typeAContent = (i) => `<h${i}>Heading ${i}A</h${i}>`
+
+<Preview>
+  <Story name="Heading 1A" height="100px">{typeAContent(1)}</Story>
+</Preview>
+
+Main title in page or section. Short length text to preserve legibility.
+
+Eg: Page name; Section title.
+
+<Preview>
+  <Story name="Heading 2A" height="100px">{typeAContent(2)}</Story>
+</Preview>
+
+Titles in sections. Multiples uses in a single page. Recommended as H1.
+
+Eg: H1 in a blog post.
+
+<Preview>
+  <Story name="Heading 3A" height="100px">{typeAContent(3)}</Story>
+</Preview>
+
+Short-length titles in sections.
+
+Eg: Title galleries; Title of “related content” sections.
+
+<Preview>
+  <Story name="Heading 4A" height="100px">{typeAContent(4)}</Story>
+</Preview>
+
+Mid-length titles in sections.
+
+Eg: Title of banners and links.
+
+<Preview>
+  <Story name="Heading 5A" height="100px">{typeAContent(5)}</Story>
+</Preview>
+
+Mid-length titles in sections.
+
+Eg: Title of banners and links.
+
+<Preview>
+  <Story name="Value" height="100px">{`<p class="value">000</p>`}</Story>
+</Preview>
+
+Numeric values across the website.
+
+Eg: Community members; Post published.
+
+export const typeBContent = (i) => `<h${i} class="b-header">Heading ${i}B</h${i}>`
+
+<Preview>
+  <Story name="Heading 3B" height="100px">{typeBContent(3)}</Story>
+</Preview>
+
+Long-length titles in sections and posts.
+
+Eg: H3 in a blog post.
+
+<Preview>
+  <Story name="Heading 4B" height="100px">{typeBContent(4)}</Story>
+</Preview>
+
+Long-length titles in sections and posts.
+
+Eg: H4 in a blog post.
+
+<Preview>
+  <Story name="Heading 5B" height="100px">{typeBContent(5)}</Story>
+</Preview>
+
+Long-length titles in sections and posts. When is placed over color, it should keep a considerable contrast.
+
+Eg: H5 in a blog post; Short-length description paragraph.
+
+export const textContent = (size) => `<p class="text-${size.toLowerCase()}">Body ${size}</p>`
+
+<Preview>
+  <Story name="Body Bigger" height="100px">{textContent('Bigger')}</Story>
+</Preview>
+
+Mid-length paragraphs to summarize relevant content.
+
+Eg: Introduction paragraph in a blog post; Quotes.
+
+<Preview>
+  <Story name="Body Big" height="100px">{textContent('Big')}</Story>
+</Preview>
+
+Highlighted content in a section.
+
+Eg: Section descriptions in a main CTA.
+
+<Preview>
+  <Story name="Body Normal" height="100px">{textContent('Normal')}</Story>
+</Preview>
+
+The default size of any content. Recommended for body content.
+
+Eg: Body content in a post.
+
+<Preview>
+  <Story name="List" height="100px">{textContent('Normal')}</Story>
+</Preview>
+
+The default size of any content inside a list, no matter dots or numbers.
+
+Eg: Body content in a post.
+
+<Preview>
+  <Story name="Caption" height="100px">{textContent('Small')}</Story>
+</Preview>
+
+Mid and short-length content. Description of elements and notes. It should not be used for main goal content.
+
+Eg: Image notes.
