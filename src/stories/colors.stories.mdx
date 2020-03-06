@@ -46,7 +46,11 @@ export const color = (name, hex, r, g, b) => `
 ## Neutral
 
 <Preview style={{backgroundColor: 'white'}}>
-  <Story name="Neutral">{
+  <Story name="Neutral" parameters={{
+    backgrounds: [
+      { name: 'white', value: 'white', default: true }
+    ]
+  }}>{
     color('LightSlateGray', '787878', 120, 120, 120) +
     color('NormalGray', 'B0B0B0', 176, 176, 176) +
     color('LightGray', 'D8D8D8', 216, 216, 216) +
