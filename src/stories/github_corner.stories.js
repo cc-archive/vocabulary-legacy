@@ -1,4 +1,9 @@
-export default { title: 'GitHubCorner' }
+import { config, withDesign } from 'storybook-addon-designs'
+
+export default {
+  title: 'GitHubCorner',
+  decorators: [withDesign]
+}
 
 const invertedBackground = {
   parameters: {
@@ -21,6 +26,15 @@ export const Default = () => `
   ${GitHubCorner}
 </a>
 `
+Default.story = {
+  parameters: {
+    design: config({
+      type: 'figma',
+      url:
+        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A15'
+    })
+  }
+}
 
 export const Inverted = () => `
 <a
@@ -29,7 +43,16 @@ export const Inverted = () => `
   ${GitHubCorner}
 </a>
 `
-Inverted.story = invertedBackground
+Default.story = {
+  parameters: {
+    design: config({
+      type: 'figma',
+      url:
+        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A3'
+    }),
+    ...invertedBackground.parameters
+  }
+}
 
 export const LeftAligned = () => `
 <a
