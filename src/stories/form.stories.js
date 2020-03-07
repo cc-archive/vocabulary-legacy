@@ -1,4 +1,4 @@
-import { config, withDesign} from 'storybook-addon-designs';
+import { config, withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Form',
