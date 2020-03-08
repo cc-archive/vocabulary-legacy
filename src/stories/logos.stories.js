@@ -14,28 +14,26 @@ const invertedBackground = {
   }
 }
 
+const figmaPage = (figmaUrl) => ({
+  parameters: {
+    design: config({
+      type: 'figma',
+      url: figmaUrl
+    })
+  }
+})
+
 const logomark = '' +
   '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
   '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
   '</svg>'
 export const CCLogomark = () => `<div class="has-text-black">${logomark}</div>`
-CCLogomark.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1%3A13'
-    })
-  }
-}
+CCLogomark.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1%3A13')
 export const CCLogomarkWhite = () => `<div class="has-text-white">${logomark}</div>`
 CCLogomarkWhite.story = {
   parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=476%3A0'
-    }),
+    ...figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=476%3A0').parameters,
     ...invertedBackground.parameters
   }
 }
@@ -45,15 +43,8 @@ const lettermark = '' +
   '<use href="logos/cc/lettermark.svg#creativecommons"></use>' +
   '</svg>'
 export const CCLettermark = () => `<div class="has-text-black">${lettermark}</div>`
-CCLettermark.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=712%3A8'
-    })
-  }
-}
+CCLettermark.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=712%3A8')
 export const CCLettermarkWhite = () => `<div class="has-text-white">${lettermark}</div>`
 CCLettermarkWhite.story = invertedBackground
 
@@ -62,15 +53,8 @@ const letterheart = '' +
   '<use href="logos/cc/letterheart.svg#creativecommons"></use>' +
   '</svg>'
 export const CCLetterheart = () => `<div class="has-text-black">${letterheart}</div>`
-CCLetterheart.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=712%3A8'
-    })
-  }
-}
+CCLetterheart.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=712%3A7')
 export const CCLetterheartWhite = () => `<div class="has-text-white">${letterheart}</div>`
 CCLetterheartWhite.story = invertedBackground
 
@@ -79,15 +63,8 @@ const globalNetwork = '' +
   '<use href="logos/products/global_network.svg#globalnetwork"></use>' +
   '</svg>'
 export const CCGlobalNetwork = () => `<div class="has-text-black">${globalNetwork}</div>`
-CCGlobalNetwork.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A2'
-    })
-  }
-}
+CCGlobalNetwork.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A2')
 export const CCGlobalNetworkWhite = () => `<div class="has-text-white">${globalNetwork}</div>`
 CCGlobalNetworkWhite.story = invertedBackground
 
@@ -96,15 +73,8 @@ const openSource = '' +
   '<use href="logos/products/open_source.svg#opensource"></use>' +
   '</svg>'
 export const CCOpenSource = () => `<div class="has-text-black">${openSource}</div>`
-CCOpenSource.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A41'
-    })
-  }
-}
+CCOpenSource.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A41')
 export const CCOpenSourceWhite = () => `<div class="has-text-white">${openSource}</div>`
 CCOpenSourceWhite.story = invertedBackground
 
@@ -119,15 +89,8 @@ const certificatesMonochrome = '' +
   '<use href="logos/products/certificates.svg#monochrome"></use>' +
   '</svg>'
 export const CCCertificates = () => certificates
-CCCertificates.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A101'
-    })
-  }
-}
+CCCertificates.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A101')
 export const CCCertificatesBlack = () => `<div class="has-text-black">${certificatesMonochrome}</div>`
 export const CCCertificatesWhite = () => `<div class="has-text-white">${certificatesMonochrome}</div>`
 CCCertificatesWhite.story = invertedBackground
@@ -137,15 +100,8 @@ const vocabulary = '' +
   '<use href="logos/products/vocabulary.svg#vocabulary"></use>' +
   '</svg>'
 export const CCVocabulary = () => `<div class="has-text-black">${vocabulary}</div>`
-CCVocabulary.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A97'
-    })
-  }
-}
+CCVocabulary.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A97')
 export const CCVocabularyWhite = () => `<div class="has-text-white">${vocabulary}</div>`
 CCVocabularyWhite.story = invertedBackground
 
@@ -154,14 +110,7 @@ const search = '' +
   '<use href="logos/products/search.svg#search"></use>' +
   '</svg>'
 export const CCSearch = () => `<div class="has-text-black">${search}</div>`
-CCSearch.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A80'
-    })
-  }
-}
+CCSearch.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A80')
 export const CCSearchWhite = () => `<div class="has-text-white">${search}</div>`
 CCSearchWhite.story = invertedBackground

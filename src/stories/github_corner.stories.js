@@ -14,6 +14,15 @@ const invertedBackground = {
   }
 }
 
+const figmaPage = (figmaUrl) => ({
+  parameters: {
+    design: config({
+      type: 'figma',
+      url: figmaUrl
+    })
+  }
+})
+
 const GitHubCorner = '' +
   '<svg width="80" height="80" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">' +
   '<use href="github_corner.svg#githubcorner"></use>' +
@@ -26,15 +35,8 @@ export const Default = () => `
   ${GitHubCorner}
 </a>
 `
-Default.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A15'
-    })
-  }
-}
+Default.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A15')
 
 export const Inverted = () => `
 <a
@@ -43,13 +45,9 @@ export const Inverted = () => `
   ${GitHubCorner}
 </a>
 `
-Default.story = {
+Inverted.story = {
   parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A3'
-    }),
+    ...figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A3').parameters,
     ...invertedBackground.parameters
   }
 }

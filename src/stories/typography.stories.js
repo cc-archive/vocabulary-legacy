@@ -17,19 +17,21 @@ const generateKnob = () => {
   return number('Header Size', defaultValue, options)
 }
 
+const figmaPage = (figmaUrl) => ({
+  parameters: {
+    design: config({
+      type: 'figma',
+      url: figmaUrl
+    })
+  }
+})
+
 export const HeaderAs = () => {
   const headerSize = generateKnob()
   return `<h${headerSize}>This is a text</h${headerSize}>`
 }
-HeaderAs.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=445%3A1053'
-    })
-  }
-}
+HeaderAs.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=445%3A1053')
 
 export const HeaderBs = () => {
   const headerSize = generateKnob()

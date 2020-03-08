@@ -5,38 +5,26 @@ export default {
   decorators: [withDesign]
 }
 
-export const Button = () => '<button class="button big">Button</button>'
-Button.story = {
+const figmaPage = (figmaUrl) => ({
   parameters: {
     design: config({
       type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A28'
+      url: figmaUrl
     })
   }
-}
+})
+
+export const Button = () => '<button class="button big">Button</button>'
+Button.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A28')
 
 export const ButtonPrimary = () => '<button class="button is-primary big">Button</button>'
-ButtonPrimary.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A23'
-    })
-  }
-}
+ButtonPrimary.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A23')
 
 export const ButtonInfo = () => '<button class="button is-info">Button</button>'
-ButtonInfo.story = {
-  parameters: {
-    design: config({
-      type: 'figma',
-      url:
-        'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A44'
-    })
-  }
-}
+ButtonInfo.story =
+  figmaPage('https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1403%3A44')
 
 export const ButtonDonate = () => '<button class="button donate medium">Button</button>'
 
