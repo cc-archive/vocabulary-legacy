@@ -2,7 +2,7 @@ export default { title: 'Progress' }
 
 export const VerticalNav = () =>
   '<div class="container padding-horizontal-large padding-vertical-large has-background-white-ter">' +
-	  '<div class="columns">' +
+    '<div class="columns">' +
       '<div class="column is-half">' +
         '<h2 class="has-text-black is-size-4 is-uppercase has-text-weight-bold">Current state, first question</h2>' +
         '<nav class="panel">' +
@@ -119,8 +119,8 @@ export const VerticalNav = () =>
               '</div>' +
             '</a>' +
         '</nav>' +
-	    '</div>' +
-	  '</div>' +
+      '</div>' +
+    '</div>' +
 
   '<div class="columns padding-top-normal">' +
 
