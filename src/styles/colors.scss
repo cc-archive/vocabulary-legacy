@@ -10,6 +10,7 @@ $color-tomato-brighter: rgb(255, 105, 51);
 $color-gold-brighter: rgb(245, 212, 0);
 $color-forest-brighter: rgb(0, 184, 80);
 
+
 // interaction
 $color-error: rgb(255, 201, 201);
 $color-success: rgb(224, 242, 191);
@@ -24,6 +25,7 @@ $color-light-slate-gray: rgb(120, 120, 120);
 $color-gray: rgb(176, 176, 176);
 $color-light-gray: rgb(216, 216, 216);
 $color-lighter-gray: rgb(245, 245, 245);
+
 
 
 // overriding Bulma colors
@@ -52,7 +54,7 @@ $brand-colors: (
   "dark-slate-gray": $color-dark-slate-gray,
   "tomato-brighter": $color-tomato-brighter,
   "gold-brighter": $color-gold-brighter,
-  "forest-brighter": $color-forest-brighter
+  "forest-brighter": $color-forest-brighter,
 );
 
 @each $color-namespace, $brand-color in $brand-colors {

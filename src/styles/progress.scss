@@ -1,0 +1,32 @@
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+
+.panel {
+  border: 2px solid #D8D8D8;
+  box-shadow: none;
+  .card-content {
+    padding: 1rem;
+  }
+  .next-question-btn {
+    letter-spacing: 0.02em;
+  }
+  .panel-block {
+    &.panel-block:not(:first-child){
+      border-top: 2px solid #D8D8D8;
+    }
+      &.firstQuestionHover  {
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.06);
+      }
+  }
+}
+
+
+
+
+
+
+@import "../../node_modules/bulma/sass/elements/title.sass";
+@import "../../node_modules/bulma/sass/elements/tag.sass";
+@import "../../node_modules/bulma/sass/components/card.sass";
+//@import "../../node_modules/bulma/sass/components/level.sass";
+@import "../../node_modules/bulma/sass/components/media.sass";
+@import "../../node_modules/bulma/sass/components/panel.sass";
