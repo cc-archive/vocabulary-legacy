@@ -32,6 +32,12 @@ $spacing-directions: (
   "-vertical": "-top" "-bottom",
 );
 
+// this generates paddings and margins of each size
+// on each direction: left, right, top, bottom,
+// vertical (left and right) and vertical (top and bottom)
+// and all directions
+// for zero margin and padding, Bulma already has those classes
+// `is-paddingless` and `is-marginless`
 @each $property-namespace, $property in $spacing-properties {
 
   @each $size-namespace, $size in $spacing-sizes {
