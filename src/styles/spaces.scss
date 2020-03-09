@@ -37,7 +37,7 @@ $spacing-sizes: (
       .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
 
         @each $direction in $direction-rules {
-          #{$property}#{$direction}: $size;
+          #{$property}#{$direction}: $size !important;
         }
       }
     }
