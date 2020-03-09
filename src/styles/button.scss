@@ -3,24 +3,61 @@
 .button {
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   line-height: 0;
   border: 0.125rem solid $color-light-slate-gray;
   color: $color-light-slate-gray;
+  background-color: $color-white;
+  font-size: 1.43rem;
+  padding: 1.8rem 2.5rem;
+
+  &:hover {
+    background-color: $color-light-slate-gray;
+    color: $color-white;
+  }
 
   &.big {
     font-size: 1.75rem;
-    padding: 1.5rem 2.5rem;
+    padding: 2.4rem 2.5rem;
   }
 
-  &.medium {
-    font-size: 1.43rem;
-    padding: 1rem 2.5rem;
+  &.small {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
   }
-}
 
-.donate {
-  background-color: $color-gold;
-  border: none;
-  color: $color-white;
+  &.tiny {
+    padding: 0rem 0.5rem;
+    font-size: 1rem;
+    text-transform: none;
+    height: 2rem;
+  }
+
+  &.label {
+    padding: 0rem 1rem;
+    font-size: 0.81rem;
+    text-transform: none;
+    height: 1.81rem;
+    border-radius: 18.75rem;
+    border: 0.125rem solid $color-light-gray;
+  }
+
+  &.is-primary:hover {
+    background-color: $color-tomato-brighter;
+  }
+
+  &.is-info:hover {
+    background-color: $color-forest-brighter;
+  }
+
+  &.donate {
+    background-color: $color-gold;
+    border: none;
+    color: $color-black;
+  
+    &:hover {
+      background-color: $color-gold-brighter;
+      color: $color-black;
+    }
+  }
 }
