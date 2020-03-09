@@ -26,7 +26,6 @@ $spacing-sizes: (
   "-large": $space-large,
   "-larger": $space-larger,
   "-extra-larger": $space-extra-larger,
-  "-none": 0
 );
 
 @each $property-namespace, $property in $spacing-properties {
