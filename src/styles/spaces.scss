@@ -1,9 +1,27 @@
-$space-smaller: .5rem;
-$space-small: 1rem;
+$space-smallest: .5rem;
+$space-smaller: 1rem;
+$space-small: 1.5rem;
 $space-normal: 2rem;
-$space-large: 3rem;
-$space-larger: 4rem;
-$space-extra-larger: 6rem;
+$space-big: 2.5rem;
+$space-bigger: 3rem;
+$space-large: 4rem;
+$space-larger: 6rem;
+
+$spacing-properties: (
+  "padding": "padding",
+  "margin": "margin",
+);
+
+$spacing-sizes: (
+  "-smallest": $space-smallest,
+  "-smaller": $space-smaller,
+  "-small": $space-small,
+  "-normal": $space-normal,
+  "-big": $space-big,
+  "-bigger": $space-bigger,
+  "-large": $space-large,
+  "-larger": $space-larger,
+);
 
 $spacing-directions: (
   "-top": "-top",
@@ -14,25 +32,11 @@ $spacing-directions: (
   "-vertical": "-top" "-bottom",
 );
 
-$spacing-properties: (
-  "padding": "padding",
-  "margin": "margin",
-);
-
-$spacing-sizes: (
-  "-smaller": $space-smaller,
-  "-small": $space-small,
-  "-normal": $space-normal,
-  "-large": $space-large,
-  "-larger": $space-larger,
-  "-extra-larger": $space-extra-larger,
-);
-
 @each $property-namespace, $property in $spacing-properties {
 
-  @each $direction-namespace, $direction-rules in $spacing-directions {
+  @each $size-namespace, $size in $spacing-sizes {
 
-    @each $size-namespace, $size in $spacing-sizes {
+    @each $direction-namespace, $direction-rules in $spacing-directions {
 
       .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
 
@@ -40,6 +44,10 @@ $spacing-sizes: (
           #{$property}#{$direction}: $size !important;
         }
       }
+    }
+    
+    .#{$property}#{$size-namespace} {
+      #{$property}: $size !important;
     }
   }
 }
