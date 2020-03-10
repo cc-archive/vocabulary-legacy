@@ -1,103 +1,56 @@
 export default { title: 'LicenseBadge' }
 
-const by = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by.svg#layer1"></use>' +
-  '</svg>'
+const licenseSVG = (size, license) => `<svg ...>
+<use href="license_badges/${size}/${license}.svg#layer1"></use>
+</svg>`
+
+const by = licenseSVG('big', 'by')
 export const BY = () => `<div>${by}</div>`
 
-const bysa = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_sa.svg#layer1"></use>' +
-  '</svg>'
-export const BYSA = () => `<div>${bysa}</div>`
+const bysa = licenseSVG('big', 'by_sa')
+export const BY_SA = () => `<div>${bysa}</div>`
 
-const bynd = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nd.svg#layer1"></use>' +
-  '</svg>'
-export const BYND = () => `<div>${bynd}</div>`
+const bynd = licenseSVG('big', 'by_nd')
+export const BY_ND = () => `<div>${bynd}</div>`
 
-const bync = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc.svg#layer1"></use>' +
-  '</svg>'
-export const BYNC = () => `<div>${bync}</div>`
+const bync = licenseSVG('big', 'by_nc')
+export const BY_NC = () => `<div>${bync}</div>`
 
-const bynceu = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc.eu.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCEU = () => `<div>${bynceu}</div>`
+const bynceu = licenseSVG('big', 'by_nc.eu')
+export const BY_NC_EU = () => `<div>${bynceu}</div>`
 
-const byncsa = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc_sa.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCSA = () => `<div>${byncsa}</div>`
+const byncsa = licenseSVG('big', 'by_nc_sa')
+export const BY_NC_SA = () => `<div>${byncsa}</div>`
 
-const byncnd = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc_nd.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCND = () => `<div>${byncnd}</div>`
+const byncnd = licenseSVG('big', 'by_nc_nd')
+export const BY_NC_ND = () => `<div>${byncnd}</div>`
 
-const byncsaeu = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc_sa.eu.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCSAEU = () => `<div>${byncsaeu}</div>`
+const byncsaeu = licenseSVG('big', 'by_nc_sa.eu')
+export const BY_NC_SA_EU = () => `<div>${byncsaeu}</div>`
 
-const byncndeu = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/big/by_nc_nd.eu.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCNDEU = () => `<div>${byncndeu}</div>`
+const byncndeu = licenseSVG('big', 'by_nc_nd.eu')
+export const BY_NC_ND_EU = () => `<div>${byncndeu}</div>`
 
-const bySmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by.svg#layer1"></use>' +
-  '</svg>'
-export const BYSmall = () => `<div>${bySmall}</div>`
+const bySmall = licenseSVG('small', 'by')
+export const BY_Small = () => `<div>${bySmall}</div>`
 
-const bysaSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by_sa.svg#layer1"></use>' +
-  '</svg>'
-export const BYSASmall = () => `<div>${bysaSmall}</div>`
+const bysaSmall = licenseSVG('small', 'by_sa')
+export const BY_SA_Small = () => `<div>${bysaSmall}</div>`
 
-const byndSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by_nd.svg#layer1"></use>' +
-  '</svg>'
-export const BYNDSmall = () => `<div>${byndSmall}</div>`
+const byndSmall = licenseSVG('small', 'by_nd')
+export const BY_ND_Small = () => `<div>${byndSmall}</div>`
 
-const byncSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by_nc.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCSmall = () => `<div>${byncSmall}</div>`
+const byncSmall = licenseSVG('small', 'by_nc')
+export const BY_NC_Small = () => `<div>${byncSmall}</div>`
 
-const byncsaSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by_nc_sa.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCSASmall = () => `<div>${byncsaSmall}</div>`
+const byncsaSmall = licenseSVG('small', 'by_nc_sa')
+export const BY_NC_SA_Small = () => `<div>${byncsaSmall}</div>`
 
-const byncndSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/by_nc_nd.svg#layer1"></use>' +
-  '</svg>'
-export const BYNCNDSmall = () => `<div>${byncndSmall}</div>`
+const byncndSmall = licenseSVG('small', 'by_nc_nd')
+export const BY_NC_ND_Small = () => `<div>${byncndSmall}</div>`
 
-const ccZeroSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/cc_zero.svg#Layer_1"></use>' +
-  '</svg>'
-export const CCZeroSmall = () => `<div>${ccZeroSmall}</div>`
+const ccZeroSmall = licenseSVG('small', 'cc_zero')
+export const CC_Zero_Small = () => `<div>${ccZeroSmall}</div>`
 
-const publicdomainSmall = '' +
-  '<svg xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="license_badges/small/publicdomain.svg#Layer_1"></use>' +
-  '</svg>'
-export const PublicDomainSmall = () => `<div>${publicdomainSmall}</div>`
+const publicdomainSmall = licenseSVG('small', 'publicdomain')
+export const Public_Domain_Small = () => `<div>${publicdomainSmall}</div>`
