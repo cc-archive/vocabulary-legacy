@@ -11,7 +11,7 @@ $card-header-shadow: none;
             border: none;
         }
         .card-content {
-            padding: $space-big $space-normal;
+            padding: $space-big $space-bigger;
             .card-title {
                 text-transform: none;
                 line-height: 1.6rem;
@@ -56,7 +56,7 @@ $card-header-shadow: none;
         &.horizontal {
             display: flex;
             .card-content {
-                padding: $space-normal;
+                padding: $space-bigger;
             }
             .card-image {
                 .image {
@@ -228,7 +228,7 @@ $card-header-shadow: none;
         &.link {
             a {
                 display: block;
-                padding: $space-normal;
+                padding: $space-bigger;
                 color: $color-black;
                 @each $color-namespace, $brand-color in $brand-colors {
                     &.has-background-#{$color-namespace} {
