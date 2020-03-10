@@ -1,0 +1,90 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+<Meta title="Spacing" />
+
+# Measures
+
+To create a consistency in elements position and harmony, we defined a unit base that applies to the grid, margin and
+paddings. Based on this unit, we generated a list of spacings that applies in the layout of any page.
+
+The basic distance defined in Vocabulary is 16 pixels. This measurement corresponds to 1 rem and generates eight
+variations to support all the possible distances. Those spacings range the smallest distance like text margins, and the
+largest ones like margin between sections.
+
+## Spacing definitions
+
+export const spacing = (name, rem) => {
+  let px = rem * 16
+  return `
+  <style>
+    .box-${px} {
+      display: flex;
+      flex-direction: row;
+      width: 20px;
+      height: ${px}px;
+    }
+    .left {
+      width: calc(50% - 1px);
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-color: #fb7729;
+    }
+    .right {
+      width: calc(50% - 1px);
+      border-width: 1px 0 1px 0;
+      border-style: solid;
+      border-color: #fb7729;
+    }
+  </style>
+  <div class="spacing">
+    <div class="box-${px}">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <strong>${name}</strong><br/>
+    ${rem} rem<br/>
+    ${px} px
+  </div>`
+}
+
+<Preview>
+  <Story name="Smallest" height="108px">{spacing('Smallest', 0.5)}</Story>
+</Preview>
+
+Margin between title and paragraph.
+
+<Preview>
+  <Story name="Smaller" height="116px">{spacing('Smaller', 1)}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Small" height="124px">{spacing('Small', 1.5)}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Normal" height="132px">{spacing('Normal', 2)}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Big" height="140px">{spacing('Big', 2.5)}</Story>
+</Preview>
+
+Padding of any content component.
+
+<Preview>
+  <Story name="Bigger" height="148px">{spacing('Bigger', 3)}</Story>
+</Preview>
+
+Margin between elements within a section.
+
+<Preview>
+  <Story name="Large" height="164px">{spacing('Large', 4)}</Story>
+</Preview>
+
+Padding of any section.
+
+<Preview>
+  <Story name="Larger" height="196px">{spacing('Larger', 6)}</Story>
+</Preview>
+
+Margin between sections.

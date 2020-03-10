@@ -21,7 +21,7 @@ that, we created title styles for both fonts.
 export const typeAContent = (i) => `<h${i}>Heading ${i}A</h${i}>`
 
 <Preview>
-  <Story name="Heading 1A" height="100px">{typeAContent(1)}</Story>
+  <Story name="Heading 1A" height="102px">{typeAContent(1)}</Story>
 </Preview>
 
 Main title in page or section. Short length text to preserve legibility.
@@ -29,7 +29,7 @@ Main title in page or section. Short length text to preserve legibility.
 Eg: Page name; Section title.
 
 <Preview>
-  <Story name="Heading 2A" height="100px">{typeAContent(2)}</Story>
+  <Story name="Heading 2A" height="70px">{typeAContent(2)}</Story>
 </Preview>
 
 Titles in sections. Multiples uses in a single page. Recommended as H1.
@@ -37,7 +37,7 @@ Titles in sections. Multiples uses in a single page. Recommended as H1.
 Eg: H1 in a blog post.
 
 <Preview>
-  <Story name="Heading 3A" height="100px">{typeAContent(3)}</Story>
+  <Story name="Heading 3A" height="58px">{typeAContent(3)}</Story>
 </Preview>
 
 Short-length titles in sections.
@@ -45,7 +45,7 @@ Short-length titles in sections.
 Eg: Title galleries; Title of “related content” sections.
 
 <Preview>
-  <Story name="Heading 4A" height="100px">{typeAContent(4)}</Story>
+  <Story name="Heading 4A" height="51px">{typeAContent(4)}</Story>
 </Preview>
 
 Mid-length titles in sections.
@@ -53,25 +53,17 @@ Mid-length titles in sections.
 Eg: Title of banners and links.
 
 <Preview>
-  <Story name="Heading 5A" height="100px">{typeAContent(5)}</Story>
+  <Story name="Heading 5A" height="46px">{typeAContent(5)}</Story>
 </Preview>
 
 Mid-length titles in sections.
 
 Eg: Title of banners and links.
-
-<Preview>
-  <Story name="Value" height="100px">{`<p class="value">000</p>`}</Story>
-</Preview>
-
-Numeric values across the website.
-
-Eg: Community members; Post published.
 
 export const typeBContent = (i) => `<h${i} class="b-header">Heading ${i}B</h${i}>`
 
 <Preview>
-  <Story name="Heading 3B" height="100px">{typeBContent(3)}</Story>
+  <Story name="Heading 3B" height="58px">{typeBContent(3)}</Story>
 </Preview>
 
 Long-length titles in sections and posts.
@@ -79,7 +71,7 @@ Long-length titles in sections and posts.
 Eg: H3 in a blog post.
 
 <Preview>
-  <Story name="Heading 4B" height="100px">{typeBContent(4)}</Story>
+  <Story name="Heading 4B" height="51px">{typeBContent(4)}</Story>
 </Preview>
 
 Long-length titles in sections and posts.
@@ -87,17 +79,25 @@ Long-length titles in sections and posts.
 Eg: H4 in a blog post.
 
 <Preview>
-  <Story name="Heading 5B" height="100px">{typeBContent(5)}</Story>
+  <Story name="Heading 5B" height="46px">{typeBContent(5)}</Story>
 </Preview>
 
 Long-length titles in sections and posts. When is placed over color, it should keep a considerable contrast.
 
 Eg: H5 in a blog post; Short-length description paragraph.
 
-export const textContent = (size) => `<p class="text-${size.toLowerCase()}">Body ${size}</p>`
+<Preview>
+  <Story name="Value" height="121px">{`<p class="value">42</p>`}</Story>
+</Preview>
+
+Numeric values across the website.
+
+Eg: Community members; Post published.
+
+export const textContent = (size) => `<p class="body-${size.toLowerCase()}">Body ${size}</p>`
 
 <Preview>
-  <Story name="Body Bigger" height="100px">{textContent('Bigger')}</Story>
+  <Story name="Body Bigger" height="51px">{textContent('Bigger')}</Story>
 </Preview>
 
 Mid-length paragraphs to summarize relevant content.
@@ -105,7 +105,7 @@ Mid-length paragraphs to summarize relevant content.
 Eg: Introduction paragraph in a blog post; Quotes.
 
 <Preview>
-  <Story name="Body Big" height="100px">{textContent('Big')}</Story>
+  <Story name="Body Big" height="43px">{textContent('Big')}</Story>
 </Preview>
 
 Highlighted content in a section.
@@ -113,7 +113,7 @@ Highlighted content in a section.
 Eg: Section descriptions in a main CTA.
 
 <Preview>
-  <Story name="Body Normal" height="100px">{textContent('Normal')}</Story>
+  <Story name="Body Normal" height="40px">{textContent('Normal')}</Story>
 </Preview>
 
 The default size of any content. Recommended for body content.
@@ -121,7 +121,7 @@ The default size of any content. Recommended for body content.
 Eg: Body content in a post.
 
 <Preview>
-  <Story name="List" height="100px">{textContent('Normal')}</Story>
+  <Story name="List" height="40px">{textContent('List')}</Story>
 </Preview>
 
 The default size of any content inside a list, no matter dots or numbers.
@@ -129,7 +129,9 @@ The default size of any content inside a list, no matter dots or numbers.
 Eg: Body content in a post.
 
 <Preview>
-  <Story name="Caption" height="100px">{textContent('Small')}</Story>
+  <Story name="Caption" height="36px">{`
+    <p class="caption">Caption</p>
+  `}</Story>
 </Preview>
 
 Mid and short-length content. Description of elements and notes. It should not be used for main goal content.
