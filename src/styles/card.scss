@@ -21,7 +21,7 @@ $card-header-shadow: none;
             }
             .subtitle {
                 display: block;
-                margin-top: $space-smaller;
+                margin-top: $space-normal;
                 color: $color-gray;
                 font-size: .9rem;
                 font-weight: 700;
@@ -209,7 +209,7 @@ $card-header-shadow: none;
         &.entry-image {
             .card-content {
                 .card-title {
-                    margin-bottom: $space-smaller;
+                    margin-bottom: $space-normal;
                     text-transform: uppercase;
                     a {
                         color: $color-black;
