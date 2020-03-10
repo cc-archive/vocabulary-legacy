@@ -1,11 +1,11 @@
-$space-smallest: .5rem;
-$space-smaller: 1rem;
-$space-small: 1.5rem;
-$space-normal: 2rem;
-$space-big: 2.5rem;
-$space-bigger: 3rem;
-$space-large: 4rem;
-$space-larger: 6rem;
+$space-small: .5rem;
+$space-normal: 1rem;
+$space-big: 1.5rem;
+$space-bigger: 2rem;
+$space-large: 2.5rem;
+$space-larger: 3rem;
+$space-xl: 4rem;
+$space-xxl: 6rem;
 
 $spacing-properties: (
   "padding": "padding",
@@ -13,14 +13,14 @@ $spacing-properties: (
 );
 
 $spacing-sizes: (
-  "-smallest": $space-smallest,
-  "-smaller": $space-smaller,
   "-small": $space-small,
   "-normal": $space-normal,
   "-big": $space-big,
   "-bigger": $space-bigger,
   "-large": $space-large,
   "-larger": $space-larger,
+  "-xl": $space-xl,
+  "-xxl": $space-larger,
 );
 
 $spacing-directions: (

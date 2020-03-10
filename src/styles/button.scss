@@ -3,13 +3,12 @@
 .button {
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.5rem 0.5rem;
   line-height: 0;
   border: 0.125rem solid $color-light-slate-gray;
   color: $color-light-slate-gray;
   background-color: $color-white;
   font-size: 1.43rem;
-  padding: 1.8rem 2.5rem;
+  padding: calc(#{$space-bigger} - .2rem) $space-large;
 
   &:hover {
     background-color: $color-light-slate-gray;
@@ -18,23 +17,23 @@
 
   &.big {
     font-size: 1.75rem;
-    padding: 2.4rem 2.5rem;
+    padding: calc(#{$space-large} - .1rem) $space-large;
   }
 
   &.small {
     font-size: 1rem;
-    padding: 0.5rem 0.5rem;
+    padding: $space-small calc(#{$space-normal} + .2rem);
   }
 
   &.tiny {
-    padding: 0rem 0.5rem;
+    padding: 0 $space-small;
     font-size: 1rem;
     text-transform: none;
     height: 2rem;
   }
 
   &.label {
-    padding: 0rem 1rem;
+    padding: 0 $space-normal;
     font-size: 0.81rem;
     text-transform: none;
     height: 1.81rem;
