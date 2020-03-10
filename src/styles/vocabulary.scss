@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-$family-sans-serif: Roboto Condensed;
-$button-family: $family-sans-serif;
+$family-sans-serif: 'Source Sans Pro';
+$family-alternative: 'Roboto Condensed';
+$button-family: $family-alternative;
 
 body {
     font-family: $family-sans-serif;
@@ -13,4 +14,5 @@ body {
 @import "./typography.scss";
 @import "./button.scss";
 @import "./form.scss";
+@import "./card.scss";
 @import "./github_corner.scss";
