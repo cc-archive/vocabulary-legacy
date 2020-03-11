@@ -1,8 +1,16 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
-<Meta title="Logos" />
+<Meta title="Assets/Logos" />
 
 # Logos
+
+## Logos
+
+export const figmaConfig = (nodeId) => config({
+  type: 'figma',
+  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
+})
 
 export const logomark = '' +
   '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
@@ -10,7 +18,9 @@ export const logomark = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Logomark">{`
+  <Story name="CC Logomark" parameters={{
+    design: figmaConfig('1%3A13')
+  }}>{`
     <div class="has-text-black">${logomark}</div>
   `}</Story>
 </Preview>
@@ -19,7 +29,8 @@ export const logomark = '' +
   <Story name="CC Logomark Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('476%3A0')
   }}>{`
     <div class="has-text-white">${logomark}</div>
   `}</Story>
@@ -31,7 +42,9 @@ export const lettermark = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Lettermark">{`
+  <Story name="CC Lettermark" parameters={{
+    design: figmaConfig('712%3A8')
+  }}>{`
     <div class="has-text-black">${lettermark}</div>
   `}</Story>
 </Preview>
@@ -40,7 +53,8 @@ export const lettermark = '' +
   <Story name="CC Lettermark Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('712%3A8')
   }}>{`
     <div class="has-text-white">${lettermark}</div>
   `}</Story>
@@ -52,7 +66,9 @@ export const letterheart = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Letterheart">{`
+  <Story name="CC Letterheart" parameters={{
+    design: figmaConfig('712%3A7')
+  }}>{`
     <div class="has-text-black">${letterheart}</div>
   `}</Story>
 </Preview>
@@ -61,7 +77,8 @@ export const letterheart = '' +
   <Story name="CC Letterheart Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('712%3A7')
   }}>{`
     <div class="has-text-white">${letterheart}</div>
   `}</Story>
@@ -73,7 +90,9 @@ export const globalNetwork = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Global Network">{`
+  <Story name="CC Global Network" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     <div class="has-text-black">${globalNetwork}</div>
   `}</Story>
 </Preview>
@@ -82,7 +101,8 @@ export const globalNetwork = '' +
   <Story name="CC Global Network Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${globalNetwork}</div>
   `}</Story>
@@ -95,7 +115,9 @@ export const openSource = '' +
 
 
 <Preview>
-  <Story name="CC Open Source">{`
+  <Story name="CC Open Source" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     <div class="has-text-black">${openSource}</div>
   `}</Story>
 </Preview>
@@ -104,7 +126,8 @@ export const openSource = '' +
   <Story name="CC Open Source Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${openSource}</div>
   `}</Story>
@@ -117,7 +140,9 @@ export const certificates = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Certificates">{`
+  <Story name="CC Certificates" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     ${certificates}
   `}</Story>
 </Preview>
@@ -129,7 +154,9 @@ export const certificatesMonochrome = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Certificates Monochrome">{`
+  <Story name="CC Certificates Monochrome" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     <div class="has-text-black">${certificatesMonochrome}</div>
   `}</Story>
 </Preview>
@@ -138,7 +165,8 @@ export const certificatesMonochrome = '' +
   <Story name="CC Certificates Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${certificatesMonochrome}</div>
   `}</Story>
@@ -150,7 +178,9 @@ export const vocabulary = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Vocabulary">{`
+  <Story name="CC Vocabulary" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     <div class="has-text-black">${vocabulary}</div>
   `}</Story>
 </Preview>
@@ -159,7 +189,8 @@ export const vocabulary = '' +
   <Story name="CC Vocabulary Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${vocabulary}</div>
   `}</Story>
@@ -171,7 +202,9 @@ export const search = '' +
   '</svg>'
 
 <Preview>
-  <Story name="CC Search">{`
+  <Story name="CC Search" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
     <div class="has-text-black">${search}</div>
   `}</Story>
 </Preview>
@@ -180,7 +213,8 @@ export const search = '' +
   <Story name="CC Search Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
-    ]
+    ],
+    design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${search}</div>
   `}</Story>

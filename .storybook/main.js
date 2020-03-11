@@ -10,6 +10,7 @@ module.exports = {
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    'storybook-addon-designs'
   ]
 }

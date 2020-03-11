@@ -1,6 +1,7 @@
 import { addDecorator, addParameters, } from '@storybook/html'
 
 import { withKnobs } from '@storybook/addon-knobs'
+import { withDesign } from 'storybook-addon-designs'
 
 import '../dist/css/vocabulary.css'
 
@@ -13,3 +14,4 @@ addParameters({
 })
 
 addDecorator(withKnobs)
+addDecorator(withDesign)
