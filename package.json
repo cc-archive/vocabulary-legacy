@@ -12,8 +12,7 @@
   },
   "lint-staged": {
     "*.{js}": "eslint src/**/*.js --fix"
-
-  },
+ },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@storybook/addon-backgrounds": "^5.3.14",
