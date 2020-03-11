@@ -11,4 +11,14 @@ $input-color: $color-dark-slate-gray;
     padding-left: 1.5rem;
     font-family: Source Sans Pro;
     font-weight: 600;
+
+    &.is-medium {
+        height: 3.875rem;
+        font-size: 1.43rem;
+    }
+
+    &.is-large {
+        height: 5.063rem;
+        font-size: 1.75rem;
+    }
 }

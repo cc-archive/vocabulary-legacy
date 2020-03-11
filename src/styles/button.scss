@@ -8,7 +8,7 @@
   color: $color-light-slate-gray;
   background-color: $color-white;
   font-size: 1.43rem;
-  padding: calc(#{$space-bigger} - .2rem) $space-large;
+  padding: calc(#{$space-bigger} - .187rem) $space-large;
 
   &:hover {
     background-color: $color-light-slate-gray;
@@ -17,7 +17,7 @@
 
   &.big {
     font-size: 1.75rem;
-    padding: calc(#{$space-large} - .1rem) $space-large;
+    padding: calc(#{$space-large} - .093rem) $space-large;
   }
 
   &.small {
