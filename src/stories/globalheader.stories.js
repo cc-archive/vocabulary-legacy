@@ -1,17 +1,15 @@
 import { withKnobs, select } from '@storybook/addon-knobs'
+import { CCLetterheart, CCLogomarkWhite } from './logos.stories'
 
 export default { title: 'Global Header', decorators: [withKnobs] }
 
-import { CCLetterheart, CCLogomarkWhite } from './logos.stories'
-import { ButtonDonate } from './buttons.stories'
-
 export const Main = () => {
   const BarStatusSel = {
-      Open: 'is-active',
-      Close: ''
+    Open: 'is-active',
+    Close: ''
   }
 
-  const BarStatus = select('Bar Status', BarStatusSel, BarStatusSel.Open);
+  const BarStatus = select('Bar Status', BarStatusSel, BarStatusSel.Open)
   return `
       <div class="cc-global-header ${BarStatus}">
         <div class="container padding-vertical-normal">
