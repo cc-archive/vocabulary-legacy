@@ -2,110 +2,112 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 
 <Meta title="License Badge" />
 
-export const licenseSVG = (size, license) => `<svg ...>
-<use href="license_badges/${size}/${license}.svg#layer1"></use>
-</svg>`
-
 # License Badges
 
+License badges represent CC licenses using icons to depict clauses of the license. So the CC Attribution license or
+CC BY is represented by the CC logo and the icon of a person. Similar icons exist for the NC, ND and SA clauses.
+
+export const licenseSVG = (size, license) => {
+  let tag
+  if (size === 'big') {
+    tag = 'svg height="42" width="120"'
+  } else {
+    tag = 'svg height="15" width="80"'
+  }
+  return `<${tag}>
+<use href="license_badges/${size}/${license}.svg#layer1"></use>
+</svg>`
+}
+
 <Preview>
-    <Story name="BY">{`
-        <div>${licenseSVG('big', 'by')}</div>
-    `}</Story>
+  <Story name="BY" height="96px">{`
+    <div>${licenseSVG('big', 'by')}</div>
+    <div>${licenseSVG('small', 'by')}</div>
+  `}</Story>
 </Preview>
 
 <Preview>
-    <Story name="BY SA">{`
-        <div>${licenseSVG('big', 'by_sa')}</div>
-    `}</Story>
+  <Story name="BY SA" height="96px">{`
+    <div>${licenseSVG('big', 'by_sa')}</div>
+    <div>${licenseSVG('small', 'by_sa')}</div>
+  `}</Story>
 </Preview>
 
 <Preview>
-    <Story name="BY ND">{`
-        <div>${licenseSVG('big', 'by_nd')}</div>
-    `}</Story>
+  <Story name="BY ND" height="96px">{`
+    <div>${licenseSVG('big', 'by_nd')}</div>
+    <div>${licenseSVG('small', 'by_nd')}</div>
+  `}</Story>
+</Preview>
+
+Big-sized licenses with the non-commercial clause include an EU variant with the Dollar symbol replaced with the Euro
+symbol. Small-sized licenses do not have this variant.
+
+<Preview>
+  <Story name="BY NC" height="144px">{`
+    <div>${licenseSVG('big', 'by_nc')}</div>
+    <div>${licenseSVG('big', 'by_nc.eu')}</div>
+    <div>${licenseSVG('small', 'by_nc')}</div>
+  `}</Story>
 </Preview>
 
 <Preview>
-    <Story name="BY NC">{`
-        <div>${licenseSVG('big', 'by_nc')}</div>
-    `}</Story>
+  <Story name="BY NC SA" height="144px">{`
+    <div>${licenseSVG('big', 'by_nc_sa')}</div>
+    <div>${licenseSVG('big', 'by_nc_sa.eu')}</div>
+    <div>${licenseSVG('small', 'by_nc_sa')}</div>
+  `}</Story>
 </Preview>
 
 <Preview>
-    <Story name="BY NC EU">{`
-        <div>${licenseSVG('big', 'by_nc.eu')}</div>
-    `}</Story>
+  <Story name="BY NC ND" height="144px">{`
+    <div>${licenseSVG('big', 'by_nc_nd')}</div>
+    <div>${licenseSVG('big', 'by_nc_nd.eu')}</div>
+    <div>${licenseSVG('small', 'by_nc_nd')}</div>
+  `}</Story>
+</Preview>
+
+Big-sized licenses for CC Zero and Public Domain follow a different base size, but same aspect ratio, leading to a
+smaller appearance when rendered using identical markup. This bug in present only in the big-sized versions of the two
+badges.
+
+<Preview>
+  <Story name="CC Zero" height="96px">{`
+    <div>${licenseSVG('big', 'cc_zero')}</div>
+    <div>${licenseSVG('small', 'cc_zero')}</div>
+  `}</Story>
 </Preview>
 
 <Preview>
-    <Story name="BY NC SA">{`
-        <div>${licenseSVG('big', 'by_nc_sa')}</div>
-    `}</Story>
+  <Story name="Public Domain" height="96px">{`
+    <div>${licenseSVG('big', 'publicdomain')}</div>
+    <div>${licenseSVG('small', 'publicdomain')}</div>
+  `}</Story>
 </Preview>
 
-<Preview>
-    <Story name="BY NC SA EU">{`
-        <div>${licenseSVG('big', 'by_nc_sa.eu')}</div>
-    `}</Story>
-</Preview>
+# Usage
 
-<Preview>
-    <Story name="BY NC ND">{`
-        <div>${licenseSVG('big', 'by_nc_nd')}</div>
-    `}</Story>
-</Preview>
+The license assets can be used in your apps by defining an SVG tag with the appropriate dimensions and linking to the
+group from within the licenses.
 
-<Preview>
-    <Story name="BY NC ND EU">{`
-        <div>${licenseSVG('big', 'by_nc_nd.eu')}</div>
-    `}</Story>
-</Preview>
+| Size  | Dimension      |
+|-------|----------------|
+| Big   | 120 &times; 42 |
+| Small | 80  &times; 15 |
 
-<Preview>
-    <Story name="BY Small">{`
-        <div>${licenseSVG('small', 'by')}</div>
-    `}</Story>
-</Preview>
+**Example:**
 
-<Preview>
-    <Story name="BY SA Small">{`
-        <div>${licenseSVG('small', 'by_sa')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="BY ND Small">{`
-        <div>${licenseSVG('small', 'by_nd')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="BY NC Small">{`
-        <div>${licenseSVG('small', 'by_nc')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="BY NC SA Small">{`
-        <div>${licenseSVG('small', 'by_nc_sa')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="BY NC ND Small">{`
-        <div>${licenseSVG('small', 'by_nc_nd')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="CC Zero Small">{`
-        <div>${licenseSVG('small', 'cc_zero')}</div>
-    `}</Story>
-</Preview>
-
-<Preview>
-    <Story name="Public Domain Small">{`
-        <div>${licenseSVG('small', 'publicdomain')}</div>
-    `}</Story>
-</Preview>
+```html
+<svg width="120px" height="42px">
+  <!-- Big sized CC BY license badge -->
+  <use
+    href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1">
+  </use>
+</svg>
+<svg width="80px" height="15px">
+  <!-- Small sized CC BY license badge -->
+  <use
+    href="@creativecommons/vocabulary/assets/license_badges/small/by.svg#layer1">
+  </use>
+</svg>
+```
