@@ -1,12 +1,19 @@
-export default { title: 'LicenseBadge' }
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+<Meta title="License Badge" />
 
 const licenseSVG = (size, license) => `<svg ...>
 <use href="license_badges/${size}/${license}.svg#layer1"></use>
 </svg>`
 
 const by = licenseSVG('big', 'by')
-export const BY = () => `<div>${by}</div>`
+<Preview>
+    <Story name="BY">{`
+        <div>${by}</div>
+    `}</>
+</Preview>
 
+<!--
 const bysa = licenseSVG('big', 'by_sa')
 export const BY_SA = () => `<div>${bysa}</div>`
 
@@ -32,10 +39,10 @@ const byncndeu = licenseSVG('big', 'by_nc_nd.eu')
 export const BY_NC_ND_EU = () => `<div>${byncndeu}</div>`
 
 const bySmall = licenseSVG('small', 'by')
-export const BY_Small = () => `<div>${bySmall}</div>`
+export const BYSmall = () => `<div>${bySmall}</div>`
 
 const bysaSmall = licenseSVG('small', 'by_sa')
-export const BY_SA_Small = () => `<div>${bysaSmall}</div>`
+export const BY_SA_SMALL = () => `<div>${bysaSmall}</div>`
 
 const byndSmall = licenseSVG('small', 'by_nd')
 export const BY_ND_Small = () => `<div>${byndSmall}</div>`
@@ -54,3 +61,14 @@ export const CC_Zero_Small = () => `<div>${ccZeroSmall}</div>`
 
 const publicdomainSmall = licenseSVG('small', 'publicdomain')
 export const Public_Domain_Small = () => `<div>${publicdomainSmall}</div>`
+
+export const logomark = '' +
+  '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
+  '</svg>'
+
+<Preview>
+  <Story name="CC Logomark">{`
+    <div class="has-text-black">${logomark}</div>
+  `}</Story>
+</Preview> -->
