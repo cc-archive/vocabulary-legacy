@@ -12,10 +12,10 @@ $navbar-item-hover-background-color: transparent;
 .cc-global-header {
     background-color: $color-black;
     color: $color-white;
-    margin-top: -16.4rem;
+    transform: translateY(-100%);
     transition: all .4s ease-in;
     &.is-active {
-        margin-top: 0;
+        transform: translateY(0);
     }
     .container {
         .open-tab {
