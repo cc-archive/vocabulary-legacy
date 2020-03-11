@@ -1,26 +1,28 @@
-$space-smallest: .5rem;
-$space-smaller: 1rem;
-$space-small: 1.5rem;
-$space-normal: 2rem;
-$space-big: 2.5rem;
-$space-bigger: 3rem;
-$space-large: 4rem;
-$space-larger: 6rem;
+// Spacings
+$space-small: 0.5rem;
+$space-normal: 1rem;
+$space-big: 1.5rem;
+$space-bigger: 2rem;
+$space-large: 2.5rem;
+$space-larger: 3rem;
+$space-xl: 4rem;
+$space-xxl: 6rem;
 
-$spacing-properties: (
-  "padding": "padding",
-  "margin": "margin",
-);
-
+// Classes
 $spacing-sizes: (
-  "-smallest": $space-smallest,
-  "-smaller": $space-smaller,
   "-small": $space-small,
   "-normal": $space-normal,
   "-big": $space-big,
   "-bigger": $space-bigger,
   "-large": $space-large,
   "-larger": $space-larger,
+  "-xl": $space-xl,
+  "-xxl": $space-larger,
+);
+
+$spacing-properties: (
+  "padding": "padding",
+  "margin": "margin",
 );
 
 $spacing-directions: (
@@ -29,15 +31,16 @@ $spacing-directions: (
   "-bottom": "-bottom",
   "-left": "-left",
   "-horizontal": "-left" "-right",
-  "-vertical": "-top" "-bottom",
+  "-vertical": "-top" "-bottom"
 );
 
-// this generates paddings and margins of each size
+// This generates paddings and margins of each size
 // on each direction: left, right, top, bottom,
-// vertical (left and right) and vertical (top and bottom)
-// and all directions
-// for zero margin and padding, Bulma already has those classes
-// `is-paddingless` and `is-marginless`
+// horizontal (left and right), vertical (top and bottom)
+// and around (all sides).
+//
+// Bulma already has classes for zero padding and margin:
+// `is-paddingless` and `is-marginless` respectively.
 @each $property-namespace, $property in $spacing-properties {
 
   @each $size-namespace, $size in $spacing-sizes {
@@ -51,7 +54,7 @@ $spacing-directions: (
         }
       }
     }
-    
+
     .#{$property}#{$size-namespace} {
       #{$property}: $size !important;
     }
