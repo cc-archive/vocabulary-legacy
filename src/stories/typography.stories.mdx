@@ -1,6 +1,6 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
 
-<Meta title="Typography" />
+<Meta title="Tokens/Typography" />
 
 # Text styles
 
@@ -16,124 +16,83 @@ Depending on the situation, some styles can be adapted having in mind that the n
 simple. The criteria used to apply Roboto or Source Sans Pro for titles must put legibility over aesthetic. Based on
 that, we created title styles for both fonts.
 
-## Text styles, descriptions and examples
+## Headings
 
-export const typeAContent = (i) => `<h${i}>Heading ${i}A</h${i}>`
+Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h5>`.
 
-<Preview>
-  <Story name="Heading 1A" height="102px">{typeAContent(1)}</Story>
-</Preview>
+<Typeset
+  fontSizes={[
+    '3.56rem',
+    '2.25rem',
+    '1.75rem',
+    '1.43rem',
+    '1.25rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText="HEADING A" />
 
-Main title in page or section. Short length text to preserve legibility.
+Headings of type B need the class `.b-header` to be applied to heading tags from `<h3>` to `<h5>`.
 
-Eg: Page name; Section title.
+<Typeset
+  fontSizes={[
+    '1.75rem',
+    '1.43rem',
+    '1.25rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={700}
+  sampleText="Heading B" />
 
-<Preview>
-  <Story name="Heading 2A" height="70px">{typeAContent(2)}</Story>
-</Preview>
+## Body
 
-Titles in sections. Multiples uses in a single page. Recommended as H1.
+By default, body text in `<p>` tags is rendered at the base font size.
 
-Eg: H1 in a blog post.
+<Typeset
+  fontSizes={[
+    '1.00rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  sampleText="Body" />
 
-<Preview>
-  <Story name="Heading 3A" height="58px">{typeAContent(3)}</Story>
-</Preview>
+Body text can be made big or bigger with the eponymous `.body-big` and `.body-bigger` classes on the `<p>` tag.
 
-Short-length titles in sections.
+<Typeset
+  fontSizes={[
+    '1.43rem',
+    '1.12rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  sampleText="Enlarged body" />
 
-Eg: Title galleries; Title of “related content” sections.
+Captions can be rendered with the class `.caption` on the `<p>` tag.
 
-<Preview>
-  <Story name="Heading 4A" height="51px">{typeAContent(4)}</Story>
-</Preview>
+<Typeset
+  fontSizes={[
+    '0.80rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  sampleText="Caption" />
 
-Mid-length titles in sections.
+Values can be rendered with the class `.value` on the `<p>` tag.
 
-Eg: Title of banners and links.
+<Typeset
+  fontSizes={[
+    '4.37rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText="42" />
 
-<Preview>
-  <Story name="Heading 5A" height="46px">{typeAContent(5)}</Story>
-</Preview>
+Code can be rendered with the class `.monospace` on the `<p>` tag.
 
-Mid-length titles in sections.
-
-Eg: Title of banners and links.
-
-export const typeBContent = (i) => `<h${i} class="b-header">Heading ${i}B</h${i}>`
-
-<Preview>
-  <Story name="Heading 3B" height="58px">{typeBContent(3)}</Story>
-</Preview>
-
-Long-length titles in sections and posts.
-
-Eg: H3 in a blog post.
-
-<Preview>
-  <Story name="Heading 4B" height="51px">{typeBContent(4)}</Story>
-</Preview>
-
-Long-length titles in sections and posts.
-
-Eg: H4 in a blog post.
-
-<Preview>
-  <Story name="Heading 5B" height="46px">{typeBContent(5)}</Story>
-</Preview>
-
-Long-length titles in sections and posts. When is placed over color, it should keep a considerable contrast.
-
-Eg: H5 in a blog post; Short-length description paragraph.
-
-<Preview>
-  <Story name="Value" height="121px">{`<p class="value">42</p>`}</Story>
-</Preview>
-
-Numeric values across the website.
-
-Eg: Community members; Post published.
-
-export const textContent = (size) => `<p class="body-${size.toLowerCase()}">Body ${size}</p>`
-
-<Preview>
-  <Story name="Body Bigger" height="51px">{textContent('Bigger')}</Story>
-</Preview>
-
-Mid-length paragraphs to summarize relevant content.
-
-Eg: Introduction paragraph in a blog post; Quotes.
-
-<Preview>
-  <Story name="Body Big" height="43px">{textContent('Big')}</Story>
-</Preview>
-
-Highlighted content in a section.
-
-Eg: Section descriptions in a main CTA.
-
-<Preview>
-  <Story name="Body Normal" height="40px">{textContent('Normal')}</Story>
-</Preview>
-
-The default size of any content. Recommended for body content.
-
-Eg: Body content in a post.
-
-<Preview>
-  <Story name="List" height="40px">{textContent('List')}</Story>
-</Preview>
-
-The default size of any content inside a list, no matter dots or numbers.
-
-Eg: Body content in a post.
-
-<Preview>
-  <Story name="Caption" height="36px">{`
-    <p class="caption">Caption</p>
-  `}</Story>
-</Preview>
-
-Mid and short-length content. Description of elements and notes. It should not be used for main goal content.
-
-Eg: Image notes.
+<Typeset
+  fontSizes={[
+    '0.875rem'
+  ]}
+  fontFamily="Fira Code"
+  fontWeight={400}
+  sampleText="const x = () => { console.log('Hello World!') }" />

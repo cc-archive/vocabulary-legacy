@@ -1,6 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 
-<Meta title="Spacing" />
+<Meta title="Tokens/Spacing" />
 
 # Measures
 
@@ -13,78 +13,43 @@ largest ones like margin between sections.
 
 ## Spacing definitions
 
-export const spacing = (name, rem) => {
-  let px = rem * 16
-  return `
-  <style>
-    .box-${px} {
-      display: flex;
-      flex-direction: row;
-      width: 20px;
-      height: ${px}px;
-    }
-    .left {
-      width: calc(50% - 1px);
-      border-width: 1px 1px 1px 0;
-      border-style: solid;
-      border-color: #fb7729;
-    }
-    .right {
-      width: calc(50% - 1px);
-      border-width: 1px 0 1px 0;
-      border-style: solid;
-      border-color: #fb7729;
-    }
-  </style>
-  <div class="spacing">
-    <div class="box-${px}">
-      <div class="left"></div>
-      <div class="right"></div>
-    </div>
-    <strong>${name}</strong><br/>
-    ${rem} rem<br/>
-    ${px} px
-  </div>`
-}
+| Name   | SCSS variable   | rem | px |
+|--------|-----------------|-----|----|
+| Small  | `$space-small`  | 0.5 | 8  |
+| Normal | `$space-normal` | 1   | 16 |
+| Big    | `$space-big`    | 1.5 | 24 |
+| Bigger | `$space-bigger` | 2   | 32 |
+| Large  | `$space-large`  | 2.5 | 40 |
+| Larger | `$space-larger` | 3   | 48 |
+| XL     | `$space-xl`     | 4   | 64 |
+| XXL    | `$space-xxl`    | 6   | 96 |
 
-<Preview>
-  <Story name="Smallest" height="108px">{spacing('Smallest', 0.5)}</Story>
-</Preview>
+# Usage
 
-Margin between title and paragraph.
+To use the spacings in your code, you can
+- use the helper classes in your markup for the most common use-cases
+- import `spacing.scss` and use the SCSS variables directly in your stylesheets
 
-<Preview>
-  <Story name="Smaller" height="116px">{spacing('Smaller', 1)}</Story>
-</Preview>
+Spacing applies to two properties (margin and padding) on four sides (top, right, bottom and left). For each spacing
+size and each property we have two kinds of helper classes:
+- directed i.e. `.<property>-<direction>-<size>`<br/>
+  Applies the spacing only towards the given directions.
 
-<Preview>
-  <Story name="Small" height="124px">{spacing('Small', 1.5)}</Story>
-</Preview>
+  | Direction | Options                          |
+  |-----------|----------------------------------|
+  | Side      | `top`, `right`, `bottom`, `left` |
+  | Group     | `horizontal`, `vertical`         |
 
-<Preview>
-  <Story name="Normal" height="132px">{spacing('Normal', 2)}</Story>
-</Preview>
+- undirected i.e. `.<property>-<size>`<br/>
+  Applies the spacing on all four sides of the element.
 
-<Preview>
-  <Story name="Big" height="140px">{spacing('Big', 2.5)}</Story>
-</Preview>
+**Example:**
 
-Padding of any content component.
-
-<Preview>
-  <Story name="Bigger" height="148px">{spacing('Bigger', 3)}</Story>
-</Preview>
-
-Margin between elements within a section.
-
-<Preview>
-  <Story name="Large" height="164px">{spacing('Large', 4)}</Story>
-</Preview>
-
-Padding of any section.
-
-<Preview>
-  <Story name="Larger" height="196px">{spacing('Larger', 6)}</Story>
-</Preview>
-
-Margin between sections.
+```html
+<div class="margin-horizontal-big">
+  <!-- Margin of 1.5rem on left and right sides -->
+</div>
+<div class="padding-small">
+  <!-- Padding of 0.5rem on all four sides -->
+</div>
+```

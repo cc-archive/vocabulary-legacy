@@ -1,5 +1,5 @@
 // Spacings
-$space-small: .5rem;
+$space-small: 0.5rem;
 $space-normal: 1rem;
 $space-big: 1.5rem;
 $space-bigger: 2rem;
@@ -31,8 +31,7 @@ $spacing-directions: (
   "-bottom": "-bottom",
   "-left": "-left",
   "-horizontal": "-left" "-right",
-  "-vertical": "-top" "-bottom",
-  "-around": "-top" "-right" "-bottom" "-left",
+  "-vertical": "-top" "-bottom"
 );
 
 // This generates paddings and margins of each size

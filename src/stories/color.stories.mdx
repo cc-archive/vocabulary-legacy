@@ -1,6 +1,6 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
 
-<Meta title="Color" />
+<Meta title="Tokens/Color" />
 
 # Palettes
 
@@ -8,82 +8,126 @@ Creative Commons’ color palette reflects the vibrant nature of the digital spa
 community we engage with. At the same time, the colors defined follow the accessibility indications made by W3C when
 text is placed on them.
 
-export const color = (name, hex, r, g, b) => `
-  <style>
-    .color {
-      display: inline-block;
-      margin: 0.5em;
-    }
-    .box-${hex} {
-      border-radius: 0.25em;
-      width: 10em;
-      height: 5em;
-      background-color: #${hex};
-    }
-  </style>
-  <div class="color">
-    <div class="box-${hex}">
-    </div>
-    <strong>${name}</strong><br/>
-    #${hex}<br/>
-    RBG(${r}, ${g}, ${b})
-  </div>
-`
-
 ## Brand
 
-<Preview>
-  <Story name="Brand">{
-    color('Tomato', 'ED592F', 237, 89, 47) +
-    color('DarkSlateGray', '333333', 51, 51, 51) +
-    color('Gold', 'EFBE00', 239, 190, 0) +
-    color('Orange', 'FB7729', 251, 119, 41) +
-    color('ForestGreen', '04A635', 4, 166, 53) +
-    color('DarkTurquoise', '05B5DA', 5, 181, 218) +
-    color('DarkSlateBlue', '3C5C99', 60, 92, 153)
-  }</Story>
-</Preview>
+<ColorPalette>
+  <ColorItem
+    title="Tomato"
+    subtitle="$color-tomato"
+    colors={['rgb(237, 89, 47)']} />
+  <ColorItem
+    title="Orange"
+    subtitle="$color-orange"
+    colors={['rgb(251, 119, 41)']} />
+  <ColorItem
+    title="Gold"
+    subtitle="$color-gold"
+    colors={['rgb(239, 190, 0)']} />
+  <ColorItem
+    title="ForestGreen"
+    subtitle="$color-forest-green"
+    colors={['rgb(4, 166, 53)']} />
+  <ColorItem
+    title="DarkTurquoise"
+    subtitle="$color-dark-turquoise"
+    colors={['rgb(5, 181, 218)']} />
+  <ColorItem
+    title="DarkSlateBlue"
+    subtitle="$color-dark-slate-blue"
+    colors={['rgb(60, 92, 153)']} />
+  <ColorItem
+    title="DarkSlateGray"
+    subtitle="$color-dark-slate-gray"
+    colors={['rgb(51, 51, 51)']} />
+</ColorPalette>
 
 ## Neutral
 
-<Preview style={{backgroundColor: 'white'}}>
-  <Story name="Neutral" parameters={{
-    backgrounds: [
-      { name: 'white', value: 'white', default: true }
-    ]
-  }}>{
-    color('LightSlateGray', '787878', 120, 120, 120) +
-    color('NormalGray', 'B0B0B0', 176, 176, 176) +
-    color('LightGray', 'D8D8D8', 216, 216, 216) +
-    color('LighterGray', 'F5F5F5', 245, 245, 245)
-  }</Story>
-</Preview>
+<ColorPalette>
+  <ColorItem
+    title="DarkGray"
+    subtitle="$color-dark-gray"
+    colors={['rgb(120, 120, 120)']} />
+  <ColorItem
+    title="Gray"
+    subtitle="$color-gray"
+    colors={['rgb(176, 176, 176)']} />
+  <ColorItem
+    title="LightGray"
+    subtitle="$color-light-gray"
+    colors={['rgb(216, 216, 216)']} />
+  <ColorItem
+    title="LighterGray"
+    subtitle="$color-lighter-gray"
+    colors={['rgb(245, 245, 245)']} />
+</ColorPalette>
 
 ## Binary
 
-<Preview>
-  <Story name="Binary">{
-    color('Black', '000000', 0, 0, 0) +
-    color('White', 'FFFFFF', 255, 255, 255)
-  }</Story>
-</Preview>
+<ColorPalette>
+  <ColorItem
+    title="Black"
+    subtitle="$color-black"
+    colors={['rgb(0, 0, 0)']} />
+  <ColorItem
+    title="White"
+    subtitle="$color-white"
+    colors={['rgb(255, 255, 255)']} />
+</ColorPalette>
 
 ## Interaction
 
-<Preview>
-  <Story name="Interaction">{
-    color('TomatoBrighter', 'FF6933', 255, 105, 51) +
-    color('GoldBrighter', 'F5D400', 245, 212, 0) +
-    color('ForestGreenBrighter', '00BD13', 0, 189, 19)
-  }</Story>
-</Preview>
+<ColorPalette>
+  <ColorItem
+    title="BrighterTomato"
+    subtitle="$color-brighter-tomato"
+    colors={['rgb(255, 105, 51)']} />
+  <ColorItem
+    title="BrighterGold"
+    subtitle="$color-brighter-gold"
+    colors={['rgb(245, 212, 0)']} />
+  <ColorItem
+    title="BrighterForestGreen"
+    subtitle="$color-brighter-forest-green"
+    colors={['rgb(0, 184, 80)']} />
+</ColorPalette>
 
 ## Feedback
 
-<Preview>
-  <Story name="Feedback">{
-    color('Success', 'E0F2BF', 224, 242, 191) +
-    color('Warning', 'FAECBC', 250, 236, 188) +
-    color('Error', 'FFC9C9', 255, 201, 201)
-  }</Story>
-</Preview>
+<ColorPalette>
+  <ColorItem
+    title="Success"
+    subtitle="$color-success"
+    colors={['rgb(255, 201, 201)']} />
+  <ColorItem
+    title="Warning"
+    subtitle="$color-warning"
+    colors={['rgb(224, 242, 191)']} />
+  <ColorItem
+    title="Error"
+    subtitle="$color-error"
+    colors={['rgb(250, 236, 188)']} />
+</ColorPalette>
+
+# Usage
+
+To use the colors in your code, you can
+- use the helper classes in your markup for the most common use-cases
+- import `colors.scss` and use the SCSS variables directly in your stylesheets
+
+For each of the brand colors, we have two helper classes:
+- `.has-background-<color>`<br/>
+  Applies the color as the background color for the element.
+- `.has-text-<color>` or `.has-color-<color>`<br/>
+  Applies the color as the text color for the element.
+
+**Example:**
+
+```html
+<div class="has-background-orange">
+  <!-- Has orange background -->
+</div>
+<div class="has-text-forest-green">
+  <!-- Has forest green text -->
+</div>
+```
