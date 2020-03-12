@@ -1,0 +1,54 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
+
+<Meta title="Assets/GitHub corner" />
+
+# GitHub corner
+
+GitHub corners are a convenient way for projects to link to their repositories from the landing pages.
+
+export const figmaConfig = (nodeId) => config({
+  type: 'figma',
+  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
+})
+
+export const GitHubCorner = '' +
+  '<svg width="80" height="80" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="github_corner.svg#githubcorner"></use>' +
+  '</svg>'
+
+## Variants
+
+<Preview>
+  <Story name="Normal" height="100px" parameters={{
+    design: figmaConfig('795%3A1')
+  }}>{`
+    <a class="github-corner">${GitHubCorner}</a>
+  `}</Story>
+</Preview>
+
+This is the classic black ribbon. Most pages use the GitHub corner in this fashion.
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="Inverted" height="100px" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ],
+    design: figmaConfig('795%3A1')
+  }}>{`
+    <a class="github-corner is-inverted">${GitHubCorner}</a>
+  `}</Story>
+</Preview>
+
+The colors may be inverted when displaying on darker, non-white backgrounds.
+
+<Preview>
+  <Story name="Left aligned" height="100px" parameters={{
+    design: figmaConfig('795%3A1')
+  }}>{`
+    <a class="github-corner is-left-aligned">${GitHubCorner}</a>
+  `}</Story>
+</Preview>
+
+If the right side of the page is too bloated, or if the language is read and written RTL, the position of the ribbon may
+be flipped over to the left hand side.
