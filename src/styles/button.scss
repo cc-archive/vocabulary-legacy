@@ -17,6 +17,10 @@ $button-family: $family-alternative;
     color: $color-white;
   }
 
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
   &.big {
     font-size: 1.75rem;
     padding: calc(#{$space-large} - .093rem) $space-large;
