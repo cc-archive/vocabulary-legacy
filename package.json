@@ -27,7 +27,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "husky": "^4.2.3",
     "mini-css-extract-plugin": "^0.9.0",
+    "lint-staged": "^10.0.8",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-is": "^16.12.0",
@@ -36,6 +38,9 @@
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "lint-staged": {
+    "*.{js}": "eslint src/**/*.js --fix"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
   "homepage": "https://creativecommons.github.io/vocabulary/",
@@ -50,5 +55,10 @@
   ],
   "license": "MIT",
   "repository": "github:creativecommons/vocabulary",
-  "main": "index.js"
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
