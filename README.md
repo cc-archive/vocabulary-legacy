@@ -26,6 +26,11 @@
     <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/cc-vocabulary.svg?color=brightgreen"/>
   </a>
   <a
+    href="https://circleci.com/gh/creativecommons/fonts/tree/master"
+    style="margin-right: 1em;">
+    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/fonts/tree/master.svg?style=shield"/>
+  </a>
+  <a
     href="https://github.com/creativecommons/cc-vocabulary/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
