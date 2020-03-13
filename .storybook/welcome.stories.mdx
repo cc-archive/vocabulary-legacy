@@ -1,9 +1,13 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
-import { CCVocabulary } from '../src/stories/logos.stories'
 
 <Meta title="Vocabulary" />
 
 Welcome to Vocabulary!
+
+export const vocabulary = '' +
+  '<svg width="250" height="41" viewBox="0 0 250 41" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/products/vocabulary.svg#vocabulary"></use>' +
+  '</svg>'
 
 <Preview>
   <Story name="Welcome">{`
@@ -21,7 +25,9 @@ Welcome to Vocabulary!
       }
     </style>
     <div class="welcome">
-      ${CCVocabulary()}
+      <div class="has-text-black">
+        ${vocabulary}
+      </div>
       <p class="text-normal">
         Vocabulary is a design system to unify the web-facing Creative Commons.
       </p>

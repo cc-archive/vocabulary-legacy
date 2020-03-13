@@ -36,7 +36,7 @@ $navbar-item-hover-background-color: transparent;
         }
         .donate-section {
             .donate {
-                margin-top: $space-small;
+                margin-top: $space-big;
                 color: $color-black;
                 svg {
                     margin-right: 1rem;
@@ -57,7 +57,7 @@ $navbar-item-hover-background-color: transparent;
                     flex-shrink: 1;
                     strong {
                         display: flex;
-                        color: $color-turquoise;
+                        color: $color-dark-turquoise;
                         line-height: 1.2rem;
                         margin-bottom: .5rem;
                         &:after {
@@ -81,8 +81,8 @@ $navbar-item-hover-background-color: transparent;
      @include mobile() {
          margin-top: -38.4rem;
          .container {
-            padding-right: $space-normal;
-            padding-left: $space-normal;
+            padding-right: $space-bigger;
+            padding-left: $space-bigger;
             .global-header-header {
                 .main-logo {
                     svg {
@@ -99,7 +99,7 @@ $navbar-item-hover-background-color: transparent;
                     line-height: 2rem;
                 }
                 .donate {
-                    margin-top: $space-smallest;
+                    margin-top: $space-small;
                 }
             }
             .navbar {

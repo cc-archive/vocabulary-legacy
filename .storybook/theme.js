@@ -13,7 +13,7 @@ export default create({
 
   // Rows of controls
   barTextColor: 'rgb(73, 80, 87)',
-  barSelectedColor: 'rgb(0, 0, 0)',
+  barSelectedColor: 'rgb(251, 119, 41)',
   barBg: 'rgb(255, 255, 255)',
 
   // Typography
