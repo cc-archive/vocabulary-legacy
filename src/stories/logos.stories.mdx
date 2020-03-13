@@ -20,7 +20,7 @@ export const figmaConfig = (nodeId) => config({
 })
 
 export const logomark = `<style>svg { height: 73px; }</style>
-  ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
+${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 
 <Preview>
   <Story name="CC Logomark" parameters={{
@@ -42,7 +42,7 @@ export const logomark = `<style>svg { height: 73px; }</style>
 </Preview>
 
 export const lettermark = `<style>svg { height: 72px; }</style>
-  ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
+${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 
 <Preview>
   <Story name="CC Lettermark" parameters={{
@@ -85,10 +85,8 @@ ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
   `}</Story>
 </Preview>
 
-export const globalNetwork = '' +
-  '<svg width="250" height="79" viewBox="0 0 250 79" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/global_network.svg#globalnetwork"></use>' +
-  '</svg>'
+export const globalNetwork = `<style>svg { height: 79px; }</style>
+${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
 
 <Preview>
   <Story name="CC Global Network" parameters={{
@@ -109,11 +107,8 @@ export const globalNetwork = '' +
   `}</Story>
 </Preview>
 
-export const openSource = '' +
-  '<svg width="250" height="76" viewBox="0 0 250 76" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/open_source.svg#opensource"></use>' +
-  '</svg>'
-
+export const openSource = `<style>svg { height: 76px; }</style>
+${svgCode(250, 76, 'products/open_source', 'opensource')}`
 
 <Preview>
   <Story name="CC Open Source" parameters={{
@@ -134,49 +129,8 @@ export const openSource = '' +
   `}</Story>
 </Preview>
 
-export const certificates = '' +
-  '<svg width="160" height="174" viewBox="0 0 160 174" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/certificates.svg#content"></use>' +
-  '<use href="logos/products/certificates.svg#dots"></use>' +
-  '</svg>'
-
-<Preview>
-  <Story name="CC Certificates" parameters={{
-    design: figmaConfig('784%3A1')
-  }}>{`
-    ${certificates}
-  `}</Story>
-</Preview>
-
-export const certificatesMonochrome = '' +
-  '<svg width="160" height="174" viewBox="0 0 160 174" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/certificates.svg#content"></use>' +
-  '<use href="logos/products/certificates.svg#monochrome"></use>' +
-  '</svg>'
-
-<Preview>
-  <Story name="CC Certificates Monochrome" parameters={{
-    design: figmaConfig('784%3A1')
-  }}>{`
-    <div class="has-text-black">${certificatesMonochrome}</div>
-  `}</Story>
-</Preview>
-
-<Preview style={{backgroundColor: 'black'}}>
-  <Story name="CC Certificates Inverted" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('784%3A1')
-  }}>{`
-    <div class="has-text-white">${certificatesMonochrome}</div>
-  `}</Story>
-</Preview>
-
-export const vocabulary = '' +
-  '<svg width="250" height="41" viewBox="0 0 250 41" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/vocabulary.svg#vocabulary"></use>' +
-  '</svg>'
+export const vocabulary = `<style>svg { height: 41px; }</style>
+${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 
 <Preview>
   <Story name="CC Vocabulary" parameters={{
@@ -197,10 +151,8 @@ export const vocabulary = '' +
   `}</Story>
 </Preview>
 
-export const search = '' +
-  '<svg width="250" height="81" viewBox="0 0 250 81" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/products/search.svg#search"></use>' +
-  '</svg>'
+export const search = `<style>svg { height: 81px; }</style>
+${svgCode(250, 81, 'products/search', 'search')}`
 
 <Preview>
   <Story name="CC Search" parameters={{
@@ -218,5 +170,45 @@ export const search = '' +
     design: figmaConfig('784%3A1')
   }}>{`
     <div class="has-text-white">${search}</div>
+  `}</Story>
+</Preview>
+
+export const certificates = (type) => `<style>svg { height: 174px; }</style>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidyMid meet"
+  viewBox="0 0 160 174">
+  <use href="logos/products/certificates.svg#certificates"></use>
+  <use href="logos/products/certificates.svg#${type}_dots"></use>
+</svg>`
+
+export const certificatesColorful = certificates('colorful')
+
+<Preview>
+  <Story name="CC Certificates Colorful" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
+    ${certificatesColorful}
+  `}</Story>
+</Preview>
+
+export const certificatesMonochrome = certificates('monochrome')
+
+<Preview>
+  <Story name="CC Certificates Monochrome" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{`
+    <div class="has-text-black">${certificatesMonochrome}</div>
+  `}</Story>
+</Preview>
+
+<Preview style={{backgroundColor: 'black'}}>
+  <Story name="CC Certificates Monochrome Inverted" parameters={{
+    backgrounds: [
+      { name: 'black', value: 'black', default: true }
+    ],
+    design: figmaConfig('784%3A1')
+  }}>{`
+    <div class="has-text-white">${certificatesMonochrome}</div>
   `}</Story>
 </Preview>
