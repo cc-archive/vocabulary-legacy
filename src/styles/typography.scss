@@ -1,56 +1,99 @@
-$font-size-normal: 1rem;
-$font-size-small: 0.8rem;
-$font-size-big: 1.12rem;
-$font-size-bigger: 1.43rem;
+// Families
+$family-roboto-condensed: 'Roboto Condensed', sans-serif;
+$family-source-sans-pro: 'Source Sans Pro', sans-serif;
+$family-fira-code: 'Fira Code', monospace;
+$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-$font-sizes: (
-    "-normal": $font-size-normal,
-    "-small": $font-size-small,
-    "-big": $font-size-big,
-    "-bigger": $font-size-bigger,
+// Sizes
+$font-size-h1: 3.56rem;
+$font-size-h2: 2.25rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.43rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1.15rem; // Not in Figma, extrapolated
+
+$font-size-value: 4.37rem;
+
+$font-size-body-bigger: 1.43rem;
+$font-size-body-big: 1.12rem;
+$font-size-body-normal: 1rem;
+$font-size-body-list: 1rem;
+
+$font-size-caption: 0.8rem;
+
+// Overrides
+$family-sans-serif: $family-source-sans-pro;
+$family-alternative: $family-roboto-condensed;
+$family-monospace: $family-fira-code;
+
+// Classes
+$body-font-sizes: (
+  "-bigger": $font-size-body-bigger,
+  "-big": $font-size-body-big,
+  "-normal": $font-size-body-normal,
+  "-list": $font-size-body-list,
 );
 
-@each $font-size-namespace, $size in $font-sizes {
-    .text#{$font-size-namespace} {
-        font-size: $size;
-        font-family: Source Sans Pro;
-    }
+@each $body-name, $body-font-size in $body-font-sizes {
+  .body#{$body-name} {
+    line-height: 1.3;
+    font-size: $body-font-size;
+  }
 }
 
 .caption {
-    font-size: $font-size-small;
-}
-
-$header-font-sizes: (
-    "h1": 3.56rem,
-    "h2": 2.25rem,
-    "h3": 1.75rem,
-    "h4": 1.43rem,
-    "h5": 1.25rem,
-    "h6": 1rem
-);
-
-@each $header-name, $header-font-size in $header-font-sizes {
-    #{$header-name} {
-        font-size: $header-font-size;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.02rem;
-        line-height: 3rem;
-        font-family: Roboto Condensed;
-
-        &.b-header {
-            text-transform: none;
-            font-family: Source Sans Pro;
-        }
-    }
+  font-size: $font-size-caption;
 }
 
 .value {
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 4.37rem;
-    line-height: 5rem;
-    letter-spacing: 0.02em;
+  font-family: $family-roboto-condensed;
+  font-size: $font-size-value;
+  font-weight: bold;
+
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.monospace {
+  font-family: $family-monospace;
+  font-size: 0.875em; // Fira Code at 14px is similar to other fonts at 16px
+}
+
+// Usage
+h1, h2, h3, h4, h5, h6 {
+  color: $color-dark-slate-gray;
+
+  font-family: $family-roboto-condensed;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 0.02rem;
+
+  &.b-header {
+    font-family: $family-source-sans-pro;
+
+    text-transform: none;
+  }
+}
+
+$header-font-sizes: (
+  "h1": $font-size-h1,
+  "h2": $font-size-h2,
+  "h3": $font-size-h3,
+  "h4": $font-size-h4,
+  "h5": $font-size-h5,
+  "h6": $font-size-h6,
+);
+
+@each $header-name, $header-font-size in $header-font-sizes {
+  #{$header-name} {
+    font-size: $header-font-size;
+  }
+}
+
+body {
+  font-family: $family-sans-serif;
+  font-size: $font-size-body-normal;
 }
