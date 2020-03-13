@@ -1,6 +1,9 @@
-import { CCLogomark } from './logos.stories'
-
 export default { title: 'Header' }
+
+let CCLogomark = () => '' +
+  '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
+  '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
+  '</svg>'
 
 export const bigHeader = () =>
     `<header class="header big">

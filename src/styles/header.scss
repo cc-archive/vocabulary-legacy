@@ -22,9 +22,9 @@
     .navbar-link:not(.is-arrowless)::after {
       position: absolute;
       top: 53%;
-      border-color: $color-light-slate-gray transparent;
+      border-color: $color-dark-gray transparent;
       border-style: solid;
-      border-width: $space-smaller $space-smaller 0 $space-smaller;
+      border-width: $space-small $space-small 0 $space-small;
       height: 0;
       width: 0;
       transform: none;
@@ -41,7 +41,7 @@
       h6 {
         color: $color-black;
         &:hover {
-          color: $color-light-slate-gray;
+          color: $color-dark-gray;
         }
       }
 
@@ -73,7 +73,7 @@
 
 h5,
 h6 {
-  color: $color-light-slate-gray;
+  color: $color-dark-gray;
   &:hover,
   &:active {
     color: $color-black;
