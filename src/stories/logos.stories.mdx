@@ -7,15 +7,20 @@ import { config } from 'storybook-addon-designs'
 
 ## Logos
 
+export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `<svg
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidyMid meet"
+  viewBox="0 0 ${viewBoxX} ${viewBoxY}">
+  <use href="logos/${fileName}.svg#${id}"></use>
+</svg>`
+
 export const figmaConfig = (nodeId) => config({
   type: 'figma',
   url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
 })
 
-export const logomark = '' +
-  '<svg width="266.5205" height="64" viewBox="0 0 304 73" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/cc/logomark.svg#creativecommons"></use>' +
-  '</svg>'
+export const logomark = `<style>svg { height: 73px; }</style>
+  ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 
 <Preview>
   <Story name="CC Logomark" parameters={{
@@ -36,10 +41,8 @@ export const logomark = '' +
   `}</Story>
 </Preview>
 
-export const lettermark = '' +
-  '<svg width="64" height="64" viewBox="5.5 -3.5 64 64" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/cc/lettermark.svg#creativecommons"></use>' +
-  '</svg>'
+export const lettermark = `<style>svg { height: 72px; }</style>
+  ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 
 <Preview>
   <Story name="CC Lettermark" parameters={{
@@ -60,10 +63,8 @@ export const lettermark = '' +
   `}</Story>
 </Preview>
 
-export const letterheart = '' +
-  '<svg width="64" height="64" viewBox="0 0 46296.26 40689.13" xmlns="http://www.w3.org/2000/svg">' +
-  '<use href="logos/cc/letterheart.svg#creativecommons"></use>' +
-  '</svg>'
+export const letterheart = `<style>svg { height: 72px; }</style>
+${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
 
 <Preview>
   <Story name="CC Letterheart" parameters={{
