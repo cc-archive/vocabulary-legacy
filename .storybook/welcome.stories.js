@@ -19,7 +19,7 @@ export const Welcome = () => `
     Fonts is a collection of typefaces that lend personality to the web facing Creative Commons.
   </p>
   <a href="https://github.com/creativecommons/fonts" target="_blank">
-    <button class="button is-primary">GitHub repository</button>
+    <button class="button small is-primary">GitHub repository</button>
   </a>
 </div>
 `
