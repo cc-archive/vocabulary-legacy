@@ -4,24 +4,36 @@ $input-color: $color-dark-slate-gray;
 
 @import "../../node_modules/bulma/sass/form/_all.sass";
 
+// Form control
+@mixin form_control {
+  font-family: $family-source-sans-pro;
+  font-weight: 600;
+
+  border-width: 0.125rem;
+  border-color: $color-light-gray;
+}
+
 // text input
 
 .input {
-  font-family: $family-source;
-  font-weight: 600;
+  @include form_control;
 
-  border-width: .125rem;
   padding-left: 1.5rem;
+
+  &.is-medium {
+      height: 3.875rem;
+      font-size: 1.43rem;
+  }
+
+  &.is-large {
+      height: 5.063rem;
+      font-size: 1.75rem;
+  }
 }
 
 .select {
   select {
-    font-family: "Source Sans Pro", $family-os;
-
-    font-weight: 600;
-
-    border-color: $color-light-gray;
-    border-width: .125rem;
+    @include form_control;
 
     option {
       font-weight: 400;
