@@ -58,7 +58,7 @@
   "main": "index.js",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint"
     }
   }
 }
