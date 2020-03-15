@@ -51,10 +51,5 @@
   ],
   "license": "MIT",
   "repository": "github:creativecommons/vocabulary",
-  "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  }
+  "main": "index.js"
 }
