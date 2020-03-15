@@ -23,7 +23,7 @@ export const PostVertical = () => {
   `
 }
 
-export const  = () => {
+export const PostHorizontal = () => {
   return `
     <div style="width: 600px;">
       <article class="card entry-post horizontal">
