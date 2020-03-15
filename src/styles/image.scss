@@ -4,21 +4,6 @@
     overflow: hidden;
 }
 
-.content .content-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-}
-
-.content:hover .content-overlay {
-    opacity: 1;
-}
-
 .content-details {
     position: absolute;
     bottom: 0%;
@@ -50,7 +35,6 @@
     padding-top: 8px;
     opacity: 0;
 }
-
 .content:hover .content-icons{
     opacity: 1;
 }
