@@ -4,7 +4,7 @@
   "description": "Typefaces that lend personality to the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint src/*.js src/**/*.js",
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
     "storybook": "start-storybook -s ./src/assets -p 8080",
