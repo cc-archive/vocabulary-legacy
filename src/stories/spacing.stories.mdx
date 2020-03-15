@@ -1,0 +1,64 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
+
+<Meta title="Tokens/Spacing" />
+
+# Measures
+
+To create a consistency in elements position and harmony, we defined a unit base that applies to the grid, margin and
+paddings. Based on this unit, we generated a list of spacings that applies in the layout of any page.
+
+The basic distance defined in Vocabulary is 16 pixels. This measurement corresponds to 1 rem and generates eight
+variations to support all the possible distances. Those spacings range the smallest distance like text margins, and the
+largest ones like margin between sections.
+
+## Spacing definitions
+
+| Name   | SCSS variable   | rem | px |
+|--------|-----------------|-----|----|
+| Small  | `$space-small`  | 0.5 | 8  |
+| Normal | `$space-normal` | 1   | 16 |
+| Big    | `$space-big`    | 1.5 | 24 |
+| Bigger | `$space-bigger` | 2   | 32 |
+| Large  | `$space-large`  | 2.5 | 40 |
+| Larger | `$space-larger` | 3   | 48 |
+| XL     | `$space-xl`     | 4   | 64 |
+| XXL    | `$space-xxl`    | 6   | 96 |
+
+# Usage
+
+To use the spacings in your code, you can
+- use the helper classes in your markup for the most common use-cases
+- import `spacing.scss` and use the SCSS variables directly in your stylesheets
+
+Spacing applies to two properties (margin and padding) on four sides (top, right, bottom and left). For each spacing
+size and each property we have two kinds of helper classes:
+- directed i.e. `.<property>-<direction>-<size>`<br/>
+  Applies the spacing only towards the given directions.
+
+  | Direction | Options                          |
+  |-----------|----------------------------------|
+  | Side      | `top`, `right`, `bottom`, `left` |
+  | Group     | `horizontal`, `vertical`         |
+
+- undirected i.e. `.<property>-<size>`<br/>
+  Applies the spacing on all four sides of the element.
+
+**Example:**
+
+```html
+<div class="margin-horizontal-big">
+  <!-- Margin of 1.5rem on left and right sides -->
+</div>
+<div class="padding-small">
+  <!-- Padding of 0.5rem on all four sides -->
+</div>
+```
+
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=0%3A190'
+  })
+}}>
+</Story>
