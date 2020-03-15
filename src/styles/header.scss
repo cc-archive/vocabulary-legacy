@@ -47,21 +47,6 @@ $navbar-dropdown-radius: 0;
         margin-left: $space-large;
       }
     }
-
-    .superheader-call {
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      color: $color-white;
-      font-weight: 600;
-
-      background-color: $black;
-
-      padding: $space-smaller $space-normal $space-small $space-normal;
-
-      border-radius: 0 0 0.25rem 0.25rem;
-    }
   }
 
   &.small {
