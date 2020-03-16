@@ -1,5 +1,5 @@
 import { withKnobs, select } from '@storybook/addon-knobs'
-import { CCLetterheart, CCLogomarkWhite } from './logos.stories'
+import { svgCode } from './logos.stories.mdx'
 
 export default { title: 'Global Header', decorators: [withKnobs] }
 
@@ -18,7 +18,7 @@ export const Main = () => {
             <div class="level-left">
               <header class="global-header-header">
                 <a href="https://creativecommons.org" target="_blank" class="main-logo">
-                  ${CCLogomarkWhite()}
+                  <div class="has-text-white">${svgCode(304, 73, 'cc/logomark', 'creativecommons')}</div>
                 </a>
               </header>
             </div> 
@@ -28,8 +28,8 @@ export const Main = () => {
               <aside class="donate-section">
                 <h5>Our work relies on you!</h5>
                 <p>Help us keep the internet free and open.</p>
-                <a class="button donate">
-                  ${CCLetterheart()} Donate now
+                <a class="button small donate">
+                  ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')} Donate now
                 </a>
               </aside>
             </div>
