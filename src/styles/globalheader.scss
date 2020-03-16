@@ -83,7 +83,6 @@ $navbar-item-hover-background-color: transparent;
         }
     }
      @include mobile() {
-         margin-top: -38.4rem;
          .container {
             padding-right: $space-bigger;
             padding-left: $space-bigger;
