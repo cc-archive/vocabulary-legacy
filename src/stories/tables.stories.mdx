@@ -3,128 +3,126 @@ import { config } from 'storybook-addon-designs'
 
 <Meta title="Table" />
 
+# Table
+
+## Basic Components
+
 <Preview>
-  <Story name="Column name">{`
+  <Story name="Basic Components">{`
     <table class="table is-bordered has-color-dark-slate-gray">
       <thead class="text-big has-background-grey-light">
-        <th>Column name</th>
+        <th class="padding-vertical-normal padding-right-xl padding-left-normal">Column name</th>
       </thead>
     </table>
-    `}</Story>
-</Preview>
-
-
-<Preview>
-  <Story name="Text name">{`
     <table class="table is-bordered has-color-dark-slate-gray">
       <tr class="text-normal">
-        <td>Text Cell</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Text Cell</td>
       </tr>
     </table>
-    `}</Story>
-</Preview>
-
-<Preview>
-  <Story name="Number">{`
     <table class="table is-bordered has-color-dark-slate-gray">
       <tr class="text-normal has-text-right">
-        <td>000</td>
+        <td class="padding-vertical-normal padding-left-xl padding-right-normal">000</td>
       </tr>
     </table>
-    `}</Story>
+    `}
+  </Story>
 </Preview>
+
+## Basic Content Table
 
 <Preview>
   <Story name="Basic Content">{`
     <table class="table is-bordered is-striped has-color-dark-slate-gray">
       <thead class="text-big">
         <tr>
-          <th>State names</th>
-          <th>Capital of the state</th>
-          <th>Population</th>
-          <th>Total seats</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">State names</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Capital of the state</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Population</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Total seats</th>
         </tr>
       </thead>
       <tr class="text-normal">
-        <td>Alabama</td>
-        <td>Montgomery</td>
-        <td class="has-text-right">4,903,185</td>
-        <td class="has-text-right">7</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Alabama</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Montgomery</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">4,903,185</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">7</td>
       </tr>
       <tr class="text-normal">
-        <td>Arizona</td>
-        <td>Phoenix</td>
-        <td class="has-text-right">7,278,717</td>
-        <td class="has-text-right">9</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Arizona</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Phoenix</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">7,278,717</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">9</td>
       </tr>
       <tr class="text-normal">
-        <td>Arizona</td>
-        <td>Phoenix</td>
-        <td class="has-text-right">7,278,717</td>
-        <td class="has-text-right">9</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Arizona</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Phoenix</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">7,278,717</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">9</td>
       </tr>
       <tr class="text-normal">
-        <td>Arkansas</td>
-        <td>Little Rock</td>
-        <td class="has-text-right">3,017,825</td>
-        <td class="has-text-right">4</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Arkansas</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">Little Rock</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">3,017,825</td>
+        <td class="has-text-right padding-vertical-normal padding-left-xl padding-right-normal">4</td>
       </tr>
     </table>
     `}</Story>
 </Preview>
+
+## Rich Content Table
 
 <Preview>
   <Story name="Rich Content">{`
     <table class="table is-bordered  is-striped has-color-dark-slate-gray">
       <thead class="text-big">
         <tr>
-          <th>Project Name</th>
-          <th>Resources</th>
-          <th>Commits</th>
-          <th>Last release</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Project Name</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Resources</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Commits</th>
+          <th class="padding-vertical-normal padding-right-xl padding-left-normal">Last release</th>
         </tr>
       </thead>
       <tr class="text-normal">
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="text-bigger has-text-weight-bold padding-bottom-smaller">CC Search</div>
           <div class="text-normal">7 contributors</div>
         </td>
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="has-color-orange padding-bottom-smaller">Mockups</div>
           <div class="has-color-orange padding-bottom-smaller">Project\s Brief</div>
           <div class="has-color-orange padding-bottom-smaller">Drive Folder</div>
         </td>
         <td class="has-text-right">
-          <h2>452</h2>
+          <h2 class="padding-vertical-normal padding-left-xl padding-right-normal">452</h2>
         </td>
-        <td>13/01/2020</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">13/01/2020</td>
       </tr>
       <tr class="text-normal">
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="text-bigger has-text-weight-bold padding-bottom-smaller">CC License Chooser</div>
           <div class="text-normal">7 contributors</div>
         </td>
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="has-color-orange padding-bottom-smaller">Mockups</div>
         </td>
         <td class="has-text-right">
-          <h2>32</h2>
+          <h2 class="padding-vertical-normal padding-left-xl padding-right-normal">32</h2>
         </td>
-        <td>26/01/2020</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">26/01/2020</td>
       </tr>
       <tr class="text-normal">
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="text-bigger has-text-weight-bold padding-bottom-smaller">Open Source Redesign</div>
           <div class="text-normal">7 contributors</div>
         </td>
-        <td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">
           <div class="has-color-orange padding-bottom-smaller">Test sessions</div>
           <div class="has-color-orange padding-bottom-smaller">Content</div>
         </td>
         <td class="has-text-right">
-          <h2>1,043</h2>
+          <h2 class="padding-vertical-normal padding-left-xl padding-right-normal">1,043</h2>
         </td>
-        <td>06/01/2020</td>
+        <td class="padding-vertical-normal padding-right-xl padding-left-normal">06/01/2020</td>
       </tr>
     </table>
     `}</Story>
