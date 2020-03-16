@@ -1,0 +1,288 @@
+$card-shadow : none;
+$card-content-padding: $space-big;
+$card-header-shadow: none;
+
+@import "../../node_modules/bulma/sass/components/card.sass";
+
+.card {
+    &.entry-post {
+        border: 3px solid $color-light-gray;
+        &.no-border {
+            border: none;
+        }
+        .card-content {
+            padding: $space-big $space-bigger;
+            .card-title {
+                text-transform: none;
+                line-height: 1.6rem;
+                a {
+                    color: $color-black;
+                }
+            }
+            .subtitle {
+                display: block;
+                margin-top: $space-normal;
+                color: $color-gray;
+                font-size: .9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+            }
+            .content {
+                padding-top: $space-big;
+            }
+            &.with-button {
+                .content {
+                    padding: $space-big 0;
+                }
+            }
+            .read-more {
+                position: relative;
+                margin-top: $space-big;
+                text-transform: uppercase;
+                color: $color-gray;
+                letter-spacing: 2%;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    right: -1.5rem;
+                    top: .01rem;
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+        &.horizontal {
+            display: flex;
+            .card-content {
+                padding: $space-bigger;
+            }
+            .card-image {
+                .image {
+                    height: 100%;
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &.entry-video {
+            .card-image {
+                a {
+                    .image {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            padding: $space-big;
+                            top: 0;
+                            left: 0;
+                            width: 5rem;
+                            height: 5rem;
+                            background-color: $color-gold;
+                            background-image: url("data:image/svg+xml,%3Csvg width='21' height='37' viewBox='0 0 21 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 19.24L0 0V37L21 19.24Z' fill='white'/%3E%3C/svg%3E%0A");
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            z-index: 10;
+                        }
+                    }
+                }
+            }
+            &.large {
+                &>* {
+                    flex: 0 0 auto;
+                }
+                .card-image {
+                    width: 70%;
+                    a {
+                        .image {
+                            &:before {
+                                bottom: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .card-content {
+                    width: 30%;
+                    .card-title {
+                        text-transform: uppercase;
+                        line-height: 3.7rem;
+                    }
+                }
+            }
+        }
+        &.entry-event {
+            .card-header {
+                width: 30%;
+                justify-content: center;
+                align-items: center;
+                .card-date {
+                    padding: $space-big;
+                    text-align: center;
+                    &>* {
+                        display: block;
+                    }
+                    .month {
+                        text-transform: uppercase;
+                        color: $color-dark-gray;
+                    }
+                    .day {
+                        font-size: 4.4rem;
+                        font-weight: 600;
+                        line-height: 4rem;
+                    }
+                    .year {
+                        color: $color-dark-gray;
+                    }
+                }
+            }
+            .card-content {
+                .content {
+                    padding-bottom: $space-big;
+                }
+            }
+        }
+        &.entry-statistic {
+            .card-header {
+                width: 65%;
+                padding: $space-big;
+                align-items: center;
+                .card-statistic {
+                    &>* {
+                        display: block;
+                    }
+                    .number {
+                        font-size: 4.4rem;
+                        font-weight: 600;
+                        line-height: 4rem;
+                    }
+                    .caption {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .card-content {
+                .content {
+                    padding-bottom: 1rem;
+                    padding-top: 0;
+                }
+            }
+        }
+        &.entry-quote {
+            padding: $space-big;
+            .card-image {
+                width: 80%;
+                .image {
+                    img {
+                        object-fit: none;
+                        height: auto;
+                        border: 3px solid $color-light-gray;
+                    }
+                }
+            }
+            .card-content {
+                padding-top: 0;
+                .quote {
+                    display: block;
+                    width: 46px;
+                    height: 32px;
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml,%3Csvg width='46' height='32' viewBox='0 0 46 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.3836 26.8797C25.8676 24.1902 25 21.0676 25 17.737C25 11.3769 29.1325 2.81312 39.3401 0L41.196 5.31367C36.3588 7.02275 33.1774 10.4191 32.8559 12.5458C33.8727 12.1893 34.9648 11.9956 36.1017 11.9956C41.5684 11.9956 46 16.4737 46 21.9978C46 27.5219 41.5684 32 36.1017 32C32.3717 32 29.1235 29.9151 27.4362 26.8357L27.3836 26.8797Z' fill='%23D8D8D8'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.38359 26.8797C0.867634 24.1902 -1.90735e-06 21.0676 -1.90735e-06 17.737C-1.90735e-06 11.3769 4.13252 2.81312 14.3401 0L16.196 5.31367C11.3588 7.02275 8.17739 10.4191 7.85587 12.5458C8.87269 12.1893 9.96483 11.9956 11.1017 11.9956C16.5684 11.9956 21 16.4737 21 21.9978C21 27.5219 16.5684 32 11.1017 32C7.37168 32 4.12352 29.9151 2.43624 26.8357L2.38359 26.8797Z' fill='%23D8D8D8'/%3E%3C/svg%3E%0A");
+                }
+                .content {
+                    font-size: 1.4rem;
+                    .quote-author {
+                        font-size: 1rem;
+                        margin-top: $space-big;
+                    }
+                }
+            }
+        }
+        &.entry-image {
+            .card-content {
+                .card-title {
+                    margin-bottom: $space-normal;
+                    text-transform: uppercase;
+                    a {
+                        color: $color-black;
+                        &:hover {
+                            color: $color-dark-gray;
+                        }
+                    }
+                }
+                .subtitle {
+                    color: $color-gray;
+                    font-weight: 600;
+                    letter-spacing: .1rem;
+                }
+            }
+        }
+        &.link {
+            a {
+                display: block;
+                padding: $space-bigger;
+                color: $color-black;
+                @each $color-namespace, $brand-color in $brand-colors {
+                    &.has-background-#{$color-namespace} {
+                        @if $color-namespace == 'gold' or $color-namespace == 'turquoise' {
+                            color: $color-black;
+                        } @else {
+                            color: $color-white;
+                            .card-content {
+                                .card-title {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card-content {
+                    display: block;
+                    position: relative;
+                    &.has-bottom-link {
+                        padding: 0 0 6rem 0;
+                    }
+                    .card-title {
+                        text-transform: uppercase;
+                        line-height: 2.5rem;
+                    }
+                    .content {
+                        display: block;
+                        font-weight: 600;
+                    }
+                    .link-arrow {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        text-transform: uppercase;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 1rem;
+                            height: 1rem;
+                            right: -1.3rem;
+                            top: .22rem;
+                            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.51761 4.32428C5.20044 4.05786 5.1593 3.58477 5.42572 3.26761C5.69214 2.95044 6.16523 2.9093 6.48239 3.17572L5.51761 4.32428ZM12.25 9L12.7324 8.42572C12.902 8.56822 13 8.77844 13 9C13 9.22156 12.902 9.43178 12.7324 9.57428L12.25 9ZM6.48239 14.8243C6.16523 15.0907 5.69214 15.0496 5.42572 14.7324C5.1593 14.4152 5.20044 13.9421 5.51761 13.6757L6.48239 14.8243ZM6.48239 3.17572L12.7324 8.42572L11.7676 9.57428L5.51761 4.32428L6.48239 3.17572ZM12.7324 9.57428L6.48239 14.8243L5.51761 13.6757L11.7676 8.42572L12.7324 9.57428Z' fill='black'/%3E%3C/svg%3E%0A");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+                &:hover {
+                    @each $color-namespace, $brand-color in $brand-colors {
+                        &.has-background-#{$color-namespace} {
+                            background-color: lighten($brand-color,10) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
