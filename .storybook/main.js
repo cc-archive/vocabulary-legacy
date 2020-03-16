@@ -5,7 +5,7 @@ module.exports = {
     '../src/**/*.stories.mdx'
   ],
   addons: 
-  ['@storybook/addon-knobs',
-  
+  [
+  '@storybook/addon-docs',
   ],
   }
