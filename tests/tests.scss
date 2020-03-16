@@ -1,0 +1,22 @@
+ @import 'true';
+
+
+
+// @import 'src/styles/color.scss';
+// @import 'src/styles/spacing.scss';
+// @import 'src/styles/typography.scss';
+
+
+@include it('Outputs a font size and line height based on keyword') {
+    @include assert {
+      @include output {
+        @include font-size('large');
+      }
+
+      @include expect {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  @include report;
