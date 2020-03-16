@@ -8,7 +8,12 @@ import { config } from 'storybook-addon-designs'
 ## Basic Components
 
 <Preview>
-  <Story name="Basic Components">{`
+  <Story name="Basic Components" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=904%3A0'
+  })
+}}>{`
     <table class="table is-bordered has-color-dark-slate-gray">
       <thead class="text-big has-background-grey-light">
         <th class="padding-vertical-normal padding-right-xl padding-left-normal">Column name</th>
@@ -31,7 +36,12 @@ import { config } from 'storybook-addon-designs'
 ## Basic Content Table
 
 <Preview>
-  <Story name="Basic Content">{`
+  <Story name="Basic Content" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=904%3A0'
+  })
+}}>{`
     <table class="table is-bordered is-striped has-color-dark-slate-gray">
       <thead class="text-big">
         <tr>
@@ -72,7 +82,12 @@ import { config } from 'storybook-addon-designs'
 ## Rich Content Table
 
 <Preview>
-  <Story name="Rich Content">{`
+  <Story name="Rich Content" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=904%3A0'
+  })
+}}>{`
     <table class="table is-bordered  is-striped has-color-dark-slate-gray">
       <thead class="text-big">
         <tr>
