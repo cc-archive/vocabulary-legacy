@@ -26,13 +26,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.otf$/,
+        test: /\.(otf|ttf|woff)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: '../fonts'
+              outputPath: '../fonts',
+              emitFile: false
             }
           }
         ]

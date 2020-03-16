@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Vocabulary Icons";
+    src: url("../fonts/VocabularyIcons.ttf?l48kvc") format("truetype"),
+    url("../fonts/VocabularyIcons.woff?l48kvc") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  i.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "Vocabulary Icons", monospace !important;
+    speak: none;
+  
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+  
+    text-transform: none;
+    line-height: 1;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  i.icon.chevron-up:before {
+    content: "\e900";
+  }
+  
+  i.icon.chevron-right:before {
+    content: "\e901";
+  }
+  
+  i.icon.chevron-down:before {
+    content: "\e902";
+  }
+  
+  i.icon.chevron-left:before {
+    content: "\e903";
+  }
+  
+  i.icon.caret-right:before {
+    content: "\e908";
+  }
+  
+  i.icon.caret-down:before {
+    content: "\e909";
+  }
+  
+  i.icon.sliders:before {
+    content: "\e90a";
+  }
+  
+  i.icon.tick:before {
+    content: "\e90b";
+  }
+  
+  i.icon.cross:before {
+    content: "\e90c";
+  }
+  
+  i.icon.circle-filled:before {
+    content: "\e90d";
+  }
+  
+  i.icon.globe:before {
+    content: "\e90e";
+  }
+  
+  i.icon.circle-outline:before {
+    content: "\e90f";
+  }
+  
+  i.icon.info:before {
+    content: "\e910";
+  }
+  
+  i.icon.search:before {
+    content: "\e911";
+  }
+  
+  i.icon.external-link:before {
+    content: "\e912";
+  }
+  
+  i.icon.logo:before {
+    content: "\e913";
+  }
+  
+  i.icon.cc-by:before {
+    content: "\e923";
+  }
+  
+  i.icon.cc-nc:before {
+    content: "\e914";
+  }
+  
+  i.icon.cc-nc-eu:before {
+    content: "\e915";
+  }
+  
+  i.icon.cc-nc-jp:before {
+    content: "\e916";
+  }
+  
+  i.icon.cc-nd:before {
+    content: "\e917";
+  }
+  
+  i.icon.cc-sa:before {
+    content: "\e918";
+  }
+  
+  i.icon.cc-remix:before {
+    content: "\e919";
+  }
+  
+  i.icon.cc-sampling-plus:before {
+    content: "\e91a";
+  }
+  
+  i.icon.cc-sampling:before {
+    content: "\e91b";
+  }
+  
+  i.icon.cc-share:before {
+    content: "\e91c";
+  }
+  
+  i.icon.cc-zero:before {
+    content: "\e91d";
+  }
+  
+  i.icon.cc-pd:before {
+    content: "\e91f";
+  }
+  
+  i.icon.cc-pd-alt:before {
+    content: "\e91e";
+  }
+  
+  i.icon.facebook:before {
+    content: "\e920";
+  }
+  
+  i.icon.instagram:before {
+    content: "\e921";
+  }
+  
+  i.icon.twitter:before {
+    content: "\e922";
+  }
+  
