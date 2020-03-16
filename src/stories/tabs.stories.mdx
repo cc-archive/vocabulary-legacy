@@ -1,0 +1,35 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
+
+<Meta title="Tabs" />
+
+# Tabs
+
+<Preview>
+  <Story name="Tab" height="200px">{`
+    <div>
+      <div class="tabs">
+        <ul>
+          <li><a>Pictures</a></li>
+          <li class="is-active"><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+      <div class="tabs-content">
+        <div class="tabs-panel"> Pictures content</div>
+        <div class="tabs-panel is-active"> Music content</div>
+        <div class="tabs-panel"> Videos content</div>
+        <div class="tabs-panel"> Documents content</div>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=933%3A1'
+  })
+}}>
+</Story>
