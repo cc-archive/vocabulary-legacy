@@ -19,7 +19,7 @@ export const Main = () => {
           </div>
           <div class="column is-half">
             <nav class="footer-navigation navbar">
-              <ul class="navbar-menu">
+              <ul class="navbar-menu is-active">
                 <li class="item-container">
                   <a href="#" class="navbar-item">Item 1</a>
                 </li>

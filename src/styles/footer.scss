@@ -77,4 +77,22 @@ $input-shadow: none;
             }
         }
     }
+    @include tablet() {
+        padding: $space-big;
+        .footer-navigation {
+            .navbar-menu {
+                display: flex;
+            }
+        }
+    }
+    @include mobile() {
+        padding: $space-normal;
+        .footer-navigation {
+            .navbar-menu {
+                .navbar-item {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
