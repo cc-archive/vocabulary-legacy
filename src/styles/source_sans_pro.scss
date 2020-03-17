@@ -1,3 +1,5 @@
+@import "./font_face.scss";
+
 $unicodes : (U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F),
         (U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116),
         (U+1F00-1FFF),
@@ -8,36 +10,13 @@ $unicodes : (U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-
 
 
 @each $unicode in  $unicodes {
-  @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/SourceSansPro-Regular.woff") format("woff"),
-    url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
-    url("../fonts/SourceSansPro-Regular.otf") format("opentype");
-    unicode-range: $unicode;
-  }
+  @include fontface('Source Sans Pro', 'SourceSansPro-Regular', 400, $unicode);
 }
 
 @each $unicode in  $unicodes {
-  @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 600;
-    src: url("../fonts/SourceSansPro-SemiBold.woff") format("woff"),
-    url("../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
-    url("../fonts/SourceSansPro-SemiBold.otf") format("opentype");
-    unicode-range: $unicode;
-  }
+  @include fontface('Source Sans Pro', 'SourceSansPro-SemiBold', 600, $unicode);
 }
+
 @each $unicode in  $unicodes {
-  @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 700;
-    src: url("../fonts/SourceSansPro-Bold.woff") format("woff"),
-    url("../fonts/SourceSansPro-Bold.woff2") format("woff2"),
-    url("../fonts/SourceSansPro-Bold.otf") format("opentype");
-    unicode-range: $unicode;
-  }
+  @include fontface('Source Sans Pro', 'SourceSansPro-Bold', 600, $unicode);
 }
