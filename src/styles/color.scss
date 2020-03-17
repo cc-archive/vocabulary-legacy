@@ -23,9 +23,12 @@ $color-brighter-gold: rgb(245, 212, 0);
 $color-brighter-forest-green: rgb(0, 184, 80);
 
 // Feedback
-$color-success: rgb(224, 242, 191);
-$color-warning: rgb(250, 236, 188);
-$color-error: rgb(255, 201, 201);
+$color-success: rgb(4,166,53);
+$color-warning: rgb(242,171,32);
+$color-error: rgb(200,59,30);
+$color-success-lighter: rgb(224, 242, 191);
+$color-warning-lighter: rgb(250, 236, 188);
+$color-error-lighter: rgb(255, 201, 201);
 
 // Overrides
 $red: $color-tomato;
@@ -42,8 +45,8 @@ $info: $color-forest-green;
 $warning: $color-warning;
 $danger: $color-error;
 
-$link: $color-dark-slate-blue;
-$link-visited: $color-dark-slate-blue;
+$link: $color-tomato;
+$link-visited: $color-tomato;
 
 // Classes
 $brand-colors: (
