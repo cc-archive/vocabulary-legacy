@@ -8,9 +8,9 @@ module.exports = {
     '../src/**/*.stories.mdx'
   ],
   addons: [
+    'storybook-addon-designs',
     '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
-    '@storybook/addon-docs',
-    'storybook-addon-designs'
+    '@storybook/addon-docs'
   ]
 }
