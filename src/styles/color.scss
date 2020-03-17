@@ -53,19 +53,22 @@ $brand-colors: (
   "forest-green": $color-forest-green,
   "dark-turquoise": $color-dark-turquoise,
   "dark-slate-blue": $color-dark-slate-blue,
-  "dark-slate-gray": $color-dark-slate-gray,
+  "dark-slate-gray": $color-dark-slate-gray
 );
 
-@each $color-namespace, $brand-color in $brand-colors {
+@mixin color-classes($brand-colors: $brand-colors) {
+  @each $color-namespace, $brand-color in $brand-colors {
     .has-background-#{$color-namespace} {
-        background-color: $brand-color;
+      background-color: $brand-color;
     }
 
     .has-text-#{$color-namespace}, // Bulma convention
     .has-color-#{$color-namespace} {
-        color: $brand-color;
+      color: $brand-color;
     }
+  }
 }
+@include color-classes;
 
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
