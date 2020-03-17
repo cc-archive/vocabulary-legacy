@@ -1,1 +1,8 @@
-@import "../../node_modules/bulma/sass/elements/table.sass"
+$table-cell-padding: $space-normal;
+$table-head-background-color: $color-light-gray;
+
+@import "../../node_modules/bulma/sass/elements/table.sass";
+
+.number-cell {
+  text-align: right !important;
+}
