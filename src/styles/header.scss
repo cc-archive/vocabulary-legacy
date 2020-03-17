@@ -41,6 +41,10 @@ $navbar-dropdown-radius: 0;
         font-size: $font-size-h5;
         font-weight: bold;
         text-transform: uppercase;
+
+        .icon {
+          margin-left: $space-small;
+        }
       }
 
       & > .navbar-item {
