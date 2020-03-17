@@ -35,6 +35,11 @@ $input-shadow: none;
     .footer-navigation {
         .navbar-menu {
             .item-container {
+                &:first-child {
+                    .navbar-item {
+                        padding-left: 0;
+                    }
+                }
                 .navbar-item {
                     font-family: $family-alternative;
                     font-size: $font-size-h6;
