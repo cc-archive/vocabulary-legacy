@@ -16,7 +16,7 @@ $unicodes : (U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-
 @each $unicode in  $unicodes {
   @include fontface('Source Sans Pro', 'SourceSansPro-SemiBold', 600, $unicode);
 }
-
 @each $unicode in  $unicodes {
-  @include fontface('Source Sans Pro', 'SourceSansPro-Bold', 600, $unicode);
+  @include fontface('Source Sans Pro', 'SourceSansPro-Bold', 700, $unicode);
+
 }
