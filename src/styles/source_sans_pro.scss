@@ -9,5 +9,4 @@
 }
 @each $unicode in  $unicodes {
   @include fontface('Source Sans Pro', 'SourceSansPro-Bold', 700, $unicode);
-
 }
