@@ -10,7 +10,12 @@ displayed in the select component must show the current language and then the la
 alphabet.
 
 <Preview>
-  <Story name="Default" height="64px">{`
+  <Story name="Default" height="64px" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=753%3A0'
+  })
+}}>{`
     <div class="locale">
       Languages available
       <div class="control has-icons-left">
