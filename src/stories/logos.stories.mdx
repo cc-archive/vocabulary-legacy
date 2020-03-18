@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
 <Meta title="Logos" />
 
@@ -185,3 +186,11 @@ export const search = '' +
     <div class="has-text-white">${search}</div>
   `}</Story>
 </Preview>
+
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=784%3A0'
+  })
+}}>
+</Story>

@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
 <Meta title="GitHub corner" />
 
@@ -41,3 +42,11 @@ The colors may be inverted when displaying on darker, non-white backgrounds.
 
 If the right side of the page is too bloated, or if the language is read and written RTL, the position of the ribbon may
 be flipped over to the left hand side.
+
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=795%3A1'
+  })
+}}>
+</Story>

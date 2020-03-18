@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
 <Meta title="Color" />
 
@@ -33,7 +34,12 @@ export const color = (name, hex, r, g, b) => `
 ## Brand
 
 <Preview>
-  <Story name="Brand">{
+  <Story name="Brand" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=437%3A55'
+  })
+}}>{
     color('Tomato', 'ED592F', 237, 89, 47) +
     color('DarkSlateGray', '333333', 51, 51, 51) +
     color('Gold', 'EFBE00', 239, 190, 0) +
@@ -78,6 +84,7 @@ export const color = (name, hex, r, g, b) => `
   }</Story>
 </Preview>
 
+
 ## Feedback
 
 <Preview>
@@ -87,3 +94,11 @@ export const color = (name, hex, r, g, b) => `
     color('Error', 'FFC9C9', 255, 201, 201)
   }</Story>
 </Preview>
+
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=0%3A72'
+  })
+}}>
+</Story>
