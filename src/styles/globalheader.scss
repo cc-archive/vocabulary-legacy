@@ -7,9 +7,7 @@
     color: $color-white;
     transform: translateY(-100%);
     transition: all .4s ease-in;
-    &.is-active {
         transform: translateY(0);
-    }
     .container {
         .open-tab {
             position: absolute;

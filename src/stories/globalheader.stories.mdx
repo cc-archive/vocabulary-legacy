@@ -1,19 +1,18 @@
-import { withKnobs, select } from '@storybook/addon-knobs'
 import { svgCode } from './logos.stories.mdx'
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
-export default { title: 'Global Header', decorators: [withKnobs] }
+<Meta title="Global Header"/>
 
-export const Main = () => {
-  const BarStatusSel = {
-    Open: 'is-active',
-    Close: ''
-  }
-
-  const BarStatus = select('Bar Status', BarStatusSel, BarStatusSel.Open)
-  return `
-      <div class="cc-global-header ${BarStatus}">
+<Preview>
+  <Story name="Main" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=591%3A1'
+  })
+}}>
+    {`<div class="cc-global-header">
         <div class="container padding-vertical-normal">
-          <a href="#" class="open-tab">Explore CC</a>
           <div class="level">
             <div class="level-left">
               <header class="global-header-header">
@@ -78,5 +77,6 @@ export const Main = () => {
           </div>
         </div>
       </div>
-      `
-}
+      `}
+ </Story>
+</Preview>
