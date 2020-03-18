@@ -8,12 +8,15 @@
 // Elements
 @import "./button.scss";
 @import "./form.scss";
-@import "./card.scss";
-@import "./globalheader.scss";
-@import "./tabs.scss";
 
-//@import "./header.scss";
+// Patterns
+@import "./globalheader.scss";
+@import "./header.scss";
 @import "./github_corner.scss";
+@import "./locale.scss";
 
 // Layouts
 @import "./layout.scss";
+@import "./card.scss";
+@import "./table.scss";
+@import "./tabs.scss";

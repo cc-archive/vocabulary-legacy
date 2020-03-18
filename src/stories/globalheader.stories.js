@@ -34,39 +34,39 @@ export const Main = () => {
               </aside>
             </div>
             <div class="column">
-              <nav class="navbar" role="navigation" aria-label="global navigation">
-                <div class="navbar-menu is-active">
-                  <a href="https://network.creativecommons.org" target="_blank" class="navbar-item">
+              <nav class="products" role="navigation" aria-label="global navigation">
+                <div class="product-list">
+                  <a href="https://network.creativecommons.org" target="_blank" class="product-item">
                     <strong>Global Network</strong>
                     <span class="item-description">
                         Join a global community working wo strenghten the Commons
                     </span>
                   </a>
-                  <a href="https://certificate.creativecommons.org" target="_blank" class="navbar-item">
+                  <a href="https://certificate.creativecommons.org" target="_blank" class="product-item">
                     <strong>Certificate Program</strong>
                     <span class="item-description">
                         Become an expert in creating and engaging with openly licensed materials
                     </span>
                   </a>
-                  <a href="https://summit.creativecommons.org" target="_blank" class="navbar-item">
+                  <a href="https://summit.creativecommons.org" target="_blank" class="product-item">
                     <strong>Global Summit</strong>
                     <span class="item-description">
                         Attend oir annual event, promoting the power of open licensing
                     </span>
                   </a>
-                  <a href="https://chooser-beta.creativecommons.org" target="_blank" class="navbar-item">
+                  <a href="https://chooser-beta.creativecommons.org" target="_blank" class="product-item">
                     <strong>License Chooser</strong>
                     <span class="item-description">
                         Get help choosing the appropiate license for your work
                     </span>
                   </a>
-                  <a href="https://search.creativecommons.org" target="_blank" class="navbar-item">
+                  <a href="https://search.creativecommons.org" target="_blank" class="product-item">
                     <strong>CC Search</strong>
                     <span class="item-description">
                         Find openly licensed material for creative and educational reuse
                     </span>
                   </a>
-                  <a href="https://opensource.creativecommons.org" target="_blank" class="navbar-item">
+                  <a href="https://opensource.creativecommons.org" target="_blank" class="product-item">
                     <strong>CC Open Source</strong>
                     <span class="item-description">
                         Help us build products that maximize creativity and innovation

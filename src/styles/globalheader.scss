@@ -1,11 +1,4 @@
-$navbar-background-color: $color-black;
-$navbar-item-color: $color-white;
-$navbar-padding-vertical: 1rem;
-$navbar-item-hover-color: darken($color-white,10);
-$navbar-item-hover-background-color: transparent;
-
 @import "../../node_modules/bulma/sass/elements/container.sass";
-@import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/components/level.sass";
 @import "../../node_modules/bulma/sass/grid/_all.sass";
 
@@ -49,16 +42,18 @@ $navbar-item-hover-background-color: transparent;
                 }
             }
         }
-        .navbar {
-            .navbar-menu {
+        .products {
+            padding-bottom: $space-normal;
+            .product-list {
                 display: grid;
                 grid-gap: 1rem;
                 grid-template-columns: repeat(3, auto);
                 width: 100%;
-                .navbar-item {
+                .product-item {
                     flex-direction: column;
                     align-items: flex-start;
                     flex-shrink: 1;
+                    color: $color-white;
                     strong {
                         display: flex;
                         color: $color-dark-turquoise;
@@ -74,15 +69,18 @@ $navbar-item-hover-background-color: transparent;
                         }
                     }
                     &:hover {
-                        h5 {
-                            color: darken($color-white,10);
+                        strong {
+                            text-decoration: underline;
                         }
                     }
                 }
             }
         }
     }
-     @include mobile() {
+    @include tablet() {
+        padding: 0 $space-big;
+    }
+    @include mobile() {
          .container {
             padding-right: $space-bigger;
             padding-left: $space-bigger;
@@ -105,8 +103,8 @@ $navbar-item-hover-background-color: transparent;
                     margin-top: $space-small;
                 }
             }
-            .navbar {
-                 .navbar-menu {
+            .products {
+                 .product-list {
                     grid-template-columns: repeat(2, auto);
                  }
              }
