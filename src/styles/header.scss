@@ -11,57 +11,45 @@ $navbar-dropdown-radius: 0;
 
 @import "../../node_modules/bulma/sass/components/navbar.sass";
 
-.header {
-  position: relative;
+.navbar {
+  padding: $space-bigger;
 
-  box-sizing: border-box;
-  height: 7.875rem;
+  .logo {
+    height: 46px;
+  }
 
-  background-color: $color-white;
+  .navbar-burger span {
+    height: 2px;
+  }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .navbar-end {
+    .navbar-item {
+      font-family: $family-roboto-condensed;
+      font-size: $font-size-h5;
+      font-weight: bold;
+      text-transform: uppercase;
 
-    height: 100%;
-
-    .logo {
-      height: 46px;
-      margin-right: $space-normal;
+      .icon {
+        margin-left: $space-small;
+      }
     }
 
-    .navbar-burger span {
-      height: 2px;
-    }
-
-    .navbar-end {
-      .navbar-item {
-        font-family: $family-roboto-condensed;
-        font-size: $font-size-h5;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        .icon {
-          margin-left: $space-small;
-        }
-      }
-
-      & > .navbar-item {
-        margin-left: $space-large;
-      }
+    & > .navbar-item {
+      margin-left: $space-large;
     }
   }
 
   &.small {
-    height: 5.125rem;
-
+    padding: $space-normal;
+  
     .logo {
       height: 42px;
     }
 
     .navbar-menu {
-      margin-right: calc(3.5rem + 105px);
+      margin-right: 20rem;
     }
   }
 }
+
+
