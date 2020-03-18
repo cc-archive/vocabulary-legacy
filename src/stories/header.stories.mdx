@@ -6,8 +6,8 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 
 ## Sizes
 
-export const header = (size, color) => `<div class="header ${size}">
-      <div class="container navbar">
+export const header = (size, color) => `<header>
+      <nav class="navbar ${size}">
         <div class="navbar-brand">
           <a class="has-text-black">
             <svg
@@ -39,8 +39,8 @@ export const header = (size, color) => `<div class="header ${size}">
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
     <div style="background-color: ${color}; height: 200px;"></div>`
 
 The big header version was created for static content websites where the main navigation is crucial. In that way, users
