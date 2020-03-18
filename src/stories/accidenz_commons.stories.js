@@ -1,4 +1,9 @@
-export default { title: 'Accidenz Commons' }
+export default {
+  title: 'Accidenz Commons',
+  decorators: [
+    storyFn => `<div class="has-text-black">${storyFn()}</div>`
+  ]
+}
 
 export const demo = () => `
   <style>

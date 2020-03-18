@@ -26,13 +26,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(otf|woff|woff2)$/,
+        test: /\.(otf|ttf|woff|woff2)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: '../fonts'
+              outputPath: '../fonts',
+              emitFile: false
             }
           }
         ]
@@ -46,6 +47,6 @@ module.exports = {
     new CopyPlugin([
       { from: 'src/fonts', to: 'fonts' },
       { from: 'src/assets', to: 'assets' }
-    ]),
+    ])
   ]
 }
