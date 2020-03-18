@@ -1,11 +1,12 @@
 **Fixes**
 <!-- If PR only partly solves the issue, replace 'Fixes' below with 'Partially addresses' -->
-Fixes #XX by @YY
+Fixes #[issue number] by @[issue author]
 
 **Description**
 <!-- A clear and concise description of what the pull request does. -->
 
 **Type of PR** 
+<!-- Choose from one of these options -->
 This PR is a [feature|hotfix|refactor].
 
 **Technicalities**
