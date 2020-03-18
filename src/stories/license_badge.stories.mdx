@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
 <Meta title="Assets/License badge" />
 
@@ -21,8 +22,17 @@ export const licenseSVG = (size, license) => {
 </svg>`
 }
 
+export const figmaConfig = (nodeId,nodeId2) => config([{
+  type: 'figma',
+  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
+}, {type: 'figma',
+  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId2}`
+}])
+
 <Preview>
-  <Story name="BY" height="96px">{`
+  <Story name="BY" height="96px" parameters={{
+    design: figmaConfig('1%3A13','1%3A13')
+  }}>{`
     <div>${licenseSVG('big', 'by')}</div>
     <div>${licenseSVG('small', 'by')}</div>
   `}</Story>
