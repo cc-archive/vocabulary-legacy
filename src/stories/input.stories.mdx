@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Form/Input" />
 
@@ -7,10 +7,7 @@ import { config } from 'storybook-addon-designs'
 
 <Preview>
   <Story name="Normal" parameters={{
-    design: config({
-      type: 'figma',
-      url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1%3A24'
-    })
+    design: figmaConfig('1%3A24')
   }}>{`
     <input class="input" type="text" placeholder="Placeholder text"/>
     <br/><br/>
@@ -24,10 +21,7 @@ The big version of the component is associated with the `is-medium` class offere
 
 <Preview>
   <Story name="Big" parameters={{
-    design: config({
-      type: 'figma',
-      url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1%3A24'
-    })
+    design: figmaConfig('1%3A24')
   }}>{`
     <input class="input is-medium" type="text" placeholder="Placeholder text"/>
     <br/><br/>
@@ -41,10 +35,7 @@ The huge version of the component is associated with the `is-large` class offere
 
 <Preview>
   <Story name="Huge" parameters={{
-    design: config({
-      type: 'figma',
-      url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=1%3A24'
-    })
+    design: figmaConfig('1%3A24')
   }}>{`
     <input class="input is-large" type="text" placeholder="Placeholder text"/>
     <br/><br/>
