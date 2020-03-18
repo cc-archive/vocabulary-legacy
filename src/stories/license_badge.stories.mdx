@@ -22,17 +22,8 @@ export const licenseSVG = (size, license) => {
 </svg>`
 }
 
-export const figmaConfig = (nodeId,nodeId2) => config([{
-  type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
-}, {type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId2}`
-}])
-
 <Preview>
-  <Story name="BY" height="96px" parameters={{
-    design: figmaConfig('1%3A13','1%3A13')
-  }}>{`
+  <Story name="BY" height="96px">{`
     <div>${licenseSVG('big', 'by')}</div>
     <div>${licenseSVG('small', 'by')}</div>
   `}</Story>
@@ -123,3 +114,10 @@ group from within the licenses.
   </use>
 </svg>
 ```
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
+  })
+}}>
+</Story>
