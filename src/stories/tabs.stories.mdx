@@ -6,7 +6,12 @@ import { config } from 'storybook-addon-designs'
 # Tabs
 
 <Preview>
-  <Story name="Tab" height="200px">{`
+  <Story name="Tab" height="200px" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=933%3A1'
+  })
+}}>{`
     <div>
       <div class="tabs">
         <ul>
@@ -25,11 +30,3 @@ import { config } from 'storybook-addon-designs'
     </div>
   `}</Story>
 </Preview>
-
-<Story name="Figma" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=933%3A1'
-  })
-}}>
-</Story>
