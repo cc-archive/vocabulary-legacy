@@ -1,8 +1,12 @@
 import { withKnobs, select } from '@storybook/addon-knobs'
-export default { title: 'Cards', decorators: [withKnobs] }
+<Preview>
+  <Story>
+    { title: 'Cards', decorators: [withKnobs] }
+  </Story>
+</Preview>
 
-export const PostVertical = () => {
-  return `    
+<Preview mdxSource={PostVertical()}>
+  <Story> 
     <div style="width: 400px;">
       <article class="card entry-post vertical">
         <header class="card-image">
@@ -20,11 +24,11 @@ export const PostVertical = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostHorizontal = () => {
-  return `
+<Preview mdxSource={PostHorizontal()}>
+  <Story>
     <div style="width: 600px;">
       <article class="card entry-post horizontal">
         <header class="card-image">
@@ -42,11 +46,11 @@ export const PostHorizontal = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostVideoVertical = () => {
-  return `
+<Preview mdxSource={PostVideoVertical()}>
+  <Story> 
     <div style="width: 400px;">
       <article class="card entry-post entry-video vertical no-border">
         <header class="card-image">
@@ -64,11 +68,11 @@ export const PostVideoVertical = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostVideoHorizontal = () => {
-  return `
+<Preview mdxSource={PostVideoHorizontal()}>
+  <Story> 
     <div style="width: 600px;">
       <article class="card entry-post entry-video horizontal no-border">
         <header class="card-image">
@@ -86,11 +90,11 @@ export const PostVideoHorizontal = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostVideoLarge = () => {
-  return `
+<Preview mdxSource={PostVideoLarge()}>
+  <Story> 
     <div style="width: 100%;">
       <article class="card entry-post entry-video horizontal large no-border">
         <header class="card-image">
@@ -108,11 +112,11 @@ export const PostVideoLarge = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostEventWide = () => {
-  return `
+<Preview mdxSource={PostEventWide()}>
+  <Story>
     <div style="width: 600px;">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
@@ -131,11 +135,11 @@ export const PostEventWide = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostEventNarrow = () => {
-  return `
+<Preview mdxSource={PostEventNarrow()}>
+  <Story>
     <div style="width: 350px;">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
@@ -154,11 +158,11 @@ export const PostEventNarrow = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const PostStatistic = () => {
-  return `
+<Preview mdxSource={PostStatistic()}>
+  <Story>
     <div style="width: 600px;">
       <article class="card entry-post entry-statistic horizontal no-border">
         <header class="card-header">
@@ -175,11 +179,11 @@ export const PostStatistic = () => {
         </div>
       </article>
     </div>
-  `
-}
+ </Story>
+</Preview>
 
-export const PostQuote = () => {
-  return `
+<Preview mdxSource={PostQuote()}>
+  <Story>
     <div style="width: 600px;">
       <article class="card entry-post entry-quote horizontal no-border">
         <header class="card-image">
@@ -199,11 +203,11 @@ export const PostQuote = () => {
         </div>
       </article>
     </div>
-  `
-}
+ </Story>
+</Preview>
 
-export const ImageTop = () => {
-  return `
+<Preview mdxSource={ImageTop()}>
+  <Story>
     <div style="width: 340px;">
       <article class="card entry-post entry-image vertical">
         <header class="card-image">
@@ -219,10 +223,11 @@ export const ImageTop = () => {
         </div>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const Link = () => {
+<Preview mdxSource={Link()}>
+  <Story>
   const Brands = {
     Blue: 'blue',
     Forest: 'forest',
@@ -232,7 +237,6 @@ export const Link = () => {
     Turquoise: 'turquoise'
   }
   const brands = select('Brand', Brands, Brands.Tomato)
-  return `
     <div style="width: 400px;">
       <article class="card entry-post link no-border">
         <a href="#" class="has-background-${brands}">
@@ -244,11 +248,11 @@ export const Link = () => {
         </a>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
 
-export const LinkBorder = () => {
-  return `
+<Preview mdxSource={LinkBorder()}>
+  <Story>
     <div style="width: 400px;">
       <article class="card entry-post link">
         <a href="#">
@@ -260,5 +264,5 @@ export const LinkBorder = () => {
         </a>
       </article>
     </div>
-  `
-}
+  </Story>
+</Preview>
