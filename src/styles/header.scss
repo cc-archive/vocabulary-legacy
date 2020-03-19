@@ -49,6 +49,10 @@ $navbar-dropdown-radius: 0;
 
     .navbar-menu {
       margin-right: 20rem;
+
+      &.is-active {
+        margin-right: 0;
+      }
     }
   }
 }
