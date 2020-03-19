@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { config } from 'storybook-addon-designs'
 
 <Meta title="Assets/License badge" />
 
@@ -113,3 +114,10 @@ group from within the licenses.
   </use>
 </svg>
 ```
+<Story name="Figma" parameters={{
+  design: config({
+    type: 'figma',
+    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
+  })
+}}>
+</Story>
