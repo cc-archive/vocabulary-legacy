@@ -51,8 +51,7 @@ $brand-colors: ( "tomato": $color-tomato, "orange": $color-orange, "gold": $colo
     }
 }
 
-@each $color-namespace,
-$brand-color in $brand-colors {
+@each $color-namespace, $brand-color in $brand-colors {
     @include color-classes($color-namespace, $brand-color);
 }
 
