@@ -1,6 +1,6 @@
 import { svgCode } from './logos.stories.mdx'
 
-export default { title: 'Footer' }
+export default { title: 'Patterns/Footer' }
 
 export const Main = () => {
   return `
