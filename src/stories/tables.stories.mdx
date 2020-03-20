@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
-<Meta title="Table" />
+<Meta title="Layouts/Table" />
 
 # Table
 
@@ -9,11 +9,8 @@ import { config } from 'storybook-addon-designs'
 
 <Preview>
   <Story name="Basic Content" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=904%3A0'
-  })
-}}>{`
+    design: figmaConfig('904%3A0')
+  }}>{`
     <table class="table is-bordered is-striped">
       <thead>
         <tr>
@@ -48,18 +45,15 @@ import { config } from 'storybook-addon-designs'
         <td class="number-cell">4</td>
       </tr>
     </table>
-    `}</Story>
+  `}</Story>
 </Preview>
 
 ## Rich Content Table
 
 <Preview>
   <Story name="Rich Content" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=904%3A0'
-  })
-}}>{`
+    design: figmaConfig('904%3A0')
+  }}>{`
     <table class="table is-bordered  is-striped">
       <thead>
         <tr>
@@ -112,5 +106,5 @@ import { config } from 'storybook-addon-designs'
         <td>13/01/2020</td>
       </tr>
     </table>
-    `}</Story>
+  `}</Story>
 </Preview>
