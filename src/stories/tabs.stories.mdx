@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
-<Meta title="Tabs" />
+<Meta title="Layouts/Tabs" />
 
 # Tabs
 
@@ -27,9 +27,6 @@ import { config } from 'storybook-addon-designs'
 </Preview>
 
 <Story name="Figma" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=933%3A1'
-  })
+  design: figmaConfig('933%3A1')
 }}>
 </Story>
