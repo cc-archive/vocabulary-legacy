@@ -6,7 +6,9 @@ import { figmaConfig } from './helpers'
 # Tabs
 
 <Preview>
-  <Story name="Tab" height="200px">{`
+  <Story name="Tab" height="200px" parameters={{
+    design: figmaConfig('933%3A1')
+  }}>{`
     <div>
       <div class="tabs">
         <ul>
@@ -25,8 +27,3 @@ import { figmaConfig } from './helpers'
     </div>
   `}</Story>
 </Preview>
-
-<Story name="Figma" parameters={{
-  design: figmaConfig('933%3A1')
-}}>
-</Story>
