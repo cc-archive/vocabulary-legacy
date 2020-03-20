@@ -7,15 +7,18 @@
 
 // Elements
 @import "./button.scss";
-@import "./form.scss";
-@import "./table.scss";
-@import "./card.scss";
-@import "./global_header.scss";
-@import "./tabs.scss";
 
-//@import "./header.scss";
-@import "./locale.scss";
+// Form
+@import "./form.scss";
+
+// Patterns
+@import "./global_header.scss";
+@import "./header.scss";
 @import "./github_corner.scss";
+@import "./locale.scss";
 
 // Layouts
 @import "./layout.scss";
+@import "./card.scss";
+@import "./table.scss";
+@import "./tabs.scss";
