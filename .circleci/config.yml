@@ -18,7 +18,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - nun: npm run test
+      - run: npm run test
 
   build:
     docker:
@@ -31,7 +31,8 @@ jobs:
 workflows:
   version: 2
 
-  test:
+  checks:
     jobs:
       - lint
+      - test
       - build
