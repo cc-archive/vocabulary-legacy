@@ -53,8 +53,6 @@ $brand-colors: ( "tomato": $color-tomato, "orange": $color-orange, "gold": $colo
 
 @each $color-namespace, $brand-color in $brand-colors {
     @include color-classes($color-namespace, $brand-color);
-}
-
-;
+};
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
