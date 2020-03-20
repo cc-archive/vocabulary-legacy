@@ -1,0 +1,30 @@
+// Several custom list styles to format unordered lists
+
+bland-list()
+  list-style none
+
+  padding-left $space-zero
+  margin $space-zero
+
+/*We should rename this to inline-list since we're not using pipes anymore*/
+piped-list()
+  bland-list()
+  display inline
+
+  li
+    display inline-block
+
+    &:last-of-type
+      border-right none
+
+piped-list-compact()
+  piped-list()
+
+  li
+    &:first-of-type
+      padding-left $space-zero
+      margin-left $space-zero
+
+    &:last-of-type
+      padding-right $space-zero
+      margin-right $space-zero

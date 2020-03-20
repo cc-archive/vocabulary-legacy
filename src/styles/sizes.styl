@@ -1,0 +1,18 @@
+// Generate given property for all font sizes
+
+sizes(property)
+  &.inherit-sized
+    {property} inherit
+
+  $sizes = 'small' 'normal' 'big' 'large' 'huge' 'enormous' 'gigantic' 'mega'
+
+  for size in $sizes
+    &.{size}-sized
+      {property} lookup('$size-' + size)
+
+/*
+  convert px to rem
+*/
+pxtorem(value) {
+    return unit(value/16, 'rem');
+}
