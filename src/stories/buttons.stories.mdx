@@ -1,4 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
 
 <Meta title="Elements/Buttons" />
 
@@ -7,7 +8,9 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 Buttons are created by adding the `.button` class to a `<button>`.
 
 <Preview>
-  <Story name="MediumButton" height="100px" parameters={{ design: figmaConfig('1403%3A61') }}>{`
+  <Story name="MediumButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button">Button</button>
   `}</Story>
 </Preview>
@@ -15,57 +18,77 @@ Buttons are created by adding the `.button` class to a `<button>`.
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
 
 <Preview>
-  <Story name="BigButton" height="100px" parameters={{ design: figmaConfig('1403%3A61') }}>{`
+  <Story name="BigButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button big">Button</button>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="SmallButton" height="100px" parameters={{ design: figmaConfig('1403%3A61') }}>{`
+  <Story name="SmallButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button small">Button</button>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="TinyButton" height="100px" parameters={{ design: figmaConfig('1403%3A61') }}>{`
+  <Story name="TinyButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button tiny">Button</button>
   `}</Story>
 </Preview>
 
-You can also combine other classes such as `.primary`, `.donate` and `.info` with the aforementioned size classes.
+You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
 
 <Preview>
-  <Story name="ButtonPrimary" height="100px">{`
+  <Story name="ButtonPrimary" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button is-primary big">Button</button>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="ButtonInfo" height="100px">{`
-    <button class="button is-info">Button</button>
-  `}</Story>
-</Preview>
-
-<Preview>
-  <Story name="ButtonDonate" height="100px" parameters={{ design: figmaConfig('1404%3A19') }}>{`
+  <Story name="ButtonDonate" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{`
     <button class="button donate medium">Button</button>
   `}</Story>
 </Preview>
 
+Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
+
 <Preview>
-  <Story name="ButtonSuccess" height="100px">{`
+  <Story name="ButtonSuccess" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button is-success">Button</button>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="ButtonWarning" height="100px">{`
+  <Story name="ButtonInfo" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    <button class="button is-info">Button</button>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="ButtonWarning" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button is-warning">Button</button>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="ButtonError" height="100px">{`
+  <Story name="ButtonError" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
     <button class="button is-danger">Button</button>
   `}</Story>
 </Preview>
@@ -73,7 +96,9 @@ You can also combine other classes such as `.primary`, `.donate` and `.info` wit
 The `.tag` class is used to render a tag name.
 
 <Preview>
-  <Story name="Tag" height="100px" parameters={{ design: figmaConfig('1404%3A1') }}>{`
+  <Story name="Tag" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{`
     <button class="button tag">Label</button>
   `}</Story>
 </Preview>
