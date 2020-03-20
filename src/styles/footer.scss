@@ -1,16 +1,9 @@
-$navbar-background-color: transparent;
-$navbar-item-color: $color-dark-turquoise;
-$navbar-padding-vertical: 1rem;
-$navbar-item-hover-color: $color-dark-turquoise;
-$navbar-item-hover-background-color: transparent;
-
 $input-background-color: $color-black;
 $input-border-color: $color-dark-gray;
 $input-shadow: none;
 
 @import "../../node_modules/bulma/sass/elements/container.sass";
 @import "../../node_modules/bulma/sass/form/_all.sass";
-@import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/grid/_all.sass";
 
 .main-footer {
@@ -33,14 +26,17 @@ $input-shadow: none;
         font-style: normal;
     }
     .footer-navigation {
-        .navbar-menu {
-            .item-container {
+        .menu {
+            li {
+                display: inline-block;
                 &:first-child {
-                    .navbar-item {
+                    .menu-item {
                         padding-left: 0;
                     }
                 }
-                .navbar-item {
+                .menu-item {
+                    display: block;
+                    padding: $space-normal;
                     font-family: $family-alternative;
                     font-size: $font-size-h6;
                     font-weight: 600;
@@ -85,7 +81,7 @@ $input-shadow: none;
     @include tablet() {
         padding: $space-big;
         .footer-navigation {
-            .navbar-menu {
+            .menu {
                 display: flex;
             }
         }
@@ -93,9 +89,13 @@ $input-shadow: none;
     @include mobile() {
         padding: $space-normal;
         .footer-navigation {
-            .navbar-menu {
-                .navbar-item {
-                    padding-left: 0;
+            margin-bottom: $space-normal;
+            .menu {
+                li {
+                    display: block;
+                    .menu-item {
+                        padding-left: 0;
+                    }
                 }
             }
         }

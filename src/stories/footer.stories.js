@@ -18,22 +18,22 @@ export const Main = () => {
             </p>
           </div>
           <div class="column is-half">
-            <nav class="footer-navigation navbar">
-              <ul class="navbar-menu is-active">
-                <li class="item-container">
-                  <a href="#" class="navbar-item">Item 1</a>
+            <nav class="footer-navigation">
+              <ul class="menu">
+                <li>
+                  <a href="#" class="menu-item">Item 1</a>
                 </li>
-                <li class="item-container">
-                  <a href="#" class="navbar-item">Item 2</a>
+                <li>
+                  <a href="#" class="menu-item">Item 2</a>
                 </li>
-                <li class="item-container">
-                  <a href="#" class="navbar-item">Item 3</a>
+                <li>
+                  <a href="#" class="menu-item">Item 3</a>
                 </li>
-                <li class="item-container">
-                  <a href="#" class="navbar-item">Item 4</a>
+                <li>
+                  <a href="#" class="menu-item">Item 4</a>
                 </li>
-                <li class="item-container">
-                  <a href="#" class="navbar-item">Item 5</a>
+                <li>
+                  <a href="#" class="menu-item">Item 5</a>
                 </li>
               </ul>
             </nav>
