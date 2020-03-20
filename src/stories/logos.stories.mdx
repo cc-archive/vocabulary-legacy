@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Assets/Logos" />
 
@@ -13,11 +13,6 @@ export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `<svg
   viewBox="0 0 ${viewBoxX} ${viewBoxY}">
   <use href="logos/${fileName}.svg#${id}"></use>
 </svg>`
-
-export const figmaConfig = (nodeId) => config({
-  type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
-})
 
 export const logomark = `<style>svg { height: 73px; }</style>
 ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Patterns/Locale" />
 
@@ -10,7 +10,9 @@ displayed in the select component must show the current language and then the la
 alphabet.
 
 <Preview>
-  <Story name="Default" height="64px">{`
+  <Story name="Default" height="64px" parameters={{
+    design: figmaConfig('')
+  }}>{`
     <div class="locale">
       Languages available
       <div class="control has-icons-left">
