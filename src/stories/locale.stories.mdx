@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Patterns/Locale" />
 
@@ -11,11 +11,8 @@ alphabet.
 
 <Preview>
   <Story name="Default" height="64px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=753%3A0'
-  })
-}}>{`
+    design: figmaConfig('753%3A0')
+  }}>{`
     <div class="locale">
       Languages available
       <div class="control has-icons-left">

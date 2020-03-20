@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Spacing" />
 
@@ -14,16 +14,17 @@ largest ones like margin between sections.
 
 ## Spacing definitions
 
-| Name   | SCSS variable   | rem | px |
-|--------|-----------------|-----|----|
-| Small  | `$space-small`  | 0.5 | 8  |
-| Normal | `$space-normal` | 1   | 16 |
-| Big    | `$space-big`    | 1.5 | 24 |
-| Bigger | `$space-bigger` | 2   | 32 |
-| Large  | `$space-large`  | 2.5 | 40 |
-| Larger | `$space-larger` | 3   | 48 |
-| XL     | `$space-xl`     | 4   | 64 |
-| XXL    | `$space-xxl`    | 6   | 96 |
+| Name    | SCSS variable    | rem  | px |
+|---------|------------------|------|----|
+| Smaller | `$space-smaller` | 0.25 | 4  |
+| Small   | `$space-small`   | 0.5  | 8  |
+| Normal  | `$space-normal`  | 1    | 16 |
+| Big     | `$space-big`     | 1.5  | 24 |
+| Bigger  | `$space-bigger`  | 2    | 32 |
+| Large   | `$space-large`   | 2.5  | 40 |
+| Larger  | `$space-larger`  | 3    | 48 |
+| XL      | `$space-xl`      | 4    | 64 |
+| XXL     | `$space-xxl`     | 6    | 96 |
 
 # Usage
 
@@ -56,9 +57,7 @@ size and each property we have two kinds of helper classes:
 ```
 
 <Story name="Figma" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=0%3A190'
-  })
-}}>
-</Story>
+  design: figmaConfig('0%3A190')
+}}>{`
+  See the Design tab in the panel.
+`}</Story>
