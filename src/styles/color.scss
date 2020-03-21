@@ -6,18 +6,22 @@ $color-forest-green: rgb(4, 166, 53);
 $color-dark-turquoise: rgb(5, 181, 218);
 $color-dark-slate-blue: rgb(60, 92, 153);
 $color-dark-slate-gray: rgb(51, 51, 51);
+
 // Neutral
 $color-dark-gray: rgb(120, 120, 120);
 $color-gray: rgb(176, 176, 176);
 $color-light-gray: rgb(216, 216, 216);
 $color-lighter-gray: rgb(245, 245, 245);
+
 // Binary
 $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
+
 // Interaction
 $color-brighter-tomato: rgb(255, 105, 51);
 $color-brighter-gold: rgb(245, 212, 0);
 $color-brighter-forest-green: rgb(0, 184, 80);
+
 // Feedback
 $color-success: rgb(4, 166, 53);
 $color-warning: rgb(242, 171, 32);
@@ -25,6 +29,7 @@ $color-error: rgb(200, 59, 30);
 $color-success-lighter: rgb(224, 242, 191);
 $color-warning-lighter: rgb(250, 236, 188);
 $color-error-lighter: rgb(255, 201, 201);
+
 // Overrides
 $red: $color-tomato;
 $orange: $color-orange;
@@ -39,8 +44,17 @@ $warning: $color-warning;
 $danger: $color-error;
 $link: $color-tomato;
 $link-visited: $color-tomato;
+
 // Classes
-$brand-colors: ( "tomato": $color-tomato, "orange": $color-orange, "gold": $color-gold, "forest-green": $color-forest-green, "dark-turquoise": $color-dark-turquoise, "dark-slate-blue": $color-dark-slate-blue, "dark-slate-gray": $color-dark-slate-gray);
+$brand-colors: (
+    "tomato": $color-tomato,
+    "orange": $color-orange,
+    "gold": $color-gold,
+    "forest-green": $color-forest-green,
+    "dark-turquoise": $color-dark-turquoise,
+    "dark-slate-blue": $color-dark-slate-blue,
+    "dark-slate-gray": $color-dark-slate-gray);
+
 @mixin color-classes($color-namespace, $brand-color) {
     .has-background-#{$color-namespace} {
         background-color: $brand-color;
@@ -54,5 +68,6 @@ $brand-colors: ( "tomato": $color-tomato, "orange": $color-orange, "gold": $colo
 @each $color-namespace, $brand-color in $brand-colors {
     @include color-classes($color-namespace, $brand-color);
 };
+
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";

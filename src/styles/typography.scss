@@ -90,13 +90,20 @@ $header-font-sizes: (
   "h6": $font-size-h6,
 );
 
-@each $header-name, $header-font-size in $header-font-sizes {
-  #{$header-name} {
-    font-size: $header-font-size;
-  }
+@mixin typography-classes($header-name,
+$header-font-size) {
+    .#{$header-name} {
+        font-size: $header-font-size;
+    }
+}
+
+@each $header-name,
+$header-font-size in $header-font-sizes {
+    @include typography-classes($header-name,
+    $header-font-size);
 }
 
 body {
-  font-family: $family-sans-serif;
-  font-size: $font-size-body-normal;
+    font-family: $family-sans-serif;
+    font-size: $font-size-body-normal;
 }
