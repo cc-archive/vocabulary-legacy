@@ -22,7 +22,7 @@ export const logomark = `<style>svg { height: 73px; }</style>
 ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 
 <Preview mdxSource={blackText(logomark)}>
-  <Story name="CC Logomark" parameters={{
+  <Story name="CC Logomark" height="128px" parameters={{
     design: figmaConfig('1%3A13')
   }}>{
     blackText(logomark)
@@ -30,7 +30,7 @@ ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 </Preview>
 
 <Preview mdxSource={whiteText(logomark)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Logomark Inverted" parameters={{
+  <Story name="CC Logomark Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -44,7 +44,7 @@ export const lettermark = `<style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 
 <Preview mdxSource={blackText(lettermark)}>
-  <Story name="CC Lettermark" parameters={{
+  <Story name="CC Lettermark" height="128px" parameters={{
     design: figmaConfig('712%3A8')
   }}>{
     blackText(lettermark)
@@ -52,7 +52,7 @@ ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 </Preview>
 
 <Preview mdxSource={whiteText(lettermark)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Lettermark Inverted" parameters={{
+  <Story name="CC Lettermark Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -66,7 +66,7 @@ export const letterheart = `<style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
 
 <Preview mdxSource={blackText(letterheart)}>
-  <Story name="CC Letterheart" parameters={{
+  <Story name="CC Letterheart" height="128px" parameters={{
     design: figmaConfig('712%3A7')
   }}>{
     blackText(letterheart)
@@ -74,7 +74,7 @@ ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
 </Preview>
 
 <Preview mdxSource={whiteText(letterheart)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Letterheart Inverted" parameters={{
+  <Story name="CC Letterheart Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -90,7 +90,7 @@ export const globalNetwork = `<style>svg { height: 79px; }</style>
 ${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
 
 <Preview mdxSource={blackText(globalNetwork)}>
-  <Story name="CC Global Network" parameters={{
+  <Story name="CC Global Network" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
     blackText(globalNetwork)
@@ -98,7 +98,7 @@ ${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
 </Preview>
 
 <Preview mdxSource={whiteText(globalNetwork)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Global Network Inverted" parameters={{
+  <Story name="CC Global Network Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -112,7 +112,7 @@ export const openSource = `<style>svg { height: 76px; }</style>
 ${svgCode(250, 76, 'products/open_source', 'opensource')}`
 
 <Preview mdxSource={blackText(openSource)}>
-  <Story name="CC Open Source" parameters={{
+  <Story name="CC Open Source" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
     blackText(openSource)
@@ -120,7 +120,7 @@ ${svgCode(250, 76, 'products/open_source', 'opensource')}`
 </Preview>
 
 <Preview mdxSource={whiteText(openSource)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Open Source Inverted" parameters={{
+  <Story name="CC Open Source Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -134,7 +134,7 @@ export const vocabulary = `<style>svg { height: 41px; }</style>
 ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 
 <Preview mdxSource={blackText(vocabulary)}>
-  <Story name="CC Vocabulary" parameters={{
+  <Story name="CC Vocabulary" height="96px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
      blackText(vocabulary)
@@ -142,7 +142,7 @@ ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 </Preview>
 
 <Preview mdxSource={whiteText(vocabulary)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Vocabulary Inverted" parameters={{
+  <Story name="CC Vocabulary Inverted" height="96px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -156,7 +156,7 @@ export const search = `<style>svg { height: 81px; }</style>
 ${svgCode(250, 81, 'products/search', 'search')}`
 
 <Preview mdxSource={blackText(search)}>
-  <Story name="CC Search" parameters={{
+  <Story name="CC Search" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
     blackText(search)
@@ -164,7 +164,7 @@ ${svgCode(250, 81, 'products/search', 'search')}`
 </Preview>
 
 <Preview mdxSource={whiteText(search)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Search Inverted" parameters={{
+  <Story name="CC Search Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -186,7 +186,7 @@ export const certificates = (type) => `<style>svg { height: 174px; }</style>
 export const certificatesColorful = certificates('colorful')
 
 <Preview mdxSource={certificatesColorful}>
-  <Story name="CC Certificates Colorful" parameters={{
+  <Story name="CC Certificates Colorful" height="200px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
     certificatesColorful.toString()
@@ -196,7 +196,7 @@ export const certificatesColorful = certificates('colorful')
 export const certificatesMonochrome = certificates('monochrome')
 
 <Preview mdxSource={blackText(certificatesMonochrome)}>
-  <Story name="CC Certificates Monochrome" parameters={{
+  <Story name="CC Certificates Monochrome" height="200px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
     blackText(certificatesMonochrome)
@@ -204,7 +204,7 @@ export const certificatesMonochrome = certificates('monochrome')
 </Preview>
 
 <Preview mdxSource={whiteText(certificatesMonochrome)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Certificates Monochrome Inverted" parameters={{
+  <Story name="CC Certificates Monochrome Inverted" height="200px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
