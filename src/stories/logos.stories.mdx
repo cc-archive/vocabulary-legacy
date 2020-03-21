@@ -22,7 +22,7 @@ export const figmaConfig = (nodeId) => config({
 export const logomark = `<style>svg { height: 73px; }</style>
 ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 
-<Preview>
+<Preview mdxSource = {logomark}>
   <Story name="CC Logomark" parameters={{
     design: figmaConfig('1%3A13')
   }}>{`
@@ -30,7 +30,7 @@ ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {logomark} style={{backgroundColor: 'black'}}>
   <Story name="CC Logomark Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -44,7 +44,7 @@ ${svgCode(304, 73, 'cc/logomark', 'creativecommons')}`
 export const lettermark = `<style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 
-<Preview>
+<Preview mdxSource = {lettermark}>
   <Story name="CC Lettermark" parameters={{
     design: figmaConfig('712%3A8')
   }}>{`
@@ -52,7 +52,7 @@ ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {lettermark} style={{backgroundColor: 'black'}}>
   <Story name="CC Lettermark Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -66,7 +66,7 @@ ${svgCode(72, 72, 'cc/lettermark', 'creativecommons')}`
 export const letterheart = `<style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
 
-<Preview>
+<Preview mdxSource = {letterheart}>
   <Story name="CC Letterheart" parameters={{
     design: figmaConfig('712%3A7')
   }}>{`
@@ -74,7 +74,7 @@ ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {letterheart} style={{backgroundColor: 'black'}}>
   <Story name="CC Letterheart Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -88,7 +88,7 @@ ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')}`
 export const globalNetwork = `<style>svg { height: 79px; }</style>
 ${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
 
-<Preview>
+<Preview mdxSource = {globalNetwork}>
   <Story name="CC Global Network" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -96,7 +96,7 @@ ${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {globalNetwork} style={{backgroundColor: 'black'}}>
   <Story name="CC Global Network Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -110,7 +110,7 @@ ${svgCode(250, 79, 'products/global_network', 'globalnetwork')}`
 export const openSource = `<style>svg { height: 76px; }</style>
 ${svgCode(250, 76, 'products/open_source', 'opensource')}`
 
-<Preview>
+<Preview mdxSource = {openSource}>
   <Story name="CC Open Source" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -118,7 +118,7 @@ ${svgCode(250, 76, 'products/open_source', 'opensource')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {openSource} style={{backgroundColor: 'black'}}>
   <Story name="CC Open Source Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -132,7 +132,7 @@ ${svgCode(250, 76, 'products/open_source', 'opensource')}`
 export const vocabulary = `<style>svg { height: 41px; }</style>
 ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 
-<Preview>
+<Preview mdxSource = {vocabulary}>
   <Story name="CC Vocabulary" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -140,7 +140,7 @@ ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {vocabulary} style={{backgroundColor: 'black'}}>
   <Story name="CC Vocabulary Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -154,7 +154,7 @@ ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 export const search = `<style>svg { height: 81px; }</style>
 ${svgCode(250, 81, 'products/search', 'search')}`
 
-<Preview>
+<Preview mdxSource = {search}>
   <Story name="CC Search" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -162,7 +162,7 @@ ${svgCode(250, 81, 'products/search', 'search')}`
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {search} style={{backgroundColor: 'black'}}>
   <Story name="CC Search Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -184,7 +184,7 @@ export const certificates = (type) => `<style>svg { height: 174px; }</style>
 
 export const certificatesColorful = certificates('colorful')
 
-<Preview>
+<Preview mdxSource = {certificatesColorful}>
   <Story name="CC Certificates Colorful" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -194,7 +194,7 @@ export const certificatesColorful = certificates('colorful')
 
 export const certificatesMonochrome = certificates('monochrome')
 
-<Preview>
+<Preview mdxSource = {certificatesMonochrome}>
   <Story name="CC Certificates Monochrome" parameters={{
     design: figmaConfig('784%3A1')
   }}>{`
@@ -202,7 +202,7 @@ export const certificatesMonochrome = certificates('monochrome')
   `}</Story>
 </Preview>
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {certificatesMonochrome} style={{backgroundColor: 'black'}}>
   <Story name="CC Certificates Monochrome Inverted" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
