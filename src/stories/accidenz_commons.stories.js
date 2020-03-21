@@ -28,7 +28,7 @@ export const lowercaseLetters = () => {
 
 export const Numbers = () => {
     return `
-        <table class="table">
+        <table>
           <tr>
             <th class="size">0</th>
             <th class="size">1</th>

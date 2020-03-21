@@ -4,11 +4,23 @@
 
 <style>
   html {
-    background-color: unset;
-
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    background-color: unset !important;
   }
+
+  body.sb-show-main {
+    font-family: "Source Sans Pro", sans-serif;
+    box-sizing: border-box;
+    padding: 0.5em;
+  }
+
+  .sbdocs.sbdocs-ul {
+    list-style: unset;
+  }
+
+  .sbdocs.sbdocs-preview {
+    background-color: #f5f5f5;
+  }
+
 
   .size {
     font-size: 24pt;
@@ -19,20 +31,8 @@
     padding: 25px;
   }
 
+
   th:hover {
     background-color: rgb(224, 214, 214);
-  }
-
-  body {
-    font-family: Roboto Condensed;
-  }
-
-  body.sb-show-main {
-    padding: 0.5em;
-    box-sizing: border-box;
-  }
-
-  p:first-of-type {
-    margin-top: 0;
   }
 </style>
