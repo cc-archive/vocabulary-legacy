@@ -1,13 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { config } from "storybook-addon-designs";
+import { figmaConfig } from './helpers'
 
 <Meta title="Assets/License badge" />
-
-export const figmaConfig = nodeId =>
-  config({
-    type: "figma",
-    url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
-  });
 
 # License badge
 
@@ -17,22 +11,19 @@ CC BY is represented by the CC logo and the icon of a person. Similar icons exis
 ## Licenses
 
 export const licenseSVG = (size, license) => {
-  let tag;
-  if (size === "big") {
-    tag = 'svg height="42" width="120"';
+  let tag
+  if (size === 'big') {
+    tag = 'svg height="42" width="120"'
   } else {
-    tag = 'svg height="15" width="80"';
+    tag = 'svg height="15" width="80"'
   }
   return `<${tag}>
 <use href="license_badges/${size}/${license}.svg#layer1"></use>
-</svg>`;
-};
+</svg>`
+}
 
 <Preview mdxSource={licenseSVG("big", "by"),licenseSVG("small", "by")}>
-  <Story
-    name="BY"
-    height="96px"
-    parameters={{
+  <Story name="BY" height="96px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -42,10 +33,7 @@ export const licenseSVG = (size, license) => {
 </Preview>
 
 <Preview mdxSource={licenseSVG("big", "by_sa"),licenseSVG("small", "by_sa")}>
-  <Story
-    name="BY SA"
-    height="96px"
-    parameters={{
+  <Story name="BY SA" height="96px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -55,10 +43,7 @@ export const licenseSVG = (size, license) => {
 </Preview>
 
 <Preview mdxSource={licenseSVG("big", "by_nd"),licenseSVG("small", "by_nd")}>
-  <Story
-    name="BY ND"
-    height="96px"
-    parameters={{
+  <Story name="BY ND" height="96px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -70,11 +55,8 @@ export const licenseSVG = (size, license) => {
 Big-sized licenses with the non-commercial clause include an EU variant with the Dollar symbol replaced with the Euro
 symbol. Small-sized licenses do not have this variant.
 
-<Preview mdxSource={licenseSVG("big", "by_nc"),licenseSVG("big", "by_nc.eu"),licenseSVG("small", "by_nc")}>
-  <Story
-    name="BY NC"
-    height="144px"
-    parameters={{
+<Preview  mdxSource={licenseSVG("big", "by_nc"),licenseSVG("big", "by_nc.eu"),licenseSVG("small", "by_nc")}>
+  <Story name="BY NC" height="144px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -85,10 +67,7 @@ symbol. Small-sized licenses do not have this variant.
 </Preview>
 
 <Preview mdxSource={licenseSVG("big", "by_nc_sa"),licenseSVG("big", "by_nc_sa.eu"),licenseSVG("small", "by_nc_sa")}>
-  <Story
-    name="BY NC SA"
-    height="144px"
-    parameters={{
+  <Story name="BY NC SA" height="144px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -99,10 +78,7 @@ symbol. Small-sized licenses do not have this variant.
 </Preview>
 
 <Preview mdxSource={licenseSVG("big", "by_nc_nd"),licenseSVG("big", "by_nc_nd.eu"),licenseSVG("small", "by_nc_nd")}>
-  <Story
-    name="BY NC ND"
-    height="144px"
-    parameters={{
+  <Story name="BY NC ND" height="144px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -117,10 +93,7 @@ smaller appearance when rendered using identical markup. This bug in present onl
 badges.
 
 <Preview mdxSource={licenseSVG("big", "cc_zero"),licenseSVG("small", "cc_zero")}>
-  <Story
-    name="CC Zero"
-    height="96px"
-    parameters={{
+  <Story name="CC Zero" height="96px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -130,10 +103,7 @@ badges.
 </Preview>
 
 <Preview mdxSource={licenseSVG("big", "publicdomain"),licenseSVG("small", "publicdomain")}>
-  <Story
-    name="Public Domain"
-    height="96px"
-    parameters={{
+  <Story name="Public Domain" height="96px" parameters={{
       design: figmaConfig("574%3A111")
     }}
   >{`
@@ -148,9 +118,9 @@ The license assets can be used in your apps by defining an SVG tag with the appr
 group from within the licenses.
 
 | Size  | Dimension      |
-| ----- | -------------- |
+|-------|----------------|
 | Big   | 120 &times; 42 |
-| Small | 80 &times; 15  |
+| Small | 80  &times; 15 |
 
 **Example:**
 
@@ -158,13 +128,13 @@ group from within the licenses.
 <svg width="120px" height="42px">
   <!-- Big sized CC BY license badge -->
   <use
-    href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1"
-  ></use>
+     href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1">
+  </use>
 </svg>
 <svg width="80px" height="15px">
   <!-- Small sized CC BY license badge -->
   <use
-    href="@creativecommons/vocabulary/assets/license_badges/small/by.svg#layer1"
-  ></use>
+    href="@creativecommons/vocabulary/assets/license_badges/small/by.svg#layer1">
+  </use>
 </svg>
 ```
