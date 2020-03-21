@@ -14,7 +14,7 @@ export const GitHubCorner = '' +
 
 ## Variants
 
-<Preview>
+<Preview mdxSource = {GitHubCorner}>
   <Story name="Normal" height="100px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{`
@@ -24,7 +24,7 @@ export const GitHubCorner = '' +
 
 This is the classic black ribbon. Most pages use the GitHub corner in this fashion.
 
-<Preview style={{backgroundColor: 'black'}}>
+<Preview mdxSource = {GitHubCorner} style={{backgroundColor: 'black'}}>
   <Story name="Inverted" height="100px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -37,7 +37,7 @@ This is the classic black ribbon. Most pages use the GitHub corner in this fashi
 
 The colors may be inverted when displaying on darker, non-white backgrounds.
 
-<Preview>
+<Preview mdxSource = {GitHubCorner}>
   <Story name="Left aligned" height="100px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{`
