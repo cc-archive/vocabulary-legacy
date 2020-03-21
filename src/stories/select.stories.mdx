@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Form/Select" />
 
@@ -7,10 +7,7 @@ import { config } from 'storybook-addon-designs'
 
 <Preview>
   <Story name="Default" parameters={{
-    design: config({
-      type: 'figma',
-      url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=603%3A6'
-    })
+    design: figmaConfig('603%3A6')
   }}>{`
     <div class="select">
       <select>
