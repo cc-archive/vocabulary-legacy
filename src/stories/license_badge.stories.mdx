@@ -1,7 +1,13 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { config } from "storybook-addon-designs";
 
 <Meta title="Assets/License badge" />
+
+export const figmaConfig = nodeId =>
+  config({
+    type: "figma",
+    url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
+  });
 
 # License badge
 
@@ -11,50 +17,53 @@ CC BY is represented by the CC logo and the icon of a person. Similar icons exis
 ## Licenses
 
 export const licenseSVG = (size, license) => {
-  let tag
-  if (size === 'big') {
-    tag = 'svg height="42" width="120"'
+  let tag;
+  if (size === "big") {
+    tag = 'svg height="42" width="120"';
   } else {
-    tag = 'svg height="15" width="80"'
+    tag = 'svg height="15" width="80"';
   }
   return `<${tag}>
 <use href="license_badges/${size}/${license}.svg#layer1"></use>
-</svg>`
-}
+</svg>`;
+};
 
 <Preview>
-  <Story name="BY" height="96px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by')}</div>
-    <div>${licenseSVG('small', 'by')}</div>
+  <Story
+    name="BY"
+    height="96px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by")}</div>
+    <div>${licenseSVG("small", "by")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY SA" height="96px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by_sa')}</div>
-    <div>${licenseSVG('small', 'by_sa')}</div>
+  <Story
+    name="BY SA"
+    height="96px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_sa")}</div>
+    <div>${licenseSVG("small", "by_sa")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY ND" height="96px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by_nd')}</div>
-    <div>${licenseSVG('small', 'by_nd')}</div>
+  <Story
+    name="BY ND"
+    height="96px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nd")}</div>
+    <div>${licenseSVG("small", "by_nd")}</div>
   `}</Story>
 </Preview>
 
@@ -62,41 +71,44 @@ Big-sized licenses with the non-commercial clause include an EU variant with the
 symbol. Small-sized licenses do not have this variant.
 
 <Preview>
-  <Story name="BY NC" height="144px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by_nc')}</div>
-    <div>${licenseSVG('big', 'by_nc.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc')}</div>
+  <Story
+    name="BY NC"
+    height="144px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc")}</div>
+    <div>${licenseSVG("big", "by_nc.eu")}</div>
+    <div>${licenseSVG("small", "by_nc")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY NC SA" height="144px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by_nc_sa')}</div>
-    <div>${licenseSVG('big', 'by_nc_sa.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc_sa')}</div>
+  <Story
+    name="BY NC SA"
+    height="144px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc_sa")}</div>
+    <div>${licenseSVG("big", "by_nc_sa.eu")}</div>
+    <div>${licenseSVG("small", "by_nc_sa")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY NC ND" height="144px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'by_nc_nd')}</div>
-    <div>${licenseSVG('big', 'by_nc_nd.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc_nd')}</div>
+  <Story
+    name="BY NC ND"
+    height="144px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc_nd")}</div>
+    <div>${licenseSVG("big", "by_nc_nd.eu")}</div>
+    <div>${licenseSVG("small", "by_nc_nd")}</div>
   `}</Story>
 </Preview>
 
@@ -105,26 +117,28 @@ smaller appearance when rendered using identical markup. This bug in present onl
 badges.
 
 <Preview>
-  <Story name="CC Zero" height="96px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'cc_zero')}</div>
-    <div>${licenseSVG('small', 'cc_zero')}</div>
+  <Story
+    name="CC Zero"
+    height="96px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "cc_zero")}</div>
+    <div>${licenseSVG("small", "cc_zero")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="Public Domain" height="96px" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=574%3A111'
-  })
-}}>{`
-    <div>${licenseSVG('big', 'publicdomain')}</div>
-    <div>${licenseSVG('small', 'publicdomain')}</div>
+  <Story
+    name="Public Domain"
+    height="96px"
+    parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "publicdomain")}</div>
+    <div>${licenseSVG("small", "publicdomain")}</div>
   `}</Story>
 </Preview>
 
@@ -134,9 +148,9 @@ The license assets can be used in your apps by defining an SVG tag with the appr
 group from within the licenses.
 
 | Size  | Dimension      |
-|-------|----------------|
+| ----- | -------------- |
 | Big   | 120 &times; 42 |
-| Small | 80  &times; 15 |
+| Small | 80 &times; 15  |
 
 **Example:**
 
@@ -144,14 +158,13 @@ group from within the licenses.
 <svg width="120px" height="42px">
   <!-- Big sized CC BY license badge -->
   <use
-    href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1">
-  </use>
+    href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1"
+  ></use>
 </svg>
 <svg width="80px" height="15px">
   <!-- Small sized CC BY license badge -->
   <use
-    href="@creativecommons/vocabulary/assets/license_badges/small/by.svg#layer1">
-  </use>
+    href="@creativecommons/vocabulary/assets/license_badges/small/by.svg#layer1"
+  ></use>
 </svg>
 ```
-
