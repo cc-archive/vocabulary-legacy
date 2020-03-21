@@ -1,4 +1,5 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from './helpers'
 
 <Meta title="Assets/License badge" />
 
@@ -22,23 +23,32 @@ export const licenseSVG = (size, license) => {
 }
 
 <Preview>
-  <Story name="BY" height="96px">{`
-    <div>${licenseSVG('big', 'by')}</div>
-    <div>${licenseSVG('small', 'by')}</div>
+  <Story name="BY" height="96px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by")}</div>
+    <div>${licenseSVG("small", "by")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY SA" height="96px">{`
-    <div>${licenseSVG('big', 'by_sa')}</div>
-    <div>${licenseSVG('small', 'by_sa')}</div>
+  <Story name="BY SA" height="96px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_sa")}</div>
+    <div>${licenseSVG("small", "by_sa")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY ND" height="96px">{`
-    <div>${licenseSVG('big', 'by_nd')}</div>
-    <div>${licenseSVG('small', 'by_nd')}</div>
+  <Story name="BY ND" height="96px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nd")}</div>
+    <div>${licenseSVG("small", "by_nd")}</div>
   `}</Story>
 </Preview>
 
@@ -46,26 +56,35 @@ Big-sized licenses with the non-commercial clause include an EU variant with the
 symbol. Small-sized licenses do not have this variant.
 
 <Preview>
-  <Story name="BY NC" height="144px">{`
-    <div>${licenseSVG('big', 'by_nc')}</div>
-    <div>${licenseSVG('big', 'by_nc.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc')}</div>
+  <Story name="BY NC" height="144px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc")}</div>
+    <div>${licenseSVG("big", "by_nc.eu")}</div>
+    <div>${licenseSVG("small", "by_nc")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY NC SA" height="144px">{`
-    <div>${licenseSVG('big', 'by_nc_sa')}</div>
-    <div>${licenseSVG('big', 'by_nc_sa.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc_sa')}</div>
+  <Story name="BY NC SA" height="144px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc_sa")}</div>
+    <div>${licenseSVG("big", "by_nc_sa.eu")}</div>
+    <div>${licenseSVG("small", "by_nc_sa")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="BY NC ND" height="144px">{`
-    <div>${licenseSVG('big', 'by_nc_nd')}</div>
-    <div>${licenseSVG('big', 'by_nc_nd.eu')}</div>
-    <div>${licenseSVG('small', 'by_nc_nd')}</div>
+  <Story name="BY NC ND" height="144px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "by_nc_nd")}</div>
+    <div>${licenseSVG("big", "by_nc_nd.eu")}</div>
+    <div>${licenseSVG("small", "by_nc_nd")}</div>
   `}</Story>
 </Preview>
 
@@ -74,16 +93,22 @@ smaller appearance when rendered using identical markup. This bug in present onl
 badges.
 
 <Preview>
-  <Story name="CC Zero" height="96px">{`
-    <div>${licenseSVG('big', 'cc_zero')}</div>
-    <div>${licenseSVG('small', 'cc_zero')}</div>
+  <Story name="CC Zero" height="96px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "cc_zero")}</div>
+    <div>${licenseSVG("small", "cc_zero")}</div>
   `}</Story>
 </Preview>
 
 <Preview>
-  <Story name="Public Domain" height="96px">{`
-    <div>${licenseSVG('big', 'publicdomain')}</div>
-    <div>${licenseSVG('small', 'publicdomain')}</div>
+  <Story name="Public Domain" height="96px" parameters={{
+      design: figmaConfig("574%3A111")
+    }}
+  >{`
+    <div>${licenseSVG("big", "publicdomain")}</div>
+    <div>${licenseSVG("small", "publicdomain")}</div>
   `}</Story>
 </Preview>
 
@@ -103,7 +128,7 @@ group from within the licenses.
 <svg width="120px" height="42px">
   <!-- Big sized CC BY license badge -->
   <use
-    href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1">
+     href="@creativecommons/vocabulary/assets/license_badges/big/by.svg#layer1">
   </use>
 </svg>
 <svg width="80px" height="15px">

@@ -54,5 +54,8 @@
   ],
   "license": "MIT",
   "repository": "github:creativecommons/vocabulary",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "helpers": "0.0.6"
+  }
 }

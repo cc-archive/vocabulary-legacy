@@ -11,6 +11,6 @@ module.exports = {
     'storybook-addon-designs',
     '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
   ]
 }
