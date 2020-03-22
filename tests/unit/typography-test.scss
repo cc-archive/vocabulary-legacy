@@ -1,11 +1,11 @@
 @include it("assigns size based on class") {
     @include assert {
         @include output {
-            @include typography-classes("h1", $font-size-h1);
+            @include typography-classes("h1", 3.56rem);
         }
         @include expect {
-            h1{
-                font-size: $font-size-h1
+            h1 {
+                font-size: 3.56rem;
             }
         }
     }
