@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Typography" />
 
@@ -99,9 +99,7 @@ Code can be rendered with the class `.monospace` on the `<p>` tag.
   sampleText="const x = () => { console.log('Hello World!') }" />
 
 <Story name="Figma" parameters={{
-  design: config({
-    type: 'figma',
-    url: 'https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=0%3A110'
-  })
-}}>
-</Story>
+  design: figmaConfig('0%3A110')
+}}>{`
+  See the Design tab in the panel.
+`}</Story>
