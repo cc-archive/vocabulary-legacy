@@ -1,4 +1,4 @@
-export const alphabetTable = (classes=[]) => `<table class="character-table ${classes.join(' ')}">
+export const alphabetTable = (classes = []) => `<table class="character-table ${classes.join(' ')}">
   <tr>
     ${['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].map((char) => `<td>${char}</td>`).join('')}
   </tr>
