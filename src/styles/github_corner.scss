@@ -1,7 +1,9 @@
-.github-corner {
+@mixin corner {
   position: absolute;
   top: 0;
-
+}
+.github-corner {
+ @include corner;
   &.is-left-aligned {
     left: 0;
     transform: scaleX(-1);

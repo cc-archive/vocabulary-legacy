@@ -1,0 +1,15 @@
+@import 'true';
+@import '../../src/styles/github_corner.scss';
+@include describe('githubcorner()'){
+@include it('Outputs position') {
+    @include assert {
+      @include output {
+        @include corner();
+      }
+      @include expect {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}
