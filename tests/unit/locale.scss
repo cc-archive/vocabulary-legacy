@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../src/styles/locale.scss';
+@include describe('locale()'){
+@include it('Outputs a font-family') {
+    @include assert {
+      @include output {
+        @include locale_control();
+      }
+      @include expect {
+        font-family: $family-source-sans-pro;
+      }
+    }
+  }
+}
