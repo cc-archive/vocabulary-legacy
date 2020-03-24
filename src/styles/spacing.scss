@@ -19,12 +19,12 @@ $spacing-sizes: (
   "-large": $space-large,
   "-larger": $space-larger,
   "-xl": $space-xl,
-  "-xxl": $space-larger,
+  "-xxl": $space-larger
 );
 
 $spacing-properties: (
   "padding": "padding",
-  "margin": "margin",
+  "margin": "margin"
 );
 
 $spacing-directions: (
@@ -43,22 +43,65 @@ $spacing-directions: (
 //
 // Bulma already has classes for zero padding and margin:
 // `is-paddingless` and `is-marginless` respectively.
-@each $property-namespace, $property in $spacing-properties {
+// @each $property-namespace, $property in $spacing-properties {
 
+//   @each $size-namespace, $size in $spacing-sizes {
+
+//     @each $direction-namespace, $direction-rules in $spacing-directions {
+
+//       .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+
+//         @each $direction in $direction-rules {
+//           #{$property}#{$direction}: $size !important;
+//         }
+//       }
+//     }
+
+//     .#{$property}#{$size-namespace} {
+//       #{$property}: $size !important;
+//     }
+//   }
+// }
+
+@mixin direction($property, $direction, $size) {
+  #{$property}#{$direction}: $size !important;
+}
+
+@mixin property($property, $size, $size-namespace) {
+ .#{$property}#{$size-namespace} {
+    #{$property}: $size !important;
+  }
+}
+
+@mixin spacing-classes(
+  $property-namespace,
+  $property,
+  $size-namespace,
+  $size,
+  $direction-namespace,
+  $direction-rules
+) {
+  .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+    @each $direction in $direction-rules{
+      @include direction($property, $direction, $size);
+    }
+  }
+}
+
+@each $property-namespace, $property in $spacing-properties {
   @each $size-namespace, $size in $spacing-sizes {
 
     @each $direction-namespace, $direction-rules in $spacing-directions {
 
-      .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-
-        @each $direction in $direction-rules {
-          #{$property}#{$direction}: $size !important;
-        }
-      }
+      @include spacing-classes(
+        $property-namespace,
+        $property,
+        $size-namespace,
+        $size,
+        $direction-namespace,
+        $direction-rules
+      );
     }
-
-    .#{$property}#{$size-namespace} {
-      #{$property}: $size !important;
-    }
+    @include property($property, $size, $size-namespace);
   }
 }

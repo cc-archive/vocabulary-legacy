@@ -1,0 +1,23 @@
+@include it("creates class based on spacing properties") {
+  @include assert {
+    @include output {
+      @include property("padding", 0.25rem, "-smaller");
+      @include spacing-classes(
+        "padding",
+        "padding",
+        "-smaller",
+        0.25rem,
+        "-top",
+        "-top"
+      );
+    }
+    @include expect {
+      .padding-smaller {
+        padding: 0.25rem !important;
+      }
+      .padding-top-smaller {
+        padding-top: 0.25rem !important;
+      }
+    }
+  }
+}
