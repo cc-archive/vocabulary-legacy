@@ -1,8 +1,8 @@
 import { withKnobs, select } from '@storybook/addon-knobs'
-export default { title: 'Cards', decorators: [withKnobs] }
+export default { title: 'Layouts/Cards', decorators: [withKnobs] }
 
 export const PostVertical = () => {
-  return `    
+  return `
     <div style="width: 400px;">
       <article class="card entry-post vertical">
         <header class="card-image">
