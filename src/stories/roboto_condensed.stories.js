@@ -1,12 +1,23 @@
-export default { title: 'Roboto Condensed' }
+import { alphabetTable, numberTable, sampleTexts } from './helpers'
 
-export const demo = () => `
-  <style>
+export default {
+  title: 'Roboto Condensed',
+  decorators: [
+    storyFn => `<style>
   .roboto-condensed {
     font-family: 'Roboto Condensed';
   }
-  </style>
-  <p class="roboto-condensed">
-    The quick brown fox jumps over the lazy dog.
-  </p>
-`
+</style>
+<div class="roboto-condensed has-text-black">
+  ${storyFn()}
+</div>`
+  ]
+}
+
+export const uppercaseLetters = () => alphabetTable()
+
+export const lowercaseLetters = () => alphabetTable(['lowercase'])
+
+export const numbers = () => numberTable
+
+export const pangrams = () => sampleTexts
