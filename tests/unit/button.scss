@@ -1,0 +1,17 @@
+@import 'true';
+@import '../../src/styles/button.scss';
+@include describe('Buttons()'){
+@include it('Outputs button properties') {
+    @include assert {
+      @include output {
+        @include buttons();
+      }
+      @include expect {
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 0;
+        font-size: 1.43rem;
+      }
+    }
+  }
+} 

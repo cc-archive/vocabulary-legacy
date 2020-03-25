@@ -2,14 +2,17 @@ $button-family: $family-alternative;
 
 @import "../../node_modules/bulma/sass/elements/button.sass";
 
-.button {
+@mixin buttons {
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0;
+  font-size: 1.43rem;
+}
+.button {
+  @include buttons;
   border: 0.125rem solid $color-dark-gray;
   color: $color-dark-gray;
   background-color: $color-white;
-  font-size: 1.43rem;
   padding: calc(#{$space-bigger} - .187rem) $space-large;
 
   &:hover {
