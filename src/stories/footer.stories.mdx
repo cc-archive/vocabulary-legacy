@@ -1,10 +1,22 @@
 import { svgCode } from './logos.stories.mdx'
+import { figmaConfig } from './helpers'
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { config } from "storybook-addon-designs";
 
-export default { title: 'Patterns/Footer' }
+<Meta title="Patterns/Footer"/>
 
-export const Main = () => {
-  return `
-    <footer class="main-footer">
+#Footer
+
+<Preview>
+  <Story
+   name="Main"
+   parameters = {{
+     design: figmaConfig("639%3A185")
+   }}
+   >
+   {
+     `
+      <footer class="main-footer">
       <div class="container">
         <div class="columns">
           <div class="column">
@@ -60,5 +72,8 @@ export const Main = () => {
         </div>
       </div>
     </footer>
-  `
-}
+     `
+   }
+   </Story>
+</Preview>
+
