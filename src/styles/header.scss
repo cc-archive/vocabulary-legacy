@@ -22,6 +22,11 @@ $navbar-dropdown-radius: 0;
   .navbar-burger span {
     height: 2px;
   }
+  
+  .navbar-menu {
+    position: absolute;
+    width: 97%;
+  }
 
   .navbar-end {
     .navbar-item {
