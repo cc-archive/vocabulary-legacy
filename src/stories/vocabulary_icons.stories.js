@@ -32,7 +32,7 @@ export const Internet = () => `
 `
 
 export const CCLicenses = () => `
-  <i class="icon cc-logo"></i>
+  <i class="icon logo"></i>
   <i class="icon cc-by"></i>
   <i class="icon cc-nc"></i>
   <i class="icon cc-nc-eu"></i>
