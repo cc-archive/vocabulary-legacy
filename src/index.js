@@ -1,1 +1,1 @@
-require('./styles/fonts.scss');
+require('./styles/fonts.scss')

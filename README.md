@@ -23,7 +23,7 @@
   <a 
     href="https://github.com/creativecommons/fonts/blob/master/LICENSE"
     style="margin-right: 1em;">
-    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/cc-vocabulary.svg?color=brightgreen"/>
+    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/fonts.svg?color=brightgreen"/>
   </a>
   <a
     href="https://circleci.com/gh/creativecommons/fonts/tree/master"
