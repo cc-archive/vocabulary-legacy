@@ -1,11 +1,3 @@
-$input-background-color: $color-black;
-$input-border-color: $color-dark-gray;
-$input-shadow: none;
-
-@import "../../node_modules/bulma/sass/elements/container.sass";
-@import "../../node_modules/bulma/sass/form/_all.sass";
-@import "../../node_modules/bulma/sass/grid/_all.sass";
-
 .main-footer {
     background-color: $color-black;
     color: $white;
@@ -53,6 +45,10 @@ $input-shadow: none;
         .newsletter {
             display: flex;
             width: 70%;
+            .input {
+                background-color: transparent;
+                border-color: $color-dark-gray;
+            }
             .button {
                 margin-left: -1rem;
                 border: none;
