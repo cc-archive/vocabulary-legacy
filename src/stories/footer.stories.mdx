@@ -1,15 +1,27 @@
-import { svgCode } from './logos.stories.mdx'
+import { svgCode } from "./logos.stories.mdx";
 
-export default { title: 'Patterns/Footer' }
-
-export const Main = () => {
-  return `
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { config } from "storybook-addon-designs";
+<Meta title="Footer" />;
+<Preview>
+  <Story
+    name="Main"
+    parameters={{
+      design: figmaConfig("")
+    }}
+  >
+    {`
     <footer class="main-footer">
       <div class="container">
         <div class="columns">
           <div class="column">
             <a href="https://creativecommons.org" class="main-logo margin-bottom-bigger">
-              <span class="has-text-white">${svgCode(304, 73, 'cc/logomark', 'creativecommons')}</span>
+              <span class="has-text-white">${svgCode(
+                304,
+                73,
+                "cc/logomark",
+                "creativecommons"
+              )}</span>
             </a>
             <p>
               <address class="margin-bottom-normal"> Creative Commons <br> PO Box 1866, Mountain View CA 94042</address>
@@ -53,12 +65,18 @@ export const Main = () => {
               <h5>Our work relies on you!</h5>
               <p>Help us keep the internet free and open.</p>
               <a class="button small donate">
-                ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')} Donate now
+                ${svgCode(
+                  80,
+                  72,
+                  "cc/letterheart",
+                  "creativecommons"
+                )} Donate now
               </a>
             </aside>
           </div>
         </div>
       </div>
     </footer>
-  `
-}
+    `}
+  </Story>
+</Preview>
