@@ -23,11 +23,11 @@ $spacing-sizes: (
 );
 
 $spacing-properties: (
-  "padding": "padding",
-  "margin": "margin"
+  "padding",
+  "margin"
 );
 
-$spacing-directions: (
+$spacing-direction-groups: (
   "-top": "-top",
   "-right": "-right",
   "-bottom": "-bottom",
@@ -36,6 +36,20 @@ $spacing-directions: (
   "-vertical": "-top" "-bottom"
 );
 
+@mixin directed-spacing($property, $direction-group-namespace, $direction-group, $size-namespace, $size) {
+  .#{$property}#{$direction-group-namespace}#{$size-namespace} {
+    @each $direction in $direction-group {
+      #{$property}#{$direction}: $size !important;
+    }
+  }
+}
+
+@mixin undirected-spacing($property, $size-namespace, $size) {
+  .#{$property}#{$size-namespace} {
+    #{$property}: $size !important;
+  }
+}
+
 // This generates paddings and margins of each size
 // on each direction: left, right, top, bottom,
 // horizontal (left and right), vertical (top and bottom)
@@ -43,65 +57,14 @@ $spacing-directions: (
 //
 // Bulma already has classes for zero padding and margin:
 // `is-paddingless` and `is-marginless` respectively.
-// @each $property-namespace, $property in $spacing-properties {
+@each $property in $spacing-properties {
 
-//   @each $size-namespace, $size in $spacing-sizes {
-
-//     @each $direction-namespace, $direction-rules in $spacing-directions {
-
-//       .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-
-//         @each $direction in $direction-rules {
-//           #{$property}#{$direction}: $size !important;
-//         }
-//       }
-//     }
-
-//     .#{$property}#{$size-namespace} {
-//       #{$property}: $size !important;
-//     }
-//   }
-// }
-
-@mixin direction($property, $direction, $size) {
-  #{$property}#{$direction}: $size !important;
-}
-
-@mixin property($property, $size, $size-namespace) {
- .#{$property}#{$size-namespace} {
-    #{$property}: $size !important;
-  }
-}
-
-@mixin spacing-classes(
-  $property-namespace,
-  $property,
-  $size-namespace,
-  $size,
-  $direction-namespace,
-  $direction-rules
-) {
-  .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-    @each $direction in $direction-rules{
-      @include direction($property, $direction, $size);
-    }
-  }
-}
-
-@each $property-namespace, $property in $spacing-properties {
   @each $size-namespace, $size in $spacing-sizes {
 
-    @each $direction-namespace, $direction-rules in $spacing-directions {
+    @each $direction-group-namespace, $direction-group in $spacing-direction-groups {
 
-      @include spacing-classes(
-        $property-namespace,
-        $property,
-        $size-namespace,
-        $size,
-        $direction-namespace,
-        $direction-rules
-      );
+      @include directed-spacing($property, $direction-group-namespace, $direction-group, $size-namespace, $size);
     }
-    @include property($property, $size, $size-namespace);
+    @include undirected-spacing($property, $size-namespace, $size);
   }
 }

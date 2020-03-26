@@ -38,11 +38,15 @@ $body-font-sizes: (
   "-list": $font-size-body-list,
 );
 
-@each $body-name, $body-font-size in $body-font-sizes {
+@mixin body-typography($body-name, $body-font-size) {
   .body#{$body-name} {
-  line-height: 1.3;
-  font-size: $body-font-size;
+    line-height: 1.3;
+    font-size: $body-font-size;
   }
+}
+
+@each $body-name, $body-font-size in $body-font-sizes {
+  @include body-typography($body-name, $body-font-size);
 }
 
 .caption {
@@ -90,14 +94,14 @@ $header-font-sizes: (
   "h6": $font-size-h6,
 );
 
-@mixin typography-classes($header-name, $header-font-size) {
+@mixin header-typography($header-name, $header-font-size) {
   #{$header-name} {
     font-size: $header-font-size;
   }
 }
 
 @each $header-name, $header-font-size in $header-font-sizes {
-  @include typography-classes($header-name, $header-font-size);
+  @include header-typography($header-name, $header-font-size);
 }
 
 body {
