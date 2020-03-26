@@ -5,6 +5,11 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Test
-      uses: skx/github-action-tester@master
+    - name: Test Pull Requests
+      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      if: github.event_name == 'pull_request'
+      env:
+        GITHUB_TOKEN: ${{ secrets.ORG_GITHUB_TOKEN }}
+        GITHUB_PROJECT_URL: https://github.com/orgs/creativecommons/projects/13
+        GITHUB_PROJECT_COLUMN_NAME: "Tested"
+
