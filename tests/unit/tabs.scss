@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../src/styles/tabs.scss';
+@include describe('tabs()'){
+@include it('Outputs a font-family') {
+    @include assert {
+      @include output {
+        @include tab-control();
+      }
+      @include expect {
+        font-family: $family-source-sans-pro;
+      }
+    }
+  }
+}

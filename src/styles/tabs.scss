@@ -8,14 +8,20 @@ $tabs-link-active-color: $color-dark-slate-gray;
 
 @import "../../node_modules/bulma/sass/components/tabs.sass";
 
+@mixin tab-control {
+   font-family: $family-source-sans-pro;
+}
+
 .tabs {
-  font-family: $family-source-sans-pro;
+  @include tab-control;
 
   a {
     font-size: $font-size-h5;
     font-weight: 700;
   }
 }
+
+
 
 .tabs-content {
   .tabs-panel {
