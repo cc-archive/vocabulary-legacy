@@ -13,16 +13,16 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   width="88px"
-   height="31px"
-   viewBox="-0.5 -0.101 88 31"
+   width="120"
+   height="42"
+   viewBox="-0.5 -0.101 120 42"
    enable-background="new -0.5 -0.101 88 31"
    xml:space="preserve"
-   sodipodi:docname="cc_zero.svg"
+   sodipodi:docname="a.svg"
    inkscape:version="0.92.4 (unknown)"><metadata
    id="metadata50"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs48" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -36,16 +36,16 @@
    inkscape:window-height="1025"
    id="namedview46"
    showgrid="false"
-   inkscape:zoom="14.361861"
-   inkscape:cx="44"
-   inkscape:cy="15.5"
+   inkscape:zoom="7.1809304"
+   inkscape:cx="82.992162"
+   inkscape:cy="18.285154"
    inkscape:window-x="67"
    inkscape:window-y="27"
    inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
 <g
    id="layer1"
-   transform="matrix(1.3636364,0,0,1.3548387,0.18181815,-11)">
+   transform="matrix(1.3636364,0,0,1.3548387,0.18181818,0)">
 	<path
    d="M 1.803,0.482 84.93,0.631 c 1.161,0 2.198,-0.173 2.198,2.333 L 87.025,30.52 H -0.295 V 2.862 c 0,-1.236 0.118,-2.38 2.098,-2.38 z"
    id="path2"
