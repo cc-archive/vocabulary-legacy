@@ -23,12 +23,12 @@ $color-brighter-gold: rgb(245, 212, 0);
 $color-brighter-forest-green: rgb(0, 184, 80);
 
 // Feedback
-$color-success: rgb(4, 166, 53);
-$color-warning: rgb(242, 171, 32);
-$color-error: rgb(200, 59, 30);
-$color-success-lighter: rgb(224, 242, 191);
-$color-warning-lighter: rgb(250, 236, 188);
-$color-error-lighter: rgb(255, 201, 201);
+$color-dark-success: rgb(4, 166, 53);
+$color-light-success: rgb(224, 242, 191);
+$color-dark-warning: rgb(242, 171, 32);
+$color-light-warning: rgb(250, 236, 188);
+$color-dark-error: rgb(200, 59, 30);
+$color-light-error: rgb(255, 201, 201);
 
 // Overrides
 $red: $color-tomato;
@@ -37,11 +37,14 @@ $yellow: $color-gold;
 $green: $color-forest-green;
 $cyan: $color-dark-slate-blue;
 $blue: $color-dark-slate-blue;
+
 $primary: $color-tomato;
-$success: $color-success;
+
+$success: $color-dark-success;
 $info: $color-forest-green;
-$warning: $color-warning;
-$danger: $color-error;
+$warning: $color-dark-warning;
+$danger: $color-dark-error;
+
 $link: $color-tomato;
 $link-visited: $color-tomato;
 
@@ -59,6 +62,7 @@ $brand-colors: (
   .has-background-#{$color-namespace} {
     background-color: $brand-color;
   }
+  
   .has-text-#{$color-namespace}, // Bulma convention
   .has-color-#{$color-namespace} {
     color: $brand-color;
