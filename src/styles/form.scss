@@ -4,6 +4,8 @@ $input-shadow: none;
 
 $input-focus-box-shadow-color: none;
 $input-focus-border-color: $color-gray;
+$input-hover-border-color: $color-gray;
+$input-active-border-color: $color-gray;
 
 $input-disabled-border-color: $color-gray;
 
@@ -19,41 +21,48 @@ $input-disabled-border-color: $color-gray;
   border-width: 0.125rem;
 }
 
+// // Input actions
+@mixin input-actions {
+  $input-hover: $input-hover-border-color;
+  $input-active: $input-active-border-color;
+  $input-focus: $input-focus-border-color;
+}
+
 // Input
 .input {
   @include form_control;
-
+  @include input-actions;
   box-sizing: border-box;
   height: 2.5em;
   padding-left: $space-small;
 
-  &.is-medium {
-    font-size: 1.43rem;
-    height: 3.875rem;
-    padding-left: $space-normal;
-  }
+    &.is-medium {
+      font-size: 1.43rem;
+      height: 3.875rem;
+      padding-left: $space-normal;
+    }
 
-  &.is-large {
-    font-size: 1.75rem;
-    height: 5.063rem;
-    padding-left: $space-big;
-  }
-}
-
-// Select
-.select {
-  select {
-    @include form_control;
-
-    option {
-      font-weight: 400;
+    &.is-large {
+      font-size: 1.75rem;
+      height: 5.063rem;
+      padding-left: $space-big;
     }
   }
 
-  &:not(.is-multiple):not(.is-loading)::after {
-    background: linear-gradient(45deg, $color-black 50%, transparent 50%);
+  // Select
+  .select {
+    select {
+      @include form_control;
 
-    border: none;
-    border-radius: 0;
+      option {
+        font-weight: 400;
+      }
+    }
+
+    &:not(.is-multiple):not(.is-loading)::after {
+      background: linear-gradient(45deg, $color-black 50%, transparent 50%);
+
+      border: none;
+      border-radius: 0;
+    }
   }
-}
