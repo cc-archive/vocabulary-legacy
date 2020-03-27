@@ -1,15 +1,19 @@
-@include it("creates class based on color") {
-  @include assert {
-    @include output {
-      @include color-classes("brown", brown);
-    }
-    @include expect {
-      .has-background-brown {
-        background-color: brown;
+@include describe("Color") {
+  @include it("creates foreground and background classes for a given color") {
+    @include assert {
+      @include output {
+        @include color-classes("orange", orange);
       }
-      .has-text-brown,
-      .has-color-brown {
-        color: brown;
+
+      @include expect {
+        .has-background-orange {
+          background-color: orange;
+        }
+
+        .has-text-orange,
+        .has-color-orange {
+          color: orange;
+        }
       }
     }
   }
