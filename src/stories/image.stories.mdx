@@ -6,10 +6,15 @@ import { Meta, Story } from '@storybook/addon-docs/blocks'
 
 <Preview>
     <Story name="Image">{`
-        <div class="content">
-            <img class="content-image" src="images/image.jpg">
-            <div class="content-details">
-                <p>Image name</p>
+        <div class="image">
+            <img src="images/image.jpg">
+            <div class="image-details">
+                <p class=" padding-vertical-small padding-horizontal-normal">Image name</p>
+            </div>
+            <div class="image-icons padding-vertical-small padding-horizontal-normal">
+                <i class="icon logo padding-right-small"></i>
+                <i class="icon cc-by padding-right-small"></i>
+                <i class="icon cc-nc padding-right-small"></i>
             </div>
         </div>
         `}</Story>
