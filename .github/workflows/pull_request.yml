@@ -1,15 +1,16 @@
-on: pull_request
 name: Pull Request
 jobs:
   test:
-    name: Run tests
+    name: Test on pull requests
     runs-on: ubuntu-latest
-    steps:
-    - name: Test Pull Requests
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
-      if: github.event_name == 'pull_request'
-      env:
-        GITHUB_TOKEN: ${{ secrets.ORG_GITHUB_TOKEN }}
-        GITHUB_PROJECT_URL: https://github.com/orgs/creativecommons/projects/13
-        GITHUB_PROJECT_COLUMN_NAME: "Tested"
 
+    steps:
+    - uses: docker://node:alpine
+
+    - name: Test on pull requests
+      uses: docker://node:alpine
+      
+    - name: npm install and test
+      run: |
+        npm install
+        npm run test
