@@ -1,0 +1,57 @@
+name: vocabulary-CI
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: lint
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.12.0'
+    - name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
+    - run: npm install
+    - run: npm run lint
+      env:
+        CI: true
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.12.0'
+    - run: npm install
+    - run: npm run test
+      env:
+        CI: true
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.12.0'
+    - run: npm install
+    - run: npm run test
+      env:
+        CI: true
