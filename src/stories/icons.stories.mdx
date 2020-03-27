@@ -1,0 +1,138 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Assets/Vocabulary Icons"/>
+
+# Vocabulary Icons
+
+Vocabulary Icons is an icon font developed for use in Vocabulary, a cohesive design system to unite the web-facing
+Creative Commons.
+
+The icon font selectively includes assets from [Font Awesome](https://fontawesome.com) based on the icons used
+throughout the design library on Figma and bundles them using [IcoMoon](https://icomoon.io/) to get the icons in the
+smallest possible file size bundle.
+
+
+export const icons = (icon_name) => {
+return `<svg>
+<use href="icons/${icon_name}.svg"></use>
+</svg>`
+}
+
+
+<Preview>
+  <Story name="BY" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="BY NC EU" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc.eu')}</div>
+  `}
+  </Story>
+</Preview>
+
+
+<Preview>
+  <Story name="BY NC" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc')}</div>
+  `}
+  </Story>
+</Preview>
+
+
+<Preview>
+  <Story name="BY NC ND EY" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc_nd.eu')}</div>
+  `}
+  </Story>
+</Preview>
+
+
+<Preview>
+  <Story name="BY NC ND" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc_nd')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="BY NC SA EU" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc_sa.eu')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="BY NC SA" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nc_sa')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="BY ND" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_nd')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="BY SA" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('by_sa')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="CC_Zero" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('cc_zero')}</div>
+  `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Public Domain" parameters={{
+    design: figmaConfig("732%3A0")
+  }}>{`
+  <div>${icons('publicdomain')}</div>
+  `}
+  </Story>
+</Preview>
+
+
+# Usage
+
+The icons can be used in your apps by defining an SVG tag and specifying the href of icon to be used.
+
+**Example:**
+
+```html
+<svg>
+  <use
+    href="@creativecommons/vocabulary/src/assets/icons/by.svg">
+  </use>
+</svg>
+```
