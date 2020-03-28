@@ -13,16 +13,16 @@ CC BY is represented by the CC logo and the icon of a person. Similar icons exis
 export const licenseSVG = (size, license) => {
   let tag
   if (size === 'big') {
-    tag = 'svg height="42" width="120"'
+    tag = 'svg width="120" height="42"'
   } else {
-    tag = 'svg height="15" width="80"'
+    tag = 'svg width="80" height="15"'
   }
   return `<${tag}>
 <use href="license_badges/${size}/${license}.svg#layer1"></use>
 </svg>`
 }
 
-<Preview>
+<Preview mdxSource={[licenseSVG('big', 'by'), licenseSVG('small', 'by')].join('\n\n')}>
   <Story name="BY" height="96px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -31,7 +31,7 @@ export const licenseSVG = (size, license) => {
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={[licenseSVG('big', 'by_sa'), licenseSVG('small', 'by_sa')].join('\n\n')}>
   <Story name="BY SA" height="96px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -40,7 +40,7 @@ export const licenseSVG = (size, license) => {
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={[licenseSVG('small', 'by_nd'), licenseSVG('big', 'by_nd')].join('\n\n')}>
   <Story name="BY ND" height="96px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -52,7 +52,11 @@ export const licenseSVG = (size, license) => {
 Big-sized licenses with the non-commercial clause include an EU variant with the Dollar symbol replaced with the Euro
 symbol. Small-sized licenses do not have this variant.
 
-<Preview>
+<Preview mdxSource={[
+    licenseSVG('big', 'by_nc'),
+    licenseSVG('big', 'by_nc.eu'),
+    licenseSVG('small', 'by_nc')
+  ].join('\n\n')}>
   <Story name="BY NC" height="144px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -62,7 +66,11 @@ symbol. Small-sized licenses do not have this variant.
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={[
+    licenseSVG('big', 'by_nc_sa'),
+    licenseSVG('big', 'by_nc_sa.eu'),
+    licenseSVG('small', 'by_nc_sa')
+  ].join('\n\n')}>
   <Story name="BY NC SA" height="144px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -72,7 +80,11 @@ symbol. Small-sized licenses do not have this variant.
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={[
+    licenseSVG('big', 'by_nc_nd'),
+    licenseSVG('big', 'by_nc_nd.eu'),
+    licenseSVG('small', 'by_nc_nd')
+  ].join('\n\n')}>
   <Story name="BY NC ND" height="144px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -86,7 +98,7 @@ Big-sized licenses for CC Zero and Public Domain follow a different base size, b
 smaller appearance when rendered using identical markup. This bug in present only in the big-sized versions of the two
 badges.
 
-<Preview>
+<Preview mdxSource={[licenseSVG('big', 'cc_zero'), licenseSVG('small', 'cc_zero')].join('\n\n')}>
   <Story name="CC Zero" height="96px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
@@ -95,7 +107,7 @@ badges.
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={[licenseSVG('big', 'publicdomain'), licenseSVG('small', 'publicdomain')].join('\n\n')}>
   <Story name="Public Domain" height="96px" parameters={{
     design: figmaConfig("574%3A111")
   }}>{`
