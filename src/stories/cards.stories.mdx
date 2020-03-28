@@ -3,173 +3,129 @@ import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Cards" />
 
-<Preview>
+# Cards
+
+export const content = `<div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>`
+
+export const cardWithButton = (width, image_size, orientation) => `<div style="width: ${width};">
+  <article class="card entry-post ${orientation}">
+    <header class="card-image">
+      <figure class="image is-${image_size}">
+        <img src="http://placekitten.com/700/392" alt="Header image">
+      </figure>
+    </header>
+    <div class="card-content with-button">
+        <h4 class="card-title"><a href="#">This is a title</a></h4>
+        <span class="subtitle">12 Octobre 2019</span>
+        ${content}
+        <a href="#" class="button is-primary">Read more</a>
+    </div>
+  </article>
+</div>`
+
+<Preview mdxSource = {cardWithButton(400,'4by3', 'vertical')}>
   <Story name="PostVertical" parameters={{
     design: figmaConfig('776%3A0')
   }}>{`
-    <div style="width: 400px;">
-      <article class="card entry-post vertical">
-        <header class="card-image">
-          <figure class="image is-4by3">
-            <img src="http://placekitten.com/700/392" alt="Header image">
-          </figure>
-        </header>
-        <div class="card-content with-button">
-            <h4 class="card-title"><a href="#">This is a title</a></h4>
-            <span class="subtitle">12 Octobre 2019</span>
-            <div class="content">
-              Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-            </div>
-            <a href="#" class="button is-primary">Read more</a>
-        </div>
-      </article>
+    <div>
+      ${cardWithButton(400,'4by3', 'vertical')}
     </div>
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource = {cardWithButton(600,'4by5', 'horizontal')}>
   <Story name="PostHorizontal" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
-    <div style="width: 600px;">
-      <article class="card entry-post horizontal">
-        <header class="card-image">
-          <figure class="image is-4by5">
-            <img src="http://placekitten.com/486/600" alt="Header image">
-          </figure>
-        </header>
-        <div class="card-content with-button">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
-          <span class="subtitle">12 Octobre 2019</span>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-          <a href="#" class="button is-primary">Read more</a>
-        </div>
-      </article>
-    </div>
+  <div>
+    ${cardWithButton(600,'4by5', 'horizontal')}
+  </div>
   `}</Story>
 </Preview>
 
-<Preview>
+export const PostVideo = (width,image_size,orientation) => `<div 
+style="width: ${width};">
+      <article class="card entry-post entry-video ${orientation} no-border">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-${image_size}">
+              <img src="http://placekitten.com/700/392" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+         ${content}
+        </div>
+      </article>
+    </div>`
+
+<Preview mdxSource = {PostVideo('400px','4by3','vertical')}>
   <Story name="PostVideoVertical" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
-    <div style="width: 400px;">
-      <article class="card entry-post entry-video vertical no-border">
-        <header class="card-image">
-          <a href="#">
-            <figure class="image is-4by3">
-              <img src="http://placekitten.com/700/392" alt="Header image">
-            </figure>
-          </a>
-        </header>
-        <div class="card-content">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-        </div>
-      </article>
+    <div>
+    ${PostVideo('400px','4by3','vertical')}
     </div>
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource = {PostVideo('600px','4by3','horizontal')}>
   <Story name="PostVideoHorizontal" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
-    <div style="width: 600px;">
-      <article class="card entry-post entry-video horizontal no-border">
-        <header class="card-image">
-          <a href="#">
-            <figure class="image is-4by3">
-              <img src="http://placekitten.com/700/392" alt="Header image">
-            </figure>
-          </a>
-        </header>
-        <div class="card-content">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-        </div>
-      </article>
+    <div>
+    ${PostVideo('600px','4by3','horizontal')}
     </div>
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource = {PostVideo('100%','4by3','horizontal')}>
   <Story name="PostVideoLarge" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
-    <div style="width: 100%;">
-      <article class="card entry-post entry-video horizontal large no-border">
-        <header class="card-image">
-          <a href="#">
-            <figure class="image is-5by4">
-              <img src="http://placekitten.com/700/392" alt="Header image">
-            </figure>
-          </a>
-        </header>
-        <div class="card-content">
-          <h1 class="card-title"><a href="#">This is a longer title for main content</a></h1>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-        </div>
-      </article>
+    <div>
+    ${PostVideo('100%','4by3','horizontal')}
     </div>
   `}</Story>
 </Preview>
 
+export const PostEvent = (width) => `<div 
+style="width: ${width}px;">
+      <article class="card entry-post entry-event horizontal">
+        <header class="card-header">
+          <div class="card-date">
+            <span class="month">September</span>
+            <span class="day">05</span>
+            <span class="year">2050</span>
+          </div>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          ${content}
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </article>
+    </div>`
 
-<Preview>
+<Preview mdxSource = {PostEvent(600)}>
   <Story name="PostEventWide" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
-    <div style="width: 600px;">
-      <article class="card entry-post entry-event horizontal">
-        <header class="card-header">
-          <div class="card-date">
-            <span class="month">September</span>
-            <span class="day">05</span>
-            <span class="year">2050</span>
-          </div>
-        </header>
-        <div class="card-content">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-          <a href="#" class="read-more">Read more</a>
-        </div>
-      </article>
+    <div>
+    ${PostEvent(600)}
     </div>
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource = {PostEvent(350)}>
   <Story name="PostEventNarrow" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
-    <div style="width: 350px;">
-      <article class="card entry-post entry-event horizontal">
-        <header class="card-header">
-          <div class="card-date">
-            <span class="month">September</span>
-            <span class="day">05</span>
-            <span class="year">2050</span>
-          </div>
-        </header>
-        <div class="card-content">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
-          <a href="#" class="read-more">Read more</a>
-        </div>
-      </article>
+    <div>
+    ${PostEvent(350)}
     </div>
   `}</Story>
 </Preview>
@@ -187,9 +143,7 @@ import { figmaConfig } from './helpers'
           </div>
         </header>
         <div class="card-content">
-          <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>
+         ${content}
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
@@ -245,6 +199,12 @@ import { figmaConfig } from './helpers'
   }</Story>
 </Preview>
 
+export const Links = `<span class="card-content has-bottom-link">
+            <h2 class="card-title">This is a Title of a page or section</h2>
+            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+            <span class="link-arrow">Loren ipsum dolor</span>
+          </span>`
+
 <Preview>
   <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
@@ -252,11 +212,7 @@ import { figmaConfig } from './helpers'
     <div style="width: 400px;">
       <article class="card entry-post link no-border">
         <a href="#" class="has-background-dark-slate-blue">
-          <span class="card-content has-bottom-link">
-            <h2 class="card-title">This is a Title of a page or section</h2>
-            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
-            <span class="link-arrow">Loren ipsum dolor</span>
-          </span>
+          ${Links}
         </a>
       </article>
     </div>
@@ -271,11 +227,7 @@ import { figmaConfig } from './helpers'
     <div style="width: 400px;">
       <article class="card entry-post link">
         <a href="#">
-          <span class="card-content has-bottom-link">
-            <h2 class="card-title">This is a Title of a page or section</h2>
-            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
-            <span class="link-arrow">Loren ipsum dolor</span>
-          </span>
+          ${Links}
         </a>
       </article>
     </div>
