@@ -12,6 +12,8 @@ trap '_es=${?};
 
 npm run build
 cp package.json dist/
+cp README.md dist/
+cp LICENSE dist/
 
 cd dist
 npm publish --access public
