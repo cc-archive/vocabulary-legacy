@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Input" />
+
+# Input
+
+<Preview>
+  <Story name="Normal" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{`
+    <input class="input" type="text" placeholder="Placeholder text"/>
+    <br/><br/>
+    <input class="input" type="text" value="Typed text"/>
+    <br/><br/>
+    <input class="input" type="text" value="Fixed text" disabled/>
+  `}</Story>
+</Preview>
+
+The big version of the component is associated with the `is-medium` class offered by Bulma.
+
+<Preview>
+  <Story name="Big" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{`
+    <input class="input is-medium" type="text" placeholder="Placeholder text"/>
+    <br/><br/>
+    <input class="input is-medium" type="text" value="Typed text"/>
+    <br/><br/>
+    <input class="input is-medium" type="text" value="Fixed text" disabled/>
+  `}</Story>
+</Preview>
+
+The huge version of the component is associated with the `is-large` class offered by Bulma.
+
+<Preview>
+  <Story name="Huge" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{`
+    <input class="input is-large" type="text" placeholder="Placeholder text"/>
+    <br/><br/>
+    <input class="input is-large" type="text" value="Typed text"/>
+    <br/><br/>
+    <input class="input is-large" type="text" value="Typed text" disabled/>
+  `}</Story>
+</Preview>
