@@ -19,7 +19,7 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
     <div class="card-content with-button">
         <h4 class="card-title"><a href="#">This is a title</a></h4>
         <span class="subtitle">12 Octobre 2019</span>
-        ${content}
+        ${content.toString()}
         <a href="#" class="button is-primary">Read more</a>
     </div>
   </article>
@@ -57,7 +57,7 @@ style="width: ${width};">
         </header>
         <div class="card-content">
           <h4 class="card-title"><a href="#">This is a title</a></h4>
-         ${content}
+         ${content.toString()}
         </div>
       </article>
     </div>`
@@ -104,7 +104,7 @@ style="width: ${width}px;">
         </header>
         <div class="card-content">
           <h4 class="card-title"><a href="#">This is a title</a></h4>
-          ${content}
+          ${content.toString()}
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
@@ -130,7 +130,7 @@ style="width: ${width}px;">
   `}</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource = {content}>
   <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
@@ -143,7 +143,7 @@ style="width: ${width}px;">
           </div>
         </header>
         <div class="card-content">
-         ${content}
+         ${content.toString()}
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
@@ -199,35 +199,34 @@ style="width: ${width}px;">
   }</Story>
 </Preview>
 
-export const Links = `<span class="card-content has-bottom-link">
+export const LinkCardContent = `<span class="card-content has-bottom-link">
             <h2 class="card-title">This is a Title of a page or section</h2>
             <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
             <span class="link-arrow">Loren ipsum dolor</span>
           </span>`
 
-<Preview>
+<Preview mdxSource = {LinkCardContent}>
   <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
     <div style="width: 400px;">
       <article class="card entry-post link no-border">
         <a href="#" class="has-background-dark-slate-blue">
-          ${Links}
+          ${LinkCardContent.toString()}
         </a>
       </article>
     </div>
   `}</Story>
 </Preview>
 
-
-<Preview>
+<Preview mdxSource = {LinkCardContent}>
   <Story name="LinkBorder" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
     <div style="width: 400px;">
       <article class="card entry-post link">
         <a href="#">
-          ${Links}
+           ${LinkCardContent.toString()}
         </a>
       </article>
     </div>
