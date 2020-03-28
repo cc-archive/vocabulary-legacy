@@ -25,13 +25,26 @@ module.exports = {
       ]
     }]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'css/vocabulary.css'
-    }),
-    new CopyPlugin([
-      { from: 'src/styles', to: 'scss' },
-      { from: 'src/assets', to: 'assets' }
-    ]),
-  ]
+  {
+  test: /\.(otf|ttf|woff|woff2)$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: '../vocabulary',
+          emitFile: false
+        }
+      }
+    ]
+}
+plugins: [
+  new MiniCssExtractPlugin({
+    filename: 'css/vocabulary.css'
+  }),
+  new CopyPlugin([
+    { from: 'src/styles', to: 'scss' },
+    { from: 'src/assets', to: 'assets' }
+  ]),
+]
 }
