@@ -21,7 +21,7 @@ $input-disabled-border-color: $color-gray;
   border-width: 0.125rem;
 }
 
-// // Input actions
+// Input actions
 @mixin input-actions {
   $input-hover: $input-hover-border-color;
   $input-active: $input-active-border-color;
@@ -36,33 +36,33 @@ $input-disabled-border-color: $color-gray;
   height: 2.5em;
   padding-left: $space-small;
 
-    &.is-medium {
-      font-size: 1.43rem;
-      height: 3.875rem;
-      padding-left: $space-normal;
-    }
+  &.is-medium {
+    font-size: 1.43rem;
+    height: 3.875rem;
+    padding-left: $space-normal;
+  }
 
-    &.is-large {
-      font-size: 1.75rem;
-      height: 5.063rem;
-      padding-left: $space-big;
+  &.is-large {
+    font-size: 1.75rem;
+    height: 5.063rem;
+    padding-left: $space-big;
+  }
+}
+
+// Select
+.select {
+  select {
+    @include form_control;
+
+  option {
+    font-weight: 400;
     }
   }
 
-  // Select
-  .select {
-    select {
-      @include form_control;
+  &:not(.is-multiple):not(.is-loading)::after {
+    background: linear-gradient(45deg, $color-black 50%, transparent 50%);
 
-      option {
-        font-weight: 400;
-      }
-    }
-
-    &:not(.is-multiple):not(.is-loading)::after {
-      background: linear-gradient(45deg, $color-black 50%, transparent 50%);
-
-      border: none;
-      border-radius: 0;
-    }
+    border: none;
+    border-radius: 0;
   }
+}
