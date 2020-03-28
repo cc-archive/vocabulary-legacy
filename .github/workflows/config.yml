@@ -14,6 +14,7 @@ jobs:
       with:
         node-version: '12.16.1'
     - name: Cache Node.js modules
+      id: cache-node-modules
       uses: actions/cache@v1
       with:
         path: ~/.npm
@@ -21,8 +22,14 @@ jobs:
         restore-keys: |
           ${{ runner.OS }}-node-
           ${{ runner.OS }}-
-    - run: npm install
-    - run: npm run lint
+
+    - name: 'Install dependencies'
+      if: steps.cache-node-modules.output.cache-hit != 'true'
+      run: npm install
+
+    - name: 'Run lint'
+      run: npm run lint
+
       env:
         CI: true
 
@@ -36,8 +43,23 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.16.1'
-    - run: npm install
-    - run: npm run test
+    - name: Cache Node.js modules
+      id: cache-node-modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
+  
+    - name: 'Install dependencies'
+      if: steps.cache-node-modules.output.cache-hit != 'true'
+      run: npm install
+
+    - name: 'Run tests'
+      run: npm run test
+  
       env:
         CI: true
 
@@ -51,7 +73,22 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.16.1'
-    - run: npm install
-    - run: npm run test
+    - name: Cache Node.js modules
+      id: cache-node-modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
+  
+    - name: 'Install dependencies'
+      if: steps.cache-node-modules.output.cache-hit != 'true'
+      run: npm install
+  
+    - name: 'Run build'
+      run: npm run build
+  
       env:
         CI: true
