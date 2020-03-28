@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src/*.js src/**/*.js",
     "test": "jest tests/sass.test.js",
-    "jest:integration": "jest -c integration/jest.config.js",
+    "jest:integration": "jest -c Snapshot_tests/jest.config.js",
     "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration",
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch --progress",
