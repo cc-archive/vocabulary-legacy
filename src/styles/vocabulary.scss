@@ -1,16 +1,25 @@
 @charset "utf-8";
 
-$family-sans-serif: Roboto Condensed;
-$button-family: $family-sans-serif;
-
-body {
-    font-family: $family-sans-serif;
-}
-
-@import "./colors.scss";
-@import "./spaces.scss";
-@import "./layout.scss";
+// Tokens
+@import "./color.scss";
+@import "./spacing.scss";
 @import "./typography.scss";
+
+// Elements
 @import "./button.scss";
+
+// Form
 @import "./form.scss";
+
+// Patterns
+@import "./global_header.scss";
+@import "./header.scss";
+@import "./footer.scss";
 @import "./github_corner.scss";
+@import "./locale.scss";
+
+// Layouts
+@import "./layout.scss";
+@import "./card.scss";
+@import "./table.scss";
+@import "./tabs.scss";

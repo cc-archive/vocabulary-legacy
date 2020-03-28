@@ -1,0 +1,89 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { svgCode } from './logos.stories.mdx'
+
+<Meta
+  title="Patterns/Global header"
+  parameters={{
+   decorators: [
+     storyFn => `<style>body.sb-show-main{ padding: 0 !important; }</style>${storyFn()}`
+   ]
+}}/>
+
+export const header = (state) => `
+<header class="cc-global-header ${state}">
+  <div class="container">
+    <div class="padding-vertical-normal">
+      <a href="#" class="open-tab">Explore CC</a>
+      <div class="level">
+        <div class="level-left">
+          <header class="global-header-header">
+            <a href="https://creativecommons.org" target="_blank" class="main-logo">
+              <div class="has-text-white">${svgCode(304, 73, 'cc/logomark', 'creativecommons')}</div>
+            </a>
+          </header>
+        </div>
+      </div>
+      <div class="columns padding-bottom-normal">
+        <div class="column is-one-third">
+          <aside class="donate-section">
+            <h5>Our work relies on you!</h5>
+            <p>Help us keep the internet free and open.</p>
+            <a class="button small donate">
+              ${svgCode(80, 72, 'cc/letterheart', 'creativecommons')} Donate now
+            </a>
+          </aside>
+        </div>
+        <div class="column">
+          <nav class="products" role="navigation" aria-label="global navigation">
+            <div class="product-list">
+              <a href="https://network.creativecommons.org" target="_blank" class="product-item">
+                <strong>Global Network</strong>
+                <span class="item-description">
+                  Join a global community working wo strenghten the Commons
+                </span>
+              </a>
+              <a href="https://certificate.creativecommons.org" target="_blank" class="product-item">
+                <strong>Certificate Program</strong>
+                <span class="item-description">
+                  Become an expert in creating and engaging with openly licensed materials
+                </span>
+              </a>
+              <a href="https://summit.creativecommons.org" target="_blank" class="product-item">
+                <strong>Global Summit</strong>
+                <span class="item-description">
+                  Attend oir annual event, promoting the power of open licensing
+                </span>
+              </a>
+              <a href="https://chooser-beta.creativecommons.org" target="_blank" class="product-item">
+                <strong>License Chooser</strong>
+                <span class="item-description">
+                  Get help choosing the appropiate license for your work
+                </span>
+              </a>
+              <a href="https://search.creativecommons.org" target="_blank" class="product-item">
+                <strong>CC Search</strong>
+                <span class="item-description">
+                  Find openly licensed material for creative and educational reuse
+                </span>
+              </a>
+              <a href="https://opensource.creativecommons.org" target="_blank" class="product-item">
+                <strong>CC Open Source</strong>
+                <span class="item-description">
+                  Help us build products that maximize creativity and innovation
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>`
+
+<Preview mdxSource={header()}>
+  <Story name="Inactive">{header()}</Story>
+</Preview>
+
+<Preview mdxSource={header('is-active')}>
+  <Story name="Active">{header('is-active')}</Story>
+</Preview>

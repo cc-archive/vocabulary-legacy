@@ -1,0 +1,36 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Select" />
+
+# Select
+
+<Preview>
+  <Story name="Default" parameters={{
+    design: figmaConfig('603%3A6')
+  }}>{`
+    <div class="select">
+      <select>
+        <option disabled selected>Select</option>
+        <option>Option A</option>
+        <option>Option B</option>
+      </select>
+    </div>
+    <br/><br/>
+    <div class="select">
+      <select>
+        <option disabled>Select</option>
+        <option>Option A</option>
+        <option>Option B</option>
+      </select>
+    </div>
+    <br/><br/>
+    <div class="select">
+      <select disabled>
+        <option disabled>Select</option>
+        <option>Option A</option>
+        <option>Option B</option>
+      </select>
+    </div>
+  `}</Story>
+</Preview>
