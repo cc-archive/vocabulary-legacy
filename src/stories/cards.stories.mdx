@@ -3,45 +3,44 @@ import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Cards" />
 
-##Cards
+# Cards
 
-export const cardWithButton = (width,image_sz) => `<div 
-style="width:${width}">
-      <article class="card entry-post vertical">
-        <header class="card-image">
-          <figure class="image is-${image_sz}">
-            <img src="http://placekitten.com/700/392" alt="Header image">
-          </figure>
-        </header>
-        <div class="card-content with-button">
-            <h4 class="card-title"><a href="#">This is a title</a></h4>
-            <span class="subtitle">12 Octobre 2019</span>
-            <div class="content">
-              Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-            </div>
-            <a href="#" class="button is-primary">Read more</a>
+export const cardWithButton = (width, image_size, orientation) => `<div style="width: ${width};">
+  <article class="card entry-post ${orientation}">
+    <header class="card-image">
+      <figure class="image is-${image_size}">
+        <img src="http://placekitten.com/700/392" alt="Header image">
+      </figure>
+    </header>
+    <div class="card-content with-button">
+        <h4 class="card-title"><a href="#">This is a title</a></h4>
+        <span class="subtitle">12 Octobre 2019</span>
+        <div class="content">
+          Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
         </div>
-      </article>
-    </div>`
-    
+        <a href="#" class="button is-primary">Read more</a>
+    </div>
+  </article>
+</div>`
+
 <Preview>
   <Story name="PostVertical" parameters={{
     design: figmaConfig('776%3A0')
-  }}>{
-    `<div>
-    ${cardWithButton(400,'4by3')}
-    </div>`
-   }</Story>
+  }}>{`
+    <div>
+      ${cardWithButton(400,'4by3', 'vertical')}
+    </div>
+  `}</Story>
 </Preview>
 
 <Preview>
   <Story name="PostHorizontal" parameters={{
     design: figmaConfig('776%3A3')
-  }}>{
-  `<div>
-    ${cardWithButton(600,'4by5')}
-    </div>`
-  }</Story>
+  }}>{`
+  <div>
+    ${cardWithButton(600,'4by5', 'horizontal')}
+  </div>
+  `}</Story>
 </Preview>
 
 <Preview>
