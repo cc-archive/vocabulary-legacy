@@ -1,17 +1,12 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { config } from 'storybook-addon-designs'
+import { figmaConfig } from './helpers'
 
-<Meta title="Cards"/>
-
-export const figmaConfig = (nodeId) => config({
-  type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
-})
+<Meta title="Layouts/Cards" />
 
 <Preview>
-  <Story name = "PostVertical" parameters={{
+  <Story name="PostVertical" parameters={{
     design: figmaConfig('776%3A0')
-  }}>{`    
+  }}>{`
     <div style="width: 400px;">
       <article class="card entry-post vertical">
         <header class="card-image">
@@ -23,18 +18,17 @@ export const figmaConfig = (nodeId) => config({
             <h4 class="card-title"><a href="#">This is a title</a></h4>
             <span class="subtitle">12 Octobre 2019</span>
             <div class="content">
-                Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+              Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
             </div>
             <a href="#" class="button is-primary">Read more</a>
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostHorizontal" parameters={{
+  <Story name="PostHorizontal" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
     <div style="width: 600px;">
@@ -54,12 +48,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostVideoVertical" parameters={{
+  <Story name="PostVideoVertical" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
     <div style="width: 400px;">
@@ -79,12 +72,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostVideoHorizontal" parameters={{
+  <Story name="PostVideoHorizontal" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
     <div style="width: 600px;">
@@ -104,12 +96,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story>
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostVideoLarge" parameters={{
+  <Story name="PostVideoLarge" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
     <div style="width: 100%;">
@@ -129,13 +120,12 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 
 <Preview>
-  <Story name = "PostEventWide" parameters={{
+  <Story name="PostEventWide" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
     <div style="width: 600px;">
@@ -156,12 +146,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `}
-  </Story> 
-  </Preview>
+  `}</Story>
+</Preview>
 
 <Preview>
-  <Story name = "PostEventNarrow" parameters={{
+  <Story name="PostEventNarrow" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
     <div style="width: 350px;">
@@ -182,12 +171,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostStatistic" parameters={{
+  <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
     <div style="width: 600px;">
@@ -206,12 +194,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "PostQuote" parameters={{
+  <Story name="PostQuote" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
     <div style="width: 600px;">
@@ -233,12 +220,11 @@ export const figmaConfig = (nodeId) => config({
         </div>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 <Preview>
-  <Story name = "ImageTop" parameters={{
+  <Story name="ImageTop" parameters={{
     design: figmaConfig('776%3A3')
   }}> {`
     <div style="width: 340px;">
@@ -255,18 +241,17 @@ export const figmaConfig = (nodeId) => config({
           <span class="subtitle">This is a short description</span>
         </div>
       </article>
-    </div>
-  `
-}</Story> 
+    </div>`
+  }</Story>
 </Preview>
 
 <Preview>
-  <Story name = "Link" parameters={{
+  <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
-  }}>{ `
+  }}>{`
     <div style="width: 400px;">
       <article class="card entry-post link no-border">
-        <a href="#" class="has-background-blue">
+        <a href="#" class="has-background-dark-slate-blue">
           <span class="card-content has-bottom-link">
             <h2 class="card-title">This is a Title of a page or section</h2>
             <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
@@ -275,15 +260,14 @@ export const figmaConfig = (nodeId) => config({
         </a>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
 
 
 <Preview>
-  <Story name = "LinkBorder" parameters={{
+  <Story name="LinkBorder" parameters={{
     design: figmaConfig('776%3A122')
-  }}>{ `
+  }}>{`
     <div style="width: 400px;">
       <article class="card entry-post link">
         <a href="#">
@@ -295,6 +279,5 @@ export const figmaConfig = (nodeId) => config({
         </a>
       </article>
     </div>
-  `
-}</Story> 
+  `}</Story>
 </Preview>
