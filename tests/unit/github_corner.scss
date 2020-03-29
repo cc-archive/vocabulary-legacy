@@ -1,7 +1,5 @@
-@import 'true';
-@import '../../src/styles/github_corner.scss';
-@include describe('githubcorner()'){
-@include it('Outputs position') {
+@include describe('GithubCorner'){
+@include it('Assigns absolute position to github corners') {
     @include assert {
       @include output {
         @include corner();
