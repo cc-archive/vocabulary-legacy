@@ -1,0 +1,16 @@
+@include describe('Buttons'){
+    @include it('Assigns font-weight,line-height and font-size to buttons') {
+        @include assert {
+          @include output {
+            @include buttons();
+          }
+          @include expect {
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 0;
+            font-size: 1.43rem;
+          }
+        }
+      }
+    } 
+    
