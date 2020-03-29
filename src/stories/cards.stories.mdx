@@ -3,8 +3,6 @@ import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Cards" />
 
-# Cards
-
 export const content = `<div class="content">
             Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
           </div>`
@@ -46,7 +44,7 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
 </Preview>
 
 export const PostVideo = (width,image_size,orientation) => `<div 
-style="width: ${width};">
+style="width: ${width}px;">
       <article class="card entry-post entry-video ${orientation} no-border">
         <header class="card-image">
           <a href="#">
@@ -62,7 +60,7 @@ style="width: ${width};">
       </article>
     </div>`
 
-<Preview mdxSource = {PostVideo('400px','4by3','vertical')}>
+<Preview mdxSource = {PostVideo(400,'4by3','vertical')}>
   <Story name="PostVideoVertical" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
@@ -82,15 +80,30 @@ style="width: ${width};">
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {PostVideo('100%','4by3','horizontal')}>
+<Preview>
   <Story name="PostVideoLarge" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
-    <div>
-    ${PostVideo('100%','4by3','horizontal')}
+    <div style="width: 100%;">
+      <article class="card entry-post entry-video horizontal large no-border">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-5by4">
+              <img src="http://placekitten.com/700/392" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h1 class="card-title"><a href="#">This is a longer title for main content</a></h1>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+        </div>
+      </article>
     </div>
   `}</Story>
 </Preview>
+
 
 export const PostEvent = (width) => `<div 
 style="width: ${width}px;">
