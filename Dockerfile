@@ -13,8 +13,8 @@ RUN npm install
 
 # Copy source and test files
 COPY src ./src
-COPY tests ./tests
 COPY .storybook ./.storybook
+COPY tests ./tests
 
 # Copy lint configuration
 COPY .eslintrc.js .
