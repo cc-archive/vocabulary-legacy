@@ -45,46 +45,11 @@
   </a>
 </p>
 
-### Getting started
+### Using
 
-#### Use npm package
-
-Install it
-
-`$ npm install @creativecommons/vocabulary`
-
-Import it
-
-`import '@creativecommons/vocabulary/css/vocabulary.css'`
-
-#### Use CDN link
-
-To specific version:
-
-```html
-<!-- UNPKG -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
-
-<!-- Or jsDelivr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
-```
-
-Or a link that always points to the latest version:
-
-```html
-<!-- UNPKG -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
-
-<!-- Or jsDelivr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
-```
-Only one link is needed.
-
+To use Vocabulary in your projects, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-usage--page).
 
 ### Contributing
-
-
-**[GitHub repository](https://github.com/creativecommons/vocabulary)**
 
 We're always looking for contributors to help us find and fix bugs, build new 
 features, help us improve the project documentation or translate the project to
