@@ -1,7 +1,5 @@
-@import 'true';
-@import '../../src/styles/button.scss';
-@include describe('Buttons()'){
-@include it('Outputs button properties') {
+@include describe('Buttons'){
+@include it('Assigns font-weight,line-height and font-size to buttons') {
     @include assert {
       @include output {
         @include buttons();
