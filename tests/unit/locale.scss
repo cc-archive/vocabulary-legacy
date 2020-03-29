@@ -1,7 +1,5 @@
-@import 'true';
-@import '../../src/styles/locale.scss';
-@include describe('locale()'){
-@include it('Outputs a font-family') {
+@include describe('Locale'){
+@include it('Assigns a font family to Locale') {
     @include assert {
       @include output {
         @include locale_control();

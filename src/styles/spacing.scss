@@ -19,15 +19,15 @@ $spacing-sizes: (
   "-large": $space-large,
   "-larger": $space-larger,
   "-xl": $space-xl,
-  "-xxl": $space-larger,
+  "-xxl": $space-larger
 );
 
 $spacing-properties: (
-  "padding": "padding",
-  "margin": "margin",
+  "padding",
+  "margin"
 );
 
-$spacing-directions: (
+$spacing-direction-groups: (
   "-top": "-top",
   "-right": "-right",
   "-bottom": "-bottom",
@@ -36,6 +36,20 @@ $spacing-directions: (
   "-vertical": "-top" "-bottom"
 );
 
+@mixin directed-spacing($property, $direction-group-namespace, $direction-group, $size-namespace, $size) {
+  .#{$property}#{$direction-group-namespace}#{$size-namespace} {
+    @each $direction in $direction-group {
+      #{$property}#{$direction}: $size !important;
+    }
+  }
+}
+
+@mixin undirected-spacing($property, $size-namespace, $size) {
+  .#{$property}#{$size-namespace} {
+    #{$property}: $size !important;
+  }
+}
+
 // This generates paddings and margins of each size
 // on each direction: left, right, top, bottom,
 // horizontal (left and right), vertical (top and bottom)
@@ -43,22 +57,14 @@ $spacing-directions: (
 //
 // Bulma already has classes for zero padding and margin:
 // `is-paddingless` and `is-marginless` respectively.
-@each $property-namespace, $property in $spacing-properties {
+@each $property in $spacing-properties {
 
   @each $size-namespace, $size in $spacing-sizes {
 
-    @each $direction-namespace, $direction-rules in $spacing-directions {
+    @each $direction-group-namespace, $direction-group in $spacing-direction-groups {
 
-      .#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-
-        @each $direction in $direction-rules {
-          #{$property}#{$direction}: $size !important;
-        }
-      }
+      @include directed-spacing($property, $direction-group-namespace, $direction-group, $size-namespace, $size);
     }
-
-    .#{$property}#{$size-namespace} {
-      #{$property}: $size !important;
-    }
+    @include undirected-spacing($property, $size-namespace, $size);
   }
 }
