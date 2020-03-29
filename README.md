@@ -47,6 +47,8 @@
 
 ### Getting started
 
+#### Use npm package
+
 Install it
 
 `$ npm install @creativecommons/vocabulary`
@@ -54,6 +56,30 @@ Install it
 Import it
 
 `import '@creativecommons/vocabulary/css/vocabulary.css'`
+
+#### Use CDN link
+
+To specific version:
+
+```html
+<!-- UNPKG -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+
+<!-- Or jsDelivr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+```
+
+Or a link that always points to the latest version:
+
+```html
+<!-- UNPKG -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+
+<!-- Or jsDelivr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
+```
+Only one link is needed.
+
 
 ### Contributing
 
