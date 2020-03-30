@@ -3,7 +3,7 @@ import { setViewport, goTo } from './helpers'
 describe('License badge', () => {
   it('BY', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY')
+    await goTo(page, 'assets-license-badge--by')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -11,7 +11,7 @@ describe('License badge', () => {
 
   it('BY SA', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY-SA')
+    await goTo(page, 'assets-license-badge--by-sa')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -19,7 +19,7 @@ describe('License badge', () => {
 
   it('BY ND', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY-ND')
+    await goTo(page, 'assets-license-badge--by-nd')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -27,7 +27,7 @@ describe('License badge', () => {
 
   it('BY NC', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY-NC')
+    await goTo(page, 'assets-license-badge--by-nc')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -35,7 +35,7 @@ describe('License badge', () => {
 
   it('BY NC SA', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY-NC-SA')
+    await goTo(page, 'assets-license-badge--by-nc-sa')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -43,23 +43,23 @@ describe('License badge', () => {
 
   it('BY NC ND', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-BY-NC-ND')
+    await goTo(page, 'assets-license-badge--by-nc-nd')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('CC Zero', async () => {
+  it('CC ZERO', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-CC-Zero')
+    await goTo(page, 'assets-license-badge--cc-zero')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Public Domain', async () => {
+  it('PUBLIC DOMAIN', async () => {
     await setViewport(page)
-    await goTo(page, 'assets-License-Badge-Public-Domain')
+    await goTo(page, 'assets-license-badge--public-domain')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
