@@ -3,15 +3,15 @@ import { setViewport, goTo } from './helpers'
 describe('Buttons', () => {
   it('MediumButton', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-MediumButton')
+    await goTo(page, 'elements-buttons--medium-button')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('BigButton', async () => {
+  it('Bigbutton', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-BigButton')
+    await goTo(page, 'elements-buttons--big-button')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -19,7 +19,7 @@ describe('Buttons', () => {
 
   it('SmallButton', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-SmallButton')
+    await goTo(page, 'elements-buttons--small-button')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -27,7 +27,7 @@ describe('Buttons', () => {
 
   it('TinyButton', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-TinyButton')
+    await goTo(page, 'elements-buttons--tiny-button')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -35,7 +35,7 @@ describe('Buttons', () => {
 
   it('ButtonPrimary', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonPrimary')
+    await goTo(page, 'elements-buttons--button-primary')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -43,7 +43,7 @@ describe('Buttons', () => {
 
   it('ButtonDonate', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonDonate')
+    await goTo(page, 'elements-buttons--button-donate')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -51,7 +51,7 @@ describe('Buttons', () => {
 
   it('ButtonSuccess', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonSuccess')
+    await goTo(page, 'elements-buttons--button-success')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -59,7 +59,7 @@ describe('Buttons', () => {
 
   it('ButtonInfo', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonInfo')
+    await goTo(page, 'elements-buttons--button-info')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -67,7 +67,7 @@ describe('Buttons', () => {
 
   it('ButtonWarning', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonWarning')
+    await goTo(page, 'elements-buttons--button-warning')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -75,7 +75,7 @@ describe('Buttons', () => {
 
   it('ButtonError', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-ButtonError')
+    await goTo(page, 'elements-buttons--button-error')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -83,7 +83,7 @@ describe('Buttons', () => {
 
   it('Tag', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-Tag')
+    await goTo(page, 'elements-buttons--tag')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
