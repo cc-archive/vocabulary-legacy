@@ -1,89 +1,97 @@
 import { setViewport, goTo } from './helpers'
 
-describe('Buttons', () => {
-  it('MediumButton', async () => {
+describe('Cards', () => {
+  it('PostVertical', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--medium-button')
+    await goTo(page, 'layouts-cards--post-vertical')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Bigbutton', async () => {
+  it('PostHorizontal', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--big-button')
+    await goTo(page, 'layouts-cards--post-horizontal')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('SmallButton', async () => {
+  it('PostVideoVertical', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--small-button')
+    await goTo(page, 'layouts-cards--post-video-vertical')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('TinyButton', async () => {
+  it('PostVideoHorizontal', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--tiny-button')
+    await goTo(page, 'layouts-cards--post-video-horizontal')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonPrimary', async () => {
+  it('PostVideoLarge', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-primary')
+    await goTo(page, 'layouts-cards--post-video-large')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonDonate', async () => {
+  it('PostEventWide', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-donate')
+    await goTo(page, 'layouts-cards--post-event-wide')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonSuccess', async () => {
+  it('PostEventNarrow', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-success')
+    await goTo(page, 'layouts-cards--post-event-narrow')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonInfo', async () => {
+  it('PostStatistic', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-info')
+    await goTo(page, 'layouts-cards--post-statistic')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonWarning', async () => {
+  it('PostQuote', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-warning')
+    await goTo(page, 'layouts-cards--post-quote')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('ButtonError', async () => {
+  it('ImageTop', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--button-error')
+    await goTo(page, 'layouts-cards--image-top')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Tag', async () => {
+  it('Link', async () => {
     await setViewport(page)
-    await goTo(page, 'elements-buttons--tag')
+    await goTo(page, 'layouts-cards--link')
+    const image = await page.screenshot()
+
+    expect(image).toMatchImageSnapshot()
+  })
+
+  it('LinkBorder', async () => {
+    await setViewport(page)
+    await goTo(page, 'layouts-cards--link-border')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
