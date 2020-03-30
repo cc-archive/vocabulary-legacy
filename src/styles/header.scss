@@ -19,8 +19,11 @@ $navbar-dropdown-radius: 0;
     margin-left: $space-xxl;
   }
 
-  .navbar-burger span {
-    height: 2px;
+  .navbar-burger {
+    width: 3.25rem;
+    & span {
+      height: 2px;
+    }
   }
   
   .navbar-menu {
