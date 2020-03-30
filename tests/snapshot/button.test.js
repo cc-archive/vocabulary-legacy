@@ -9,9 +9,9 @@ describe('Buttons', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Bigutton', async () => {
+  it('BigButton', async () => {
     await setViewport(page)
-    await goTo(page, 'Elements-Buttons-Bigutton')
+    await goTo(page, 'Elements-Buttons-BigButton')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
