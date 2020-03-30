@@ -5,100 +5,105 @@ import { figmaConfig } from './helpers'
 
 # Buttons
 
+export const ButtonClass = (buttonClass) => {
+ return `<button class="${buttonClass}" height="100px">Button</button>`
+}
+
 Buttons are created by adding the `.button` class to a `<button>`.
 
-<Preview>
-  <Story name="MediumButton" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button')}>
+  <Story name="MediumButton" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button">Button</button>
+      ${ButtonClass('button')}
   `}</Story>
 </Preview>
 
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
 
-<Preview>
-  <Story name="BigButton" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button big')}>
+  <Story name="BigButton" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button big">Button</button>
+      ${ButtonClass('button big')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="SmallButton" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button small')}>
+  <Story name="SmallButton" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button small">Button</button>
+      ${ButtonClass('button small')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="TinyButton" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button tiny')}>
+  <Story name="TinyButton" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button tiny">Button</button>
+      ${ButtonClass('button tiny')}
   `}</Story>
 </Preview>
 
 You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
 
-<Preview>
-  <Story name="ButtonPrimary" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button is-primary big')}>
+  <Story name="ButtonPrimary" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button is-primary big">Button</button>
+      ${ButtonClass('button is-primary big')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="ButtonDonate" height="100px" parameters={{
-    design: figmaConfig('1404%3A19')
+<Preview mdxSource={ButtonClass('button donate medium')}>
+  <Story name="ButtonDonate" parameters={{
+    design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button donate medium">Button</button>
+      ${ButtonClass('button donate medium')}
   `}</Story>
 </Preview>
 
 Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
 
-<Preview>
-  <Story name="ButtonSuccess" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button is-success')}>
+  <Story name="ButtonSuccess" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button is-success">Button</button>
+      ${ButtonClass('button is-success')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="ButtonInfo" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button is-info')}>
+  <Story name="ButtonInfo" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button is-info">Button</button>
+      ${ButtonClass('button is-info')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="ButtonWarning" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button is-warning')}>
+  <Story name="ButtonWarning" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button is-warning">Button</button>
+      ${ButtonClass('button is-warning')}
   `}</Story>
 </Preview>
 
-<Preview>
-  <Story name="ButtonError" height="100px" parameters={{
+<Preview mdxSource={ButtonClass('button is-danger')}>
+  <Story name="ButtonError" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button is-danger">Button</button>
+      ${ButtonClass('button is-danger')}
   `}</Story>
 </Preview>
 
 The `.tag` class is used to render a tag name.
 
-<Preview>
-  <Story name="Tag" height="100px" parameters={{
-    design: figmaConfig('1404%3A1')
+<Preview mdxSource={ButtonClass('button tag')}>
+  <Story name="Tag" parameters={{
+    design: figmaConfig('1403%3A61')
   }}>{`
-    <button class="button tag">Label</button>
+      ${ButtonClass('button tag')}
   `}</Story>
 </Preview>
+
