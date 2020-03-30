@@ -16,6 +16,4 @@ describe('Table', () => {
 
     expect(image).toMatchImageSnapshot()
   })
-
-  
 })
