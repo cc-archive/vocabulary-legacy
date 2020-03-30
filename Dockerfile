@@ -1,4 +1,4 @@
-FROM node:12.16.1-alpine
+FROM node:lts
 
 # Make a codebase directory and work in it
 RUN mkdir codebase

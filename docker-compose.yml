@@ -7,9 +7,9 @@ version: '3.4'
 
 services:
   # The website is the landing page for the CC Vocabulary project
-  website:
+  storybook:
     # Use the CC Vocabulary image
-    image: ccvocabulary:latest
+    image: vocabulary:latest
     # If the image is not found, build it
     build: .
 
@@ -26,22 +26,8 @@ services:
       # Map 8080 in the container to the same port on the host
       - 8080:8080
 
-  # The documentation is the guide on how to use CC Vocabulary components
-  documentation:
-    # Use the CC Vocabulary image
-    image: ccvocabulary:latest
-    # If the image is not found, build it
-    build: .
-
-    # The command to run in the container
-    command: npm run build:documentation
-
-    # Volumes attached to the container
-    volumes:
-      # Enable code changes to reflect in the container
-      - .:/codebase
-      # Ensures that host node_modules are not mounted
-      - node_modules:/codebase/node_modules
+    # Restart policy
+    restart: always
 
 volumes:
   # Holds the node_modules directory
