@@ -1,6 +1,6 @@
 import { setViewport, goTo } from './helpers'
 
-describe('License Badge', () => {
+describe('License badge', () => {
   it('BY', async () => {
     await setViewport(page)
     await goTo(page, 'assets-License-Badge-BY')
@@ -49,7 +49,7 @@ describe('License Badge', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('CC ZERO', async () => {
+  it('CC Zero', async () => {
     await setViewport(page)
     await goTo(page, 'assets-License-Badge-CC-Zero')
     const image = await page.screenshot()
@@ -57,7 +57,7 @@ describe('License Badge', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('PUBLIC DOMAIN', async () => {
+  it('Public Domain', async () => {
     await setViewport(page)
     await goTo(page, 'assets-License-Badge-Public-Domain')
     const image = await page.screenshot()
