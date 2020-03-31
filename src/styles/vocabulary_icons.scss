@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Vocabulary Icons";
-  src: url("../fonts/VocabularyIcons.ttf?l48kvc") format("truetype"),
-  url("../fonts/VocabularyIcons.woff?l48kvc") format("woff");
+  src: url("../fonts/VocabularyIcons.ttf") format("truetype"),
+  url("../fonts/VocabularyIcons.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -19,134 +19,92 @@ i.icon {
   text-transform: none;
   line-height: 1;
 
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-i.icon.chevron-up:before {
-  content: "\e900";
+$icons: (
+  "chevron-up": "\e900",
+  "chevron-right": "\e901",
+  "chevron-down": "\e902",
+  "chevron-left": "\e903",
+  "angle-up": "\e904",
+  "angle-right": "\e905",
+  "angle-down": "\e906",
+  "angle-left": "\e907",
+  "caret-right": "\e908",
+  "caret-down": "\e909",
+  "sort": "\e90a",
+  "tick": "\e90b",
+  "cross": "\e90c",
+  "circle-filled": "\e90d",
+  "circle-outline": "\e90e",
+  "globe": "\e90f",
+  "info": "\e910",
+  "external-link": "\e911",
+  "search": "\e912",
+  "sliders": "\e913",
+
+  "cc-logo": "\ec00",
+  "cc-by": "\ec01",
+  "cc-nc": "\ec02",
+  "cc-nc-eu": "\ec03",
+  "cc-nc-jp": "\ec04",
+  "cc-nd": "\ec05",
+  "cc-sa": "\ec06",
+  "cc-remix": "\ec07",
+  "cc-sampling-plus": "\ec08",
+  "cc-sampling": "\ec09",
+  "cc-share": "\ec0a",
+  "cc-zero": "\ec0b",
+  "cc-pd": "\ec0c",
+  "cc-pd-alt": "\ec0d",
+
+  "instagram": "\ed00",
+  "twitter": "\ed01",
+  "linkedin": "\ed02",
+  "facebook": "\ed03",
+  "pinterest": "\ed04"
+);
+
+@mixin icon($icon-class, $icon-codepoint) {
+  i.icon.#{$icon-class}:before {
+    content: "#{$icon-codepoint}";
+  }
 }
 
-i.icon.chevron-right:before {
-  content: "\e901";
+@each $icon-class, $icon-codepoint in $icons {
+  @include icon($icon-class, $icon-codepoint);
 }
 
-i.icon.chevron-down:before {
-  content: "\e902";
+$instagram-brand: #e1306c;
+$twitter-brand: #1da1f2;
+$linkedin-brand: #0077b5;
+$facebook-brand: #3b5998;
+$pinterest-brand: #bd081c;
+$brand-colors: (
+  "facebook": $facebook-brand,
+  "twitter": $twitter-brand,
+  "instagram": $instagram-brand,
+  "linkedin": $linkedin-brand,
+  "pinterest": $pinterest-brand
+);
+
+@mixin branded-icon($icon-class, $icon-color) {
+  i.icon.#{$icon-class}.colored:before {
+    color: $icon-color;
+  }
 }
 
-i.icon.chevron-left:before {
-  content: "\e903";
-}
-
-i.icon.caret-right:before {
-  content: "\e908";
-}
-
-i.icon.caret-down:before {
-  content: "\e909";
-}
-
-i.icon.sliders:before {
-  content: "\e90a";
-}
-
-i.icon.tick:before {
-  content: "\e90b";
-}
-
-i.icon.cross:before {
-  content: "\e90c";
-}
-
-i.icon.circle-filled:before {
-  content: "\e90d";
-}
-
-i.icon.globe:before {
-  content: "\e90e";
-}
-
-i.icon.circle-outline:before {
-  content: "\e90f";
-}
-
-i.icon.info:before {
-  content: "\e910";
-}
-
-i.icon.search:before {
-  content: "\e911";
-}
-
-i.icon.external-link:before {
-  content: "\e912";
-}
-
-i.icon.logo:before {
-  content: "\e913";
-}
-
-i.icon.cc-by:before {
-  content: "\e923";
-}
-
-i.icon.cc-nc:before {
-  content: "\e914";
-}
-
-i.icon.cc-nc-eu:before {
-  content: "\e915";
-}
-
-i.icon.cc-nc-jp:before {
-  content: "\e916";
-}
-
-i.icon.cc-nd:before {
-  content: "\e917";
-}
-
-i.icon.cc-sa:before {
-  content: "\e918";
-}
-
-i.icon.cc-remix:before {
-  content: "\e919";
-}
-
-i.icon.cc-sampling-plus:before {
-  content: "\e91a";
-}
-
-i.icon.cc-sampling:before {
-  content: "\e91b";
-}
-
-i.icon.cc-share:before {
-  content: "\e91c";
-}
-
-i.icon.cc-zero:before {
-  content: "\e91d";
-}
-
-i.icon.cc-pd:before {
-  content: "\e91f";
-}
-
-i.icon.cc-pd-alt:before {
-  content: "\e91e";
-}
-
-i.icon.facebook:before {
-  content: "\e920";
-}
-
-i.icon.instagram:before {
-  content: "\e921";
-}
-
-i.icon.twitter:before {
-  content: "\e922";
+@each $icon-class, $icon-color in $brand-colors {
+  @include branded-icon($icon-class, $icon-color);
 }

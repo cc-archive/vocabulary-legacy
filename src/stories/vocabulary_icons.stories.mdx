@@ -1,4 +1,4 @@
-import { IconItem,IconGallery,Meta,Story,Preview } from '@storybook/addon-docs/blocks';
+import { Meta, IconItem, IconGallery } from '@storybook/addon-docs/blocks';
 
 <Meta title="Vocabulary Icons"/>
 
@@ -11,7 +11,9 @@ The icon font selectively includes assets from [Font Awesome](https://fontawesom
 throughout the design library on Figma and bundles them using [IcoMoon](https://icomoon.io/) to get the icons in the
 smallest possible file size bundle.
 
-## Chevrons
+## Arrows
+
+### Chevrons
 
 <IconGallery>
   <IconItem name="chevron-up">
@@ -28,7 +30,24 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
-## Carets
+### Angles
+
+<IconGallery>
+  <IconItem name="angle-up">
+    <i class="icon angle-up"></i>
+  </IconItem>
+  <IconItem name="angle-right">
+    <i class="icon angle-right"></i>
+  </IconItem>
+  <IconItem name="angle-down">
+    <i class="icon angle-down"></i>
+  </IconItem>
+  <IconItem name="angle-left">
+    <i class="icon angle-left"></i>
+  </IconItem>
+</IconGallery>
+
+### Carets
 
 <IconGallery>
   <IconItem name="caret-right">
@@ -39,7 +58,17 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
+### Misc
+
+<IconGallery>
+  <IconItem name="sort">
+    <i class="icon sort"></i>
+  </IconItem>
+</IconGallery>
+
 ## Symbols
+
+### Shapes
 
 <IconGallery>
   <IconItem name="tick">
@@ -56,7 +85,7 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
-## Internet
+### Internet
 
 <IconGallery>
   <IconItem name="search">
@@ -73,11 +102,57 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
-## CC license aspects
+## Social media
+
+### Monochromatic
 
 <IconGallery>
-  <IconItem name="logo">
-    <i class="icon logo"></i>
+  <IconItem name="instagram">
+    <i class="icon instagram"></i>
+  </IconItem>
+  <IconItem name="twitter">
+    <i class="icon twitter"></i>
+  </IconItem>
+  <IconItem name="linkedin">
+    <i class="icon linkedin"></i>
+  </IconItem>
+  <IconItem name="facebook">
+    <i class="icon facebook"></i>
+  </IconItem>
+  <IconItem name="pinterest">
+    <i class="icon pinterest"></i>
+  </IconItem>
+</IconGallery>
+
+### Colored
+
+Using the `.colored` class, you can use a colored version of these icons.
+
+<IconGallery>
+  <IconItem name="instagram">
+    <i class="icon instagram colored"></i>
+  </IconItem>
+  <IconItem name="twitter">
+    <i class="icon twitter colored"></i>
+  </IconItem>
+  <IconItem name="linkedin">
+    <i class="icon linkedin colored"></i>
+  </IconItem>
+  <IconItem name="facebook">
+    <i class="icon facebook colored"></i>
+  </IconItem>
+  <IconItem name="pinterest">
+    <i class="icon pinterest colored"></i>
+  </IconItem>
+</IconGallery>
+
+## CC licenses
+
+### Aspects
+
+<IconGallery>
+  <IconItem name="cc-logo">
+    <i class="icon cc-logo"></i>
   </IconItem>
   <IconItem name="cc-by">
     <i class="icon cc-by"></i>
@@ -108,7 +183,7 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
-## CC license niche aspects
+### Niche aspects
 
 <IconGallery>
   <IconItem name="cc-sampling">
@@ -125,30 +200,34 @@ smallest possible file size bundle.
   </IconItem>
 </IconGallery>
 
-## Social media
-
-<IconGallery>
-  <IconItem name="facebook">
-    <i class="icon facebook"></i>
-  </IconItem>
-  <IconItem name="twitter">
-    <i class="icon twitter"></i>
-  </IconItem>
-  <IconItem name="instagram">
-    <i class="icon instagram"></i>
-  </IconItem>
-</IconGallery>
-
 # Usage
 
-To use the icons, add the classes `.icon`  and the name of the icon.
+To use the icons, add the classes `.icon`  and the name of the icon. Alternatively you can just use the ligatures by
+typing out the icon name (without the dashes) inside an element with the `.icon` class applied.
 
 **Example:**
 
-```html
-<!-- Display the upward pointing chevron -->
-<i class="icon chevron-up"></i>
+With classes
 
-<!-- Display the CC logo -->
-<i class="icon logo"></i>
+<IconGallery>
+  <IconItem name="">
+    <i class="icon chevron-up"></i>
+  </IconItem>
+</IconGallery>
+
+```html
+<i class="icon chevron-up"></i>
+```
+
+With ligatures
+
+<IconGallery>
+  <IconItem name="">
+    <i class="icon">cclogo</i>
+  </IconItem>
+</IconGallery>
+
+```html
+<!-- Drop the dashes -->
+<i class="icon">cclogo</i>
 ```
