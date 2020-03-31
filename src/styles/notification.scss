@@ -1,0 +1,32 @@
+.notification {
+  .notification-container {
+    display: block;
+    width: 100%;
+    color: $color-black;
+    border-radius: .25rem;
+  }
+  &.warning {
+    .notification-container {
+      padding: $space-larger;
+      background-color: $color-light-warning;
+    }
+  }
+  &.content {
+    .notification-container {
+      display: flex;
+      background-color: $color-white;
+      border: 2px solid $color-light-gray;
+      .content-image {
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-radius: .25rem 0 0 .25rem;
+        }
+      }
+      .content-wrap {
+        padding: $space-larger;
+      }
+    }
+  }
+}
