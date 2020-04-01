@@ -5,15 +5,20 @@ import { withDesign } from 'storybook-addon-designs'
 
 import '../dist/css/vocabulary.css'
 
-const families = [
-  'Vocabulary',
-  'Tokens',
-  'Assets',
-  'Elements',
-  'Form',
-  'Layouts',
-  'Patterns'
-]
+const order = {
+  'Vocabulary': [
+    'Introduction',
+    'Usage',
+    'Contribution'
+  ],
+  'Tokens': [],
+  'Assets': [],
+  'Elements': [],
+  'Form': [],
+  'Layouts': [],
+  'Patterns': []
+}
+const families = Object.keys(order)
 
 addParameters({
   options: {
@@ -25,7 +30,11 @@ addParameters({
       const [famOne, componentOne] = one.kind.split('/')
       const [famTwo, componentTwo] = two.kind.split('/')
       if (famOne === famTwo) {
-        return componentOne.localeCompare(componentTwo) // Sort components in a family in alphabetical order
+        if (order[famOne].length) {
+          return order[famOne].indexOf(componentOne) - order[famOne].indexOf(componentTwo)
+        } else {
+          return componentOne.localeCompare(componentTwo) // Sort components in a family in alphabetical order
+        }
       } else {
         return families.indexOf(famOne) - families.indexOf(famTwo) // Sort families according to defined order
       }

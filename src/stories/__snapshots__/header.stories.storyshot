@@ -29,7 +29,7 @@ exports[`Storyshots Patterns/Header Big 1`] = `
             
               
             <use
-              href="logos/cc/logomark.svg#creativecommons"
+              href="logos/cc/logomark.svg#logomark"
             />
             
             
@@ -181,7 +181,7 @@ exports[`Storyshots Patterns/Header Small 1`] = `
             
               
             <use
-              href="logos/cc/logomark.svg#creativecommons"
+              href="logos/cc/logomark.svg#logomark"
             />
             
             
