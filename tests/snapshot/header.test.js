@@ -1,9 +1,10 @@
-import { setViewport, goTo } from './helpers'
+import { setViewport, goTo, pause } from './helpers'
 
 describe('Header', () => {
   it('Big', async () => {
     await setViewport(page)
     await goTo(page, 'patterns-header--big')
+    pause(1000)
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
@@ -12,6 +13,7 @@ describe('Header', () => {
   it('Small', async () => {
     await setViewport(page)
     await goTo(page, 'patterns-header--small')
+    pause(1000)
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
