@@ -54,6 +54,21 @@ Bring up all services.
 $ docker-compose up -d
 ```
 
+To run `npm` commands, you'll need to enter a Vocabulary container.
+
+```bash
+$ ./docker/vocabulary/run.sh
+docker-desktop:/codebase$ ...
+```
+
+If you install new packages, you'll need to rebuild a few things.
+
+```bash
+$ docker-compose down
+$ docker volume prune
+$ docker-compose build storybook
+```
+
 ### Manual setup
 
 Install Node.js and NPM, if you don't already have them on your computer.
@@ -121,19 +136,36 @@ $ npm run test:unit
 
 ### Visual regression
 
-Visual regression tests are slightly more complex. With the Storybook process turned off, run the following command to
-run visual regression tests.
+Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from
+affecting the screenshots.
+
+Create a new file `docker/puppeteer/env_vars` in which to hold environment variables. Add the `STORYBOOK_ORIGIN`
+environment variable corresponding to the OS you're using.
 
 ```bash
-$ npm run test:snapshot
+# macOS
+STORYBOOK_ORIGIN=http://host.docker.internal:8080
+# Linux
+STORYBOOK_ORIGIN=http://localhost:8080
 ```
 
-If you have the Storybook server running, you can run use the alternate command below.
+Build the container.
 
 ```bash
-$ npm run jest:snapshot
+$ docker build \
+    --tag puppeteer:latest \
+    --file docker/puppeteer/Dockerfile \
+    .
+```
+
+Start by running the Storybook. You can use your preferred method from the [Setting up](#setting-up) section to do so.
+Once you have the Storybook server running, run the commands as shown below.
+
+```bash
+$ ./docker/puppeteer/run.sh
+pptr@docker-desktop:/codebase$ npm run test:snapshot
 ```
 
 To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier
-with `-- -u` appended to the end of the command. The `--` is a special construct that allows passing arguments to
-`npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot`) flag to Jest.
+with `-- -u` appended to the end of the `npm run` command. The `--` is a special construct that allows passing arguments
+to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot`) flag to Jest.
