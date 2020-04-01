@@ -3,10 +3,15 @@ node_modules
 /dist
 /build
 /docs
+/.cache
 
 # local env files
 .env.local
 .env.*.local
+env_vars
+
+# Yarn
+yarn.lock
 
 # Log files
 npm-debug.log*
