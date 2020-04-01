@@ -45,6 +45,7 @@ module.exports = {
       filename: 'css/fonts.css'
     }),
     new CopyPlugin([
+      { from: 'src/styles', to: 'scss' },
       { from: 'src/fonts', to: 'fonts' },
       { from: 'src/assets', to: 'assets' }
     ])
