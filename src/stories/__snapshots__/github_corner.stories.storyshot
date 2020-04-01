@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Assets/GitHub corner Inverted 1`] = `
+<a
+  class="github-corner is-inverted"
+>
+  
+  
+  <svg
+    height="80"
+    viewBox="0 0 250 250"
+    width="80"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="github_corner.svg#githubcorner"
+    />
+    
+
+  </svg>
+  
+
+</a>
+`;
+
+exports[`Storyshots Assets/GitHub corner Left aligned 1`] = `
+<a
+  class="github-corner is-left-aligned"
+>
+  
+  
+  <svg
+    height="80"
+    viewBox="0 0 250 250"
+    width="80"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="github_corner.svg#githubcorner"
+    />
+    
+
+  </svg>
+  
+
+</a>
+`;
+
+exports[`Storyshots Assets/GitHub corner Normal 1`] = `
+<a
+  class="github-corner"
+>
+  
+  
+  <svg
+    height="80"
+    viewBox="0 0 250 250"
+    width="80"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="github_corner.svg#githubcorner"
+    />
+    
+
+  </svg>
+  
+
+</a>
+`;

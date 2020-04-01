@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layouts/Table Basic Content 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Table Rich Content 1`] = `
+
+    
+`;

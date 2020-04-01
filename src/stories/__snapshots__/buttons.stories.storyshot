@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements/Buttons BigButton 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonDonate 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonError 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonInfo 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonPrimary 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonSuccess 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons ButtonWarning 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons MediumButton 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons SmallButton 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons Tag 1`] = `
+
+    
+`;
+
+exports[`Storyshots Elements/Buttons TinyButton 1`] = `
+
+    
+`;

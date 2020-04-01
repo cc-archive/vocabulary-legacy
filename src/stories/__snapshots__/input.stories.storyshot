@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Form/Input Big 1`] = `
+<section>
+  
+    
+  <input
+    class="input is-medium"
+    placeholder="Placeholder text"
+    type="text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input is-medium"
+    type="text"
+    value="Typed text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input is-medium"
+    disabled=""
+    type="text"
+    value="Fixed text"
+  />
+  
+  
+</section>
+`;
+
+exports[`Storyshots Form/Input Huge 1`] = `
+<section>
+  
+    
+  <input
+    class="input is-large"
+    placeholder="Placeholder text"
+    type="text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input is-large"
+    type="text"
+    value="Typed text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input is-large"
+    disabled=""
+    type="text"
+    value="Typed text"
+  />
+  
+  
+</section>
+`;
+
+exports[`Storyshots Form/Input Normal 1`] = `
+<section>
+  
+    
+  <input
+    class="input"
+    placeholder="Placeholder text"
+    type="text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input"
+    type="text"
+    value="Typed text"
+  />
+  
+    
+  <br />
+  <br />
+  
+    
+  <input
+    class="input"
+    disabled=""
+    type="text"
+    value="Fixed text"
+  />
+  
+  
+</section>
+`;

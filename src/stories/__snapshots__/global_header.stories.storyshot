@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Patterns/Global header Active 1`] = `
+<section>
+  <style>
+    body.sb-show-main{ padding: 0 !important; }
+  </style>
+  
+
+  <header
+    class="cc-global-header is-active"
+  >
+    
+  
+    <div
+      class="container"
+    >
+      
+    
+      <div
+        class="padding-vertical-normal"
+      >
+        
+      
+        <a
+          class="open-tab"
+          href="#"
+        >
+          Explore CC
+        </a>
+        
+      
+        <div
+          class="level"
+        >
+          
+        
+          <div
+            class="level-left"
+          >
+            
+          
+            <header
+              class="global-header-header"
+            >
+              
+            
+              <a
+                class="main-logo"
+                href="https://creativecommons.org"
+                target="_blank"
+              >
+                
+              
+                <div
+                  class="has-text-white"
+                >
+                  <svg
+                    preserveAspectRatio="xMidyMid meet"
+                    viewBox="0 0 304 73"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+  
+                    <use
+                      href="logos/cc/logomark.svg#creativecommons"
+                    />
+                    
+
+                  </svg>
+                </div>
+                
+            
+              </a>
+              
+          
+            </header>
+            
+        
+          </div>
+          
+      
+        </div>
+        
+      
+        <div
+          class="columns padding-bottom-normal"
+        >
+          
+        
+          <div
+            class="column is-one-third"
+          >
+            
+          
+            <aside
+              class="donate-section"
+            >
+              
+            
+              <h5>
+                Our work relies on you!
+              </h5>
+              
+            
+              <p>
+                Help us keep the internet free and open.
+              </p>
+              
+            
+              <a
+                class="button small donate"
+              >
+                
+              
+                <svg
+                  preserveAspectRatio="xMidyMid meet"
+                  viewBox="0 0 80 72"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+  
+                  <use
+                    href="logos/cc/letterheart.svg#creativecommons"
+                  />
+                  
+
+                </svg>
+                 Donate now
+            
+              </a>
+              
+          
+            </aside>
+            
+        
+          </div>
+          
+        
+          <div
+            class="column"
+          >
+            
+          
+            <nav
+              aria-label="global navigation"
+              class="products"
+              role="navigation"
+            >
+              
+            
+              <div
+                class="product-list"
+              >
+                
+              
+                <a
+                  class="product-item"
+                  href="https://network.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Global Network
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Join a global community working wo strenghten the Commons
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://certificate.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Certificate Program
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Become an expert in creating and engaging with openly licensed materials
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://summit.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Global Summit
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Attend oir annual event, promoting the power of open licensing
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://chooser-beta.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    License Chooser
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Get help choosing the appropiate license for your work
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://search.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    CC Search
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Find openly licensed material for creative and educational reuse
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://opensource.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    CC Open Source
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Help us build products that maximize creativity and innovation
+                
+                  </span>
+                  
+              
+                </a>
+                
+            
+              </div>
+              
+          
+            </nav>
+            
+        
+          </div>
+          
+      
+        </div>
+        
+    
+      </div>
+      
+  
+    </div>
+    
+
+  </header>
+</section>
+`;
+
+exports[`Storyshots Patterns/Global header Inactive 1`] = `
+<section>
+  <style>
+    body.sb-show-main{ padding: 0 !important; }
+  </style>
+  
+
+  <header
+    class="cc-global-header undefined"
+  >
+    
+  
+    <div
+      class="container"
+    >
+      
+    
+      <div
+        class="padding-vertical-normal"
+      >
+        
+      
+        <a
+          class="open-tab"
+          href="#"
+        >
+          Explore CC
+        </a>
+        
+      
+        <div
+          class="level"
+        >
+          
+        
+          <div
+            class="level-left"
+          >
+            
+          
+            <header
+              class="global-header-header"
+            >
+              
+            
+              <a
+                class="main-logo"
+                href="https://creativecommons.org"
+                target="_blank"
+              >
+                
+              
+                <div
+                  class="has-text-white"
+                >
+                  <svg
+                    preserveAspectRatio="xMidyMid meet"
+                    viewBox="0 0 304 73"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+  
+                    <use
+                      href="logos/cc/logomark.svg#creativecommons"
+                    />
+                    
+
+                  </svg>
+                </div>
+                
+            
+              </a>
+              
+          
+            </header>
+            
+        
+          </div>
+          
+      
+        </div>
+        
+      
+        <div
+          class="columns padding-bottom-normal"
+        >
+          
+        
+          <div
+            class="column is-one-third"
+          >
+            
+          
+            <aside
+              class="donate-section"
+            >
+              
+            
+              <h5>
+                Our work relies on you!
+              </h5>
+              
+            
+              <p>
+                Help us keep the internet free and open.
+              </p>
+              
+            
+              <a
+                class="button small donate"
+              >
+                
+              
+                <svg
+                  preserveAspectRatio="xMidyMid meet"
+                  viewBox="0 0 80 72"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+  
+                  <use
+                    href="logos/cc/letterheart.svg#creativecommons"
+                  />
+                  
+
+                </svg>
+                 Donate now
+            
+              </a>
+              
+          
+            </aside>
+            
+        
+          </div>
+          
+        
+          <div
+            class="column"
+          >
+            
+          
+            <nav
+              aria-label="global navigation"
+              class="products"
+              role="navigation"
+            >
+              
+            
+              <div
+                class="product-list"
+              >
+                
+              
+                <a
+                  class="product-item"
+                  href="https://network.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Global Network
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Join a global community working wo strenghten the Commons
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://certificate.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Certificate Program
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Become an expert in creating and engaging with openly licensed materials
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://summit.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    Global Summit
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Attend oir annual event, promoting the power of open licensing
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://chooser-beta.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    License Chooser
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Get help choosing the appropiate license for your work
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://search.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    CC Search
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Find openly licensed material for creative and educational reuse
+                
+                  </span>
+                  
+              
+                </a>
+                
+              
+                <a
+                  class="product-item"
+                  href="https://opensource.creativecommons.org"
+                  target="_blank"
+                >
+                  
+                
+                  <strong>
+                    CC Open Source
+                  </strong>
+                  
+                
+                  <span
+                    class="item-description"
+                  >
+                    
+                  Help us build products that maximize creativity and innovation
+                
+                  </span>
+                  
+              
+                </a>
+                
+            
+              </div>
+              
+          
+            </nav>
+            
+        
+          </div>
+          
+      
+        </div>
+        
+    
+      </div>
+      
+  
+    </div>
+    
+
+  </header>
+</section>
+`;

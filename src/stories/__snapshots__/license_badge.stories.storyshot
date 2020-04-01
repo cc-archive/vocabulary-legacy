@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Assets/License badge BY 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge BY NC 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc.eu.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by_nc.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge BY NC ND 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc_nd.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc_nd.eu.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by_nc_nd.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge BY NC SA 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc_sa.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nc_sa.eu.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by_nc_sa.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge BY ND 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_nd.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by_nd.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge BY SA 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/by_sa.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/by_sa.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge CC Zero 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/cc_zero.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/cc_zero.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;
+
+exports[`Storyshots Assets/License badge Public Domain 1`] = `
+<section>
+  
+    
+  <div>
+    <svg
+      height="42"
+      width="120"
+    >
+      
+
+      <use
+        href="license_badges/big/publicdomain.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+    
+  <div>
+    <svg
+      height="15"
+      width="80"
+    >
+      
+
+      <use
+        href="license_badges/small/publicdomain.svg#layer1"
+      />
+      
+
+    </svg>
+  </div>
+  
+  
+</section>
+`;

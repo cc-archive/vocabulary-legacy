@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layouts/Cards ImageTop 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards Link 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards LinkBorder 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostEventNarrow 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostEventWide 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostHorizontal 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostQuote 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostStatistic 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostVertical 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostVideoHorizontal 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostVideoLarge 1`] = `
+
+    
+`;
+
+exports[`Storyshots Layouts/Cards PostVideoVertical 1`] = `
+
+    
+`;

@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Form/Select Default 1`] = `
+<section>
+  
+    
+  <div
+    class="select"
+  >
+    
+      
+    <select>
+      
+        
+      <option
+        disabled=""
+        selected=""
+      >
+        Select
+      </option>
+      
+        
+      <option>
+        Option A
+      </option>
+      
+        
+      <option>
+        Option B
+      </option>
+      
+      
+    </select>
+    
+    
+  </div>
+  
+    
+  <br />
+  <br />
+  
+    
+  <div
+    class="select"
+  >
+    
+      
+    <select>
+      
+        
+      <option
+        disabled=""
+      >
+        Select
+      </option>
+      
+        
+      <option>
+        Option A
+      </option>
+      
+        
+      <option>
+        Option B
+      </option>
+      
+      
+    </select>
+    
+    
+  </div>
+  
+    
+  <br />
+  <br />
+  
+    
+  <div
+    class="select"
+  >
+    
+      
+    <select
+      disabled=""
+    >
+      
+        
+      <option
+        disabled=""
+      >
+        Select
+      </option>
+      
+        
+      <option>
+        Option A
+      </option>
+      
+        
+      <option>
+        Option B
+      </option>
+      
+      
+    </select>
+    
+    
+  </div>
+  
+  
+</section>
+`;

@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Assets/Logos CC Certificates Colorful 1`] = `
+<section>
+  <style>
+    svg { height: 174px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 160 174"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/certificates.svg#certificates"
+    />
+    
+  
+    <use
+      href="logos/products/certificates.svg#colorful_dots"
+    />
+    
+
+  </svg>
+</section>
+`;
+
+exports[`Storyshots Assets/Logos CC Certificates Monochrome 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 174px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 160 174"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/certificates.svg#certificates"
+    />
+    
+  
+    <use
+      href="logos/products/certificates.svg#monochrome_dots"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Certificates Monochrome Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 174px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 160 174"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/certificates.svg#certificates"
+    />
+    
+  
+    <use
+      href="logos/products/certificates.svg#monochrome_dots"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Global Network 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 79px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 79"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/global_network.svg#globalnetwork"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Global Network Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 79px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 79"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/global_network.svg#globalnetwork"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Letterheart 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 72px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 80 72"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/letterheart.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Letterheart Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 72px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 80 72"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/letterheart.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Lettermark 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 72px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 72 72"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/lettermark.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Lettermark Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 72px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 72 72"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/lettermark.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Logomark 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 73px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 304 73"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/logomark.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Logomark Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 73px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 304 73"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/cc/logomark.svg#creativecommons"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Open Source 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 76px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 76"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/open_source.svg#opensource"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Open Source Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 76px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 76"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/open_source.svg#opensource"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Search 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 81px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 81"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/search.svg#search"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Search Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 81px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 81"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/search.svg#search"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Vocabulary 1`] = `
+<div
+  class="has-text-black"
+>
+  <style>
+    svg { height: 41px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 41"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/vocabulary.svg#vocabulary"
+    />
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Assets/Logos CC Vocabulary Inverted 1`] = `
+<div
+  class="has-text-white"
+>
+  <style>
+    svg { height: 41px; }
+  </style>
+  
+
+  <svg
+    preserveAspectRatio="xMidyMid meet"
+    viewBox="0 0 250 41"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+  
+    <use
+      href="logos/products/vocabulary.svg#vocabulary"
+    />
+    
+
+  </svg>
+</div>
+`;
