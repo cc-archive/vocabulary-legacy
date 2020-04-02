@@ -3,10 +3,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    fonts: './src/index.js',
+    accidenz_commons: './src/scripts/accidenz_commons.js',
+    roboto_condensed: './src/scripts/roboto_condensed.js',
+    source_sans_pro: './src/scripts/source_sans_pro.js',
+    vocabulary_icons: './src/scripts/vocabulary_icons.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/[name].js'
   },
   module: {
     rules: [
@@ -42,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/fonts.css'
+      filename: 'css/[name].css'
     }),
     new CopyPlugin([
       { from: 'src/fonts', to: 'fonts' },
