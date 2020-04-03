@@ -1,5 +1,9 @@
 @import "./font_face.scss";
 
 @each $unicode in $unicodes {
-  @include fontface('Roboto Condensed', 'Roboto-Condensed', 400, $unicode);
+  @include fontface('Roboto Condensed', 'RobotoCondensed-Regular', 400, $unicode);
+}
+
+@each $unicode in $unicodes {
+  @include fontface('Roboto Condensed', 'RobotoCondensed-Bold', 700, $unicode);
 }

@@ -1,0 +1,95 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Fonts/Contribution" />
+
+# Contribution
+
+We're always looking for contributors to help us find and fix bugs, build new
+features, help us improve the project documentation or translate the project to
+another language.
+
+Fonts is continuously evolving and improving. You can contribute to the
+project in a number of ways.
+
+| What | How |
+|-|-|
+| **Code**      | If you are a developer, feel free to resolve open issues, proof PRs, add new features to existing components or add new components altogether. |
+| **Design**    | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem. |
+| **Test**      | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
+| **Write**     | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand. |
+| **Share**     | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
+
+Interested?
+
+The following instructions are in addition to the processes in our general [Contribution][contribution] and
+[Pull Request][pull_request] guidelines on the Creative Common Open Source website, and [those] in Vocabulary. If you
+haven't read them already, read them first.
+
+[contribution]:https://creativecommons.github.io/contributing-code/
+[pull_request]:https://opensource.creativecommons.org/contributing-code/pr-guidelines/
+[those]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page
+
+These instructions are a port of the general guidelines, tailored specifically for Fonts.
+
+## Setting up
+
+Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork
+instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
+
+To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and
+disadvantages.
+
+Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle
+involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+
+Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating
+system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+
+### Docker and Docker Compose
+
+Install Docker and Docker Compose, if you don't already have them on your computer.
+
+Bring up all services.
+
+```bash
+$ docker-compose up -d
+```
+
+To run `npm` commands, you'll need to enter a Fonts container.
+
+```bash
+$ ./docker/fonts/run.sh
+docker-desktop:/codebase$ ...
+```
+
+If you install new packages, you'll need to rebuild a few things.
+
+```bash
+$ docker-compose down
+$ docker volume prune
+$ docker-compose build storybook
+```
+
+### Manual setup
+
+Install Node.js and NPM, if you don't already have them on your computer.
+
+Install dependencies.
+```
+$ npm install
+```
+
+Start the following processes in different terminals
+- SCSS build process: watches SCSS files and rebuilds them if any of them change
+- the Storybook process: interactive playground of components in the browser
+
+```
+$ npm run watch
+$ npm run storybook
+```
+
+## Discussing changes, assigning work, making changes and testing
+
+See [Vocabulary guidelines].
+
+[Vocabulary guidelines]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page
