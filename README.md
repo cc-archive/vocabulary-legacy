@@ -15,9 +15,7 @@
   </a>
 </p>
 
-> Vocabulary is a cohesive design system to unite the web facing Creative 
-> Commons. Vocabulary makes it easier to develop Creative Commons apps while
-> ensuring a consistently familiar experience.
+> Vue Vocabulary is a Vue component library implementing a cohesive design system to unite the web facing Creative Commons.
 
 <p align="center">
   <a 
@@ -47,10 +45,8 @@
   </a>
 </p>
 
-In essence Vocabulary is a collection of UI components, which are parts of 
-web sites and web apps that have significance as being individual units that
-can be mixed, matched, styled and put together to quickly and effectively 
-develop consistent applications.
+In essence Vue Vocabulary is a collection of UI components that incorporate Vocabulary under the hood.
+Vue Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
 
 ### Availability
