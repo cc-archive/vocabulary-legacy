@@ -15,11 +15,11 @@ repository in the file `CODE_OF_CONDUCT.md`.
 
 The `README.md` file describes the goals and introduces the project. Further
 documentation is present in the form of `.md` files placed in the folder
-structure as well as in the form of code comments. 
+structure as well as in the form of code comments
 
-Instructions pertaining to development such as the procedure to set up a copy of
-the codebase and a running instance locally on your machine can be found in
-`INSTRUCTIONS.md`.
+More documentation can be found in the [Storybook][landing].
+
+[landing]:https://cc-fonts.netlify.com/
 
 ## How to Contribute
 
@@ -28,8 +28,7 @@ guidelines on the Creative Common Open Source website.
 
 Contributions in terms of code, documentation and translations are welcome!
 
-In addition to this, read the `README.md` and `INSTRUCTIONS.md` files in the 
-repository for instructions.
+In addition to this, read the `README.md` in the repository for instructions.
 
 [contributing]:https://creativecommons.github.io/contributing-code/
 

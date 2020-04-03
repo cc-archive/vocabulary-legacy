@@ -11,8 +11,8 @@ $unicodes: (U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-F
     font-family: $font-name;
     font-style: normal;
     font-weight: $font-weight;
-    src: url('../fonts/' + $font-file + '.woff') format('woff'),
-    url('../fonts/' + $font-file + '.woff2') format('woff2'),
+    src: url('../fonts/' + $font-file + '.woff2') format('woff2'),
+    url('../fonts/' + $font-file + '.woff') format('woff'),
     url('../fonts/' + $font-file + '.otf') format('opentype');
     unicode-range: $unicode;
   }
