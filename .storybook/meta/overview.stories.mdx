@@ -38,8 +38,10 @@ manner.
 - Lack of opportunity for individual creativity.
 
 #### Meaning
-- If there’s a new design element needed for a website, CC’s UX designer needs to be consulted and create a design in Figma first.
-- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into their own code.
+- If there’s a new design element needed for a website, CC’s UX designer needs to be consulted and create a design in
+  Figma first.
+- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into
+  their own code.
 
 ### Principle 2
 
@@ -47,20 +49,27 @@ manner.
 
 #### Rationale
 - To keep the maintenance burden as low as possible by maintaining only a minimum viable set of styles and components.
-- To ensure that designs are created with a real use case in mind. Theoretical designs often don’t stand up when introduced to the real world.
+- To ensure that designs are created with a real use case in mind. Theoretical designs often don’t stand up when
+  introduced to the real world.
 
 #### Tradeoffs
 - Vocabulary or Vue Vocabulary may look a little sparse.
 - Vocabulary will not be very customizable or extensible.
 
 #### Meaning
-- All components in Vocabulary should have a real world use case. If they are not used, they should not be in Vocabulary.
-- Vue Vocabulary will only contain Vue components that are used in a CC website that uses Vue. This means that not all components in Vocabulary will have a corresponding Vue Vocabulary component.
-  - If using the CSS from Vocabulary is the same amount of code as using a custom Vue component, we will use the CSS directly and skip the Vue component.
-- We will not create additional Vocabulary libraries similar to Vue Vocabulary; we’ll use the base CSS styles instead for other systems like WordPress and Lektor.
-  - WordPress and Lektor do not support standalone components like Vue. We will only create Vocabulary libraries for systems that support standalone components if needed.
+- All components in Vocabulary should have a real world use case. If they are not used, they should not be in
+  Vocabulary.
+- Vue Vocabulary will only contain Vue components that are used in a CC website that uses Vue. This means that not all
+  components in Vocabulary will have a corresponding Vue Vocabulary component.
+  - If using the CSS from Vocabulary is the same amount of code as using a custom Vue component, we will use the CSS
+    directly and skip the Vue component.
+- We will not create additional Vocabulary libraries similar to Vue Vocabulary; we’ll use the base CSS styles instead
+  for other systems like WordPress and Lektor.
+  - WordPress and Lektor do not support standalone components like Vue. We will only create Vocabulary libraries for
+    systems that support standalone components if needed.
 - Vocabulary will not offer special styling for combinations of basic elements.
-  - For example, Vocabulary may include separate elements for tables and text boxes, but will not include special styling for the combination of a text box inside a table.
+  - For example, Vocabulary may include separate elements for tables and text boxes, but will not include special
+    styling for the combination of a text box inside a table.
   - Complex components like header and footer which are relevant to CC branding will be an exception to this rule.
 
 ### Principle 3
@@ -76,8 +85,10 @@ manner.
 #### Meaning
 - Each component in Figma needs to have a corresponding set of stories in Vocabulary. The titles should match exactly.
 - Vocabulary should offer the same variety of components as Figma as much as it is feasible to do so.
-- Figma should clearly separate the styles of basic elements and patterns from documentation on how those elements and patterns can be combined.
-  - For example, Figma should offer colors as  elements in the Design Library, but the way to use those colors well should go in a documentation section.
+- Figma should clearly separate the styles of basic elements and patterns from documentation on how those elements and
+  patterns can be combined.
+  - For example, Figma should offer colors as elements in the Design Library, but the way to use those colors well
+    should go in a documentation section.
 - Vocabulary should embed the relevant Figma component in the documentation for that component.
 
 ### Principle 4
@@ -86,7 +97,8 @@ manner.
 
 #### Rationale
 - To provide context around components and offer guidelines for their use to build consistent websites.
-- To allow developers to create designs in approved ways without needing sign-off from the design and product team for every single change.
+- To allow developers to create designs in approved ways without needing sign-off from the design and product team for
+  every single change.
 
 #### Tradeoffs
 - Work needed to keep this documentation updated.
@@ -107,7 +119,8 @@ manner.
 - One person bottlenecks all major design changes.
 
 #### Meaning
-- Any significant design changes or new designs must be approved by the UX Designer before being implemented, even if they are based on existing Vocabulary components.
+- Any significant design changes or new designs must be approved by the UX Designer before being implemented, even if
+  they are based on existing Vocabulary components.
 
 ## Workflow
 
@@ -148,7 +161,7 @@ needed.
 ### Web developer
 
 Web developer (**Hugo**) is responsible for making changes to Vocabulary and maintaining the WordPress themes that use
-Vocabulary.  He also helps with new releases of Vocabulary, managing community contributors to Vocabulary and providing
+Vocabulary. He also helps with new releases of Vocabulary, managing community contributors to Vocabulary and providing
 technical input on Vocabulary as needed.
 
 ### Frontend developer
@@ -173,11 +186,12 @@ Vocabulary in the (internal) biweekly Design-Product sync meeting or call other 
 ### New website design
 
 - The developer working on the website design creates wireframes and discusses with Francisco and Anna
-  - A wireframe is a representation of the content displayed with gray tones to separate sections/zones. It is focused on content and navigation.
+  - A wireframe is a representation of the content displayed with gray tones to separate sections/zones. It is focused
+    on content and navigation.
 - Francisco works with the developer to create high-fidelity mockups in Figma using Vocabulary components.
   - A mockup has the brand and graphic definitions with interaction notes. It is focused on the look-and-feel.
 - Anna approves the mockups.
-- Francisco adds any new components used in the mockup  to the Design Library.
+- Francisco adds any new components used in the mockup to the Design Library.
 - The developer adds new components or updates existing components in Vocabulary (and Vue Vocabulary, if appropriate)
 - The developer uses the updated version of Vocabulary to build the website.
 
@@ -185,7 +199,8 @@ Vocabulary in the (internal) biweekly Design-Product sync meeting or call other 
 ### Technical architecture change
 
 - The developer suggesting the change creates a GitHub ticket and tags Kriti in it for approval.
-- Kriti, at her discretion, consults with Breno, Hugo, and/or Dhruv and makes a decision and communicates it on the GitHub ticket
+- Kriti, at her discretion, consults with Breno, Hugo, and/or Dhruv and makes a decision and communicates it on the
+  GitHub ticket
 - The ticket is either implemented or closed.
 
 ### Design change
