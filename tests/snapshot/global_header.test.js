@@ -1,8 +1,7 @@
-import { setViewport, goTo } from './helpers'
+import { goTo } from './helpers'
 
 describe('GlobalHeader', () => {
   it('Inactive', async () => {
-    await setViewport(page)
     await goTo(page, 'patterns-global-header--inactive')
     const image = await page.screenshot()
 
@@ -10,7 +9,6 @@ describe('GlobalHeader', () => {
   })
 
   it('Active', async () => {
-    await setViewport(page)
     await goTo(page, 'patterns-global-header--active')
     const image = await page.screenshot()
 
