@@ -1,8 +1,7 @@
-import { setViewport, goTo } from './helpers'
+import { goTo } from './helpers'
 
 describe('Buttons', () => {
   it('MediumButton', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--medium-button')
     const image = await page.screenshot()
 
@@ -10,7 +9,6 @@ describe('Buttons', () => {
   })
 
   it('Bigbutton', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--big-button')
     const image = await page.screenshot()
 
@@ -18,7 +16,6 @@ describe('Buttons', () => {
   })
 
   it('SmallButton', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--small-button')
     const image = await page.screenshot()
 
@@ -26,7 +23,6 @@ describe('Buttons', () => {
   })
 
   it('TinyButton', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--tiny-button')
     const image = await page.screenshot()
 
@@ -34,7 +30,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonPrimary', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-primary')
     const image = await page.screenshot()
 
@@ -42,7 +37,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonDonate', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-donate')
     const image = await page.screenshot()
 
@@ -50,7 +44,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonSuccess', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-success')
     const image = await page.screenshot()
 
@@ -58,7 +51,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonInfo', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-info')
     const image = await page.screenshot()
 
@@ -66,7 +58,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonWarning', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-warning')
     const image = await page.screenshot()
 
@@ -74,7 +65,6 @@ describe('Buttons', () => {
   })
 
   it('ButtonError', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--button-error')
     const image = await page.screenshot()
 
@@ -82,7 +72,6 @@ describe('Buttons', () => {
   })
 
   it('Tag', async () => {
-    await setViewport(page)
     await goTo(page, 'elements-buttons--tag')
     const image = await page.screenshot()
 
