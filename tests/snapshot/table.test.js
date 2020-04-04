@@ -1,8 +1,7 @@
-import { setViewport, goTo } from './helpers'
+import { goTo } from './helpers'
 
 describe('Table', () => {
   it('BasicContent', async () => {
-    await setViewport(page)
     await goTo(page, 'layouts-table--basic-content')
     const image = await page.screenshot()
 
@@ -10,7 +9,6 @@ describe('Table', () => {
   })
 
   it('RichContent', async () => {
-    await setViewport(page)
     await goTo(page, 'layouts-table--rich-content')
     const image = await page.screenshot()
 
