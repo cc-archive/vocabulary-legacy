@@ -1,154 +1,34 @@
-import { IconItem,IconGallery,Meta,Story,Preview } from '@storybook/addon-docs/blocks';
+import { Meta, IconItem, IconGallery, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
 
-<Meta title="Vocabulary Icons"/>
+<Meta title="Tokens/Icons" />
 
-# Vocabulary Icons
+<div dangerouslySetInnerHTML={{__html: `<style>
+body.sb-show-main,
+.sbdocs.sbdocs-wrapper {
+  padding: 0 !important;
+}
+.sbdocs.sbdocs-content {
+  max-width: unset;
+}
+.iframe-holder {
+  background: url("puff.svg") center center no-repeat;
+}
+</style>
+`
+}}></div>
 
-Vocabulary Icons is an icon font developed for use in Vocabulary, a cohesive design system to unite the web-facing
-Creative Commons.
+<!-- Source code can be found in the repo creativecommons/fonts -->
+<div class="iframe-holder">
+  <iframe
+    style={{ width: '100%', height: '99vh' }}
+    src="https://cc-fonts.netlify.com/iframe.html?id=vocabulary-icons--page&viewMode=docs"
+    onLoad="resizeIframe(this)" />
+</div>
 
-The icon font selectively includes assets from [Font Awesome](https://fontawesome.com) based on the icons used
-throughout the design library on Figma and bundles them using [IcoMoon](https://icomoon.io/) to get the icons in the
-smallest possible file size bundle.
-
-## Chevrons
-
-<IconGallery>
-  <IconItem name="chevron-up">
-    <i class="icon chevron-up"></i>
-  </IconItem>
-  <IconItem name="chevron-right">
-    <i class="icon chevron-right"></i>
-  </IconItem>
-  <IconItem name="chevron-down">
-    <i class="icon chevron-down"></i>
-  </IconItem>
-  <IconItem name="chevron-left">
-    <i class="icon chevron-left"></i>
-  </IconItem>
-</IconGallery>
-
-## Carets
-
-<IconGallery>
-  <IconItem name="caret-right">
-    <i class="icon caret-right"></i>
-  </IconItem>
-  <IconItem name="caret-down">
-    <i class="icon caret-down"></i>
-  </IconItem>
-</IconGallery>
-
-## Symbols
-
-<IconGallery>
-  <IconItem name="tick">
-    <i class="icon tick"></i>
-  </IconItem>
-  <IconItem name="cross">
-    <i class="icon cross"></i>
-  </IconItem>
-  <IconItem name="circle-filled">
-   <i class="icon circle-filled"></i>
-  </IconItem>
-  <IconItem name="circle-outline">
-   <i class="icon circle-outline"></i>
-  </IconItem>
-</IconGallery>
-
-## Internet
-
-<IconGallery>
-  <IconItem name="search">
-    <i class="icon search"></i>
-  </IconItem>
-  <IconItem name="info">
-    <i class="icon info"></i>
-  </IconItem>
-  <IconItem name="globe">
-   <i class="icon globe"></i>
-  </IconItem>
-  <IconItem name="external-link">
-    <i class="icon external-link"></i>
-  </IconItem>
-</IconGallery>
-
-## CC license aspects
-
-<IconGallery>
-  <IconItem name="logo">
-    <i class="icon logo"></i>
-  </IconItem>
-  <IconItem name="cc-by">
-    <i class="icon cc-by"></i>
-  </IconItem>
-  <IconItem name="cc-nc">
-    <i class="icon cc-nc"></i>
-  </IconItem>
-  <IconItem name="cc-nc-eu">
-    <i class="icon cc-nc-eu"></i>
-  </IconItem>
-  <IconItem name="cc-nc-jp">
-    <i class="icon cc-nc-jp"></i>
-  </IconItem>
-  <IconItem name="cc-nd">
-    <i class="icon cc-nd"></i>
-  </IconItem>
-  <IconItem name="cc-sa">
-    <i class="icon cc-sa"></i>
-  </IconItem>
-  <IconItem name="cc-zero">
-    <i class="icon cc-zero"></i>
-  </IconItem>
-  <IconItem name="cc-pd">
-    <i class="icon cc-pd"></i>
-  </IconItem>
-  <IconItem name="cc-pd-alt">
-    <i class="icon cc-pd-alt"></i>
-  </IconItem>
-</IconGallery>
-
-## CC license niche aspects
-
-<IconGallery>
-  <IconItem name="cc-sampling">
-    <i class="icon cc-sampling"></i>
-  </IconItem>
-  <IconItem name="cc-sampling-plus">
-    <i class="icon cc-sampling-plus"></i>
-  </IconItem>
-  <IconItem name="cc-remix">
-    <i class="icon cc-remix"></i>
-  </IconItem>
-  <IconItem name="cc-share">
-    <i class="icon cc-share"></i>
-  </IconItem>
-</IconGallery>
-
-## Social media
-
-<IconGallery>
-  <IconItem name="facebook">
-    <i class="icon facebook"></i>
-  </IconItem>
-  <IconItem name="twitter">
-    <i class="icon twitter"></i>
-  </IconItem>
-  <IconItem name="instagram">
-    <i class="icon instagram"></i>
-  </IconItem>
-</IconGallery>
-
-# Usage
-
-To use the icons, add the classes `.icon`  and the name of the icon.
-
-**Example:**
-
-```html
-<!-- Display the upward pointing chevron -->
-<i class="icon chevron-up"></i>
-
-<!-- Display the CC logo -->
-<i class="icon logo"></i>
-```
+<Story name="Figma" parameters={{
+  design: figmaConfig('0%3A135'),
+  docs: { disable: true }
+}}>{`
+  See the Design tab in the panel.
+`}</Story>
