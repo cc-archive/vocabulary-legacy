@@ -1,6 +1,7 @@
 import { addDecorator, addParameters, } from '@storybook/html'
 
 import '../dist/css/fonts.css'
+import '../dist/css/accidenz_commons.css'
 
 const order = {
   'Fonts': [

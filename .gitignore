@@ -3,6 +3,7 @@ node_modules
 /dist
 /build
 /docs
+/.cache
 
 # local env files
 .env.local
