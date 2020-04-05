@@ -1,0 +1,3 @@
+# On Linux, use http://localhost:8080
+# On macOS, use http://host.docker.internal:8080
+STORYBOOK_ORIGIN=http://host.docker.internal:8080
