@@ -1,4 +1,4 @@
-@mixin fontface($font-name, $font-file,$font-weight) {
+@mixin fontface($font-name, $font-file, $font-weight) {
   @font-face {
     font-family: $font-name;
     font-style: normal;
