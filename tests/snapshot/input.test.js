@@ -1,22 +1,22 @@
 import { goTo } from './helpers'
 
-describe('GitHub Corner', () => {
+describe('Input', () => {
   it('Normal', async () => {
-    await goTo(page, 'assets-github-corner--normal')
+    await goTo(page, 'form-input--normal')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Inverted', async () => {
-    await goTo(page, 'assets-github-corner--inverted')
+  it('Big', async () => {
+    await goTo(page, 'form-input--big')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Left aligned', async () => {
-    await goTo(page, 'assets-github-corner--left-aligned')
+  it('Huge', async () => {
+    await goTo(page, 'form-input--huge')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()

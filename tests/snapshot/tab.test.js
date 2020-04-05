@@ -1,8 +1,8 @@
 import { goTo } from './helpers'
 
-describe('Select', () => {
-  it('Default', async () => {
-    await goTo(page, 'form-select--default-story')
+describe('Tab', () => {
+  it('Tab', async () => {
+    await goTo(page, 'layouts-tabs--tab')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
