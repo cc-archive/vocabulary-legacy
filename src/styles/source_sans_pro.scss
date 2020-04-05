@@ -1,13 +1,7 @@
 @import "./font_face.scss";
 
-@each $unicode in $unicodes {
-  @include fontface('Source Sans Pro', 'SourceSansPro-Regular', 400, $unicode);
-}
+@include fontface('Source Sans Pro', 'SourceSansPro-Regular', 400);
 
-@each $unicode in $unicodes {
-  @include fontface('Source Sans Pro', 'SourceSansPro-SemiBold', 600, $unicode);
-}
+@include fontface('Source Sans Pro', 'SourceSansPro-SemiBold', 600);
 
-@each $unicode in $unicodes {
-  @include fontface('Source Sans Pro', 'SourceSansPro-Bold', 700, $unicode);
-}
+@include fontface('Source Sans Pro', 'SourceSansPro-Bold', 700);
