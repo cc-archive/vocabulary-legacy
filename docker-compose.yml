@@ -6,31 +6,58 @@
 version: '3.4'
 
 services:
+  watch:
+    # Use the Fonts image
+    image: fonts:latest
+    # If the image is not found, build it
+    build:
+      context: .
+      dockerfile: docker/fonts/Dockerfile
 
-	storybook:
-	    # Use the Vocabulary image
-	    image: vocabulary:latest
-	    # If the image is not found, build it
-	    build:
-	      context: .
-	      dockerfile: docker/vocabulary/Dockerfile
+    # The user as which to run the container
+    user: fonts
+    # The command to run in the container
+    command: npm run watch
 
-	    # The user as which to run the container
-	    user: vocab
-	    # The command to run in the container
-	    command: npm run storybook
+    # Volumes attached to the container
+    volumes:
+      # Enable code changes to reflect in the container
+      - .:/codebase
+      # Ensures that host node_modules are not mounted
+      - node_modules:/codebase/node_modules
 
-	    # Volumes attached to the container
-	    volumes:
-	      # Enable code changes to reflect in the container
-	      - .:/codebase
-	      # Ensures that host node_modules are not mounted
-	      - node_modules:/codebase/node_modules
+    # Restart policy
+    restart: always
 
-	    # Ports exposed on the host
-	    ports:
-	      # Map 8080 in the container to the same port on the host
-	      - 8080:8080
+  storybook:
+    # Use the Fonts image
+    image: fonts:latest
+    # If the image is not found, build it
+    build:
+      context: .
+      dockerfile: docker/fonts/Dockerfile
 
-	    # Restart policy
-	    restart: always
+    # The user as which to run the container
+    user: fonts
+    # The command to run in the container
+    command: npm run storybook
+
+    # Volumes attached to the container
+    volumes:
+      # Enable code changes to reflect in the container
+      - .:/codebase
+      # Ensures that host node_modules are not mounted
+      - node_modules:/codebase/node_modules
+
+    # Ports exposed on the host
+    ports:
+      # Map 8080 in the container to the same port on the host
+      - 8080:8080
+
+    # Restart policy
+    restart: always
+
+volumes:
+  # Holds the node_modules directory
+  # Prevents the host node_modules from being mounted and used
+  node_modules:

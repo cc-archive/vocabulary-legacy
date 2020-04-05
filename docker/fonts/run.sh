@@ -5,7 +5,7 @@ docker run \
   --volume node_modules:/codebase/node_modules \
   --volume "$(pwd)":/codebase \
   --net host \
-  --name vocabulary-cmd \
+  --name fonts-cmd \
   --rm \
-  vocabulary:latest \
+  fonts:latest \
   bash

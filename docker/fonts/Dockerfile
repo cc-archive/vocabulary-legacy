@@ -2,9 +2,9 @@
 FROM node:lts
 
 # Create a non-root user so as to not tamper with privileges
-RUN groupadd -r vocab && useradd -r -g vocab -G audio,video vocab \
-    && mkdir -p /home/vocab \
-    && chown -R vocab:vocab /home/vocab
+RUN groupadd -r fonts && useradd -r -g fonts -G audio,video fonts \
+    && mkdir -p /home/fonts \
+    && chown -R fonts:fonts /home/fonts
 
 # Make a codebase directory and work in it
 RUN mkdir codebase
@@ -16,10 +16,10 @@ COPY ./package-lock.json ./
 
 # Install packages
 RUN npm install \
-    && chown -R vocab:vocab ./node_modules
+    && chown -R fonts:fonts ./node_modules
 
 # Run everything after as non-privileged user
-USER vocab
+USER fonts
 
 # Expose ports on the container
 EXPOSE 8080
