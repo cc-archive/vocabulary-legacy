@@ -12,7 +12,7 @@ jobs:
       - run: npm install
       - run: npm run lint
 
-  test:
+  unit:
     docker:
       - image: node:8.12.0-alpine
     steps:
@@ -34,5 +34,5 @@ workflows:
   checks:
     jobs:
       - lint
-      - test
+      - unit
       - build
