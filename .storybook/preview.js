@@ -8,6 +8,7 @@ import '../dist/css/vocabulary.css'
 const order = {
   'Vocabulary': [
     'Introduction',
+    'Overview',
     'Usage',
     'Contribution'
   ],
