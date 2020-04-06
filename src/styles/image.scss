@@ -1,59 +1,51 @@
 .image {
   position: relative;
-  width: 400px;
-  height: 250px;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-}
-
-.image-details {
-  height: 0px;
-  padding-top: 0px;
   overflow: hidden;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  position: absolute;
-  left: 0%;
-  bottom: 0%;
+
+  img {
+    width: 100%;
+  }
+
+  %image-details {
+    transition: transform 0.2s linear;
+    position: absolute;
+    left: 0%;
+  }
+
+  .image-title {
+    @extend %image-details;
+    transform: translateY(100%);
+    bottom: 0%;
+
+    p {
+      color: #fff;
+      background-color: black;
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+
+  .image-icons {
+    @extend %image-details;
+    transform: translateY(-100%);
+    top: 0%;
+    z-index: 1;
+
+    i {
+      background-image: radial-gradient(circle, $color-white 60%, transparent 60%);
+      font-size: 1.625rem;
+    }
+  }
+
 }
 
-.image:hover .image-details {
-  height: 36px;
-}
-
-.image-details p {
-  color: #fff;
-  background-color: black;
-  font-weight: 600;
-  line-height: 19px;
-}
-
-.image-icons {
-  height: 0px;
-  padding-top: 0px;
-  overflow: hidden;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 1;
+.image:hover .image-title {
+  transform: translateY(0%);
+  margin-bottom: 0.4rem;
 }
 
 .image:hover .image-icons {
-  height: 28px;
-  margin-top: 8px;
+  transform: translateY(0%);
+  margin-top: 0.5rem;
 }
 
-.image-icons i {
-  background-image: radial-gradient(circle, $color-white 60%, transparent 60%);
-  border-radius: 50%;
-  width: 1.625rem !important;
-}
