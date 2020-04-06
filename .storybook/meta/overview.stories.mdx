@@ -126,54 +126,68 @@ manner.
 
 ## Roles and responsibilities
 
-### Comms manager
+### Titles
 
-Comms manager (**Victoria**) owns the CC Style Guide. Vocabulary follows the Style Guide from the perspective of colors
+#### Comms Manager
+
+The Comms Manager owns the CC Style Guide. Vocabulary follows the Style Guide from the perspective of colors
 and styles, it does not inform the Style Guide. Any implementation of web styles (for example, color choices) that are
 at odds with the Style Guide must be properly justified and discussed with Victoria for sign-off. It is crucial that CC
 maintains a consistent brand and style experience throughout.
 
-### UX designer
+#### UX Designer
 
-UX designer (**Francisco**) maintains the Figma Design Library, which is used for designing mockups. When experimenting
+The UX Designer maintains the Figma Design Library, which is used for designing mockups. When experimenting
 with changes to Vocabulary, they are first done in Figma and surfaced to the team. Francisco is responsible for making
 suggestions for how Vocabulary can be improved, in light of how things look when it is integrated on CC web properties.
 He is also responsible for defining layout-specific styles within Vocabulary. He also runs point on proposing
 web-specific UI styles as needed. If there is no conflict with the Style Guide (i.e. these are additive, not
 contradictory), then sign-off falls to Anna. Otherwise, Victoria is consulted.
 
-### Director of product
+#### Director of Product
 
-Director of product (**Anna**) is responsible for final review and sign-off on all design changes, prior to
+The Director of Product (DoP) is responsible for final review and sign-off on all design changes, prior to
 implementation.
 
-### Director of engineering
+#### Director of Engineering
 
-Director of engineering (**Kriti**) is responsible for the technical architecture and project management of Vocabulary,
+The Director of Engineering (DoE) is responsible for the technical architecture and project management of Vocabulary,
 with input from CC staff developers and the community maintainer.
 
-### Community maintainer
+#### Community Maintainer
 
-Community maintainer (**Dhruv**) is responsible for releasing new versions of Vocabulary, triaging issues, and managing
+The Community Maintainer is responsible for releasing new versions of Vocabulary, triaging issues, and managing
 community contributors to Vocabulary. He also makes changes to Vocabulary and provides technical input on Vocabulary as
 needed.
 
-### Web developer
+#### Web Developer
 
-Web developer (**Hugo**) is responsible for making changes to Vocabulary and maintaining the WordPress themes that use
+The Web Developer is responsible for making changes to Vocabulary and maintaining the WordPress themes that use
 Vocabulary. He also helps with new releases of Vocabulary, managing community contributors to Vocabulary and providing
 technical input on Vocabulary as needed.
 
-### Frontend developer
+#### Frontend Developer
 
-Frontend developer (**Breno**) is responsible for making changes to Vocabulary and Vue Vocabulary. He also helps with
+The Frontend Developer is responsible for making changes to Vocabulary and Vue Vocabulary. He also helps with
 new releases of Vocabulary, managing community contributors to Vocabulary and providing technical input on Vocabulary
 as needed.
 
-### Community contributors and interns
+#### Community contributors and interns
 
-**Community contributors** and **interns** work on pre-approved open GitHub issues in Vocabulary. They may also make
+Community contributors and interns work on pre-approved open GitHub issues in Vocabulary. They may also make
 suggestions for design or technical changes, which must be approved by Anna and Francisco, or Kriti, respectively.
+
+### Current title holders
+
+| Title                              | Current holder   |
+|------------------------------------|------------------|
+| Comms Manager                      | Victoria Heath   |
+| UX Designer                        | Francisco Vera   |
+| Director of Product                | Anna Tumadottir  |
+| Director of Engineering            | Kriti Godey      |
+| Community Maintainer               | Dhruv Bhanushali |
+| Web Developer                      | Hugo Solar       |
+| Frontend Developer                 | Breno Ferreira   |
 
 ## Discussions
 
@@ -185,13 +199,14 @@ Vocabulary in the (internal) biweekly Design-Product sync meeting or call other 
 
 ### New website design
 
-- The developer working on the website design creates wireframes and discusses with Francisco and Anna
+- The developer working on the website design creates wireframes and discusses with the **UX Designer** and the
+**Director of Product**
   - A wireframe is a representation of the content displayed with gray tones to separate sections/zones. It is focused
     on content and navigation.
-- Francisco works with the developer to create high-fidelity mockups in Figma using Vocabulary components.
+- The **UX designer** works with the developer to create high-fidelity mockups in Figma using Vocabulary components.
   - A mockup has the brand and graphic definitions with interaction notes. It is focused on the look-and-feel.
-- Anna approves the mockups.
-- Francisco adds any new components used in the mockup to the Design Library.
+- The **Director of Product** approves the mockups.
+- The **UX designer** adds any new components used in the mockup to the Design Library.
 - The developer adds new components or updates existing components in Vocabulary (and Vue Vocabulary, if appropriate)
 - The developer uses the updated version of Vocabulary to build the website.
 
@@ -199,15 +214,17 @@ Vocabulary in the (internal) biweekly Design-Product sync meeting or call other 
 ### Technical architecture change
 
 - The developer suggesting the change creates a GitHub ticket and tags Kriti in it for approval.
-- Kriti, at her discretion, consults with Breno, Hugo, and/or Dhruv and makes a decision and communicates it on the
-  GitHub ticket
+- The **Director of Engineering**, at their discretion, consults with the **Web Developer**, the **Frontend Developer**,
+and/or the **Community Manager** and makes a decision and communicates it on the
+  GitHub ticket.
 - The ticket is either implemented or closed.
 
 ### Design change
 
-- The person suggesting the change creates a GitHub ticket and tags Anna and Francisco in it for approval.
-- Anna and Francisco make a decision on whether to approve it.
-- If approved, Francisco updates the Design Library with the new design.
+- The person suggesting the change creates a GitHub ticket and tags the **Director of Product** and the **UX Designer**
+in it for approval.
+- The **Director of Product** and the **UX Designer** make a decision on whether to approve it.
+- If approved, the **UX Designer** updates the Design Library with the new design.
 - The change is then implemented in Vocabulary (and if needed, Vue Vocabulary)
 - A new version of Vocabulary is released.
 - All projects using Vocabulary pull in the latest version so that the design change is reflected everywhere.
