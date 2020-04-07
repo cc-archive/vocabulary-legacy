@@ -10,7 +10,9 @@ $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 
 @import "../../node_modules/bulma/sass/components/navbar.sass";
-
+a:hover{
+  text-decoration: underline;
+}
 .navbar {
   padding: $space-bigger;
 
