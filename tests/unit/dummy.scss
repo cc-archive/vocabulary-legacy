@@ -1,6 +1,0 @@
-@include describe('Dummy') {
-  @include it('says Hello World!') {
-    $hello_world: "Hello World!";
-    @include assert-equal($hello_world, "Hello World!");
-  };
-};

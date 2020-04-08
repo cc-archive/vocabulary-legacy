@@ -28,6 +28,7 @@ $button-family: $family-alternative;
   }
 
   &.tiny {
+    font-family: $family-source-sans-pro;
     padding: 0 $space-small;
     font-size: 1rem;
     text-transform: none;
