@@ -13,10 +13,8 @@ $button-family: $family-alternative;
   padding: calc(#{$space-bigger} - .187rem) $space-large;
 
   &:hover {
-   
     background-color: $color-dark-gray;
     color: $color-white;
-   
   }
 
   &.big {
@@ -43,9 +41,9 @@ $button-family: $family-alternative;
     height: 1.81rem;
     border-radius: 18.75rem;
     border: 0.125rem solid $color-light-gray;
-  }
-  &.tag:hover{
-    border-color: $color-dark-gray
+    &:hover{
+      border-color: $color-dark-gray
+    }
   }
 
   &.is-primary:hover {
