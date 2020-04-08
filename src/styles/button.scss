@@ -23,12 +23,12 @@ $button-family: $family-alternative;
   }
 
   &.small {
-    font-family: $family-source-sans-pro;
     font-size: 1rem;
     padding: $space-small calc(#{$space-normal} + .2rem);
   }
 
   &.tiny {
+    font-family: $family-source-sans-pro;
     padding: 0 $space-small;
     font-size: 1rem;
     text-transform: none;
