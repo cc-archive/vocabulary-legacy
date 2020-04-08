@@ -43,6 +43,9 @@ $button-family: $family-alternative;
     height: 1.81rem;
     border-radius: 18.75rem;
     border: 0.125rem solid $color-light-gray;
+    &:hover{
+      border-color: $color-dark-gray
+    }
   }
 
   &.is-primary:hover {
