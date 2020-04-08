@@ -1,10 +1,9 @@
-@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.2/css/fonts.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Roboto+Condensed:400,700|Fira+Code:400");
+@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.5/css/fonts.css");
 
 // Families
 $family-roboto-condensed: 'Roboto Condensed', sans-serif;
 $family-source-sans-pro: 'Source Sans Pro', sans-serif;
-$family-fira-code: 'Fira Code', monospace;
+$family-fira-code: monospace; // Maybe later
 $family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
@@ -38,11 +37,15 @@ $body-font-sizes: (
   "-list": $font-size-body-list,
 );
 
-@each $body-name, $body-font-size in $body-font-sizes {
+@mixin body-typography($body-name, $body-font-size) {
   .body#{$body-name} {
     line-height: 1.3;
     font-size: $body-font-size;
   }
+}
+
+@each $body-name, $body-font-size in $body-font-sizes {
+  @include body-typography($body-name, $body-font-size);
 }
 
 .caption {
@@ -75,9 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02rem;
 
   &.b-header {
-    font-family: $family-source-sans-pro;
+  font-family: $family-source-sans-pro;
 
-    text-transform: none;
+  text-transform: none;
   }
 }
 
@@ -90,10 +93,14 @@ $header-font-sizes: (
   "h6": $font-size-h6,
 );
 
-@each $header-name, $header-font-size in $header-font-sizes {
+@mixin header-typography($header-name, $header-font-size) {
   #{$header-name} {
     font-size: $header-font-size;
   }
+}
+
+@each $header-name, $header-font-size in $header-font-sizes {
+  @include header-typography($header-name, $header-font-size);
 }
 
 body {
