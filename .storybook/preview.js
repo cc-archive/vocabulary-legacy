@@ -8,10 +8,16 @@ import '../dist/css/vocabulary.css'
 const order = {
   'Vocabulary': [
     'Introduction',
+    'Overview',
     'Usage',
     'Contribution'
   ],
-  'Tokens': [],
+  'Tokens': [
+    'Color',
+    'Typography',
+    'Spacing',
+    'Icons'
+  ],
   'Assets': [],
   'Elements': [],
   'Form': [],
