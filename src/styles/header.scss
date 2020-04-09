@@ -1,4 +1,4 @@
-$navbar-height: initial;
+$navbar-height: 5.0625rem;
 
 $navbar-item-color: $color-dark-gray;
 $navbar-item-hover-color: $color-dark-slate-gray;
@@ -41,7 +41,7 @@ $navbar-dropdown-radius: 0;
 
   &.small {
     padding: $space-normal;
-  
+
     .logo {
       height: 42px;
     }
