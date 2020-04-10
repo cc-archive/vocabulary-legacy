@@ -1,0 +1,92 @@
+
+@mixin box {
+	width: 610px;
+	border: 2px solid #D8D8D8;
+	background-color: #FFFFFF;
+}
+
+.active-box {
+	  @include box;
+	  height: 241px;	  
+}
+
+.unvisited-box {
+	@include box;
+	height:77px;
+	background-color: #F5F5F5;
+}
+
+.hover-box {
+	@include box;
+	height:108px;
+	border: 2px solid #B0B0B0;
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.06);
+}
+
+.filled-box {
+	@include box;
+	height:108px;
+	border: 2px solid #B0B0B0;
+}
+
+.no-border{
+	border-top: none;	
+}
+
+.content-position {
+	padding-left: 16px;
+	padding-top: 25px;
+	float:left;
+}
+
+.dot {
+  height: 29px;
+  width: 29px;
+  background-color: #04A635;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+@mixin step-content {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-size: 16px;
+}
+
+.step-num {
+	@include step-content;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.step-title {
+	@include step-content;
+	font-weight: bold;
+	font-size: 20px;
+	color: #000000;
+}
+ 
+.unvisited-content {
+	color: #B0B0B0;
+}
+
+.error {
+	color: #C83B1E;
+}
+
+.unvisited-dot {
+	background-color: #D8D8D8;
+}
+
+.error-dot {
+	background-color: #C83B1E;
+}
+
+.unvisited-num {
+	color: #333333;
+}
