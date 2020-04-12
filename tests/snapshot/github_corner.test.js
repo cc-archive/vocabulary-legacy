@@ -1,8 +1,7 @@
-import { setViewport, goTo } from './helpers'
+import { goTo } from './helpers'
 
 describe('GitHub Corner', () => {
   it('Normal', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--normal')
     const image = await page.screenshot()
 
@@ -10,7 +9,6 @@ describe('GitHub Corner', () => {
   })
 
   it('Inverted', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--inverted')
     const image = await page.screenshot()
 
@@ -18,7 +16,6 @@ describe('GitHub Corner', () => {
   })
 
   it('Left aligned', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--left-aligned')
     const image = await page.screenshot()
 
