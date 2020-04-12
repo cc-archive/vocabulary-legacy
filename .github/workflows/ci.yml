@@ -95,7 +95,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: build
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.16.1'
@@ -112,3 +112,4 @@ jobs:
 
     - name: Run build
       run: npm run build
+      
