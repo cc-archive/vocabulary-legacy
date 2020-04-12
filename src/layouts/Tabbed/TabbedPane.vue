@@ -58,6 +58,3 @@
     }
   }
 </script>
-
-<style src="@creativecommons/vocabulary/css/layouts/TabbedPane.css">
-</style>

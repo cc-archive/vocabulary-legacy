@@ -15,25 +15,14 @@
         </SlotRenderer>
       </li>
     </ul>
-    <Section
-      class="contents"
-      :brand="processedBrand"
-      :color="processedColor"
-      :shade="processedShade"
-      :indication="processedIndication"
-      color-side="bottom"
-      :roundness="roundness ? 'rounded' : null"
-      :is-raised="isRaised"
-      :is-inverted="isInverted"
-      :simplicity="simplicity"
-      is-clingy>
+    <div>
       <SlotRenderer
         v-for="(tabPane, index) in tabPaneList"
         :key="index"
         :component="tabPane"
         tag="div"
         :classList="['content', {active: tabPane.isActive}]"/>
-    </Section>
+    </div>
     <div v-show="false">
       <!-- @slot [`TabbedPane`](#/Layouts/TabbedPane) components go here -->
       <slot/>
@@ -43,8 +32,6 @@
 
 <script>
   import SlotRenderer from '@/utils/SlotRenderer/SlotRenderer'
-
-  import Section from '@/layouts/Section/Section'
 
   import Branded from '@/mixins/branded'
   import Colored from '@/mixins/colored'
@@ -81,8 +68,7 @@
       }
     },
     components: {
-      SlotRenderer,
-      Section
+      SlotRenderer
     },
     props: {
       /**
@@ -219,6 +205,3 @@
     }
   }
 </script>
-
-<style src="@creativecommons/vocabulary/css/layouts/Tabbed.css">
-</style>

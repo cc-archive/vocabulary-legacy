@@ -199,6 +199,3 @@
     }
   }
 </script>
-
-<style src="@creativecommons/vocabulary/css/layouts/Table.css">
-</style>

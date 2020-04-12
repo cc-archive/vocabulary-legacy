@@ -68,6 +68,3 @@
     }
   }
 </script>
-
-<style src="@creativecommons/vocabulary/css/layouts/TableCell.css">
-</style>
