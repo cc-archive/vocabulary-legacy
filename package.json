@@ -4,11 +4,12 @@
   "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
-    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build": "node library/build.js",
-    "storybook": "vue-cli-service storybook:serve -s ./src/assets -p 8080",
-    "build:documentation": "vue-cli-service storybook:build -s ./src/assets -o ./docs"
+    "test:unit": "vue-cli-service test:unit",
+    "build": "vue-cli-service build --target lib --name vue-vocabulary --dest ./dist --entry ./src/index.js",
+    "watch": "npm run build -- --watch",
+    "storybook": "vue-cli-service storybook:serve --ci -s ./src/assets -p 8080",
+    "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
     "@creativecommons/vocabulary": "^1.0.0-beta.2",
