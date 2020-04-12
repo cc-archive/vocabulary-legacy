@@ -39,7 +39,7 @@ $body-font-sizes: (
 
 @mixin body-typography($body-name, $body-font-size) {
   .body#{$body-name} {
-    line-height: $body-font-size * 1.6;
+    line-height: 1.6;
     font-size: $body-font-size;
   }
 }
