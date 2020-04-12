@@ -8,7 +8,7 @@
     "test:unit": "jest -c tests/unit/jest.config.js",
     "test:snapshot": "jest -c tests/snapshot/jest.config.js",
     "build": "webpack --mode production",
-    "watch": "webpack --mode production --watch --progress",
+    "watch": "npm run build -- --watch --progress",
     "storybook": "start-storybook --ci -s ./src/assets -p 8080",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
