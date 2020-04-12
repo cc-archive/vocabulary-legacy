@@ -1,5 +1,5 @@
 @include describe('Spacing') {
-  @include it("created directed spacing classes") {
+  @include it("creates directed spacing classes") {
     @include assert {
       @include output {
         @include directed-spacing(
@@ -20,7 +20,7 @@
     }
   }
 
-  @include it("created undirected spacing classes") {
+  @include it("creates undirected spacing classes") {
     @include assert {
       @include output {
         @include undirected-spacing(
