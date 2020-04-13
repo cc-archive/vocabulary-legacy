@@ -15,9 +15,11 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y google-chrome-unstable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
+    && apk add --nocache udev ttf-freefont chromium git
 
 # Prevent Chromium redownload
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV CHROMIUM_PATH /usr/bin/chromium-browser
 
 # Make a codebase directory and work in it
 RUN mkdir codebase
@@ -36,3 +38,9 @@ USER pptr
 
 # Expose ports on the container
 EXPOSE 8080
+
+# Launch the browser
+puppeteer.launch({
+  executablePath: process.env.CHROMIUM_PATH,
+  args: ['--no-sandbox'],
+});
