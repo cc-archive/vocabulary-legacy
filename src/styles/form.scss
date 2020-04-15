@@ -46,8 +46,8 @@ $input-disabled-border-color: $color-gray;
   select {
     @include form_control;
 
-  option {
-    font-weight: 400;
+    option {
+      font-weight: 400;
     }
   }
 
