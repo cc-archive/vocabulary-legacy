@@ -21,17 +21,9 @@ $input-disabled-border-color: $color-gray;
   border-width: 0.125rem;
 }
 
-// Input actions
-@mixin input-actions {
-  $input-hover: $input-hover-border-color;
-  $input-active: $input-active-border-color;
-  $input-focus: $input-focus-border-color;
-}
-
 // Input
 .input {
   @include form_control;
-  @include input-actions;
   box-sizing: border-box;
   height: 2.5em;
   padding-left: $space-small;
