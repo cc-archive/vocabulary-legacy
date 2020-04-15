@@ -107,3 +107,7 @@ body {
   font-family: $family-sans-serif;
   font-size: $font-size-body-normal;
 }
+
+a:hover{
+  text-decoration: underline;
+}
