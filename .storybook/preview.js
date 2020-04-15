@@ -22,7 +22,8 @@ const order = {
   'Elements': [],
   'Form': [],
   'Layouts': [],
-  'Patterns': []
+  'Patterns': [],
+  'Progress': []
 }
 const families = Object.keys(order)
 
