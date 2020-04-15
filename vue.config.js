@@ -17,17 +17,6 @@ module.exports = {
     }
   },
   chainWebpack: config => {
-    // Embed SVGs using data URLs
-    config.module
-      .rule('svg')
-      .uses
-      .clear()
-
-    config.module
-      .rule('svg')
-      .use('url-loader')
-      .loader('url-loader')
-
     config.module
       .rule('eslint')
       .exclude

@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vue-vocabulary",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.10",
   "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -13,7 +13,7 @@
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/vocabulary": "^1.0.0-beta.2",
+    "@creativecommons/vocabulary": "^1.0.0-beta.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
@@ -54,6 +54,7 @@
     "husky": "^4.2.3",
     "lerna": "^3.19.0",
     "react": "^16.12.0",
+    "react-is": "^16.12.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-i18n": "^0.6.0",

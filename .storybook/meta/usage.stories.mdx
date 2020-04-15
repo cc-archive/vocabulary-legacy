@@ -1,0 +1,118 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Vue Vocabulary/Usage" />
+
+# Usage
+
+We've tried to make it as easy as possible to use Vue Vocabulary in your projects. Depending on your build pipeline you
+might prefer to install Vue Vocabulary via `npm` or via a CDN.
+
+You need to install Vue and [Vue i18n], explaining which is beyond the scope of this guide. The usage of Vue Vocabulary
+requires the installation and usage of Vocabulary. See [Vocabulary installation]. Once you are done with installing all
+of these, resume installation from the steps here.
+
+[Vue i18n]:https://kazupon.github.io/vue-i18n/
+[Vocabulary installation]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-usage--page
+
+## NPM
+
+For a full fledged app, use `npm` (or if you're one of those people, `yarn`) to install Vue Vocabulary.
+
+### Installation
+
+Just install `@creativecommons/vue-vocabulary` using the package manager of your choice.
+
+```bash
+# Remember to install dependencies
+# npm install vue vue-i18n @creativecommons/vocabulary
+$ npm install @creativecommons/vue-vocabulary
+```
+
+### JavaScript
+
+<!-- TODO
+
+Set up the i18n instance.
+
+```js
+const i18n = new VueI18n({
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: {}
+})
+```
+
+Then in the component containing Vocabulary components, import the required components. You will need to register these
+components using Vue.component for global registration or in the components dictionary within your component definition.
+
+```js
+import { Header, Footer, Locale } from '@creativecommons/vue-vocabulary'
+
+export default {
+  components: {
+    Header,
+    Footer,
+    Locale
+  }
+  ...
+}
+```
+
+If you are planning to use a hefty chunk of the components, you can install Vocabulary as a plugin too.
+
+```js
+import VueVocabulary from '@creativecommons/vue-vocabulary'
+
+Vue.use(VueVocabulary)
+```
+
+And your template can go like this.
+
+```html
+<div class="index">
+  <Header app-name="My App"/>
+  <Footer><Locale/></Footer>
+</div>
+```
+-->
+
+Coming soon.
+
+## CDN
+
+To start using Vue Vocabulary for quick prototyping or development you can use one of our CDN-based deployments. Both
+CDNs mirror our `npm` deploys so choose either one based on your personal preference.
+
+Just link to the master CSS and JS files with any of these one-line `link` and `script` tags within your document
+`head` tag.
+
+### Installation
+
+#### unpkg
+
+```html
+<!--
+Remember to install dependencies
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-i18n"></script>
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+-->
+<script type="text/javascript" src="https://unpkg.com/@creativecommons/vue-vocabulary"></script>
+```
+
+#### jsDelivr
+
+```html
+<!--
+Remember to install dependencies
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-i18n"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
+-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@creativecommons/vue-vocabulary"></script>
+```
+
+### JavaScript
+
+<!-- TODO -->
+Coming soon.

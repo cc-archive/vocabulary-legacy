@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    './welcome.stories.js',
+    './meta/*.stories.mdx'
   ],
   addons: [
     '@storybook/addon-knobs',
