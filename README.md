@@ -24,14 +24,14 @@
     <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/fonts.svg?color=brightgreen"/>
   </a>
   <a
-    href="https://circleci.com/gh/creativecommons/fonts/tree/master"
-    style="margin-right: 1em;">
-    <img alt="Circle CI" src="https://circleci.com/gh/creativecommons/fonts/tree/master.svg?style=shield"/>
-  </a>
-  <a
     href="https://github.com/creativecommons/fonts/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
     <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  </a>
+  <a
+    href="https://github.com/creativecommons/fonts/actions"
+    style="margin-right: 1em;">
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/creativecommons/fonts/font-ci/master?label=font-ci"/>
   </a>
   <a 
     href="https://cc-fonts.netlify.com"
