@@ -1,0 +1,40 @@
+@include describe('Spacing') {
+  @include it("creates directed spacing classes") {
+    @include assert {
+      @include output {
+        @include directed-spacing(
+          "padding",
+          "-horizontal",
+          ("-left", "-right"),
+          "-jumbo",
+          10rem
+        );
+      }
+
+      @include expect {
+        .padding-horizontal-jumbo {
+          padding-left: 10rem !important;
+          padding-right: 10rem !important;
+        }
+      }
+    }
+  }
+
+  @include it("creates undirected spacing classes") {
+    @include assert {
+      @include output {
+        @include undirected-spacing(
+          "margin",
+          "-jumbo",
+          10rem
+        )
+      }
+
+      @include expect {
+        .margin-jumbo {
+          margin: 10rem !important;
+        }
+      }
+    }
+  }
+}

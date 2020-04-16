@@ -4,6 +4,8 @@ $input-shadow: none;
 
 $input-focus-box-shadow-color: none;
 $input-focus-border-color: $color-gray;
+$input-hover-border-color: $color-gray;
+$input-active-border-color: $color-gray;
 
 $input-disabled-border-color: $color-gray;
 
@@ -22,7 +24,6 @@ $input-disabled-border-color: $color-gray;
 // Input
 .input {
   @include form_control;
-
   box-sizing: border-box;
   height: 2.5em;
   padding-left: $space-small;
