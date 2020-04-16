@@ -15,6 +15,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y google-chrome-unstable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
+    
 
 # Prevent Chromium redownload
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
@@ -30,6 +31,8 @@ COPY ./package-lock.json ./
 # Install packages
 RUN npm install \
     && chown -R pptr:pptr ./node_modules
+
+RUN npm run test:snapshot
 
 # Run everything after as non-privileged user
 USER pptr
