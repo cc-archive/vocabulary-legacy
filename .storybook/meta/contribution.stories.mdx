@@ -93,3 +93,101 @@ $ npm run storybook
 See [Vocabulary guidelines].
 
 [Vocabulary guidelines]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page
+
+## Changing icons
+
+### Setting up requirements
+
+We use SVGs from the Font Awesome icon set for our icons. Get a copy from their
+[GitHub repository](https://github.com/FortAwesome/Font-Awesome) or from the
+[Download page](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself).
+
+To add, remove, or otherwise modify icons, you need to use [IcoMoon](https://icomoon.io/). IcoMoon is a custom
+icon-font builder, which allows selecting icons and converting them to fonts. IcoMoon can be used without an account,
+but it's recommended to have one.
+
+### Working in IcoMoon
+
+Open the [IcoMoon app](https://icomoon.io/app/).
+<img src="guide/app_button.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+If this is your first time, the Vocabulary project will not be loaded and, instead, one named 'Untitled Project' will.
+Spot this icon in the top right corner.
+<img src="guide/untitled_project.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+Click on the name 'Untitled Project' to go to the Projects page. A page like this should show up.
+<img src="guide/projects_untitled.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+Remove the project 'Untitled Project' by clicking the `Remove` button to the right of the project name. An
+'Import Project' button like the following should appear. Click on it.
+<img src="guide/import_project.png" style={{ maxHeight: '18.5px' }} />
+
+Navigate to `src/fonts/` and select the file `VocabularyIcons.json` which contains JSON data for all the icons in the
+font. Import it to add the 'Vocabulary Icons' project. 'Vocabulary Icons' should now be imported as a project.
+<img src="guide/projects_vocabulary.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+At the end of the process, come back to this Projects page, use the Download option to get the JSON data dump of the
+project and add it to the directory `src/fonts/` as well.
+
+Click the 'Load' button to the right of the project name to start making modifications. This takes us to the Selection
+page.
+<img src="guide/selection.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+Each group on the page has a corresponding code point range.
+
+| Shape set    | Code point        |
+|--------------|-------------------|
+| Pointers     | `\e9**`           |
+| Symbols      | `\ea**` & `\eb**` |
+| CC           | `\ec**`           |
+| Social media | `\ed**`           |
+
+You can select/deselect, delete, move and edit icons using the respective tools in toolbar. Deselected icons will not be
+a part of the icon font, but will still be a part of the project. Removed icons will be removed from the project
+altogether.
+<img src="guide/toolbar.png" style={{ maxHeight: '32px' }} />
+
+To add icons to a new set, use the 'Import Icons' button. To add icons to an existing set, use the 'Import to Set' menu
+option in the context menu of that particular set.
+<img src="guide/import_icons.png" style={{ maxHeight: '32px', verticalAlign: 'middle' }} />
+&emsp;/&emsp;
+<img src="guide/import_to_set.png" className="guide-image" style={{ maxHeight: '107px', verticalAlign: 'middle' }} />
+
+Navigate to the directory containing the SVGs. In the case of FontAwesome it is `svgs/solid/`.
+<img src="guide/directory.png" style={{ maxHeight: '446.5px' }} />
+
+With the icon added, use the move tool to move it to it's right position and select tool to activate it.
+<img src="guide/flag.png" style={{ maxHeight: '72px' }} />
+
+Proceed to the Generate Font section by clicking the navigation button on the bottom of the page. Locate your icon on
+the page. Add the correct code point and ligature for the icon. Ideally, use the next code point of the shape set and
+the same ligature as the icon name.
+<img src="guide/generate_font.png" className="guide-image" style={{ maxHeight: '814px' }} />
+
+Click on the 'Download' button to get the font.
+
+### Updating code
+
+Find the TTF and WOFF files inside the downloaded zip and move them into the directory `src/fonts/`, replacing the ones
+already present there. The file names may be different but you can rename them to match the existing ones.
+
+Add the icon to the SCSS variable `$icons`.
+
+```scss
+$icons: (
+  ...
+  "flag": "\ea0b",
+  ...
+);
+```
+
+Update the story 'Vocabulary Icons' to add the icons to the list.
+
+```html
+<IconGallery>
+  ...
+  <IconItem name="flag">
+    <i class="icon flag"></i>
+  </IconItem>
+</IconGallery>
+```
