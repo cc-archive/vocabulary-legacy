@@ -20,6 +20,18 @@ function indexComponents () {
   writeIndex(fileContent)
 }
 
+function parseRegistryEntry (entry) {
+  let directory, name
+  if (entry instanceof Array) {
+    directory = entry[0]
+    name = entry[1]
+  } else {
+    directory = entry
+    name = entry
+  }
+  return { directory, name }
+}
+
 function formContent () {
   process.stdout.write(chalk.yellow(
     '├─ Forming content for index at',
@@ -31,12 +43,7 @@ function formContent () {
   const imports = families.map(
     family => componentsRegistry[family].map(
       component => {
-        let directory = component
-        let name = component
-        if (name instanceof Array) {
-          directory = component[0]
-          name = name.join('')
-        }
+        let { name, directory } = parseRegistryEntry(component)
         return `import ${name} from './${family}/${directory}/${name}'`
       }
     ).join('\n')
@@ -45,10 +52,7 @@ function formContent () {
   const components = families.map(
     family => componentsRegistry[family].map(
       component => {
-        let name = component
-        if (name instanceof Array) {
-          name = name.join('')
-        }
+        let { name } = parseRegistryEntry(component)
         return `  ${name}`
       }
     ).join(',\n')
@@ -57,10 +61,7 @@ function formContent () {
   const registrations = families.map(
     family => componentsRegistry[family].map(
       component => {
-        let name = component
-        if (name instanceof Array) {
-          name = name.join('')
-        }
+        let { name } = parseRegistryEntry(component)
         return `    Vue.component('${name}', ${name})`
       }
     ).join('\n')
