@@ -9,7 +9,7 @@ $input-active-border-color: $color-gray;
 
 $input-disabled-border-color: $color-gray;
 
-@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "bulma/sass/form/_all.sass";
 
 // Form control
 @mixin form_control {

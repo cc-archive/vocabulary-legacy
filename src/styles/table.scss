@@ -3,7 +3,7 @@ $table-color: $color-dark-slate-gray;
 $table-head-background-color: $color-light-gray;
 
 
-@import "../../node_modules/bulma/sass/elements/table.sass";
+@import "bulma/sass/elements/table.sass";
 
 .number-cell {
   text-align: right !important;
