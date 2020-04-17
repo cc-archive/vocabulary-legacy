@@ -5,6 +5,10 @@ on:
     types:
     - published
 
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+
 jobs:
   deploy:
     name: Deploy
@@ -20,10 +24,7 @@ jobs:
     - name: Install dependencies
       run: npm install --no-audit
 
-    - name: Run build
-      run: npm run build
-
     - name: Publish package
-      run: npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: |
+        cd $GITHUB_WORKSPACE/vocabulary/
+        bash deploy.sh
