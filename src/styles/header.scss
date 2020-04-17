@@ -7,7 +7,7 @@ $navbar-item-hover-background-color: transparent;
 $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 
-@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "bulma/sass/components/navbar.sass";
 
 .navbar {
   padding: $space-bigger;
