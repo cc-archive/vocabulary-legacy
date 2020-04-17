@@ -48,28 +48,6 @@
 In essence Vue Vocabulary is a collection of UI components that incorporate Vocabulary under the hood.
 Vue Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
-
-### Availability
-
-Vocabulary is available as
-- [stylesheets](https://github.com/creativecommons/vocabulary)
-- Vue components _(this repo)_
-
-
-### Demo
-
-The showcase of the true extent of Vocabulary can be found in the
-**[interactive storybook](https://cc-vue-vocabulary.netlify.com/)**
-for the library, showcasing the components therein and variants thereof, on GitHub
-Pages. Search for a particular component using the search field or just explore
-the collection of components. If you find one that catches your fancy, play with
-it on the playground and tweak its knobs.
-
-If it works for you, just pick the code and use it in your own application. If 
-it doesn't and you think more people would love to have this feature open an 
-issue. If something peculiar happens, open a bug report. If you just love it,
-contribute in some way.
-
 <p align="center">
   <a href="https://www.netlify.com">
     <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
@@ -80,11 +58,11 @@ contribute in some way.
 
 ### Using
 
-To use Vue-Vocabulary in your projects, refer to [this document](https://cc-vue-vocabulary.netlify.app/?path=/docs/vocabulary-usage--page).
+To use Vue Vocabulary in your projects, refer to [this document](https://cc-vue-vocabulary.netlify.app/?path=/docs/vue-vocabulary-usage--page).
 
 ### Contributing
 
-To contribute to Vue-Vocabulary, refer to [this document](https://cc-vue-vocabulary.netlify.app/?path=/docs/vue-vocabulary-contribution--page).
+To contribute to Vue Vocabulary, refer to [this document](https://cc-vue-vocabulary.netlify.app/?path=/docs/vue-vocabulary-contribution--page).
 
 ### Disclaimer
 
