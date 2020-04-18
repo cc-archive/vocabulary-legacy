@@ -11,4 +11,4 @@ docker run \
   --name puppeteer-cmd \
   --rm \
   puppeteer:latest \
-  bash
+  "${@:-bash}"
