@@ -1,2 +1,5 @@
-@import "../../node_modules/bulma/sass/elements/container.sass";
-@import "../../node_modules/bulma/sass/grid/_all.sass";
+$fullhd : 1248px + (2 * $gap);
+$column-gap: 3rem;
+
+@import "bulma/sass/elements/container.sass";
+@import "bulma/sass/grid/_all.sass";
