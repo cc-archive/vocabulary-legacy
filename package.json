@@ -10,7 +10,7 @@
     "build": "webpack --mode production",
     "watch": "npm run build -- --watch --progress",
     "storybook": "start-storybook --ci -s ./src/assets -p 8080",
-    "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
+    "snapshot": "npm run build && env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
   "devDependencies": {
