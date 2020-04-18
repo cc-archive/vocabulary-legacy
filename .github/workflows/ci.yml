@@ -112,7 +112,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ./dist  # build script puts compiled files in ./dist
-        key: dist-${{ env.GITHUB_SHA }}
+        key: dist-${{ github.sha }}
 
     - name: Install dependencies
       run: npm install --prefer-offline --no-audit
@@ -133,7 +133,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ./dist  # build script puts compiled files in ./dist
-          key: dist-${{ env.GITHUB_SHA }}
+          key: dist-${{ github.sha }}
 
       - name: Build Puppeteer image
         run: docker build --tag puppeteer:latest --file docker/puppeteer/Dockerfile .
