@@ -95,13 +95,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.16.1'
+    - name: Build Puppeteer image
+      run: docker build --tag puppeteer:latest --file docker/puppeteer/Dockerfile .
 
-    - name: Build the Docker image
-      uses: ./
+    - name: Run tests
+      run: docker/puppeteer/run.sh npm run snapshot
 
   build:
     name: Build
