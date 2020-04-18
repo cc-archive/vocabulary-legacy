@@ -33,6 +33,7 @@ jobs:
         key: node-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: npm install --no-audit
 
   lint:
