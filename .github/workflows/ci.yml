@@ -102,7 +102,7 @@ jobs:
       run: touch docker/puppeteer/env_vars
 
     - name: Run tests
-      run: docker/puppeteer/run.sh npm run snapshot
+      run: docker/puppeteer/run.sh -it npm run snapshot
 
   build:
     name: Build
