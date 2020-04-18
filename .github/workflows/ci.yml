@@ -138,8 +138,17 @@ jobs:
       - name: Build Puppeteer image
         run: docker build --tag puppeteer:latest --file docker/puppeteer/Dockerfile .
 
+      - name: Make directory to store diffs
+        run: mkdir tests/snapshot/__image_snapshots__/__diff_output__
+
       - name: Make an environment variables file
         run: touch docker/puppeteer/env_vars
 
       - name: Run tests
         run: docker/puppeteer/run.sh -it npm run snapshot
+
+      - name: Upload differences
+        uses: actions/upload-artifact@v1
+        with:
+          name: diffs
+          path: tests/snapshot/__image_snapshots__/__diff_output__
