@@ -18,7 +18,7 @@ export const licenseSVG = (size, license) => {
     tag = 'svg width="80" height="15"'
   }
   return `<${tag}>
-<use href="license_badges/${size}/${license}.svg#layer1"></use>
+<use href="license_badges/${size}/${license}.svg#${size}-${license}"></use>
 </svg>`
 }
 
