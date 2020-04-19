@@ -3,3 +3,6 @@ node_modules
 /dist
 /docs
 /build
+/docker
+/.cache
+__image_snapshots__
