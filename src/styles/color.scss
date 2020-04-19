@@ -73,5 +73,5 @@ $brand-colors: (
   @include color-classes($color-namespace, $brand-color);
 };
 
-@import "../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";

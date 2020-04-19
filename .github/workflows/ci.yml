@@ -33,6 +33,7 @@ jobs:
         key: node-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: npm install --no-audit
 
   lint:
@@ -107,8 +108,39 @@ jobs:
         path: ~/.npm  # npm caches files in ~/.npm
         key: node-${{ hashFiles('**/package-lock.json') }}
 
+    - id: cache-build-artifacts
+      name: Cache build artifacts
+      uses: actions/cache@v1
+      with:
+        path: ./dist  # build script puts compiled files in ./dist
+        key: dist-${{ github.sha }}
+
     - name: Install dependencies
       run: npm install --prefer-offline --no-audit
 
     - name: Run build
       run: npm run build
+
+  snapshot:
+    name: Snapshot tests
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - id: cache-build-artifacts
+        name: Cache build artifacts
+        uses: actions/cache@v1
+        with:
+          path: ./dist  # build script puts compiled files in ./dist
+          key: dist-${{ github.sha }}
+
+      - name: Build Puppeteer image
+        run: docker build --tag puppeteer:latest --file docker/puppeteer/Dockerfile .
+
+      - name: Make an environment variables file
+        run: touch docker/puppeteer/env_vars
+
+      - name: Run tests
+        run: docker/puppeteer/run.sh -it npm run snapshot
