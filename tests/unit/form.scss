@@ -1,9 +1,10 @@
-@include describe('Forms'){
-@include it('Assigns font family,font-weight,line-heightand border-width to input box') {
+@include describe("Forms") {
+  @include it("assigns common properties to form controls") {
     @include assert {
       @include output {
         @include form_control();
       }
+
       @include expect {
         font-family: $family-source-sans-pro;
         font-weight: 600;
