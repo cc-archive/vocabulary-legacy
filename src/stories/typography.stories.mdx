@@ -94,12 +94,13 @@ Code can be rendered with the class `.monospace` on the `<p>` tag.
   fontSizes={[
     '0.875rem'
   ]}
-  fontFamily="Fira Code"
+  fontFamily="monospace"
   fontWeight={400}
   sampleText="const x = () => { console.log('Hello World!') }" />
 
 <Story name="Figma" parameters={{
-  design: figmaConfig('0%3A110')
+  design: figmaConfig('0%3A110'),
+  docs: { disable: true }
 }}>{`
   See the Design tab in the panel.
 `}</Story>
