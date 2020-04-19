@@ -49,7 +49,7 @@ describe('License badge', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('CC ZERO', async () => {
+  it('CC Zero', async () => {
     await goTo(page, 'assets-license-badge--cc-zero')
     await pause(1000)
     const image = await page.screenshot()
@@ -57,7 +57,7 @@ describe('License badge', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('PUBLIC DOMAIN', async () => {
+  it('Public domain', async () => {
     await goTo(page, 'assets-license-badge--public-domain')
     await pause(1000)
     const image = await page.screenshot()
