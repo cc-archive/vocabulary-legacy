@@ -1,12 +1,13 @@
 module.exports = {
   stories: [
-    './welcome.stories.mdx',
-    '../src/**/*.stories.mdx'
+    './meta/*.stories.mdx',
+    '../src/stories/*.stories.mdx'
   ],
   addons: [
     'storybook-addon-designs',
     '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
+    '@storybook/addon-viewport',
     '@storybook/addon-docs'
   ]
 }
