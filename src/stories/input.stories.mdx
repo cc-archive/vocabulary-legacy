@@ -5,33 +5,36 @@ import { figmaConfig } from './helpers'
 
 # Input
 
-export const inputType = (inputClass) => `<input class="${inputClass}" type="text" placeholder="Placeholder text"/>
-    <br/><br/>
-    <input class="${inputClass}" type="text" value="Typed text"/>
-    <br/><br/>
-    <input class="${inputClass}" type="text" value="Fixed text" disabled/>`
-
+export const inputType = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+<input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+<br/><br/>
+<input class="input${sizeClass}" type="text" value="Typed text"/>
+<br/><br/>
+<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
+}
 
 <Preview mdxSource={inputType('input')}>
   <Story name="Normal" parameters={{
     design: figmaConfig('1%3A24')
-  }}>{`
-    ${inputType('input')}
-  `}</Story>
+  }}>{
+    inputType('')
+  }</Story>
 </Preview>
 
 <Preview mdxSource={inputType('input is-medium')}>
-  <Story name="Big" parameters={{
+  <Story name="Medium" parameters={{
     design: figmaConfig('1%3A24')
   }}>{`
-    ${inputType('input is-medium')}
+    ${inputType('medium')}
   `}</Story>
 </Preview>
 
 <Preview mdxSource={inputType('input is-large')}>
-  <Story name="Huge" parameters={{
+  <Story name="Large" parameters={{
     design: figmaConfig('1%3A24')
   }}>{`
-    ${inputType('input is-large')}
+    ${inputType('large')}
   `}</Story>
 </Preview>
