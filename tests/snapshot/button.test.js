@@ -8,7 +8,7 @@ describe('Buttons', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Bigbutton', async () => {
+  it('BigButton', async () => {
     await goTo(page, 'elements-buttons--big-button')
     const image = await page.screenshot()
 
