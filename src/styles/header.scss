@@ -1,5 +1,3 @@
-$navbar-height: initial;
-
 $navbar-item-color: $color-dark-gray;
 $navbar-item-hover-color: $color-dark-slate-gray;
 $navbar-item-active-color: $color-dark-slate-gray;
@@ -9,14 +7,13 @@ $navbar-item-hover-background-color: transparent;
 $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 
-@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "bulma/sass/components/navbar.sass";
 
 .navbar {
   padding: $space-bigger;
 
   .logo {
     height: 46px;
-    margin-left: $space-xxl;
   }
 
   .navbar-burger span {
@@ -42,7 +39,7 @@ $navbar-dropdown-radius: 0;
 
   &.small {
     padding: $space-normal;
-  
+
     .logo {
       height: 42px;
     }
