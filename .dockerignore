@@ -5,3 +5,4 @@ node_modules
 /build
 /docker
 /.cache
+__image_snapshots__

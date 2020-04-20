@@ -4,6 +4,7 @@ node_modules
 /build
 /docs
 /.cache
+__diff_output__
 
 # local env files
 .env.local
