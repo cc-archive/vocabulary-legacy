@@ -65,7 +65,7 @@ describe('Cards', () => {
   })
 
   it('ImageTop', async () => {
-    await goTo(page, 'layouts-cards--image-top')    
+    await goTo(page, 'layouts-cards--image-top')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
