@@ -3,7 +3,7 @@ export const goTo = async (page, id) => {
   if (!storybookOrigin) {
     storybookOrigin = 'http://localhost:8080'
   }
-  await page.goto(`${storybookOrigin}/iframe.html?id=${id}`)
+  await page.goto(`${storybookOrigin}/iframe.html?id=${id}`, { waitUntil: 'load' })
 }
 
 export const pause = (ms) => new Promise(resolve => setTimeout(() => resolve(), ms))
