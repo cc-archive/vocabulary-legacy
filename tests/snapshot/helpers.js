@@ -5,5 +5,3 @@ export const goTo = async (page, id) => {
   }
   await page.goto(`${storybookOrigin}/iframe.html?id=${id}`, { waitUntil: 'load' })
 }
-
-export const pause = (ms) => new Promise(resolve => setTimeout(() => resolve(), ms))
