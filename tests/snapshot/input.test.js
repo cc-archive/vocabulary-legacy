@@ -8,15 +8,15 @@ describe('Input', () => {
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Big', async () => {
-    await goTo(page, 'form-input--big')
+  it('Medium', async () => {
+    await goTo(page, 'form-input--medium')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
 
-  it('Huge', async () => {
-    await goTo(page, 'form-input--huge')
+  it('Large', async () => {
+    await goTo(page, 'form-input--large')
     const image = await page.screenshot()
 
     expect(image).toMatchImageSnapshot()

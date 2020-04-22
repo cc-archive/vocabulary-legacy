@@ -5,42 +5,36 @@ import { figmaConfig } from './helpers'
 
 # Input
 
-<Preview>
+export const inputType = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+<input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+<br/><br/>
+<input class="input${sizeClass}" type="text" value="Typed text"/>
+<br/><br/>
+<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
+}
+
+<Preview mdxSource={inputType('input')}>
   <Story name="Normal" parameters={{
     design: figmaConfig('1%3A24')
+  }}>{
+    inputType('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputType('input is-medium')}>
+  <Story name="Medium" parameters={{
+    design: figmaConfig('1%3A24')
   }}>{`
-    <input class="input" type="text" placeholder="Placeholder text"/>
-    <br/><br/>
-    <input class="input" type="text" value="Typed text"/>
-    <br/><br/>
-    <input class="input" type="text" value="Fixed text" disabled/>
+    ${inputType('medium')}
   `}</Story>
 </Preview>
 
-The big version of the component is associated with the `is-medium` class offered by Bulma.
-
-<Preview>
-  <Story name="Big" parameters={{
+<Preview mdxSource={inputType('input is-large')}>
+  <Story name="Large" parameters={{
     design: figmaConfig('1%3A24')
   }}>{`
-    <input class="input is-medium" type="text" placeholder="Placeholder text"/>
-    <br/><br/>
-    <input class="input is-medium" type="text" value="Typed text"/>
-    <br/><br/>
-    <input class="input is-medium" type="text" value="Fixed text" disabled/>
-  `}</Story>
-</Preview>
-
-The huge version of the component is associated with the `is-large` class offered by Bulma.
-
-<Preview>
-  <Story name="Huge" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{`
-    <input class="input is-large" type="text" placeholder="Placeholder text"/>
-    <br/><br/>
-    <input class="input is-large" type="text" value="Typed text"/>
-    <br/><br/>
-    <input class="input is-large" type="text" value="Typed text" disabled/>
+    ${inputType('large')}
   `}</Story>
 </Preview>
