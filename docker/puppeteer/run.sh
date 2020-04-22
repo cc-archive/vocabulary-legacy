@@ -1,7 +1,18 @@
 #!/bin/bash
 
+INTERACTIVE="--interactive"
+TTY="--tty"
+while getopts ":it" opt; do
+  case ${opt} in
+    i)    INTERACTIVE="" ;;
+    t)    TTY="" ;;
+    [?])  ;;
+  esac
+done
+shift $((OPTIND-1))
+
 docker run \
-  --interactive --tty \
+  ${INTERACTIVE} ${TTY} \
   --cap-add=SYS_ADMIN \
   --shm-size=1gb \
   --volume node_modules:/codebase/node_modules \
@@ -11,4 +22,4 @@ docker run \
   --name puppeteer-cmd \
   --rm \
   puppeteer:latest \
-  bash
+  "${@:-bash}"

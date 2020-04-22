@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vocabulary",
-  "version": "1.0.0-beta.10",
+  "version": "1.0.0-beta.11",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -10,6 +10,7 @@
     "build": "webpack --mode production",
     "watch": "npm run build -- --watch --progress",
     "storybook": "start-storybook --ci -s ./src/assets -p 8080",
+    "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
   "devDependencies": {
