@@ -25,6 +25,4 @@ jobs:
       run: npm install --no-audit
 
     - name: Publish package
-      run: |
-        cd $GITHUB_WORKSPACE/vocabulary/
-        bash deploy.sh
+      run: bash deploy.sh
