@@ -66,4 +66,12 @@ $button-family: $family-alternative;
       color: $color-black;
     }
   }
+
+  &.is-text {
+    text-decoration: none;
+    &:hover, &:active, &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
 }
