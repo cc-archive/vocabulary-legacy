@@ -3,10 +3,10 @@
     "SlotRenderer"
   ],
   "layouts": [
-    "Tabbed",
-    ["Tabbed", "Pane"],
+    "Tabs",
+    ["Tabs", "Tab"],
     "Table",
-    ["Table", "Cell"]
+    ["Table", "TableCell"]
   ],
   "patterns": [
     "Footer",
