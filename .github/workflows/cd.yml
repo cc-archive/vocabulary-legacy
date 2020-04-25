@@ -1,0 +1,28 @@
+name: fonts-cd
+
+on:
+  release:
+    types:
+    - published
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.16.1'
+
+    - name: Install dependencies
+      run: npm install --no-audit
+
+    - name: Publish package
+      run: bash deploy.sh
