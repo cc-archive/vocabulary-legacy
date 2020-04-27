@@ -4,7 +4,8 @@ describe('Footer', () => {
   it('Default', async () => {
     await goTo(page, 'patterns-footer--default-story')
     await pause(1000)
-    const image = await page.screenshot()
+    const el = await page.$('footer')
+    const image = await el.screenshot()
 
     expect(image).toMatchImageSnapshot()
   })
