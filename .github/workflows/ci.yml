@@ -145,8 +145,7 @@ jobs:
       - name: Run tests
         run: docker/puppeteer/run.sh -it npm run snapshot
 
-      - name: Upload math result for job 1
+      - name: Upload diff_outputs
         uses: actions/upload-artifact@v1
         with:
-          name: homework
-          path: math-homework.txt
+          path: tests/snapshot/image_snapshots
