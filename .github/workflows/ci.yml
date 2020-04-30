@@ -25,11 +25,18 @@ jobs:
       with:
         node-version: '12.16.1'
 
+    - id: cache-npm-folder
+      name: Cache npm-cache installation folder
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm  # npm caches files in ~/.npm
+        key: node-${{ hashFiles('**/package-lock.json') }}
+
     - id: cache-node-modules
       name: Cache Node.js modules
       uses: actions/cache@v1
       with:
-        path: ~/.npm  # npm caches files in ~/.npm
+        path: ./node_modules  # cache Node Modules in ./node_modules folder
         key: node-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
@@ -49,14 +56,22 @@ jobs:
       with:
         node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
+    - id: cache-npm-folder
+      name: Cache npm-cache installation folder
       uses: actions/cache@v1
       with:
         path: ~/.npm  # npm caches files in ~/.npm
         key: node-${{ hashFiles('**/package-lock.json') }}
 
+    - id: cache-node-modules
+      name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules  # cache Node Modules in ./node_modules folder
+        key: node-${{ hashFiles('**/package-lock.json') }}
+
     - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: npm install --prefer-offline --no-audit
 
     - name: Run lint
@@ -75,14 +90,22 @@ jobs:
       with:
         node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
+    - id: cache-npm-folder
+      name: Cache npm-cache installation folder
       uses: actions/cache@v1
       with:
         path: ~/.npm  # npm caches files in ~/.npm
         key: node-${{ hashFiles('**/package-lock.json') }}
 
+    - id: cache-node-modules
+      name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules  # cache Node Modules in ./node_modules folder
+        key: node-${{ hashFiles('**/package-lock.json') }}
+
     - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: npm install --prefer-offline --no-audit
 
     - name: Run tests
@@ -101,8 +124,8 @@ jobs:
       with:
         node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
+    - id: cache-npm-folder
+      name: Cache npm-cache installation folder
       uses: actions/cache@v1
       with:
         path: ~/.npm  # npm caches files in ~/.npm
@@ -115,7 +138,15 @@ jobs:
         path: ./dist  # build script puts compiled files in ./dist
         key: dist-${{ github.sha }}
 
+    - id: cache-node-modules
+      name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules  # cache Node Modules in ./node_modules folder
+        key: node-${{ hashFiles('**/package-lock.json') }}
+    
     - name: Install dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: npm install --prefer-offline --no-audit
 
     - name: Run build
