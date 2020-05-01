@@ -1,0 +1,42 @@
+@import "bulma/sass/elements/tag.sass";
+
+.tag:not(body) {
+  @extend .tag.is-rounded;
+  overflow: hidden;
+
+  font-size: 0.8125rem;
+  font-weight: bold;
+
+  padding: $space-small $space-normal;
+  border: 0.125rem solid $color-light-gray;
+
+  background-color: $color-white;
+  color: $color-dark-gray;
+
+  &:not(.removable) {
+    &:hover {
+      background-color: $color-dark-gray;
+      color: $white;
+    }
+  }
+
+  &.removable {
+    .is-delete {
+      border-radius: 0;
+      margin-left: $space-normal;
+      margin-right: calc(-#{$space-normal} - 0.130rem);
+    }
+
+    &:hover {
+      .is-delete {
+        border-color: $color-dark-gray;
+        background-color: $color-dark-gray;
+        color: $white;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: $color-dark-gray;
+  }
+}

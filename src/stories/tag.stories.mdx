@@ -1,0 +1,28 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Elements/Tag" />
+
+# Tag
+
+Tags are created by adding the `.tag` class to a `<span>`.
+
+<Preview>
+  <Story name="Default" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{`
+    <span class="tag">
+      Tag
+    </span>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Removable" parameters={{
+  }}>{`
+    <span class="tag removable">
+      Tag
+      <a class="tag is-delete"></a>
+    </span>
+  `}</Story>
+</Preview>

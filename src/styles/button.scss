@@ -6,11 +6,34 @@ $button-family: $family-alternative;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0;
+
+  font-size: 1rem;
+  padding: $space-small calc(#{$space-normal} + .2rem);
+
+  &.is-large {
+    font-size: 1.75rem;
+    padding: calc(#{$space-large} - .093rem) $space-large;
+  }
+
+  &.is-medium {
+    font-size: 1.43rem;
+    padding: calc(#{$space-bigger} - .187rem) $space-large;
+  }
+
+  &.is-small {
+    text-transform: none;
+
+    font-family: $family-sans-serif;
+    font-size: 1rem;
+    padding: 0 $space-small;
+
+    height: 2rem;
+    border-radius: 4px;
+  }
+
   border: 0.125rem solid $color-dark-gray;
   color: $color-dark-gray;
   background-color: $color-white;
-  font-size: 1.43rem;
-  padding: calc(#{$space-bigger} - .187rem) $space-large;
 
   &:hover {
     background-color: $color-dark-gray;
@@ -18,46 +41,16 @@ $button-family: $family-alternative;
     color: $color-white;
   }
 
-  &.big {
-    font-size: 1.75rem;
-    padding: calc(#{$space-large} - .093rem) $space-large;
-  }
+  &.is-primary{
+    @extend .has-background-tomato;
 
-  &.small {
-    font-size: 1rem;
-    padding: $space-small calc(#{$space-normal} + .2rem);
-  }
-
-  &.tiny {
-    font-family: $family-source-sans-pro;
-    padding: 0 $space-small;
-    font-size: 1rem;
-    text-transform: none;
-    height: 2rem;
-  }
-
-  &.tag {
-    padding: 0 $space-normal;
-    font-size: 0.81rem;
-    text-transform: none;
-    height: 1.81rem;
-    border-radius: 18.75rem;
-    border: 0.125rem solid $color-light-gray;
-    &:hover{
-      border-color: $color-dark-gray
+    &:hover {
+      background-color: $color-brighter-tomato;
     }
   }
 
-  &.is-primary:hover {
-    background-color: $color-brighter-tomato;
-  }
-
-  &.is-info:hover {
-    background-color: $color-brighter-forest-green;
-  }
-
   &.donate {
-    background-color: $color-gold;
+    @extend .has-background-gold;
     border: none;
     color: $color-black;
 

@@ -1,0 +1,92 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Elements/Button" />
+
+# Button
+
+Buttons are created by adding the `.button` class to a `<button>`.
+
+You can customize the size of buttons with the `.is-large`, `.is-medium` and `.is-small` classes.
+
+export const buttonType = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+<button class="button${sizeClass}">Button</button>
+<button class="button${sizeClass}"><i class="icon external-link"></i>&emsp;Button</button>`
+}
+
+<Preview mdxSource={buttonType('large')}>
+  <Story name="Large" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    ${buttonType('large')}
+  `}</Story>
+</Preview>
+
+<Preview mdxSource={buttonType('medium')}>
+  <Story name="Medium" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    ${buttonType('medium')}
+  `}</Story>
+</Preview>
+
+<Preview mdxSource={buttonType('')}>
+  <Story name="Normal" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    ${buttonType('')}
+  `}</Story>
+</Preview>
+
+<Preview mdxSourc={buttonType('small')}>
+  <Story name="Small" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    ${buttonType('small')}
+  `}</Story>
+</Preview>
+
+You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
+
+<Preview>
+  <Story name="Primary" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    <button class="button is-primary">Button</button>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Donate" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{`
+    <button class="button donate">
+      <i class="icon cc-letterheart"></i>&emsp;Button
+    </button>
+  `}</Story>
+</Preview>
+
+Buttons may have four feedback colors such as `.is-info`, `.is-success`, `.is-warning` and `.is-danger`.
+
+<Preview>
+  <Story name="Feedback" height="400px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{`
+    <button class="button is-info">Button</button><br/><br/>
+    <button class="button is-success">Button</button><br/><br/>
+    <button class="button is-warning">Button</button><br/><br/>
+    <button class="button is-danger">Button</button>
+  `}</Story>
+</Preview>
+
+You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
+
+<Preview>
+  <Story name="Text" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{`
+    <button class="button is-text">Button</button>
+  `}</Story>
+</Preview>
