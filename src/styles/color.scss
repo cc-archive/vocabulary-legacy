@@ -23,6 +23,8 @@ $color-brighter-gold: rgb(245, 212, 0);
 $color-brighter-forest-green: rgb(0, 184, 80);
 
 // Feedback
+$color-dark-info: rgb(4, 166, 53);
+$color-light-info: rgb(0, 184, 80);
 $color-dark-success: rgb(4, 166, 53);
 $color-light-success: rgb(224, 242, 191);
 $color-dark-warning: rgb(242, 171, 32);
@@ -41,7 +43,7 @@ $blue: $color-dark-slate-blue;
 $primary: $color-tomato;
 
 $success: $color-dark-success;
-$info: $color-forest-green;
+$info: $color-dark-info;
 $warning: $color-dark-warning;
 $danger: $color-dark-error;
 
@@ -74,6 +76,8 @@ $brand-colors: (
 };
 
 $feedback-colors: (
+  "dark-info": $color-dark-info,
+  "light-info": $color-light-info,
   "dark-success": $color-dark-success,
   "light-success": $color-light-success,
   "dark-warning": $color-dark-warning,
