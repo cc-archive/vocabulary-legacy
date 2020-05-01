@@ -49,6 +49,17 @@ $link: $color-tomato;
 $link-visited: $color-tomato;
 
 // Classes
+@mixin color-classes($color-namespace, $brand-color) {
+  .has-background-#{$color-namespace} {
+    background-color: $brand-color;
+  }
+
+  .has-text-#{$color-namespace}, // Bulma convention
+  .has-color-#{$color-namespace} {
+    color: $brand-color;
+  }
+}
+
 $brand-colors: (
   "tomato": $color-tomato,
   "orange": $color-orange,
@@ -58,19 +69,20 @@ $brand-colors: (
   "dark-slate-blue": $color-dark-slate-blue,
   "dark-slate-gray": $color-dark-slate-gray);
 
-@mixin color-classes($color-namespace, $brand-color) {
-  .has-background-#{$color-namespace} {
-    background-color: $brand-color;
-  }
-  
-  .has-text-#{$color-namespace}, // Bulma convention
-  .has-color-#{$color-namespace} {
-    color: $brand-color;
-  }
-}
-
 @each $color-namespace, $brand-color in $brand-colors {
   @include color-classes($color-namespace, $brand-color);
+};
+
+$feedback-colors: (
+  "dark-success": $color-dark-success,
+  "light-success": $color-light-success,
+  "dark-warning": $color-dark-warning,
+  "light-warning": $color-light-warning,
+  "dark-error": $color-dark-error,
+  "light-error": $color-light-error);
+
+@each $color-namespace, $feedback-color in $feedback-colors {
+  @include color-classes($color-namespace, $feedback-color);
 };
 
 @import "bulma/sass/utilities/_all.sass";
