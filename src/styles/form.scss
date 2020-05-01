@@ -28,6 +28,10 @@ $input-disabled-border-color: $color-gray;
   height: 2.5em;
   padding-left: $space-small;
 
+  &.is-small {
+
+  }
+
   &.is-medium {
     font-size: 1.43rem;
     height: 3.875rem;

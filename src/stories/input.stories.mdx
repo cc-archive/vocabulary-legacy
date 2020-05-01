@@ -5,6 +5,10 @@ import { figmaConfig } from './helpers'
 
 # Input
 
+Inputs are created by adding the `.input` class to an `<input>`.
+
+You can customize the size of inputs with the `.is-large` and `.is-medium` classes.
+
 export const inputType = (size) => {
   let sizeClass = size ? ` is-${size}` : ''
   return `
@@ -15,15 +19,15 @@ export const inputType = (size) => {
 <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
 }
 
-<Preview mdxSource={inputType('input')}>
-  <Story name="Normal" parameters={{
+<Preview mdxSource={inputType('large')}>
+  <Story name="Large" parameters={{
     design: figmaConfig('1%3A24')
-  }}>{
-    inputType('')
-  }</Story>
+  }}>{`
+    ${inputType('large')}
+  `}</Story>
 </Preview>
 
-<Preview mdxSource={inputType('input is-medium')}>
+<Preview mdxSource={inputType('medium')}>
   <Story name="Medium" parameters={{
     design: figmaConfig('1%3A24')
   }}>{`
@@ -31,10 +35,10 @@ export const inputType = (size) => {
   `}</Story>
 </Preview>
 
-<Preview mdxSource={inputType('input is-large')}>
-  <Story name="Large" parameters={{
+<Preview mdxSource={inputType('')}>
+  <Story name="Normal" parameters={{
     design: figmaConfig('1%3A24')
-  }}>{`
-    ${inputType('large')}
-  `}</Story>
+  }}>{
+    inputType('')
+  }</Story>
 </Preview>
