@@ -1,17 +1,23 @@
-import { goTo } from './helpers'
+import { goTo, customSnapshotIdentifier } from './helpers'
 
-describe('GlobalHeader', () => {
+describe('Global header', () => {
   it('Inactive', async () => {
     await goTo(page, 'patterns-global-header--inactive')
-    const image = await page.screenshot()
+    const component = await page.$('div#root') // As header.cc-global-header is y-translated out of the page
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('Active', async () => {
     await goTo(page, 'patterns-global-header--active')
-    const image = await page.screenshot()
+    const component = await page.$('header.cc-global-header')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })
