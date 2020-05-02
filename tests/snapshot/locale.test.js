@@ -1,10 +1,13 @@
-import { goTo } from './helpers'
+import { goTo, customSnapshotIdentifier } from './helpers'
 
 describe('Locale', () => {
   it('Default', async () => {
     await goTo(page, 'patterns-locale--default-story')
-    const image = await page.$('div')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('div.locale')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })

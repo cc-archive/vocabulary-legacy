@@ -1,24 +1,33 @@
-import { goTo } from './helpers'
+import { goTo, customSnapshotIdentifier } from './helpers'
 
 describe('Input', () => {
   it('Normal', async () => {
     await goTo(page, 'form-input--normal')
-    const image = await page.$('input')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('div#root')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('Medium', async () => {
     await goTo(page, 'form-input--medium')
-    const image = await page.$('input')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('div#root')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('Large', async () => {
     await goTo(page, 'form-input--large')
-    const image = await page.$('input')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('div#root')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })

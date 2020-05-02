@@ -1,17 +1,23 @@
-import { goTo } from './helpers'
+import { goTo, customSnapshotIdentifier } from './helpers'
 
 describe('Table', () => {
-  it('BasicContent', async () => {
+  it('Basic Content', async () => {
     await goTo(page, 'layouts-table--basic-content')
-    const image = await page.$('table')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('table.table')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
-  it('RichContent', async () => {
+  it('Rich Content', async () => {
     await goTo(page, 'layouts-table--rich-content')
-    const image = await page.$('table')
-    const ss = await image.screenshot()
-    expect(ss).toMatchImageSnapshot()
+    const component = await page.$('table.table')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })
