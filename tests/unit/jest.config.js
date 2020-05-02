@@ -1,3 +1,4 @@
 module.exports = {
-  testRegex: './*\\.test\\.js$'
+  testRegex: './*\\.test\\.js$',
+  testRunner: 'jest-circus/runner'
 }

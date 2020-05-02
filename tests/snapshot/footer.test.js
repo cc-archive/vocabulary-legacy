@@ -1,12 +1,14 @@
-import { goTo, pause } from './helpers'
+import { goTo, pause, customSnapshotIdentifier } from './helpers'
 
 describe('Footer', () => {
   it('Default', async () => {
     await goTo(page, 'patterns-footer--default-story')
     await pause(1000)
-    const el = await page.$('footer')
-    const image = await el.screenshot()
+    const component = await page.$('footer')
+    const image = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(image).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })

@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vocabulary",
-  "version": "1.0.0-beta.13",
+  "version": "1.0.0-beta.14",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -35,6 +35,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "husky": "^4.2.3",
     "jest": "^25.2.3",
+    "jest-circus": "^25.2.3",
     "jest-image-snapshot": "^2.12.0",
     "jest-puppeteer": "^4.4.0",
     "mini-css-extract-plugin": "^0.9.0",
