@@ -79,7 +79,8 @@ $icons: (
   "twitter": "\ed01",
   "linkedin": "\ed02",
   "facebook": "\ed03",
-  "pinterest": "\ed04"
+  "pinterest": "\ed04",
+  "slack": "\ed05",
 );
 
 @mixin icon($icon-class, $icon-codepoint) {
@@ -97,12 +98,14 @@ $twitter-brand: #1da1f2;
 $linkedin-brand: #0077b5;
 $facebook-brand: #3b5998;
 $pinterest-brand: #bd081c;
+$slack-brand: #7c2852;
 $brand-colors: (
   "facebook": $facebook-brand,
   "twitter": $twitter-brand,
   "instagram": $instagram-brand,
   "linkedin": $linkedin-brand,
-  "pinterest": $pinterest-brand
+  "pinterest": $pinterest-brand,
+  "slack": $slack-brand
 );
 
 @mixin branded-icon($icon-class, $icon-color) {
