@@ -9,7 +9,7 @@ import { figmaConfig } from './helpers'
 
 export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `<svg
   xmlns="http://www.w3.org/2000/svg"
-  preserveAspectRatio="xMidyMid meet"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 ${viewBoxX} ${viewBoxY}">
   <use href="logos/${fileName}.svg#${id}"></use>
 </svg>`
@@ -177,7 +177,7 @@ ${svgCode(250, 81, 'products/search', 'search')}`
 export const certificates = (type) => `<style>svg { height: 174px; }</style>
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  preserveAspectRatio="xMidyMid meet"
+  preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 160 174">
   <use href="logos/products/certificates.svg#certificates"></use>
   <use href="logos/products/certificates.svg#${type}_dots"></use>

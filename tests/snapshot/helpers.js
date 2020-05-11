@@ -7,3 +7,9 @@ export const goTo = async (page, id) => {
 }
 
 export const pause = (ms) => new Promise(resolve => setTimeout(() => resolve(), ms))
+
+export const customSnapshotIdentifier = (config) => {
+  const counter = config.counter
+  const defaultIdentifier = config.defaultIdentifier
+  return `${defaultIdentifier}-${counter}`
+}
