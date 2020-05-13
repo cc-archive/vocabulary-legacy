@@ -2,6 +2,11 @@
 # Build on top of a Node.js + npm image
 FROM node:lts
 
+# Create a non-root user so as to not tamper with privileges
+RUN groupadd -r pptr && useradd -r -g pptr -G audio,video pptr \
+    && mkdir -p /home/pptr \
+    && chown -R pptr:pptr /home/pptr
+
 # Install all necessary dependencies to run Chromium in the container
 RUN apt-get update \
     && apt-get install -y wget gnupg \
@@ -11,10 +16,8 @@ RUN apt-get update \
     && apt-get install -y google-chrome-unstable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-# Create a non-root user so as to not tamper with privileges
-RUN groupadd -r pptr && useradd -r -g pptr -G audio,video pptr \
-    && mkdir -p /home/pptr \
-    && chown -R pptr:pptr /home/pptr
+# Prevent Chromium redownload
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Make a codebase directory and work in it
 RUN mkdir codebase

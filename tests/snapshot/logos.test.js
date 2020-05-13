@@ -1,84 +1,102 @@
-import { setViewport, goTo, pause } from './helpers'
+import { goTo, pause, customSnapshotIdentifier } from './helpers'
 
 describe('Logos', () => {
   it('CC Logomark', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-logomark')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Lettermark', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-lettermark')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Letterheart', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-letterheart')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Global Network', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-global-network')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Open Source', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-open-source')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Vocabulary', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-vocabulary')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Search', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-search')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Certificates Colorful', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-certificates-colorful')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('CC Certificates Monochrome', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-logos--cc-certificates-monochrome')
     await pause(1000)
-    const image = await page.screenshot()
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })

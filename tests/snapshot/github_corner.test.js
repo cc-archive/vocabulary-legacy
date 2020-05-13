@@ -1,27 +1,33 @@
-import { setViewport, goTo } from './helpers'
+import { goTo, customSnapshotIdentifier } from './helpers'
 
-describe('GitHub Corner', () => {
+describe('GitHub corner', () => {
   it('Normal', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--normal')
-    const image = await page.screenshot()
+    const component = await page.$('a.github-corner')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('Inverted', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--inverted')
-    const image = await page.screenshot()
+    const component = await page.$('a.github-corner')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 
   it('Left aligned', async () => {
-    await setViewport(page)
     await goTo(page, 'assets-github-corner--left-aligned')
-    const image = await page.screenshot()
+    const component = await page.$('a.github-corner')
+    const ss = await component.screenshot()
 
-    expect(image).toMatchImageSnapshot()
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
   })
 })

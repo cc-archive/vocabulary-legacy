@@ -6,7 +6,7 @@ $tabs-link-hover-color: $color-dark-slate-gray;
 $tabs-link-active-border-bottom-color: $color-dark-slate-gray;
 $tabs-link-active-color: $color-dark-slate-gray;
 
-@import "../../node_modules/bulma/sass/components/tabs.sass";
+@import "bulma/sass/components/tabs.sass";
 
 .tabs {
   font-family: $family-source-sans-pro;
@@ -14,6 +14,7 @@ $tabs-link-active-color: $color-dark-slate-gray;
   a {
     font-size: $font-size-h5;
     font-weight: 700;
+    text-decoration: none;
   }
 }
 
