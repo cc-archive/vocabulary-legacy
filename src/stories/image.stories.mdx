@@ -6,15 +6,16 @@ import { figmaConfig } from './helpers'
 # Image
 
 The image component is not restricted to a specific size; it must be used
-depending on the content type and its container. If it is placed as a single
+depending on the content type and its container.If it is placed as a single
 image within the content, it should follow the grid columns.
 
-<Preview>
+< Preview >
   <Story name="Default" height="400px" parameters={{
-    design: figmaConfig('576%3A1')}}>{`
+    design: figmaConfig('576%3A1')
+  }}>{`
     <div class="image" style="max-width: 512px;">
       <img src="demo/broadway_tower.jpg">
-      <div class="image-title" style="text-overflow: ellipsis">
+      <div class="image-title">
         Broadway Tower
       </div>
       <div class="image-icons">
@@ -24,9 +25,9 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Preview >
 
-[Broadway Tower](https://commons.wikimedia.org/wiki/File:Broadway_tower.jpg)
-by
-[Newton2](https://en.wikipedia.org/wiki/User:Newton2)
-([CC BY](https://creativecommons.org/licenses/by/2.5/))
+  [Broadway Tower](https://commons.wikimedia.org/wiki/File:Broadway_tower.jpg)
+    by
+    [Newton2](https://en.wikipedia.org/wiki/User:Newton2)
+      ([CC BY](https://creativecommons.org/licenses/by/2.5/))
