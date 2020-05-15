@@ -9,6 +9,18 @@ $navbar-dropdown-radius: 0;
 
 @import "bulma/sass/components/navbar.sass";
 
+a:hover {
+  text-decoration: none;
+}
+
+a.navbar-item-hover{
+  color: darkslategray;
+}
+
+i.icon{
+  font-size: 15px; 
+}
+
 .navbar {
   padding: $space-bigger;
 
@@ -27,9 +39,11 @@ $navbar-dropdown-radius: 0;
   .navbar-end {
     .navbar-item {
       font-family: $family-roboto-condensed;
-      font-size: $font-size-h5;
+      font-size: 16px;
       font-weight: bold;
       text-transform: uppercase;
+      line-height:  24px;
+      letter-spacing: 2%;
 
       .icon {
         margin-left: $space-small;
