@@ -213,3 +213,36 @@ export const certificatesMonochrome = certificates('monochrome')
     whiteText(certificatesMonochrome)
   }</Story>
 </Preview>
+
+export const chooser = `<style>svg { height: 76px; }</style>
+${svgCode(250, 76, 'products/chooser', 'chooser')}`
+
+<Preview mdxSource={blackText(chooser)}>
+  <Story name="CC Chooser" height="128px" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{
+    blackText(chooser)
+  }</Story>
+</Preview>
+
+export const globalSummit = `<style>svg { height: 79px; }</style>
+${svgCode(280, 79, 'products/global_summit', 'global_summit')}`
+
+<Preview mdxSource={blackText(globalSummit)}>
+  <Story name="CC Global Summit" height="128px" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{
+    blackText(globalSummit)
+  }</Story>
+</Preview>
+
+export const stateCommons = `<style>svg { height: 79px; }</style>
+${svgCode(380, 79, 'products/state_of_the_commons', 'state_of_the_commons')}`
+
+<Preview mdxSource={blackText(stateCommons)}>
+  <Story name="CC State of the commons" height="128px" parameters={{
+    design: figmaConfig('784%3A1')
+  }}>{
+    blackText(stateCommons)
+  }</Story>
+</Preview>
