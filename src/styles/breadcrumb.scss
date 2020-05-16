@@ -3,9 +3,11 @@ $breadcrumb-item-active-color: $color-dark-slate-gray;
 $breadcrumb-item-padding-horizontal: $space-small;
 $breadcrumb-item-separator-color: $color-gray;
 
+
 @import "bulma/sass/components/breadcrumb.sass";
 
-.breadcrumb-item + .breadcrumb-item::before {
+
+nav.breadcrumb > ul > li+li:before {
   content: ">";
 }
 
