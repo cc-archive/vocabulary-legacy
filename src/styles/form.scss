@@ -46,6 +46,8 @@ $input-disabled-border-color: $color-gray;
   @include form_control;
   box-sizing: border-box;
   height: 7.5em;
+  min-width: auto;
+  resize: both;
 
   &.is-medium {
     font-size: 1.43rem;
