@@ -41,6 +41,25 @@ $input-disabled-border-color: $color-gray;
   }
 }
 
+// Textarea
+.textarea {
+  @include form_control;
+  box-sizing: border-box;
+  height: 7.5em;
+
+  &.is-medium {
+    font-size: 1.43rem;
+    height: 11.625rem;
+    padding-left: $space-normal;
+  }
+
+  &.is-large {
+    font-size: 1.75rem;
+    height: 15.1125rem;
+    padding-left: $space-big;
+  }
+}
+
 // Select
 .select {
   select {

@@ -1,0 +1,40 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Textarea" />
+
+# Textarea
+
+export const textAreaType = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+<textarea class="textarea${sizeClass}" placeholder="Placeholder text"/></textarea>
+<br/>
+<textarea class="textarea${sizeClass}">Typed text</textarea>
+<br/>
+<textarea class="textarea${sizeClass}" disabled/>Fixed text</textarea>`
+}
+
+<Preview mdxSource={textAreaType('textarea')}>
+  <Story name="Normal" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    textAreaType('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={textAreaType('textarea is-medium')}>
+  <Story name="Medium" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{`
+    ${textAreaType('medium')}
+  `}</Story>
+</Preview>
+
+<Preview mdxSource={textAreaType('textarea is-large')}>
+  <Story name="Large" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{`
+    ${textAreaType('large')}
+  `}</Story>
+</Preview>
