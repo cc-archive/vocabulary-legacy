@@ -1,5 +1,6 @@
-$breadcrumb-item-color: $color-forest-green;
+$breadcrumb-item-color: $color-tomato;
 $breadcrumb-item-active-color: $color-dark-slate-gray;
+$breadcrumb-item-hover-color: $color-tomato;
 $breadcrumb-item-padding-horizontal: $space-small;
 $breadcrumb-item-separator-color: $color-gray;
 
@@ -7,7 +8,16 @@ $breadcrumb-item-separator-color: $color-gray;
 @import "bulma/sass/components/breadcrumb.sass";
 
 
-nav.breadcrumb > ul > li+li:before {
-  content: ">";
+nav.breadcrumb > ul {
+
+  li+li:before {
+    font-family: "Vocabulary Icons";
+    content: '\f105';
+  };
+
+  li:hover {
+    text-underline-position: below;
+  };
+
 }
 
