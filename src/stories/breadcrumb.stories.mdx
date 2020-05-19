@@ -1,4 +1,5 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
 
 <Meta title="Patterns/Breadcrumb" />
 
@@ -15,6 +16,11 @@ export const Breadcrumb = () => `
 </nav>
 `
 
+The Breadcrumb has two text styles: links to parent pages and the page the user is seeing. The parent links should be corresponding to the site map defined. At the same time, the color used for links should be the main color for links across the site.
+
+For accessibility purposes, the component should be placed above the page's title.
+
 <Preview mdxSource={Breadcrumb()}>
-  <Story name="Breadcrumb">{Breadcrumb()}</Story>
+  <Story name="Breadcrumb" parameters={{
+    design: figmaConfig('6368%3A9')}}>{Breadcrumb()}</Story>
 </Preview>
