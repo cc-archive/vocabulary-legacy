@@ -18,6 +18,8 @@ export const blackText = (content) => `<div class="has-text-black">${content}</d
 
 export const whiteText = (content) => `<div class="has-text-white">${content}</div>`
 
+export const plainText = (content) =>`<div>${content}</div>`
+
 export const logomark = `<style>svg { height: 73px; }</style>
 ${svgCode(304, 73, 'cc/logomark', 'logomark')}`
 
@@ -89,160 +91,88 @@ ${svgCode(80, 72, 'cc/letterheart', 'letterheart')}`
 export const globalNetwork = `<style>svg { height: 79px; }</style>
 ${svgCode(280, 79, 'products/global_network', 'globalnetwork')}`
 
-<Preview mdxSource={blackText(globalNetwork)}>
+<Preview mdxSource={plainText(globalNetwork)}>
   <Story name="CC Global Network" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(globalNetwork)
-  }</Story>
-</Preview>
-
-<Preview mdxSource={whiteText(globalNetwork)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Global Network Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('784%3A1')
-  }}>{
-    whiteText(globalNetwork)
+    plainText(globalNetwork)
   }</Story>
 </Preview>
 
 export const openSource = `<style>svg { height: 76px; }</style>
 ${svgCode(250, 76, 'products/open_source', 'opensource')}`
 
-<Preview mdxSource={blackText(openSource)}>
+<Preview mdxSource={plainText(openSource)}>
   <Story name="CC Open Source" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(openSource)
-  }</Story>
-</Preview>
-
-<Preview mdxSource={whiteText(openSource)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Open Source Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('784%3A1')
-  }}>{
-    whiteText(openSource)
+    plainText(openSource)
   }</Story>
 </Preview>
 
 export const vocabulary = `<style>svg { height: 41px; }</style>
 ${svgCode(250, 41, 'products/vocabulary', 'vocabulary')}`
 
-<Preview mdxSource={blackText(vocabulary)}>
+<Preview mdxSource={plainText(vocabulary)}>
   <Story name="CC Vocabulary" height="96px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-     blackText(vocabulary)
-  }</Story>
-</Preview>
-
-<Preview mdxSource={whiteText(vocabulary)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Vocabulary Inverted" height="96px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('784%3A1')
-  }}>{
-    whiteText(vocabulary)
+     plainText(vocabulary)
   }</Story>
 </Preview>
 
 export const search = `<style>svg { height: 81px; }</style>
 ${svgCode(250, 81, 'products/search', 'search')}`
 
-<Preview mdxSource={blackText(search)}>
+<Preview mdxSource={plainText(search)}>
   <Story name="CC Search" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(search)
+    plainText(search)
   }</Story>
 </Preview>
 
-<Preview mdxSource={whiteText(search)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Search Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
+export const certificates = `<style>svg { height: 81px; }</style>
+${svgCode(250, 81, 'products/certificates', 'certificates')}`
+
+<Preview mdxSource={plainText(search)}>
+  <Story name="CC Certificates" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    whiteText(search)
+    plainText(certificates)
   }</Story>
 </Preview>
 
-export const certificates = (type) => `<style>svg { height: 174px; }</style>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  preserveAspectRatio="xMidYMid meet"
-  viewBox="0 0 230 174">
-  <use href="logos/products/certificates.svg#certificates"></use>
-  <use href="logos/products/certificates.svg#${type}_dots"></use>
-</svg>`
-
-export const certificatesColorful = certificates('colorful')
-
-<Preview mdxSource={certificatesColorful}>
-  <Story name="CC Certificates Colorful" height="200px" parameters={{
-    design: figmaConfig('784%3A1')
-  }}>{
-    certificatesColorful.toString()
-  }</Story>
-</Preview>
-
-export const certificatesMonochrome = certificates('monochrome')
-
-<Preview mdxSource={blackText(certificatesMonochrome)}>
-  <Story name="CC Certificates Monochrome" height="200px" parameters={{
-    design: figmaConfig('784%3A1')
-  }}>{
-    blackText(certificatesMonochrome)
-  }</Story>
-</Preview>
-
-<Preview mdxSource={whiteText(certificatesMonochrome)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Certificates Monochrome Inverted" height="200px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('784%3A1')
-  }}>{
-    whiteText(certificatesMonochrome)
-  }</Story>
-</Preview>
 
 export const chooser = `<style>svg { height: 76px; }</style>
 ${svgCode(250, 76, 'products/chooser', 'chooser')}`
 
-<Preview mdxSource={blackText(chooser)}>
+<Preview mdxSource={plainText(chooser)}>
   <Story name="CC Chooser" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(chooser)
+    plainText(chooser)
   }</Story>
 </Preview>
 
 export const globalSummit = `<style>svg { height: 79px; }</style>
 ${svgCode(280, 79, 'products/global_summit', 'global_summit')}`
 
-<Preview mdxSource={blackText(globalSummit)}>
+<Preview mdxSource={plainText(globalSummit)}>
   <Story name="CC Global Summit" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(globalSummit)
+    plainText(globalSummit)
   }</Story>
 </Preview>
 
 export const stateCommons = `<style>svg { height: 79px; }</style>
 ${svgCode(380, 79, 'products/state_of_the_commons', 'state_of_the_commons')}`
 
-<Preview mdxSource={blackText(stateCommons)}>
+<Preview mdxSource={plainText(stateCommons)}>
   <Story name="CC State of the commons" height="128px" parameters={{
     design: figmaConfig('784%3A1')
   }}>{
-    blackText(stateCommons)
+    plainText(stateCommons)
   }</Story>
 </Preview>
