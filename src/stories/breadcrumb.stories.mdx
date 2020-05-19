@@ -5,11 +5,12 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 # Breadcrumb
 
 export const Breadcrumb = () => `
-<nav class="breadcrumb caption" aria-label="breadcrumbs">
+<nav class="breadcrumb caption bold" aria-label="breadcrumbs">
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Involúcrate con nuestra comunidad de código abierto a través del Google Summer of Code y Outreachy</a></li>
+    <li><a href="#">Child page</a></li>
+    <li><a href="#">Child child page</a></li>
+    <li class="is-active"><a href="#" aria-current="page displayed">Page displayed</a></li>
   </ul>
 </nav>
 `

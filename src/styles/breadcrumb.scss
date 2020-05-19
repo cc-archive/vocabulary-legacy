@@ -10,9 +10,11 @@ $breadcrumb-item-separator-color: $color-gray;
 
 nav.breadcrumb > ul {
 
+  font-weight: 600;
+
   li+li:before {
     font-family: "Vocabulary Icons";
-    content: '\f105';
+    content: "\e901";
   };
 
   li:hover {
