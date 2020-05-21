@@ -45,6 +45,17 @@ describe('Logos', () => {
     })
   })
 
+  it('CC Legal Database', async () => {
+    await goTo(page, 'assets-logos--cc-legal-database')
+    await pause(1000)
+    const component = await page.$('svg')
+    const ss = await component.screenshot()
+
+    expect(ss).toMatchImageSnapshot({
+      customSnapshotIdentifier
+    })
+  })
+
   it('CC Open Source', async () => {
     await goTo(page, 'assets-logos--cc-open-source')
     await pause(1000)
