@@ -4,25 +4,20 @@ $breadcrumb-item-hover-color: $color-tomato;
 $breadcrumb-item-padding-horizontal: $space-small;
 $breadcrumb-item-separator-color: $color-gray;
 
-
 @import "bulma/sass/components/breadcrumb.sass";
 
-
 nav.breadcrumb > ul {
-
-  font-style: normal;
+  font-size: $font-size-caption;
   font-weight: 600;
-  font-size: 13px;
+  font-style: normal;
   line-height: 19px;
 
   li+li:before {
     font-family: "Vocabulary Icons";
     content: "\e901";
-  };
+  }
 
   li:hover {
     text-underline-position: below;
-  };
-
+  }
 }
-

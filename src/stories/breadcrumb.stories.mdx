@@ -5,7 +5,7 @@ import { figmaConfig } from './helpers'
 
 # Breadcrumb
 
-export const Breadcrumb = () => `
+export const breadCrumb = () => `
 <nav class="breadcrumb caption bold" aria-label="breadcrumbs">
   <ul>
     <li><a href="#">Home</a></li>
@@ -20,7 +20,10 @@ The Breadcrumb has two text styles: links to parent pages and the page the user 
 
 For accessibility purposes, the component should be placed above the page's title.
 
-<Preview mdxSource={Breadcrumb()}>
-  <Story name="Breadcrumb" parameters={{
-    design: figmaConfig('6368%3A9')}}>{Breadcrumb()}</Story>
+<Preview mdxSource={breadCrumb()}>
+  <Story name="Default" parameters={{
+    design: figmaConfig('6368%3A9')
+  }}>{
+    breadCrumb()
+  }</Story>
 </Preview>
