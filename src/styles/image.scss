@@ -6,9 +6,7 @@
     display: block;
     width: 100%;
   }
-  .is-ellipsised{
-    text-overflow: ellipsis;
-  }
+
   .image-title,
   .image-icons {
     @extend .padding-vertical-small;
@@ -28,6 +26,15 @@
     bottom: 0;
 
     font-weight: 600;
+
+    &.is-ellipsised:not(:hover) {
+      white-space: nowrap;
+
+      width: 100%;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .image-icons {
