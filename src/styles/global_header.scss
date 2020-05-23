@@ -1,12 +1,13 @@
 @import "bulma/sass/components/level.sass";
 
 .cc-global-header {
+  margin-top: -268px;
+  height: 268px;
   background-color: $color-black;
   color: $color-white;
-  transform: translateY(-100%);
   transition: all .4s ease-in;
   &.is-active {
-      transform: translateY(0);
+    margin-top: 0;
   }
   .open-tab {
     position: absolute;
