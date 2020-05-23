@@ -45,46 +45,27 @@ ${svgCode(304, 73, 'cc/logomark', 'logomark')}`
 export const lettermark = `<style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'lettermark')}`
 
-<Preview mdxSource={blackText(lettermark)}>
+<Preview mdxSource={plainText(lettermark)}>
   <Story name="CC Lettermark" height="128px" parameters={{
     design: figmaConfig('712%3A8')
   }}>{
-    blackText(lettermark)
+    plainText(lettermark)
   }</Story>
 </Preview>
 
-<Preview mdxSource={whiteText(lettermark)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Lettermark Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('712%3A8')
-  }}>{
-    whiteText(lettermark)
-  }</Story>
-</Preview>
+
 
 export const letterheart = `<style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'letterheart')}`
 
-<Preview mdxSource={blackText(letterheart)}>
+<Preview mdxSource={plainText(letterheart)}>
   <Story name="CC Letterheart" height="128px" parameters={{
     design: figmaConfig('712%3A7')
   }}>{
-    blackText(letterheart)
+    plainText(letterheart)
   }</Story>
 </Preview>
 
-<Preview mdxSource={whiteText(letterheart)} style={{backgroundColor: 'black'}}>
-  <Story name="CC Letterheart Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('712%3A7')
-  }}>{
-    whiteText(letterheart)
-  }</Story>
-</Preview>
 
 ## Product logos
 
@@ -102,11 +83,11 @@ ${svgCode(280, 79, 'products/global_network', 'globalnetwork')}`
 export const legaldatabase = `<style>svg { height: 40px; }</style>
 ${svgCode(269, 40, 'products/legal_database', 'legaldatabase')}`
 
-<Preview mdxSource={blackText(legaldatabase)}>
+<Preview mdxSource={plainText(legaldatabase)}>
   <Story name="CC Legal Database" height="128px" parameters={{
     design: figmaConfig('784%3A0')
   }}>{
-    blackText(legaldatabase)
+    plainText(legaldatabase)
   }</Story>
 </Preview>
 
