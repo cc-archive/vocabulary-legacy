@@ -6,3 +6,5 @@ english_name: CC Vocabulary
 technologies: JavaScript, Vue, Webpack, Babel, Stylus, Styleguidist, Theo
 # Whether this repository should be featured on the CC Open Source site
 featured: false  # In the future, maybe
+# Slack channel name
+slack: 'cc-dev-vocabulary'

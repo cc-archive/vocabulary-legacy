@@ -1,5 +1,5 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
-import { svgCode } from './logos.stories.mdx'
+import { svgCode } from './helpers'
 
 <Meta
   title="Patterns/Global header"
@@ -29,7 +29,7 @@ export const header = (state) => `
             <h5>Our work relies on you!</h5>
             <p>Help us keep the internet free and open.</p>
             <a class="button small donate">
-              ${svgCode(80, 72, 'cc/letterheart', 'letterheart')} Donate now
+              <i class="icon cc-letterheart margin-right-small is-size-5 padding-top-smaller"></i> Donate now
             </a>
           </aside>
         </div>
