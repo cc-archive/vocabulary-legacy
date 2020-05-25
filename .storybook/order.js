@@ -8,6 +8,7 @@ const order = {
   'Roboto Condensed': [],
   'Source Sans Pro': [],
   'Accidenz Commons': [],
+  'JetBrains Mono': [],
 }
 const families = Object.keys(order)
 
