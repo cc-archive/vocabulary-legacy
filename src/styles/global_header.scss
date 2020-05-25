@@ -7,7 +7,7 @@
   z-index: 90;
   &.is-active {
     .global-header-content {
-      max-height: 1000px;
+      max-height: 60rem;
       padding-top: $space-big;
       padding-bottom: $space-big;
     }
