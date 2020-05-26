@@ -62,7 +62,7 @@ $brand-colors: (
   .has-background-#{$color-namespace} {
     background-color: $brand-color;
   }
-  
+
   .has-text-#{$color-namespace}, // Bulma convention
   .has-color-#{$color-namespace} {
     color: $brand-color;
@@ -72,6 +72,3 @@ $brand-colors: (
 @each $color-namespace, $brand-color in $brand-colors {
   @include color-classes($color-namespace, $brand-color);
 };
-
-@import "bulma/sass/utilities/_all.sass";
-@import "bulma/sass/base/_all.sass";

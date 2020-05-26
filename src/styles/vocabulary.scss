@@ -5,6 +5,10 @@
 @import "./spacing.scss";
 @import "./typography.scss";
 
+// Bulma
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+
 // Elements
 @import "./button.scss";
 
