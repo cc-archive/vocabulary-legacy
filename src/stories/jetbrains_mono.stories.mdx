@@ -22,9 +22,11 @@ import { alphabetTable, numberTable, sampleTexts } from './helpers'
 
 # JetBrains Mono
 
-JetBrains Mono is a monospaced font developed by JetBrains and designed to make coding and reading code easier.
+JetBrains Mono is a monospaced font developed by JetBrains and designed to make reading and writing code easier.
 
 It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
+
+export const sampleCode = "const isEqual = (a, b) => { a === b }"
 
 ## Regular
 
@@ -35,7 +37,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   ]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText={sampleTexts[0]} />
+  sampleText={sampleCode} />
 
 <Typeset
   fontSizes={['2rem']}
@@ -60,6 +62,12 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   fontFamily="JetBrains Mono"
   fontWeight={400}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="JetBrains Mono"
+  fontWeight={400}
+  sampleText="<= >= => === !== == != ... <> </> ~@ www" />
 
 
 ## Bold
@@ -71,7 +79,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   ]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText={sampleTexts[2]} />
+  sampleText={sampleCode} />
 
 <Typeset
   fontSizes={['2rem']}
@@ -96,6 +104,12 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   fontFamily="JetBrains Mono"
   fontWeight={700}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="JetBrains Mono"
+  fontWeight={700}
+  sampleText="<= >= => === !== == != ... <> </> ~@ www" />
 
 <Story name="Uppercase letters" parameters={{
   docs: { disable: true }
