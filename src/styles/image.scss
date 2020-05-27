@@ -1,3 +1,5 @@
+@import "./color.scss";
+
 .image {
   position: relative;
   overflow: hidden;
@@ -52,5 +54,14 @@
       transform: translateY(0%);
     }
   }
+}
+
+.rounded-image {
+  @extend .is-rounded;
+
+  border-radius: 50%;
+  border: solid 3px;
+  border-color: $color-dark-slate-gray;
+  min-width: 60px;
 }
 
