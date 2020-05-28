@@ -30,6 +30,12 @@ manner.
 
 > **Every CC website will be based on Vocabulary.**
 
+#### Meaning
+- If there’s a new design element needed for a website, the **UX designer** needs to be consulted and create a design in
+  Figma first.
+- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into
+  their own code.
+
 #### Rationale
 - To ensure consistency and maintainability
 - To ensure maintainability by restricting websites to using only shared code for styling.
@@ -37,24 +43,9 @@ manner.
 #### Tradeoffs
 - Lack of opportunity for individual creativity.
 
-#### Meaning
-- If there’s a new design element needed for a website, the **UX designer** needs to be consulted and create a design in
-  Figma first.
-- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into
-  their own code.
-
 ### Principle 2
 
 > **Vocabulary will provide only the styles and components needed for real use cases.**
-
-#### Rationale
-- To keep the maintenance burden as low as possible by maintaining only a minimum viable set of styles and components.
-- To ensure that designs are created with a real use case in mind. Theoretical designs often don’t stand up when
-  introduced to the real world.
-
-#### Tradeoffs
-- Vocabulary or Vue Vocabulary may look a little sparse.
-- Vocabulary will not be very customizable or extensible.
 
 #### Meaning
 - All components in Vocabulary should have a real world use case. If they are not used, they should not be in
@@ -72,15 +63,18 @@ manner.
     styling for the combination of a text box inside a table.
   - Complex components like header and footer which are relevant to CC branding will be an exception to this rule.
 
+#### Rationale
+- To keep the maintenance burden as low as possible by maintaining only a minimum viable set of styles and components.
+- To ensure that designs are created with a real use case in mind. Theoretical designs often don’t stand up when
+  introduced to the real world.
+
+#### Tradeoffs
+- Vocabulary or Vue Vocabulary may look a little sparse.
+- Vocabulary will not be very customizable or extensible.
+
 ### Principle 3
 
 > **Vocabulary will have the same set of components in both Figma and the web.**
-
-#### Rationale
-- To reduce confusion and ensure that the relationship between the designs in Figma and the web are absolutely clear.
-
-#### Tradeoffs
-- Lack of customizability for different use cases.
 
 #### Meaning
 - Each component in Figma needs to have a corresponding set of stories in Vocabulary. The titles should match exactly.
@@ -91,9 +85,19 @@ manner.
     should go in a documentation section.
 - Vocabulary should embed the relevant Figma component in the documentation for that component.
 
+#### Rationale
+- To reduce confusion and ensure that the relationship between the designs in Figma and the web are absolutely clear.
+
+#### Tradeoffs
+- Lack of customizability for different use cases.
+
 ### Principle 4
 
 > **Vocabulary will provide documentation on the approved ways to use components.**
+
+#### Meaning
+- Design documentation provided in Figma needs to be provided in Vocabulary through Storybook Docs and/or Figma embeds.
+- All components need to have some explanation about what they are and how they are used.
 
 #### Rationale
 - To provide context around components and offer guidelines for their use to build consistent websites.
@@ -103,13 +107,13 @@ manner.
 #### Tradeoffs
 - Work needed to keep this documentation updated.
 
-#### Meaning
-- Design documentation provided in Figma needs to be provided in Vocabulary through Storybook Docs and/or Figma embeds.
-- All components need to have some explanation about what they are and how they are used.
-
 ### Principle 5
 
 > **All designs must be approved by our UX Designer; it is not sufficient to use Vocabulary.**
+
+#### Meaning
+- Any significant design changes or new designs must be approved by the **UX Designer** before being implemented, even if
+  they are based on existing Vocabulary components.
 
 #### Rationale
 - This will provide the best user experience for our users.
@@ -117,10 +121,6 @@ manner.
 
 #### Tradeoffs
 - One person bottlenecks all major design changes.
-
-#### Meaning
-- Any significant design changes or new designs must be approved by the **UX Designer** before being implemented, even if
-  they are based on existing Vocabulary components.
 
 ## Workflow
 
