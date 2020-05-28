@@ -7,9 +7,9 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-  a.social:hover {
-    text-decoration: none;
+    &.social:hover {
+      text-decoration: none;
+    }
   }
   .main-logo {
     display: block;
