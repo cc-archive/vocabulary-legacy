@@ -1,5 +1,5 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
-import { svgCode } from './logos.stories.mdx'
+import { svgCode } from './helpers'
 
 <Meta
   title="Patterns/Global header"
@@ -12,8 +12,8 @@ import { svgCode } from './logos.stories.mdx'
 export const header = (state) => `
 <header class="cc-global-header ${state}">
   <div class="container">
-    <div class="padding-vertical-normal">
-      <a href="#" class="open-tab">Explore CC</a>
+    <a href="#" class="open-tab">Explore CC</a>
+    <div class="global-header-content">
       <div class="level">
         <div class="level-left">
           <header class="global-header-header">
