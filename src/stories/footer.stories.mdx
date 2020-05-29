@@ -5,10 +5,7 @@ import { figmaConfig, svgCode } from './helpers'
 
 # Footer
 
-<Preview>
-  <Story name="Default" parameters={{
-    design: figmaConfig("639%3A185")
-  }}>{`
+export const footer = () => `
     <footer class="main-footer">
       <div class="container">
         <div class="columns">
@@ -83,5 +80,10 @@ import { figmaConfig, svgCode } from './helpers'
         </div>
       </div>
     </footer>
-  `}</Story>
+`
+
+<Preview mdxSource={footer()}>
+  <Story name="Default" parameters={{
+    design: figmaConfig("639%3A185")
+  }}>{footer()}</Story>
 </Preview>
