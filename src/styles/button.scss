@@ -37,6 +37,7 @@ $button-family: $family-alternative;
   }
 
   &.tag {
+    font-family: $family-source-sans-pro;
     padding: 0 $space-normal;
     font-size: 0.81rem;
     text-transform: none;
