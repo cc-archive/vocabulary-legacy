@@ -69,12 +69,12 @@ $button-family: $family-alternative;
   }
 
   &.is-text {
-    font-family: Source Sans Pro;
+    font-family: $family-source-sans-pro;
+    border-style: none;
     font-style: normal;
-    line-height: 19px;
+    line-height: 50%;
     text-decoration: none;
     &:hover, &:active, &:focus {
-      border-color: transparent;
       box-shadow: none;
       text-decoration: underline;
     }
