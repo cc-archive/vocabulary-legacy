@@ -1,9 +1,9 @@
-@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.8/css/fonts.css");
+@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.9/css/fonts.css");
 
 // Families
 $family-roboto-condensed: 'Roboto Condensed', sans-serif;
 $family-source-sans-pro: 'Source Sans Pro', sans-serif;
-$family-fira-code: monospace; // Maybe later
+$family-jetbrains-mono: 'JetBrains Mono', monospace;
 $family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
@@ -27,7 +27,7 @@ $font-size-caption: 0.8rem;
 // Overrides
 $family-sans-serif: $family-source-sans-pro;
 $family-alternative: $family-roboto-condensed;
-$family-monospace: $family-fira-code;
+$family-monospace: $family-jetbrains-mono;
 
 // Classes
 $body-font-sizes: (
@@ -63,7 +63,7 @@ $body-font-sizes: (
 
 .monospace {
   font-family: $family-monospace;
-  font-size: 0.875em; // Fira Code at 14px is similar to other fonts at 16px
+  font-size: 0.875em; // Code fonts at 14px are similar to other fonts at 16px
 }
 
 // Usage
