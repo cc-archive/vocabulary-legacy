@@ -15,6 +15,7 @@ $card-header-shadow: none;
             .card-title {
                 text-transform: none;
                 line-height: 1.6rem;
+                font-weight: bold;
                 a {
                     color: $color-black;
                 }
@@ -273,6 +274,49 @@ $card-header-shadow: none;
                     @each $color-namespace, $brand-color in $brand-colors {
                         &.has-background-#{$color-namespace} {
                             background-color: lighten($brand-color,10) !important;
+                        }
+                    }
+                }
+            }
+        }
+        &.project-index {
+            .card-content {
+                .site-link {
+                    @extend .margin-top-small;
+                    @extend .is-paddingless;
+
+                    span {
+                        @extend .has-text-forest-green;
+                    }
+
+                    i {
+                        @extend .padding-horizontal-small;
+                        @extend .padding-vertical-smaller;
+                        @extend .has-color-forest-green;
+                    }
+                }
+                .content {
+                    @extend .margin-top-bigger;
+                    @extend .is-paddingless;
+                }
+                .labels {
+                    @extend .margin-top-normal;
+                    @extend .margin-bottom-bigger;
+
+                    button {
+                        @extend .margin-right-small;
+                    }
+                }
+                .external-links {
+                    button {
+                        @extend .is-paddingless;
+                        @extend .margin-bottom-small;
+
+                        span {
+                            @extend .padding-horizontal-small;
+                        }
+                        i {
+                            @extend .padding-vertical-smaller;
                         }
                     }
                 }
