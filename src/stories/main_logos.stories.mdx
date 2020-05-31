@@ -27,26 +27,25 @@ ${svgCode(304, 73, 'cc/logomark', 'logomark')}`
   }</Story>
 </Preview>
 
-export const lettermarkSvg = `<p>The icon for CC Lettermark can also found under icons for embedding in other places like buttons</p>
-<style>svg { height: 72px; }</style>
+export const lettermarkSvg = `<style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'lettermark')}`
 
-<Preview mdxSource={blackText(lettermarkSvg)}>
+<Preview>
   <Story name="Lettermark" height="128px" parameters={{
     design: figmaConfig('712%3A8')
   }}>{
-    blackText(lettermarkSvg)
+    `<p>The icon for CC Lettermark can also found under icons for embedding in other places like buttons</p>
+    ${blackText(lettermarkSvg)}`
   }</Story>
 </Preview>
 
-export const letterheartSvg = `<p>The icon for CC Letterheart can also found under icons for embedding in other places like buttons</p>
-<style>svg { height: 72px; }</style>
+export const letterheartSvg = `<style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'letterheart')}`
 
 <Preview mdxSource={blackText(letterheartSvg)}>
   <Story name="Letterheart" height="128px" parameters={{
     design: figmaConfig('712%3A7')
-  }}>{
-    blackText(letterheartSvg)
+  }}>{`<p>The icon for CC Letterheart can also found under icons for embedding in other places like buttons</p>
+    ${blackText(letterheartSvg)}`
   }</Story>
 </Preview>
