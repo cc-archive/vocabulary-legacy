@@ -1,0 +1,22 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Patterns/Profile Image" />
+
+# Profile Image
+
+The profile image is a component to be used in every element that shows people as single individuals or as a group. The
+size component can be used as it needed, however, a 60px square is a minimum size available.
+
+<Preview>
+  <Story name="default" parameters={{
+    design: figmaConfig('6728%3A329')}}>{`
+    <figure class="image is-square">
+      <img class="profile" src="demo/profile.jpg">
+    </figure>
+    `}</Story>
+</Preview>
+
+[Black Headed Weaver Algarve April 2019](https://www.flickr.com/photos/131806380@N05/47780785251) by
+[cvtperson](https://www.flickr.com/photos/131806380@N05) is licensed under [CC BY-SA
+2.0](https://ccsearch.creativecommons.org/photos/null?ref=ccsearch&atype=rich)

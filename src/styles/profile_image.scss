@@ -1,0 +1,9 @@
+@import "./color.scss";
+@import "bulma/sass/elements/image";
+
+.profile {
+  @extend .is-rounded;
+
+  border: solid 3px $color-dark-slate-gray;
+  min-width: 60px;
+}
