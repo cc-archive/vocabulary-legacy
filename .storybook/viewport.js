@@ -178,10 +178,15 @@ export default {
     type: 'monitor'
   },
   AsusChromebook: {
-    name: 'Asus Chrombook',
+    name: 'Asus Chromebook',
     styles: {
       width: '1280px',
-      height: '800px'
+      height: '800px', 
+      borderTopWidth: '25px',
+      borderBottomWidth: '75px',
+      borderLeftWidth: '25px',
+      borderRightWidth: '25px',
+      borderRadius: '10px'
     },
     type: 'monitor'
   },
@@ -189,7 +194,12 @@ export default {
     name: 'Apple MacBook Pro 12"',
     styles: {
       width: '1280px',
-      height: '800px'
+      height: '800px',
+      borderTopWidth: '35px',
+      borderBottomWidth: '35px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '30px'
     },
     type: 'monitor'
   },
@@ -197,7 +207,12 @@ export default {
     name: 'Acer Chromebook',
     styles: {
       width: '1366px',
-      height: '768px'
+      height: '768px',
+      borderTopWidth: '45px',
+      borderBottomWidth: '65px',
+      borderLeftWidth: '40px',
+      borderRightWidth: '40px',
+      borderRadius: '10px'
     },
     type: 'monitor'
   },
@@ -205,7 +220,12 @@ export default {
     name: 'Apple MacBook Pro 15"',
     styles: {
       width: '1440px',
-      height: '900px'
+      height: '900px',
+      borderTopWidth: '25px',
+      borderBottomWidth: '25px',
+      borderLeftWidth: '15px',
+      borderRightWidth: '15px',
+      borderRadius: '20px'
     },
     type: 'monitor'
   },
@@ -213,7 +233,12 @@ export default {
     name: 'Apple MacBook Pro 16"',
     styles: {
       width: '1536px',
-      height: '960px'
+      height: '960px',
+      borderTopWidth: '25px',
+      borderBottomWidth: '25px',
+      borderLeftWidth: '15px',
+      borderRightWidth: '15px',
+      borderRadius: '20px'
     },
     type: 'monitor'
   },
@@ -221,7 +246,12 @@ export default {
     name: 'Dell XPS 13',
     styles: {
       width: '1920px',
-      height: '1080px'
+      height: '1080px',
+      borderTopWidth: '20px',
+      borderBottomWidth: '75px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '20px'
     },
     type: 'monitor'
   },
@@ -229,7 +259,12 @@ export default {
     name: 'Microsoft Surface Pro X',
     styles: {
       width: '2880px',
-      height: '1920px'
+      height: '1920px',
+      borderTopWidth: '70px',
+      borderBottomWidth: '70px',
+      borderLeftWidth: '25px',
+      borderRightWidth: '25px',
+      borderRadius: '35px'
     },
     type: 'monitor'
   },
@@ -237,7 +272,9 @@ export default {
     name: 'Microsoft Surface Book 2 13.5"',
     styles: {
       width: '3000px',
-      height: '2000px'
+      height: '2000px',
+      borderWidth: '52.5px',
+      borderRadius: '22.5px' 
     },
     type: 'monitor'
   },
@@ -245,7 +282,9 @@ export default {
     name: 'Microsoft Surface Book 2 15"',
     styles: {
       width: '3240px',
-      height: '2160px'
+      height: '2160px',
+      borderWidth: '52.5px',
+      borderRadius: '22.5px'
     },
     type: 'monitor'
   }
