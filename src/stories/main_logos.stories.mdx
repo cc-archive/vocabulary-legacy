@@ -5,8 +5,10 @@ import { figmaConfig, svgCode, blackText, whiteText } from './helpers'
 
 # Main logos
 
-export const logomarkSvg = `<style>svg { height: 73px; }</style>
-${svgCode(304, 73, 'cc/logomark', 'logomark')}`
+export const logomarkSvg = `
+<style>svg { height: 73px; }</style>
+${svgCode(304, 73, 'cc/logomark', 'logomark')}
+`
 
 <Preview mdxSource={blackText(logomarkSvg)}>
   <Story name="Logomark" height="128px" parameters={{
@@ -27,25 +29,39 @@ ${svgCode(304, 73, 'cc/logomark', 'logomark')}`
   }</Story>
 </Preview>
 
-export const lettermarkSvg = `<style>svg { height: 72px; }</style>
-${svgCode(72, 72, 'cc/lettermark', 'lettermark')}`
+export const lettermarkSvg = `
+<style>svg { height: 72px; }</style>
+${svgCode(72, 72, 'cc/lettermark', 'lettermark')}
+`
 
-<Preview>
+<Preview mdxSource={blackText(lettermarkSvg)}>
   <Story name="Lettermark" height="128px" parameters={{
     design: figmaConfig('712%3A8')
-  }}>{
-    `<p>The icon for CC Lettermark can also found under icons for embedding in other places like buttons</p>
-    ${blackText(lettermarkSvg)}`
-  }</Story>
+  }}>{`
+    <p>${blackText(lettermarkSvg)}</p>
+    <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
+  `}</Story>
 </Preview>
 
-export const letterheartSvg = `<style>svg { height: 72px; }</style>
-${svgCode(80, 72, 'cc/letterheart', 'letterheart')}`
+export const letterheartSvg = `
+<style>svg { height: 72px; }</style>
+${svgCode(80, 72, 'cc/letterheart', 'letterheart')}
+`
 
 <Preview mdxSource={blackText(letterheartSvg)}>
   <Story name="Letterheart" height="128px" parameters={{
     design: figmaConfig('712%3A7')
-  }}>{`<p>The icon for CC Letterheart can also found under icons for embedding in other places like buttons</p>
-    ${blackText(letterheartSvg)}`
-  }</Story>
+  }}>{`
+    <p>${blackText(letterheartSvg)}</p>
+    <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
+  `}</Story>
 </Preview>
+
+The CC lettermark and the CC "letterheart" can also found as icons for easier
+embedding in other components, like buttons for example.
+
+```html
+<!-- Be careful, the lettermark is called logo in the icons -->
+<i class="icon cc-logo"></i>
+<i class="icon cc-letterheart"></i>
+```
