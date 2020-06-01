@@ -136,7 +136,12 @@ export default {
     name: 'Apple iPad Air 10.5"',
     styles: {
       width: '834px',
-      height: '1112px'
+      height: '1112px',
+      borderTopWidth: '85px',
+      borderBottomWidth: '85px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '45px'
     },
     type: 'tablet'
   },
@@ -144,7 +149,10 @@ export default {
     name: 'Apple iPad Pro 11"',
     styles: {
       width: '834px',
-      height: '1194px'
+      height: '1194px',
+      paddingTop: '20px',
+      borderWidth: '20px',
+      borderRadius: '50px' 
     },
     type: 'tablet'
   },
@@ -152,7 +160,10 @@ export default {
     name: 'Apple iPad Pro 12.9"',
     styles: {
       width: '1024px',
-      height: '1366px'
+      height: '1366px',
+      paddingTop: '17.5px',
+      borderWidth: '17.5px',
+      borderRadius: '25px' 
     },
     type: 'tablet'
   },
