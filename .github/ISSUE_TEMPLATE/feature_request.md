@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-labels: 'improvement:feature'
+labels: 'improvement:feature', 'awaiting triage'
 title: ''
 ---
 

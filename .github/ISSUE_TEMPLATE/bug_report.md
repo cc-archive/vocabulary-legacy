@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a bug to help us improve
-labels: 'improvement:bug'
+labels: 'improvement:bug', 'awaiting triage'
 title: ''
 ---
 
