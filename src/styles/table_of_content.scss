@@ -1,0 +1,30 @@
+$menu-item-color: $color-tomato;
+$menu-item-hover-background-color: none;
+$menu-item-active-background-color: none;
+$menu-item-active-color: $color-dark-slate-gray;
+$menu-list-border-left: none;
+$menu-nested-list-margin: 0em;
+$menu-nested-list-padding-left: 0em;
+$menu-list-link-padding: 0.5em 0em;
+
+@import "bulma/sass/components/menu.sass";
+
+.toc {
+  @extend .body-normal;
+  @extend .padding-big;
+  @extend .margin-top-normal;
+
+  font-weight: bold;
+  line-height: 1.5em;
+  border: 0.125em solid $color-lighter-gray;
+  box-sizing: border-box;
+  background-color: $color-white;
+  max-width: 276px;
+
+  i {
+    @extend .has-text-grey-lighter;
+    @extend .padding-right-small;
+
+    font-size: 0.375em;
+  }
+}
