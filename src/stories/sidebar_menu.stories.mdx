@@ -1,0 +1,43 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Patterns/Sidebar menu" />
+
+# Sidebar Menu
+
+export const sidebarMenu = () => `
+  <aside class="menu sidebar">
+    <ul class="menu-list">
+      <li>
+        <a class="is-active">Active page</a>
+        <ul>
+          <li><a><i class="icon circle-filled"></i>Child child page</a></li>
+          <li><a><i class="icon circle-filled"></i>Child child page</a></li>
+        </ul>
+      </li>
+      <hr class="divider">
+      <li><a>Sibling page</a></li>
+      <hr class="divider">
+      <li>
+        <a>Sibling page</a>
+        <ul>
+          <li><a><i class="icon circle-filled"></i>Child child page</a></li>
+        </ul>
+      </li>
+      <hr class="divider">
+      <li><a>Sibling page</a></li>
+    </ul>
+  </aside>
+`
+
+The sidebar menu is a navigation component to indicate what page the user is viewing and what sibling pages exist. To show consistent information, it is crucial to follow the information architecture and sitemap definitions to show all sibling and child pages.
+
+The component has two states, active and inactive. The hover state of inactive elements should have the same style of active state.
+
+<Preview mdxSource={sidebarMenu()}>
+  <Story name="Default" parameters={{
+    design: figmaConfig('6990%3A11')
+  }}>{
+    sidebarMenu()
+  }</Story>
+</Preview>
