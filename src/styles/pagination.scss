@@ -1,0 +1,33 @@
+$pagination-item-font-size: 1.25rem;
+$pagination-current-background-color: $color-dark-gray;
+$pagination-current-border-color: $color-dark-gray;
+$pagination-current-color: $color-white;
+$pagination-hover-color: $color-white;
+$pagination-hover-border-color: $color-dark-gray;;
+$pagination-color: $color-dark-gray;
+$pagination-ellipsis-color: $color-dark-gray;
+
+@import "bulma/sass/components/pagination.sass";
+
+.common {
+  font-weight: bold;
+  font-family: Roboto Condensed;
+  line-height: 1.875em;
+
+  a {
+    border-radius: 0em;
+    text-decoration: none;
+  }
+}
+
+.inactive {
+  @extend .common;
+
+    a{
+      @extend .has-background-grey-lighter;
+    }
+
+    :hover {
+      @extend .has-background-grey-dark;
+    }
+}
