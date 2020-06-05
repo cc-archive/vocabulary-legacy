@@ -7,10 +7,10 @@ export default {
     styles: {
       width: '320px',
       height: '480px'
-      },
-      type: 'mobile'
+    },
+    type: 'mobile'
   },
-  iPhoneSE: { 
+  iPhoneSE: {
     name: 'Apple iPhone SE',
     styles: {
       width: '320px',
@@ -52,8 +52,8 @@ export default {
   iPhone11Pro: {
     name: 'Apple iPhone 11 Pro',
     styles: {
-      width: '414px',
-      height: '896px',
+      width: '375px',
+      height: '812px',
       paddingTop: '20px',
       borderWidth: '20px',
       borderRadius: '50px'     
@@ -76,8 +76,8 @@ export default {
   iPhone11: {
     name: 'Apple iPhone 11',
     styles: {
-      width: '375px',
-      height: '812px',
+      width: '414px',
+      height: '896px',
       paddingTop: '20px',
       borderWidth: '20px',
       borderRadius: '50px' 
@@ -87,8 +87,8 @@ export default {
   iPhone11ProMax: {
     name: 'Apple iPhone 11 Pro Max',
     styles: {
-      width: '430px',
-      height: '900px',
+      width: '414px',
+      height: '896px',
       paddingTop: '20px',
       borderWidth: '20px',
       borderRadius: '50px' 
@@ -101,7 +101,7 @@ export default {
     name: 'Classic tablet',
     styles: {
       width: '600px',
-      height: '800px',
+      height: '800px'
     },
     type: 'tablet'
   },
