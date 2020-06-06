@@ -83,6 +83,12 @@ $icons: (
   "facebook": "\ed03",
   "pinterest": "\ed04",
   "slack": "\ed05",
+  "reddit": "\ed06",
+  "github": "\ed07",
+  "whatsapp": "\ed08",
+  "tumblr": "\ed09",
+  "sms": "\ed10",
+  "messenger": "\ed11",
 );
 
 @mixin icon($icon-class, $icon-codepoint) {
@@ -101,13 +107,25 @@ $linkedin-brand: #0077b5;
 $facebook-brand: #3b5998;
 $pinterest-brand: #bd081c;
 $slack-brand: #7c2852;
+$reddit-brand: #ff4500;
+$github-brand: #333333;
+$whatsapp-brand: #25d366;
+$tumblr-brand: #35465c;
+$sms-brand: #4aae20;
+$messenger-brand: #0084ff;
 $brand-colors: (
   "facebook": $facebook-brand,
   "twitter": $twitter-brand,
   "instagram": $instagram-brand,
   "linkedin": $linkedin-brand,
   "pinterest": $pinterest-brand,
-  "slack": $slack-brand
+  "slack": $slack-brand,
+  "reddit": $reddit-brand,
+  "github": $github-brand,
+  "whatsapp": $whatsapp-brand,
+  "tumblr": $tumblr-brand,
+  "sms": $sms-brand,
+  "messenger": $messenger-brand,
 );
 
 @mixin branded-icon($icon-class, $icon-color) {
