@@ -14,7 +14,12 @@ export default {
     name: 'Apple iPhone SE',
     styles: {
       width: '320px',
-      height: '568px'
+      height: '568px',
+      borderTopWidth: '95px',
+      borderBottomWidth: '95px',
+      borderLeftWidth: '12.5px',
+      borderRightWidth: '12.5px',
+      borderRadius: '55px'     
     },
     type: 'mobile'
   },
@@ -22,7 +27,12 @@ export default {
     name: 'Samsung Galaxy Note 9',
     styles: {
       width: '360px',
-      height: '740px'
+      height: '740px',
+      borderTopWidth: '35px',
+      borderBottomWidth: '25px',
+      borderLeftWidth: '7.5px',
+      borderRightWidth: '7.5px',
+      borderRadius: '25px'
     },
     type: 'mobile'
   },
@@ -30,7 +40,12 @@ export default {
     name: 'Apple iPhone 6',
     styles: {
       width: '375px',
-      height: '667px'
+      height: '667px',
+      borderTopWidth: '95px',
+      borderBottomWidth: '95px',
+      borderLeftWidth: '12.5px',
+      borderRightWidth: '12.5px',
+      borderRadius: '55px'     
     },
     type: 'mobile'
   },
@@ -38,7 +53,10 @@ export default {
     name: 'Apple iPhone 11 Pro',
     styles: {
       width: '375px',
-      height: '812px'
+      height: '812px',
+      paddingTop: '20px',
+      borderWidth: '20px',
+      borderRadius: '50px'     
     },
     type: 'mobile'
   },
@@ -46,7 +64,12 @@ export default {
     name: 'Google Pixel 3',
     styles: {
       width: '412px',
-      height: '824px'
+      height: '824px',
+      borderTopWidth: '70px',
+      borderBottomWidth: '70px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '60px'
     },
     type: 'mobile'
   },
@@ -54,7 +77,10 @@ export default {
     name: 'Apple iPhone 11',
     styles: {
       width: '414px',
-      height: '896px'
+      height: '896px',
+      paddingTop: '20px',
+      borderWidth: '20px',
+      borderRadius: '50px' 
     },
     type: 'mobile'
   },
@@ -62,7 +88,10 @@ export default {
     name: 'Apple iPhone 11 Pro',
     styles: {
       width: '414px',
-      height: '896px'
+      height: '896px',
+      paddingTop: '20px',
+      borderWidth: '20px',
+      borderRadius: '50px' 
     },
     type: 'mobile'
   },
@@ -80,7 +109,12 @@ export default {
     name: 'Apple iPad Mini 7.9"',
     styles: {
       width: '768px',
-      height: '1024px'
+      height: '1024px',
+      borderTopWidth: '90px',
+      borderBottomWidth: '90px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '55px'     
     },
     type: 'tablet'
   },
@@ -88,7 +122,12 @@ export default {
     name: 'Apple iPad 10.2"',
     styles: {
       width: '810px',
-      height: '1080px'
+      height: '1080px',
+      borderTopWidth: '85px',
+      borderBottomWidth: '85px',
+      borderLeftWidth: '20px',
+      borderRightWidth: '20px',
+      borderRadius: '45px'
     },
     type: 'tablet'
   },
