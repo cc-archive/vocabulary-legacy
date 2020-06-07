@@ -13,7 +13,12 @@ The component has two states, active and inactive. The hover state of inactive e
   <Story name="Default" parameters={{
     design: figmaConfig('6990%3A11')
   }}>{`
-    <aside class="menu side-navigation">
+    <style>
+      .side-navigation-container {
+        max-width: 276px;
+      }
+    </style>
+    <aside class="menu side-navigation side-navigation-container">
       <ul class="menu-list">
         <li>
           <a class="is-active link">Active page</a>

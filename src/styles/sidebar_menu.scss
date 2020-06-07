@@ -5,7 +5,7 @@ $menu-item-active-color: $color-dark-slate-gray;
 $menu-list-border-left: none;
 $menu-nested-list-margin: 0;
 $menu-nested-list-padding-left: 0;
-$menu-list-link-padding: 0.5em 0;
+$menu-list-link-padding: 0.5rem 0;
 
 @import "bulma/sass/components/menu.sass";
 
@@ -16,7 +16,6 @@ $menu-list-link-padding: 0.5em 0;
   font-weight: bold;
   line-height: 1.5;
   background-color: $color-lighter-gray;
-  max-width: 276px;
 
   .menu-list .link {
     text-decoration: none;
@@ -26,12 +25,12 @@ $menu-list-link-padding: 0.5em 0;
     @extend .has-text-grey-lighter;
     @extend .padding-right-small;
 
-    font-size: 0.375em;
+    font-size: 0.375rem;
   }
 
   .divider {
     @extend .margin-vertical-normal;
 
-    border-top: 0.1875em solid $color-white;
+    border-top: 0.1875rem solid $color-white;
   }
 }
