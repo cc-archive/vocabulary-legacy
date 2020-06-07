@@ -3,31 +3,38 @@ $pagination-current-background-color: $color-dark-gray;
 $pagination-current-border-color: $color-dark-gray;
 $pagination-current-color: $color-white;
 $pagination-hover-color: $color-white;
-$pagination-hover-border-color: $color-dark-gray;;
+$pagination-hover-border-color: $color-dark-gray;
 $pagination-color: $color-dark-gray;
+$pagination-border-color: $color-lighter-gray;
 $pagination-ellipsis-color: $color-dark-gray;
 
 @import "bulma/sass/components/pagination.sass";
 
-.common {
-  font-weight: bold;
-  font-family: Roboto Condensed;
-  line-height: 1.875em;
+.pagination {
+  .pagination-list {
+    .common {
+      font-weight: bold;
+      font-family: $family-roboto-condensed;
+      line-height: 1.875;
 
-  a {
-    border-radius: 0em;
-    text-decoration: none;
+      .common-link {
+        border-radius: 0;
+        text-decoration: none;
+      }
+    }
+
+    .inactive {
+      @extend .common;
+
+        .inactive-link {
+          @extend .common-link;
+
+          background-color: $color-lighter-gray;
+        }
+
+        :hover {
+          background-color:  $color-dark-gray;
+        }
+    }
   }
-}
-
-.inactive {
-  @extend .common;
-
-    a{
-      @extend .has-background-grey-lighter;
-    }
-
-    :hover {
-      @extend .has-background-grey-dark;
-    }
 }
