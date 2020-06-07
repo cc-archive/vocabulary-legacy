@@ -5,26 +5,6 @@ import { figmaConfig } from './helpers'
 
 # Table of content
 
-export const tableOfContent = () => `
-<div>
-  <h4 class="b-header">On this page</h4>
-  <aside class="menu toc">
-    <ul class="menu-list">
-      <li>
-        <a class="is-active">Section one, active state</a>
-        <ul>
-          <li><a><i class="icon circle-filled"></i>Child section</a></li>
-          <li><a><i class="icon circle-filled"></i>Child section</a></li>
-        </ul>
-      </li>
-      <li><a>Section two</a></li>
-      <li><a>Section three</a></li>
-      <li><a>Section four</a></li>
-    </ul>
-  </aside>
-</div>
-`
-
 The Table of content component shows the sections of a page and allows the user to move across all sections on a page. It is recommended to fixed the component while the user scrolls when the page is mainly for showing one type of content, like a blog post.
 
 The active section must change based on what the user is viewing on the content section.
@@ -34,7 +14,23 @@ The component has two states, active and inactive. The hover state of inactive e
 <Preview mdxSource={tableOfContent()}>
   <Story name="Default" parameters={{
     design: figmaConfig('6990%3A82')
-  }}>{
-    tableOfContent()
-  }</Story>
+  }}>{`
+    <div>
+      <h4 class="b-header">On this page</h4>
+      <aside class="menu toc">
+        <ul class="menu-list">
+          <li>
+            <a class="is-active link">Section one, active state</a>
+            <ul>
+              <li><a class="link"><i class="icon circle-filled"></i>Child section</a></li>
+              <li><a class="link"><i class="icon circle-filled"></i>Child section</a></li>
+            </ul>
+          </li>
+          <li><a class="link">Section two</a></li>
+          <li><a class="link">Section three</a></li>
+          <li><a class="link">Section four</a></li>
+        </ul>
+      </aside>
+    </div>
+  `}</Story>
 </Preview>
