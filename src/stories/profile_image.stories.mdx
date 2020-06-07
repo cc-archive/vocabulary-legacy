@@ -5,21 +5,43 @@ import { figmaConfig } from './helpers'
 
 # Profile image
 
-The profile image is a component to be used in every element that shows people as single individuals or as a group. The
-size component can be used as it needed, however, a 60px square is a minimum size available.
+The profile image is a component to be used in every element that shows people
+as single individuals or as a group. The size component can be used as it
+needed, however, a `60px` square is a minimum size available.
+
+You can use Bulma size helpers like `is-128x128` to set the image size.
 
 <Preview>
-  <Story name="default" parameters={{
-    design: figmaConfig('6728%3A329')}}>{`
-    <figure class="image is-square">
-      <img class="profile" src="demo/profile.jpg">
+  <Story name="Default" parameters={{
+    design: figmaConfig('6728%3A329')
+  }}>{`
+    <figure class="image is-128x128">
+      <img class="profile" src="demo/lion_dafrique.jpg">
     </figure>
-    `}</Story>
+  `}</Story>
 </Preview>
 
-[Black Headed Weaver Algarve April 2019](https://www.flickr.com/photos/131806380@N05/47780785251)
+You can also use CSS properties `height` and `width` to size the image.
+
+<Preview>
+  <Story name="Custom sizes" parameters={{
+    design: figmaConfig('6728%3A329')
+  }}>{`
+    <style>
+      .image {
+        height: 256px;
+        width: 256px;
+      }
+    </style>
+    <figure class="image profile">
+      <img class="profile" src="demo/lion_dafrique.jpg">
+    </figure>
+  `}</Story>
+</Preview>
+
+[Lion d'Afrique](https://commons.wikimedia.org/wiki/File:Lion_d'Afrique.jpg)
 by
-[cvtperson](https://www.flickr.com/photos/131806380@N05)
+[Clément Bardot](https://commons.wikimedia.org/wiki/User:Clément_Bardot)
 is licensed under the
-[Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)](https://creativecommons.org/licenses/by-sa/2.0/)
+[Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 license.
