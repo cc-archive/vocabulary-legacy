@@ -15,7 +15,12 @@ The component has two states, active and inactive. The hover state of inactive e
   <Story name="Default" parameters={{
     design: figmaConfig('6990%3A82')
   }}>{`
-    <div>
+    <style>
+      .toc-container {
+        max-width: 276px;
+      }
+    </style>
+    <div class="toc-container">
       <h4 class="b-header">On this page</h4>
       <aside class="menu toc">
         <ul class="menu-list">
