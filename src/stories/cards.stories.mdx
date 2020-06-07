@@ -284,10 +284,15 @@ import { figmaConfig } from './helpers'
 
 
 <Preview>
-  <Story name="Project Index" parameters={{
+  <Story name="Project index" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
-    <div style="width: 400px;">
+    <style>
+      .project-index {
+        width: 400px;
+      }
+    </style>
+    <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">
             <h4 class="card-title b-header"><a href="#">Name of the project</a></h4>
