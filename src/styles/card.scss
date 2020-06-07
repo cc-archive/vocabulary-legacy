@@ -283,7 +283,6 @@ $card-header-shadow: none;
             .card-content {
                 .site-link {
                     @extend .margin-top-small;
-                    @extend .is-paddingless;
 
                     span {
                         @extend .has-text-forest-green;
@@ -309,7 +308,6 @@ $card-header-shadow: none;
                 }
                 .external-links {
                     button {
-                        @extend .is-paddingless;
                         @extend .margin-bottom-small;
 
                         span {
