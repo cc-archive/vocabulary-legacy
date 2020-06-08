@@ -1,0 +1,34 @@
+// For typography
+$family-sans-serif: $family-source-sans-pro;
+$family-alternative: $family-roboto-condensed;
+$family-monospace: $family-jetbrains-mono;
+
+$size-4: $font-size-body-bigger;
+$size-5: $font-size-body-big;
+$size-6: $font-size-body-normal;
+$size-7: $font-size-caption;
+
+// For colors
+$red: $color-tomato;
+$orange: $color-orange;
+$yellow: $color-gold;
+$green: $color-forest-green;
+$cyan: $color-dark-slate-blue;
+$blue: $color-dark-slate-blue;
+$turquoise: $color-dark-turquoise;
+$white: $color-white;
+$black: $color-black;
+$grey: $color-gray;
+$grey-light: $color-light-gray;
+$grey-lighter: $color-lighter-gray;
+$grey-dark: $color-dark-gray;
+
+$primary: $color-tomato;
+
+$success: $color-dark-success;
+$info: $color-forest-green;
+$warning: $color-dark-warning;
+$danger: $color-dark-error;
+
+$link: $color-tomato;
+$link-visited: $color-tomato;
