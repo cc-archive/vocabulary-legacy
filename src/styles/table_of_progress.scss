@@ -1,0 +1,40 @@
+.top {
+  @extend .has-color-dark-slate-gray;
+  @extend .body-normal;
+
+  line-height: 1.25;
+  font-weight: bold;
+
+  .top-step-header {
+    @extend .b-header;
+    @extend .margin-bottom-big;
+
+    line-height: 1.6875;
+  }
+
+  .top-step-number {
+    @extend .has-text-centered;
+    @extend .padding-vertical-smaller;
+
+    background-color: $color-light-gray;
+    width: 1.8125rem;
+    height: 1.8125rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .is-active {
+    background-color: $color-dark-slate-gray;
+    color: $color-white;
+  }
+
+  .top-step-name {
+    @extend .margin-left-normal;
+  }
+
+  .connector {
+    margin-left: 0.8125rem;
+    border-left: 0.1875rem solid $color-light-gray;
+    height: 1.5rem;
+  }
+}
