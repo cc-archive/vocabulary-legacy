@@ -85,7 +85,7 @@ export default {
     type: 'mobile'
   },
   iPhone11ProMax: {
-    name: 'Apple iPhone 11 Pro',
+    name: 'Apple iPhone 11 Pro Max',
     styles: {
       width: '414px',
       height: '896px',
