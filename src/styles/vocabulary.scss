@@ -2,6 +2,12 @@
 
 // Tokens
 @import "./color.scss";
+
+// Bulma
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+
+// More tokens
 @import "./spacing.scss";
 @import "./typography.scss";
 
@@ -18,6 +24,11 @@
 @import "./github_corner.scss";
 @import "./locale.scss";
 @import "./image.scss";
+@import "./breadcrumb.scss";
+@import "./sidebar_menu";
+@import "./table_of_contents.scss";
+@import "./pagination.scss";
+@import "./profile_image.scss";
 
 // Layouts
 @import "./layout.scss";

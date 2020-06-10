@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vocabulary",
-  "version": "1.0.0-beta.10",
+  "version": "1.0.0-beta.15",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -9,7 +9,7 @@
     "test:snapshot": "jest -c tests/snapshot/jest.config.js",
     "build": "webpack --mode production",
     "watch": "npm run build -- --watch --progress",
-    "storybook": "start-storybook --ci -s ./src/assets -p 8080",
+    "storybook": "start-storybook --ci -s ./src/assets -p 8080 --quiet",
     "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
@@ -35,6 +35,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "husky": "^4.2.3",
     "jest": "^25.2.3",
+    "jest-circus": "^25.2.3",
     "jest-image-snapshot": "^2.12.0",
     "jest-puppeteer": "^4.4.0",
     "mini-css-extract-plugin": "^0.9.0",
