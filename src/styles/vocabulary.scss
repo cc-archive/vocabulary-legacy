@@ -12,7 +12,8 @@
 @import "./typography.scss";
 
 // Bulma overrides
-@import "./overrides.scss";
+@import "./color_overrides.scss";
+@import "./typography_overrides.scss";
 
 // Elements
 @import "./button.scss";
