@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "docker"
+    directory: "/docker/puppeteer"
+    schedule:
+      interval: "weekly"
+     
+  - package-ecosystem: "docker"
+    directory: "/docker/vocabulary"
+    schedule:
+      interval: "weekly"
+      
