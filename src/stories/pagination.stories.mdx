@@ -1,0 +1,135 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { figmaConfig } from './helpers';
+
+<Meta title="Patterns/Pagination" />
+
+# Pagination
+
+The pagination component allows the user to move between pages and indicates the amount of pages depending on what the user is seeing. It has two basic component: active and hover, and inactive.
+
+<Preview>
+  <Story
+    name="Active & Hover state"
+    parameters={{
+      design: figmaConfig('7005%3A35')
+    }}
+  >{`
+    <nav class="pagination role=" navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        <li class="common">
+          <a class="pagination-link is-current common-link" aria-label="Goto page 1" aria-current="page">1</a>
+        </li>
+      </ul>
+    </nav>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story
+    name="Inactive state"
+    parameters={{
+      design: figmaConfig('7005%3A35')
+    }}
+  >{`
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 1">1</a>
+        </li>
+      </ul>
+    </nav>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story
+    name="First Page"
+    parameters={{
+      design: figmaConfig('7005%3A35')
+    }}
+  >{`
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        <li class="common">
+          <a class="pagination-link is-current common-link" aria-label="Goto page 1" aria-current="page">1</a>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 2">2</a>
+        </li class="inactive">
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Page 3">3</a>
+        </li>
+        <li>
+          <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 30">30</a>
+        </li>
+      </ul>
+    </nav>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story
+    name="Middle Page"
+    parameters={{
+      design: figmaConfig('7005%3A35')
+    }}
+  >{`
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 1">1</a>
+        </li>
+        <li>
+          <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 14">14</a>
+        </li>
+        <li class="common">
+          <a class="pagination-link common-link is-current" aria-label="Page 15" aria-current="page">15</a>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 16">16</a>
+        </li>
+        <li>
+          <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 30">30</a>
+        </li>
+      </ul>
+    </nav>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story
+    name="Last Page"
+    parameters={{
+      design: figmaConfig('7005%3A35')
+    }}
+  >{`
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 1">1</a>
+        </li>
+        <li>
+          <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Page 28">28</a>
+        </li>
+        <li class="inactive">
+          <a class="pagination-link inactive-link" aria-label="Goto page 29">29</a>
+        </li>
+        <li class="common">
+          <a class="pagination-link common-link is-current" aria-label="Goto page 30" aria-current="page">30</a>
+        </li>
+      </ul>
+    </nav>
+  `}</Story>
+</Preview>
