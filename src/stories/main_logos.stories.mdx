@@ -1,5 +1,5 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { figmaConfig, svgCode, blackText, whiteText } from './helpers'
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { figmaConfig, svgCode, blackText, whiteText } from './helpers';
 
 <Meta title="Assets/Logos/Main" />
 
@@ -8,36 +8,49 @@ import { figmaConfig, svgCode, blackText, whiteText } from './helpers'
 export const logomarkSvg = `
 <style>svg { height: 73px; }</style>
 ${svgCode(304, 73, 'cc/logomark', 'logomark')}
-`
+`;
 
 <Preview mdxSource={blackText(logomarkSvg)}>
-  <Story name="Logomark" height="128px" parameters={{
-    design: figmaConfig('1%3A13')
-  }}>{
-    blackText(logomarkSvg)
-  }</Story>
+  <Story
+    name="Logomark"
+    height="128px"
+    parameters={{
+      design: figmaConfig('1%3A13')
+    }}
+  >
+    {blackText(logomarkSvg)}
+  </Story>
 </Preview>
 
-<Preview mdxSource={whiteText(logomarkSvg)} style={{backgroundColor: 'black'}}>
-  <Story name="Logomark Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
-    design: figmaConfig('476%3A0')
-  }}>{
-    whiteText(logomarkSvg)
-  }</Story>
+<Preview
+  mdxSource={whiteText(logomarkSvg)}
+  style={{ backgroundColor: 'black' }}
+>
+  <Story
+    name="Logomark Inverted"
+    height="128px"
+    parameters={{
+      backgrounds: [{ name: 'black', value: 'black', default: true }],
+      design: figmaConfig('476%3A0')
+    }}
+  >
+    {whiteText(logomarkSvg)}
+  </Story>
 </Preview>
 
 export const lettermarkSvg = `
 <style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'lettermark')}
-`
+`;
 
 <Preview mdxSource={blackText(lettermarkSvg)}>
-  <Story name="Lettermark" height="128px" parameters={{
-    design: figmaConfig('712%3A8')
-  }}>{`
+  <Story
+    name="Lettermark"
+    height="128px"
+    parameters={{
+      design: figmaConfig('712%3A8')
+    }}
+  >{`
     <p>${blackText(lettermarkSvg)}</p>
     <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
   `}</Story>
@@ -46,12 +59,16 @@ ${svgCode(72, 72, 'cc/lettermark', 'lettermark')}
 export const letterheartSvg = `
 <style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'letterheart')}
-`
+`;
 
 <Preview mdxSource={blackText(letterheartSvg)}>
-  <Story name="Letterheart" height="128px" parameters={{
-    design: figmaConfig('712%3A7')
-  }}>{`
+  <Story
+    name="Letterheart"
+    height="128px"
+    parameters={{
+      design: figmaConfig('712%3A7')
+    }}
+  >{`
     <p>${blackText(letterheartSvg)}</p>
     <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
   `}</Story>

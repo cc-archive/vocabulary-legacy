@@ -1,5 +1,10 @@
-import { Meta, Story, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from './helpers'
+import {
+  Meta,
+  Story,
+  ColorPalette,
+  ColorItem
+} from '@storybook/addon-docs/blocks';
+import { figmaConfig } from './helpers';
 
 <Meta title="Tokens/Color" />
 
@@ -15,31 +20,38 @@ text is placed on them.
   <ColorItem
     title="Tomato"
     subtitle="$color-tomato"
-    colors={['rgb(237, 89, 47)']} />
+    colors={['rgb(237, 89, 47)']}
+  />
   <ColorItem
     title="Orange"
     subtitle="$color-orange"
-    colors={['rgb(251, 119, 41)']} />
+    colors={['rgb(251, 119, 41)']}
+  />
   <ColorItem
     title="Gold"
     subtitle="$color-gold"
-    colors={['rgb(239, 190, 0)']} />
+    colors={['rgb(239, 190, 0)']}
+  />
   <ColorItem
     title="ForestGreen"
     subtitle="$color-forest-green"
-    colors={['rgb(4, 166, 53)']} />
+    colors={['rgb(4, 166, 53)']}
+  />
   <ColorItem
     title="DarkTurquoise"
     subtitle="$color-dark-turquoise"
-    colors={['rgb(5, 181, 218)']} />
+    colors={['rgb(5, 181, 218)']}
+  />
   <ColorItem
     title="DarkSlateBlue"
     subtitle="$color-dark-slate-blue"
-    colors={['rgb(60, 92, 153)']} />
+    colors={['rgb(60, 92, 153)']}
+  />
   <ColorItem
     title="DarkSlateGray"
     subtitle="$color-dark-slate-gray"
-    colors={['rgb(51, 51, 51)']} />
+    colors={['rgb(51, 51, 51)']}
+  />
 </ColorPalette>
 
 ## Neutral
@@ -48,32 +60,34 @@ text is placed on them.
   <ColorItem
     title="DarkGray"
     subtitle="$color-dark-gray"
-    colors={['rgb(120, 120, 120)']} />
+    colors={['rgb(120, 120, 120)']}
+  />
   <ColorItem
     title="Gray"
     subtitle="$color-gray"
-    colors={['rgb(176, 176, 176)']} />
+    colors={['rgb(176, 176, 176)']}
+  />
   <ColorItem
     title="LightGray"
     subtitle="$color-light-gray"
-    colors={['rgb(216, 216, 216)']} />
+    colors={['rgb(216, 216, 216)']}
+  />
   <ColorItem
     title="LighterGray"
     subtitle="$color-lighter-gray"
-    colors={['rgb(245, 245, 245)']} />
+    colors={['rgb(245, 245, 245)']}
+  />
 </ColorPalette>
 
 ## Binary
 
 <ColorPalette>
-  <ColorItem
-    title="Black"
-    subtitle="$color-black"
-    colors={['rgb(0, 0, 0)']} />
+  <ColorItem title="Black" subtitle="$color-black" colors={['rgb(0, 0, 0)']} />
   <ColorItem
     title="White"
     subtitle="$color-white"
-    colors={['rgb(255, 255, 255)']} />
+    colors={['rgb(255, 255, 255)']}
+  />
 </ColorPalette>
 
 ## Interaction
@@ -82,15 +96,18 @@ text is placed on them.
   <ColorItem
     title="BrighterTomato"
     subtitle="$color-brighter-tomato"
-    colors={['rgb(255, 105, 51)']} />
+    colors={['rgb(255, 105, 51)']}
+  />
   <ColorItem
     title="BrighterGold"
     subtitle="$color-brighter-gold"
-    colors={['rgb(245, 212, 0)']} />
+    colors={['rgb(245, 212, 0)']}
+  />
   <ColorItem
     title="BrighterForestGreen"
     subtitle="$color-brighter-forest-green"
-    colors={['rgb(0, 184, 80)']} />
+    colors={['rgb(0, 184, 80)']}
+  />
 </ColorPalette>
 
 ## Feedback
@@ -99,36 +116,46 @@ text is placed on them.
   <ColorItem
     title="Dark Success"
     subtitle="$color-dark-success"
-    colors={['rgb(4, 166, 53)']} />
+    colors={['rgb(4, 166, 53)']}
+  />
   <ColorItem
     title="Light Success"
     subtitle="$color-light-success"
-    colors={['rgb(224, 242, 191)']} />
+    colors={['rgb(224, 242, 191)']}
+  />
   <ColorItem
     title="Dark Warning"
     subtitle="$color-dark-warning"
-    colors={['rgb(242, 171, 32)']} />
+    colors={['rgb(242, 171, 32)']}
+  />
   <ColorItem
     title="Light Warning"
     subtitle="$color-light-warning"
-    colors={['rgb(250, 236, 188)']} />
+    colors={['rgb(250, 236, 188)']}
+  />
   <ColorItem
     title="Dark Error"
     subtitle="$color-dark-error"
-    colors={['rgb(200, 59, 30)']} />
+    colors={['rgb(200, 59, 30)']}
+  />
   <ColorItem
     title="Light Error"
     subtitle="$color-light-error"
-    colors={['rgb(255, 201, 201)']} />
+    colors={['rgb(255, 201, 201)']}
+  />
 </ColorPalette>
 
 # Usage
 
 To use the colors in your code, you can
+
 - use the helper classes in your markup for the most common use-cases
-- import `colors.scss` and use the SCSS variables directly in your stylesheets
+- import `colors.scss` and use the SCSS variables directly in your stylesheet
+
+  s
 
 For each of the brand colors, we have two helper classes:
+
 - `.has-background-<color>`<br/>
   Applies the color as the background color for the element.
 - `.has-text-<color>` or `.has-color-<color>`<br/>
@@ -145,9 +172,12 @@ For each of the brand colors, we have two helper classes:
 </div>
 ```
 
-<Story name="Figma" parameters={{
-  design: figmaConfig('0%3A72'),
-  docs: { disable: true }
-}}>{`
+<Story
+  name="Figma"
+  parameters={{
+    design: figmaConfig('0%3A72'),
+    docs: { disable: true }
+  }}
+>{`
   See the Design tab in the panel.
 `}</Story>

@@ -1,5 +1,5 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from './helpers'
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { figmaConfig } from './helpers';
 
 <Meta title="Patterns/Image" />
 
@@ -10,8 +10,13 @@ depending on the content type and its container. If it is placed as a single
 image within the content, it should follow the grid columns.
 
 <Preview>
-  <Story name="Default" height="300px" parameters={{
-    design: figmaConfig('576%3A1')}}>{`
+  <Story
+    name="Default"
+    height="300px"
+    parameters={{
+      design: figmaConfig('576%3A1')
+    }}
+  >{`
     <div class="image" style="max-width: 384px;">
       <img src="demo/broadway_tower.jpg">
       <div class="image-title">
@@ -27,8 +32,13 @@ image within the content, it should follow the grid columns.
 </Preview>
 
 <Preview>
-  <Story name="Long title" height="300px" parameters={{
-    design: figmaConfig('576%3A1')}}>{`
+  <Story
+    name="Long title"
+    height="300px"
+    parameters={{
+      design: figmaConfig('576%3A1')
+    }}
+  >{`
     <div class="image" style="max-width: 384px;">
       <img src="demo/broadway_tower.jpg">
       <div class="image-title">
@@ -44,8 +54,13 @@ image within the content, it should follow the grid columns.
 </Preview>
 
 <Preview>
-  <Story name="Ellipsised" height="300px" parameters={{
-    design: figmaConfig('576%3A1')}}>{`
+  <Story
+    name="Ellipsised"
+    height="300px"
+    parameters={{
+      design: figmaConfig('576%3A1')
+    }}
+  >{`
     <div class="image" style="max-width: 384px;">
       <img src="demo/broadway_tower.jpg">
       <div class="image-title is-ellipsised">

@@ -1,12 +1,12 @@
-import { addDecorator, addParameters, } from '@storybook/html'
+import { addDecorator, addParameters } from '@storybook/html';
 
-import { withDesign } from 'storybook-addon-designs'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withDesign } from 'storybook-addon-designs';
+import { withKnobs } from '@storybook/addon-knobs';
 
-import viewports from './viewport'
-import order from './order'
+import viewports from './viewport';
+import order from './order';
 
-import '../dist/css/vocabulary.css'
+import '../dist/css/vocabulary.css';
 
 addParameters({
   options: {
@@ -21,7 +21,7 @@ addParameters({
   viewport: {
     viewports
   }
-})
+});
 
-addDecorator(withDesign)
-addDecorator(withKnobs)
+addDecorator(withDesign);
+addDecorator(withKnobs);

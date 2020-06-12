@@ -1,5 +1,5 @@
-import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from './helpers'
+import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks';
+import { figmaConfig } from './helpers';
 
 <Meta title="Tokens/Typography" />
 
@@ -22,85 +22,74 @@ that, we created title styles for both fonts.
 Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h5>`.
 
 <Typeset
-  fontSizes={[
-    '3.56rem',
-    '2.25rem',
-    '1.75rem',
-    '1.43rem',
-    '1.25rem'
-  ]}
+  fontSizes={['3.56rem', '2.25rem', '1.75rem', '1.43rem', '1.25rem']}
   fontFamily="Roboto Condensed"
   fontWeight={700}
-  sampleText="HEADING A" />
+  sampleText="HEADING A"
+/>
 
 Headings of type B need the class `.b-header` to be applied to heading tags from `<h3>` to `<h5>`.
 
 <Typeset
-  fontSizes={[
-    '1.75rem',
-    '1.43rem',
-    '1.25rem'
-  ]}
+  fontSizes={['1.75rem', '1.43rem', '1.25rem']}
   fontFamily="Source Sans Pro"
   fontWeight={700}
-  sampleText="Heading B" />
+  sampleText="Heading B"
+/>
 
 ## Body
 
 By default, body text in `<p>` tags is rendered at the base font size.
 
 <Typeset
-  fontSizes={[
-    '1.00rem'
-  ]}
+  fontSizes={['1.00rem']}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  sampleText="Body" />
+  sampleText="Body"
+/>
 
 Body text can be made big or bigger with the eponymous `.body-big` and `.body-bigger` classes on the `<p>` tag.
 
 <Typeset
-  fontSizes={[
-    '1.43rem',
-    '1.12rem'
-  ]}
+  fontSizes={['1.43rem', '1.12rem']}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  sampleText="Enlarged body" />
+  sampleText="Enlarged body"
+/>
 
 Captions can be rendered with the class `.caption` on the `<p>` tag.
 
 <Typeset
-  fontSizes={[
-    '0.80rem'
-  ]}
+  fontSizes={['0.80rem']}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  sampleText="Caption" />
+  sampleText="Caption"
+/>
 
 Values can be rendered with the class `.value` on the `<p>` tag.
 
 <Typeset
-  fontSizes={[
-    '4.37rem'
-  ]}
+  fontSizes={['4.37rem']}
   fontFamily="Roboto Condensed"
   fontWeight={700}
-  sampleText="42" />
+  sampleText="42"
+/>
 
 Code can be rendered with the class `.monospace` on the `<p>` tag.
 
 <Typeset
-  fontSizes={[
-    '0.875rem'
-  ]}
+  fontSizes={['0.875rem']}
   fontFamily="monospace"
   fontWeight={400}
-  sampleText="const x = () => { console.log('Hello World!') }" />
+  sampleText="const x = () => { console.log('Hello World!') }"
+/>
 
-<Story name="Figma" parameters={{
-  design: figmaConfig('0%3A110'),
-  docs: { disable: true }
-}}>{`
+<Story
+  name="Figma"
+  parameters={{
+    design: figmaConfig('0%3A110'),
+    docs: { disable: true }
+  }}
+>{`
   See the Design tab in the panel.
 `}</Story>

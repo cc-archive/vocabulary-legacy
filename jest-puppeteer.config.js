@@ -6,8 +6,6 @@ module.exports = {
       height: 1080,
       deviceScaleFactor: 2
     },
-    args: [
-      '--disable-dev-shm-usage'
-    ]
+    args: ['--disable-dev-shm-usage']
   }
-}
+};

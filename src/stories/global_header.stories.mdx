@@ -1,13 +1,15 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
-import { svgCode } from './helpers'
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { svgCode } from './helpers';
 
 <Meta
   title="Patterns/Global header"
   parameters={{
-   decorators: [
-     storyFn => `<style>body.sb-show-main{ padding: 0 !important; }</style>${storyFn()}`
-   ]
-}}/>
+    decorators: [
+      (storyFn) =>
+        `<style>body.sb-show-main{ padding: 0 !important; }</style>${storyFn()}`
+    ]
+  }}
+/>
 
 export const header = (state) => `
 <header class="cc-global-header ${state}">
@@ -18,7 +20,12 @@ export const header = (state) => `
         <div class="level-left">
           <header class="global-header-header">
             <a href="https://creativecommons.org" target="_blank" class="main-logo">
-              <div class="has-text-white">${svgCode(304, 73, 'cc/logomark', 'logomark')}</div>
+              <div class="has-text-white">${svgCode(
+                304,
+                73,
+                'cc/logomark',
+                'logomark'
+              )}</div>
             </a>
           </header>
         </div>
@@ -78,7 +85,7 @@ export const header = (state) => `
       </div>
     </div>
   </div>
-</header>`
+</header>`;
 
 <Preview mdxSource={header()}>
   <Story name="Inactive">{header()}</Story>

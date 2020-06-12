@@ -3,10 +3,10 @@ name: vocabulary-ci
 on:
   push:
     branches:
-    - master
+      - master
   pull_request:
     branches:
-    - master
+      - master
 
 env:
   CI: true
@@ -18,23 +18,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.16.1'
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm  # npm caches files in ~/.npm
-        key: node-${{ hashFiles('**/package-lock.json') }}
+      - id: cache-node-modules
+        name: Cache Node.js modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm caches files in ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Install dependencies
-      if: steps.cache-node-modules.outputs.cache-hit != 'true'
-      run: npm install --no-audit
+      - name: Install dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm install --no-audit
 
   lint:
     name: Lint
@@ -42,25 +42,25 @@ jobs:
     needs: setup
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.16.1'
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm  # npm caches files in ~/.npm
-        key: node-${{ hashFiles('**/package-lock.json') }}
+      - id: cache-node-modules
+        name: Cache Node.js modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm caches files in ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Install dependencies
-      run: npm install --prefer-offline --no-audit
+      - name: Install dependencies
+        run: npm install --prefer-offline --no-audit
 
-    - name: Run lint
-      run: npm run lint
+      - name: Run lint
+        run: npm run lint
 
   unit:
     name: Unit tests
@@ -68,25 +68,25 @@ jobs:
     needs: setup
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.16.1'
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm  # npm caches files in ~/.npm
-        key: node-${{ hashFiles('**/package-lock.json') }}
+      - id: cache-node-modules
+        name: Cache Node.js modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm caches files in ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Install dependencies
-      run: npm install --prefer-offline --no-audit
+      - name: Install dependencies
+        run: npm install --prefer-offline --no-audit
 
-    - name: Run tests
-      run: npm run test:unit
+      - name: Run tests
+        run: npm run test:unit
 
   build:
     name: Build
@@ -94,29 +94,29 @@ jobs:
     needs: setup
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.16.1'
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.1'
 
-    - id: cache-node-modules
-      name: Cache Node.js modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm  # npm caches files in ~/.npm
-        key: node-${{ hashFiles('**/package-lock.json') }}
+      - id: cache-node-modules
+        name: Cache Node.js modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm caches files in ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
 
-    - id: cache-build-artifacts
-      name: Cache build artifacts
-      uses: actions/cache@v1
-      with:
-        path: ./dist  # build script puts compiled files in ./dist
-        key: dist-${{ github.sha }}
+      - id: cache-build-artifacts
+        name: Cache build artifacts
+        uses: actions/cache@v1
+        with:
+          path: ./dist # build script puts compiled files in ./dist
+          key: dist-${{ github.sha }}
 
-    - name: Install dependencies
-      run: npm install --prefer-offline --no-audit
+      - name: Install dependencies
+        run: npm install --prefer-offline --no-audit
 
-    - name: Run build
-      run: npm run build
+      - name: Run build
+        run: npm run build

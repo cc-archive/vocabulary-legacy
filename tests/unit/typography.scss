@@ -1,8 +1,8 @@
-@include describe("Typography") {
-  @include it("assigns header sizes to tags") {
+@include describe('Typography') {
+  @include it('assigns header sizes to tags') {
     @include assert {
       @include output {
-        @include header-typography("h1", 3.56rem);
+        @include header-typography('h1', 3.56rem);
       }
 
       @include expect {
@@ -13,10 +13,10 @@
     }
   }
 
-  @include it("assigns body sizes to classes") {
+  @include it('assigns body sizes to classes') {
     @include assert {
       @include output {
-        @include body-typography("-standard", 2.56rem)
+        @include body-typography('-standard', 2.56rem);
       }
 
       @include expect {

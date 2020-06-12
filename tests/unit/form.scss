@@ -1,5 +1,5 @@
-@include describe("Forms") {
-  @include it("assigns common properties to form controls") {
+@include describe('Forms') {
+  @include it('assigns common properties to form controls') {
     @include assert {
       @include output {
         @include form_control();

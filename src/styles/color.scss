@@ -50,13 +50,14 @@ $link-visited: $color-tomato;
 
 // Classes
 $brand-colors: (
-  "tomato": $color-tomato,
-  "orange": $color-orange,
-  "gold": $color-gold,
-  "forest-green": $color-forest-green,
-  "dark-turquoise": $color-dark-turquoise,
-  "dark-slate-blue": $color-dark-slate-blue,
-  "dark-slate-gray": $color-dark-slate-gray);
+  'tomato': $color-tomato,
+  'orange': $color-orange,
+  'gold': $color-gold,
+  'forest-green': $color-forest-green,
+  'dark-turquoise': $color-dark-turquoise,
+  'dark-slate-blue': $color-dark-slate-blue,
+  'dark-slate-gray': $color-dark-slate-gray
+);
 
 @mixin color-classes($color-namespace, $brand-color) {
   .has-background-#{$color-namespace} {
@@ -71,4 +72,4 @@ $brand-colors: (
 
 @each $color-namespace, $brand-color in $brand-colors {
   @include color-classes($color-namespace, $brand-color);
-};
+}

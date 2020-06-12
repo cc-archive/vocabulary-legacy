@@ -1,40 +1,49 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from './helpers'
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { figmaConfig } from './helpers';
 
 <Meta title="Form/Input" />
 
 # Input
 
 export const inputType = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : '';
   return `
 <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
 <br/><br/>
 <input class="input${sizeClass}" type="text" value="Typed text"/>
 <br/><br/>
-<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
-}
+<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`;
+};
 
 <Preview mdxSource={inputType('input')}>
-  <Story name="Normal" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    inputType('')
-  }</Story>
+  <Story
+    name="Normal"
+    parameters={{
+      design: figmaConfig('1%3A24')
+    }}
+  >
+    {inputType('')}
+  </Story>
 </Preview>
 
 <Preview mdxSource={inputType('input is-medium')}>
-  <Story name="Medium" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{`
+  <Story
+    name="Medium"
+    parameters={{
+      design: figmaConfig('1%3A24')
+    }}
+  >{`
     ${inputType('medium')}
   `}</Story>
 </Preview>
 
 <Preview mdxSource={inputType('input is-large')}>
-  <Story name="Large" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{`
+  <Story
+    name="Large"
+    parameters={{
+      design: figmaConfig('1%3A24')
+    }}
+  >{`
     ${inputType('large')}
   `}</Story>
 </Preview>

@@ -1,5 +1,5 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig, svgCode } from './helpers'
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+import { figmaConfig, svgCode } from './helpers';
 
 <Meta title="Patterns/Footer" />
 
@@ -11,7 +11,12 @@ export const footer = () => `
     <div class="columns">
       <div class="column">
         <a href="https://creativecommons.org" class="main-logo margin-bottom-bigger">
-          <span class="has-text-white">${svgCode(304, 73, 'cc/logomark', 'logomark')}</span>
+          <span class="has-text-white">${svgCode(
+            304,
+            73,
+            'cc/logomark',
+            'logomark'
+          )}</span>
         </a>
         <div>
           <address class="margin-bottom-normal">Creative Commons<br/>PO Box 1866, Mountain View CA 94042</address>
@@ -80,12 +85,15 @@ export const footer = () => `
       </div>
     </div>
   </div>
-</footer>`
+</footer>`;
 
 <Preview mdxSource={footer()}>
-  <Story name="Default" parameters={{
-    design: figmaConfig("639%3A185")
-  }}>{
-    footer()
-  }</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig('639%3A185')
+    }}
+  >
+    {footer()}
+  </Story>
 </Preview>

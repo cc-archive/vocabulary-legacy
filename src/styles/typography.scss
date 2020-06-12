@@ -1,11 +1,12 @@
-@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.9/css/fonts.css");
+@import url('https://unpkg.com/@creativecommons/fonts@1.0.0-beta.9/css/fonts.css');
 
 // Families
 $family-roboto-condensed: 'Roboto Condensed', sans-serif;
 $family-source-sans-pro: 'Source Sans Pro', sans-serif;
 $family-jetbrains-mono: 'JetBrains Mono', monospace;
-$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
 
 // Sizes
 $font-size-h1: 3.56rem;
@@ -31,10 +32,10 @@ $family-monospace: $family-jetbrains-mono;
 
 // Classes
 $body-font-sizes: (
-  "-bigger": $font-size-body-bigger,
-  "-big": $font-size-body-big,
-  "-normal": $font-size-body-normal,
-  "-list": $font-size-body-list,
+  '-bigger': $font-size-body-bigger,
+  '-big': $font-size-body-big,
+  '-normal': $font-size-body-normal,
+  '-list': $font-size-body-list
 );
 
 @mixin body-typography($body-name, $body-font-size) {
@@ -67,7 +68,12 @@ $body-font-sizes: (
 }
 
 // Usage
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $color-dark-slate-gray;
 
   font-family: $family-roboto-condensed;
@@ -78,19 +84,19 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02rem;
 
   &.b-header {
-  font-family: $family-source-sans-pro;
+    font-family: $family-source-sans-pro;
 
-  text-transform: none;
+    text-transform: none;
   }
 }
 
 $header-font-sizes: (
-  "h1": $font-size-h1,
-  "h2": $font-size-h2,
-  "h3": $font-size-h3,
-  "h4": $font-size-h4,
-  "h5": $font-size-h5,
-  "h6": $font-size-h6,
+  'h1': $font-size-h1,
+  'h2': $font-size-h2,
+  'h3': $font-size-h3,
+  'h4': $font-size-h4,
+  'h5': $font-size-h5,
+  'h6': $font-size-h6
 );
 
 @mixin header-typography($header-name, $header-font-size) {
@@ -108,6 +114,6 @@ body {
   font-size: $font-size-body-normal;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }

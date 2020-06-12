@@ -1,6 +1,6 @@
 $button-family: $family-alternative;
 
-@import "bulma/sass/elements/button.sass";
+@import 'bulma/sass/elements/button.sass';
 
 .button {
   text-transform: uppercase;
@@ -10,7 +10,7 @@ $button-family: $family-alternative;
   color: $color-dark-gray;
   background-color: $color-white;
   font-size: 1.43rem;
-  padding: calc(#{$space-bigger} - .187rem) $space-large;
+  padding: calc(#{$space-bigger} - 0.187rem) $space-large;
 
   &:hover {
     background-color: $color-dark-gray;
@@ -20,12 +20,12 @@ $button-family: $family-alternative;
 
   &.big {
     font-size: 1.75rem;
-    padding: calc(#{$space-large} - .093rem) $space-large;
+    padding: calc(#{$space-large} - 0.093rem) $space-large;
   }
 
   &.small {
     font-size: 1rem;
-    padding: $space-small calc(#{$space-normal} + .2rem);
+    padding: $space-small calc(#{$space-normal} + 0.2rem);
   }
 
   &.tiny {
@@ -44,8 +44,8 @@ $button-family: $family-alternative;
     height: 1.81rem;
     border-radius: 18.75rem;
     border: 0.125rem solid $color-light-gray;
-    &:hover{
-      border-color: $color-dark-gray
+    &:hover {
+      border-color: $color-dark-gray;
     }
   }
 
@@ -70,7 +70,9 @@ $button-family: $family-alternative;
 
   &.is-text {
     text-decoration: none;
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       border: none;
       box-shadow: none;
     }

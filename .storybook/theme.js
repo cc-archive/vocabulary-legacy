@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming'
+import { create } from '@storybook/theming';
 
 export default create({
   // Inherit
@@ -28,4 +28,4 @@ export default create({
   brandTitle: 'Vocabulary',
   brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
   brandImage: 'logos/products/vocabulary.svg#vocabulary'
-})
+});
