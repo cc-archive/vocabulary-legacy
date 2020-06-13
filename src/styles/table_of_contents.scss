@@ -2,7 +2,7 @@
 
 @import "bulma/sass/components/menu.sass";
 
-.toc {
+.table-of-contents {
   @extend .body-normal;
   @extend .padding-big;
   @extend .margin-top-normal;
@@ -17,7 +17,7 @@
     text-decoration: none;
   }
 
-  i {
+  .icon {
     @extend .has-text-grey-lighter;
     @extend .padding-right-small;
 
