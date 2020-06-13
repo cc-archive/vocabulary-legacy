@@ -18,7 +18,7 @@ export default create({
 
   // Typography
   fontBase: '"Source Sans Pro", sans-serif',
-  fontCode: '"Fira Code", monospace',
+  fontCode: '"JetBrains Mono", monospace',
 
   // Text colors
   textColor: 'rgb(0, 0, 0)',
