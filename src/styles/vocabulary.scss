@@ -2,6 +2,7 @@
 
 // Tokens
 @import "./color.scss";
+@import "./color_overrides.scss";
 
 // Bulma
 @import "bulma/sass/utilities/_all.sass";
@@ -9,10 +10,8 @@
 
 // More tokens
 @import "./spacing.scss";
-@import "./typography.scss";
 
-// Bulma overrides
-@import "./color_overrides.scss";
+@import "./typography.scss";
 @import "./typography_overrides.scss";
 
 // Elements
