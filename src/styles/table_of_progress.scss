@@ -1,10 +1,4 @@
 .table-of-progress {
-  @extend .has-color-dark-slate-gray;
-  @extend .body-normal;
-
-  line-height: 1.25;
-  font-weight: bold;
-
   .step-header {
     @extend .b-header;
     @extend .margin-bottom-big;
@@ -12,25 +6,44 @@
     line-height: 1.6875;
   }
 
-  .step-number {
-    @extend .has-text-centered;
-    @extend .padding-vertical-smaller;
+  .step {
+    .link {
+      @extend .has-color-dark-slate-gray;
+      @extend .body-normal;
 
-    background-color: $color-light-gray;
-    width: 1.8125rem;
-    height: 1.8125rem;
-    border-radius: 50%;
-    display: inline-block;
-  }
+      text-decoration: none;
+      line-height: 1.25;
+      font-weight: bold;
+    }
 
-  .is-active {
-    background-color: $color-dark-slate-gray;
-    color: $color-white;
-    position: relative;
-  }
+    .number {
+      @extend .has-text-centered;
+      @extend .padding-vertical-smaller;
 
-  .step-name {
-    @extend .margin-left-normal;
+      background-color: $color-light-gray;
+      width: 1.8125rem;
+      height: 1.8125rem;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .is-active {
+      @extend .number;
+
+      background-color: $color-dark-slate-gray;
+      color: $color-white;
+      position: relative;
+    }
+
+    .name {
+      @extend .margin-left-normal;
+    }
+
+    :hover {
+      .number {
+        @extend .is-active;
+      }
+    }
   }
 
   .connector {
