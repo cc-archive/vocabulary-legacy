@@ -20,6 +20,20 @@
 // Form
 @import "./form.scss";
 
+// Layouts
+@import "./layout.scss";
+@import "./card.scss";
+@import "./table.scss";
+@import "./tabs.scss";
+@import "./notification.scss";
+
+// Navigation
+@import "./sidebar_menu";
+@import "./table_of_contents.scss";
+@import "./table_of_progress";
+@import "./breadcrumb.scss";
+@import "./pagination.scss";
+
 // Patterns
 @import "./global_header.scss";
 @import "./header.scss";
@@ -27,15 +41,4 @@
 @import "./github_corner.scss";
 @import "./locale.scss";
 @import "./image.scss";
-@import "./breadcrumb.scss";
-@import "./sidebar_menu";
-@import "./table_of_contents.scss";
-@import "./pagination.scss";
 @import "./profile_image.scss";
-
-// Layouts
-@import "./layout.scss";
-@import "./card.scss";
-@import "./table.scss";
-@import "./tabs.scss";
-@import "./notification.scss";
