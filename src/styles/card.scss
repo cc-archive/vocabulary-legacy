@@ -278,6 +278,44 @@ $card-header-shadow: none;
                 }
             }
         }
+        &.project-index {
+            .card-content {
+                .site-link {
+                    @extend .margin-top-small;
+                    @extend .has-text-forest-green;
+
+                    .icon {
+                        @extend .padding-horizontal-small;
+                        @extend .padding-vertical-smaller;
+                        @extend .has-color-forest-green;
+                    }
+                }
+                .content {
+                    @extend .margin-top-bigger;
+                    @extend .is-paddingless;
+                }
+                .labels {
+                    @extend .margin-top-normal;
+                    @extend .margin-bottom-bigger;
+
+                    .button {
+                        @extend .margin-right-small;
+                    }
+                }
+                .external-links {
+                    .button {
+                        @extend .margin-bottom-small;
+
+                        .link-content {
+                            @extend .padding-horizontal-small;
+                        }
+                        .icon {
+                            @extend .padding-vertical-smaller;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.blog-entry {
         background-color: transparent;
