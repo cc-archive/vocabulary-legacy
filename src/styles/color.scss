@@ -38,7 +38,7 @@ $brand-colors: (
   "forest-green": $color-forest-green,
   "dark-turquoise": $color-dark-turquoise,
   "dark-slate-blue": $color-dark-slate-blue,
-  "dark-slate-gray": $color-dark-slate-gray,
+  "dark-slate-gray": $color-dark-slate-gray
 );
 
 @mixin color-classes($color-namespace, $brand-color) {
