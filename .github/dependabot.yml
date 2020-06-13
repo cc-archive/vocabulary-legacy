@@ -2,7 +2,7 @@
 # Dependabot Configuration File #
 #################################
 
-# This is the current version of the github native dependabot
+# This is the current version of the GitHub-native Dependabot
 version: 2
 
 updates:
