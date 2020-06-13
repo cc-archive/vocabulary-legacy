@@ -1,12 +1,12 @@
 @import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.9/css/fonts.css");
 
 // Families
-$family-roboto-condensed: "Roboto Condensed", sans-serif;
-$family-source-sans-pro: "Source Sans Pro", sans-serif;
-$family-jetbrains-mono: "JetBrains Mono", monospace;
-$family-system: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-	"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-	"Helvetica", "Arial", sans-serif;
+$family-roboto-condensed: 'Roboto Condensed', sans-serif;
+$family-source-sans-pro: 'Source Sans Pro', sans-serif;
+$family-jetbrains-mono: 'JetBrains Mono', monospace;
+$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
 
 // Sizes
 $font-size-h1: 3.56rem;
@@ -27,39 +27,39 @@ $font-size-caption: 0.8rem;
 
 // Classes
 $body-font-sizes: (
-	"-bigger": $font-size-body-bigger,
-	"-big": $font-size-body-big,
-	"-normal": $font-size-body-normal,
-	"-list": $font-size-body-list,
+  "-bigger": $font-size-body-bigger,
+  "-big": $font-size-body-big,
+  "-normal": $font-size-body-normal,
+  "-list": $font-size-body-list,
 );
 
 @mixin body-typography($body-name, $body-font-size) {
-	.body#{$body-name} {
-		line-height: 1.6;
-		font-size: $body-font-size;
-	}
+  .body#{$body-name} {
+    line-height: 1.6;
+    font-size: $body-font-size;
+  }
 }
 
 @each $body-name, $body-font-size in $body-font-sizes {
-	@include body-typography($body-name, $body-font-size);
+  @include body-typography($body-name, $body-font-size);
 }
 
 .caption {
-	font-size: $font-size-caption;
+  font-size: $font-size-caption;
 }
 
 .value {
-	font-family: $family-roboto-condensed;
-	font-size: $font-size-value;
-	font-weight: bold;
+  font-family: $family-roboto-condensed;
+  font-size: $font-size-value;
+  font-weight: bold;
 
-	line-height: 1.3;
-	letter-spacing: 0.02em;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
 }
 
 .monospace {
-	font-family: $family-monospace;
-	font-size: 0.875em; // Code fonts at 14px are similar to other fonts at 16px
+  font-family: $family-monospace;
+  font-size: 0.875em; // Code fonts at 14px are similar to other fonts at 16px
 }
 
 // Usage
@@ -69,46 +69,46 @@ h3,
 h4,
 h5,
 h6 {
-	color: $color-dark-slate-gray;
+  color: $color-dark-slate-gray;
 
-	font-family: $family-roboto-condensed;
-	font-weight: bold;
+  font-family: $family-roboto-condensed;
+  font-weight: bold;
 
-	text-transform: uppercase;
-	line-height: 1.3;
-	letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 0.02rem;
 
-	&.b-header {
-		font-family: $family-source-sans-pro;
+  &.b-header {
+    font-family: $family-source-sans-pro;
 
-		text-transform: none;
-	}
+    text-transform: none;
+  }
 }
 
 $header-font-sizes: (
-	"h1": $font-size-h1,
-	"h2": $font-size-h2,
-	"h3": $font-size-h3,
-	"h4": $font-size-h4,
-	"h5": $font-size-h5,
-	"h6": $font-size-h6,
+  "h1": $font-size-h1,
+  "h2": $font-size-h2,
+  "h3": $font-size-h3,
+  "h4": $font-size-h4,
+  "h5": $font-size-h5,
+  "h6": $font-size-h6,
 );
 
 @mixin header-typography($header-name, $header-font-size) {
-	#{$header-name} {
-		font-size: $header-font-size;
-	}
+  #{$header-name} {
+    font-size: $header-font-size;
+  }
 }
 
 @each $header-name, $header-font-size in $header-font-sizes {
-	@include header-typography($header-name, $header-font-size);
+  @include header-typography($header-name, $header-font-size);
 }
 
 body {
-	font-family: $family-sans-serif;
-	font-size: $font-size-body-normal;
+  font-family: $family-sans-serif;
+  font-size: $font-size-body-normal;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
