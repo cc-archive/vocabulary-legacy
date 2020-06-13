@@ -279,4 +279,26 @@ $card-header-shadow: none;
             }
         }
     }
+    &.blog-entry {
+        background-color: transparent;
+
+        .blog-image {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .blog-content {
+            @extend .margin-left-bigger;
+
+            .blog-author {
+                @extend .body-normal;
+                @extend .margin-top-small;
+            }
+
+            .excerpt {
+                @extend .body-normal;
+                @extend .margin-top-normal;
+            }
+        }
+    }
 }
