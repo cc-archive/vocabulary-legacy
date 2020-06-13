@@ -40,14 +40,6 @@
 In essence Vue Vocabulary is a collection of UI components that incorporate Vocabulary under the hood.
 Vue Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
-<p align="center">
-  <a href="https://www.netlify.com">
-    <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
-  </a>
-  <br/>
-  Documentation powered by Netlify.
-</p>
-
 ### Using
 
 To use Vue Vocabulary in your projects, refer to [this document](https://cc-vue-vocabulary.netlify.app/?path=/docs/vue-vocabulary-usage--page).
@@ -61,7 +53,6 @@ To contribute to Vue Vocabulary, refer to [this document](https://cc-vue-vocabul
 This project is still under development and as a consequence of the fact, users
 of the library should be expect to encounter bugs. Feedback and bug reports are
 welcome, fixes and patches even more so.
-
 
 ### License
 
