@@ -117,80 +117,66 @@ smallest possible file size bundle.
 
 ## CC licenses
 
-### Aspects
+### Standard
+
+The CC standard icons include those that have been added to the Unicode Standard in version 13.0. Do note the the CC-ND
+symbol replaces the pre-existing 'circled-equals' symbol (⊜ / `&#8860;`) instead of occupying a new codepoint. They can
+be copy-pasted into any location that is equipped to handle Unicode 13.0.
 
 <IconGallery>
-  <IconItem name="cc-logo">
-    <i class="icon cc-logo"></i>
-  </IconItem>
-  <IconItem name="cc-by">
-    <i class="icon cc-by"></i>
-  </IconItem>
-  <IconItem name="cc-nc">
-    <i class="icon cc-nc"></i>
-  </IconItem>
-  <IconItem name="cc-nc-eu">
-    <i class="icon cc-nc-eu"></i>
-  </IconItem>
-  <IconItem name="cc-nc-jp">
-    <i class="icon cc-nc-jp"></i>
-  </IconItem>
-  <IconItem name="cc-nd">
-    <i class="icon cc-nd"></i>
+  <IconItem name="cc-zero">
+    <i class="icon cc-zero"></i>
   </IconItem>
   <IconItem name="cc-sa">
     <i class="icon cc-sa"></i>
   </IconItem>
-  <IconItem name="cc-zero">
-    <i class="icon cc-zero"></i>
+  <IconItem name="cc-nc">
+    <i class="icon cc-nc"></i>
+  </IconItem>
+  <IconItem name="cc-logo">
+    <i class="icon cc-logo"></i>
   </IconItem>
   <IconItem name="cc-pd">
     <i class="icon cc-pd"></i>
   </IconItem>
-  <IconItem name="cc-pd-alt">
-    <i class="icon cc-pd-alt"></i>
+  <IconItem name="cc-by">
+    <i class="icon cc-by"></i>
   </IconItem>
-  <IconItem name="cc-letterheart">
-    <i class="icon cc-letterheart"></i>
+  <IconItem name="cc-nd">
+    <i class="icon cc-nd"></i>
   </IconItem>
 </IconGallery>
 
 To have a white fill inside the icons, use the class `.has-background-white`. It's subtle but it's there.
 
 <IconGallery>
-  <IconItem name="cc-logo">
-    <i class="icon has-background-white cc-logo"></i>
-  </IconItem>
-  <IconItem name="cc-by">
-    <i class="icon has-background-white cc-by"></i>
-  </IconItem>
-  <IconItem name="cc-nc">
-    <i class="icon has-background-white cc-nc"></i>
-  </IconItem>
-  <IconItem name="cc-nc-eu">
-    <i class="icon has-background-white cc-nc-eu"></i>
-  </IconItem>
-  <IconItem name="cc-nc-jp">
-    <i class="icon has-background-white cc-nc-jp"></i>
-  </IconItem>
-  <IconItem name="cc-nd">
-    <i class="icon has-background-white cc-nd"></i>
+  <IconItem name="cc-zero">
+    <i class="icon has-background-white cc-zero"></i>
   </IconItem>
   <IconItem name="cc-sa">
     <i class="icon has-background-white cc-sa"></i>
   </IconItem>
-  <IconItem name="cc-zero">
-    <i class="icon has-background-white cc-zero"></i>
+  <IconItem name="cc-nc">
+    <i class="icon has-background-white cc-nc"></i>
+  </IconItem>
+  <IconItem name="cc-logo">
+    <i class="icon has-background-white cc-logo"></i>
   </IconItem>
   <IconItem name="cc-pd">
     <i class="icon has-background-white cc-pd"></i>
   </IconItem>
-  <IconItem name="cc-pd-alt">
-    <i class="icon has-background-white cc-pd-alt"></i>
+  <IconItem name="cc-by">
+    <i class="icon has-background-white cc-by"></i>
+  </IconItem>
+  <IconItem name="cc-nd">
+    <i class="icon has-background-white cc-nd"></i>
   </IconItem>
 </IconGallery>
 
-### Niche aspects
+### Non-standard
+
+These icons, though related to the CC license iconography set, are not part of the Unicode Standard and cannot be
+directly copy-pasted into a different location.
 
 <IconGallery>
   <IconItem name="cc-sampling">
@@ -204,6 +190,18 @@ To have a white fill inside the icons, use the class `.has-background-white`. It
   </IconItem>
   <IconItem name="cc-share">
     <i class="icon cc-share"></i>
+  </IconItem>
+  <IconItem name="cc-nc-eu">
+    <i class="icon cc-nc-eu"></i>
+  </IconItem>
+  <IconItem name="cc-nc-jp">
+    <i class="icon cc-nc-jp"></i>
+  </IconItem>
+  <IconItem name="cc-pd-alt">
+    <i class="icon cc-pd-alt"></i>
+  </IconItem>
+  <IconItem name="cc-letterheart">
+    <i class="icon cc-letterheart"></i>
   </IconItem>
 </IconGallery>
 
@@ -221,6 +219,15 @@ To have a white fill inside the icons, use the class `.has-background-white`. It
   </IconItem>
   <IconItem name="cc-share">
     <i class="icon has-background-white cc-share"></i>
+  </IconItem>
+  <IconItem name="cc-nc-eu">
+    <i class="icon has-background-white cc-nc-eu"></i>
+  </IconItem>
+  <IconItem name="cc-nc-jp">
+    <i class="icon has-background-white cc-nc-jp"></i>
+  </IconItem>
+  <IconItem name="cc-pd-alt">
+    <i class="icon has-background-white cc-pd-alt"></i>
   </IconItem>
 </IconGallery>
 
@@ -313,7 +320,8 @@ Using the `.colored` class, you can use a colored version of these icons.
 # Usage
 
 To use the icons, add the classes `.icon`  and the name of the icon. Alternatively you can just use the ligatures by
-typing out the icon name (without the dashes) inside an element with the `.icon` class applied.
+typing out the icon name (without the dashes) inside an element with the `.icon` class applied. The standard CC icons
+can also be used by typing out the Unicode character inside an element with the `.icon` class applied.
 
 **Example:**
 
@@ -340,4 +348,17 @@ With ligatures
 ```html
 <!-- Drop the dashes -->
 <i class="icon">cclogo</i>
+```
+
+With Unicode characters (only standard CC icons)
+
+<IconGallery>
+  <IconItem name="">
+    <i class="icon">🅯</i>
+  </IconItem>
+</IconGallery>
+
+```html
+<!-- Your browser might not be able to display this -->
+<i class="icon">🅯</i>
 ```

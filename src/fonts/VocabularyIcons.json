@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Vocabulary Icons",
     "lastOpened": 0,
-    "created": 1586916408419
+    "created": 1591981590461
   },
   "iconSets": [
     {
@@ -687,7 +687,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "cc, cclogo",
-          "code": 60416
+          "code": 127341
         },
         {
           "order": 64,
@@ -696,7 +696,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "ccby",
-          "code": 60417
+          "code": 127343
         },
         {
           "order": 65,
@@ -705,7 +705,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "ccnc",
-          "code": 60418
+          "code": 127247
         },
         {
           "order": 66,
@@ -732,7 +732,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "ccnd",
-          "code": 60421
+          "code": 8860
         },
         {
           "order": 69,
@@ -741,7 +741,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "ccsa",
-          "code": 60422
+          "code": 127246
         },
         {
           "order": 70,
@@ -786,7 +786,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "cczero",
-          "code": 60427
+          "code": 127245
         },
         {
           "order": 75,
@@ -795,7 +795,7 @@
           "prevSize": 32,
           "tempChar": "",
           "ligatures": "publicdomain, pd",
-          "code": 60428
+          "code": 127342
         },
         {
           "order": 62,
@@ -1150,7 +1150,7 @@
           "name": "reddit",
           "prevSize": 32,
           "code": 60678,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "reddit"
         },
         {
@@ -1159,7 +1159,7 @@
           "name": "github",
           "prevSize": 32,
           "code": 60679,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "github"
         },
         {
@@ -1168,7 +1168,7 @@
           "name": "WhatsApp",
           "prevSize": 32,
           "code": 60680,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "WhatsApp"
         },
         {
@@ -1177,7 +1177,7 @@
           "name": "tumblr",
           "prevSize": 32,
           "code": 60681,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "tumblr"
         },
         {
@@ -1186,7 +1186,7 @@
           "name": "sms",
           "prevSize": 32,
           "code": 60688,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "sms"
         },
         {
@@ -1195,7 +1195,7 @@
           "name": "messenger",
           "prevSize": 32,
           "code": 60689,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "messenger"
         }
       ],
