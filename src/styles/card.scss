@@ -282,12 +282,9 @@ $card-header-shadow: none;
             .card-content {
                 .site-link {
                     @extend .margin-top-small;
+                    @extend .has-text-forest-green;
 
-                    span {
-                        @extend .has-text-forest-green;
-                    }
-
-                    i {
+                    .icon {
                         @extend .padding-horizontal-small;
                         @extend .padding-vertical-smaller;
                         @extend .has-color-forest-green;
@@ -301,18 +298,18 @@ $card-header-shadow: none;
                     @extend .margin-top-normal;
                     @extend .margin-bottom-bigger;
 
-                    button {
+                    .button {
                         @extend .margin-right-small;
                     }
                 }
                 .external-links {
-                    button {
+                    .button {
                         @extend .margin-bottom-small;
 
-                        span {
+                        .link-content {
                             @extend .padding-horizontal-small;
                         }
-                        i {
+                        .icon {
                             @extend .padding-vertical-smaller;
                         }
                     }
