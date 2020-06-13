@@ -44,11 +44,15 @@
         @extend .is-active;
       }
     }
-  }
 
-  .connector {
-    margin-left: 0.8125rem;
-    border-left: 0.1875rem solid $color-light-gray;
-    height: 1.5rem;
+    &:not(:last-of-type)::after {
+      content: '';
+
+      display: block;
+
+      height: 1.5rem;
+      border-left: 0.1875rem solid $color-light-gray;
+      margin-left: 0.8125rem;
+    }
   }
 }
