@@ -5,14 +5,14 @@
   line-height: 1.25;
   font-weight: bold;
 
-  .top-step-header {
+  .step-header {
     @extend .b-header;
     @extend .margin-bottom-big;
 
     line-height: 1.6875;
   }
 
-  .top-step-number {
+  .step-number {
     @extend .has-text-centered;
     @extend .padding-vertical-smaller;
 
@@ -29,7 +29,7 @@
     position: relative;
   }
 
-  .top-step-name {
+  .step-name {
     @extend .margin-left-normal;
   }
 
