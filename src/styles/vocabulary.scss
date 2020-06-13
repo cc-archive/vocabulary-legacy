@@ -24,12 +24,7 @@
 @import "./github_corner.scss";
 @import "./locale.scss";
 @import "./image.scss";
-@import "./breadcrumb.scss";
-@import "./sidebar_menu";
-@import "./table_of_contents.scss";
-@import "./pagination.scss";
 @import "./profile_image.scss";
-@import "./table_of_progress";
 
 // Layouts
 @import "./layout.scss";
@@ -37,3 +32,10 @@
 @import "./table.scss";
 @import "./tabs.scss";
 @import "./notification.scss";
+
+// Navigation
+@import "./table_of_progress";
+@import "./sidebar_menu";
+@import "./table_of_contents.scss";
+@import "./breadcrumb.scss";
+@import "./pagination.scss";
