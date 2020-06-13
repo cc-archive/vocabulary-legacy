@@ -13,7 +13,7 @@
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/vocabulary": "^1.0.0-beta.10",
+    "@creativecommons/vocabulary": "^1.0.0-beta.15",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",

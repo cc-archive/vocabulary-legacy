@@ -1,5 +1,7 @@
 import { create } from '@storybook/theming'
 
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg'
+
 export default create({
   // Inherit
   base: 'light',
@@ -27,5 +29,5 @@ export default create({
   // Branding
   brandTitle: 'Vue Vocabulary',
   brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary',
-  brandImage: 'https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true'
+  brandImage: vocabularySvg
 })

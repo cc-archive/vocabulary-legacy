@@ -1,17 +1,9 @@
 <p align="center">
-  <a href="https://creativecommons.org/" class="readme-cc-logo">
-    <img 
-      alt="Creative Commons logo" 
-      src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/cc_logo.png"
-      height="62px"/>
-  </a>
-</p>
-<p align="center">
   <a href="https://creativecommons.github.io/vue-vocabulary/" class="readme-vocabulary-logo">
     <img 
       alt="Vocabulary logo" 
       src="https://raw.githubusercontent.com/creativecommons/vue-vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
-      height="65px"/>
+      height="40px"/>
   </a>
 </p>
 
