@@ -5,32 +5,35 @@ import { figmaConfig } from './helpers'
 
 # Select
 
-<Preview>
-  <Story name="Default" parameters={{
+export const selectDiv = () => `
+<div class="select">
+  <select>
+    <option disabled selected>Select</option>
+    <option>Option A</option>
+    <option>Option B</option>
+  </select>
+</div>
+<br/><br/>
+<div class="select">
+  <select>
+    <option disabled>Select</option>
+    <option>Option A</option>
+    <option>Option B</option>
+  </select>
+</div>
+<br/><br/>
+<div class="select">
+  <select disabled>
+    <option disabled>Select</option>
+    <option>Option A</option>
+    <option>Option B</option>
+  </select>
+</div>`
+
+<Preview mdxSource={selectDiv()}>
+  <Story name="Default" height="190px" parameters={{
     design: figmaConfig('603%3A6')
-  }}>{`
-    <div class="select">
-      <select>
-        <option disabled selected>Select</option>
-        <option>Option A</option>
-        <option>Option B</option>
-      </select>
-    </div>
-    <br/><br/>
-    <div class="select">
-      <select>
-        <option disabled>Select</option>
-        <option>Option A</option>
-        <option>Option B</option>
-      </select>
-    </div>
-    <br/><br/>
-    <div class="select">
-      <select disabled>
-        <option disabled>Select</option>
-        <option>Option A</option>
-        <option>Option B</option>
-      </select>
-    </div>
-  `}</Story>
+  }}>{
+    selectDiv()
+  }</Story>
 </Preview>
