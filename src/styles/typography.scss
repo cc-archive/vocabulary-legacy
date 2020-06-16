@@ -1,11 +1,18 @@
-@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.8/css/fonts.css");
+@import url("https://unpkg.com/@creativecommons/fonts@1.0.0-beta.10/css/fonts.css");
 
 // Families
 $family-roboto-condensed: 'Roboto Condensed', sans-serif;
 $family-source-sans-pro: 'Source Sans Pro', sans-serif;
-$family-fira-code: monospace; // Maybe later
-$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$family-jetbrains-mono: 'JetBrains Mono', monospace;
+$family-vocabulary-icons: 'Vocabulary Icons';
+$family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
+
+$family-heading: $family-roboto-condensed;
+$family-body: $family-source-sans-pro;
+$family-code: $family-jetbrains-mono;
+$family-icons: $family-vocabulary-icons;
 
 // Sizes
 $font-size-h1: 3.56rem;
@@ -23,11 +30,6 @@ $font-size-body-normal: 1rem;
 $font-size-body-list: 1rem;
 
 $font-size-caption: 0.8rem;
-
-// Overrides
-$family-sans-serif: $family-source-sans-pro;
-$family-alternative: $family-roboto-condensed;
-$family-monospace: $family-fira-code;
 
 // Classes
 $body-font-sizes: (
@@ -53,7 +55,7 @@ $body-font-sizes: (
 }
 
 .value {
-  font-family: $family-roboto-condensed;
+  font-family: $family-heading;
   font-size: $font-size-value;
   font-weight: bold;
 
@@ -62,15 +64,15 @@ $body-font-sizes: (
 }
 
 .monospace {
-  font-family: $family-monospace;
-  font-size: 0.875em; // Fira Code at 14px is similar to other fonts at 16px
+  font-family: $family-code;
+  font-size: 0.875em; // Code fonts at 14px are similar to other fonts at 16px
 }
 
 // Usage
 h1, h2, h3, h4, h5, h6 {
   color: $color-dark-slate-gray;
 
-  font-family: $family-roboto-condensed;
+  font-family: $family-heading;
   font-weight: bold;
 
   text-transform: uppercase;
@@ -78,9 +80,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02rem;
 
   &.b-header {
-  font-family: $family-source-sans-pro;
+    font-family: $family-body;
 
-  text-transform: none;
+    text-transform: none;
   }
 }
 
@@ -104,10 +106,10 @@ $header-font-sizes: (
 }
 
 body {
-  font-family: $family-sans-serif;
+  font-family: $family-body;
   font-size: $font-size-body-normal;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
