@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     color: $color-black;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     .icon-container {
       position: absolute;
       display: flex;
@@ -55,7 +55,7 @@
           object-fit: cover;
           width: 100%;
           height: 100%;
-          border-radius: .25rem 0 0 .25rem;
+          border-radius: 0.25rem 0 0 0.25rem;
         }
       }
       .content-wrap {
@@ -68,7 +68,7 @@
       }
       &:hover {
         border: 2px solid $color-gray;
-        box-shadow: .5rem .5rem 0 rgba($color-black,.06);
+        box-shadow: 0.5rem 0.5rem 0 rgba($color-black, 0.06);
       }
     }
     @include mobile() {
@@ -82,6 +82,24 @@
             display: none;
           }
         }
+      }
+    }
+  }
+  &.minimal {
+    .notification-container {
+      padding: $space-normal 6rem $space-normal $space-normal;
+      background-color: $color-light-success;
+      width: 35%;
+
+      &:hover {
+        .b-header {
+          text-decoration: underline;
+        }
+      }
+    }
+    @include mobile() {
+      .notification-container {
+        padding: $space-normal;
       }
     }
   }
