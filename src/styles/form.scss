@@ -45,10 +45,8 @@ $input-disabled-border-color: $color-gray;
 .textarea {
   @include form_control;
   box-sizing: border-box;
+  min-height: 6.875em;
   resize: both;
-  min-width: auto;
-  height: 6.875rem;
-  min-height: 6.875rem !important;
 }
 
 // Select
