@@ -13,7 +13,7 @@ updates:
     # Check for updates once a week
     schedule:
       interval: 'weekly'
-      
+
   # Enable version updates for Docker
   - package-ecosystem: 'docker'
     # Look for a `Dockerfile` in the `/docker/puppeteer` directory
@@ -21,12 +21,11 @@ updates:
     # Check for updates once a week
     schedule:
       interval: 'weekly'
-      
-  # Enable version updates for Docker   
+
+  # Enable version updates for Docker
   - package-ecosystem: 'docker'
     # Look for a `Dockerfile` in the `/docker/vocabulary` directory
     directory: '/docker/vocabulary'
     # Check for updates once a week
     schedule:
       interval: 'weekly'
-      
