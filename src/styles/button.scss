@@ -53,7 +53,7 @@ $button-family: $family-secondary;
     background-color: $color-brighter-tomato;
   }
 
-  &.is-info:hover {
+  &.is-success:hover {
     background-color: $color-brighter-forest-green;
   }
 
@@ -65,6 +65,7 @@ $button-family: $family-secondary;
     &:hover {
       background-color: $color-brighter-gold;
       color: $color-black;
+      text-decoration: none;
     }
   }
 

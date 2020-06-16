@@ -5,14 +5,27 @@ import { figmaConfig } from './helpers'
 
 # Buttons
 
+export const btnType = (element = 'button', size) => {
+  let sizeClass = size ? ` ${size}` : ''
+  return `<${element} class="button${sizeClass} is-success">Button</${element}>`
+}
+
 Buttons are created by adding the `.button` class to a `<button>`.
 
-<Preview>
+<Preview mdxSource={btnType()}>
   <Story name="MediumButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button">Button</button>
-  `}</Story>
+  }}>{
+    btnType()
+  }</Story>
+</Preview>
+
+<Preview mdxSource={btnType('a')}>
+  <Story name="MediumButtonA" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    btnType('a')
+  }</Story>
 </Preview>
 
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
@@ -59,21 +72,13 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
   `}</Story>
 </Preview>
 
-Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
+Buttons may have four feedback colors such as `.is-success`, `.is-warning` and `.is-danger`.
 
 <Preview>
   <Story name="ButtonSuccess" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{`
     <button class="button is-success">Button</button>
-  `}</Story>
-</Preview>
-
-<Preview>
-  <Story name="ButtonInfo" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-info">Button</button>
   `}</Story>
 </Preview>
 
