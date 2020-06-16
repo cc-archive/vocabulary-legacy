@@ -82,26 +82,39 @@ directly be hotlinked from the CDNs due to cross-origin issues, you'll need to a
 
 ```html
 <script>
-  const getFullyQualifiedUrl = (path, version) => {
-    let baseUrl = "https://unpkg.com/@creativecommons/vocabulary"
+  /**
+   * Get the fully-qualified URL of a Vocabulary asset.
+   *
+   * @param {string} version - the Vocabulary version in which to locate the asset
+   * @param {string} path - the path of the asset being patched
+   * @return {string} the fully qualified URL of the asset
+   */
+  const getFullyQualifiedUrl = (version, path) => {
+    let baseUrl = 'https://unpkg.com/@creativecommons/vocabulary'
     // If you prefer jsDelivr instead, use
-    // let baseUrl = "https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary"
-    if (version) { baseUrl = `${baseUrl}@${version}` }
-    return `${baseUrl}/${path}`
+    // let baseUrl = 'https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary'
+    return `${baseUrl}@${version}/${path}`
   }
 
-  const patchAssetIntoDom = (asset, version=null) => {
-    const ajax = new XMLHttpRequest();
-    ajax.open("GET", getFullyQualifiedUrl(asset, version), true);
-    ajax.onload = () => {
-    var div = document.createElement("div");
+  /**
+   * Create an invisible container and place the asset into the DOM.
+   *
+   * This function is intended to be used to patch SVG assets that are later
+   * referenced inside `<use>` tags in `<svg>` tags. It can also be used to force
+   * an image to be downloaded to speed up its loading when referenced again.
+   *
+   * @param {string} path - the path of the asset being patched
+   * @param {string} version - the Vocabulary version in which to locate the asset
+   */
+  const patchAssetIntoDom = (path, version = 'latest') => {
+    fetch(getFullyQualifiedUrl(version, path)).then(response => {
+      return response.text()
+    }).then(data => {
       // Render SVG in the page
       div.innerHTML = ajax.responseText;
       div.style.display = 'none';
-      document.body.insertBefore(div, document.body.childNodes[0]);
-    }
-
-    ajax.send();
+      document.body.prepend(div, document.body.childNodes[0]);
+    })
   }
 
   patchAssetIntoDom('/assets/logos/cc/logomark.svg');
@@ -112,6 +125,6 @@ directly be hotlinked from the CDNs due to cross-origin issues, you'll need to a
   preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 304 73">
   <!-- Automatically finds ID amongst all assets loaded using `patchAssetIntoDom()` -->
-  <use href="#creativecommons"></use>
+  <use href="#logomark"></use>
 </svg>
 ```
