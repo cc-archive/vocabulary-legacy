@@ -15,6 +15,7 @@ const order = {
   'Elements': [],
   'Form': [],
   'Layouts': [],
+  'Navigation': [],
   'Patterns': []
 }
 const families = Object.keys(order)
