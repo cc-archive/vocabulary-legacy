@@ -1,3 +1,3 @@
-import { getGlobalMenu } from 'global_header.js'
+import { createGlobalHeader } from './global_header'
 
-getGlobalMenu()
+createGlobalHeader()

@@ -1,161 +1,142 @@
-import { logoMarkSvg } from 'logos.js'
+import {
+  CC_ORG_URL,
+  DONATION_URL,
+
+  GLOBAL_HEADER_API_URL,
+
+  DONATION_TITLE,
+  DONATION_DESCRIPTION,
+  DONATION_BUTTON_TEXT,
+  NAVIGATION_TAB_TEXT
+} from './constants'
+
+import { h } from './render'
+import { patchAssetIntoDom } from './assets'
+
 /**
- * This script query the WordPress API to gather global navigation elements
+ * This class represents an instance of the Global Header component.
+ *
+ * It abstracts JavaScript code pertaining to the rendering and interactivity
+ * of the global header.
  */
+class GlobalHeader {
+  constructor () {
+    patchAssetIntoDom('/assets/logos/cc/logomark.svg')
+    this.logomark = `<svg xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 304 73">
+        <use href="#logomark"></use>
+      </svg>`
+  }
 
-function GlobalNavigation () {
-  this.data = ''
-  const API_URL = 'https://creativecommons.lo/wp-json/ccglobal/menu'
-  const WEBSITE_URL = 'https://creativecommons.org'
-  const DONATION_URL = 'https://us.netdonor.net/page/6650/donate/1?ea.tracking.id=global-navigation-bar'
-  const DONATION_TITLE = 'Our work relies on you!'
-  const DONATION_DESCRIPTION = 'Help us keep the internet free and open.'
-  const DONATION_BUTTON_TEXT = 'Donate now'
-  const NAVIGATION_TAB_TEXT = 'Explore CC'
-
-  /** Query API function */
-  this.queryApi = () => {
-    fetch(API_URL).then(response => {
+  queryApi (callbackFn) {
+    fetch(GLOBAL_HEADER_API_URL).then(response => {
       return response.json()
     }).then(data => {
-      this.data = data
-      BuildNavigation(data)
+      callbackFn(data)
     }).catch(err => {
       console.log(err)
     })
   }
-  var headerSection = () => {
-    var headerLogoSection = document.createElement('header')
-    headerLogoSection.className = 'global-header-header'
-    var logoLink = document.createElement('a')
-    var logoWrapper = document.createElement('div')
-    logoWrapper.className = 'has-text-white'
-    logoLink.className = 'main-logo'
-    logoLink.setAttribute('href', WEBSITE_URL)
-    logoLink.setAttribute('target', '_blank')
-    logoWrapper.insertAdjacentHTML('beforeend', logoMarkSvg())
-    logoLink.appendChild(logoWrapper)
-    headerLogoSection.appendChild(logoLink)
 
-    return headerLogoSection
-  }
-  var BuildMainLayout = (NavigationItems) => {
-    var mainLayout = document.createElement('div')
-    mainLayout.className = 'container'
+  build (data) {
+    const headerSection = h('header', ['global-header-header'], [
+      h('a', ['main-logo'], [
+        h('div', ['has-text-white'], [], element => {
+          element.innerHTML = this.logomark
+        })
+      ], element => {
+        element.setAttribute('href', CC_ORG_URL)
+        element.setAttribute('target', '_blank')
+      })
+    ])
 
-    var openTab = document.createElement('a')
-    openTab.setAttribute('href', '#')
-    openTab.className = 'open-tab'
-    var openTabText = document.createTextNode(NAVIGATION_TAB_TEXT)
-    openTab.appendChild(openTabText)
+    const donateColumn = h('div', ['column', 'is-one-quarter'], [
+      // Donate section
+      h('aside', ['donate-section'], [
+        // Heading
+        h('h5', [], [
+          document.createTextNode(DONATION_TITLE)
+        ]),
+        // Plea
+        h('p', [], [
+          document.createTextNode(DONATION_DESCRIPTION)
+        ]),
+        // Button
+        h('a', ['button', 'small', 'donate'], [
+          h('i', ['icon', 'cc-letterheart', 'margin-right-small', 'is-size-5', 'padding-top-smaller']),
+          document.createTextNode(DONATION_BUTTON_TEXT)
+        ], element => {
+          element.setAttribute('href', DONATION_URL)
+        })
+      ])
+    ])
 
-    var headerContent = document.createElement('div')
-    headerContent.className = 'global-header-content'
+    const productsColumn = h('div', ['column'], [
+      // Navigation section
+      h('nav', ['products'], [
+        h('div', ['product-list'], data.map(product => {
+          // Product
+          return h('a', ['product-item'], [
+            // Title
+            h('strong', [], [
+              document.createTextNode(product.title)
+            ]),
+            // Description
+            h('span', ['item-description'], [
+              document.createTextNode(product.description)
+            ])
+          ], element => {
+            element.setAttribute('href', product.url)
+            element.setAttribute('target', '_blank')
+          })
+        }))
+      ], element => {
+        element.setAttribute('role', 'navigation')
+        element.setAttribute('aria-label', 'global navigation')
+      })
+    ])
 
-    var levelContainer = document.createElement('div')
-    levelContainer.className = 'level'
-
-    var levelLeft = document.createElement('div')
-    levelLeft.className = 'level-left'
-    levelLeft.appendChild(headerSection())
-
-    var mainColumns = document.createElement('div')
-    mainColumns.classList.add('columns', 'padding-bottom-normal')
-
-    var firstColumn = document.createElement('div')
-    firstColumn.classList.add('column', 'is-one-third')
-
-    var donateSection = document.createElement('aside')
-    donateSection.className = 'donate-section'
-
-    var donateTitle = document.createElement('h5')
-    var donateTitleText = document.createTextNode(DONATION_TITLE)
-    donateTitle.appendChild(donateTitleText)
-
-    var donateDescription = document.createElement('p')
-    var donateDescriptionText = document.createTextNode(DONATION_DESCRIPTION)
-    donateDescription.appendChild(donateDescriptionText)
-
-    var donateButton = document.createElement('a')
-    donateButton.classList.add('button', 'small', 'donate')
-    donateButton.setAttribute('href', DONATION_URL)
-
-    var donateIcon = document.createElement('i')
-    donateIcon.classList.add('icon', 'cc-letterheart', 'margin-right-small', 'is-size-5', 'padding-top-smaller')
-
-    var donateIconText = document.createTextNode(DONATION_BUTTON_TEXT)
-    donateButton.appendChild(donateIcon)
-    donateButton.appendChild(donateIconText)
-
-    donateSection.appendChild(donateTitle)
-    donateSection.appendChild(donateDescription)
-    donateSection.appendChild(donateButton)
-
-    var secondColumn = document.createElement('div')
-    secondColumn.className = 'column'
-
-    var navigationMenu = document.createElement('nav')
-    navigationMenu.className = 'products'
-    navigationMenu.setAttribute('role', 'navigation')
-    navigationMenu.setAttribute('aria-label', 'global navigation')
-    navigationMenu.appendChild(NavigationItems)
-
-    levelContainer.appendChild(levelLeft)
-    headerContent.appendChild(levelContainer)
-
-    firstColumn.appendChild(donateSection)
-    secondColumn.appendChild(navigationMenu)
-
-    mainColumns.appendChild(firstColumn)
-    mainColumns.appendChild(secondColumn)
-
-    mainColumns.appendChild(firstColumn)
-    mainColumns.appendChild(secondColumn)
-
-    headerContent.appendChild(mainColumns)
-    mainLayout.appendChild(openTab)
-    mainLayout.appendChild(headerContent)
-
-    return mainLayout
-  }
-
-  var BuildNavigation = (data) => {
-    var mainContainer = document.createElement('header')
-    mainContainer.className = 'cc-global-header'
-    var menuElements = document.createElement('div')
-    menuElements.className = 'product-list'
-    data.forEach(element => {
-      var currentElement = document.createElement('a')
-      currentElement.className = 'product-item'
-      currentElement.setAttribute('href', element.url)
-      currentElement.setAttribute('target', '_blank')
-      var elementTitle = document.createElement('strong')
-      var textItself = document.createTextNode(element.title)
-      elementTitle.appendChild(textItself)
-
-      var elementDescription = document.createElement('span')
-      elementDescription.className = 'item-description'
-      var descriptionItself = document.createTextNode(element.description)
-      elementDescription.appendChild(descriptionItself)
-
-      currentElement.appendChild(elementTitle)
-      currentElement.appendChild(elementDescription)
-
-      menuElements.appendChild(currentElement)
-    })
-    var mainLayout = BuildMainLayout(menuElements)
-    mainContainer.appendChild(mainLayout)
-    document.body.prepend(mainContainer)
-
-    var ButtonEvent = document.querySelector('.cc-global-header .open-tab')
-    ButtonEvent.addEventListener('click', event => {
+    let openTab = null
+    const mainContainer = h('header', ['cc-global-header'], [
+      h('div', ['container'], [
+        // Open tab
+        h('a', ['open-tab'], [
+          document.createTextNode(NAVIGATION_TAB_TEXT)
+        ], element => {
+          element.setAttribute('href', '#')
+          openTab = element
+        }),
+        // Content
+        h('div', ['global-header-content'], [
+          // Level
+          h('div', ['level'], [
+            h('div', ['level-left'], [
+              headerSection
+            ])
+          ]),
+          // Main columns
+          h('div', ['columns', 'padding-bottom-normal'], [
+            donateColumn,
+            productsColumn
+          ])
+        ])
+      ])
+    ])
+    openTab.addEventListener('click', event => {
       event.preventDefault()
       mainContainer.classList.toggle('is-active')
     })
+
+    document.body.prepend(mainContainer)
+  }
+
+  up () {
+    this.queryApi(this.build.bind(this))
   }
 }
 
-export function getGlobalMenu () {
-  const CCGlobalNavigation = new GlobalNavigation()
-  CCGlobalNavigation.query_api()
+export function createGlobalHeader () {
+  const globalHeader = new GlobalHeader()
+  globalHeader.up()
 }
