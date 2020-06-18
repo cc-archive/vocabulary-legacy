@@ -27,6 +27,7 @@ class GlobalHeader {
         viewBox="0 0 304 73">
         <use href="#logomark"></use>
       </svg>`
+    this.element = null
   }
 
   queryApi (callbackFn) {
@@ -129,6 +130,7 @@ class GlobalHeader {
     })
 
     document.body.prepend(mainContainer)
+    this.element = mainContainer
   }
 
   up () {
@@ -139,4 +141,5 @@ class GlobalHeader {
 export function createGlobalHeader () {
   const globalHeader = new GlobalHeader()
   globalHeader.up()
+  return globalHeader
 }
