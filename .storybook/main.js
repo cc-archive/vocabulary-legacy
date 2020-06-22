@@ -4,7 +4,12 @@ module.exports = {
     '../src/stories/*.stories.mdx'
   ],
   addons: [
-    'storybook-addon-designs',
+    {
+      name: 'storybook-addon-designs',
+      options: {
+        renderTarget: 'tab'
+      }
+    },
     '@storybook/addon-knobs',
     '@storybook/addon-backgrounds',
     '@storybook/addon-viewport',
