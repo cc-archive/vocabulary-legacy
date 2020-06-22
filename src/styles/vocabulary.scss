@@ -2,14 +2,37 @@
 
 // Tokens
 @import "./color.scss";
+@import "./color_overrides.scss";
+
+// Bulma
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+
+// More tokens
 @import "./spacing.scss";
+
 @import "./typography.scss";
+@import "./typography_overrides.scss";
 
 // Elements
 @import "./button.scss";
 
 // Form
 @import "./form.scss";
+
+// Layouts
+@import "./layout.scss";
+@import "./card.scss";
+@import "./table.scss";
+@import "./tabs.scss";
+@import "./notification.scss";
+
+// Navigation
+@import "./sidebar_menu";
+@import "./table_of_contents.scss";
+@import "./table_of_progress";
+@import "./breadcrumb.scss";
+@import "./pagination.scss";
 
 // Patterns
 @import "./global_header.scss";
@@ -18,10 +41,4 @@
 @import "./github_corner.scss";
 @import "./locale.scss";
 @import "./image.scss";
-
-// Layouts
-@import "./layout.scss";
-@import "./card.scss";
-@import "./table.scss";
-@import "./tabs.scss";
-@import "./notification.scss";
+@import "./profile_image.scss";

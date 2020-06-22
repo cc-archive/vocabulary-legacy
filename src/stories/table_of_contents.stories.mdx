@@ -1,0 +1,52 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Navigation/Table of Contents" />
+
+# Table of Contents
+
+The Table of Contents component shows the sections of a page and allows the user
+to move across all sections on a page. It is recommended to fixed the component
+while the user scrolls when the page is mainly for showing one type of content,
+like a blog post.
+
+The active section must change based on what the user is viewing on the content
+section.
+
+The component has two states, active and inactive. The hover state of inactive
+elements should have the same style of active state.
+
+<Preview>
+  <Story name="Default" parameters={{
+    design: figmaConfig('6990%3A82')
+  }}>{`
+    <style>
+      .toc-container {
+        max-width: 276px;
+      }
+    </style>
+    <div class="toc-container">
+      <h4 class="b-header">On this page</h4>
+      <aside class="menu table-of-contents">
+        <ul class="menu-list">
+          <li>
+            <a class="is-active link">Section one, active state</a>
+            <ul>
+              <li><a class="link"><i class="icon circle-filled"></i>Child section</a></li>
+              <li><a class="link"><i class="icon circle-filled"></i>Child section</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="link">Section two</a>
+          </li>
+          <li>
+            <a class="link">Section three</a>
+          </li>
+          <li>
+            <a class="link">Section four</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  `}</Story>
+</Preview>
