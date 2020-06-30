@@ -71,7 +71,7 @@ $button-family: $family-secondary;
   &.is-text {
     text-decoration: none;
     &:hover, &:active, &:focus {
-      border: none;
+      border-color: transparent;
       box-shadow: none;
     }
   }
