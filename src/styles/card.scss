@@ -296,10 +296,11 @@ $card-header-shadow: none;
                 }
                 .labels {
                     @extend .margin-top-normal;
-                    @extend .margin-bottom-bigger;
+                    @extend .margin-bottom-normal;
 
                     .button {
                         @extend .margin-right-small;
+                        @extend .margin-bottom-normal;
                     }
                 }
                 .external-links {
