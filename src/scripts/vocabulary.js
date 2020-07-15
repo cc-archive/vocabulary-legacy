@@ -1,3 +1,1 @@
-import { createGlobalHeader } from './global_header'
-
-createGlobalHeader()
+export { createGlobalHeader } from './global_header'

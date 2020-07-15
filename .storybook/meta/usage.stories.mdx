@@ -34,6 +34,10 @@ Alternatively, you can import the SCSS styleheets into your own stylesheets.
 @import '~@creativecommons/vocabulary/scss/footer.scss'
 ```
 
+### JavaScript
+
+Coming soon.
+
 ### Assets
 
 You can reference assets using file loader or SVG inline loader.
@@ -75,10 +79,42 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
 ```
 
+### JavaScript
+
+Source the bundled JS file with any of these one-link `script` tags within your document `head` tag.
+
+#### unpkg
+
+```html
+<!-- If you have a specific version in mind, use -->
+<script src="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/js/vocabulary.js">
+<!-- or, if you prefer the latest version, use -->
+<script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js">
+```
+
+#### jsDelivr
+
+```html
+<!-- If you have a specific version in mind, use -->
+<script src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/js/vocabulary.js">
+<!-- or, if you prefer the latest version, use -->
+<script src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/js/vocabulary.js">
+```
+
+#### Post-sourcing
+
+The JavaScript bundle is imported as `vocabulary` in the global scope. You can then access the functions as follows.
+
+```html
+<script>
+  vocabulary.createGlobalHeader()
+</script>
+```
+
 ### Assets
 
 Vocabulary bundles a number of assets, like SVGs for the brand and product logos, and license badges. Since SVGs cannot
-directly be hotlinked from the CDNs due to cross-origin issues, you'll need to adopt this workaround.
+directly be hotlinked from the CDNs due to cross-origin issues, you will need to adopt this workaround.
 
 ```html
 <script>
