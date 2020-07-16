@@ -41,6 +41,14 @@ $input-disabled-border-color: $color-gray;
   }
 }
 
+// Textarea
+.textarea {
+  @include form_control;
+  box-sizing: border-box;
+  min-height: 6.875em;
+  resize: both;
+}
+
 // Select
 .select {
   select {
