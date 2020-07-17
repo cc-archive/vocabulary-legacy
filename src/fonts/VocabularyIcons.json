@@ -435,7 +435,7 @@
           "id": 17,
           "name": "bookmark-regular",
           "prevSize": 32,
-          "code": 60160,
+          "code": 59920,
           "tempChar": "",
           "ligatures": "bookmarkregular"
         },
@@ -444,7 +444,7 @@
           "id": 16,
           "name": "bookmark-solid",
           "prevSize": 32,
-          "code": 60161,
+          "code": 59921,
           "tempChar": "",
           "ligatures": "bookmarksolid"
         }
