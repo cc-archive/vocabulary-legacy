@@ -429,6 +429,24 @@
           "code": 59919,
           "tempChar": "",
           "ligatures": "adjust"
+        },
+        {
+          "order": 534,
+          "id": 17,
+          "name": "bookmark-regular",
+          "prevSize": 32,
+          "code": 60160,
+          "tempChar": "",
+          "ligatures": "bookmarkregular"
+        },
+        {
+          "order": 533,
+          "id": 16,
+          "name": "bookmark-solid",
+          "prevSize": 32,
+          "code": 60161,
+          "tempChar": "",
+          "ligatures": "bookmarksolid"
         }
       ],
       "id": 5,
@@ -436,7 +454,7 @@
         "name": "Symbols",
         "license": "MIT",
         "importSize": {
-          "width": 512,
+          "width": 384,
           "height": 512
         }
       },
@@ -697,6 +715,38 @@
           "tags": [
             "adjust"
           ]
+        },
+        {
+          "id": 17,
+          "paths": [
+            "M672 0h-576c-53.020 0-96 42.98-96 96v928l384-224 384 224v-928c0-53.020-42.98-96-96-96zM672 856.86l-288-168-288 168v-748.86c0-6.627 5.373-12 12-12v0h552c6.628 0 12 5.366 12 11.992v748.868z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 768,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "bookmark"
+          ]
+        },
+        {
+          "id": 16,
+          "paths": [
+            "M0 1024v-928c0-53.020 42.98-96 96-96h576c53.020 0 96 42.98 96 96v928l-384-224-384 224z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 768,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "bookmark-solid"
+          ]
         }
       ],
       "colorThemes": [],
@@ -709,7 +759,7 @@
           "id": 65,
           "name": "logo",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "cc, cclogo",
           "code": 127341
         },
@@ -718,7 +768,7 @@
           "id": 66,
           "name": "by",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccby",
           "code": 127343
         },
@@ -727,7 +777,7 @@
           "id": 67,
           "name": "nc",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccnc",
           "code": 127247
         },
@@ -736,7 +786,7 @@
           "id": 68,
           "name": "nc-eu",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccnceu",
           "code": 60419
         },
@@ -745,7 +795,7 @@
           "id": 69,
           "name": "nc-jp",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccncjp",
           "code": 60420
         },
@@ -754,7 +804,7 @@
           "id": 70,
           "name": "nd",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccnd",
           "code": 8860
         },
@@ -763,7 +813,7 @@
           "id": 71,
           "name": "sa",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccsa",
           "code": 127246
         },
@@ -772,7 +822,7 @@
           "id": 72,
           "name": "remix",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccremix",
           "code": 60423
         },
@@ -781,7 +831,7 @@
           "id": 73,
           "name": "sampling-plus",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccsamplingplus",
           "code": 60424
         },
@@ -790,7 +840,7 @@
           "id": 74,
           "name": "sampling",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccsampling",
           "code": 60425
         },
@@ -799,7 +849,7 @@
           "id": 75,
           "name": "share",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccshare",
           "code": 60426
         },
@@ -808,7 +858,7 @@
           "id": 76,
           "name": "zero",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "cczero",
           "code": 127245
         },
@@ -817,7 +867,7 @@
           "id": 77,
           "name": "pd",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "publicdomain, pd",
           "code": 127342
         },
@@ -826,7 +876,7 @@
           "id": 78,
           "name": "pd-alt",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "publicdomainalt, pdalt",
           "code": 60429
         },
@@ -836,7 +886,7 @@
           "name": "letterheart",
           "prevSize": 32,
           "code": 60430,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "ccletterheart"
         }
       ],
@@ -1119,7 +1169,7 @@
           "id": 0,
           "name": "instagram",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "instagram",
           "code": 60672
         },
@@ -1128,7 +1178,7 @@
           "id": 1,
           "name": "twitter",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "twitter",
           "code": 60673
         },
@@ -1137,7 +1187,7 @@
           "id": 2,
           "name": "linkedin",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "linkedin",
           "code": 60674
         },
@@ -1146,7 +1196,7 @@
           "id": 3,
           "name": "facebook",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "facebook",
           "code": 60675
         },
@@ -1155,7 +1205,7 @@
           "id": 4,
           "name": "pinterest",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "pinterest",
           "code": 60676
         },
@@ -1165,7 +1215,7 @@
           "name": "slack",
           "prevSize": 32,
           "code": 60677,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "slack"
         },
         {
@@ -1174,7 +1224,7 @@
           "name": "reddit",
           "prevSize": 32,
           "code": 60678,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "reddit"
         },
         {
@@ -1183,7 +1233,7 @@
           "name": "github",
           "prevSize": 32,
           "code": 60679,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "github"
         },
         {
@@ -1192,7 +1242,7 @@
           "name": "WhatsApp",
           "prevSize": 32,
           "code": 60680,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "WhatsApp"
         },
         {
@@ -1201,7 +1251,7 @@
           "name": "tumblr",
           "prevSize": 32,
           "code": 60681,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "tumblr"
         },
         {
@@ -1210,7 +1260,7 @@
           "name": "sms",
           "prevSize": 32,
           "code": 60688,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "sms"
         },
         {
@@ -1219,7 +1269,7 @@
           "name": "messenger",
           "prevSize": 32,
           "code": 60689,
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": "messenger"
         }
       ],
