@@ -15,6 +15,28 @@ export const inputType = (size) => {
 <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
 }
 
+export const inputTypeNameDesc = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <b>Input Name <b>
+  <br>
+  Description of the input
+  <br>
+<input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+<br/><br/>
+<b>Input Name <b>
+  <br>
+  Description of the input
+  <br>
+<input class="input${sizeClass}" type="text" value="Typed text"/>
+<br/><br/>
+<b>Input Name <b>
+  <br>
+  Description of the input
+  <br>
+<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
+}
+
 <Preview mdxSource={inputType('')}>
   <Story name="Normal" height="200px" parameters={{
     design: figmaConfig('1%3A24')
@@ -36,5 +58,29 @@ export const inputType = (size) => {
     design: figmaConfig('1%3A24')
   }}>{
     inputType('large')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDesc('')}>
+  <Story name="Normal2" height="200px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDesc('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDesc('medium')}>
+  <Story name="Medium2" height="250px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDesc('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDesc('large')}>
+  <Story name="Large2" height="320px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDesc('large')
   }</Story>
 </Preview>
