@@ -52,5 +52,13 @@
       transform: translateY(0%);
     }
   }
-}
 
+  &.is-compact {
+    .image-icons {
+      @extend .is-paddingless;
+      @extend .padding-horizontal-small;
+
+      font-size: 1.3rem;
+    }
+  }
+}
