@@ -8,33 +8,35 @@ import { figmaConfig } from './helpers'
 export const inputType = (size) => {
   let sizeClass = size ? ` is-${size}` : ''
   return `
-<input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
-<br/><br/>
-<input class="input${sizeClass}" type="text" value="Typed text"/>
-<br/><br/>
-<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
+<div class="margin-bottom-small">
+  <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+</div>
+<div class="margin-bottom-small">
+  <input class="input${sizeClass}" type="text" value="Typed text"/>
+</div>
+<div class="margin-bottom-small">
+<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+</div>`
 }
 
 export const inputTypeNameDesc = (size) => {
   let sizeClass = size ? ` is-${size}` : ''
   return `
-  <b>Input Name <b>
-  <br>
-  Description of the input
-  <br>
-<input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
-<br/><br/>
-<b>Input Name <b>
-  <br>
-  Description of the input
-  <br>
-<input class="input${sizeClass}" type="text" value="Typed text"/>
-<br/><br/>
-<b>Input Name <b>
-  <br>
-  Description of the input
-  <br>
-<input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
 }
 
 <Preview mdxSource={inputType('')}>
@@ -62,7 +64,7 @@ export const inputTypeNameDesc = (size) => {
 </Preview>
 
 <Preview mdxSource={inputTypeNameDesc('')}>
-  <Story name="Normal2" height="200px" parameters={{
+  <Story name="Normal (+ name, description)" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDesc('')
@@ -70,7 +72,7 @@ export const inputTypeNameDesc = (size) => {
 </Preview>
 
 <Preview mdxSource={inputTypeNameDesc('medium')}>
-  <Story name="Medium2" height="250px" parameters={{
+  <Story name="Medium (+ name, description)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDesc('medium')
@@ -78,7 +80,7 @@ export const inputTypeNameDesc = (size) => {
 </Preview>
 
 <Preview mdxSource={inputTypeNameDesc('large')}>
-  <Story name="Large2" height="320px" parameters={{
+  <Story name="Large (+ name, description)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDesc('large')
