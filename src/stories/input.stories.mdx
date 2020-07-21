@@ -39,6 +39,46 @@ export const inputTypeNameDesc = (size) => {
     </div>`
 }
 
+export const inputTypeNameDescMed = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeNameDescLarge = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
 <Preview mdxSource={inputType('')}>
   <Story name="Normal" height="200px" parameters={{
     design: figmaConfig('1%3A24')
@@ -71,18 +111,18 @@ export const inputTypeNameDesc = (size) => {
   }</Story>
 </Preview>
 
-<Preview mdxSource={inputTypeNameDesc('medium')}>
+<Preview mdxSource={inputTypeNameDescMed('medium')}>
   <Story name="Medium (+ name, description)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeNameDesc('medium')
+    inputTypeNameDescMed('medium')
   }</Story>
 </Preview>
 
-<Preview mdxSource={inputTypeNameDesc('large')}>
+<Preview mdxSource={inputTypeNameDescLarge('large')}>
   <Story name="Large (+ name, description)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeNameDesc('large')
+    inputTypeNameDescLarge('large')
   }</Story>
 </Preview>
