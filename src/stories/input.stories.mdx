@@ -15,26 +15,26 @@ export const inputType = (size) => {
 <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>`
 }
 
-<Preview mdxSource={inputType('input')}>
-  <Story name="Normal" parameters={{
+<Preview mdxSource={inputType('')}>
+  <Story name="Normal" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputType('')
   }</Story>
 </Preview>
 
-<Preview mdxSource={inputType('input is-medium')}>
-  <Story name="Medium" parameters={{
+<Preview mdxSource={inputType('medium')}>
+  <Story name="Medium" height="250px" parameters={{
     design: figmaConfig('1%3A24')
-  }}>{`
-    ${inputType('medium')}
-  `}</Story>
+  }}>{
+    inputType('medium')
+  }</Story>
 </Preview>
 
-<Preview mdxSource={inputType('input is-large')}>
-  <Story name="Large" parameters={{
+<Preview mdxSource={inputType('large')}>
+  <Story name="Large" height="320px" parameters={{
     design: figmaConfig('1%3A24')
-  }}>{`
-    ${inputType('large')}
-  `}</Story>
+  }}>{
+    inputType('large')
+  }</Story>
 </Preview>
