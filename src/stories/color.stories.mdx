@@ -1,4 +1,4 @@
-import { Meta, Story, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Color" />
@@ -120,6 +120,14 @@ text is placed on them.
     title="Light Error"
     subtitle="$color-light-error"
     colors={['rgb(255, 201, 201)']} />
+  <ColorItem
+    title="Dark Info"
+    subtitle="$color-dark-info"
+    colors={['rgb(25, 80, 184)']} />
+  <ColorItem
+    title="Light Info"
+    subtitle="$color-light-info"
+    colors={['rgb(209, 220, 241)']} />
 </ColorPalette>
 
 # Usage
@@ -134,16 +142,32 @@ For each of the brand colors, we have two helper classes:
 - `.has-text-<color>` or `.has-color-<color>`<br/>
   Applies the color as the text color for the element.
 
+Bulma provides [additional helpers](https://bulma.io/documentation/helpers/color-helpers/)
+that can be used directly as they are bundled with Vocabulary.
+
+Together, they cover the entire spectrum of colors and shades available.
+
 **Example:**
 
-```html
-<div class="has-background-orange">
-  <!-- Has orange background -->
+export const helperExamples = () => `
+<div class="has-background-orange has-text-white" style="padding: 4px; margin-bottom: 4px;">
+  Has white text<br/>
+  on an orange background
 </div>
-<div class="has-text-forest-green">
-  <!-- Has forest green text -->
+<div class="has-background-info-light has-text-info-dark" style="padding: 4px; margin-bottom: 4px;">
+  Has dark info-colored text<br/>
+  on a light info-colored background
 </div>
-```
+<div class="has-background-grey-light has-text-black" style="padding: 4px; margin-bottom: 4px;">
+  Has black text<br/>
+  on a light grey background
+</div>`
+
+<Preview mdxSource={helperExamples()}>
+  <Story name="Helpers" height="250px">{
+    helperExamples
+  }</Story>
+</Preview>
 
 <Story name="Figma" parameters={{
   design: figmaConfig('0%3A72'),
