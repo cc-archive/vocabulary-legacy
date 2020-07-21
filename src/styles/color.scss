@@ -29,24 +29,8 @@ $color-dark-warning: rgb(242, 171, 32);
 $color-light-warning: rgb(250, 236, 188);
 $color-dark-error: rgb(200, 59, 30);
 $color-light-error: rgb(255, 201, 201);
-
-// Overrides
-$red: $color-tomato;
-$orange: $color-orange;
-$yellow: $color-gold;
-$green: $color-forest-green;
-$cyan: $color-dark-slate-blue;
-$blue: $color-dark-slate-blue;
-
-$primary: $color-tomato;
-
-$success: $color-dark-success;
-$info: $color-forest-green;
-$warning: $color-dark-warning;
-$danger: $color-dark-error;
-
-$link: $color-tomato;
-$link-visited: $color-tomato;
+$color-dark-info: rgb(25, 80, 184);
+$color-light-info: rgb(209, 220, 241);
 
 // Classes
 $brand-colors: (
@@ -56,7 +40,8 @@ $brand-colors: (
   "forest-green": $color-forest-green,
   "dark-turquoise": $color-dark-turquoise,
   "dark-slate-blue": $color-dark-slate-blue,
-  "dark-slate-gray": $color-dark-slate-gray);
+  "dark-slate-gray": $color-dark-slate-gray
+);
 
 @mixin color-classes($color-namespace, $brand-color) {
   .has-background-#{$color-namespace} {
@@ -71,4 +56,4 @@ $brand-colors: (
 
 @each $color-namespace, $brand-color in $brand-colors {
   @include color-classes($color-namespace, $brand-color);
-};
+}

@@ -14,7 +14,7 @@ $pagination-ellipsis-color: $color-dark-gray;
   .pagination-list {
     .common {
       font-weight: bold;
-      font-family: $family-alternative;
+      font-family: $family-secondary;
       line-height: 1.875;
 
       .common-link {
@@ -30,6 +30,20 @@ $pagination-ellipsis-color: $color-dark-gray;
           @extend .common-link;
 
           background-color: $color-lighter-gray;
+        }
+
+        :hover {
+          background-color:  $color-dark-gray;
+        }
+    }
+
+    .inactive-grey {
+      @extend .common;
+
+        .inactive-link {
+          @extend .common-link;
+
+          background-color: $color-white;
         }
 
         :hover {

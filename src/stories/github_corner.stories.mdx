@@ -17,8 +17,8 @@ export const isNormal = `<a class="github-corner">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isNormal}>
-  <Story name="Normal" height="100px" parameters={{
+<Preview mdxSource={isNormal} className="tight">
+  <Story name="Normal" height="120px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{
     isNormal.toString()
@@ -31,8 +31,8 @@ export const isInverted = `<a class="github-corner is-inverted">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isInverted} style={{backgroundColor: 'black'}}>
-  <Story name="Inverted" height="100px" parameters={{
+<Preview mdxSource={isInverted} style={{backgroundColor: 'black'}} className="tight">
+  <Story name="Inverted" height="120px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
     ],
@@ -48,8 +48,8 @@ export const isLeftAligned = `<a class="github-corner is-left-aligned">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isLeftAligned}>
-  <Story name="Left aligned" height="100px" parameters={{
+<Preview mdxSource={isLeftAligned} className="tight">
+  <Story name="Left aligned" height="120px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{
     isLeftAligned.toString()

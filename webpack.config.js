@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/vocabulary.js',
+    library: 'vocabulary'
   },
   module: {
     rules: [{

@@ -9,7 +9,7 @@ $menu-list-link-padding: 0.5rem 0;
 
 @import "bulma/sass/components/menu.sass";
 
-.side-navigation {
+.sidebar-menu {
   @extend .body-normal;
   @extend .padding-big;
 
@@ -21,8 +21,8 @@ $menu-list-link-padding: 0.5rem 0;
     text-decoration: none;
   }
 
-  i {
-    @extend .has-text-grey-lighter;
+  .icon {
+    @extend .has-text-grey;
     @extend .padding-right-small;
 
     font-size: 0.375rem;
