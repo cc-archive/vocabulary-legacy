@@ -77,4 +77,8 @@
       font-size: 1.3rem;
     }
   }
+
+  &.is-selected {
+    border: 6px solid $color-gold;
+  }
 }
