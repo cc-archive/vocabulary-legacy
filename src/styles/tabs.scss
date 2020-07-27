@@ -2,7 +2,6 @@ $tabs-border-bottom-color: $color-light-gray;
 $tabs-border-bottom-width: 2px;
 $tabs-link-color: $color-dark-slate-gray;
 $tabs-link-padding: 0 0 $space-normal 0;
-$tabs-link-hover-border-bottom-color: $color-dark-slate-gray;
 $tabs-link-active-border-bottom-color: $color-dark-slate-gray;
 $tabs-link-active-color: $color-dark-slate-gray;
 
@@ -15,19 +14,16 @@ $tabs-link-active-color: $color-dark-slate-gray;
     font-size: $font-size-h5;
     font-weight: 700;
     text-decoration: none;
+    border-bottom: 4px solid transparent;
 
     margin: 0 $space-normal -3px $space-normal;
 
     &:hover {
-      border-bottom-width: 4px;
+      border-bottom-color: $color-dark-slate-gray;
     }
   }
 
   li {
-    &.is-active > a {
-      border-bottom-width: 4px;
-    }
-
     &:first-child a {
       margin-left: 0;
     }
