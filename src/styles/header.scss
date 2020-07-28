@@ -8,7 +8,9 @@ $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 
 @import "bulma/sass/components/navbar.sass";
-
+.colorIstomato {
+  color: #ed592f;
+}
 .navbar {
   padding: $space-bigger;
 
@@ -57,5 +59,3 @@ $navbar-dropdown-radius: 0;
     }
   }
 }
-
-

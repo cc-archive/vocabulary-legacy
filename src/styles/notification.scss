@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     color: $color-black;
-    border-radius: 0.25rem;
+    border-radius: .25rem;
     .icon-container {
       position: absolute;
       display: flex;
@@ -68,7 +68,7 @@
       }
       &:hover {
         border: 2px solid $color-gray;
-        box-shadow: 0.5rem 0.5rem 0 rgba($color-black, 0.06);
+        box-shadow: .5rem .5rem 0 rgba($color-black, .06);
       }
     }
     @include mobile() {
@@ -85,11 +85,9 @@
       }
     }
   }
-  &.minimal {
+  &.is-minimal {
     .notification-container {
       padding: $space-normal 6rem $space-normal $space-normal;
-      background-color: $color-light-success;
-      width: 35%;
 
       &:hover {
         .b-header {
