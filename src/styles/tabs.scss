@@ -60,6 +60,9 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
 }
 
 .tabs-content {
+  margin-top: -$space-big;
+  padding-top: $space-bigger;
+
   .tabs-panel {
     display: none;
 
@@ -71,7 +74,6 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
   &.is-boxed {
     @extend .padding-normal;
 
-    margin-top: -1.5rem;
     border: 2px solid $color-light-gray;
     border-top: 0;
     background-color: $color-white;
