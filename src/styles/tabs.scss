@@ -43,9 +43,12 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
       @extend .padding-vertical-small;
       @extend .padding-horizontal-normal;
 
-      margin: 0 0 -3px;
+      margin: 0 0 -2px;
       border: 2px solid $color-light-gray;
       border-right: 0;
+      background-color: $color-lighter-gray;
+
+      font-size: $font-size-body-normal;
     }
 
     li {
@@ -71,5 +74,6 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
     margin-top: -1.5rem;
     border: 2px solid $color-light-gray;
     border-top: 0;
+    background-color: $color-white;
   }
 }
