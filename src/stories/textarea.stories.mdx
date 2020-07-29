@@ -1,0 +1,22 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Textarea" />
+
+# Textarea
+
+export const textArea = () => `
+<textarea class="textarea" placeholder="Placeholder text"></textarea>
+<br/>
+<textarea class="textarea">Typed text</textarea>
+<br/>
+<textarea class="textarea" disabled>Fixed text</textarea>
+`
+
+<Preview mdxSource={textArea()}>
+  <Story name="Default" height="500px" parameters={{
+    design: figmaConfig('6340%3A0')
+  }}>{
+    textArea()
+  }</Story>
+</Preview>
