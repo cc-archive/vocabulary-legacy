@@ -1,16 +1,16 @@
 <p align="center">
   <a href="https://creativecommons.org/" class="readme-cc-logo">
-    <img 
-      alt="Creative Commons logo" 
-      src="https://raw.githubusercontent.com/creativecommons/fonts/master/readme_assets/cc_logo.png" 
+    <img
+      alt="Creative Commons logo"
+      src="https://raw.githubusercontent.com/creativecommons/fonts/master/readme_assets/cc_logo.png"
       height="62px"/>
   </a>
 </p>
 <p align="center">
   <a href="https://creativecommons.github.io/fonts/" class="readme-fonts-logo">
-    <img 
-      alt="Fonts logo" 
-      src="https://raw.githubusercontent.com/creativecommons/fonts/master/readme_assets/fonts_logo.svg?sanitize=true" 
+    <img
+      alt="Fonts logo"
+      src="https://raw.githubusercontent.com/creativecommons/fonts/master/readme_assets/fonts_logo.svg?sanitize=true"
       height="65px"/>
   </a>
 </p>
@@ -18,7 +18,7 @@
 > Fonts is a collection of typefaces for the web facing Creative Commons.
 
 <p align="center">
-  <a 
+  <a
     href="https://github.com/creativecommons/fonts/blob/master/LICENSE"
     style="margin-right: 1em;">
     <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/fonts.svg?color=brightgreen"/>
@@ -33,7 +33,7 @@
     style="margin-right: 1em;">
     <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/creativecommons/fonts/font-ci/master?label=font-ci"/>
   </a>
-  <a 
+  <a
     href="https://cc-fonts.netlify.com"
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/c7f9d312-b3ff-4b28-a032-bc6b937a5603"/>
@@ -55,6 +55,10 @@ To use Fonts in your projects, refer to [this document](https://cc-fonts.netlify
 ### Contributing
 
 To contribute to Fonts, refer to [this document](https://cc-fonts.netlify.com/?path=/docs/vocabulary-contribution--page).
+
+### Versioning
+
+Fonts uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.0M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.07.1` is the first release in July 2020, while `2020.07.2` is the second.
 
 ### Disclaimer
 
