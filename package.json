@@ -52,7 +52,7 @@
     "webpack-cli": "^3.3.10"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
-  "homepage": "https://creativecommons.github.io/vocabulary/",
+  "homepage": "https://opensource.creativecommons.org/vocabulary",
   "keywords": [
     "ui",
     "ux",
