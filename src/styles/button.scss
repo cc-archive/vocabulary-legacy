@@ -10,22 +10,23 @@ $button-family: $family-secondary;
   color: $color-dark-gray;
   background-color: $color-white;
   font-size: 1.43rem;
-  padding: calc(#{$space-bigger} - .187rem) $space-large;
+  padding: calc(#{$space-bigger} - 0.187rem) $space-large;
 
   &:hover {
     background-color: $color-dark-gray;
     border-color: $color-dark-gray;
     color: $color-white;
+    text-decoration: none;
   }
 
   &.big {
     font-size: 1.75rem;
-    padding: calc(#{$space-large} - .093rem) $space-large;
+    padding: calc(#{$space-large} - 0.093rem) $space-large;
   }
 
   &.small {
     font-size: 1rem;
-    padding: $space-small calc(#{$space-normal} + .2rem);
+    padding: $space-small calc(#{$space-normal} + 0.2rem);
   }
 
   &.tiny {
@@ -44,8 +45,8 @@ $button-family: $family-secondary;
     height: 1.81rem;
     border-radius: 18.75rem;
     border: 0.125rem solid $color-light-gray;
-    &:hover{
-      border-color: $color-dark-gray
+    &:hover {
+      border-color: $color-dark-gray;
     }
   }
 
@@ -71,8 +72,11 @@ $button-family: $family-secondary;
 
   &.is-text {
     text-decoration: none;
-    &:hover, &:active, &:focus {
-      border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
       box-shadow: none;
     }
   }
