@@ -63,10 +63,11 @@
         background-color: transparent;
         border-color: $color-dark-gray;
         color: $color-dark-gray;
-          &::placeholder {
-            color: $color-dark-gray;
-            opacity: 0.8;
-          }
+        
+        &::placeholder {
+          color: $color-dark-gray;
+          opacity: 0.8;
+        }
       }
 
       .button {
