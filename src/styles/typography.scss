@@ -31,6 +31,8 @@ $font-size-body-list: 1rem;
 
 $font-size-caption: 0.8rem;
 
+$color-dark-slate-gray: rgb(51, 51, 51);
+
 // Classes
 $body-font-sizes: (
   "-bigger": $font-size-body-bigger,
@@ -70,19 +72,27 @@ $body-font-sizes: (
 
 // Usage
 h1, h2, h3, h4, h5, h6 {
-  color: $color-dark-slate-gray;
 
-  font-family: $family-heading;
-  font-weight: bold;
+  &.title{
+    color: $color-dark-slate-gray;
 
-  text-transform: uppercase;
-  line-height: 1.3;
-  letter-spacing: 0.02rem;
+    font-family: $family-heading;
+    font-weight: bold;
+  
+    text-transform: uppercase;
+    line-height: 1.3;
+    letter-spacing: 0.02rem;
+  }
 
   &.b-header {
+    color: $color-dark-slate-gray;
+
     font-family: $family-body;
+    font-weight: bold;
 
     text-transform: none;
+    line-height: 1.3;
+    letter-spacing: 0.02rem;
   }
 }
 
