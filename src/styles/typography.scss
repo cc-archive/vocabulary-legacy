@@ -103,14 +103,14 @@ $header-font-sizes: (
   "6": $font-size-h6,
 );
 
-@mixin header-typography($header-name, $header-font-size) {
-  h#{$header-name}, .title.is-#{$header-name} {
+@mixin header-typography($header-level, $header-font-size) {
+  h#{$header-level}, .title.is-#{$header-level} {
     font-size: $header-font-size;
   }
 }
 
-@each $header-name, $header-font-size in $header-font-sizes {
-  @include header-typography($header-name, $header-font-size);
+@each $header-level, $header-font-size in $header-font-sizes {
+  @include header-typography($header-level, $header-font-size);
 }
 
 body {
