@@ -71,12 +71,14 @@ $button-family: $family-secondary;
 
   &.is-text {
     text-decoration: none;
+    @extend .is-paddingless;
 
     &:hover,
     &:active,
     &:focus {
       border-color: transparent;
       box-shadow: none;
+      background-color: transparent;
     }
   }
 }
