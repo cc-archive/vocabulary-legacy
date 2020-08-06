@@ -5,102 +5,107 @@ import { figmaConfig } from './helpers'
 
 # Buttons
 
+export const buttonClass = (classes) => {
+ classes = classes ? ` ${classes}` : ''
+ return `<button class="button${classes}">Button</button>`
+}
+
 Buttons are created by adding the `.button` class to a `<button>`.
 
-<Preview>
+<Preview mdxSource={buttonClass('')}>
   <Story name="MediumButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('')
+  }</Story>
 </Preview>
 
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
 
-<Preview>
+<Preview mdxSource={buttonClass('big')}>
   <Story name="BigButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button big">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('big')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('small')}>
   <Story name="SmallButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button small">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('small')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('tiny')}>
   <Story name="TinyButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button tiny">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('tiny')
+  }</Story>
 </Preview>
 
 You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
 
-<Preview>
+<Preview mdxSource={buttonClass('is-primary big')}>
   <Story name="ButtonPrimary" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-primary big">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-primary big')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('donate medium')}>
   <Story name="ButtonDonate" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
-  }}>{`
-    <button class="button donate medium">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('donate medium')
+  }</Story>
 </Preview>
 
 Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
 
-<Preview>
+<Preview mdxSource={buttonClass('is-success')}>
   <Story name="ButtonSuccess" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-success">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-success')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('is-info')}>
   <Story name="ButtonInfo" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-info">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-info')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('is-warning')}>
   <Story name="ButtonWarning" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-warning">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-warning')
+  }</Story>
 </Preview>
 
-<Preview>
+<Preview mdxSource={buttonClass('is-danger')}>
   <Story name="ButtonError" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{`
-    <button class="button is-danger">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-danger')
+  }</Story>
 </Preview>
 
 The `.tag` class is used to render a tag name.
 
-<Preview>
+<Preview mdxSource={buttonClass('tag')}>
   <Story name="Tag" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
-  }}>{`
-    <button class="button tag">Label</button>
-  `}</Story>
+  }}>{
+    buttonClass('tag')
+  }</Story>
 </Preview>
 
 <Preview>
@@ -114,12 +119,12 @@ The `.tag` class is used to render a tag name.
   `}</Story>
 </Preview>
 
-You can use the `.is-text` to have a button looking more like a link, with no borders and background color
+You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
-<Preview>
-  <Story name="Text button" height="100px" parameters={{
+<Preview mdxSource={buttonClass('is-text')}>
+  <Story name="Text" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
-  }}>{`
-    <button class="button is-text">Button</button>
-  `}</Story>
+  }}>{
+    buttonClass('is-text')
+  }</Story>
 </Preview>
