@@ -72,8 +72,5 @@
     "library"
   ],
   "license": "MIT",
-  "repository": "github:creativecommons/vue-vocabulary",
-  "prettier": {
-    "semi": false
-  }
+  "repository": "github:creativecommons/vue-vocabulary"
 }
