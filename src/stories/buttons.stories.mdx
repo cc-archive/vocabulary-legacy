@@ -108,7 +108,18 @@ The `.tag` class is used to render a tag name.
   }</Story>
 </Preview>
 
-You can use the `.is-text` to have a button look more like a link, with no borders and background color.
+<Preview>
+  <Story name="Removable Tag" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{`
+    <button class="button tag--removable">
+      Label
+      <i class="icon cross"></i>
+    </button>
+  `}</Story>
+</Preview>
+
+You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
 <Preview mdxSource={buttonClass('is-text')}>
   <Story name="Text" height="100px" parameters={{
