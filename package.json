@@ -17,7 +17,7 @@
     "@storybook/addon-backgrounds": "^5.3.13",
     "@storybook/addon-docs": "^5.3.17",
     "@storybook/html": "^5.3.9",
-    "babel-jest": "^25.2.3",
+    "babel-jest": "^26.2.2",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
