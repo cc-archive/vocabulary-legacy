@@ -11,7 +11,8 @@ $menu-list-link-padding: 0.5rem 0;
 
 .sidebar-menu {
   @extend .body-normal;
-  @extend .padding-big;
+  @extend .padding-top-normal;
+  @extend .padding-bottom-big;
 
   font-weight: bold;
   line-height: 1.5;
@@ -19,6 +20,9 @@ $menu-list-link-padding: 0.5rem 0;
 
   .menu-list .link {
     text-decoration: none;
+    @extend .is-paddingless;
+    @extend .padding-top-small;
+    @extend .padding-horizontal-big;
   }
 
   .icon {
@@ -29,7 +33,8 @@ $menu-list-link-padding: 0.5rem 0;
   }
 
   .divider {
-    @extend .margin-vertical-normal;
+    @extend .margin-top-normal;
+    @extend .margin-bottom-small;
 
     border-top: 0.1875rem solid $color-white;
   }
