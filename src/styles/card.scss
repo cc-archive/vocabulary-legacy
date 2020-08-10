@@ -337,6 +337,7 @@ $card-header-shadow: none;
             .excerpt {
                 @extend .body-normal;
                 @extend .margin-top-normal;
+                @extend .has-color-dark-slate-gray;
             }
         }
     }
