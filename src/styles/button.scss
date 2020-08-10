@@ -94,6 +94,10 @@ $button-family: $family-secondary;
 		background-color: $color-brighter-tomato;
 	}
 
+	&.is-success:hover {
+		background-color: $color-brighter-forest-green;
+	}
+
 	&.is-info:hover {
 		background-color: $color-brighter-forest-green;
 	}
