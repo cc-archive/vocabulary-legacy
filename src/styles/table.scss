@@ -2,9 +2,43 @@ $table-cell-padding: $space-normal;
 $table-color: $color-dark-slate-gray;
 $table-head-background-color: $color-light-gray;
 
-
 @import "bulma/sass/elements/table.sass";
 
 .number-cell {
   text-align: right !important;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: $tablet) and (max-device-width: $desktop)  {
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+  }
+
+  td {
+    position: relative;
+    text-align: right !important;
+	}
+
+	td:before {
+		position: absolute;
+		top: 0;
+    left: 0;
+    font-size: $font-size-body-normal;
+    font-weight: bold;
+    line-height: 1.5;
+    height: 100%;
+    width: 45%;
+    text-align: left;
+    padding: $space-normal;
+    background-color: $color-light-gray;
+    border-right: 0.0625rem solid $color-light-gray;
+	}
+
+	td:nth-of-type(n):before { content: attr(data-content); }
 }
