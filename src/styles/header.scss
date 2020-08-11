@@ -56,6 +56,44 @@ $navbar-dropdown-radius: 0;
       }
     }
   }
+
+  &.is-compact {
+    @extend .padding-vertical-normal;
+    @extend .padding-horizontal-bigger;
+
+    height: 72px;
+    display: flex;
+
+    .logo {
+      height: 36px;
+    }
+
+    .navbar-end {
+      .navbar-item {
+        font-family: $family-source-sans-pro;
+        font-size: $font-size-body-normal;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      & > .navbar-item {
+        @extend .padding-horizontal-smaller;
+        margin-left: $space-normal;
+      }
+    }
+
+    @include mobile() {
+      .navbar-end {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        margin-left: auto;
+      }
+
+      .navbar-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
-
-
