@@ -20,7 +20,7 @@
       @extend .has-text-centered;
       @extend .padding-vertical-smaller;
 
-      background-color: $color-light-gray;
+      background-color: $color-lighter-gray;
       width: 1.8125rem;
       height: 1.8125rem;
       border-radius: 50%;
@@ -51,7 +51,7 @@
       display: block;
 
       height: 1.5rem;
-      border-left: 0.1875rem solid $color-light-gray;
+      border-left: 0.1875rem solid $color-lighter-gray;
       margin-left: 0.8125rem;
     }
   }
