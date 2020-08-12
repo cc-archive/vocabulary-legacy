@@ -25,6 +25,10 @@ $navbar-dropdown-radius: 0;
     width: 3.25rem;
   }
 
+  .navbar-link {
+    text-decoration: none;
+  }
+
   .navbar-end {
     .navbar-item {
       font-family: $family-roboto-condensed;
@@ -39,16 +43,15 @@ $navbar-dropdown-radius: 0;
       }
 
     }
-    
+
     & > .navbar-item {
       margin-left: $space-large;
     }
-    
-    & > a.navbar-item:hover{
+
+    & .navbar-item:hover {
       text-decoration: none;
       color: $color-dark-slate-gray;
     }
-
   }
 
   &.small {
