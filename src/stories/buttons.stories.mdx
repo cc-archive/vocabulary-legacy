@@ -10,13 +10,6 @@ export const buttonClass = (classes, el = 'button', href='') => {
  return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">Button</${el}>`
 }
 
-export const anchorExample = () => (
-  <div>
-  {buttonClass('', 'a', 'https://creativecommons.org')}
-  {buttonClass('big', 'a', 'https://creativecommons.org')}
-  </div>
-)
-
 Buttons are created by adding the `.button` class to a `<button>`.
 
 <Preview mdxSource={buttonClass('')}>
