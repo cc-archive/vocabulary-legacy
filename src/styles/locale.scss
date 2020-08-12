@@ -8,4 +8,10 @@
   .select {
     margin-left: $space-small;
   }
+  .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 10px;
+  }
 }

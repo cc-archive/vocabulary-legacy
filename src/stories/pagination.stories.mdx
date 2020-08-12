@@ -1,0 +1,92 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Navigation/Pagination" />
+
+# Pagination
+
+The pagination component allows the user to move between pages and indicates the amount of pages depending on what the user is seeing. It has two basic component: active and hover, and inactive.
+
+<Preview>
+  <Story name="White background" parameters={{
+    design: figmaConfig('7005%3A35')
+  }}>{`
+    <style>
+      .white-bg {
+        background-color: #ffffff;
+        padding: 1.5rem;
+      }
+    </style>
+    <div class="white-bg">
+      <h5 class="b-header padding-vertical-big">Active & hover</h5>
+      <nav class="pagination role=" navigation" aria-label="pagination">
+        <ul class="pagination-list">
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto page 1" aria-current="page">1</a>
+          </li>
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto next"><i class="icon chevron-right"></i></a>
+          </li>
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto previous"><i class="icon chevron-left"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <h5 class="b-header padding-vertical-big">Inactive</h5>
+      <nav class="pagination role=" navigation" aria-label="pagination">
+        <ul class="pagination-list">
+          <li class="inactive">
+            <a class="pagination-link inactive-link" aria-label="Goto page 1">1</a>
+          </li>
+          <li class="inactive">
+            <a class="pagination-link inactive-link" aria-label="Goto next"><i class="icon chevron-right"></i></a>
+          </li>
+          <li class="inactive">
+            <a class="pagination-link inactive-link" aria-label="Goto previous"><i class="icon chevron-left"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <h5 class="b-header padding-vertical-big">Ellipsis</h5>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Grey background" parameters={{
+    design: figmaConfig('7005%3A35')
+  }}>{`
+    <div class="padding-big">
+      <h5 class="b-header padding-vertical-big">Active & hover</h5>
+      <nav class="pagination role=" navigation" aria-label="pagination">
+        <ul class="pagination-list">
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto page 1" aria-current="page">1</a>
+          </li>
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto next"><i class="icon chevron-right"></i></a>
+          </li>
+          <li class="common">
+            <a class="pagination-link is-current common-link" aria-label="Goto previous"><i class="icon chevron-left"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <h5 class="b-header padding-vertical-big">Inactive</h5>
+      <nav class="pagination role=" navigation" aria-label="pagination">
+        <ul class="pagination-list">
+          <li class="inactive-grey">
+            <a class="pagination-link inactive-link" aria-label="Goto page 1">1</a>
+          </li>
+          <li class="inactive-grey">
+            <a class="pagination-link inactive-link" aria-label="Goto next"><i class="icon chevron-right"></i></a>
+          </li>
+          <li class="inactive-grey">
+            <a class="pagination-link inactive-link" aria-label="Goto previous"><i class="icon chevron-left"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <h5 class="b-header padding-vertical-big">Ellipsis</h5>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </div>
+  `}</Story>
+</Preview>

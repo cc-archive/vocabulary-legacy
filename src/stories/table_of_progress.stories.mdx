@@ -1,0 +1,56 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Navigation/Table of Progress" />
+
+# Table of Progress
+
+The table of progress was created to indicate steps inside a page. The component
+works with links for each step to navigate through all steps. At the same time,
+the active step must change based on what the user is viewing on the content
+section.
+
+The component has two states, active and inactive. The hover state of inactive
+elements should have the same style of active state.
+
+<Preview>
+  <Story name="Default" parameters={{
+    design: figmaConfig('6990%3A133')
+  }}>{`
+    <style>
+      .top-container {
+        background: #ffffff;
+        padding: 24px;
+      }
+    </style>
+    <div class="table-of-progress top-container">
+      <h4 class="step-header">Steps</h4>
+      <ul>
+        <li class="step">
+          <a class="link">
+            <span class="number is-active">1</span>
+            <span class="name">Step 1, active step</span>
+          </a>
+        </li>
+        <li class="step">
+          <a class="link">
+            <span class="number">2</span>
+            <span class="name">Step 2</span>
+          </a>
+        </li>
+        <li class="step">
+          <a class="link">
+            <span class="number">3</span>
+            <span class="name">Step 3</span>
+          </a>
+        </li>
+        <li class="step">
+          <a class="link">
+            <span class="number">4</span>
+            <span class="name">Step 4</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  `}</Story>
+</Preview>
