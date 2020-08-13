@@ -34,7 +34,13 @@ $table-cell-border: 1px solid $color-light-gray;
 
     td {
       position: relative;
-      text-align: right !important;
+      text-align: left !important;
+      padding-left: calc(45% + 1rem);
+      background-color: $color-white;
+    }
+
+    td:nth-child(2n) {
+      background-color: $color-lighter-gray;
     }
 
     td:first-child {
@@ -56,7 +62,6 @@ $table-cell-border: 1px solid $color-light-gray;
       line-height: 1.5;
       height: 100%;
       width: 45%;
-      text-align: left;
       padding: $space-normal;
       background-color: $color-light-gray;
       border-right: 0.0625rem solid $color-light-gray;
