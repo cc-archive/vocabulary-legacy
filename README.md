@@ -25,7 +25,7 @@
     style="margin-right: 1em;">
     <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/creativecommons/vocabulary/vocabulary-ci/master?label=vocabulary-ci"/>
   </a>
-  <a 
+  <a
     href="https://cc-vocabulary.netlify.com"
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
@@ -47,6 +47,10 @@ To use Vocabulary in your projects, refer to [this document](https://cc-vocabula
 ### Contributing
 
 To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).
+
+### Versioning
+
+Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.0M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.07.1` is the first release in July 2020, while `2020.07.2` is the second.
 
 ### Disclaimer
 

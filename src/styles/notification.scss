@@ -85,4 +85,17 @@
       }
     }
   }
+  &.is-compact {
+    .notification-container {
+      @extend .padding-vertical-normal;
+      padding-left: $space-big;
+
+      p {
+        font-weight: bold;
+        line-height: $space-big;
+        color: $color-dark-slate-gray;
+      }
+
+    }
+  }
 }

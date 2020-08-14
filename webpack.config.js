@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/vocabulary.js',
+    library: 'vocabulary'
   },
   module: {
     rules: [{
@@ -19,7 +20,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            sourceMap: true,
+            sourceMap: true
           }
         }
       ]
@@ -29,9 +30,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/vocabulary.css'
     }),
-    new CopyPlugin([
-      { from: 'src/styles', to: 'scss' },
-      { from: 'src/assets', to: 'assets' }
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/styles', to: 'scss' },
+        { from: 'src/assets', to: 'assets' }
+      ]
+    })
   ]
 }

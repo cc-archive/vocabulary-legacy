@@ -19,6 +19,20 @@ that, we created title styles for both fonts.
 
 ## Headings
 
+export const title = () => `
+<p class="title is-1">Title 1</p>
+<p class="title is-2">Title 2</p>
+<p class="title is-3">Title 3</p>
+<p class="title is-4">Title 4</p>
+<p class="title is-5">Title 5</p>
+`
+
+export const subtitle = () => `
+<h3 class="subtitle is-3">Heading B</h3>
+<h4 class="subtitle is-4">Heading B</h4>
+<h5 class="subtitle is-5">Heading B</h5>
+`
+
 Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h5>`.
 
 <Typeset
@@ -31,6 +45,7 @@ Headings of type A need no additional classes to be used. They directly apply to
   ]}
   fontFamily="Roboto Condensed"
   fontWeight={700}
+  style={{color: '#333'}}
   sampleText="HEADING A" />
 
 Headings of type B need the class `.b-header` to be applied to heading tags from `<h3>` to `<h5>`.
@@ -43,7 +58,22 @@ Headings of type B need the class `.b-header` to be applied to heading tags from
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={700}
+  style={{color: '#333'}}
   sampleText="Heading B" />
+
+Heading styles can also be applied to any elements, regardless of semantic meaning, with the `.title is-x` and `.subtitle .is-x` classes:
+
+<Preview mdxSource={title()}>
+  <Story name="Heading- Title" height="250px">{
+    title()
+  }</Story>
+</Preview>
+
+<Preview mdxSource={subtitle()}>
+  <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
+</Preview>
+
+This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
 
 ## Body
 
@@ -55,6 +85,7 @@ By default, body text in `<p>` tags is rendered at the base font size.
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
+  style={{color: '#333'}}
   sampleText="Body" />
 
 Body text can be made big or bigger with the eponymous `.body-big` and `.body-bigger` classes on the `<p>` tag.
@@ -66,6 +97,7 @@ Body text can be made big or bigger with the eponymous `.body-big` and `.body-bi
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
+  style={{color: '#333'}}
   sampleText="Enlarged body" />
 
 Captions can be rendered with the class `.caption` on the `<p>` tag.
@@ -76,6 +108,7 @@ Captions can be rendered with the class `.caption` on the `<p>` tag.
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
+  style={{color: '#333'}}
   sampleText="Caption" />
 
 Values can be rendered with the class `.value` on the `<p>` tag.
@@ -86,6 +119,7 @@ Values can be rendered with the class `.value` on the `<p>` tag.
   ]}
   fontFamily="Roboto Condensed"
   fontWeight={700}
+  style={{color: '#333'}}
   sampleText="42" />
 
 Code can be rendered with the class `.monospace` on the `<p>` tag.
@@ -96,11 +130,12 @@ Code can be rendered with the class `.monospace` on the `<p>` tag.
   ]}
   fontFamily="monospace"
   fontWeight={400}
+  style={{color: '#333'}}
   sampleText="const x = () => { console.log('Hello World!') }" />
 
 <Story name="Figma" parameters={{
   design: figmaConfig('0%3A110'),
   docs: { disable: true }
 }}>{`
-  See the Design tab in the panel.
+  See the Design tab.
 `}</Story>
