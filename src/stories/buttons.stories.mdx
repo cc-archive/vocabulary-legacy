@@ -5,9 +5,9 @@ import { figmaConfig } from './helpers'
 
 # Buttons
 
-export const buttonClass = (classes) => {
+export const buttonClass = (classes, el = 'button', href='') => {
  classes = classes ? ` ${classes}` : ''
- return `<button class="button${classes}">Button</button>`
+ return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">Button</${el}>`
 }
 
 Buttons are created by adding the `.button` class to a `<button>`.
@@ -126,5 +126,15 @@ You can use the `.is-text` to have a button looking more like a link, with no bo
     design: figmaConfig('1404%3A1')
   }}>{
     buttonClass('is-text')
+  }</Story>
+</Preview>
+
+Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
+
+<Preview mdxSource={buttonClass('small', 'a', 'https://creativecommons.org')}>
+  <Story name="Anchor Tags" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('small', 'a', 'https://creativecommons.org')
   }</Story>
 </Preview>
