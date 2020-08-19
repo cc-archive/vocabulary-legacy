@@ -83,6 +83,7 @@ $icons: (
   "cc-share": "\ec0a",
   "cc-pd-alt": "\ec0d",
   "cc-letterheart": "\ec0e",
+  "cc-letterheart-filled": "\ec0f",
 
   "instagram": "\ed00",
   "twitter": "\ed01",
@@ -96,6 +97,7 @@ $icons: (
   "tumblr": "\ed09",
   "sms": "\ed10",
   "messenger": "\ed11",
+  "medium": "\ed12"
 );
 
 @mixin icon($icon-class, $icon-codepoint) {
@@ -120,6 +122,7 @@ $whatsapp-brand: #25d366;
 $tumblr-brand: #35465c;
 $sms-brand: #4aae20;
 $messenger-brand: #0084ff;
+$medium-brand: #292929;
 $brand-colors: (
   "facebook": $facebook-brand,
   "twitter": $twitter-brand,
@@ -133,6 +136,7 @@ $brand-colors: (
   "tumblr": $tumblr-brand,
   "sms": $sms-brand,
   "messenger": $messenger-brand,
+  "medium": $medium-brand
 );
 
 @mixin branded-icon($icon-class, $icon-color) {
