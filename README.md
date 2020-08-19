@@ -50,7 +50,7 @@ To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netl
 
 ### Versioning
 
-Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.0M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.07.1` is the first release in July 2020, while `2020.07.2` is the second.
+Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.7.1` is the first release in July 2020, while `2020.7.2` is the second.
 
 ### Disclaimer
 
