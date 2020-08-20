@@ -52,6 +52,12 @@ $navbar-dropdown-radius: 0;
       text-decoration: none;
       color: $color-dark-slate-gray;
     }
+    @include desktop-only() {
+      .navbar-item {
+        margin-left: 0;
+        font-size: $font-size-h6;
+      }
+    }
   }
 
   &.small {
