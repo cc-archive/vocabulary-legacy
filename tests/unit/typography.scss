@@ -6,7 +6,7 @@
       }
 
       @include expect {
-        h1, .title.is-1 {
+        h1, .title.is-1, .subtitle.is-1 {
           font-size: 3.56rem;
         }
       }

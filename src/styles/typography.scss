@@ -102,7 +102,9 @@ $header-font-sizes: (
 );
 
 @mixin header-typography($header-level, $header-font-size) {
-  h#{$header-level}, .title.is-#{$header-level} {
+  h#{$header-level},
+  .title.is-#{$header-level},
+  .subtitle.is-#{$header-level} {
     font-size: $header-font-size;
   }
 }
