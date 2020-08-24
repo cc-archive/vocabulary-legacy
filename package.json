@@ -51,7 +51,7 @@
     "chalk": "^2.4.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "husky": "^4.2.3",
     "lerna": "^3.22.1",
     "react": "^16.12.0",
