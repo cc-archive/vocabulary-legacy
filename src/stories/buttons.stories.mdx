@@ -10,6 +10,13 @@ export const buttonClass = (classes, el = 'button', href='') => {
  return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">Button</${el}>`
 }
 
+export const buttonDonateClass = (classes, el = 'button', href='') => {
+ classes = classes ? ` ${classes}` : ''
+ return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate"> 
+ <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
+ Button</${el}>`
+}
+
 Buttons are created by adding the `.button` class to a `<button>`.
 
 <Preview mdxSource={buttonClass('')}>
@@ -56,11 +63,27 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
   }</Story>
 </Preview>
 
-<Preview mdxSource={buttonClass('donate medium')}>
-  <Story name="ButtonDonate" height="100px" parameters={{
+<Preview mdxSource={buttonDonateClass('big')}>
+  <Story name="ButtonDonateLarge" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>{
-    buttonClass('donate medium')
+    buttonDonateClass('big')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonDonateClass('medium')}>
+  <Story name="ButtonDonateMedium" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{
+    buttonDonateClass('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonDonateClass('small')}>
+  <Story name="ButtonDonateNormal" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{
+    buttonDonateClass('small')
   }</Story>
 </Preview>
 
