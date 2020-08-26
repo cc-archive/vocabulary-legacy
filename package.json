@@ -28,7 +28,7 @@
     "vue-i18n": "^8.20.0"
   },
   "devDependencies": {
-    "@kazupon/vue-i18n-loader": "^0.3.0",
+    "@kazupon/vue-i18n-loader": "^0.5.0",
     "@storybook/addon-backgrounds": "^6.0.15",
     "@storybook/addon-docs": "^6.0.15",
     "@storybook/addon-knobs": "^6.0.15",
