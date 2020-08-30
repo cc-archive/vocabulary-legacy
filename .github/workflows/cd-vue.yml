@@ -6,7 +6,7 @@ on:
       - published
 
 defaults:
-  working-directory: "packages/vue"
+  working-directory: "packages/vue-vocabulary"
 
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true

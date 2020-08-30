@@ -9,7 +9,7 @@ on:
       - master
 
 defaults:
-  working-directory: "packages/vue"
+  working-directory: "packages/vue-vocabulary"
 
 env:
   CI: true

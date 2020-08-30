@@ -78,6 +78,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/creativecommons/vocabulary.git",
-    "directory": "packages/vue"
+    "directory": "packages/vue-vocabulary"
   }
 }
