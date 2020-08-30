@@ -1,0 +1,117 @@
+import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks'
+import { alphabetTable, numberTable, sampleTexts } from './helpers'
+
+<Meta title = "Roboto Condensed" parameters = {{
+  decorators: [
+    storyFn => `<style>
+  .roboto-condensed {
+    font-family: 'Roboto Condensed';
+  }
+  .bold {
+    font-weight: 700;
+  }
+</style>
+<div class="roboto-condensed has-text-black has-bottom-margin">
+  ${storyFn()}
+</div>
+<div class="roboto-condensed bold has-text-black ">
+  ${storyFn()}
+</div>`
+  ]
+}}/>
+
+# Roboto Condensed
+
+Roboto is a neo-grotesque sans-serif typeface family developed by Google as the system font for its mobile operating
+system Android. The entire font family has been licensed under the Apache license.
+
+It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
+
+## Regular
+
+<Typeset
+  fontSizes={[
+    '2rem',
+    '1rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={400}
+  sampleText={sampleTexts[0]} />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={400}
+  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={400}
+  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={400}
+  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={400}
+  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+
+
+## Bold
+
+<Typeset
+  fontSizes={[
+    '2rem',
+    '1rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText={sampleTexts[2]} />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $" />
+
+<Typeset
+  fontSizes={['2rem']}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+
+<Story name="Uppercase letters" parameters={{
+  docs: { disable: true }
+}}>{
+  alphabetTable()
+}</Story>
+
+<Story name="Lowercase letters" parameters={{
+  docs: { disable: true }
+}}>{
+  alphabetTable(['lowercase'])
+}</Story>
+
+<Story name="Numbers" parameters={{
+  docs: { disable: true }
+}}>{
+  numberTable()
+}</Story>

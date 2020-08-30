@@ -1,0 +1,50 @@
+name: fonts-cd
+
+on:
+  release:
+    types:
+    - published
+
+env:
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+
+jobs:
+  deploy_npm:
+    name: Deploy to npm
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org
+
+    - name: Install dependencies
+      run: npm install --no-audit
+
+    - name: Publish package
+      run: bash deploy.sh
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  deploy_gh:
+    name: Deploy to GitHub Packages
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://npm.pkg.github.com/
+
+    - name: Install dependencies
+      run: npm install --no-audit
+
+    - name: Publish package
+      run: bash deploy.sh
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

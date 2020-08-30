@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Fonts/Usage" />
+
+# Usage
+
+We've tried to make it as easy as possible to use Fonts in your projects. Depending on your build pipeline you
+might prefer to install Fonts via `npm` or via a CDN.
+
+## NPM
+
+For a full fledged app, use `npm` (or if you're one of those people, `yarn`) to install Fonts.
+
+Just install `@creativecommons/fonts` using the package manager of your choice.
+
+```bash
+$ npm install @creativecommons/fonts
+```
+
+In your entrypoint, you can include the master CSS file. It does not include the Accidenz Commons font, so you might
+want to import that separately.
+
+```js
+import '@creativecommons/fonts/css/fonts.css'
+```
+
+## CDN
+
+To start using Fonts for quick prototyping or development you can use one of our CDN-based deployments. Both CDNs
+mirror our `npm` deploys so choose either one based on your personal preference.
+
+Just link to the master CSS file with any of these one-line `link` tags within your document `head` tag.
+
+#### unpkg
+
+```html
+<!-- If you have a specific version in mind, use -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css">
+<!-- or, if you prefer the latest version, use -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts/css/fonts.css">
+```
+
+#### jsDelivr
+
+```html
+<!-- If you have a specific version in mind, use -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css">
+<!-- or, if you prefer the latest version, use -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/fonts/css/fonts.css">
+```
+
+## Individual imports
+
+If you want to import individual fonts instead of importing them all at once, replace `fonts.css` in either of the above
+methods with any of the following:
+
+- `vocabulary_icons.css`
+- `source_sans_pro.css`
+- `roboto_condensed.css`
+- `accidenz_commons.css`
+- `jetbrains_mono.css`
