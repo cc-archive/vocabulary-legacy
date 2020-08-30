@@ -5,14 +5,13 @@ on:
     types:
       - published
 
-defaults:
-  working-directory: "packages/fonts"
-
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
 
 jobs:
   deploy_npm:
+    defaults:
+      working-directory: "packages/fonts"
     name: Deploy to npm
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +32,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   deploy_gh:
+    defaults:
+      working-directory: "packages/fonts"
     name: Deploy to GitHub Packages
     runs-on: ubuntu-latest
     steps:
