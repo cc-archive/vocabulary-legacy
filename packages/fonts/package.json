@@ -57,5 +57,9 @@
     "library"
   ],
   "license": "MIT",
-  "repository": "github:creativecommons/fonts"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git",
+    "directory": "packages/fonts"
+  }
 }

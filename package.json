@@ -1,0 +1,35 @@
+{
+  "name": "root",
+  "private": true,
+  "author": {
+    "email": "zack@creativecommons.org",
+    "name": "Zack Krida",
+    "url": "https://creativecommons.org/author/zack-krida/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git"
+  },
+  "bugs": "https://github.com/creativecommons/vocabulary/issues/",
+  "homepage": "https://opensource.creativecommons.org/vocabulary",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "sass stylesheets",
+    "library",
+    "monorepo"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "setup": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "watch": "lerna run watch --parallel",
+    "storybook": "lerna run storybook --parallel"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
