@@ -1,0 +1,68 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Tokens/Spacing" />
+
+# Measures
+
+To create a consistency in elements position and harmony, we defined a unit base that applies to the grid, margin and
+paddings. Based on this unit, we generated a list of spacings that applies in the layout of any page.
+
+The basic distance defined in Vocabulary is 16 pixels. This measurement corresponds to 1 rem and generates eight
+variations to support all the possible distances. Those spacings range the smallest distance like text margins, and the
+largest ones like margin between sections.
+
+## Spacing definitions
+
+| Name    | SCSS variable    | rem  | px |
+|---------|------------------|------|----|
+| 0       |                  | 0    | 0  |
+| Smaller | `$space-smaller` | 0.25 | 4  |
+| Small   | `$space-small`   | 0.5  | 8  |
+| Normal  | `$space-normal`  | 1    | 16 |
+| Big     | `$space-big`     | 1.5  | 24 |
+| Bigger  | `$space-bigger`  | 2    | 32 |
+| Large   | `$space-large`   | 2.5  | 40 |
+| Larger  | `$space-larger`  | 3    | 48 |
+| XL      | `$space-xl`      | 4    | 64 |
+| XXL     | `$space-xxl`     | 6    | 96 |
+
+# Usage
+
+We have customized Bulma's [helpers](https://bulma.io/documentation/helpers/spacing-helpers/)
+that can be used directly as they are bundled with Vocabulary.
+- For properties, use any of the following:<br/>
+ `margin-` or `padding-`
+- For direction, use any of the following:<br/>
+  `top-`, `right-`, `bottom-`, `left-`, `horizontal-`, `vertical-` or skip it.
+- For sizes, use the names from the above table, lowercased.
+
+Finally we have the classes `.is-marginless` and `.is-paddingless` that apply zero spaces.
+
+Together, they cover the entire spectrum of spacing types, directions and sizes available.
+
+**Example:**
+
+export const helperExamples = () => `
+<div class="padding-small" style="border: 1px solid black; margin-bottom: 4px;">
+  Padding of 0.5rem on all four sides
+</div>
+<div class="margin-horizontal-big" style="border: 1px solid black; margin-bottom: 4px;">
+  Margin of 1.5rem on left and right sides
+</div>
+<div class="margin-left-large" style="border: 1px solid black; margin-bottom: 4px;">
+  Margin of 2.5rem on left side
+</div>`
+
+<Preview mdxSource={helperExamples()}>
+  <Story name="Helpers" height="250px">{
+    helperExamples
+  }</Story>
+</Preview>
+
+<Story name="Figma" parameters={{
+  design: figmaConfig('0%3A190'),
+  docs: { disable: true }
+}}>{`
+  See the Design tab.
+`}</Story>

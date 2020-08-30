@@ -1,0 +1,30 @@
+import { useEffect } from '@storybook/client-api'
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { createGlobalHeader } from '../scripts/global_header'
+
+<Meta
+  title="Patterns/Global header"
+  parameters={{
+   decorators: [
+     storyFn => `<style>body.sb-show-main{ padding: 0 !important; }</style>${storyFn()}`
+   ]
+}}/>
+
+export const globalHeader = 'const globalHeaderInstance = vocabulary.createGlobalHeader()'
+
+<Preview mdxSource={globalHeader} className="tight">
+  <Story name="Interactive">{() => {
+    // Using Storybook hooks to clean up effects of DOM insertion
+    useEffect(() => {
+      // Function body executes for componentDidMount
+      const globalHeaderInstance = createGlobalHeader()
+      // Return function executes for componentWillUnmount
+      return () => {
+        if (globalHeaderInstance && globalHeaderInstance.element) {
+          globalHeaderInstance.element.remove()
+        }
+      }
+    })
+    return '<div style="background-color: rgb(237, 89, 47); height: 200px;"></div>'
+  }}</Story>
+</Preview>

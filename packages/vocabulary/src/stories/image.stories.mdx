@@ -1,0 +1,106 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Patterns/Image" />
+
+# Image
+
+The image component is not restricted to a specific size; it must be used
+depending on the content type and its container. If it is placed as a single
+image within the content, it should follow the grid columns.
+
+<Preview>
+  <Story name="Default" height="300px" parameters={{
+    design: figmaConfig('576%3A1')}}>{`
+    <div class="image" style="max-width: 384px;">
+      <img src="demo/broadway_tower.jpg">
+      <div class="image-title">
+        Broadway Tower by Newton2
+      </div>
+      <div class="image-icons">
+        <i class="icon has-background-white cc-logo"></i>
+        <i class="icon has-background-white cc-by"></i>
+        <i class="icon has-background-white cc-nc"></i>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Long title" height="300px" parameters={{
+    design: figmaConfig('576%3A1')}}>{`
+    <div class="image" style="max-width: 384px;">
+      <img src="demo/broadway_tower.jpg">
+      <div class="image-title">
+        Broadway Tower by Newton2 is licensed under the Attribution 2.5 Generic (CC BY 2.5) license.
+      </div>
+      <div class="image-icons">
+        <i class="icon has-background-white cc-logo"></i>
+        <i class="icon has-background-white cc-by"></i>
+        <i class="icon has-background-white cc-nc"></i>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Ellipsised" height="300px" parameters={{
+    design: figmaConfig('576%3A1')}}>{`
+    <div class="image" style="max-width: 384px;">
+      <img src="demo/broadway_tower.jpg">
+      <div class="image-title is-ellipsised">
+        Broadway Tower by Newton2 is licensed under the Attribution 2.5 Generic (CC BY 2.5) license.
+      </div>
+      <div class="image-icons">
+        <i class="icon has-background-white cc-logo"></i>
+        <i class="icon has-background-white cc-by"></i>
+        <i class="icon has-background-white cc-nc"></i>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Compact" height="500px" parameters={{
+    design: figmaConfig('576%3A1')}}>{`
+    <div class="image is-compact" style="max-width: 384px;">
+      <img src="demo/broadway_tower.jpg">
+      <div class="bookmark-icon">
+        <i class="icon bookmark-regular"></i>
+      </div>
+      <div class="image-title">
+        Broadway Tower by Newton2 is licensed under the Attribution 2.5 Generic (CC BY 2.5) license.
+      </div>
+      <div class="image-icons">
+        <i class="icon has-background-white cc-logo"></i>
+        <i class="icon has-background-white cc-by"></i>
+        <i class="icon has-background-white cc-nc"></i>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Selected" height="500px" parameters={{
+    design: figmaConfig('576%3A1')}}>{`
+    <div class="image is-selected" style="max-width: 384px;">
+      <img src="demo/broadway_tower.jpg">
+      <div class="image-title">
+        Broadway Tower by Newton2
+      </div>
+      <div class="image-icons">
+        <i class="icon has-background-white cc-logo"></i>
+        <i class="icon has-background-white cc-by"></i>
+        <i class="icon has-background-white cc-nc"></i>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+
+[Broadway Tower](https://commons.wikimedia.org/wiki/File:Broadway_tower.jpg)
+by
+[Newton2](https://en.wikipedia.org/wiki/User:Newton2)
+is licensed under the
+[Attribution 2.5 Generic (CC BY 2.5)](https://creativecommons.org/licenses/by/2.5/)
+license.

@@ -1,0 +1,171 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Vocabulary/Contribution" />
+
+# Contribution
+
+We're always looking for contributors to help us find and fix bugs, build new
+features, help us improve the project documentation or translate the project to
+another language.
+
+Vocabulary is continuously evolving and improving. You can contribute to the
+project in a number of ways.
+
+| What | How |
+|-|-|
+| **Code**      | If you are a developer, feel free to resolve open issues, proof PRs, add new features to existing components or add new components altogether. |
+| **Design**    | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem. |
+| **Test**      | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
+| **Write**     | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand. |
+| **Share**     | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
+
+Interested?
+
+The following instructions are in addition to the processes in our general [Contribution][contribution] and
+[Pull Request][pull_request] guidelines on the Creative Common Open Source website. If you haven't read them already,
+read them first.
+
+[contribution]:https://creativecommons.github.io/contributing-code/
+[pull_request]:https://opensource.creativecommons.org/contributing-code/pr-guidelines/
+
+These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
+
+## Setting up
+
+Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork
+instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
+
+To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and
+disadvantages.
+
+Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle
+involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+
+Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating
+system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+
+### Docker and Docker Compose
+
+Install Docker and Docker Compose, if you don't already have them on your computer.
+
+Bring up all services.
+
+```bash
+$ docker-compose up -d
+```
+
+To run `npm` commands, you'll need to enter a Vocabulary container.
+
+```bash
+$ ./docker/vocabulary/run.sh
+docker-desktop:/codebase$ ...
+```
+
+If you install new packages, you'll need to rebuild a few things.
+
+```bash
+$ docker-compose down
+$ docker volume prune
+$ docker-compose build storybook
+```
+
+### Manual setup
+
+Install Node.js and NPM, if you don't already have them on your computer.
+
+Install dependencies.
+```
+$ npm install
+```
+
+Start the following processes in different terminals
+- SCSS build process: watches SCSS files and rebuilds them if any of them change
+- the Storybook process: interactive playground of components in the browser
+
+```
+$ npm run watch
+$ npm run storybook
+```
+
+## Discussing changes
+
+For bugs reports and feature requests, use GitHub issues with the appropriate
+labels. We can discuss the possibility of that change or new feature being
+implemented and released in the future. This lets us come to an agreement about
+the proposed idea before any work is done.
+
+## Assigning work
+
+If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to attempt
+it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last
+assignee bails.
+
+Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it
+before your PR comes in, your PR will be put on hold for a week.
+
+## Making changes
+
+Do all work on its own branch. Use meaningful branch names.
+
+**Examples**
+- `broken_links_readme`
+- `typo_misspelled`
+
+Use clean commit messages, as imperative sentences in the present tense.
+
+**Examples:**
+- Remove the broken links from the \`README.md\` file
+- Fix the typo on line 12, where 'misspelled' was misspelled as 'mispelled'
+
+Update your fork from time to time. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
+
+Write new tests, and update existing ones, for the changes you make.
+
+## Testing
+
+While our Husky setup will prevent you from committing poorly linted code, it cannot catch logical problems. For
+that we have some tests.
+
+### Unit
+
+Running unit tests is easy.
+
+```bash
+$ npm run test:unit
+```
+
+### Visual regression
+
+Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from
+affecting the screenshots.
+
+Create a new file `docker/puppeteer/env_vars` in which to hold environment variables. Add the `STORYBOOK_ORIGIN`
+environment variable corresponding to the OS you're using.
+
+```bash
+# macOS
+STORYBOOK_ORIGIN=http://host.docker.internal:8080
+# Linux
+STORYBOOK_ORIGIN=http://localhost:8080
+```
+
+Build the container.
+
+```bash
+$ docker build \
+    --tag puppeteer:latest \
+    --file docker/puppeteer/Dockerfile \
+    .
+```
+
+Start by running the Storybook. You can use your preferred method from the [Setting up](#setting-up) section to do so.
+Once you have the Storybook server running, run the commands as shown below.
+
+```bash
+$ ./docker/puppeteer/run.sh
+pptr@docker-desktop:/codebase$ npm run test:snapshot
+```
+
+To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier
+with `-- -u` appended to the end of the `npm run` command. The `--` is a special construct that allows passing arguments
+to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot`) flag to Jest.

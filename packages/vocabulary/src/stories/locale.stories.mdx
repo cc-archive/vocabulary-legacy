@@ -1,0 +1,35 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "./helpers";
+
+<Meta title="Patterns/Locale" />
+
+# Locale
+
+The locale component should be used to indicate and switch the language of the page where it is placed. The option
+displayed in the select component must show the current language and then the language’s name written in the language’s
+alphabet.
+
+<Preview>
+  <Story name="Default" height="64px" parameters={{
+    design: figmaConfig('753%3A0')
+  }}>{`
+    <div class="locale">
+      Languages available
+      <div class="control has-icons-left">
+        <div class="select">
+          <select>
+            <option disabled>Select</option>
+            <option selected>English</option>
+            <option>le Français</option>
+            <option>日本語</option>
+            <option>Русский</option>
+            <option>Español</option>
+          </select>
+        </div>
+        <div class="icon globe is-small is-left ">
+            <i class="icon globe ">locale</i>
+        </div>
+      </div>
+    </div>
+  `}</Story>
+</Preview>

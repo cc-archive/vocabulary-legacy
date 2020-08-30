@@ -1,0 +1,19 @@
+@include describe('Spacing') {
+  @include it("creates undirected spacing classes") {
+    @include assert {
+      @include output {
+        @include undirected-spacing(
+          "margin",
+          "-jumbo",
+          10rem
+        )
+      }
+
+      @include expect {
+        .margin-jumbo {
+          margin: 10rem !important;
+        }
+      }
+    }
+  }
+}

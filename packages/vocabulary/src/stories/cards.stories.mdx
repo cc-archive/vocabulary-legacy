@@ -1,0 +1,347 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Layouts/Cards" />
+
+<Preview>
+  <Story name="PostVertical" parameters={{
+    design: figmaConfig('776%3A0')
+  }}>{`
+    <div style="width: 400px;">
+      <article class="card entry-post vertical">
+        <header class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://picsum.photos/id/433/700/392" alt="Header image">
+          </figure>
+        </header>
+        <div class="card-content with-button">
+            <h4 class="card-title"><a href="#">This is a title</a></h4>
+            <span class="subtitle">12 Octobre 2019</span>
+            <div class="content">
+              Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+            </div>
+            <a href="#" class="button is-primary">Read more</a>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostHorizontal" parameters={{
+    design: figmaConfig('776%3A3')
+  }}>{`
+    <div style="width: 600px;">
+      <article class="card entry-post horizontal">
+        <header class="card-image">
+          <figure class="image is-4by5">
+            <img src="https://picsum.photos/id/830/486/600" alt="Header image">
+          </figure>
+        </header>
+        <div class="card-content with-button">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <span class="subtitle">12 Octobre 2019</span>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+          <a href="#" class="button is-primary">Read more</a>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostVideoVertical" parameters={{
+    design: figmaConfig('776%3A86')
+  }}>{`
+    <div style="width: 400px;">
+      <article class="card entry-post entry-video vertical no-border">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-4by3">
+              <img src="https://picsum.photos/id/433/700/392" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostVideoHorizontal" parameters={{
+    design: figmaConfig('776%3A86')
+  }}>{`
+    <div style="width: 600px;">
+      <article class="card entry-post entry-video horizontal no-border">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-4by3">
+              <img src="https://picsum.photos/id/830/700/392" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostVideoLarge" parameters={{
+    design: figmaConfig('776%3A86')
+  }}>{`
+    <div style="width: 100%;">
+      <article class="card entry-post entry-video horizontal large no-border">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-5by4">
+              <img src="https://picsum.photos/id/433/700/392" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h1 class="card-title"><a href="#">This is a longer title for main content</a></h1>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+
+<Preview>
+  <Story name="PostEventWide" parameters={{
+    design: figmaConfig('776%3A43')
+  }}>{`
+    <div style="width: 600px;">
+      <article class="card entry-post entry-event horizontal">
+        <header class="card-header">
+          <div class="card-date">
+            <span class="month">September</span>
+            <span class="day">05</span>
+            <span class="year">2050</span>
+          </div>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+          <a href="#" class="read-more">Read more <i class="icon chevron-right"></i></a>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostEventNarrow" parameters={{
+    design: figmaConfig('776%3A43')
+  }}>{`
+    <div style="width: 350px;">
+      <article class="card entry-post entry-event horizontal">
+        <header class="card-header">
+          <div class="card-date">
+            <span class="month">September</span>
+            <span class="day">05</span>
+            <span class="year">2050</span>
+          </div>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+          <a href="#" class="read-more">Read more <i class="icon chevron-right"></i></a>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostStatistic" parameters={{
+    design: figmaConfig('776%3A144')
+  }}>{`
+    <div style="width: 600px;">
+      <article class="card entry-post entry-statistic horizontal no-border">
+        <header class="card-header">
+          <div class="card-statistic">
+            <span class="number">600+</span>
+            <span class="caption">Lorem ipsum</span>
+          </div>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
+          <a href="#" class="read-more">Read more <i class="icon chevron-right"></i></a>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="PostQuote" parameters={{
+    design: figmaConfig('776%3A3')
+  }}>{`
+    <div style="width: 600px;">
+      <article class="card entry-post entry-quote horizontal no-border">
+        <header class="card-image">
+          <figure class="image is-1by1">
+            <img src="https://picsum.photos/id/433/96/96" alt="Header image">
+          </figure>
+        </header>
+        <div class="card-content">
+          <span class="quote"></span>
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat viverra in tellus etiam tellus sed ultrices donec dapibus. Lacus risus et, ut tortor eros id et sollicitudin. Feugiat sit faucibus urna.
+            <div class="quote-author">
+              <strong class="title"> Lorem ipsum dolor sit.</strong>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="ImageTop" parameters={{
+    design: figmaConfig('776%3A3')
+  }}> {`
+    <div style="width: 340px;">
+      <article class="card entry-post entry-image vertical">
+        <header class="card-image">
+          <a href="#">
+            <figure class="image is-4by5">
+              <img src="https://picsum.photos/id/433/350/370" alt="Header image">
+            </figure>
+          </a>
+        </header>
+        <div class="card-content">
+          <h4 class="card-title"><a href="#">This is a label</a></h4>
+          <span class="subtitle">This is a short description</span>
+        </div>
+      </article>
+    </div>`
+  }</Story>
+</Preview>
+
+<Preview>
+  <Story name="Link" parameters={{
+    design: figmaConfig('776%3A122')
+  }}>{`
+    <div style="width: 400px;">
+      <article class="card entry-post link no-border">
+        <a href="#" class="has-background-dark-slate-blue">
+          <span class="card-content has-bottom-link">
+            <h2 class="card-title">This is a Title of a page or section</h2>
+            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+            <span class="link-arrow">Loren ipsum dolor <i class="icon chevron-right"></i></span>
+          </span>
+        </a>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+
+<Preview>
+  <Story name="LinkBorder" parameters={{
+    design: figmaConfig('776%3A122')
+  }}>{`
+    <div style="width: 400px;">
+      <article class="card entry-post link">
+        <a href="#">
+          <span class="card-content has-bottom-link">
+            <h2 class="card-title">This is a Title of a page or section</h2>
+            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+            <span class="link-arrow">Loren ipsum dolor <i class="icon chevron-right"></i></span>
+          </span>
+        </a>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Blog entry horizontal" parameters={{
+    design: figmaConfig('776%3A3')
+  }}>{`
+    <div style="width: 384px;" class="margin-normal">
+      <article class="card entry-post horizontal no-border blog-entry">
+        <header>
+          <figure class="image blog-image">
+            <img class="profile" src="demo/lion_dafrique.jpg">
+          </figure>
+        </header>
+        <div class="blog-content">
+          <h4 class="b-header">Title of the post</h4>
+          <span class="blog-author">by <a>Author Name</a> on 2020-04-03</span>
+          <div class="excerpt">
+            Excerpt scelerisque vitae neque, facilisi elit. Gravida diam vel cras lorem a nibh enim et diam.
+          </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Project index" parameters={{
+    design: figmaConfig('776%3A144')
+  }}>{`
+    <style>
+      .project-index {
+        width: 400px;
+      }
+    </style>
+    <div class="project-index">
+      <article class="card entry-post vertical project-index">
+        <div class="card-content">
+            <h4 class="card-title b-header"><a href="#">Name of the project</a></h4>
+            <button class="button is-text tiny site-link">
+              <span>Visit site</span>
+              <i class="icon external-link"></i>
+            </button>
+            <div class="content">
+              Project description nulla id massa interdum nunc molestie cursus rhoncus, iaculis. Tellus elementum sem massa sit.
+            </div>
+            <div class="labels">
+              <button class="button tag">JavaScript</button>
+              <button class="button tag">Vue.js</button>
+            </div>
+            <div class="external-links">
+              <button class="button is-text tiny">
+                <i class="icon external-link"></i>
+                <span class="link-content">External link</span>
+              </button>
+              <br>
+              <button class="button is-text tiny">
+                <i class="icon external-link"></i>
+                <span class="link-content">External link</span>
+              </button>
+            </div>
+        </div>
+      </article>
+    </div>
+  `}</Story>
+</Preview>

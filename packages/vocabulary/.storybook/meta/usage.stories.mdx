@@ -1,0 +1,170 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Vocabulary/Usage" />
+
+# Usage
+
+We've tried to make it as easy as possible to use Vocabulary in your projects. Depending on your build pipeline you
+might prefer to install Vocabulary via `npm` or via a CDN.
+
+## NPM
+
+For a full fledged app, use `npm` (or if you're one of those people, `yarn`) to install Vocabulary.
+
+### Installation
+
+Just install `@creativecommons/vocabulary` using the package manager of your choice.
+
+```bash
+npm install @creativecommons/vocabulary
+```
+
+### Stylesheets
+
+In your entrypoint, you can include the master CSS file.
+
+```js
+import '@creativecommons/vocabulary/css/vocabulary.css'
+```
+
+Alternatively, you can import the SCSS styleheets into your own stylesheets.
+
+```scss
+@import '~@creativecommons/vocabulary/scss/header.scss'
+@import '~@creativecommons/vocabulary/scss/footer.scss'
+```
+
+### JavaScript
+
+Coming soon.
+
+### Assets
+
+You can reference assets using file loader or SVG inline loader.
+
+```html
+<svg
+  class="logo"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid meet"
+  viewBox="0 0 304 73">
+  <use href="@creativecommons/vocabulary/assets/logos/cc/logomark.svg#creativecommons"></use>
+</svg>
+```
+
+## CDN
+
+To start using Vocabulary for quick prototyping or development you can use one of our CDN-based deployments. Both CDNs
+mirror our `npm` deploys so choose either one based on your personal preference.
+
+### Stylesheets
+
+Just link to the master CSS file with any of these one-line `link` tags within your document `head` tag.
+
+#### unpkg
+
+```html
+<!-- If you have a specific version in mind, use -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+<!-- or, if you prefer the latest version, use -->
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+```
+
+#### jsDelivr
+
+```html
+<!-- If you have a specific version in mind, use -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+<!-- or, if you prefer the latest version, use -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
+```
+
+### JavaScript
+
+Source the bundled JS file with any of these one-link `script` tags within your document `head` tag.
+
+#### unpkg
+
+```html
+<!-- If you have a specific version in mind, use -->
+<script src="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/js/vocabulary.js">
+<!-- or, if you prefer the latest version, use -->
+<script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js">
+```
+
+#### jsDelivr
+
+```html
+<!-- If you have a specific version in mind, use -->
+<script src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/js/vocabulary.js">
+<!-- or, if you prefer the latest version, use -->
+<script src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/js/vocabulary.js">
+```
+
+#### Post-sourcing
+
+The JavaScript bundle is imported as `vocabulary` in the global scope. You can then access the functions as follows.
+
+```html
+<script>
+  vocabulary.createGlobalHeader()
+</script>
+```
+
+### Assets
+
+Vocabulary bundles a number of assets, like SVGs for the brand and product logos, and license badges. Since SVGs cannot
+directly be hotlinked from the CDNs due to cross-origin issues, you will need to adopt this workaround.
+
+```html
+<script>
+  /**
+   * Get the fully-qualified URL of a Vocabulary asset.
+   *
+   * @param {string} version - the Vocabulary version in which to locate the asset
+   * @param {string} path - the path of the asset being patched
+   * @return {string} the fully qualified URL of the asset
+   */
+  const getFullyQualifiedUrl = (version, path) => {
+    let baseUrl = 'https://unpkg.com/@creativecommons/vocabulary'
+    // If you prefer jsDelivr instead, use
+    // let baseUrl = 'https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary'
+    return `${baseUrl}@${version}/${path}`
+  }
+
+  /**
+   * Create an invisible container and place the asset into the DOM.
+   *
+   * This function is intended to be used to patch SVG assets that are later
+   * referenced inside `<use>` tags in `<svg>` tags. It can also be used to force
+   * an image to be downloaded to speed up its loading when referenced again.
+   *
+   * @param {string} path - the path of the asset being patched
+   * @param {string} version - the Vocabulary version in which to locate the asset
+   */
+  const patchAssetIntoDom = (path, version = 'latest') => {
+    fetch(getFullyQualifiedUrl(version, path)).then(response => {
+      return response.text()
+    }).then(data => {
+      // Render SVG in the page
+      div.innerHTML = ajax.responseText;
+      div.style.display = 'none';
+      document.body.prepend(div, document.body.childNodes[0]);
+    })
+  }
+
+  patchAssetIntoDom('/assets/logos/cc/logomark.svg');
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid meet"
+  viewBox="0 0 304 73">
+  <!-- Automatically finds ID amongst all assets loaded using `patchAssetIntoDom()` -->
+  <use href="#logomark"></use>
+</svg>
+```
+
+## Versioning
+
+Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.0M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.07.1` is the first release in July 2020, while `2020.07.2` is the second.

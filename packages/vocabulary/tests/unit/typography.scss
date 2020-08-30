@@ -1,0 +1,30 @@
+@include describe("Typography") {
+  @include it("assigns header sizes to tags") {
+    @include assert {
+      @include output {
+        @include header-typography("1", 3.56rem);
+      }
+
+      @include expect {
+        h1, .title.is-1, .subtitle.is-1 {
+          font-size: 3.56rem;
+        }
+      }
+    }
+  }
+
+  @include it("assigns body sizes to classes") {
+    @include assert {
+      @include output {
+        @include body-typography("-standard", 2.56rem)
+      }
+
+      @include expect {
+        .body-standard {
+          line-height: 1.6;
+          font-size: 2.56rem;
+        }
+      }
+    }
+  }
+}
