@@ -2,9 +2,13 @@ name: CI for vue package
 
 on:
   push:
+    paths:
+      - "packages/vue-vocabulary/**"
     branches:
       - master
   pull_request:
+    paths:
+      - "packages/vue-vocabulary/**"
     branches:
       - master
 

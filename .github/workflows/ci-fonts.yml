@@ -2,13 +2,15 @@ name: CI for fonts package
 
 on:
   push:
+    paths:
+      - "packages/fonts/**"
     branches:
       - master
   pull_request:
+    paths:
+      - "packages/fonts/**"
     branches:
       - master
-  paths:
-    - "packages/fonts/**"
 
 env:
   CI: true

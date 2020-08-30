@@ -2,13 +2,15 @@ name: CI for vocabulary package
 
 on:
   push:
+    paths:
+      - "packages/vocabulary/**"
     branches:
       - master
   pull_request:
+    paths:
+      - "packages/vocabulary/**"
     branches:
       - master
-  paths:
-    - "packages/vocabulary/**"
 
 env:
   CI: true
