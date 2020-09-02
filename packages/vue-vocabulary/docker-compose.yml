@@ -1,0 +1,33 @@
+##############################
+# Development Docker Compose #
+##############################
+
+# This is the version of the Docker Compose standard
+version: '3.4'
+
+services:
+  storybook:
+    # Name of the container
+    container_name: vocabulary-storybook
+    # Use the CC Vocabulary image
+    image: ccvocabulary:latest
+    # Restart build if it fails
+    restart: always
+    # If the image is not found, build it
+    build: .
+
+    # The command to run in the container
+    command: npm run storybook
+    
+    # Volumes attached to the container
+    volumes:
+      - .:/codebase
+      - node_modules:/codebase/node_modules
+    ports:
+      # Map 6006 in the container to the same port on the host
+      - 8080:8080
+
+volumes:
+  # Holds the node_modules directory
+  # Prevents the host node_modules from being mounted and used
+  node_modules:

@@ -1,0 +1,28 @@
+@include describe("Vocabulary Icons") {
+  @include it("creates icons with given codepoint") {
+    @include assert {
+      @include output {
+        @include icon("classname", "\1f60e");
+      }
+
+      @include expect {
+        i.icon.classname:before {
+          content: "😎";
+        }
+      }
+    }
+  }
+  @include it("creates colored icons if branded") {
+    @include assert {
+      @include output {
+        @include branded-icon("classname", orange);
+      }
+
+      @include expect {
+        i.icon.classname.colored:before {
+          color: orange;
+        }
+      }
+    }
+  }
+}

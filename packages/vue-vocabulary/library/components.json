@@ -1,0 +1,16 @@
+{
+  "utils": [
+    "SlotRenderer"
+  ],
+  "layouts": [
+    "Tabs",
+    ["Tabs", "Tab"],
+    "Table",
+    ["Table", "TableCell"]
+  ],
+  "patterns": [
+    "Footer",
+    "Header",
+    "Locale"
+  ]
+}
