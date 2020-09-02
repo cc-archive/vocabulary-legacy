@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Vocabulary/Contribution" />
 
@@ -11,13 +11,13 @@ another language.
 Vocabulary is continuously evolving and improving. You can contribute to the
 project in a number of ways.
 
-| What | How |
-|-|-|
-| **Code**      | If you are a developer, feel free to resolve open issues, proof PRs, add new features to existing components or add new components altogether. |
-| **Design**    | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem. |
-| **Test**      | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
-| **Write**     | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand. |
-| **Share**     | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
+| What       | How                                                                                                                                                   |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Code**   | If you are a developer, feel free to resolve open issues, proof PRs, add new features to existing components or add new components altogether.        |
+| **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.      |
+| **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
+| **Write**  | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.      |
+| **Share**  | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
 
 Interested?
 
@@ -25,8 +25,8 @@ The following instructions are in addition to the processes in our general [Cont
 [Pull Request][pull_request] guidelines on the Creative Common Open Source website. If you haven't read them already,
 read them first.
 
-[contribution]:https://creativecommons.github.io/contributing-code/
-[pull_request]:https://opensource.creativecommons.org/contributing-code/pr-guidelines/
+[contribution]: https://creativecommons.github.io/contributing-code/
+[pull_request]: https://opensource.creativecommons.org/contributing-code/pr-guidelines/
 
 These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
 
@@ -35,14 +35,13 @@ These instructions are a port of the general guidelines, tailored specifically f
 Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork
 instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and
-disadvantages.
+To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
 
-Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle
-involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
 
-Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating
-system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+
+Vocabulary is a monorepo containing multiple packages. The manual approach also allows for working on multiple packages simultaneously.
 
 ### Docker and Docker Compose
 
@@ -72,13 +71,15 @@ $ docker-compose build storybook
 ### Manual setup
 
 Install Node.js and NPM, if you don't already have them on your computer.
+Install dependencies in the root project
 
-Install dependencies.
-```
+```shell
 $ npm install
+$ npm run setup
 ```
 
-Start the following processes in different terminals
+Start the following processes in different terminals:
+
 - SCSS build process: watches SCSS files and rebuilds them if any of them change
 - the Storybook process: interactive playground of components in the browser
 
@@ -108,12 +109,14 @@ before your PR comes in, your PR will be put on hold for a week.
 Do all work on its own branch. Use meaningful branch names.
 
 **Examples**
+
 - `broken_links_readme`
 - `typo_misspelled`
 
 Use clean commit messages, as imperative sentences in the present tense.
 
 **Examples:**
+
 - Remove the broken links from the \`README.md\` file
 - Fix the typo on line 12, where 'misspelled' was misspelled as 'mispelled'
 
