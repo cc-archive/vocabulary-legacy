@@ -6,12 +6,57 @@ $navbar-item-hover-background-color: transparent;
 
 $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
+$navbar-breakpoint : 768px;
 
 @import "bulma/sass/components/navbar.sass";
 
 
+// Header navigation layout
 .navbar {
-  padding: $space-bigger;
+  @include tablet() {
+    display: grid;
+    grid-template-areas:  ". ."
+                          "logo top"
+                          "main main";
+    grid-template-rows: 1fr 2fr auto;
+    grid-template-columns: auto 1fr;
+  }
+
+  @include desktop() {
+    display: grid;
+    grid-template-areas: "top top ."
+                       "logo  main main";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+.top-nav {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+
+  .locale {
+    margin-right: $space-normal;
+  }
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.main-nav {
+  grid-area: main;
+  .navbar-end {
+    margin-top: $space-normal;
+    flex-wrap: wrap;
+  }
+}
+
+
+// Header navigation main styling
+.navbar {
+  padding: $space-bigger $space-normal;
 
   .logo {
     height: 46px;
@@ -29,6 +74,21 @@ $navbar-dropdown-radius: 0;
     text-decoration: none;
   }
 
+  .donate {
+    font-family: $family-source-sans-pro;
+    text-transform: none;
+    color: $color-tomato;
+    background-color: $color-light-error;
+    &:hover {
+      color: $color-white;
+      background-color: $color-tomato;
+    }
+  }  
+
+  @include desktop() {
+    padding: $space-bigger;
+  }
+
   .navbar-end {
     .navbar-item {
       font-family: $family-roboto-condensed;
@@ -41,11 +101,10 @@ $navbar-dropdown-radius: 0;
       .icon {
         margin-left: $space-small;
       }
-
     }
 
     & > .navbar-item {
-      margin-left: $space-large;
+      margin-left: $space-small;
     }
 
     & .navbar-item:hover {
@@ -58,21 +117,8 @@ $navbar-dropdown-radius: 0;
         font-size: $font-size-h6;
       }
     }
-  }
-
-  &.small {
-    padding: $space-normal;
-
-    .logo {
-      height: 42px;
-    }
-
-    .navbar-menu {
-      margin-right: 20rem;
-
-      &.is-active {
-        margin-right: 0;
-      }
+    @include tablet-only() {
+      justify-content: flex-start;
     }
   }
 
