@@ -1,0 +1,163 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Elements/Buttons" />
+
+# Buttons
+
+export const buttonClass = (classes, el = 'button', href='') => {
+ classes = classes ? ` ${classes}` : ''
+ return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">Button</${el}>`
+}
+
+export const buttonDonateClass = (classes, el = 'button', href='') => {
+ classes = classes ? ` ${classes}` : ''
+ return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate"> 
+ <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
+ Button</${el}>`
+}
+
+Buttons are created by adding the `.button` class to a `<button>`.
+
+<Preview mdxSource={buttonClass('')}>
+  <Story name="MediumButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('')
+  }</Story>
+</Preview>
+
+You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
+
+<Preview mdxSource={buttonClass('big')}>
+  <Story name="BigButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('big')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonClass('small')}>
+  <Story name="SmallButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('small')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonClass('tiny')}>
+  <Story name="TinyButton" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('tiny')
+  }</Story>
+</Preview>
+
+You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
+
+<Preview mdxSource={buttonClass('is-primary big')}>
+  <Story name="ButtonPrimary" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('is-primary big')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonDonateClass('big')}>
+  <Story name="ButtonDonateLarge" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{
+    buttonDonateClass('big')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonDonateClass('medium')}>
+  <Story name="ButtonDonateMedium" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{
+    buttonDonateClass('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonDonateClass('small')}>
+  <Story name="ButtonDonateNormal" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>{
+    buttonDonateClass('small')
+  }</Story>
+</Preview>
+
+Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
+
+<Preview mdxSource={buttonClass('is-success')}>
+  <Story name="ButtonSuccess" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('is-success')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonClass('is-info')}>
+  <Story name="ButtonInfo" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('is-info')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonClass('is-warning')}>
+  <Story name="ButtonWarning" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('is-warning')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={buttonClass('is-danger')}>
+  <Story name="ButtonError" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('is-danger')
+  }</Story>
+</Preview>
+
+The `.tag` class is used to render a tag name.
+
+<Preview mdxSource={buttonClass('tag')}>
+  <Story name="Tag" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{
+    buttonClass('tag')
+  }</Story>
+</Preview>
+
+<Preview>
+  <Story name="Removable Tag" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{`
+    <button class="button tag--removable">
+      Label
+      <i class="icon cross"></i>
+    </button>
+  `}</Story>
+</Preview>
+
+You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
+
+<Preview mdxSource={buttonClass('is-text')}>
+  <Story name="Text" height="100px" parameters={{
+    design: figmaConfig('1404%3A1')
+  }}>{
+    buttonClass('is-text')
+  }</Story>
+</Preview>
+
+Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
+
+<Preview mdxSource={buttonClass('small', 'a', 'https://creativecommons.org')}>
+  <Story name="Anchor Tags" height="100px" parameters={{
+    design: figmaConfig('1403%3A61')
+  }}>{
+    buttonClass('small', 'a', 'https://creativecommons.org')
+  }</Story>
+</Preview>

@@ -1,0 +1,32 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg'
+import gitHubCornerSvg from '@creativecommons/vocabulary/assets/github_corner.svg'
+
+<Meta title = 'Vue Vocabulary/Introduction'/>
+
+<center>
+  <svg width="212" height="40" viewBox="0 0 212 40" xmlns="http://www.w3.org/2000/svg" className="has-text-black">
+    <use href={`${vocabularySvg}#vocabulary`}></use>
+  </svg>
+
+  <p class="text-normal">
+    Vocabulary is a cohesive design system to unite the web facing Creative Commons.<br/>
+    Vue Vocabulary is a Vue component library implementing Vocabulary.
+  </p>
+
+  <a href="https://github.com/creativecommons/vue-vocabulary" class="github-corner">
+    <svg width="80" height="80" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+      <use href={`${gitHubCornerSvg}#githubcorner`}></use>
+    </svg>
+  </a>
+
+  <p class="text-normal">
+    This is the Storybook for Vue Vocabulary.<br/>
+    Choose a component from the left panel to know more about it and explore the various customisations it has to offer.
+  </p>
+</center>
+
+<a style={{ position: 'absolute', bottom: '0.5em', left: '0.5em' }} href="https://www.netlify.com" target="_blank">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+</a>

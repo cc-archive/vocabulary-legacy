@@ -1,0 +1,112 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Layouts/Table" />
+
+# Table
+
+## Basic Content Table
+
+<Preview>
+  <Story name="Basic Content" parameters={{
+    design: figmaConfig('904%3A0')
+  }}>{`
+    <div class="is-responsive">
+      <table class="table is-bordered is-striped">
+        <thead>
+          <tr>
+            <th>State name</th>
+            <th>Capital of the state</th>
+            <th>Population</th>
+            <th>Total seats</th>
+          </tr>
+        </thead>
+        <tr>
+          <td data-label="State name">Alabama</td>
+          <td data-label="Capital of the state">Montgomery</td>
+          <td data-label="Population" class="number-cell">4,903,185</td>
+          <td data-label="Total seats" class="number-cell">7</td>
+        </tr>
+        <tr>
+          <td data-label="State name">Arizona</td>
+          <td data-label="Capital of the state">Phoenix</td>
+          <td data-label="Population" class="number-cell">7,278,717</td>
+          <td data-label="Total seats" class="number-cell">9</td>
+        </tr>
+        <tr>
+          <td data-label="State name">Arizona</td>
+          <td data-label="Capital of the state">Phoenix</td>
+          <td data-label="Population" class="number-cell">7,278,717</td>
+          <td data-label="Total seats" class="number-cell">9</td>
+        </tr>
+        <tr>
+          <td data-label="State name">Arkansas</td>
+          <td data-label="Capital of the state">Little Rock</td>
+          <td data-label="Population" class="number-cell">3,017,825</td>
+          <td data-label="Total seats" class="number-cell">4</td>
+        </tr>
+      </table>
+    </div>
+  `}</Story>
+</Preview>
+
+## Rich Content Table
+
+<Preview>
+  <Story name="Rich Content" parameters={{
+    design: figmaConfig('904%3A0')
+  }}>{`
+    <table class="table is-bordered  is-striped">
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Resources</th>
+          <th>Commits</th>
+          <th>Last release</th>
+        </tr>
+      </thead>
+      <tr>
+        <td class="padding-vertical-normal padding-left-normal">
+          <div class="text-bigger has-text-weight-bold padding-bottom-smaller">CC Search</div>
+          <div>7 contributors</div>
+        </td>
+        <td class="padding-vertical-normal padding-left-normal">
+          <a href="#" class="is-block">Mockups</a>
+          <a href="#" class="is-block">Project Brief</a>
+          <a href="#" class="is-block">Drive Folder</a>
+        </td>
+        <td class="has-text-right">
+          <span class="body-bigger has-text-weight-bold">123</span>
+        </td>
+        <td>13/01/2020</td>
+      </tr>
+      <tr>
+        <td class="padding-vertical-normal padding-left-normal">
+          <div class="text-bigger has-text-weight-bold padding-bottom-smaller">CC License Chooser</div>
+          <div>7 contributors</div>
+        </td>
+        <td class="padding-vertical-normal padding-left-normal">
+          <a href="#" class="is-block">Mockups</a>
+        </td>
+        <td class="has-text-right">
+          <span class="body-bigger has-text-weight-bold">234</span>
+        </td>
+        <td>13/01/2020</td>
+      </tr>
+      <tr>
+        <td class="padding-vertical-normal padding-left-normal">
+          <div class="text-bigger has-text-weight-bold padding-bottom-smaller">Open Source Redesign</div>
+          <div>7 contributors</div>
+        </td>
+        <td class="padding-vertical-normal padding-left-normal">
+          <a href="#" class="is-block">Test sessions</a>
+          <a href="#" class="is-block">Content</a>
+        </td>
+        <td class="has-text-right">
+          <span class="body-bigger has-text-weight-bold">456</span>
+        </td>
+        <td>13/01/2020</td>
+      </tr>
+    </table>
+  `}</Story>
+</Preview>

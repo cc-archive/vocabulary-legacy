@@ -1,0 +1,143 @@
+import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Tokens/Typography" />
+
+# Text styles
+
+The main fonts used across all Creative Commons' sites are Source Sans Pro and Roboto Condensed. Both are available on
+Google Fonts, support a wide range of languages, and were designed to be displayed digitally.
+
+The text styles defined should be used depending on the content displayed. For titles and short-length calls, Roboto
+Condensed is the option. For long reads and descriptive sentences, Source Sans Pro. To not to risk the content
+legibility, Roboto Condensed was adapted by adding 2% of kerning. In both cases, the main color for white background is
+DarkSlateGray color.
+
+Depending on the situation, some styles can be adapted having in mind that the number of styles implemented should keep
+simple. The criteria used to apply Roboto or Source Sans Pro for titles must put legibility over aesthetic. Based on
+that, we created title styles for both fonts.
+
+## Headings
+
+export const title = () => `
+<p class="title is-1">Title 1</p>
+<p class="title is-2">Title 2</p>
+<p class="title is-3">Title 3</p>
+<p class="title is-4">Title 4</p>
+<p class="title is-5">Title 5</p>
+`
+
+export const subtitle = () => `
+<p class="subtitle is-1">Subtitle 1</p>
+<p class="subtitle is-2">Subtitle 2</p>
+<p class="subtitle is-3">Subtitle 3</p>
+<p class="subtitle is-4">Subtitle 4</p>
+<p class="subtitle is-5">Subtitle 5</p>
+`
+
+Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h5>`.
+
+<Typeset
+  fontSizes={[
+    '3.56rem',
+    '2.25rem',
+    '1.75rem',
+    '1.43rem',
+    '1.25rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  style={{color: '#333'}}
+  sampleText="HEADING A" />
+
+Headings of type B need the class `.b-header` to be applied to heading tags from `<h3>` to `<h5>`.
+
+<Typeset
+  fontSizes={[
+    '1.75rem',
+    '1.43rem',
+    '1.25rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={700}
+  style={{color: '#333'}}
+  sampleText="Heading B" />
+
+Heading styles can also be applied to any elements, regardless of semantic meaning, with the `.title is-x` and `.subtitle .is-x` classes:
+
+<Preview mdxSource={title()}>
+  <Story name="Heading- Title" height="250px">{
+    title()
+  }</Story>
+</Preview>
+
+<Preview mdxSource={subtitle()}>
+  <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
+</Preview>
+
+This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
+
+## Body
+
+By default, body text in `<p>` tags is rendered at the base font size.
+
+<Typeset
+  fontSizes={[
+    '1.00rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  style={{color: '#333'}}
+  sampleText="Body" />
+
+Body text can be made big or bigger with the eponymous `.body-big` and `.body-bigger` classes on the `<p>` tag.
+
+<Typeset
+  fontSizes={[
+    '1.43rem',
+    '1.12rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  style={{color: '#333'}}
+  sampleText="Enlarged body" />
+
+Captions can be rendered with the class `.caption` on the `<p>` tag.
+
+<Typeset
+  fontSizes={[
+    '0.80rem'
+  ]}
+  fontFamily="Source Sans Pro"
+  fontWeight={400}
+  style={{color: '#333'}}
+  sampleText="Caption" />
+
+Values can be rendered with the class `.value` on the `<p>` tag.
+
+<Typeset
+  fontSizes={[
+    '4.37rem'
+  ]}
+  fontFamily="Roboto Condensed"
+  fontWeight={700}
+  style={{color: '#333'}}
+  sampleText="42" />
+
+Code can be rendered with the class `.monospace` on the `<p>` tag.
+
+<Typeset
+  fontSizes={[
+    '0.875rem'
+  ]}
+  fontFamily="monospace"
+  fontWeight={400}
+  style={{color: '#333'}}
+  sampleText="const x = () => { console.log('Hello World!') }" />
+
+<Story name="Figma" parameters={{
+  design: figmaConfig('0%3A110'),
+  docs: { disable: true }
+}}>{`
+  See the Design tab.
+`}</Story>

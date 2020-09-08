@@ -1,0 +1,5 @@
+@import "./font_face.scss";
+
+@include fontface('Roboto Condensed', 'RobotoCondensed-Regular', 400);
+
+@include fontface('Roboto Condensed', 'RobotoCondensed-Bold', 700);

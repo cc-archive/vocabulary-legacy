@@ -1,58 +1,13 @@
 {
-  "name": "@creativecommons/vocabulary",
-  "version": "1.0.0-beta.14",
-  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "name": "root",
+  "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
-  "scripts": {
-    "lint": "eslint src/*.js src/**/*.js tests/**/*.js",
-    "test:unit": "jest -c tests/unit/jest.config.js",
-    "test:snapshot": "jest -c tests/snapshot/jest.config.js",
-    "build": "webpack --mode production",
-    "watch": "npm run build -- --watch --progress",
-    "storybook": "start-storybook --ci -s ./src/assets -p 8080 --quiet",
-    "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
-    "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.9.0",
-    "@storybook/addon-backgrounds": "^5.3.17",
-    "@storybook/addon-docs": "^5.3.17",
-    "@storybook/addon-knobs": "^5.3.17",
-    "@storybook/addon-viewport": "^5.3.17",
-    "@storybook/html": "^5.3.17",
-    "babel-jest": "^25.2.3",
-    "babel-loader": "^8.0.6",
-    "bulma": "^0.8.0",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.4.2",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "husky": "^4.2.3",
-    "jest": "^25.2.3",
-    "jest-circus": "^25.2.3",
-    "jest-image-snapshot": "^2.12.0",
-    "jest-puppeteer": "^4.4.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
-    "puppeteer": "^2.1.1",
-    "react": "^16.12.0",
-    "react-is": "^16.12.0",
-    "sass-loader": "^8.0.2",
-    "sass-true": "^5.0.0",
-    "start-server-and-test": "^1.10.11",
-    "storybook-addon-designs": "^5.2.0",
-    "style-loader": "^1.1.3",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
-  "homepage": "https://creativecommons.github.io/vocabulary/",
+  "homepage": "https://opensource.creativecommons.org/vocabulary",
   "keywords": [
     "ui",
     "ux",
@@ -60,9 +15,17 @@
     "design system",
     "components",
     "sass stylesheets",
-    "library"
+    "library",
+    "monorepo"
   ],
   "license": "MIT",
-  "repository": "github:creativecommons/vocabulary",
-  "main": "index.js"
+  "scripts": {
+    "setup": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "watch": "lerna run watch --parallel",
+    "storybook": "lerna run storybook --parallel"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }

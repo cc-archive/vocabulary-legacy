@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Layouts/Notification" />
+
+<Preview>
+  <Story name="Warning">{`
+    <div class="notification warning">
+      <a href="#" class="notification-container">
+        <h4 class="b-header">This is a title of a message</h4>
+        <span class="notification-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti ipsum morbi dui.</span>
+        <span class="icon-container">
+          <i class="icon chevron-right"></i>
+        </span>
+      </a>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Content">{`
+    <div class="notification content">
+      <a href="#" class="notification-container">
+        <span class="content-image">
+          <img src="http://placekitten.com/264/150"/>
+        </span>
+        <span class="content-wrap">
+          <h3>This is a title of a message</h3>
+          <span class="notification-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti ipsum morbi dui.</span>
+          <span class="icon-container">
+            <i class="icon chevron-right"></i>
+          </span>
+        </span>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Compact Notification">{`
+    <div class="notification is-compact">
+      <span class="notification-container has-background-success-light">
+        <p>This is a title of a message</p>
+      </span>
+    </div>
+  `}</Story>
+</Preview>

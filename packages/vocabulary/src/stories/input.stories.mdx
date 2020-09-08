@@ -1,0 +1,263 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Input" />
+
+# Input
+
+export const inputType = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+  <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+  </div>`
+}
+
+export const inputTypeLabel = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeLabelMed = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeLabelLarge = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeNameDesc = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeNameDescMed = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-big margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputTypeNameDescLarge = (size) => {
+  let sizeClass = size ? ` is-${size}` : ''
+  return `
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Typed text"/>
+  </div>
+  <div class="margin-bottom-small">
+    <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
+    <p class="body-bigger margin-bottom-small"> Description of the input </p>
+    <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
+    </div>`
+}
+
+export const inputsWithIcons = () => `
+  <div class="control has-icons-left margin-bottom-normal">
+    <input class="input" type="email" placeholder="Normal with left icon"></input>
+    <span class="icon is-left">
+      <i class="icon search"></i>
+    </span>
+  </div>
+  <div class="control has-icons-left margin-bottom-normal">
+    <input class="input" type="email" placeholder="Small with left icon"></input>
+    <span class="icon is-small is-left">
+      <i class="icon search"></i>
+    </span>
+  </div>
+  <div class="control has-icons-right  margin-bottom-normal">
+    <input class="input" type="email" placeholder="Small with right icon"></input>
+    <span class="icon is-small is-right">
+      <i class="icon search"></i>
+    </span>
+  </div>
+  <div class="control has-icons-right margin-bottom-normal">
+    <input disabled class="input" type="email" placeholder="Disabled with right icon"></input>
+    <span class="icon is-small is-right has-text-orange">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="icon search"></i>
+    </span>
+  </div>
+  <div class="control has-icons-right margin-bottom-normal">
+    <input class="input is-medium" type="email" placeholder="Medium with right icon"></input>
+    <span class="icon is-right has-text-orange">
+      <i class="icon cross"></i>
+    </span>
+  </div>
+  <div class="control has-icons-right margin-bottom-normal">
+    <input class="input is-large" type="email" placeholder="Large with right success icon"></input>
+    <span class="icon is-right has-text-success">
+      <i class="icon cross"></i>
+    </span>
+  </div>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-large" type="email" placeholder="Large with two icons">
+    <span class="icon is-medium is-left">
+      <i class="icon search"></i>
+    </span>
+    <span class="icon is-medium is-right">
+      <i class="icon cross"></i>
+    </span>
+  </div>
+`
+
+
+<Preview mdxSource={inputType('')}>
+  <Story name="Normal" height="200px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputType('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputType('medium')}>
+  <Story name="Medium" height="250px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputType('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputType('large')}>
+  <Story name="Large" height="320px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputType('large')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeLabel('')}>
+  <Story name="Normal (+ label)" height="200px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeLabel('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeLabelMed('medium')}>
+  <Story name="Medium (+ label)" height="250px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeLabelMed('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeLabelLarge('large')}>
+  <Story name="Large (+ label)" height="320px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeLabelLarge('large')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDesc('')}>
+  <Story name="Normal (+ name, description)" height="200px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDesc('')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDescMed('medium')}>
+  <Story name="Medium (+ name, description)" height="250px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDescMed('medium')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputTypeNameDescLarge('large')}>
+  <Story name="Large (+ name, description)" height="320px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputTypeNameDescLarge('large')
+  }</Story>
+</Preview>
+
+<Preview mdxSource={inputsWithIcons()}>
+  <Story name="With Icons" height="320px" parameters={{
+    design: figmaConfig('1%3A24')
+  }}>{
+    inputsWithIcons()
+  }</Story>
+</Preview>

@@ -1,0 +1,52 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Layouts/Tabs" />
+
+# Tabs
+
+<Preview>
+  <Story name="Tab" height="200px" parameters={{
+    design: figmaConfig('933%3A1')
+  }}>{`
+    <div>
+      <div class="tabs">
+        <ul>
+          <li><a>Pictures</a></li>
+          <li class="is-active"><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+      <div class="tabs-content">
+        <div class="tabs-panel"> Pictures content</div>
+        <div class="tabs-panel is-active"> Music content</div>
+        <div class="tabs-panel"> Videos content</div>
+        <div class="tabs-panel"> Documents content</div>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Box Tab" height="200px" parameters={{
+    design: figmaConfig('933%3A1')
+  }}>{`
+    <div>
+      <div class="tabs is-boxed">
+        <ul>
+          <li><a>Pictures</a></li>
+          <li class="is-active"><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+      <div class="tabs-content is-boxed">
+        <div class="tabs-panel"> Pictures content</div>
+        <div class="tabs-panel is-active"> Music content</div>
+        <div class="tabs-panel"> Videos content</div>
+        <div class="tabs-panel"> Documents content</div>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
