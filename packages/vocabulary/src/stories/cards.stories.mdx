@@ -7,11 +7,11 @@ export const content = `<div class="content">
             Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
           </div>`
 
-export const cardWithButton = (width, image_size, orientation) => `<div style="width: ${width};">
+export const cardWithButton = (width, image_size, orientation) => `<div style="width: ${width}px;">
   <article class="card entry-post ${orientation}">
     <header class="card-image">
       <figure class="image is-${image_size}">
-        <img src="http://placekitten.com/700/392" alt="Header image">
+        <img src="https://picsum.photos/id/433/700/392" alt="Header image">
       </figure>
     </header>
     <div class="card-content with-button">
@@ -43,13 +43,12 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
   `}</Story>
 </Preview>
 
-export const postVideo = (width,image_size,orientation) => `<div 
-style="width: ${width}px;">
+export const postVideo = (width,image_size,orientation) => `<div style="width: ${width}px;">
       <article class="card entry-post entry-video ${orientation} no-border">
         <header class="card-image">
           <a href="#">
             <figure class="image is-${image_size}">
-              <img src="http://placekitten.com/700/392" alt="Header image">
+              <img src="https://picsum.photos/id/433/700/392" alt="Header image">
             </figure>
           </a>
         </header>
@@ -65,7 +64,7 @@ style="width: ${width}px;">
     design: figmaConfig('776%3A86')
   }}>{`
     <div>
-    ${postVideo('400px','4by3','vertical')}
+    ${postVideo(400,'4by3','vertical')}
     </div>
   `}</Story>
 </Preview>
@@ -75,7 +74,7 @@ style="width: ${width}px;">
     design: figmaConfig('776%3A86')
   }}>{`
     <div>
-    ${postVideo('600px','4by3','horizontal')}
+    ${postVideo(600,'4by3','horizontal')}
     </div>
   `}</Story>
 </Preview>
@@ -105,7 +104,7 @@ style="width: ${width}px;">
 </Preview>
 
 
-export const postEvent = (width) => `<div 
+export const postEvent = (width) => `<div
 style="width: ${width}px;">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
