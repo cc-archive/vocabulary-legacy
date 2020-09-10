@@ -109,6 +109,7 @@ $button-family: $family-secondary;
 
 		&:hover {
 			background-color: $color-brighter-gold;
+			border-color: $color-brighter-gold;
 			color: $color-black;
 			text-decoration: none;
 		}
