@@ -42,7 +42,29 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 - [@creativecommons/fonts](packages/fonts) - A collection of typefaces and icon fonts
 - [@creativecommons/vue-vocabulary](packages/vue-vocabulary) - Vue component library powered by the main css library
 
-Packages are located in the `/packages` directory. Each package can be developed individually by entering its directory and following the individual `README.md` instructions, or dependencies can be managed for _all_ packages by running `npm install` in the repository root, followed by `npm run setup`.
+Packages are located in the `/packages` directory.
+
+## Installation
+
+You would need to have [nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/)/[yarn](https://yarnpkg.com/) installed.
+
+To run this repository locally:
+
+```bash
+npm install
+npm run setup
+npm run build
+npm run storybook
+```
+
+To run an individual package (say, fonts):
+
+```bash
+cd packages/fonts
+npm install
+npm run build
+npm run storybook
+```
 
 ## Using
 
