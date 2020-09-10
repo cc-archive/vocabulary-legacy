@@ -2,7 +2,7 @@
   <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
     <img
       alt="Vocabulary logo"
-      src="readme_assets/vocabulary_logo.svg?sanitize=true"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="40px"/>
   </a>
 </p>
