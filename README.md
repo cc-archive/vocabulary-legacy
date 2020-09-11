@@ -53,11 +53,15 @@ To use Vocabulary in your projects, refer to [this document](https://cc-vocabula
 To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).
 
 ## Local run
-To run locally ,follow these steps
--`npm install`
--`npm run setup`
--`npm run build`
--`npm run storybook`
+To run locally ,follow these steps:
+
+`npm install`
+
+`npm run setup`
+
+`npm run build`
+
+`npm run storybook`
 
 
 ## Versioning
