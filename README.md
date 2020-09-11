@@ -54,10 +54,10 @@ To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netl
 
 ## Local run
 To run locally ,follow these steps
-`npm install`
-`npm run setup'
-'npm run build`
-`npm run storybook`
+-`npm install`
+-`npm run setup`
+-`npm run build`
+-`npm run storybook`
 
 
 ## Versioning
