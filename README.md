@@ -52,6 +52,14 @@ To use Vocabulary in your projects, refer to [this document](https://cc-vocabula
 
 To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).
 
+## Local run
+To run locally ,follow these steps
+`npm install`
+`npm run setup'
+'npm run build`
+`npm run storybook`
+
+
 ## Versioning
 
 Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.7.1` is the first release in July 2020, while `2020.7.2` is the second.
