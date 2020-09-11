@@ -104,11 +104,12 @@ $button-family: $family-secondary;
 
 	&.donate {
 		background-color: $color-gold;
-		border: none;
+		border-color: $color-gold;
 		color: $color-black;
 
 		&:hover {
 			background-color: $color-brighter-gold;
+			border-color: $color-brighter-gold;
 			color: $color-black;
 			text-decoration: none;
 		}
