@@ -9,7 +9,7 @@
     "test:snapshot": "jest -c tests/snapshot/jest.config.js",
     "build": "webpack --mode production",
     "watch": "npm run build -- --watch --progress",
-    "storybook": "start-storybook --ci -s ./src/assets -p 8080 --quiet",
+    "storybook": "start-storybook --ci -s ./src/assets -p 8081 --quiet",
     "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
