@@ -46,7 +46,7 @@ Packages are located in the `/packages` directory.
 
 ## Installation
 
-You would need to have [nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
 To run the storybooks for all packages in this repository:
 
