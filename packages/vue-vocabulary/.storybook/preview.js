@@ -1,7 +1,7 @@
 import { addDecorator, addParameters } from '@storybook/vue'
 
 import { withDesign } from 'storybook-addon-designs'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-controls'
 
 import i18n from '@/i18n'
 
