@@ -3,25 +3,17 @@ import { sizes, theme } from '@/utils/values'
 import { addDescription } from '@/utils/addDescription'
 
 export default {
-  title: 'Elements/Button',
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'You can customize the size of buttons with the .big, .small and .tiny classes.'
-      }
-    }
-  },
+  title: "Elements/Button",
   component: Button,
   argTypes: {
     size: {
-      control: { type: 'select', options: sizes }
+      control: { type: "select", options: sizes },
     },
     theme: {
-      control: { type: 'select', options: theme }
-    }
-  }
-}
+      control: { type: "select", options: theme },
+    },
+  },
+};
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
