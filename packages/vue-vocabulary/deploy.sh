@@ -13,7 +13,7 @@ trap '_es=${?};
 npm run build
 rm dist/demo.html
 cp package.json dist/
-cp README.md dist/
+cp ../../README.md dist/
 cp LICENSE dist/
 
 cd dist
