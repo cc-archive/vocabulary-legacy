@@ -23,7 +23,7 @@
     "@vue/babel-preset-jsx": "^1.1.2",
     "core-js": "^3.4.4",
     "lodash": "^4.17.20",
-    "twemoji": "^12.1.6",
+    "twemoji": "^13.0.1",
     "vue": "^2.6.10",
     "vue-i18n": "^8.20.0"
   },
