@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    './meta/*.stories.mdx',
-    '../src/stories/*.stories.mdx'
+    './meta/*.stories.*',
+    '../src/stories/*.stories.*'
   ],
   addons: [
     {
@@ -10,9 +10,6 @@ module.exports = {
         renderTarget: 'tab'
       }
     },
-    '@storybook/addon-knobs',
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-viewport',
-    '@storybook/addon-docs'
+    '@storybook/addon-essentials',
   ]
 }
