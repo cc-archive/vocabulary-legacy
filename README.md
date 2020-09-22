@@ -2,7 +2,7 @@
   <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
     <img
       alt="Vocabulary logo"
-      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/packages/vocabulary/readme_assets/vocabulary_logo.svg?sanitize=true"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="40px"/>
   </a>
 </p>
@@ -38,11 +38,33 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 
 `vocabulary` is a monorepo containing three packages:
 
-- [@creativecommons/vocabulary](packages/vocabulary) - The main css component library
+- [@creativecommons/vocabulary](packages/vocabulary) - The main CSS component library
 - [@creativecommons/fonts](packages/fonts) - A collection of typefaces and icon fonts
-- [@creativecommons/vue-vocabulary](packages/vue-vocabulary) - Vue component library powered by the main css library
+- [@creativecommons/vue-vocabulary](packages/vue-vocabulary) - Vue component library powered by the main CSS library
 
-Packages are located in the `/packages` directory. Each package can be developed individually by entering its directory and following the individual `README.md` instructions, or dependencies can be managed for _all_ packages by running `npm install` in the repository root, followed by `npm run setup`.
+Packages are located in the `/packages` directory.
+
+## Installation
+
+You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+
+To run the storybooks for all packages in this repository:
+
+```bash
+npm install
+npm run setup
+npm run build
+npm run storybook
+```
+
+To run the storybook for an individual package (say, fonts):
+
+```bash
+cd packages/fonts
+npm install
+npm run build
+npm run storybook
+```
 
 ## Using
 
