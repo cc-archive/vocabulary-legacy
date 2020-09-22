@@ -42,7 +42,10 @@ $button-family: $family-secondary;
 		padding: 0 $space-normal;
 		font-size: 0.81rem;
 		text-transform: none;
-		height: 1.81rem;
+    min-height: 1.81rem;
+    height: auto;
+    line-height: normal;
+    white-space: normal;
 		border-radius: 18.75rem;
 		border: 0.125rem solid $color-light-gray;
 		&:hover {
@@ -116,8 +119,12 @@ $button-family: $family-secondary;
 	}
 
 	&.is-text {
-    text-decoration: none;
     @extend .is-paddingless;
+    height: auto !important;
+    line-height: normal;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
 
     &:hover,
     &:active,
