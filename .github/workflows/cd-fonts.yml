@@ -1,9 +1,8 @@
 name: CD for fonts package
 
 on:
-  release:
-    types:
-      - published
+  repository_dispatch:
+    types: [vocabulary-built]
 
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true

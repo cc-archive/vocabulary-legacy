@@ -54,3 +54,11 @@ jobs:
         run: bash deploy.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: username/my-repo
+          event-type: vocabulary-built
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
