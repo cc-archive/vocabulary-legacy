@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vue-vocabulary",
-  "version": "2020.9.1",
+  "version": "2020.9.2",
   "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -13,7 +13,7 @@
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/vocabulary": "^2020.9.1",
+    "@creativecommons/vocabulary": "^2020.9.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
