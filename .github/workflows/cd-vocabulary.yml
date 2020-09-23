@@ -35,7 +35,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
           repository: creativecommons/vocabulary
           event-type: vocabulary-built
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
