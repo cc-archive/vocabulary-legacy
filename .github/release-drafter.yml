@@ -9,6 +9,9 @@ categories:
     label: '✨ goal: improvement'
   - title: 'Bug Fixes'
     label: '🛠 goal: fix'
+# Exclude dependabot PRs from release notes
+exclude-labels:
+  - 'dependencies'
 change-template: '- $TITLE: #$NUMBER by @$AUTHOR'
 version-resolver:
   major:
