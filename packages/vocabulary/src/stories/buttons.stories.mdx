@@ -1,89 +1,111 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
-<Meta title="Elements/Buttons" />
+<Meta title="Elements/Buttons" argTypes={{ label: { control: 'text' } } }/>
 
 # Buttons
 
-export const buttonClass = (classes, el = 'button', href='') => {
- classes = classes ? ` ${classes}` : ''
- return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">Button</${el}>`
+export const buttonClass = (classes, label, el = 'button', href='') => {
+  classes = classes ? `${classes}` : ''
+ return `<${el} ${href ? `href=${href}` : ''} class="button${classes}">${label}</${el}>`
 }
 
-export const buttonDonateClass = (classes, el = 'button', href='') => {
+export const buttonDonateClass = (classes, label, el = 'button', href='') => {
  classes = classes ? ` ${classes}` : ''
  return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate"> 
  <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
- Button</${el}>`
+ ${label}</${el}>`
 }
+
+export const Template = (args) => buttonClass('',args.label)
+export const Template1 = (args) => buttonDonateClass('big',args.label)
 
 Buttons are created by adding the `.button` class to a `<button>`.
 
-<Preview mdxSource={buttonClass('')}>
+<Preview mdxSource={buttonClass('','BUTTON')}>
   <Story name="MediumButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{
-    buttonClass('')
-  }</Story>
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+  Template.bind({})
+  }
+  </Story>
 </Preview>
 
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
 
-<Preview mdxSource={buttonClass('big')}>
+<Preview mdxSource={buttonClass('big','BUTTON')}>
   <Story name="BigButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{
-    buttonClass('big')
+  }}
+  args={{label: 'BUTTON'}}
+  >
+  {
+    Template.bind({})
   }</Story>
 </Preview>
 
-<Preview mdxSource={buttonClass('small')}>
+<Preview mdxSource={buttonClass('small','BUTTON')}>
   <Story name="SmallButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{
-    buttonClass('small')
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+    Template.bind({})
   }</Story>
 </Preview>
 
-<Preview mdxSource={buttonClass('tiny')}>
+<Preview mdxSource={buttonClass('tiny','BUTTON')}>
   <Story name="TinyButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{
-    buttonClass('tiny')
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+    Template.bind({})
   }</Story>
 </Preview>
 
 You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
 
-<Preview mdxSource={buttonClass('is-primary big')}>
+<Preview mdxSource={buttonClass('is-primary big','BUTTON')}>
   <Story name="ButtonPrimary" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
-  }}>{
-    buttonClass('is-primary big')
+  }}
+  args={{label: 'BUTTON'}}
+  >
+  {
+    Template.bind({})
   }</Story>
 </Preview>
 
 <Preview mdxSource={buttonDonateClass('big')}>
   <Story name="ButtonDonateLarge" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
-  }}>{
-    buttonDonateClass('big')
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+    Template1.bind({})
   }</Story>
 </Preview>
 
 <Preview mdxSource={buttonDonateClass('medium')}>
   <Story name="ButtonDonateMedium" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
-  }}>{
-    buttonDonateClass('medium')
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+    Template1.bind({})
   }</Story>
 </Preview>
 
 <Preview mdxSource={buttonDonateClass('small')}>
   <Story name="ButtonDonateNormal" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
-  }}>{
-    buttonDonateClass('small')
+  }}
+  args={{label: 'BUTTON'}}
+  >{
+    Template1.bind({})
   }</Story>
 </Preview>
 
