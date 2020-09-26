@@ -1,8 +1,9 @@
 name: CD for fonts package
 
 on:
-  repository_dispatch:
-    types: [vocabulary-built]
+  release:
+    types:
+      - published
 
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
@@ -30,6 +31,14 @@ jobs:
         run: bash deploy.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          repository: creativecommons/vocabulary
+          event-type: fonts-built
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
   deploy_gh:
     defaults:

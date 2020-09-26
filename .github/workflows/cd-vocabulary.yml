@@ -1,9 +1,9 @@
 name: CD for vocabulary package
 
 on:
-  release:
-    types:
-      - published
+  repository_dispatch:
+    types: [fonts-built]
+
 
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
