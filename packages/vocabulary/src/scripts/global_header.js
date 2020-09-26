@@ -1,12 +1,9 @@
 import {
   CC_ORG_URL,
-  DONATION_URL,
 
   GLOBAL_HEADER_API_URL,
 
-  DONATION_TITLE,
-  DONATION_DESCRIPTION,
-  DONATION_BUTTON_TEXT,
+  VISIT_SITE_BUTTON_TEXT,
   NAVIGATION_TAB_TEXT
 } from './constants'
 
@@ -41,7 +38,7 @@ class GlobalHeader {
   }
 
   build (data) {
-    const headerSection = h('header', ['global-header-header'], [
+    const headerSection = h('header', ['column'], [
       h('a', ['main-logo'], [
         h('div', ['has-text-white'], [], element => {
           element.innerHTML = this.logomark
@@ -52,23 +49,16 @@ class GlobalHeader {
       })
     ])
 
-    const donateColumn = h('div', ['column', 'is-one-quarter'], [
-      // Donate section
+    const visitSiteColumn = h('div', ['column'], [
+      // Visit CC site section
       h('aside', ['donate-section'], [
-        // Heading
-        h('h5', [], [
-          document.createTextNode(DONATION_TITLE)
-        ]),
-        // Plea
-        h('p', [], [
-          document.createTextNode(DONATION_DESCRIPTION)
-        ]),
         // Button
         h('a', ['button', 'small', 'donate'], [
-          h('i', ['icon', 'cc-letterheart', 'margin-right-small', 'is-size-5', 'padding-top-smaller']),
-          document.createTextNode(DONATION_BUTTON_TEXT)
+          document.createTextNode(VISIT_SITE_BUTTON_TEXT),
+          h('i', ['icon', 'external-link', 'margin-left-small', 'is-size-5', 'padding-top-smaller'])
         ], element => {
-          element.setAttribute('href', DONATION_URL)
+          element.setAttribute('href', CC_ORG_URL)
+          element.setAttribute('target', '_blank')
         })
       ])
     ])
@@ -78,7 +68,7 @@ class GlobalHeader {
       h('nav', ['products'], [
         h('div', ['product-list'], data.map(product => {
           // Product
-          return h('a', ['product-item'], [
+          return h('a', ['column', 'product-item'], [
             // Title
             h('strong', [], [
               document.createTextNode(product.title)
@@ -109,16 +99,14 @@ class GlobalHeader {
           openTab = element
         }),
         // Content
-        h('div', ['global-header-content'], [
-          // Level
-          h('div', ['level'], [
-            h('div', ['level-left'], [
-              headerSection
-            ])
+        h('div', ['columns', 'is-multiline', 'is-mobile', 'global-header-content'], [
+          // header section
+          h('div', ['columns', 'is-multiline', 'global-header-head'], [
+            headerSection,
+            visitSiteColumn
           ]),
           // Main columns
-          h('div', ['columns', 'padding-bottom-normal'], [
-            donateColumn,
+          h('div', ['columns', 'is-multiline', 'global-header-main'], [
             productsColumn
           ])
         ])
