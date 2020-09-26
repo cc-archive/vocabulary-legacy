@@ -37,13 +37,10 @@
           <div class="column is-full">
             <nav aria-label="footerlinks" class="footer-navigation">
               <ul class="menu">
-                <li><a href="#" class="menu-item">Item 1</a></li>
-                <li><a href="#" class="menu-item">Item 2</a></li>
-                <li><a href="#" class="menu-item">Item 3</a></li>
-                <li><a href="#" class="menu-item">Item 4</a></li>
-                <li><a href="#" class="menu-item">Item 5</a></li>
-                <li><a href="#" class="menu-item">Item 6</a></li>
-                <li><a href="#" class="menu-item">Item 7</a></li>
+                <li><a href="#" class="menu-item">Blog</a></li>
+                <li><a href="#" class="menu-item">Community Team</a></li>
+                <li><a href="#" class="menu-item">Project List</a></li>
+                <li><a href="#" class="menu-item">Archives</a></li>
               </ul>
             </nav>
           </div>
@@ -97,4 +94,4 @@ import '@creativecommons/vocabulary/css/vocabulary.css'
 export default {
     name: 'Footer',
 }
-</script>    
+</script>
