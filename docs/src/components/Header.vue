@@ -3,12 +3,10 @@
       <nav class="navbar ">
         <div class="navbar-brand">
           <a class="has-text-black">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 212 40">
-                <use href="logos/products/vocabulary.svg#vocabulary"></use>
-            </svg></a>
+            <img
+              alt="Vocabulary logo"
+              src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"/>
+            </a>
           <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -29,7 +27,7 @@
             <a class="navbar-item">
               About
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="blank">
                 <i class="icon github"></i>
             </a>    
           </div>
