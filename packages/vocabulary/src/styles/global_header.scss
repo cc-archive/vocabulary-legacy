@@ -17,10 +17,11 @@
 	}
 	.open-tab {
 		position: absolute;
-		padding: 0.5rem 1rem;
+		padding: $space-big $space-normal $space-bigger;
 		right: 0;
-		bottom: -2rem;
-		background-color: $color-black;
+		bottom: -3.3rem;
+		height: 3.3rem;
+		background-color: $black;
 		color: $white;
 		border-radius: 0 0 0.25rem 0.25rem;
 	}
@@ -129,6 +130,9 @@
 	}
 
 	@include desktop() {
+		.open-tab {
+			right: 5%;
+		}
 		.global-header-content {
 			display: grid;
 			grid-gap: $space-normal;

@@ -122,11 +122,11 @@ $navbar-breakpoint: 768px;
   
     @include tablet() {
       flex-direction: column;
-      padding: $space-bigger $space-normal;
+      padding: $space-xl $space-normal 0;
       background-color: $white;
       &.is-active {
         background-color: $white;
-      }
+      } 
       .navbar-brand {
         background-color: $white;
         .logo {
@@ -176,9 +176,9 @@ $navbar-breakpoint: 768px;
     @include desktop() {
       display: grid;
       grid-template-columns: auto 1fr;
-      padding: $space-bigger  $space-larger;     
+      padding: $space-big $space-larger;     
       .navbar-brand {
-        padding-top: $space-bigger;
+        padding-top: $space-larger;
       }
       .navbar-menu {
         .navbar-start {
@@ -195,7 +195,8 @@ $navbar-breakpoint: 768px;
         }
         .navbar-end { 
           position: static;
-          top: 0;    
+          top: 0;
+          padding-top: $space-normal;    
         }     
       }
     }
