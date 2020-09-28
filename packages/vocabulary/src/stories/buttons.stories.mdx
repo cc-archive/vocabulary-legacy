@@ -19,11 +19,11 @@ export const buttonDonateClass = (classes, label, el = 'button', href='') => {
 
 Buttons are created by adding the `.button` class to a `<button>`.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('','BUTTON')}>
   <Story name="MediumButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
-  args={{label: 'BUTTON'}}
+  args={{label:'BUTTON'}}
   >
   {args => buttonClass('',args.label)}
   </Story>
@@ -31,7 +31,7 @@ Buttons are created by adding the `.button` class to a `<button>`.
 
 You can customize the size of buttons with the `.big`, `.small` and `.tiny` classes.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('big','BUTTON')}>
   <Story name="BigButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -41,7 +41,7 @@ You can customize the size of buttons with the `.big`, `.small` and `.tiny` clas
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('small','BUTTON')}>
   <Story name="SmallButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -49,7 +49,7 @@ You can customize the size of buttons with the `.big`, `.small` and `.tiny` clas
   >{args => buttonClass('small',args.label)}</Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('tiny','BUTTON')}>
   <Story name="TinyButton" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -60,7 +60,7 @@ You can customize the size of buttons with the `.big`, `.small` and `.tiny` clas
 
 You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-primary big','BUTTON')}>
   <Story name="ButtonPrimary" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -70,7 +70,7 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('big','BUTTON')}>
   <Story name="ButtonDonateLarge" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}
@@ -79,7 +79,7 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonDonateClass('medium','BUTTON')}>
   <Story name="ButtonDonateMedium" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}
@@ -88,7 +88,7 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonDonateClass('small','BUTTON')}>
   <Story name="ButtonDonateNormal" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}
@@ -99,7 +99,7 @@ You can also combine other classes such as `.is-primary` and `.donate` with the 
 
 Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-success','BUTTON')}>
   <Story name="ButtonSuccess" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -108,7 +108,7 @@ Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-wa
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-info','BUTTON')}>
   <Story name="ButtonInfo" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -117,7 +117,7 @@ Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-wa
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-warning','BUTTON')}>
   <Story name="ButtonWarning" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -126,7 +126,7 @@ Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-wa
   </Story>
 </Canvas>
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-danger','BUTTON')}>
   <Story name="ButtonError" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
@@ -137,7 +137,7 @@ Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-wa
 
 The `.tag` class is used to render a tag name.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('tag','BUTTON')}>
   <Story name="Tag" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}
@@ -159,7 +159,7 @@ The `.tag` class is used to render a tag name.
 
 You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('is-text','BUTTON')}>
   <Story name="Text" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}
@@ -171,7 +171,7 @@ You can use the `.is-text` to have a button looking more like a link, with no bo
 
 Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
 
-<Canvas>
+<Canvas mdxSource={buttonClass('small','BUTTON','a','https://creativecommons.org')}>
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}
