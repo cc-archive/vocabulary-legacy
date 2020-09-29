@@ -16,8 +16,7 @@ export const blackText = (content) => `<div class="has-text-black">${content}</d
 
 export const whiteText = (content) => `<div class="has-text-white">${content}</div>`
 
-export const header = (color) => 
-    `<header>
+export const header = (color) => `<header>
       <nav class="navbar is-default is-active">
         <div class="navbar-brand">
           <a class="has-text-black">
@@ -103,4 +102,3 @@ export const header = (color) =>
       </nav>
     </header>
     <div style="background-color: ${color}; height: 200px;"></div>`
-
