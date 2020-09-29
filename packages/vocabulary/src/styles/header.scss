@@ -42,10 +42,12 @@ $navbar-breakpoint: $tablet;
           text-transform: none;
           color: $color-tomato;
           background-color: $color-light-error;
+          border-color: $color-light-error;
           line-height: 1.25;
           &:hover {
             color: $color-white;
             background-color: $color-tomato;
+            border-color: $color-tomato;
           }
         }
       }
