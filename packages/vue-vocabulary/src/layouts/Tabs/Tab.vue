@@ -3,35 +3,32 @@
     <!-- @slot Tab goes here -->
     <slot name="tab"/>
     <!-- @slot Content goes here -->
-    <slot/>
+    <slot default />
   </div>
 </template>
 
 <script>
   export default {
     name: 'Tab',
-    inject: [
-      'tabList'
-    ],
+    inject: ['tabList'],
     props: {
       /**
-       * _the text that appears in the tab_
-       *
-       * This option is overridden if the slot `tab` is populated.
+       * The text that appears in the tab.
+       * This option is overridden if the `tab` slot is populated.
        */
       title: {
         type: String
       }
     },
-    data: function () {
+    data () {
       return {
         isActive: false
       }
     },
-    created: function () {
+    created () {
       this.tabList.push(this)
     },
-    beforeDestroy: function () {
+    beforeDestroy () {
       const index = this.tabList.indexOf(this)
       if (index >= 0) {
         this.tabList.splice(index, 1)
