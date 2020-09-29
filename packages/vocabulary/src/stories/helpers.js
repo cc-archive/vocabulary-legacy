@@ -62,17 +62,31 @@ export const header = (color) =>
           <div class="tabs-nav">
             <div class="tabs">
               <ul>
-                <li class="is-active"><a>Menu</a></li>
-                <li><a>Explore Creative Commons</a></li>
+                <li class="menu"><a>Menu</a>
+                </li>
+                <li class="explore-tab is-active"><a>Explore Creative Commons</a></li>
               </ul>
             </div>
             <div class="tabs-content">
-              <div class="tabs-panel is-active">
+              <div class="tabs-panel ">
+                <div class="navbar-end">
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
+                    <div class="navbar-dropdown">
+                      <a class="navbar-item">Item 1</a>
+                      <a class="navbar-item">Item 2</a>
+                      <a class="navbar-item">Item 3</a>
+                    </div>
+                  </div>
+                  <a class="navbar-item">
+                    No dropdown
+                  </a>
+                </div>
               </div>
-              <div class="tabs-panel"></div>
+              <div class="tabs-panel explore is-active"></div>
             </div> 
           </div>
-          <div class="navbar-end">
+          <div class="navbar-end main-nav">
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
               <div class="navbar-dropdown">

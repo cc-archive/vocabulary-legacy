@@ -117,7 +117,20 @@ class GlobalHeader {
       mainContainer.classList.toggle('is-active')
     })
 
-    document.body.prepend(mainContainer)
+    let mobileView = window.matchMedia("(max-width: 768px)")
+    let exploreTab = document.querySelector(".explore-tab")
+    let explorePanel = document.querySelector(".explore")
+
+    exploreTab.addEventListener('click', event => {
+      event.preventDefault()
+      mainContainer.classList.toggle('is-active')
+    })
+    
+    if (mobileView.matches) { // If media query matches 
+      explorePanel.append(mainContainer) 
+    } else {
+      document.body.prepend(mainContainer)
+    }
     this.element = mainContainer
   }
 
