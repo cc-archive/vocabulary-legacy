@@ -11,11 +11,12 @@
 	&.is-active {
 		.global-header-content {
 			max-height: 60rem;
-			padding-top: $space-big;
+			padding-top: $space-small;
 			padding-bottom: $space-big;
 		}
 	}
 	.open-tab {
+		display: none;
 		position: absolute;
 		padding: $space-big $space-normal $space-bigger;
 		right: 0;
@@ -97,6 +98,14 @@
 		}
 	}
 	@include tablet() {
+		.open-tab {
+			display: block;
+		}
+		&.is-active {
+			.global-header-content {
+				padding-top: $space-big;
+			}
+		}
 		.global-header-content {
 			display: flex;
 			flex-direction: row;

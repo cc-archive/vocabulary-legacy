@@ -6,7 +6,7 @@ $navbar-item-hover-background-color: transparent;
 
 $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
-$navbar-breakpoint: 768px;
+$navbar-breakpoint: $tablet;
 
 @import "bulma/sass/components/navbar.sass";
 
@@ -73,6 +73,9 @@ $navbar-breakpoint: 768px;
         }
       }
       .navbar-end {
+        &.main-nav {
+          display: none;
+        }
         padding: 0 $space-small;
         .navbar-dropdown .navbar-item {
           text-transform: none;
@@ -157,7 +160,13 @@ $navbar-breakpoint: 768px;
         .tabs-nav {
           display: none;
         }
+        .navbar-end .main-nav {
+          display: block;
+        }
         .navbar-end { 
+          &.main-nav {
+            display: flex;
+          }
           justify-content: flex-start; 
           position: relative;
           top: -$space-bigger;
