@@ -1,7 +1,6 @@
 <template>
     
-<div
-style="width: 350px;">
+<div style="width: 350px;">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
           <div class="card-date">

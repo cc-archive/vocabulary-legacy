@@ -25,7 +25,7 @@
               Development
             </a>
             <a class="navbar-item">
-              About
+              Getting Started
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="blank">
                 <i class="icon github"></i>

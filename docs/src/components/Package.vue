@@ -15,6 +15,12 @@
               <button class="button tag">JavaScript</button>
               <button class="button tag">CSS</button>
             </div>
+            <div class="external-links">
+              <button class="button is-text tiny">
+                <i class="icon external-link"></i>
+                <span class="link-content">npmjs</span>
+              </button>
+            </div>
         </div>
       </article>
     </div>

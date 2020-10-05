@@ -21,6 +21,8 @@
     <SectionTitle title="DEVELOPMENT" content="Have a peak into our development process!"/>
     <SubSectionTitle title="OUR PACKAGES" content="Fonts, Vocabulary & Vue-Vocabulary"/>
     <PackageGroup/>
+    <SectionTitle title="GETTING STARTED" content="How to get started with using vocabulary"/>
+    <br>
     <Footer/>
   </div>
 </template>
