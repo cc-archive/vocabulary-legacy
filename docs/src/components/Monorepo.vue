@@ -8,42 +8,17 @@
     <div class="table-of-progress top-container">
       <ul>
        <Step number=1 name="Better Structure"/>
-        <li class="step">
-          <a class="link">
-            <span class="number is-active">2</span>
-            <span class="name">Weak Association</span>
-          </a>
-        </li>
-        <li class="step">
-          <a class="link">
-            <span class="number is-active">3</span>
-            <span class="name">Single Source of Truth</span>
-          </a>
-        </li>
+       <Step number=2 name="Weak Association"/>
+       <Step number=3 name="Single Source of Truth"/>
       </ul>
       <br>
     </div>
     <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
-          <li class="step">
-          <a class="link">
-            <span class="number is-active">4</span>
-            <span class="name">Straightforward Release Process</span>
-          </a>
-        </li>
-         <li class="step">
-          <a class="link">
-            <span class="number is-active">5</span>
-            <span class="name">Easier Progress Tracking</span>
-          </a>
-        </li>
-         <li class="step">
-          <a class="link">
-            <span class="number is-active">6</span>
-            <span class="name">Simplified Issue Management</span>
-          </a>
-        </li>
+         <Step number=4 name="Straightforward Release Process"/>
+         <Step number=5 name="Easier Progress Tracking"/>
+         <Step number=6 name="Simplified Issue Management"/>
         </ul>
       </div>
     </div>

@@ -1,4 +1,5 @@
  <template>
+    <div style="padding:10px;">
     <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">
@@ -16,6 +17,7 @@
             </div>
         </div>
       </article>
+    </div>
     </div>
 </template>
 
