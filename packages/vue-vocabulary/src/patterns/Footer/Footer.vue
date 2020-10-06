@@ -5,10 +5,11 @@
       <div class="column is-one-quarter">
         <a href="https://creativecommons.org" aria-label="home" class="main-logo margin-bottom-bigger">
           <span class="has-text-white">
-            <svg xmlns="http://www.w3.org/2000/svg"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 304 73">
-                <use href="logos/cc/logomark.svg#logomark"></use>
+              <use href="@creativecommons/vocabulary/assets/logos/cc/logomark.svg#logomark"></use>
             </svg>
           </span>
         </a>
@@ -88,7 +89,6 @@
   </div>
 </footer>
 </template>
-
 <script>
   /**
    * ### Footer concludes the page.
