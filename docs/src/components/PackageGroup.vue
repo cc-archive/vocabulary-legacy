@@ -26,6 +26,7 @@
 </style>
 
 <script>
+import '@creativecommons/vocabulary/css/vocabulary.css'
 import Package from './Package'
 
 export default {
