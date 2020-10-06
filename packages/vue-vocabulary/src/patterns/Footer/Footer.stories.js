@@ -5,22 +5,34 @@ export default {
   component: Footer
 }
 
-export const items = [
+const items = [
   {
-    href: 'test1.com',
-    content: 'test1'
+    href: '#',
+    content: 'Item 1'
   },
   {
-    href: 'test1.com',
-    content: 'test2'
+    href: '#',
+    content: 'Item 2'
   },
   {
-    href: 'test1.com',
-    content: 'test3'
+    href: '#',
+    content: 'Item 3'
   },
   {
-    href: 'test1.com',
-    content: 'test4'
+    href: '#',
+    content: 'Item 4'
+  },
+  {
+    href: '#',
+    content: 'Item 5'
+  },
+  {
+    href: '#',
+    content: 'Item 6'
+  },
+  {
+    href: '#',
+    content: 'Item 7'
   }
 ]
 

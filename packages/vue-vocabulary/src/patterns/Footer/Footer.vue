@@ -8,8 +8,9 @@
             <svg xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 304 73">
-  <use href="logos/cc/logomark.svg#logomark"></use>
-</svg></span>
+                <use href="logos/cc/logomark.svg#logomark"></use>
+            </svg>
+          </span>
         </a>
         <div>
           <address class="margin-bottom-normal">Creative Commons<br/>PO Box 1866, Mountain View CA 94042</address>
@@ -45,14 +46,16 @@
         </div>
         <div class="columns">
           <div class="column is-two-thirds">
-            <div class="subscription">
-              <h5 class="b-header">Subscribe to our newsletter</h5>
-              <form class="newsletter">
-                <label for="email" class="is-sr-only">Email to subscribe</label>
-                <input type="text" id="email" class="input" placeholder="Your email">
-                <input type="submit" value="subscribe" class="button small">
-              </form>
-            </div>
+            <slot>
+              <div class="subscription">
+                <h5 class="b-header">Subscribe to our newsletter</h5>
+                <form class="newsletter">
+                  <label for="email" class="is-sr-only">Email to subscribe</label>
+                  <input type="text" id="email" class="input" placeholder="Your email">
+                  <input type="submit" value="subscribe" class="button small">
+                </form>
+              </div>
+            </slot>
             <div class="attribution margin-top-bigger">
               <p class="caption">
                 Except where otherwise
@@ -97,7 +100,7 @@
     name: 'Footer',
     props: {
       customItems: {
-        type: Array,
+        type: Array[Object],
         required: false,
         validator (value) {
           return value.length <= 6
