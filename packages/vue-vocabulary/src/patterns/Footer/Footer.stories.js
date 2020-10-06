@@ -5,7 +5,7 @@ export default {
   component: Footer
 }
 
-const items = [
+const demoLinks = [
   {
     href: '#',
     content: 'Item 1'
@@ -42,8 +42,8 @@ export const Default = () => ({
   components: { Footer },
   template: Template,
   props: {
-    customItems: {
-      default: () => items
+    links: {
+      default: () => demoLinks
     }
   }
 })

@@ -37,8 +37,8 @@
           <div class="column is-full">
             <nav aria-label="footerlinks" class="footer-navigation">
               <ul class="menu">
-                <li v-for="item in customItems" :key="item.content">
-                  <a :href="item.href" :rel="item.rel" :target="item.target" class="menu-item">{{item.content}}</a>
+                <li v-for="link in links" :key="link.content">
+                  <a :href="link.href" :rel="link.rel" :target="link.target" class="menu-item">{{link.content}}</a>
                 </li>
               </ul>
             </nav>
@@ -99,11 +99,11 @@
   export default {
     name: 'Footer',
     props: {
-      customItems: {
+      links: {
         type: Array[Object],
         required: false,
         validator (value) {
-          return value.length <= 6
+          return value.length <= 7
         },
         default: [
           {
