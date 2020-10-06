@@ -38,7 +38,7 @@
             <nav aria-label="footerlinks" class="footer-navigation">
               <ul class="menu">
                 <li v-for="item in customItems" :key="item.content">
-                  <a :href="item.href" class="menu-item">{{item.content}}</a>
+                  <a :href="item.href" :rel="item.rel" :target="item.target" class="menu-item">{{item.content}}</a>
                 </li>
               </ul>
             </nav>
@@ -104,7 +104,25 @@
         required: false,
         validator (value) {
           return value.length <= 6
-        }
+        },
+        default: [
+          {
+            href: "https://creativecommons.org/about/contact/",
+            content: "Contact"
+          },
+          {
+            href: "https://creativecommons.org/privacy/",
+            content: "Privacy"
+          },
+          {
+            href: "https://creativecommons.org/policies/",
+            content: "Policies"
+          },
+          {
+            href: "https://creativecommons.org/terms/",
+            content: "Terms"
+          },
+        ]
       }
     }
   }
