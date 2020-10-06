@@ -1,6 +1,4 @@
 import Footer from './Footer'
-import { sizes, theme } from '@/utils/values'
-import { addDescription } from '@/utils/addDescription'
 
 export default {
   title: 'Patterns/Footer',
