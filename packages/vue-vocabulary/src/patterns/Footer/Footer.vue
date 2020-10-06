@@ -107,21 +107,21 @@
         },
         default: [
           {
-            href: "https://creativecommons.org/about/contact/",
-            content: "Contact"
+            href: 'https://creativecommons.org/about/contact/',
+            content: 'Contact'
           },
           {
-            href: "https://creativecommons.org/privacy/",
-            content: "Privacy"
+            href: 'https://creativecommons.org/privacy/',
+            content: 'Privacy'
           },
           {
-            href: "https://creativecommons.org/policies/",
-            content: "Policies"
+            href: 'https://creativecommons.org/policies/',
+            content: 'Policies'
           },
           {
-            href: "https://creativecommons.org/terms/",
-            content: "Terms"
-          },
+            href: 'https://creativecommons.org/terms/',
+            content: 'Terms'
+          }
         ]
       }
     }
