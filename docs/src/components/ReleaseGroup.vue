@@ -1,28 +1,24 @@
 <template>
-    <div id="release-group">
-        <div v-for="(item,index) in releaseList" :key="index">
-            <Release :releaseItem="item"/>
-        </div>
+    <div>
+        <Carousel :per-page="3">
+            <Slide v-for="(item,index) in releaseList" :key="index">
+                <Release :releaseItem="item"/>
+            </Slide>
+        </Carousel>
     </div>
 </template>
 
-<style scoped>
-#release-group {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-top: 25px;
-}
-</style>
-
 <script>
 import Release from './Release'
+import { Carousel, Slide } from 'vue-carousel';
+import '@creativecommons/vocabulary/css/vocabulary.css'
 
 export default {
     name: 'ReleaseGroup',
     components: {
-        Release
+        Release,
+        Carousel,
+        Slide
     },
     data(){
         return {
