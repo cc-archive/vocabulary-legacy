@@ -1,27 +1,37 @@
 <template>
-    
-<div style="width: 350px;">
+<div id="release-card">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
           <div class="card-date">
-            <span class="month">September</span>
-            <span class="day">05</span>
-            <span class="year">2050</span>
+            <span class="day" style="font-size:32.5px">{{ releaseItem.created_at }}</span>
           </div>
         </header>
         <div class="card-content">
-          <h4 class="card-title"><a href="#">This is a title</a></h4>
+          <h4 class="card-title"><a href="#">{{ releaseItem.name }}</a></h4>
           <div class="content">
-            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+            {{ releaseItem.body }}
           </div>
-          <a href="#" class="read-more">Read more</a>
+          <a :href="releaseItem.html_url" target="blank" class="read-more">Read more</a>
         </div>
       </article>
     </div>
 </template>
 
+<style scoped>
+  #release-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 750px;
+  }
+</style>
+
 <script>
+import '@creativecommons/vocabulary/css/vocabulary.css'
+
 export default {
-    name: 'Release'
+    name: 'Release',
+    props: ['releaseItem']
 }
 </script>

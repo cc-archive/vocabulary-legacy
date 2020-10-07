@@ -1,8 +1,8 @@
 <template>
     <div id="release-group">
-        <Release/>
-        <Release/>
-        <Release/>
+        <div v-for="(item,index) in releaseList" :key="index">
+            <Release :releaseItem="item"/>
+        </div>
     </div>
 </template>
 
@@ -23,6 +23,19 @@ export default {
     name: 'ReleaseGroup',
     components: {
         Release
+    },
+    data(){
+        return {
+            releaseList: null
+        }
+    },
+    created(){
+        fetch('https://api.github.com/repos/creativecommons/vocabulary/releases')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            this.releaseList=data
+        });
     }
 }
 </script>
