@@ -130,8 +130,8 @@ $button-family: $family-secondary;
     &:active,
     &:focus {
       border-color: transparent;
-      box-shadow: none;
       background-color: transparent;
+      box-shadow: none;
     }
     &:focus {
       text-decoration: underline;
