@@ -133,5 +133,8 @@ $button-family: $family-secondary;
       box-shadow: none;
       background-color: transparent;
     }
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
