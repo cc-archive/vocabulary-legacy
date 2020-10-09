@@ -117,17 +117,47 @@ class GlobalHeader {
       mainContainer.classList.toggle('is-active')
     })
 
-    const mobileView = window.matchMedia('(max-width: 768px)')
-    const exploreTab = document.querySelector('.explore-tab')
-    const explorePanel = document.querySelector('.explore')
-    exploreTab.addEventListener('click', event => {
+    // Creates a seperate explore button
+    const exploreButton = h('a', ['explore-button'], [document.createTextNode(NAVIGATION_TAB_TEXT)
+    ], element => {
+      element.setAttribute('href', '#')
+    })
+    exploreButton.addEventListener('click', event => {
       event.preventDefault()
       mainContainer.classList.toggle('is-active')
     })
-    if (mobileView.matches) {
-      explorePanel.append(mainContainer)
-    } else {
+
+    // queries the DOM if default header is used with global header
+    const exploreTab = document.querySelector('.explore-tab')
+    const navbar = document.querySelector('.navbar')
+    const navBarStart = document.querySelector('.navbar-start')
+    const explorePanel = document.querySelector('.explore')
+
+    // Detect mobile view
+    const mobileView = window.matchMedia('(max-width: 768px)')
+
+    function mediaQueryResponse (e) {
+      if (e.matches) {
+        explorePanel.append(mainContainer)
+        exploreTab.addEventListener('click', event => {
+          event.preventDefault()
+          mainContainer.classList.toggle('is-active')
+        })
+      } else {
+        document.body.prepend(mainContainer)
+        navBarStart.append(exploreButton)
+      }
+    }
+
+    // checks if the default header is used with global header
+    if (navbar === null) {
       document.body.prepend(mainContainer)
+      openTab.style.display = 'block'
+    } else {
+      mobileView.addEventListener('change', (e) => {
+        mediaQueryResponse(e)
+      })
+      mediaQueryResponse(mobileView)
     }
     this.element = mainContainer
   }

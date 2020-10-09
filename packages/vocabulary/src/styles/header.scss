@@ -187,21 +187,20 @@ $navbar-breakpoint: $tablet;
     @include desktop() {
       display: grid;
       grid-template-columns: auto 1fr;
-      padding: $space-big $space-larger;     
+      padding: $space-small $space-xxl $space-big $space-xl;     
       .navbar-brand {
         padding-top: $space-larger;
       }
       .navbar-menu {
         .navbar-start {
+          align-items: center;
           position: static;
           top: 0;
           display: grid;
-          grid-template-columns: repeat(7, 1fr);
+          grid-template-columns: repeat(3, auto);
+          grid-gap: $space-normal;
           .locale {
-            grid-column: 4 / span 1;
-          }
-          .donate {
-            grid-column: 5 / span 1;
+            margin-right: 0;
           }
         }
         .navbar-end { 

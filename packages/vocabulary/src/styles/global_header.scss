@@ -1,5 +1,6 @@
 @import "bulma/sass/components/level.sass";
 
+// Global header with explore button
 .cc-global-header {
 	position: relative;
 	background-color: $color-black;
@@ -21,6 +22,7 @@
 		padding: $space-big $space-normal $space-bigger;
 		right: 0;
 		bottom: -3.3rem;
+		width: 6.8rem;
 		height: 3.3rem;
 		background-color: $black;
 		color: $white;
@@ -140,7 +142,7 @@
 
 	@include desktop() {
 		.open-tab {
-			right: 5%;
+			display: none;
 		}
 		.global-header-content {
 			display: grid;
@@ -172,5 +174,25 @@
 				}
 			}
 		}
+	}
+}
+
+// explore button only
+.explore-button {
+	display : none;
+	position: relative;
+	padding: $space-large $space-normal 0;
+	right: 0;
+	top: -1rem;
+	height: 4.5rem;
+	width: 6.8rem;
+	background-color: $black;
+	color: $white;
+	border-radius: 0 0 0.25rem 0.25rem;
+	&:hover {
+		color: $white;
+	}
+	@include desktop() {
+		display: block;
 	}
 }
