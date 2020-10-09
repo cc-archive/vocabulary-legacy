@@ -69,12 +69,12 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {postVideo('600px','4by3','horizontal')}>
+<Preview mdxSource = {postVideo(600,'4by3','horizontal')}>
   <Story name="PostVideoHorizontal" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
     <div>
-    ${postVideo(600,'4by3','horizontal')}
+    ${postVideo(600,'4by3', 'horizontal')}
     </div>
   `}</Story>
 </Preview>
@@ -142,7 +142,7 @@ style="width: ${width}px;">
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {content}>
+<Preview>
   <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
@@ -155,7 +155,9 @@ style="width: ${width}px;">
           </div>
         </header>
         <div class="card-content">
-         ${content.toString()}
+        <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
