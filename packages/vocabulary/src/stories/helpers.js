@@ -54,7 +54,7 @@ export const header = (color) => `<header>
               </div>
             </div>
             <a class="button small donate" href="http://creativecommons.org/donate">
-              <i class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller"></i>
+              <i class="icon heart margin-right-small is-size-7"></i>
               Donate
             </a>
           </div>
