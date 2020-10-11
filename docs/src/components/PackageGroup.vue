@@ -21,7 +21,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        padding-bottom: 20px;
     }
 </style>
 

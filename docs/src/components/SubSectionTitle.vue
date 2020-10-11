@@ -13,11 +13,9 @@
 
 <style scoped>
 #sub-section {
-    margin-left: 35px;
-    margin-right: 35px;
-    padding: 10px;
-
-    width: 100%;
+    margin-left: 37.5px;
+    margin-right: 37.5px;
+    padding-top: 10px;
 }
 </style>
 

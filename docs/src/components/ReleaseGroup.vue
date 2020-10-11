@@ -29,7 +29,6 @@ export default {
         fetch('https://api.github.com/repos/creativecommons/vocabulary/releases')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             this.releaseList=data
         });
     }

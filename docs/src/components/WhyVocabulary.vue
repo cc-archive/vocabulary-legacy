@@ -33,6 +33,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-color: white;
     }
 
     #point-table {

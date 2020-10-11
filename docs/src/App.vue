@@ -1,13 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" style="background-color:#f8f9fd;">
     <Header/>
     <SectionTitle title="THE DESIGN SYSTEM OF CREATIVE COMMONS OPEN SOURCE" content="Design, Build and Develop with Creative Common’s very own design system."/>
-    <div id="sub-section-group">
-      <SubSectionTitle title="OUR MISSION" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>
-       <SubSectionTitle title="INSPIRATION" content="This is what inspires us & This is what keeps us going"/>
-    </div>
+    <br>
+    <SubSectionTitle title="OUR MISSION AND INSPIRATION" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>  
     <WhyVocabulary/>
     <SectionTitle title="WHAT'S NEW" content="Catch up to our latest releases!"/>
+    <br>
     <ReleaseGroup/>
     <br>
     <SectionTitle title="DEVELOPMENT" content="Have a peak into our development process!"/>
@@ -15,6 +14,7 @@
     <PackageGroup/>
     <Monorepo/>
     <SectionTitle title="ABOUT" content="Know more about Vocabulary and the team behind it!"/>
+    <PostStatisticGroup/>   
     <Footer/>
   </div>
 </template>
@@ -25,6 +25,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 25px;
+  padding-bottom: 25px;
 
   justify-content: space-evenly;
 }
@@ -39,6 +40,7 @@ import SectionTitle from './components/SectionTitle'
 import SubSectionTitle from './components/SubSectionTitle'
 import WhyVocabulary from './components/WhyVocabulary'
 import ReleaseGroup from './components/ReleaseGroup'
+import PostStatisticGroup from './components/PostStatisticGroup'
 
 export default {
   name: 'App',
@@ -51,6 +53,7 @@ export default {
     WhyVocabulary,
     Footer,
     ReleaseGroup,
+    PostStatisticGroup
   }
 }
 </script>
