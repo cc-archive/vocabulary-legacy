@@ -16,6 +16,8 @@
     margin-left: 35px;
     margin-right: 35px;
     padding: 10px;
+
+    width: 100%;
 }
 </style>
 

@@ -1,21 +1,18 @@
 <template>
   <div id="app">
     <Header/>
-    <SectionTitle title="VOCABULARY" content="Design, Build and Develop with Creative Common’s very own design system."/>
+    <SectionTitle title="THE DESIGN SYSTEM OF CREATIVE COMMONS OPEN SOURCE" content="Design, Build and Develop with Creative Common’s very own design system."/>
     <div id="sub-section-group">
-      <SubSectionTitle title="INTENT" content="To unite the web facing Creative Commons"/>
-      <SubSectionTitle title="OUR MISSION" content="Provide a cohesive design system & component library under the banner of Creative Commons Open Source."/>
+      <SubSectionTitle title="OUR GOAL, MISSION AND INTENT" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>
     </div>
     <WhyVocabulary/>
     <SectionTitle title="VOCABULARY IN NUMBERS" content="How does Vocabulary stack up?"/>
     <br> <!--Content to be added here, todo-->
     <SectionTitle title="WHAT'S NEW" content="Catch up to our latest releases!"/>
     <ReleaseGroup/>
-    <Pagination/>
     <SectionTitle title="DESIGN" content="Design, Build and Develop with Creative Common’s very own design system!"/>
     <div id="sub-section-group">
-      <SubSectionTitle title="INSPIRATION" content="This is what inspires us"/>
-      <SubSectionTitle title="HOW WE DO IT" content="This is how we go about doing it "/>
+      <SubSectionTitle title="INSPIRATION & HOW WE DO IT" content="This is what inspires us & This is what keeps us going"/>
     </div>
     <Monorepo/>
     <SectionTitle title="DEVELOPMENT" content="Have a peak into our development process!"/>
@@ -45,7 +42,6 @@ import SectionTitle from './components/SectionTitle'
 import SubSectionTitle from './components/SubSectionTitle'
 import WhyVocabulary from './components/WhyVocabulary'
 import ReleaseGroup from './components/ReleaseGroup'
-import Pagination from './components/Pagination'
 
 export default {
   name: 'App',
@@ -58,7 +54,6 @@ export default {
     WhyVocabulary,
     Footer,
     ReleaseGroup,
-    Pagination
   }
 }
 </script>

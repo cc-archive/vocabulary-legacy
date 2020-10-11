@@ -1,5 +1,6 @@
 <template>
-<header>
+<div>
+  <header>
       <nav class="navbar ">
         <div class="navbar-brand">
           <a class="has-text-black">
@@ -24,8 +25,8 @@
             <a class="navbar-item">
               Development
             </a>
-            <a class="navbar-item">
-              Getting Started
+             <a class="navbar-item">
+              About
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="blank">
                 <i class="icon github"></i>
@@ -34,6 +35,7 @@
         </div>
       </nav>
     </header>
+  </div>
 </template>
 
 <script>
