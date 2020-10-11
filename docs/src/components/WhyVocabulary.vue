@@ -6,16 +6,16 @@
     <div id="point-table">    
     <div class="table-of-progress top-container">
       <ul>
-       <Step number=1 name="Responsive"/>
-       <Step number=2 name="Ease Of Use"/>
+       <Step number=1 name="Responsive Components"/>
+       <Step number=2 name="Easy to Use & Adapt"/>
       </ul>
       <br>
     </div>
     <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
-         <Step number=3 name="Extensive Docs"/>
-         <Step number=4 name="Active Support"/>
+         <Step number=3 name="Extensive Documentation"/>
+         <Step number=4 name="Active Community Support"/>
         </ul>
       </div>
     </div>

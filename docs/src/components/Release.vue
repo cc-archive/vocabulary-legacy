@@ -2,7 +2,7 @@
       <article class="card entry-post entry-event horizontal" style="height: 310px; margin: 15px;">
         <header class="card-header">
           <div class="card-date">
-            <span class="day" style="font-size:20px">{{ releaseItem.created_at }}</span>
+            <span class="day" style="font-size:15px">{{ releaseItem.created_at }}</span>
           </div>
         </header>
         <div class="card-content">

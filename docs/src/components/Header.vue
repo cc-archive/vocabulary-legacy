@@ -20,10 +20,10 @@
               What's new
             </a>
             <a class="navbar-item">
-              Design
+              Development
             </a>
             <a class="navbar-item">
-              Development
+              Getting Started
             </a>
              <a class="navbar-item">
               About
