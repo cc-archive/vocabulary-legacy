@@ -26,6 +26,7 @@
     "storybook": "lerna run storybook --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "storybook-dark-mode": "^1.0.3"
   }
 }
