@@ -1,7 +1,8 @@
 import { addons } from '@storybook/addons'
 
-import theme from './theme'
+import { themes } from '@storybook/theming'
+import 'storybook-dark-mode/register'
 
 addons.setConfig({
-  theme
+  theme:themes.light
 })
