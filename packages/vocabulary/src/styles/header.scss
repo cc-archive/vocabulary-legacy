@@ -127,7 +127,7 @@ $navbar-breakpoint: $tablet;
   
     @include tablet() {
       flex-direction: column;
-      padding: $space-xl $space-normal 0;
+      padding: $space-normal $space-normal 0;
       background-color: $white;
       &.is-active {
         background-color: $white;
@@ -196,9 +196,7 @@ $navbar-breakpoint: $tablet;
           align-items: center;
           position: static;
           top: 0;
-          display: grid;
-          grid-template-columns: repeat(3, auto);
-          grid-gap: $space-normal;
+          column-gap: $space-normal;
           .locale {
             margin-right: 0;
           }
