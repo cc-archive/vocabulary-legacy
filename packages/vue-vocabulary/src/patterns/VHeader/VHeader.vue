@@ -6,12 +6,12 @@
 
 <script>
   /**
-   * ### Header opens the page.
+   * ### VHeader opens the page.
    *
    * The header displays information about the site such as its branding and
    * name as well as navigation links.
    */
   export default {
-    name: 'Header'
+    name: 'VHeader'
   }
 </script>
