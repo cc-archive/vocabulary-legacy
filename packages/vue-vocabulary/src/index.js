@@ -16,7 +16,7 @@ import Button from './elements/Button/Button'
 import DonateButton from './elements/DonateButton/DonateButton'
 
 import Footer from './patterns/Footer/Footer'
-import Header from './patterns/Header/Header'
+import VHeader from './patterns/VHeader/VHeader'
 import Locale from './patterns/Locale/Locale'
 
 // Export individual components
@@ -32,7 +32,7 @@ export {
   DonateButton,
 
   Footer,
-  Header,
+  VHeader,
   Locale
 }
 
@@ -50,7 +50,7 @@ export default {
     Vue.component('DonateButton', DonateButton)
 
     Vue.component('Footer', Footer)
-    Vue.component('Header', Header)
+    Vue.component('VHeader', VHeader)
     Vue.component('Locale', Locale)
   }
 }
