@@ -53,4 +53,12 @@
   }
 </script>
 <style lang="scss" scoped>
+.logo {
+  color: black;
+  svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
 </style>
