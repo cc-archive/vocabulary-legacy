@@ -49,6 +49,12 @@
     components: {
       MenuItem,
       MenuDropdown
+    },
+    data: () => ({ isBurgerMenuActive: false }),
+    methods: {
+      toggleBurgerActive () {
+        this.isBurgerMenuActive = !this.isBurgerMenuActive
+      }
     }
   }
 </script>
