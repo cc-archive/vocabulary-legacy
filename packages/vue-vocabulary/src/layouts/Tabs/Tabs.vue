@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="tabs">
+    <div :class="tabsClass">
       <ul>
         <li
           v-for="(tab, index) in tabList"
@@ -16,7 +16,7 @@
         </li>
       </ul>
     </div>
-    <div class="tabs-content">
+    <div :class="tabsContentClass">
       <SlotRenderer
         v-for="(tab, index) in tabList"
         :key="index"
@@ -36,7 +36,7 @@
 
   export default {
     name: 'Tabs',
-    provide: function () {
+    provide () {
       return {
         tabList: this.tabList
       }
@@ -45,9 +45,12 @@
       SlotRenderer
     },
     props: {
+      boxed: {
+        type: Boolean,
+        default: false
+      },
       /**
-       * _the index of the tab which should be active when initialised_
-       *
+       * The index of the tab which should be active when initialised.
        * Indices start at zero.
        */
       initialActiveTabIndex: {
@@ -55,25 +58,40 @@
         default: 0
       }
     },
-    data: function () {
+    data () {
       return {
         tabList: [],
         activeTabIndex: this.initialActiveTabIndex
       }
     },
     computed: {
-      activeTab: function () {
+      activeTab () {
         return this.tabList[this.activeTabIndex]
+      },
+      boxedClass () {
+        return { 'is-boxed': this.boxed }
+      },
+      tabsClass () {
+        return {
+          tabs: true,
+          ...this.boxedClass
+        }
+      },
+      tabsContentClass () {
+        return {
+          'tabs-content': true,
+          ...this.boxedClass
+        }
       }
     },
     methods: {
-      changeTab: function (index) {
+      changeTab (index) {
         this.tabList[this.activeTabIndex].isActive = false
         this.activeTabIndex = index
         this.tabList[this.activeTabIndex].isActive = true
       }
     },
-    mounted: function () {
+    mounted () {
       this.tabList[this.activeTabIndex].isActive = true
     }
   }

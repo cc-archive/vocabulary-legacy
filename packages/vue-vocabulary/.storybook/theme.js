@@ -1,33 +1,33 @@
-import { create } from '@storybook/theming'
+import { create } from "@storybook/theming";
 
-import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg'
+import vocabularySvg from "@creativecommons/vocabulary/assets/logos/products/vocabulary.svg";
 
 export default create({
   // Inherit
-  base: 'light',
+  base: "light",
 
   // Color scheme
-  colorPrimary: 'rgb(0, 0, 0)', // No known usage
-  colorSecondary: 'rgb(251, 119, 41)', // Accent color
+  colorPrimary: "rgb(0, 0, 0)", // No known usage
+  colorSecondary: "rgb(251, 119, 41)", // Accent color
 
   // UI colors
-  appBg: 'rgb(248, 249, 250)',
+  appBg: "rgb(248, 249, 250)",
 
   // Rows of controls
-  barTextColor: 'rgb(73, 80, 87)',
-  barSelectedColor: 'rgb(251, 119, 41)',
-  barBg: 'rgb(255, 255, 255)',
+  barTextColor: "rgb(73, 80, 87)",
+  barSelectedColor: "rgb(251, 119, 41)",
+  barBg: "rgb(255, 255, 255)",
 
   // Typography
   fontBase: '"Source Sans Pro", sans-serif',
   fontCode: '"Fira Code", monospace',
 
   // Text colors
-  textColor: 'rgb(0, 0, 0)',
-  textInverseColor: 'rgb(255, 255, 255)',
+  textColor: "rgb(0, 0, 0)",
+  textInverseColor: "rgb(255, 255, 255)",
 
   // Branding
-  brandTitle: 'Vue Vocabulary',
-  brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary',
-  brandImage: vocabularySvg
-})
+  brandTitle: "Vue Vocabulary",
+  brandUrl: "https://opensource.creativecommons.org/cc-vue-vocabulary",
+  brandImage: vocabularySvg,
+});
