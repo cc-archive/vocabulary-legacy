@@ -1,34 +1,34 @@
 <template>
   <header class="vocab header">
-    <nav :aria-label="$t('header.aria.primary')">
+    <nav class="navbar" :aria-label="$t('header.aria.primary')">
       <div class="navbar-brand has-color-white">
         <slot name="logo">
           <a class="logo" href="/">
-            Logo
+            <CCSearchLogo />
           </a>
         </slot>
-        <slot name="hamburger-menu">
-          <a role="button"
-             :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
-             :aria-label="$t('header.aria.menu')"
-             aria-expanded="false"
-             @click="toggleBurgerActive"
-             @keyup.enter="toggleBurgerActive">
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-          </a>
-        </slot>
+        <a role="button"
+           :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
+           :aria-label="$t('header.aria.menu')"
+           aria-expanded="false"
+           @click="toggleBurgerActive"
+           @keyup.enter="toggleBurgerActive">
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+        </a>
       </div>
-      <div class="navbar-end">
-        <slot name="menu-items">
-          <MenuItem href="/whatever" label="Item One" />
-          <MenuItem href="/whatever" label="Item Two" />
-          <MenuDropdown label="Item Three">
-            <MenuItem href="/whatever" label="Item Three A" />
-            <MenuItem href="/whatever" label="Item Three B" />
-          </MenuDropdown>
-        </slot>
+      <div :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }">
+        <div class="navbar-end">
+          <slot name="menu-items">
+            <MenuItem tag="a" href="/whatever" label="Item One" />
+            <MenuDropdown label="Item Three">
+              <MenuItem href="/whatever" label="Item Three A" />
+              <MenuItem tag = "a" href="/whatever" label="Item Three B" />
+            </MenuDropdown>
+            <MenuItem href="/whatever" label="Item Two" />
+          </slot>
+        </div>
       </div>
     </nav>
   </header>
@@ -43,12 +43,14 @@
    */
   import MenuItem from './MenuItem'
   import MenuDropdown from './MenuDropdown'
+  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg'
 
   export default {
     name: 'VHeader',
     components: {
       MenuItem,
-      MenuDropdown
+      MenuDropdown,
+      CCSearchLogo
     },
     data: () => ({ isBurgerMenuActive: false }),
     methods: {
@@ -59,6 +61,8 @@
   }
 </script>
 <style lang="scss" scoped>
+@import '~@creativecommons/vocabulary/scss/vocabulary.scss';
+
 .logo {
   color: black;
   svg {
