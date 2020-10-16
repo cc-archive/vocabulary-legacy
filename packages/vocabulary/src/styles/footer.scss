@@ -1,131 +1,167 @@
-.main-footer {
-  background-color: $color-black;
-  color: $white;
-  padding: $space-large 0;
+// @import "bulma/sass/layout/footer.sass";
 
-  a {
-    color: $color-dark-turquoise;
+.footer {
+	display: flex;
+	flex-direction: column;
+	row-gap: $space-bigger;
+	background-color: $color-black;
+	color: $white;
+	padding: $space-large $space-small;
 
-    &:hover {
-      color: $color-dark-turquoise;
-      text-decoration: underline;
-    }
+	a {
+		color: $color-dark-turquoise;
 
-    &.social:hover {
-      text-decoration: none;
-    }
-  }
+		&:hover {
+			color: $color-dark-turquoise;
+			text-decoration: underline;
+		}
 
-  .main-logo {
-    display: block;
+		&.social:hover {
+			text-decoration: none;
+		}
+	}
 
-    svg {
-      width: 13rem;
-    }
-  }
+	.footer-navigation {
+		.menu {
+			li {
+				display: block;
 
-  address {
-    font-style: normal;
-  }
+				&:first-child {
+					.menu-item {
+						padding-left: 0;
+					}
+				}
 
-  .footer-navigation {
-    .menu {
-      li {
-        display: inline-block;
+				.menu-item {
+					display: block;
+					// padding: $space-normal 0 $space-normal;
+					font-size: $font-size-h4;
+					font-style: normal;
+					font-weight: bold;
+				}
+			}
+		}
+	}
 
-        &:first-child {
-          .menu-item {
-            padding-left: 0;
-          }
-        }
+	.subscription {
+		h5 {
+			margin-bottom: $space-normal;
+			color: $color-white;
+		}
 
-        .menu-item {
-          display: block;
-          padding: $space-normal;
-          font-size: $font-size-h4;
-          font-style: normal;
-          font-weight: bold;
-        }
-      }
-    }
-  }
+		.newsletter {
+			display: flex;
+			width: 70%;
 
-  .subscription {
-    h5 {
-      margin-bottom: $space-normal;
-      color: $color-white;
-    }
+			.input {
+				background-color: transparent;
+				border-color: $color-dark-gray;
+				color: $color-dark-gray;
 
-    .newsletter {
-      display: flex;
-      width: 70%;
+				&::placeholder {
+					color: $color-dark-gray;
+					opacity: 0.8;
+				}
+			}
 
-      .input {
-        background-color: transparent;
-        border-color: $color-dark-gray;
-        color: $color-dark-gray;
-        
-        &::placeholder {
-          color: $color-dark-gray;
-          opacity: 0.8;
-        }
-      }
+			.button {
+				margin-left: -1rem;
+				border: none;
+				background-color: $color-dark-gray;
+				color: $color-white;
 
-      .button {
-        margin-left: -1rem;
-        border: none;
-        background-color: $color-dark-gray;
-        color: $color-white;
+				&:hover {
+					background-color: lighten($color-dark-gray, 10);
+				}
+			}
+		}
+	}
 
-        &:hover {
-          background-color: lighten($color-dark-gray, 10);
-        }
-      }
-    }
-  }
+	.donate-section {
+		h5 {
+			color: $color-white;
+		}
 
-  .donate-section {
-    h5 {
-      color: $color-white;
-    }
+		.donate {
+			margin-top: $space-big;
+			color: $color-black;
 
-    .donate {
-      margin-top: $space-big;
-      color: $color-black;
+			svg {
+				margin-right: 1rem;
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
 
-      svg {
-        margin-right: 1rem;
-        width: 2rem;
-        height: 2rem;
-      }
-    }
-  }
+	.footer-logo {
+		.main-logo {
+			display: block;
 
-  @include tablet() {
-    padding: $space-big;
+			svg {
+				width: 13rem;
+			}
+		}
 
-    .footer-navigation {
-      .menu {
-        display: flex;
-      }
-    }
-  }
+		address {
+			font-style: normal;
+		}
+	}
 
-  @include mobile() {
-    padding: $space-normal;
+	@include tablet() {
+		padding: $space-bigger;
+		display: grid;
+		grid-template-areas:
+			'nav nav nav'
+			'logo sub sub'
+			'logo donate donate'
+			'. attr attr';
+		grid-template-columns: auto 1fr 1fr;
+		grid-template-rows: repeat(4, auto);
 
-    .footer-navigation {
-      margin-bottom: $space-normal;
+		.footer-navigation {
+			grid-area: nav;
+			.menu {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
 
-      .menu {
-        li {
-          display: block;
+		.subscription {
+			grid-area: sub;
+		}
 
-          .menu-item {
-            padding-left: 0;
-          }
-        }
-      }
-    }
-  }
+		.footer-logo {
+			grid-area: logo;
+		}
+
+		.donate-section {
+			grid-area: donate;
+		}
+
+		.attribution {
+			grid-area: attr;
+		}
+	}
+
+	@include desktop() {
+		padding: $space-bigger $space-xl;
+		display: grid;
+		grid-template-areas:
+			'nav nav nav . . '
+			'logo sub sub donate donate'
+			'logo attr attr attr . ';
+		grid-template-columns: auto 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+	}
+
+	@include fullhd() {
+		display: grid;
+		grid-template-areas:
+			'logo nav nav nav . '
+			'logo sub sub donate donate'
+			'logo attr attr . . ';
+		grid-template-columns: auto 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+	}
 }
