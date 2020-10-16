@@ -55,12 +55,6 @@ npm install
 npm run setup # (optional for npm v7 & above)
 npm run build
 npm run storybook
-
-```bash
-npm install
-npm run setup
-npm run build
-npm run storybook
 ```
 
 To run the storybook for an individual package (say, fonts):
