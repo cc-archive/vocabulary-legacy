@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vocabulary",
-  "version": "2020.8.7",
+  "version": "2020.9.4",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -9,7 +9,7 @@
     "test:snapshot": "jest -c tests/snapshot/jest.config.js",
     "build": "webpack --mode production",
     "watch": "npm run build -- --watch --progress",
-    "storybook": "start-storybook --ci -s ./src/assets -p 8080 --quiet",
+    "storybook": "start-storybook --ci -s ./src/assets -p 8081 --quiet",
     "snapshot": "env STORYBOOK_ORIGIN='' start-server-and-test storybook 8080 test:snapshot",
     "build:documentation": "npm run build && build-storybook -s ./src/assets -o ./docs"
   },
@@ -43,7 +43,7 @@
     "puppeteer": "^2.1.1",
     "react": "^16.12.0",
     "react-is": "^16.12.0",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^10.0.2",
     "sass-true": "^5.0.0",
     "start-server-and-test": "^1.10.11",
     "storybook-addon-designs": "^5.4.1",

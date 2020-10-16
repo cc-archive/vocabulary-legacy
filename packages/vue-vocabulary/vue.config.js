@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
+  lintOnSave: false,
   publicPath: publicPath,
   pluginOptions: {
     i18n: {
