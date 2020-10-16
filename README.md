@@ -52,7 +52,7 @@ To install dependencies and run the storybooks for all packages in this reposito
 
 ```bash
 npm install
-# npm run setup (Uncomment if using an version of npm older than npm@7)
+npm run setup # (optional for npm v7 & above)
 npm run build
 npm run storybook
 
