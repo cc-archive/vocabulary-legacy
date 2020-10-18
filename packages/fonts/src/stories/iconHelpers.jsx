@@ -32,7 +32,6 @@ import BookmarkRegular from '../assets/svg/symbols/bookmark-regular.svg'
 import BookmarkSolid from '../assets/svg/symbols/bookmark-solid.svg'
 import Bars from '../assets/svg/symbols/bars.svg'
 import Envelope from '../assets/svg/symbols/envelope.svg'
-import RssSquare from '../assets/svg/symbols/rss-square.svg'
 import Heart from '../assets/svg/symbols/heart.svg'
 
 import CcZero from '../assets/svg/cc/cc-zero.svg'
@@ -52,6 +51,20 @@ import CcNcJp from '../assets/svg/cc/cc-nc-jp.svg'
 import CcPdm from '../assets/svg/cc/cc-pdm.svg'
 import CcHeart from '../assets/svg/cc/cc-heart.svg'
 import CcHeartFilled from '../assets/svg/cc/cc-heart-filled.svg'
+import Facebook from '../assets/svg/social-media/facebook.svg'
+import Github from '../assets/svg/social-media/github.svg'
+import Instagram from '../assets/svg/social-media/instagram.svg'
+import Linkedin from '../assets/svg/social-media/linkedin.svg'
+import Medium from '../assets/svg/social-media/medium.svg'
+import Messenger from '../assets/svg/social-media/messenger.svg'
+import Pinterest from '../assets/svg/social-media/pinterest.svg'
+import Reddit from '../assets/svg/social-media/reddit.svg'
+import RssSquare from '../assets/svg/social-media/rss-square.svg'
+import Slack from '../assets/svg/social-media/slack.svg'
+import Sms from '../assets/svg/social-media/sms.svg'
+import Tumbler from '../assets/svg/social-media/tumbler.svg'
+import Twitter from '../assets/svg/social-media/twitter.svg'
+import Whatsapp from '../assets/svg/social-media/whatsapp.svg'
 
 const iconComponents = {
   'chevron-up': ChevronUp,
@@ -87,7 +100,6 @@ const iconComponents = {
   'bookmark-solid': BookmarkSolid,
   bars: Bars,
   envelope: Envelope,
-  'rss-square': RssSquare,
   heart: Heart,
   'cc-zero': CcZero,
   'cc-sa': CcSa,
@@ -104,9 +116,22 @@ const iconComponents = {
   'cc-nc-jp': CcNcJp,
   'cc-pdm': CcPdm,
   'cc-heart': CcHeart,
-  'cc-heart-filled': CcHeartFilled
+  'cc-heart-filled': CcHeartFilled,
+  facebook: Facebook,
+  github: Github,
+  instagram: Instagram,
+  linkedin: Linkedin,
+  medium: Medium,
+  messenger: Messenger,
+  pinterest: Pinterest,
+  reddit: Reddit,
+  'rss-square': RssSquare,
+  slack: Slack,
+  sms: Sms,
+  tumbler: Tumbler,
+  twitter: Twitter,
+  whatsapp: Whatsapp
 }
-
 const iconGroups = {
   arrows: {
     chevrons: ['chevron-up', 'chevron-down', 'chevron-right', 'chevron-left'],
@@ -117,17 +142,33 @@ const iconGroups = {
     shapes: ['tick', 'cross', 'plus', 'minus', 'circle-filled', 'circle-outline'],
     hieroglyphs: ['globe', 'info', 'exclamation-circle', 'external-link', 'search',
       'sort', 'filter', 'sliders', 'flag', 'question', 'adjust', 'bookmark-regular',
-      'bookmark-solid', 'bars', 'envelope', 'rss-square', 'heart']
+      'bookmark-solid', 'bars', 'envelope', 'heart']
   },
-  ccLicenses: {
+  cc: {
     standard: ['cc-zero', 'cc-sa', 'cc-nc', 'cc-logo', 'cc-pd', 'cc-by', 'cc-nd'],
     nonStandard: ['cc-sampling', 'cc-sampling-plus', 'cc-remix', 'cc-share', 'cc-nc-eu',
       'cc-nc-jp', 'cc-pdm', 'cc-heart', 'cc-heart-filled']
-  }
+  },
+  'social-media': ['facebook', 'github', 'instagram', 'linkedin', 'medium', 'messenger',
+    'pinterest', 'reddit', 'rss-square', 'slack', 'sms', 'tumbler', 'twitter', 'whatsapp']
 }
 
 const iconLink = ({ name }) => {
-  return `@creativecommons/vocabulary/assets/svg/${name}.svg`
+  const categories = Object.keys(iconGroups)
+  let iconCategory = 'cat'
+  let iconNames = []
+  categories.forEach((category) => {
+    if (Array.isArray(iconGroups[category])) {
+      iconNames = iconGroups[category]
+    } else {
+      iconNames = Object.values(iconGroups[category]).reduce((flatten, arr) => [...flatten, ...arr])
+    }
+    const icon = iconNames.find(icon => icon === name)
+    if (icon) {
+      iconCategory = category
+    }
+  })
+  return `@creativecommons/vocabulary/assets/svg/${iconCategory}/${name}.svg`
 }
 
 export { iconComponents, iconLink, iconGroups }
