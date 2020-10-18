@@ -1,70 +1,81 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import {Canvas, Meta} from '@storybook/addon-docs/blocks';
 import { IconGallery } from 'storybook-icon-gallery';
-import CCZero from '../assets/svg/cc/cc-zero.svg'
-import CCSa from '../assets/svg/cc/cc-sa.svg'
-import CCBy from '../assets/svg/cc/cc-by.svg'
-import CCPd from '../assets/svg/cc/cc-pd.svg'
-import CCHeart from '../assets/svg/cc/cc-heart.svg'
-import CCHeartFilled from '../assets/svg/cc/cc-heart-filled.svg'
-import CCLogo from '../assets/svg/cc/cc-logo.svg'
-import CCNc from '../assets/svg/cc/cc-nc.svg'
-import CCNcEU from '../assets/svg/cc/cc-nc-eu.svg'
-import CCNcJp from '../assets/svg/cc/cc-nc-jp.svg'
-import CCNd from '../assets/svg/cc/cc-nd.svg'
 
-<Meta title="Vocabulary SVG Icons"/>
+import { iconComponents, iconGroups, iconLink } from './iconHelpers'
+
+<Meta title="Vocabulary SVG Icons" />
 
 # Vocabulary Icons
+
+
+
+
+export const iconItem = (name) => {
+  const paths = iconComponents[name]().props.children
+  console.log(name, paths.type, paths.props)
+  return iconComponents[name]
+}
 
 Vocabulary Icons is an icon font developed for use in Vocabulary, a cohesive design system to unite the web-facing
 Creative Commons.
 
 The svg icons selectively include assets from [Font Awesome](https://fontawesome.com) based on the icons used
 throughout the design library on Figma. They are optimized using [svgomg](https://jakearchibald.github.io/svgomg/) to
-make the icons smallest possible file size.
+make the icons the smallest possible file size.
 
-## CC licenses
+TODO: How do we actually use the icons?? This doesn't work
+To use the icons, copy the icon link and add it into your code:
+```
+<span class='icon'><img src='@creativecommons/vocabulary/assets/svg/cc-zero.svg'></span>
+```
+
+
+export const createGallery = (icons) => {
+  return (
+    <IconGallery getCopyValue={iconLink}>
+      { icons.map((i) => (
+        <IconGallery.Item key={i} name={i} size={30}>
+          {iconItem(i)()}
+        </IconGallery.Item>
+        ))
+      }
+    </IconGallery>
+  )
+}
+
+## Arrows
+
+### Chevrons
+
+<>{ createGallery(iconGroups.arrows.chevrons) }</>
+
+### Carets
+
+<>{ createGallery(iconGroups.arrows.carets) }</>
+
+### Angles
+
+<>{ createGallery(iconGroups.arrows.angles) }</>
+
+## Symbols
+
+## Shapes
+
+<>{ createGallery(iconGroups.symbols.shapes) }</>
+
+## Hieroglyphs
+
+<>{ createGallery(iconGroups.symbols.hieroglyphs) }</>
+
+## CC LICENCES
 
 ### Standard
 
 The CC standard icons include those that have been added to the Unicode Standard in version 13.0. They can
 be copy-pasted into any location that is equipped to handle Unicode 13.0.
 
-<IconGallery>
-  <IconGallery.Item name='cc-zero' copyValue={'@creativecommons/vocabulary/assets/svg/cc-zero.svg'}>
-    <CCZero />
-  </IconGallery.Item>
-  <IconGallery.Item name='cc-sa' copyValue={'@creativecommons/vocabulary/assets/svg/cc-by.svg'}>
-    <CCSa />
-  </IconGallery.Item>
-  <IconGallery.Item name='cc-nc' copyValue={'@creativecommons/vocabulary/assets/svg/cc-by.svg'}>
-    <CCBy />
-  </IconGallery.Item>
-  <IconGallery.Item name='cc-logo' copyValue={'@creativecommons/vocabulary/assets/svg/cc-logo.svg'}>
-    <CCLogo />
-  </IconGallery.Item>
-  <IconGallery.Item name='cc-pd' copyValue={'@creativecommons/vocabulary/assets/svg/cc-pd.svg'}>
-    <CCPd />
-   </IconGallery.Item>
-  <IconGallery.Item name='cc-by' copyValue={'@creativecommons/vocabulary/assets/svg/cc-by.svg'}>
-    <CCBy />
-  </IconGallery.Item>
-  <IconGallery.Item name='cc-nd' copyValue={'@creativecommons/vocabulary/assets/svg/cc-nd.svg'}>
-    <CCNd />
-  </IconGallery.Item>
-</IconGallery>
+<>{ createGallery(iconGroups.ccLicenses.standard) }</>
 
 ### Non-Standard
 
-<IconGallery>
-  <IconGallery.Item name='CC heart' copyValue={'@creativecommons/vocabulary/assets/svg/cc-heart.svg'}>
-      <CCHeart />
-  </IconGallery.Item>
-  <IconGallery.Item name='CC heart filled' copyValue={'@creativecommons/vocabulary/assets/svg/cc-heart-filled.svg'}>
-      <CCHeartFilled />
-  </IconGallery.Item>
-  <IconGallery.Item name='CC logo' copyValue={'@creativecommons/vocabulary/assets/svg/cc-logo.svg'}>
-    <CCLogo />
-  </IconGallery.Item>
-</IconGallery>
-
+<>{ createGallery(iconGroups.ccLicenses.nonStandard) }</>

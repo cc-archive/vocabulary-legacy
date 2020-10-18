@@ -6,5 +6,9 @@ module.exports = {
   addons: [
     '@storybook/addon-backgrounds',
     '@storybook/addon-docs'
-  ]
+  ],
+  babel: async (options) => ({
+    ...options,
+    "presets": ["@babel/preset-react"]
+  })
 }
