@@ -11,10 +11,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-top: 25px;
-        padding-bottom: 25px;
 
-        justify-content: space-evenly;
+        padding: 37.5px;
+        justify-content: space-between;
     }
 </style>
 

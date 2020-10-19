@@ -1,5 +1,5 @@
  <template>
-    <div style="padding:15px;">
+    <div>
     <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">
@@ -18,7 +18,7 @@
             <div class="external-links">
               <button class="button is-text tiny">
                 <i class="icon external-link"></i>
-                <span class="link-content">npmjs</span>
+                <a class="link-content" :href="npmlink" target="blank" style="color:gray">Visit npmjs package</a>
               </button>
             </div>
         </div>
@@ -38,6 +38,6 @@ import '@creativecommons/vocabulary/css/vocabulary.css'
 
 export default {
     name: 'Package',
-    props: ['name','href','content']
+    props: ['name','href','content','npmlink']
 }
 </script>

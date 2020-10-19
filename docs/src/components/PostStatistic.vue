@@ -19,7 +19,6 @@
 
 <style scoped>
  #post-card {
-     margin: 15px;
      width: 400px;
  }
 </style>
