@@ -35,7 +35,6 @@ export default {
         fetch('https://api.github.com/repos/creativecommons/vocabulary')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             this.statisticList=data
         });
     }
