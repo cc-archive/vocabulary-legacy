@@ -7,26 +7,27 @@
             <CCSearchLogo />
           </a>
         </slot>
-        <a role="button"
-           :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
-           :aria-label="$t('header.aria.menu')"
-           aria-expanded="false"
-           @click="toggleBurgerActive"
-           @keyup.enter="toggleBurgerActive">
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-        </a>
+        <button
+          :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
+          :aria-label="$t('header.aria.menu')"
+          aria-haspopup="menu"
+          :aria-expanded="isBurgerMenuActive"
+          aria-controls="navbar-menu"
+          @click="toggleBurgerActive">
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
       </div>
-      <div :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }">
+      <div id="navbar-menu" :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }">
         <div class="navbar-end">
           <slot name="menu-items">
             <MenuItem tag="a" href="/whatever" label="Item One" />
             <MenuDropdown label="Item Three">
-              <MenuItem href="/whatever" label="Item Three A" />
-              <MenuItem tag = "a" href="/whatever" label="Item Three B" />
+              <MenuItem tag="a" href="/whatever" label="Item Three A" />
+              <MenuItem tag="a" href="/whatever" label="Item Three B" />
             </MenuDropdown>
-            <MenuItem href="/whatever" label="Item Two" />
+            <MenuItem tag="a" href="/whatever" label="Item Two" />
           </slot>
         </div>
       </div>
@@ -69,6 +70,12 @@
     height: 100%;
     width: auto;
   }
+}
+.navbar-burger {
+  // When burger is changed from a link to a button, it changes some styles
+  // TODO: move these to Vocabulary css
+  background: white;
+  border: none;
 }
 
 </style>

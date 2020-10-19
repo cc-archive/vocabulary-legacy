@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-item has-dropdown is-hoverable">
+  <div class="navbar-item has-dropdown is-hoverable" tabindex="0" aria-haspopup="menu" aria-expanded="false">
     <a class="navbar-link is-arrowless">
       {{ $t(label) }}
       <i class="icon caret-down" />
