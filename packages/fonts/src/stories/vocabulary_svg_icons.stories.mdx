@@ -7,12 +7,7 @@ import { iconComponents, iconGroups, iconLink } from './iconHelpers'
 
 # Vocabulary Icons
 
-
-
-
 export const iconItem = (name) => {
-  const paths = iconComponents[name]().props.children
-  console.log(name, paths.type, paths.props)
   return iconComponents[name]
 }
 
@@ -23,10 +18,11 @@ The svg icons selectively include assets from [Font Awesome](https://fontawesome
 throughout the design library on Figma. They are optimized using [svgomg](https://jakearchibald.github.io/svgomg/) to
 make the icons the smallest possible file size.
 
-TODO: How do we actually use the icons?? This doesn't work
-To use the icons, copy the icon link and add it into your code:
+To use the icons, you have to have inline svg loader in your app. After it is set up,
+copy the icon link and add it into your code:
 ```
-<span class='icon'><img src='@creativecommons/vocabulary/assets/svg/cc-zero.svg'></span>
+import ccZero from '@creativecommons/vocabulary/assets/svg/cc-zero.svg?inline'
+<span class='icon'><ccZero /></span>
 ```
 
 
