@@ -11,7 +11,6 @@
 <script>
 import Release from './Release'
 import { Carousel, Slide } from 'vue-carousel';
-import '@creativecommons/vocabulary/css/vocabulary.css'
 
 export default {
     name: 'ReleaseGroup',

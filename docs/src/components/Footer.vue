@@ -82,9 +82,7 @@
 </footer>
 </template>
 
-<script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
-
+<script scoped>
 export default {
     name: 'Footer'
 }

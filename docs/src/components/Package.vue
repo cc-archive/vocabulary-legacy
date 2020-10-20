@@ -27,15 +27,7 @@
     </div>
 </template>
 
- <style>
-      .project-index {
-        width: 400px;
-      }
-</style>
-
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
-
 export default {
     name: 'Package',
     props: ['name','href','content','npmlink']

@@ -17,15 +17,7 @@
     </div>
 </template>
 
-<style scoped>
- #post-card {
-     width: 400px;
- }
-</style>
-
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
-
 export default {
     name:'PostStatistic',
     props:['number','caption','description','href']

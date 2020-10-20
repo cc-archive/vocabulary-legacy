@@ -23,10 +23,6 @@
 
 <style scoped>
     #grp {
-        margin-left: 37.5px;
-        margin-right: 37.5px;
-        padding-top: 10px;
-
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -35,7 +31,6 @@
 </style>
 
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
 import Package from './Package'
 
 export default {

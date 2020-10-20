@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
-
 export default {
     name:'Step',
     props: ['number','name']

@@ -1,5 +1,5 @@
 <template>
-      <article class="card entry-post entry-event horizontal" style="height: 310px; margin: 15px;">
+      <article class="card entry-post entry-event horizontal">
         <header class="card-header">
           <div class="card-date">
             <span class="day" style="font-size:15px">{{ releaseItem.created_at }}</span>
@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
-
 export default {
     name: 'Release',
     props: ['releaseItem']

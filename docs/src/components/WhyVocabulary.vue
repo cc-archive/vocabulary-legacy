@@ -11,7 +11,6 @@
       </ul>
       <br>
     </div>
-    <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
          <Step number=3 name="Extensive Documentation"/>
@@ -24,9 +23,6 @@
 
 <style scoped>
     #page-section {
-        margin: 37.5px;
-        padding-bottom: 25px;
-        padding-top: 35px;
         border: 3px solid lightgray;
 
         display: flex;
@@ -37,21 +33,14 @@
     }
 
     #point-table {
-        margin-left: 25px;
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    #table-of-progress top-container {
-      padding: 10px;
-    }
 </style>
 
 <script>
-import '@creativecommons/vocabulary/css/vocabulary.css'
 import Step from './Step.vue'
 
 export default {
