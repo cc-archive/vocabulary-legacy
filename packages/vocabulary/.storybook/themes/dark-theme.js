@@ -1,28 +1,28 @@
-import { create } from '@storybook/theming/create'
+import { create } from '@storybook/theming'
 
 export default create({
   // Inherit
-  base: 'light',
+  base: 'dark',
 
   // Color scheme
-  colorPrimary: 'rgb(0, 0, 0)', // No known usage
+  colorPrimary: 'rgb(255, 255, 255)', // No known usage
   colorSecondary: 'rgb(251, 119, 41)', // Accent color
 
   // UI colors
-  appBg: 'rgb(248, 249, 250)',
+  appBg: 'rgb(47, 47, 47)',
 
   // Rows of controls
   barTextColor: 'rgb(73, 80, 87)',
   barSelectedColor: 'rgb(251, 119, 41)',
-  barBg: 'rgb(255, 255, 255)',
+  barBg: 'rgb(47, 47, 47)',
 
   // Typography
   fontBase: '"Source Sans Pro", sans-serif',
   fontCode: '"JetBrains Mono", monospace',
 
   // Text colors
-  textColor: 'rgb(0, 0, 0)',
-  textInverseColor: 'rgb(255, 255, 255)',
+  textColor: 'rgb(255, 255, 255)',
+  textInverseColor: 'rgb(0, 0, 0)',
 
   // Branding
   brandTitle: 'Vocabulary',
