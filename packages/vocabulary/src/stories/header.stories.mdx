@@ -9,7 +9,7 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 export const header = (size, color) => `<header>
       <nav class="navbar ${size}">
         <div class="navbar-brand">
-          <a class="has-text-black">
+          <a href="#" class="has-text-black">
             <svg
               class="logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,14 +27,14 @@ export const header = (size, color) => `<header>
         <div class="navbar-menu is-active">
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
+              <a href="#" class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">Item 1</a>
-                <a class="navbar-item">Item 2</a>
-                <a class="navbar-item">Item 3</a>
+                <a href="#" class="navbar-item">Item 1</a>
+                <a href="#" class="navbar-item">Item 2</a>
+                <a href="#" class="navbar-item">Item 3</a>
               </div>
             </div>
-            <a class="navbar-item">
+            <a href="#" class="navbar-item">
               No dropdown
             </a>
           </div>
@@ -47,7 +47,7 @@ export const compactHeader = (color) => `<div style="width:640px">
       <header>
         <nav class="navbar is-compact">
           <div class="navbar-brand">
-            <a class="has-text-black">
+            <a href="#" class="has-text-black">
               <svg
                 class="logo"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,9 +58,9 @@ export const compactHeader = (color) => `<div style="width:640px">
             </a>
           </div>
           <div class="navbar-end">
-            <a class="navbar-item">Item 1</a>
-            <a class="navbar-item">Item 2</a>
-            <a class="navbar-item">Item 3</a>
+            <a href="#" class="navbar-item">Item 1</a>
+            <a href="#" class="navbar-item">Item 2</a>
+            <a href="#" class="navbar-item">Item 3</a>
           </div>
         </nav>
       </header>
