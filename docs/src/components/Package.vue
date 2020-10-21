@@ -1,5 +1,5 @@
  <template>
-    <div>
+   <div id="package">
     <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">
@@ -26,6 +26,14 @@
     </div>
     </div>
 </template>
+
+<style scoped>
+  #package {
+    width: 27rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+</style>
 
 <script>
 export default {

@@ -17,6 +17,14 @@
     </div>
 </template>
 
+<style scoped>
+  #post-card {
+    width: 27rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+</style>
+
 <script>
 export default {
     name:'PostStatistic',

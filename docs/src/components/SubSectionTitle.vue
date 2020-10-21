@@ -11,6 +11,13 @@
 </div>
 </template>
 
+<style scoped>
+  #sub-section {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+</style>
+
 <script>
 export default {
     name:'SubSectionTitle',
