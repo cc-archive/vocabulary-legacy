@@ -4,7 +4,7 @@
             <h2 class="card-title">Vocabulary, a Monorepo?</h2>
             <span class="content">Does vocabulary really have to be a monorepo?</span>
         </span>
-    <div id="point-table">    
+    <div id="point-table">
     <div class="table-of-progress top-container">
       <ul>
        <Step number=1 name="Better Structure"/>
@@ -25,14 +25,16 @@
   </div>
 </template>
 
-<style scoped>
+<style>
     #page-section {
         border: 3px solid lightgray;
+        padding: 2rem;
+        margin: 1rem;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         background-color: white;
     }
 

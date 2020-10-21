@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="carousel">
         <Carousel :per-page="3">
             <Slide v-for="(item,index) in releaseList" :key="index">
                 <Release :releaseItem="item"/>
@@ -7,6 +7,13 @@
         </Carousel>
     </div>
 </template>
+
+<style scoped>
+    #carousel {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+</style>
 
 <script>
 import Release from './Release'

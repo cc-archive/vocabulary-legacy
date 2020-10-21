@@ -1,4 +1,5 @@
 <template>
+    <div id="release-card">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
           <div class="card-date">
@@ -13,7 +14,20 @@
           <a :href="releaseItem.html_url" target="blank" class="read-more">Read more</a>
         </div>
       </article>
+    </div>
 </template>
+
+<style scoped>
+  #release-card {
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+
+  .card {
+    height: 18rem;
+    width: 30rem;
+  }
+</style>
 
 <script>
 export default {

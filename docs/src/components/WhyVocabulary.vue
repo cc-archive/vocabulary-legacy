@@ -11,6 +11,7 @@
       </ul>
       <br>
     </div>
+    <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
          <Step number=3 name="Extensive Documentation"/>
@@ -20,25 +21,6 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-    #page-section {
-        border: 3px solid lightgray;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: white;
-    }
-
-    #point-table {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-</style>
 
 <script>
 import Step from './Step.vue'
