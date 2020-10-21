@@ -80,6 +80,9 @@
         &:hover {
           background-color: lighten($color-dark-gray, 10);
         }
+        &:focus {
+          outline: 1px solid $color-white;
+        }
       }
     }
   }
