@@ -237,7 +237,7 @@ $card-header-shadow: none;
                         } @else {
                             color: $color-white;
                             .card-content {
-                                .card-title {
+                                .card-title, .card-pretitle {
                                     color: $color-white;
                                 }
                             }
