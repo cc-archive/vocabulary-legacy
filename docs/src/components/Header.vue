@@ -21,10 +21,7 @@
             </a>
             <a class="navbar-item">
               Development
-            </a>
-            <a class="navbar-item">
-              Getting Started
-            </a>
+            </a>  
              <a class="navbar-item">
               About
             </a>
