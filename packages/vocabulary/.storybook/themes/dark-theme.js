@@ -12,9 +12,9 @@ export default create({
   appBg: 'rgb(47, 47, 47)',
 
   // Rows of controls
-  barTextColor: 'rgb(73, 80, 87)',
+  barTextColor: 'rgb(193, 193, 193)',
   barSelectedColor: 'rgb(251, 119, 41)',
-  barBg: 'rgb(47, 47, 47)',
+  barBg: 'rgb(0, 0, 0)',
 
   // Typography
   fontBase: '"Source Sans Pro", sans-serif',
@@ -27,5 +27,5 @@ export default create({
   // Branding
   brandTitle: 'Vocabulary',
   brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
-  brandImage: 'logos/products/vocabulary.svg#vocabulary'
+  brandImage: 'https://svgshare.com/i/Qq2.svg'
 })

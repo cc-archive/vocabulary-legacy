@@ -14,6 +14,6 @@ module.exports = {
     '@storybook/addon-backgrounds',
     '@storybook/addon-viewport',
     '@storybook/addon-docs',
-    'storybook-dark-mode'
+    'storybook-dark-mode/register'
   ]
 }

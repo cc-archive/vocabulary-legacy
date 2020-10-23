@@ -25,8 +25,8 @@ addParameters({
     viewports,
   },
   darkMode: {
-    dark: { ...darktheme },
     light: { ...lighttheme },
+    dark: { ...darktheme },
   },
 })
 
