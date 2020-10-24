@@ -57,7 +57,6 @@
     "react": "^16.13.1",
     "react-is": "^16.13.1",
     "storybook-addon-designs": "^5.4.1",
-    "storybook-dark-mode": "^1.0.3",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-i18n": "^1.0.1",
