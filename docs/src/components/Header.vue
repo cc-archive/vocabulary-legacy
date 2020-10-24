@@ -21,8 +21,11 @@
             </a>
             <a class="navbar-item">
               Development
+            </a>
+            <a class="navbar-item">
+              Documentation
             </a>  
-             <a class="navbar-item">
+            <a class="navbar-item">
               About
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="blank">
