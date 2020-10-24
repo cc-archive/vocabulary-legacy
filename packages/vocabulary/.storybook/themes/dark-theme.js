@@ -14,7 +14,7 @@ export default create({
   // Rows of controls
   barTextColor: 'rgb(193, 193, 193)',
   barSelectedColor: 'rgb(251, 119, 41)',
-  barBg: 'rgb(0, 0, 0)',
+  barBg: 'rgb(47, 47, 47)',
 
   // Typography
   fontBase: '"Source Sans Pro", sans-serif',
