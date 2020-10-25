@@ -53,6 +53,16 @@
     "webpack-cli": "^3.3.10"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://www.classy.org/give/308451/#!/donation/checkout"
+    }
+  ],
   "homepage": "https://opensource.creativecommons.org/vocabulary",
   "keywords": [
     "ui",

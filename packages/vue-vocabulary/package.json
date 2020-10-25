@@ -69,6 +69,16 @@
     "vue-template-compiler": "^2.6.12"
   },
   "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://www.classy.org/give/308451/#!/donation/checkout"
+    }
+  ],
   "homepage": "https://creativecommons.github.io/vue-vocabulary/",
   "keywords": [
     "ui",
