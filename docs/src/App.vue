@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <Header/>
-    <SectionTitle title="THE DESIGN SYSTEM OF CC OPEN SOURCE" content="Design, Build and Develop with Creative Common’s very own design system!"/>
+    <SectionTitle title="THE DESIGN SYSTEM OF CC OPEN SOURCE" content="Design, Build and Develop with Creative Common’s very own design system!" id="home"/>
     <SubSectionTitle title="OUR LEGACY & MISSION" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>  
     <WhyVocabulary/>
-    <SectionTitle title="SOMETHING NEW COMING UP THIS WEEK?" content="Love Vocabulary? Well then, you may not want to miss out on any of our releases!"/>
+    <SectionTitle title="SOMETHING NEW COMING UP THIS WEEK?" content="Love Vocabulary? Well then, you may not want to miss out on any of our releases!" id="whatsnew"/>
     <ReleaseGroup/>
-    <SectionTitle title="WE DESIGN & DEVELOP THE COMPONENTS YOU NEED" content="Here's a section for you to have a peak into our development process!"/>
+    <SectionTitle title="WE DESIGN & DEVELOP THE COMPONENTS YOU NEED" content="Here's a section for you to have a peak into our development process!" id="development"/>
     <Monorepo/>
     <PackageGroup/>
-    <SectionTitle title="WANT TO KNOW MORE ABOUT US? COME, SAY HI!" content="How would you like to get to know more about Vocabulary and the team behind it?"/>
+    <SectionTitle title="WANT TO KNOW MORE ABOUT US? COME, SAY HI!" content="How would you like to get to know more about Vocabulary and the team behind it?" id="about"/>
     <PostStatisticGroup/>   
     <Footer/>
   </div>
@@ -27,6 +27,7 @@
 
 <script>
 import '@creativecommons/vocabulary/css/vocabulary.css'
+import '@creativecommons/vocabulary/js/vocabulary.js'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
