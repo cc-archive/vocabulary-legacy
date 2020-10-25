@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <SectionTitle title="THE DESIGN SYSTEM OF CC OPEN SOURCE" content="Design, Build and Develop with Creative Common’s very own design system!" id="home"/>
-    <SubSectionTitle title="OUR LEGACY & MISSION" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>  
+    <SubSectionTitle title="OUR MISSION" content="To unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source."/>  
     <WhyVocabulary/>
     <SectionTitle title="SOMETHING NEW COMING UP THIS WEEK?" content="Love Vocabulary? Well then, you may not want to miss out on any of our releases!" id="whatsnew"/>
     <ReleaseGroup/>

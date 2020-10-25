@@ -69,8 +69,8 @@
             <aside class="donate-section">
               <h5>Our work relies on you!</h5>
               <p>Help us keep the internet free and open.</p>
-              <a class="button small donate" href="http://creativecommons.org/donate">
-                <i class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller"></i>
+              <a class="button small donate" style="background-color:#FBD43C" href="http://creativecommons.org/donate">
+                <i class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller" style="background-color:#FBD43C"></i>
                 Donate now
               </a>
             </aside>
