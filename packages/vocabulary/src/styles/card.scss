@@ -237,7 +237,7 @@ $card-header-shadow: none;
                         } @else {
                             color: $color-white;
                             .card-content {
-                                .card-title {
+                                .card-title, .card-pretitle {
                                     color: $color-white;
                                 }
                             }
@@ -247,12 +247,19 @@ $card-header-shadow: none;
                 .card-content {
                     display: block;
                     position: relative;
+                    padding: 0;
                     &.has-bottom-link {
-                        padding: 0 0 6rem 0;
+                        padding-bottom: 6rem;
+                    }
+                    .card-pretitle {
+                        @extend .title;
+                        @extend .is-4;
+                        display: block;
+                        padding-bottom: $space-normal;
                     }
                     .card-title {
                         text-transform: uppercase;
-                        line-height: 2.5rem;
+                        line-height: 3rem;
                     }
                     .content {
                         display: block;
