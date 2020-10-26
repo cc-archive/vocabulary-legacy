@@ -18,3 +18,4 @@ cp LICENSE dist/
 
 cd dist
 npm publish --access public
+sed  -e '/say/s/fonts/vue-vocabulary/' Readme.md and  sed -e '/cd/s/fonts/vue-vocabulary/' Readme.md
