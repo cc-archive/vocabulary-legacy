@@ -8,212 +8,239 @@ $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 $navbar-breakpoint: $tablet;
 
-@import "bulma/sass/components/navbar.sass";
+@import 'bulma/sass/components/navbar.sass';
 
 .navbar {
-  &.is-default {
-    .navbar-brand {
-      padding: $space-small $space-big;
-      .logo {
-        width: 8rem;
-        height: 46px;
-      }
-      .navbar-burger span {
-        width: 18px;
-        height: 3px;
-        left: calc(50% + 8px);
-      }
-      .navbar-burger {
-        width: 3.25rem;
-        top: -$space-small;
-        color: $grey;
-      }
-    }
-    .navbar-menu {
-      background-color: $black;
-      .navbar-start {
-        padding: 0 $space-normal $space-small;
-        .locale {
-          margin-right: $space-normal;
-        }
-        .donate {
-          display: none;
-          font-family: $family-source-sans-pro;
-          text-transform: none;
-          color: $color-tomato;
-          background-color: $color-light-error;
-          border-color: $color-light-error;
-          line-height: 1.25;
-          &:hover {
-            color: $color-white;
-            background-color: $color-tomato;
-            border-color: $color-tomato;
-          }
-        }
-      }
-      .tabs-nav {
-        .tabs a {
-          font-size: $size-7;
-          padding: $space-normal 0;
-          color: $grey-dark;
-          &:hover {
-            border-bottom-color: $white;
-            color: $white;
-          }
-        }
-        .tabs ul {
-          padding: 0 $space-big;
-          border-bottom-color: $grey-dark;
-        }
-        .tabs li {
-          &.is-active {
-            a {
-              border-bottom-color: $white;
-              color: $white;
-            }
-          }
-        }
-      }
-      .navbar-end {
-        &.main-nav {
-          display: none;
-        }
-        padding: 0 $space-small;
-        .navbar-dropdown .navbar-item {
-          text-transform: none;
-          font-weight: normal;
-          font-size: $font-size-h6;
-        }
-        .navbar-item {
-          font-family: $family-roboto-condensed;
-          font-size: $font-size-h5;
-          font-weight: bold;
-          text-transform: uppercase;
-          text-decoration: none;
-          line-height: 1.5;
-          margin-left: $space-small;
-          .navbar-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-decoration: none;
-          }
-          .icon {
-            margin: 0 $space-small;
-          }
-        }
-      }
-    }
-    &.is-active {
-      background-color: $black;
-      .logo {
-        color: $white;
-      }
-      .navbar-burger {
-        &.is-active {
-          top: -$space-normal;
-          color: $yellow;
-          span {
-            left: calc(50% + 20px);
-          }
-        }
-      }
-      .navbar-menu {
-        &.is-active {
-          display: block;
-        }
-      }
-    }
-  
-    @include tablet() {
-      flex-direction: column;
-      padding: $space-normal $space-normal 0;
-      background-color: $white;
-      &.is-active {
-        background-color: $white;
-      } 
-      .navbar-brand {
-        background-color: $white;
-        .logo {
-          width: 12rem;
-          color: $black;
-        }
-      }
-      .navbar-item, .navbar-link {
-        color: $color-dark-gray;
-        &:hover {
-          color: $color-dark-slate-gray;
-        }
-      }
-      .navbar-link {
-        justify-content: start;
-      }
-      .navbar-menu {
-        background-color: $white;
-        margin-left: $space-small;
-        .navbar-start {
-          justify-content: flex-end;
-          position: relative;
-          top: -$space-larger;
-          .donate {
-            display: block;
-          }
-        }
-        .tabs-nav {
-          display: none;
-        }
-        .navbar-end .main-nav {
-          display: block;
-        }
-        .navbar-end { 
-          &.main-nav {
-            display: flex;
-          }
-          justify-content: flex-start; 
-          position: relative;
-          top: -$space-bigger;
-          .navbar-dropdown .navbar-item {
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: $font-size-h5;
-          }
-          .navbar-item {
-            margin-left: 0;
-          }     
-        }     
-      }
-    }
+	&.is-default {
+		.navbar-brand {
+			padding: $space-small $space-big;
+			.logo {
+				width: 8rem;
+				height: 46px;
+			}
+			.navbar-burger span {
+				width: 18px;
+				height: 3px;
+				left: calc(50% + 8px);
+			}
+			.navbar-burger {
+				width: 3.25rem;
+				top: -$space-small;
+				color: $grey;
+			}
+		}
+		.navbar-menu {
+			background-color: $black;
+			.navbar-start {
+				padding: 0 $space-normal $space-small;
+				.locale {
+					margin-right: $space-normal;
+					select {
+						border: 2px solid $white;
+					}
+					.is-small {
+						font-size: 0.8rem;
+					}
+				}
+				.donate {
+					display: none;
+					font-family: $family-source-sans-pro;
+					text-transform: none;
+					color: $color-tomato;
+					background-color: $color-soft-tomato;
+					border-color: $color-soft-tomato;
+					line-height: 19px;
+					font-size: 0.75rem;
+					padding: $space-smaller $space-small $space-small $space-smaller;
+					.icon {
+						font-size: 0.6rem;
+						margin-left: $space-smaller;
+						margin-right: $space-small;
+					}
+					&:hover {
+						color: $color-white;
+						background-color: $color-tomato;
+						border-color: $color-tomato;
+					}
+				}
+			}
+			.tabs-nav {
+				.tabs a {
+					font-size: $size-7;
+					padding: $space-normal 0;
+					color: $grey-dark;
+					&:hover {
+						border-bottom-color: $white;
+						color: $white;
+					}
+				}
+				.tabs ul {
+					padding: 0 $space-big;
+					border-bottom-color: $grey-dark;
+				}
+				.tabs li {
+					&.is-active {
+						a {
+							border-bottom-color: $white;
+							color: $white;
+						}
+					}
+				}
+			}
+			.navbar-end {
+				&.main-nav {
+					display: none;
+				}
+				padding: 0 $space-small;
+				.navbar-dropdown .navbar-item {
+					text-transform: none;
+					font-weight: normal;
+					font-size: $font-size-h6;
+				}
+				.navbar-item {
+					font-family: $family-roboto-condensed;
+					font-size: $font-size-h5;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+					line-height: 1.5;
+					margin-left: $space-small;
+					.navbar-link {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						text-decoration: none;
+					}
+					.icon {
+						margin: 0 $space-small;
+					}
+				}
+			}
+		}
+		&.is-active {
+			background-color: $black;
+			.logo {
+				color: $white;
+			}
+			.navbar-burger {
+				&.is-active {
+					top: -$space-normal;
+					color: $yellow;
+					span {
+						left: calc(50% + 20px);
+					}
+				}
+			}
+			.navbar-menu {
+				&.is-active {
+					display: block;
+				}
+			}
+		}
 
-    @include desktop() {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      padding: $space-small $space-xxl $space-big $space-xl;     
-      .navbar-brand {
-        padding-top: $space-larger;
-      }
-      .navbar-menu {
-        .navbar-start {
-          align-items: center;
-          position: static;
-          top: 0;
-          column-gap: $space-normal;
-          .locale {
-            margin-right: 0;
-          }
-        }
-        .navbar-end { 
-          position: static;
-          top: 0;
-          padding-top: $space-normal;    
-        }     
-      }
-    }
+		@include tablet() {
+			flex-direction: column;
+			padding: $space-normal $space-normal 0;
+			background-color: $white;
+			&.is-active {
+				background-color: $white;
+			}
+			.navbar-brand {
+				background-color: $white;
+				.logo {
+					width: 12rem;
+					color: $black;
+				}
+			}
+			.navbar-menu {
+				.navbar-start {
+					.locale {
+						select {
+							background-color: $color-lighter-gray;
+							border: 2px solid $color-lighter-gray;
+						}
+						.is-small {
+							font-size: 0.75rem;
+						}
+					}
+				}
+			}
+			.navbar-item,
+			.navbar-link {
+				color: $color-dark-gray;
+				&:hover {
+					color: $color-dark-slate-gray;
+				}
+			}
+			.navbar-link {
+				justify-content: start;
+			}
+			.navbar-menu {
+				background-color: $white;
+				margin-left: $space-small;
+				.navbar-start {
+					justify-content: flex-end;
+					position: relative;
+					top: -$space-larger;
+					.donate {
+						display: block;
+					}
+				}
+				.tabs-nav {
+					display: none;
+				}
+				.navbar-end .main-nav {
+					display: block;
+				}
+				.navbar-end {
+					&.main-nav {
+						display: flex;
+					}
+					justify-content: flex-start;
+					position: relative;
+					top: -$space-bigger;
+					.navbar-dropdown .navbar-item {
+						text-transform: uppercase;
+						font-weight: bold;
+						font-size: $font-size-h5;
+					}
+					.navbar-item {
+						margin-left: 0;
+					}
+				}
+			}
+		}
 
-    @include fullhd() {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-  }
+		@include desktop() {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			padding: $space-small $space-xxl $space-big $space-xl;
+			.navbar-brand {
+				padding-top: $space-larger;
+			}
+			.navbar-menu {
+				.navbar-start {
+					align-items: center;
+					position: static;
+					top: 0;
+					column-gap: $space-normal;
+					.locale {
+						margin-right: 0;
+					}
+				}
+				.navbar-end {
+					position: static;
+					top: 0;
+					padding-top: $space-normal;
+				}
+			}
+		}
+
+		@include fullhd() {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+	}
 
 	&.is-compact {
 		@extend .padding-vertical-normal;

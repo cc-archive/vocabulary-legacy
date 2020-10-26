@@ -1,20 +1,23 @@
-import { config } from 'storybook-addon-designs'
+import { config } from "storybook-addon-designs";
 
-export const figmaConfig = (nodeId) => config({
-  type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`
-})
+export const figmaConfig = (nodeId) =>
+  config({
+    type: "figma",
+    url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`,
+  });
 
 export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `<svg
   xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 ${viewBoxX} ${viewBoxY}">
   <use href="logos/${fileName}.svg#${id}"></use>
-</svg>`
+</svg>`;
 
-export const blackText = (content) => `<div class="has-text-black">${content}</div>`
+export const blackText = (content) =>
+  `<div class="has-text-black">${content}</div>`;
 
-export const whiteText = (content) => `<div class="has-text-white">${content}</div>`
+export const whiteText = (content) =>
+  `<div class="has-text-white">${content}</div>`;
 
 export const header = (color) => `<header>
       <nav class="navbar is-default is-active">
@@ -38,7 +41,7 @@ export const header = (color) => `<header>
           <div class="navbar-start">
             <div class="locale">
               <div class="control has-icons-left">
-                <div class="select">
+                <div class="select is-small">
                   <select>
                     <option disabled>Select</option>
                     <option selected>English</option>
@@ -53,8 +56,8 @@ export const header = (color) => `<header>
                 </div>
               </div>
             </div>
-            <a class="button small donate" href="http://creativecommons.org/donate">
-              <i class="icon heart margin-right-small is-size-7"></i>
+            <a class="button donate" href="http://creativecommons.org/donate">
+              <i class="icon heart"></i>
               Donate
             </a>
           </div>
@@ -101,4 +104,4 @@ export const header = (color) => `<header>
         </div>
       </nav>
     </header>
-    <div style="background-color: ${color}; height: 200px;"></div>`
+    <div style="background-color: ${color}; height: 200px;"></div>`;
