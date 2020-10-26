@@ -1,6 +1,6 @@
 <template>
     <div id="carousel">
-        <Carousel :per-page="4" :autoplay='true' :loop='true' :speed=2000 :autoplayTimeout=6000>
+        <Carousel :per-page="4" :autoplay='true' :loop='true' :speed=1000 :autoplayTimeout=4000>
             <Slide v-for="(item,index) in releaseList" :key="index">
                 <Release :releaseItem="item"/>
             </Slide>

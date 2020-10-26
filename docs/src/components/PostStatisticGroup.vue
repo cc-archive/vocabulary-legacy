@@ -1,8 +1,20 @@
 <template>
     <div id="post-statistic-group">
-      <PostStatistic :number="stars" caption="Stars" description="Star the repository!" href="https://github.com/creativecommons/vocabulary"/>
-      <PostStatistic :number="forks" caption="Forks" description="Want to contribute? Fork the repository!" href="https://github.com/creativecommons/vocabulary"/>
-      <PostStatistic :number="watchers" caption="Watchers" description="Want to stay updated with all our activity?" href="https://github.com/creativecommons/vocabulary"/>
+      <PostStatistic 
+        :number="stars"
+        caption="Stars"
+        description="Like our work? Star the repository!"
+        href="https://github.com/creativecommons/vocabulary"/>
+      <PostStatistic 
+        :number="forks"
+        caption="Forks"
+        description="Want to contribute? Fork the repository!"
+        href="https://github.com/creativecommons/vocabulary"/>
+      <PostStatistic
+      :number="watchers"
+      caption="Watchers"
+      description="Want to stay updated with all our activity?"
+      href="https://github.com/creativecommons/vocabulary"/>
     </div>
 </template>
 
