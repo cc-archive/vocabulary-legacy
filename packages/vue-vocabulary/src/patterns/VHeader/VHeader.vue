@@ -43,7 +43,7 @@
    */
   import MenuItem from './MenuItem'
   import MenuDropdown from './MenuDropdown'
-  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg'
+  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg?inline'
 
   export default {
     name: 'VHeader',
