@@ -28,5 +28,4 @@ export default create({
   brandTitle: 'Fonts',
   brandUrl: 'https://opensource.creativecommons.org/cc-fonts',
   brandImage: 'https://raw.githubusercontent.com/creativecommons/fonts/master/readme_assets/fonts_logo.svg?sanitize=true'
-  
 })
