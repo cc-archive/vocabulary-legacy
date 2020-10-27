@@ -14,9 +14,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@storybook/addon-backgrounds": "^5.3.13",
-    "@storybook/addon-docs": "^5.3.17",
-    "@storybook/html": "^5.3.9",
+    "@storybook/addon-backgrounds": "^6.0.27",
+    "@storybook/addon-docs": "^6.0.27",
+    "@storybook/html": "^6.0.27",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
