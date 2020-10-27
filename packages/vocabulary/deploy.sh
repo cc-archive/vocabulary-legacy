@@ -13,8 +13,9 @@ trap '_es=${?};
 npm run build
 cp package.json dist/
 cp ../../README.md dist/
+sed -e '/say/s/fonts/vocabulary/' cp ../../README.md
+sed -e '/cd/s/fonts/vocabulary/' cp ../../README.md
 cp LICENSE dist/
 
 cd dist
 npm publish --access public
-sed  -e '/say/s/fonts/vocabulary/' Readme.md and  sed -e '/cd/s/fonts/vocabulary/' Readme.md

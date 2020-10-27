@@ -14,8 +14,9 @@ npm run build
 rm dist/demo.html
 cp package.json dist/
 cp ../../README.md dist/
+sed -e '/say/s/fonts/vue-vocabulary/' cp ../../README.md
+sed -e '/cd/s/fonts/vue-vocabulary/' cp ../../README.md
 cp LICENSE dist/
 
 cd dist
 npm publish --access public
-sed  -e '/say/s/fonts/vue-vocabulary/' Readme.md and  sed -e '/cd/s/fonts/vue-vocabulary/' Readme.md
