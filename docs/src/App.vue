@@ -4,41 +4,41 @@
     <SectionTitle
       id="home"
       title="THE DESIGN SYSTEM OF CC OPEN SOURCE"
-      content="Design, Build and Develop with Creative Common’s very own design system!"
+      content="Design, Develop & Build with Creative Commons' very own design system!"
       pathtosvg="intro.svg"
-      href="https://opensource.creativecommons.org/blog/entries/cc-vocabulary-new-design-system/"
+      href="https://opensource.creativecommons.org/blog/categories/cc-vocabulary/"
       />
     <SubSectionTitle 
       title="OUR MISSION" 
-      content="Our sole aim is to unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source. Our code will remain to be freely available for anyone and everyone to inspect, modify & use for their own purposes."/>
+      content="Our sole aim is to unite the web facing Creative Commons by providing a cohesive design system and component library under the banner of Creative Commons Open Source. Our code will remain to be freely available to anyone and everyone to inspect, modify & use for their own purposes."/>
     <WhyVocabulary/>
-    <SectionTitle 
+    <SectionTitle
+      id="whatsnew"
       title="SOMETHING NEW COMING UP THIS WEEK?"
       content="Love Vocabulary? Well then, you may not want to miss out on any of our releases!"
-      id="whatsnew" 
-      pathtosvg="releases.svg"
       href="https://github.com/creativecommons/vocabulary/releases"
+      pathtosvg="releases.svg"
       />
     <ReleaseGroup/>
-    <SectionTitle 
+    <SectionTitle
+      id="development"
       title="WE DESIGN & DEVELOP THE COMPONENTS YOU NEED"
       content="Here's a section for you to have a peak into our development process!"
-      id="development"
+      href="https://github.com/creativecommons/vocabulary/blob/master/README.md"
       pathtosvg="designdevelop.svg"
-      href="https://cc-vocabulary.netlify.app/?path=/story/vocabulary-contribution--page"
       />
     <Monorepo/>
     <PackageGroup/>
-    <SectionTitle 
+    <SectionTitle
+      id="about"
       title="WANT TO KNOW MORE ABOUT US? COME, SAY HI!"
       content="Would you like to get to know more about Vocabulary and the team behind it? We welcome your contributions!"
-      id="about"
+      href="https://opensource.creativecommons.org/community/"
       pathtosvg="team.svg"
-      href="https://creativecommons.slack.com/"
       />
     <SubSectionTitle 
       title="OUR JOURNEY" 
-      content="Oh boy! We've come a long way to get here! Vocabulary started off as a project with the aim to build something that would unify the webface for organisations powered by Creative Commons. It has now matured into a well equipped & rather pretty looking library! (PS: This site is built using CC-Vocabulary!)"/>
+      content="Oh boy! We've come a long way to get here! Vocabulary started off as a project with the aim to build something that would effectively unify the web facing front for organisations powered by Creative Commons. It has now transformed into a mature & well equipped library. (PS: This site is built using CC-Vocabulary!)"/>
     <PostStatisticGroup/>
     <Footer/>
   </div>
@@ -56,30 +56,29 @@
 
 <script>
 import '@creativecommons/vocabulary/css/vocabulary.css'
-import '@creativecommons/vocabulary/js/vocabulary.js'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Monorepo from './components/Monorepo'
 import PackageGroup from './components/PackageGroup'
+import PostStatisticGroup from './components/PostStatisticGroup'
+import ReleaseGroup from './components/ReleaseGroup'
 import SectionTitle from './components/SectionTitle'
 import SubSectionTitle from './components/SubSectionTitle'
 import WhyVocabulary from './components/WhyVocabulary'
-import ReleaseGroup from './components/ReleaseGroup'
-import PostStatisticGroup from './components/PostStatisticGroup'
 
 export default {
   name: 'App',
   components: {
     Header,
-    SectionTitle,
-    Monorepo,
-    SubSectionTitle,
-    PackageGroup,
-    WhyVocabulary,
     Footer,
+    Monorepo,
+    PackageGroup,
+    PostStatisticGroup,
     ReleaseGroup,
-    PostStatisticGroup
+    SectionTitle,
+    SubSectionTitle,
+    WhyVocabulary,
   }
 }
 </script>
