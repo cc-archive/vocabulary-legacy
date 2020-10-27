@@ -25,8 +25,7 @@ export default create({
   textInverseColor: 'rgb(0, 0, 0)',
 
   // Branding
-  brandTitle: 'Vocabulary',
-  brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
-  brandImage: 'https://svgshare.com/i/Qq2.svg'
-  
+  brandTitle: 'Fonts',
+  brandUrl: 'https://opensource.creativecommons.org/cc-fonts',
+  brandImage: 'https://svgshare.com/i/QvR.svg'
 })
