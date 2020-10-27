@@ -53,10 +53,12 @@ export const footer = () => `
           <div class="column is-two-thirds">
             <div class="subscription">
               <h5 class="b-header">Subscribe to our newsletter</h5>
-              <form class="newsletter">
-                <label for="email" class="is-sr-only">Email to subscribe</label>
-                <input type="text" id="email" class="input" placeholder="Your email">
-                <input type="submit" value="subscribe" class="button small">
+              <form action="https://creativecommons.us4.list-manage.com/subscribe/post?u=fd30364b6577b471373d6076c&amp;id=4603fe102a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" novalidate>
+                <label for="mce-EMAIL" class="is-sr-only">Email to subscribe</label>
+                <input type="email" value="" name="EMAIL" class="email input" id="mce-EMAIL" placeholder="Your email" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fd30364b6577b471373d6076c_4603fe102a" tabindex="-1" value=""></div>
+                <input type="submit" value="subscribe" id="mc-embedded-subscribe" class="button small">
               </form>
             </div>
             <div class="attribution margin-top-bigger">
