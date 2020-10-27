@@ -28,5 +28,5 @@ export default create({
   brandTitle: 'Vocabulary',
   brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
   brandImage: 'https://svgshare.com/i/Qq2.svg'
-
+  
 })
