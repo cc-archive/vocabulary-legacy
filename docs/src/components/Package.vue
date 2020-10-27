@@ -3,11 +3,9 @@
     <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">
-            <h4 class="card-title b-header"><a :href="href">{{ name }}</a></h4>
-            <button class="button is-text tiny site-link">
-              <span>Visit site</span>
-              <i class="icon external-link"></i>
-            </button>
+            <h4 class="card-title b-header">
+              <a :href="href">{{ name }}</a>
+            </h4>
             <div class="content">
              {{ content }}
             </div>

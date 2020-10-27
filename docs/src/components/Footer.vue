@@ -4,7 +4,14 @@
     <div class="columns">
       <div class="column is-one-quarter">
         <a href="https://creativecommons.org" aria-label="home" class="main-logo margin-bottom-bigger">
-          <img src="https://creativecommons.org/wp-content/themes/cc/images/cc.logo.white.svg" alt="CC Logo" height="200" width="200"/>
+          <span class="has-text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 304 73">
+              <use href="#logomark"></use>
+            </svg>
+          </span>
         </a>
         <div>
           <address class="margin-bottom-normal">Creative Commons<br/>PO Box 1866, Mountain View CA 94042</address>
@@ -31,10 +38,9 @@
           <div class="column is-full">
             <nav aria-label="footerlinks" class="footer-navigation">
               <ul class="menu">
-                <li><a href="https://opensource.creativecommons.org/blog/entries/" class="menu-item">Blog</a></li>
-                <li><a href="https://opensource.creativecommons.org/community/community-team/" class="menu-item">Community Team</a></li>
-                <li><a href="https://opensource.creativecommons.org/contributing-code/projects/" class="menu-item">Project List</a></li>
-                <li><a href="https://opensource.creativecommons.org/archives/" class="menu-item">Archives</a></li>
+                <li><a href="https://opensource.creativecommons.org/" class="menu-item">Open Source Site</a></li>
+                <li><a href="https://cc-vocabulary.netlify.app" class="menu-item">Documentation</a></li>
+                <li><a href="https://github.com/creativecommons/vocabulary" class="menu-item">Github</a></li>
               </ul>
             </nav>
           </div>

@@ -1,6 +1,6 @@
 <template>
     <div id="carousel">
-        <Carousel :per-page="4" :autoplay='true' :loop='true' :speed=1000 :autoplayTimeout=4000>
+        <Carousel :per-page="3" :autoplay='true' :loop='true' :speed=1000 :autoplayTimeout=4000 :scrollPerPage='false'>
             <Slide v-for="(item,index) in releaseList" :key="index">
                 <Release :releaseItem="item"/>
             </Slide>
@@ -35,7 +35,7 @@ export default {
         fetch('https://api.github.com/repos/creativecommons/vocabulary/releases')
         .then(response => response.json())
         .then(data => {
-            this.releaseList=data
+            this.releaseList=data.splice(0,10)
         });
     }
 }

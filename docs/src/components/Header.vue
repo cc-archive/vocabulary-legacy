@@ -3,12 +3,12 @@
   <header>
       <nav class="navbar">
         <div class="navbar-brand">
-          <a class="has-text-black" href="/">
-            <img
-              alt="Vocabulary logo"
-              src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
+          <div class="has-text-black">
+            <img 
+              src="https://unpkg.com/@creativecommons/vocabulary@2020.9.4/assets/logos/products/vocabulary.svg"
+              alt="vocabulary logo"
               />
-            </a>
+          </div>
           <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -28,6 +28,7 @@
             </a>
             <a class="navbar-item" href="https://cc-vocabulary.netlify.app" target="_blank">
               Documentation
+              <i class="icon external-link"></i>
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank">
                 <i class="icon github"></i>
