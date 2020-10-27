@@ -80,9 +80,6 @@
         &:hover {
           background-color: lighten($color-dark-gray, 10);
         }
-        &:focus {
-          outline: 1px solid $color-white;
-        }
       }
     }
   }
@@ -95,6 +92,10 @@
     .donate {
       margin-top: $space-big;
       color: $color-black;
+
+      &:focus {
+          box-shadow: 0 0 0 2px $color-white;
+        }
 
       svg {
         margin-right: 1rem;
