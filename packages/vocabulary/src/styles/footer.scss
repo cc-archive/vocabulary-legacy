@@ -15,6 +15,10 @@
       text-decoration: none;
     }
   }
+  
+  .buttons:focus {
+    box-shadow: 0 0 0 2px $color-white;
+  }
 
   .main-logo {
     display: block;
@@ -92,10 +96,6 @@
     .donate {
       margin-top: $space-big;
       color: $color-black;
-
-      &:focus {
-          box-shadow: 0 0 0 2px $color-white;
-        }
 
       svg {
         margin-right: 1rem;
