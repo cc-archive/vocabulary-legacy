@@ -30,6 +30,4 @@ export default create({
   brandTitle: "Vue Vocabulary",
   brandUrl: "https://opensource.creativecommons.org/cc-vue-vocabulary",
   brandImage: vocabularySvg,
-
 });
-
