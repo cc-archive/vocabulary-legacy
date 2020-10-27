@@ -64,13 +64,13 @@ export const header = (color) => `<header>
           <div class="tabs-nav">
             <div class="tabs">
               <ul>
-                <li class="menu is-active"><a>Menu</a>
+                <li class="menu"><a>Menu</a>
                 </li>
-                <li class="explore-tab"><a>Explore Creative Commons</a></li>
+                <li class="explore-tab is-active"><a>Explore Creative Commons</a></li>
               </ul>
             </div>
             <div class="tabs-content">
-              <div class="tabs-panel is-active">
+              <div class="tabs-panel">
                 <div class="navbar-end">
                   <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
@@ -80,12 +80,12 @@ export const header = (color) => `<header>
                       <a class="navbar-item">Item 3</a>
                     </div>
                   </div>
-                  <a class="navbar-item">
+                  <a class="navbar-item no-dropdown">
                     No dropdown
                   </a>
                 </div>
               </div>
-              <div class="tabs-panel explore"></div>
+              <div class="tabs-panel explore is-active"></div>
             </div> 
           </div>
           <div class="navbar-end main-nav">

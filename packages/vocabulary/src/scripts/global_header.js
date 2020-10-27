@@ -49,13 +49,13 @@ class GlobalHeader {
       })
     ])
 
-    const visitSiteColumn = h('div', ['column'], [
+    const visitSiteColumn = h('div', ['column', 'visit-button-cover'], [
       // Visit CC site section
-      h('aside', ['donate-section'], [
+      h('aside', ['visit-button-section'], [
         // Button
         h('a', ['button', 'small', 'donate'], [
           document.createTextNode(VISIT_SITE_BUTTON_TEXT),
-          h('i', ['icon', 'external-link', 'margin-left-small', 'is-size-5', 'padding-top-smaller'])
+          h('i', ['icon', 'external-link', 'margin-left-small', 'is-size-6', 'padding-top-smaller'])
         ], element => {
           element.setAttribute('href', CC_ORG_URL)
           element.setAttribute('target', '_blank')
