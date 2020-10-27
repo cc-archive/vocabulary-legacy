@@ -11,6 +11,7 @@
 			max-height: 60rem;
 			padding-top: $space-big;
 			padding-bottom: $space-big;
+			visibility: visible;
 		}
 	}
 	.open-tab {
@@ -28,6 +29,7 @@
 		padding-bottom: 0;
 		overflow: hidden;
 		transition: all 1s ease;
+		visibility: hidden;
 
 		.global-header-header {
 			padding-top: $space-normal;
