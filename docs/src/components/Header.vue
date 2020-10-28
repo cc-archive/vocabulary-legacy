@@ -41,8 +41,6 @@
 </template>
 
 <script>
-import '@creativecommons/vocabulary/js/vocabulary.js'
-
 export default {
     name: 'Header',
 }

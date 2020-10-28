@@ -32,6 +32,8 @@
 <script>
 export default {
     name: 'Release',
-    props: ['releaseItem']
+    props: [
+      'releaseItem'
+    ]
 }
 </script>

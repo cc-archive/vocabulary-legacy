@@ -21,6 +21,9 @@
 <script>
 export default {
     name:'SubSectionTitle',
-    props: ['title','content']
+    props: [
+      'title',
+      'content'
+    ]
 }
 </script>

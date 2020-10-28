@@ -27,7 +27,12 @@
 
 <script>
 export default {
-    name:'PostStatistic',
-    props:['number','caption','description','href']
+    name: 'PostStatistic',
+    props: [
+      'number',
+      'caption',
+      'description',
+      'href'
+    ]
 }
 </script>

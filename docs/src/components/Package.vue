@@ -36,6 +36,11 @@
 <script>
 export default {
     name: 'Package',
-    props: ['name','href','content','npmlink']
+    props: [
+      'name',
+      'href',
+      'content',
+      'npmlink'
+    ]
 }
 </script>

@@ -10,6 +10,9 @@
 <script>
 export default {
     name:'Step',
-    props: ['number','name']
+    props: [
+        'number',
+        'name'
+    ]
 }
 </script>
