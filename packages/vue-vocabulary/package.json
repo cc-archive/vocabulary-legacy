@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vue-vocabulary",
-  "version": "2020.9.4",
+  "version": "2020.10.1",
   "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -13,7 +13,7 @@
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/vocabulary": "^2020.9.4",
+    "@creativecommons/vocabulary": "^2020.10.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
@@ -65,6 +65,16 @@
     "vue-template-compiler": "^2.6.12"
   },
   "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://www.classy.org/give/308451/#!/donation/checkout"
+    }
+  ],
   "homepage": "https://creativecommons.github.io/vue-vocabulary/",
   "keywords": [
     "ui",
