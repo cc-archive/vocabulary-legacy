@@ -174,7 +174,7 @@ $navbar-breakpoint: $tablet;
 				justify-content: start;
 			}
 			.navbar-menu {
-				height: 5rem;
+				max-height: 5rem;
 				background-color: $white;
 				margin-left: $space-small;
 				flex-direction: column;
@@ -228,16 +228,17 @@ $navbar-breakpoint: $tablet;
 		@include desktop() {
 			display: grid;
 			grid-template-columns: auto 1fr;
-			padding: $space-small $space-xxl $space-big $space-xl;
+			padding: $space-small 7.25rem $space-big 5.25rem;
 			.navbar-brand {
-				padding-top: $space-larger;
+				padding-top: $space-large;
 			}
 			.navbar-menu {
 				.navbar-start {
 					align-items: center;
-					position: static;
-					top: 0;
+					position: relative;
+					top: -0.25rem;
 					column-gap: $space-normal;
+					padding: $space-smaller $space-normal 0;
 					.locale {
 						margin-right: 0;
 					}
@@ -246,6 +247,7 @@ $navbar-breakpoint: $tablet;
 					position: static;
 					top: 0;
 					padding-top: $space-normal;
+					justify-content: flex-end;
 				}
 			}
 		}
@@ -253,6 +255,7 @@ $navbar-breakpoint: $tablet;
 		@include fullhd() {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
+			padding: $space-small 5.75rem $space-big 3.75rem;
 		}
 	}
 	.hide {

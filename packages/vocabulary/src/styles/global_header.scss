@@ -19,11 +19,8 @@
 		display: none;
 		position: absolute;
 		padding: $space-big 0.7rem $space-smaller;
-		// padding: $space-big $space-normal $space-normal;
 		right: 0;
 		bottom: -2rem;
-		//	width: 6.8rem;
-		//	height: 3.3rem;
 		background-color: $black;
 		color: $white;
 		border-radius: 0 0 $space-smaller $space-smaller;
@@ -86,7 +83,7 @@
 						margin-bottom: 0.75rem;
 						text-transform: lowercase;
 						font-family: $family-logo;
-						font-size: $size-4;
+						font-size: $font-size-h5;
 						&:before {
 							content: '';
 							display: inline-block;
@@ -109,7 +106,6 @@
 	@include tablet() {
 		padding-right: $space-larger;
 		padding-left: $space-larger;
-
 		.open-tab {
 			display: block;
 		}
@@ -127,7 +123,7 @@
 				margin-bottom: 0;
 				.main-logo {
 					svg {
-						width: 15rem;
+						width: 13rem;
 					}
 				}
 			}
@@ -156,37 +152,43 @@
 	}
 
 	@include desktop() {
-		.container {
-			margin-bottom: 0;
-		}
+		padding-right: 7.5rem;
+		padding-left: 7.5rem;
 		.open-tab {
 			display: none;
 		}
+		&.is-active {
+			.global-header-content {
+				padding: $space-normal 0rem $space-big;
+			}
+		}
 		.global-header-content {
-			display: grid;
-			grid-gap: $space-normal;
-			grid-template-columns: repeat(2, auto);
-			padding-right: $space-xl;
-			padding-left: $space-xl;
-
+			flex-wrap: nowrap;
+			justify-content: space-between;
 			.global-header-head {
 				display: grid;
 				grid-template-rows: auto auto 1fr;
-				padding-right: $space-xxl;
+				padding-top: $space-big;
 				padding-left: 0;
+				flex: 40%;
 			}
 			.products {
+				flex: 60%;
 				.product-list {
-					grid-gap: 0 $space-bigger;
+					grid-gap: 0 $space-normal;
 				}
 			}
 		}
 	}
 	@include fullhd() {
+		padding-right: $space-xxl;
+		padding-left: $space-xxl;
 		.global-header-content {
-			padding-right: $space-large;
-			padding-left: $space-large;
+			.global-header-head {
+				flex: 30%;
+			}
 			.products {
+				flex: 70%;
 				.product-list {
 					grid-template-columns: repeat(3, auto);
 				}
@@ -198,12 +200,12 @@
 // explore button only
 .explore-button {
 	display: none;
+	font-size: 0.75rem;
+	font-weight: 600;
 	position: relative;
-	padding: $space-large $space-normal 0;
+	padding: $space-big 0.7rem $space-smaller;
 	right: 0;
-	top: -$space-normal;
-	height: 4.5rem;
-	width: 6.8rem;
+	top: -$space-small;
 	background-color: $black;
 	color: $white;
 	border-radius: 0 0 $space-smaller $space-smaller;
