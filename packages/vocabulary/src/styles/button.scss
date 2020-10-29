@@ -19,9 +19,19 @@ $button-family: $family-secondary;
     text-decoration: none;
   }
 
+  &.disabled {
+    background-color: $color-light-gray;
+    color: $color-dark-gray;
+  }
+
   &.big {
     font-size: 1.75rem;
     padding: calc(#{$space-large} - 0.093rem) $space-large;
+  }
+
+  &.normal {
+    font-size: 1.125rem;
+    padding: $space-small $space-normal;
   }
 
   &.small {
@@ -35,6 +45,11 @@ $button-family: $family-secondary;
     font-size: 1rem;
     text-transform: none;
     height: 2rem;
+  }
+
+  &.border {
+    border-color: $color-dark-gray;
+    background-color: $color-white;
   }
 
   &.tag {
@@ -102,7 +117,7 @@ $button-family: $family-secondary;
   }
 
   &.is-info:hover {
-    background-color: $color-dark-slate-blue;
+    background-color: $color-brighter-dark-slate-blue;
   }
 
   &.donate {
@@ -135,6 +150,9 @@ $button-family: $family-secondary;
     }
     &:focus {
       text-decoration: underline;
+    }
+    &.disabled {
+      color: $color-gray;
     }
   }
 }
