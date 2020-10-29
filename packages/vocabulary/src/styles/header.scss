@@ -140,16 +140,18 @@ $navbar-breakpoint: $tablet;
 					}
 				}
 			}
-			.navbar-menu {
-				&.is-active {
-					display: block;
+			.tabs-nav {
+				.navbar-menu {
+					&.is-active {
+						display: block;
+					}
 				}
 			}
 		}
 
 		@include tablet() {
 			flex-direction: column;
-			padding: $space-normal $space-normal 0;
+			padding: $space-normal 1.7rem 0;
 			background-color: $white;
 			&.is-active {
 				background-color: $white;
@@ -159,19 +161,6 @@ $navbar-breakpoint: $tablet;
 				.logo {
 					width: 12rem;
 					color: $black;
-				}
-			}
-			.navbar-menu {
-				.navbar-start {
-					.locale {
-						select {
-							background-color: $color-lighter-gray;
-							border: 2px solid $color-lighter-gray;
-						}
-						.is-small {
-							font-size: 0.75rem;
-						}
-					}
 				}
 			}
 			.navbar-item,
@@ -185,12 +174,26 @@ $navbar-breakpoint: $tablet;
 				justify-content: start;
 			}
 			.navbar-menu {
+				height: 5rem;
 				background-color: $white;
 				margin-left: $space-small;
+				flex-direction: column;
 				.navbar-start {
 					justify-content: flex-end;
+					margin: 0;
 					position: relative;
 					top: -$space-larger;
+					column-gap: $space-normal;
+					padding: $space-normal 1.25rem 0;
+					.locale {
+						select {
+							background-color: $color-lighter-gray;
+							border: 2px solid $color-lighter-gray;
+						}
+						.is-small {
+							font-size: 0.75rem;
+						}
+					}
 					.donate {
 						display: block;
 					}
@@ -198,23 +201,25 @@ $navbar-breakpoint: $tablet;
 				.tabs-nav {
 					display: none;
 				}
-				.navbar-end .main-nav {
+				.main-nav {
 					display: block;
 				}
 				.navbar-end {
 					&.main-nav {
 						display: flex;
 					}
+					margin: 0;
 					justify-content: flex-start;
 					position: relative;
 					top: -$space-bigger;
 					.navbar-dropdown .navbar-item {
 						text-transform: uppercase;
 						font-weight: bold;
-						font-size: $font-size-h5;
+						font-size: 1.063rem;
 					}
 					.navbar-item {
 						margin-left: 0;
+						font-size: 1.063rem;
 					}
 				}
 			}

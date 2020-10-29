@@ -18,14 +18,17 @@
 	.open-tab {
 		display: none;
 		position: absolute;
-		padding: $space-big $space-normal $space-bigger;
+		padding: $space-big 0.7rem $space-smaller;
+		// padding: $space-big $space-normal $space-normal;
 		right: 0;
-		bottom: -3.3rem;
-		width: 6.8rem;
-		height: 3.3rem;
+		bottom: -2rem;
+		//	width: 6.8rem;
+		//	height: 3.3rem;
 		background-color: $black;
 		color: $white;
 		border-radius: 0 0 $space-smaller $space-smaller;
+		font-size: 0.75rem;
+		font-weight: 600;
 	}
 	.global-header-content {
 		max-height: 0;
@@ -104,15 +107,15 @@
 		}
 	}
 	@include tablet() {
-		.container {
-			margin-bottom: $space-larger;
-		}
+		padding-right: $space-larger;
+		padding-left: $space-larger;
+
 		.open-tab {
 			display: block;
 		}
 		&.is-active {
 			.global-header-content {
-				padding-top: $space-big;
+				padding: $space-big 0.15rem;
 			}
 		}
 		.global-header-content {
@@ -121,18 +124,20 @@
 			.global-header-head {
 				align-items: center;
 				padding-left: $size-7;
+				margin-bottom: 0;
 				.main-logo {
 					svg {
-						width: 16rem;
+						width: 15rem;
 					}
 				}
 			}
 			.global-header-main {
 				margin-top: 0;
 			}
-			.donate-section {
+			.visit-button-section {
 				.donate {
 					text-transform: uppercase;
+					font-size: 1.125rem;
 				}
 			}
 			.products {
@@ -141,6 +146,9 @@
 					grid-template-columns: repeat(2, auto);
 					.product-item {
 						border: none;
+						font-size: $font-size-body-normal;
+						font-weight: normal;
+						margin-bottom: 0;
 					}
 				}
 			}
