@@ -9,8 +9,8 @@ $button-family: $family-secondary;
   border: 0.125rem solid $color-dark-gray;
   color: $color-dark-gray;
   background-color: $color-white;
-  font-size: 1.43rem;
-  padding: calc(#{$space-bigger} - 0.187rem) $space-large;
+  font-size: 1.125rem;
+  padding: $space-small $space-normal;
 
   &:hover {
     background-color: $color-dark-gray;
@@ -19,7 +19,7 @@ $button-family: $family-secondary;
     text-decoration: none;
   }
 
-  &.disabled {
+  &[disabled] {
     background-color: $color-light-gray;
     color: $color-dark-gray;
   }
@@ -29,9 +29,9 @@ $button-family: $family-secondary;
     padding: calc(#{$space-large} - 0.093rem) $space-large;
   }
 
-  &.normal {
-    font-size: 1.125rem;
-    padding: $space-small $space-normal;
+  &.medium {
+    font-size: 1.43rem;
+    padding: calc(#{$space-bigger} - 0.187rem) $space-large;
   }
 
   &.small {
@@ -117,7 +117,7 @@ $button-family: $family-secondary;
   }
 
   &.is-info:hover {
-    background-color: $color-brighter-dark-slate-blue;
+    background-color: $color-dark-slate-blue;
   }
 
   &.donate {
@@ -151,7 +151,7 @@ $button-family: $family-secondary;
     &:focus {
       text-decoration: underline;
     }
-    &.disabled {
+    &[disabled] {
       color: $color-gray;
     }
   }
