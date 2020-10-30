@@ -1,7 +1,7 @@
 <template>
 <div>
   <header>
-      <nav class="navbar">
+      <nav class="navbar container">
         <div class="navbar-brand">
           <div class="has-text-black">
             <img 

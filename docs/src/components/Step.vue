@@ -1,9 +1,9 @@
 <template>
     <li class="step">
-        <a class="link">
+        <div class="link">
             <span class="number is-active">{{ number }}</span>
             <span class="name">{{ name }}</span>
-        </a>
+        </div>
     </li>
 </template>
 

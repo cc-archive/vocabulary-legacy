@@ -1,5 +1,5 @@
 <template>
-    <div id="grp">
+    <div id="grp" class="container">
         <Package 
             name="Fonts" 
             href="https://github.com/creativecommons/vocabulary/tree/master/packages/fonts" 

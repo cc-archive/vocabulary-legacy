@@ -27,7 +27,7 @@
 
 <style scoped>
   #package {
-    width: 27rem;
+    width: 25rem;
     margin: 0.5rem;
     padding: 0.5rem;
   }

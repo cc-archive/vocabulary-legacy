@@ -1,6 +1,5 @@
 <template>
-  <div :id="id">
-    <div class="notification warning">
+    <div class="notification warning" :id="id" style="max-width: 2000px; margin: 0 auto;">
       <span class="notification-container" id="notif-section">
         <h2 class="b-header" id="title-content">{{ title }}</h2>
         <span class="notification-content" id="content">{{ content }}
@@ -10,11 +9,10 @@
             </form>
         </span>
         <span class="icon-container" id="svg-container">
-          <img :src="require(`@/assets/${pathtosvg}`)" alt="svgs" width="55%" height="55%" loading="lazy">
+          <img :src="require(`@/assets/${pathtosvg}`)" alt="svgs" width="200" height="200" loading="lazy">
         </span>
       </span>
-    </div>
-  </div>
+      </div>
 </template>
 
 <style scoped>

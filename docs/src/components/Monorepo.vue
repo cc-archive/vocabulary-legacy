@@ -1,8 +1,8 @@
 <template>
-    <div id="page-section">
+    <div id="page-section"  >
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Vocabulary, a Monorepo?</h2>
-            <span class="content">Does vocabulary really have to be a monorepo?</span>
+            <span class="content">Vocabulary comprises of the Fonts, Vocabulary & Vue-Vocabulary packages.</span>
         </span>
     <div id="point-table">
     <div class="table-of-progress top-container">
@@ -29,7 +29,7 @@
     #page-section {
         border: 3px solid lightgray;
         padding: 2rem;
-        margin: 1rem;
+        margin: 0.5rem;
 
         display: flex;
         flex-direction: row;

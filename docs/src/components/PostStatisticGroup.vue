@@ -1,5 +1,5 @@
 <template>
-    <div id="post-statistic-group">
+    <div id="post-statistic-group" class="container">
       <PostStatistic 
         :number="stars"
         caption="Stars"

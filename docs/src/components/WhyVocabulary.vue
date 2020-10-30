@@ -1,5 +1,5 @@
 <template>
-    <div id="page-section">
+    <div id="page-section" style="margin: 0.5rem;">
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Why Vocabulary?</h2>
         </span>
