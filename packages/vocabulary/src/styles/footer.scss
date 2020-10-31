@@ -3,19 +3,16 @@
 .footer {
 	display: flex;
 	flex-direction: column;
-	row-gap: $space-bigger;
+	row-gap: $space-large;
 	background-color: $color-black;
 	color: $white;
-	padding: $space-large $space-small;
-
+	padding: 3.25rem 0.625rem;
 	a {
 		color: $color-dark-turquoise;
-
 		&:hover {
 			color: $color-dark-turquoise;
 			text-decoration: underline;
 		}
-
 		&.social:hover {
 			text-decoration: none;
 		}
@@ -23,6 +20,9 @@
 
 	.footer-navigation {
 		.menu {
+			display: flex;
+			flex-direction: column;
+			row-gap: $space-larger;
 			li {
 				display: block;
 
@@ -31,11 +31,9 @@
 						padding-left: 0;
 					}
 				}
-
 				.menu-item {
 					display: block;
-					// padding: $space-normal 0 $space-normal;
-					font-size: $font-size-h4;
+					font-size: $font-size-h5;
 					font-style: normal;
 					font-weight: bold;
 				}
@@ -47,29 +45,30 @@
 		h5 {
 			margin-bottom: $space-normal;
 			color: $color-white;
+			font-family: $family-heading;
+			text-transform: uppercase;
+			width: 70%;
 		}
-
 		.newsletter {
 			display: flex;
-			width: 70%;
-
 			.input {
 				background-color: transparent;
 				border-color: $color-dark-gray;
 				color: $color-dark-gray;
-
+				padding: $space-small $space-normal;
 				&::placeholder {
 					color: $color-dark-gray;
 					opacity: 0.8;
 				}
 			}
-
 			.button {
-				margin-left: -1rem;
+				margin-left: -$space-normal;
 				border: none;
 				background-color: $color-dark-gray;
 				color: $color-white;
-
+				text-transform: capitalize;
+				font-family: $family-body;
+				height: $space-large;
 				&:hover {
 					background-color: lighten($color-dark-gray, 10);
 				}
@@ -80,36 +79,68 @@
 	.donate-section {
 		h5 {
 			color: $color-white;
+			font-family: $family-heading;
+			text-transform: uppercase;
+			margin-bottom: $space-smaller;
 		}
-
+		p {
+			font-size: 0.813rem;
+			font-weight: 600;
+		}
 		.donate {
-			margin-top: $space-big;
+			margin-top: $space-normal;
 			color: $color-black;
-
+			font-size: 1.125rem;
 			svg {
-				margin-right: 1rem;
-				width: 2rem;
-				height: 2rem;
+				margin-right: $space-normal;
+				width: $space-bigger;
+				height: $space-bigger;
+			}
+			.icon {
+				line-height: 1.25;
 			}
 		}
 	}
 
 	.footer-logo {
+		font-weight: 600;
+		font-size: 0.813rem;
 		.main-logo {
 			display: block;
-
 			svg {
-				width: 13rem;
+				width: 10.5rem;
 			}
 		}
-
 		address {
 			font-style: normal;
+			margin-bottom: $space-normal;
+		}
+		.mail {
+			display: block;
+		}
+		.socials-cover {
+			display: flex;
+			column-gap: $space-bigger;
+			padding-top: $space-bigger;
+			.social {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.attribution {
+		width: 95%;
+		.caption {
+			font-weight: 600;
+			font-size: 0.813rem;
+		}
+		.icon {
+			font-size: 2rem;
 		}
 	}
 
 	@include tablet() {
-		padding: $space-bigger;
+		padding: 1.75rem 2.25rem;
 		display: grid;
 		grid-template-areas:
 			'nav nav nav'
@@ -118,34 +149,68 @@
 			'. attr attr';
 		grid-template-columns: auto 1fr 1fr;
 		grid-template-rows: repeat(4, auto);
+		row-gap: 1.3rem;
 
 		.footer-navigation {
 			grid-area: nav;
 			.menu {
-				display: flex;
-				justify-content: space-between;
+				flex-direction: row;
+				column-gap: $space-larger;
 			}
 		}
 
 		.subscription {
 			grid-area: sub;
+			.newsletter {
+				width: 75%;
+				.button {
+					text-transform: uppercase;
+					font-size: 1.125rem;
+					font-family: $family-heading;
+				}
+			}
 		}
 
 		.footer-logo {
 			grid-area: logo;
+			font-weight: 400;
+			font-size: $font-size-body-normal;
+			width: 95%;
+			.main-logo {
+				margin-bottom: $space-large;
+			}
+			address {
+				margin-bottom: $space-small;
+			}
+			.mail {
+				margin-bottom: -$space-normal;
+			}
+			.socials-cover {
+				column-gap: $space-big;
+			}
 		}
 
 		.donate-section {
 			grid-area: donate;
+			margin-top: -$space-large;
+			h5 {
+				margin-bottom: $space-small;
+			}
+			p {
+				font-size: $font-size-body-normal;
+			}
 		}
 
 		.attribution {
 			grid-area: attr;
+			width: 100%;
+			margin-top: -$space-large;
+			padding-bottom: $space-big;
 		}
 	}
 
 	@include desktop() {
-		padding: $space-bigger $space-xl;
+		padding: 3.5rem 7.5rem $space-xl;
 		display: grid;
 		grid-template-areas:
 			'nav nav nav . . '
@@ -153,15 +218,72 @@
 			'logo attr attr attr . ';
 		grid-template-columns: auto 1fr 1fr 1fr 1fr;
 		grid-template-rows: repeat(3, auto);
+		row-gap: $space-bigger;
+
+		.subscription {
+			margin-left: -$space-normal;
+			h5 {
+				width: 100%;
+			}
+			.newsletter {
+				width: 95%;
+			}
+		}
+
+		.footer-logo {
+			margin-right: -$space-normal;
+		}
+
+		.attribution {
+			margin-left: -$space-normal;
+		}
+
+		.donate-section {
+			margin-top: 0;
+			margin-left: $space-normal;
+			.donate {
+				font-size: 1.5rem;
+			}
+		}
 	}
 
 	@include fullhd() {
+		padding: $space-large $space-xxl $space-xl;
 		display: grid;
 		grid-template-areas:
-			'logo nav nav nav . '
-			'logo sub sub donate donate'
+			'logo nav nav nav nav '
+			'logo sub sub . donate'
 			'logo attr attr . . ';
-		grid-template-columns: auto 1fr 1fr 1fr 1fr;
+		grid-template-columns: auto 2fr 2fr auto auto;
 		grid-template-rows: repeat(3, auto);
+		column-gap: $space-larger;
+
+		.footer-logo {
+			width: 100%;
+			margin-right: 0;
+			.main-logo {
+				svg {
+					width: 13rem;
+				}
+			}
+		}
+
+		.footer-navigation {
+			margin-top: $space-normal;
+		}
+
+		.subscription {
+			margin-left: 0;
+			width: 90%;
+		}
+
+		.attribution {
+			margin-left: 0;
+			margin-top: -$space-xl;
+		}
+
+		.donate-section {
+			margin-left: 0;
+		}
 	}
 }
