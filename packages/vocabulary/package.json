@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vocabulary",
-  "version": "2020.9.4",
+  "version": "2020.10.1",
   "description": "A cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
+    "@storybook/addon-a11y": "^6.0.26",
     "@storybook/addon-backgrounds": "^5.3.21",
     "@storybook/addon-docs": "^6.0.4",
     "@storybook/addon-knobs": "^6.0.4",
@@ -52,6 +53,16 @@
     "webpack-cli": "^3.3.10"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://www.classy.org/give/308451/#!/donation/checkout"
+    }
+  ],
   "homepage": "https://opensource.creativecommons.org/vocabulary",
   "keywords": [
     "ui",

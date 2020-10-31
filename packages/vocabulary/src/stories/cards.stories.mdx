@@ -3,6 +3,8 @@ import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Cards" />
 
+# Cards
+
 export const content = `<div class="content">
             Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
           </div>`
@@ -69,12 +71,12 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {postVideo('600px','4by3','horizontal')}>
+<Preview mdxSource = {postVideo(600,'','horizontal')}>
   <Story name="PostVideoHorizontal" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
     <div>
-    ${postVideo(600,'4by3','horizontal')}
+    ${postVideo(600,'', 'horizontal')}
     </div>
   `}</Story>
 </Preview>
@@ -142,7 +144,7 @@ style="width: ${width}px;">
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {content}>
+<Preview>
   <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
@@ -155,7 +157,9 @@ style="width: ${width}px;">
           </div>
         </header>
         <div class="card-content">
-         ${content.toString()}
+        <div class="content">
+            Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
+          </div>
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
@@ -211,39 +215,46 @@ style="width: ${width}px;">
   }</Story>
 </Preview>
 
-export const linkCardContent = `<span class="card-content has-bottom-link">
-            <h2 class="card-title">This is a Title of a page or section</h2>
-            <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
-            <span class="link-arrow">Loren ipsum dolor</span>
-          </span>`
+export const linkCard = `<article class="card entry-post link no-border">
+  <a href="#" class="has-background-dark-slate-blue">
+    <span class="card-content has-bottom-link">
+      <h2 class="card-title">This is a Title of a page or section</h2>
+      <span class="content">Description ultrices elementum metus ligula pharetra litora class massa.</span>
+      <span class="link-arrow">Loren ipsum dolor</span>
+    </span>
+  </a>
+</article>`
 
-<Preview mdxSource = {linkCardContent}>
+<Preview mdxSource = {linkCard}>
   <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
     <div style="width: 400px;">
-      <article class="card entry-post link no-border">
-        <a href="#" class="has-background-dark-slate-blue">
-          ${linkCardContent.toString()}
-        </a>
-      </article>
+      ${linkCard.toString()}
     </div>
   `}</Story>
 </Preview>
 
-<Preview mdxSource = {linkCardContent}>
-  <Story name="LinkBorder" parameters={{
+
+export const linkBorderCard = `<article class="card entry-post link">
+  <a href="#">
+    <div class="card-content">
+      <span class="card-pretitle">Short sentence</span>
+      <h2 class="card-title">This is a Title of a page or a section</h2>
+    </div>
+  </a>
+</article>`
+
+<Preview mdxSource = {linkBorderCard}>
+  <Story name="Link Border" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
     <div style="width: 400px;">
-      <article class="card entry-post link">
-        <a href="#">
-           ${linkCardContent.toString()}
-        </a>
-      </article>
+      ${linkBorderCard.toString()}
     </div>
   `}</Story>
 </Preview>
+
 
 <Preview>
   <Story name="Blog entry horizontal" parameters={{
