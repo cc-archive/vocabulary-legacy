@@ -106,6 +106,9 @@ class GlobalHeader {
           document.createTextNode(NAVIGATION_TAB_TEXT)
         ], element => {
           element.setAttribute('href', '#')
+          element.setAttribute('aria-haspopup', 'true')
+          element.setAttribute('aria-expanded', 'false')
+          element.setAttribute('aria-role', 'button')
           openTab = element
         }),
         // Content
