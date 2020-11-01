@@ -11,10 +11,10 @@
         description="Want to contribute? Fork the repository!"
         href="https://github.com/creativecommons/vocabulary"/>
       <PostStatistic
-      :number="watchers"
-      caption="Watchers"
-      description="Want to stay updated with all our activity?"
-      href="https://github.com/creativecommons/vocabulary"/>
+        :number="watchers"
+        caption="Watchers"
+        description="Want to stay updated with all our activity?"
+        href="https://github.com/creativecommons/vocabulary"/>
     </div>
 </template>
 

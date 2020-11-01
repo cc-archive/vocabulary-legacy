@@ -11,7 +11,7 @@
           <div class="content">
             {{ description }}
           </div>
-          <a :href="href" class="read-more">Visit Github</a>
+          <a :href="href" class="read-more" style="color: gray;">Visit Github</a>
         </div>
       </article>
     </div>

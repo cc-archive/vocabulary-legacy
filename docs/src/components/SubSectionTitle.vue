@@ -1,5 +1,5 @@
 <template>
-<div id="sub-section" style="margin: 0.5rem;">
+<div id="sub-section">
   <article class="card entry-post horizontal">
     <div class="card-content with-button">
         <h2 class="card-title">{{ title }}</h2>
@@ -10,6 +10,12 @@
   </article>
 </div>
 </template>
+
+<style scoped>
+  #sub-section {
+    margin: 0.5rem;
+  }
+</style>
 
 <script>
 export default {

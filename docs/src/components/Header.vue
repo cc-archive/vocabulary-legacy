@@ -7,6 +7,8 @@
             <img 
               src="https://unpkg.com/@creativecommons/vocabulary@2020.9.4/assets/logos/products/vocabulary.svg"
               alt="vocabulary logo"
+              width="200"
+              height="200"
               />
           </div>
           <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
@@ -26,11 +28,11 @@
             <a class="navbar-item" href="#about">
               About
             </a>
-            <a class="navbar-item" href="https://cc-vocabulary.netlify.app" target="_blank">
+            <a class="navbar-item" href="https://cc-vocabulary.netlify.app" target="_blank" rel="noopener">
               Documentation
               <i class="icon external-link"></i>
             </a>
-            <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank">
+            <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank" rel="noopener">
                 <i class="icon github"></i>
             </a>    
           </div>

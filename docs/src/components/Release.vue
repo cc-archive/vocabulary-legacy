@@ -8,10 +8,10 @@
         </header>
         <div class="card-content">
           <h4 class="card-title"><a :href="releaseItem.html_url">{{ releaseItem.name }}</a></h4>
-          <div class="content">
+          <div class="content" style="aria-hidden:false;">
             {{ releaseItem.body.length >150 ? releaseItem.body.substring(0,150)+'...' : releaseItem.body }}
           </div>
-          <a :href="releaseItem.html_url" target="blank" class="read-more">Read more</a>
+          <a :href="releaseItem.html_url" target="blank" rel="noopener" class="read-more" style="color: gray;">Read more</a>
         </div>
       </article>
     </div>

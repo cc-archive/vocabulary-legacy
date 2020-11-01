@@ -4,7 +4,7 @@
       <article class="card entry-post vertical project-index">
         <div class="card-content">
             <h4 class="card-title b-header">
-              <a :href="href">{{ name }}</a>
+              <a :href="href" target="_blank" rel="noopener">{{ name }}</a>
             </h4>
             <div class="content">
              {{ content }}
@@ -16,7 +16,7 @@
             <div class="external-links">
               <button class="button is-text tiny">
                 <i class="icon external-link"></i>
-                <a class="link-content" :href="npmlink" target="blank" style="color:gray">Visit npmjs package</a>
+                <a class="link-content" :href="npmlink" target="blank" rel="noopener" style="color:gray">Visit npmjs package</a>
               </button>
             </div>
         </div>
