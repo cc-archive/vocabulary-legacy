@@ -6,8 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import viewports from './viewport'
 import order from './order'
 
-import lighttheme from './theme'
-import darktheme from './theme'
+import { lighttheme, darktheme } from './theme'
 
 import '../dist/css/vocabulary.css'
 
