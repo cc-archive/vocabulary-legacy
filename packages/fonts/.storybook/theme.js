@@ -9,7 +9,7 @@ const base = {
     brandUrl: 'https://opensource.creativecommons.org/cc-fonts',
   }
 
-const lighttheme = create({
+export const lighttheme = create({
     base: 'light',
     colorPrimary: 'rgb(0, 0, 0)',
     appBg: 'rgb(248, 249, 250)',
@@ -21,7 +21,7 @@ const lighttheme = create({
     ...base
   })
 
-const darktheme = create({
+export const darktheme = create({
     base: 'dark',
     colorPrimary: 'rgb(255, 255, 255)',
     appBg: 'rgb(47, 47, 47)',
@@ -32,8 +32,3 @@ const darktheme = create({
     brandImage: 'https://svgshare.com/i/QvR.svg',
     ...base
   })
-
-export default {
-    lighttheme,
-    darktheme
-}

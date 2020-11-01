@@ -2,8 +2,7 @@ import { addParameters } from '@storybook/html'
 
 import order from './order'
 
-import lighttheme from './theme'
-import darktheme from './theme'
+import { lighttheme,darktheme } from './theme'
 
 import '../dist/css/fonts.css'
 import '../dist/css/accidenz_commons.css'
@@ -19,10 +18,10 @@ addParameters({
     ]},
     darkMode: {
       light: { 
-        ...lighttheme 
+        ...lighttheme
       },
       dark: { 
-        ...darktheme 
+        ...darktheme
       },
     },
 })
