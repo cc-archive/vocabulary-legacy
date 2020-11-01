@@ -1,6 +1,6 @@
 <template>
     <div id="carousel">
-        <Carousel :per-page="perPage" :autoplay='true' :loop='true' :speed=1000 :autoplayTimeout=4000 :scrollPerPage='false'>
+        <Carousel :perPageCustom="[[280, 1],[320, 1],[360, 1],[400, 1], [500, 2], [1024, 3], [1199, 4], [2000, 6], [3000, 7]]" :minSwipeDistance="2" :autoplay='true' :loop='true' :scrollPerPage='false'>
             <Slide v-for="(item,index) in releaseList" :key="index">
                 <Release :releaseItem="item"/>
             </Slide>
@@ -37,7 +37,6 @@ export default {
         .then(response => response.json())
         .then(data => {
             this.releaseList=data.splice(0,10)
-            this.perPage=window.innerWidth/550
         });
     }
 }
