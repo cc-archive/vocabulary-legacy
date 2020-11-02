@@ -6,30 +6,31 @@ import i18n from '@/i18n'
 import viewports from './viewport'
 import order from './order'
 
-import lighttheme from './theme'
-import darktheme from './theme'
+import { lightTheme, darkTheme } from './theme'
 
 import '@creativecommons/vocabulary/css/vocabulary.css'
 
 addParameters({
-  options: { storySort: order },
+  options: { 
+  storySort: order,
   backgrounds: {
     default: 'canvas',
     values: [
-      { name: 'canvas', value: '#f5f5f5', default: true },
-      { name: 'white', value: '#ffffff' },
-      { name: 'black', value: '#000000' }
-    ]
+        { name: 'canvas', value: '#f5f5f5', default: true },
+        { name: 'white', value: '#ffffff' },
+        { name: 'black', value: '#000000' }
+      ]
+    }
   },
   viewport: {
     viewports
   },
   darkMode: {
     light: { 
-      ...lighttheme 
+      ...lightTheme 
     },
     dark: { 
-      ...darktheme 
+      ...darkTheme 
     },
   },
 })
