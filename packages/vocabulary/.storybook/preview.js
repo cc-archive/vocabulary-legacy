@@ -29,8 +29,8 @@ addParameters({
       },
       dark: {
         ...darkTheme 
-      },
-    },
+      }
+    }
 })
 
 addDecorator(withDesign)

@@ -1,6 +1,7 @@
 import { create } from '@storybook/theming'
 
-import vocabularySvg from "../src/assets/logos/products/vocabulary.svg";
+import vocabularySvg from '../src/assets/logos/products/vocabulary.svg'
+import vocabularySvgInverted from '../src/assets/logos/products/vocabulary_inverted.svg'
 
 const base = {
     colorSecondary: 'rgb(251, 119, 41)',
@@ -8,7 +9,7 @@ const base = {
     fontBase: '"Source Sans Pro", sans-serif',
     fontCode: '"Fira Code", monospace',
     brandTitle: 'Vocabulary',
-    brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary',
+    brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary'
   }
 
 export const lightTheme = create({
@@ -31,6 +32,6 @@ export const darkTheme = create({
     barBg: 'rgb(47, 47, 47)',
     textColor: 'rgb(255, 255, 255)',
     textInverseColor: 'rgb(0, 0, 0)',
-    brandImage: vocabularySvg,
+    brandImage: vocabularySvgInverted,
     ...base
   })

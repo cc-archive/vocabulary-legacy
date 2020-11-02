@@ -23,6 +23,6 @@ addParameters({
       },
       dark: {
         ...darkTheme
-      },
-    },
+      }
+    }
 })
