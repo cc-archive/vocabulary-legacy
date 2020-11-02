@@ -12,6 +12,9 @@ $card-header-shadow: none;
         }
         .card-content {
             padding: $space-big $space-bigger;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
             .card-title {
                 text-transform: none;
                 line-height: 1.6rem;
