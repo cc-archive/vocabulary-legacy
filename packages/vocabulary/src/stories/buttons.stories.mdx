@@ -31,8 +31,8 @@ export const buttonDonateClass = (classes, el = 'button', href='') => {
  Button</${el}>`
 }
 
-Buttons are created by adding the `.button` class to a `<button>` or an `<a>` element.
-By default, buttons are of `normal` size.
+To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
+By default, buttons are of `normal` size and `primary` theme.
 
 <Preview mdxSource={buttonSources([''])}>
   <Story name="Button" height="100px" parameters={{
@@ -54,17 +54,7 @@ You can customize the size of buttons with the `.big`, `.medium`, `.normal`, `.s
   </Story>
 </Preview>
 
-You can also combine other classes such as `.is-primary` and `.donate` with the aforementioned size classes.
-
-export const primarySizes = ['is-primary big', 'is-primary medium', 'is-primary normal', 'is-primary small', 'is-primary tiny']
-
-<Preview mdxSource={buttonSources(primarySizes)}>
-  <Story name="ButtonPrimarySizes" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{
-    buttonSources(primarySizes)
-  }</Story>
-</Preview>
+You can also combine other classes such as `.donate` with the aforementioned size classes.
 
 export const donateButtonSizes = () => {
   return ['big', 'medium', 'normal', 'small']
@@ -79,9 +69,9 @@ export const donateButtonSizes = () => {
   </Story>
 </Preview>
 
-Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning` and `.is-danger`.
+Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning`, `.is-danger`, and `is-border`.
 
-export const feedbackClasses = ['is-success', 'is-info', 'is-warning', 'is-danger']
+export const feedbackClasses = ['is-success', 'is-info', 'is-warning', 'is-danger', 'is-border']
 
 <Preview mdxSource={buttonSources(feedbackClasses, true)}>
   <Story name="ButtonFeedbackTypes" height="100px" parameters={{
