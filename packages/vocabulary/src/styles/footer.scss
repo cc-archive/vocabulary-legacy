@@ -2,7 +2,7 @@
   background-color: $color-black;
   color: $white;
   padding: $space-large 0;
-
+  --button-focus-outline: #fff;
   a {
     color: $color-dark-turquoise;
 
@@ -64,7 +64,7 @@
         background-color: transparent;
         border-color: $color-dark-gray;
         color: $color-dark-gray;
-        
+
         &::placeholder {
           color: $color-dark-gray;
           opacity: 0.8;

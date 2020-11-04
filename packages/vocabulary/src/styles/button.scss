@@ -6,17 +6,22 @@ $button-family: $family-secondary;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 0;
-  border: 0.125rem solid $color-dark-gray;
-  color: $color-dark-gray;
-  background-color: $color-white;
+  background-color: $color-tomato;
+  color: var(--button-color, #fff);
+  border: 0.125rem solid var(--button-border-color, transparent);
   font-size: 1.125rem;
   padding: $space-small $space-normal;
 
-  &:hover {
-    background-color: $color-dark-gray;
-    border-color: $color-dark-gray;
-    color: $color-white;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background-color: $color-brighter-tomato;
     text-decoration: none;
+    border-color: transparent;
+  }
+  &:focus, &:focus:not(:active) {
+    box-shadow: 0 0 0 0.125em var(--button-focus-outline, rgba(226,54,0,.25));
   }
 
   &[disabled] {
@@ -45,11 +50,6 @@ $button-family: $family-secondary;
     font-size: 1rem;
     text-transform: none;
     height: 2rem;
-  }
-
-  &.border {
-    border-color: $color-dark-gray;
-    background-color: $color-white;
   }
 
   &.tag {
@@ -108,16 +108,39 @@ $button-family: $family-secondary;
     }
   }
 
-  &.is-primary:hover {
-    background-color: $color-brighter-tomato;
+  &.is-border {
+    border: 0.125rem solid $color-dark-gray;
+    color: $color-dark-gray;
+    background-color: $color-white;
+    &:hover, &:active {
+      background-color: $color-dark-gray;
+      border-color: $color-dark-gray;
+      color: $color-white;
+    }
+    &:focus {
+      --button-focus-outline: rgb(176, 176, 176);
+    }
   }
 
-  &.is-success:hover {
-    background-color: $color-brighter-forest-green;
+  &.is-primary {
+    --button-focus-outline: #{$color-lighter-gray};
+    &:hover, &:focus, &:active {
+      background-color: $color-brighter-tomato;
+    }
   }
 
-  &.is-info:hover {
-    background-color: $color-dark-slate-blue;
+  &.is-success {
+    --button-focus-outline: #{$color-lighter-gray};
+    &:hover, &:focus, &:active {
+      background-color: $color-brighter-forest-green;
+    }
+  }
+
+  &.is-info {
+    --button-focus-outline: #{$color-lighter-gray};
+    &:hover, &:focus, &:active {
+      background-color: $color-dark-slate-blue;
+    }
   }
 
   &.donate {
@@ -125,7 +148,7 @@ $button-family: $family-secondary;
     border-color: $color-gold;
     color: $color-black;
 
-    &:hover {
+    &:hover, &:active, &:focus {
       background-color: $color-brighter-gold;
       border-color: $color-brighter-gold;
       color: $color-black;
