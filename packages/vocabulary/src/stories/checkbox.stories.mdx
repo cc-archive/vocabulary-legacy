@@ -7,9 +7,29 @@ import { figmaConfig } from './helpers'
 
 export const checkboxDiv = () => `<h3>Checkbox</h3>
 <div class="checkbox-container" style="display:flex;flex-direction:column;">
-  <label class="checkbox"><input type="checkbox">Option A</label>
-  <label class="checkbox"><input type="checkbox" checked>Option B</label>
-  <label class="checkbox"><input type="checkbox" disabled>Option C</label>
+  <label class="checkbox">
+    <input type="checkbox">
+    <span class="checkbox-label">Default Option</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" checked>
+    <span class="checkbox-label">Checked Option</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" disabled>
+    <span class="checkbox-label">Disabled Option</span>
+  </label>
+  <label class="checkbox"><input type="checkbox" checked disabled>
+    <span class="checkbox-label">Disabled Checked Option</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" checked>
+    <span class="checkbox-label">This is a long label for testing, for example,
+    agreement with conditions of a license. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    ex ea commodo consequat. </span>
+  </label>
 </div>`
 
 <Preview mdxSource={checkboxDiv()}>
