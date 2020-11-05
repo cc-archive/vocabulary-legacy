@@ -1,0 +1,88 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { IconSet } from "./icon-gallery";
+import {iconGroups} from "../assets/svg";
+
+<Meta title="Vocabulary SVG Icons"/>
+
+# Vocabulary icons
+
+Vocabulary Icons is a set of SVG icons for use in Vocabulary, a cohesive design system to unite the web-facing
+Creative Commons. Some of the icons are taken from  [Font Awesome](https://fontawesome.com).
+
+SVG icons are light-weight and scalable, and offer all the benefits of styling with CSS just like a regular font.
+They are smaller than fonts in size. In addition, you can include in your build only the icons you actually need,
+or even just copy and paste an icon without the long build step. SVG icons are also much more accessible than icon
+fonts, as they don't have a corresponding code-point, and can have semantic titles.
+
+## Usage
+
+You can choose the icons you need from the gallery below. There are three ways you can use the icon:
+
+1. Download the SVG file and use it as any other image file.
+
+2. Copy the path of the SVG icon, and add it in your code like this:
+```
+import ChevronUp from '@creativecommons/fonts/svg/chevron-up.svg?inline'
+<ChevronUp />
+```
+To use this way, you have to configure your webpack loaders.
+In a Nuxt.js app, you can use [Nuxt svg module](https://github.com/nuxt-community/svg-module).
+In a React app, you can configure 'raw-loader', and in a Vue app you can use [Vue svg loader](https://vue-svg-loader.js.org/).
+
+3. Copy the SVG source string, and paste it inline into your code.
+
+## Arrows
+
+### Angles
+
+export const angles = Object.keys(iconGroups.arrows.angles)
+
+<IconSet icons={angles} />
+
+### Carets
+
+export const carets = Object.keys(iconGroups.arrows.carets)
+
+<IconSet icons={angles} />
+
+### Chevrons
+
+export const chevrons = Object.keys(iconGroups.arrows.chevrons)
+
+<IconSet icons={chevrons} />
+
+## CC Icons
+
+### Standard
+
+export const standardCCIcons = Object.keys(iconGroups['cc-licenses'].standard)
+
+<IconSet icons={standardCCIcons} />
+
+### NonStandard
+
+export const nonstandardCC = Object.keys(iconGroups['cc-licenses']["non-standard"])
+
+<IconSet icons={nonstandardCC} />
+
+## Social Media
+
+export const socialMedia = Object.keys(iconGroups['social-media'])
+
+<IconSet icons={socialMedia} />
+
+## Symbols
+
+### Shapes
+
+export const shapes = Object.keys(iconGroups.symbols.shapes)
+
+<IconSet icons={shapes} />
+
+
+### Hieroglyphs
+
+export const hieroglyphs = Object.keys(iconGroups.symbols.hieroglyphs)
+
+<IconSet icons={hieroglyphs} />
+
