@@ -1,0 +1,22 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Checkbox" />
+
+# Checkbox
+
+export const checkboxDiv = () => `<h3>Checkbox</h3>
+<div class="checkbox-container" style="display:flex;flex-direction:column;">
+  <label class="checkbox"><input type="checkbox">Option A</label>
+  <label class="checkbox"><input type="checkbox" checked>Option B</label>
+  <label class="checkbox"><input type="checkbox" disabled>Option C</label>
+</div>`
+
+<Preview mdxSource={checkboxDiv()}>
+  <Story name="Default" height="200px" parameters={{
+    design: figmaConfig('603%3A3')
+  }}>{
+    checkboxDiv()
+  }</Story>
+</Preview>
+

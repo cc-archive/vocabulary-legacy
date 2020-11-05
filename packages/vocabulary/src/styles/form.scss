@@ -150,3 +150,105 @@ $input-size-large: 1.75rem;
     }
   }
 }
+
+.checkbox, .radio {
+  display: flex;
+  align-items: center;
+}
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  label > input[type='checkbox'],
+  label > input[type='radio'] {
+    margin-right: 0.5rem;
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #174EBC;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #174EBC;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    width: 1rem;
+    height: 1rem;
+
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      opacity: var(--o, 0);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      --o: 1;
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+    }
+    &:not(:checked):not(:disabled):hover {
+      --bc: var(--border-hover);
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    }
+  input[type='checkbox'] {
+    border-radius: 0.2rem;
+    &:after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 4px;
+      top: 2px;
+      transform: rotate(var(--r, 20deg));
+    }
+    &:checked {
+      --r: 35deg;
+    }
+  }
+  input[type='radio'] {
+    border-radius: 0.5rem;
+    &:checked::after {
+      background: white;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 0.25rem;
+      left: 3px;
+      top: 3px;
+    }
+  }
+}
