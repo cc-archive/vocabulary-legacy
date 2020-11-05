@@ -1,5 +1,5 @@
 <template>
-    <div id="post-card">
+    <div class="post-card padding-section-margin">
       <article class="card entry-post entry-statistic horizontal">
         <header class="card-header">
           <div class="card-statistic">
@@ -11,17 +11,19 @@
           <div class="content">
             {{ description }}
           </div>
-          <a :href="href" class="read-more" style="color: gray;">Visit Github</a>
+          <a :href="href" class="read-more">Visit Github</a>
         </div>
       </article>
     </div>
 </template>
 
 <style scoped>
-  #post-card {
+  .post-card {
     width: 25rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
+  }
+
+  .read-more {
+    color:gray;
   }
 </style>
 

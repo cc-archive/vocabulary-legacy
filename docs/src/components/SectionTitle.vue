@@ -1,12 +1,12 @@
 <template>
     <div :id="id" class="has-background-black has-text-white padding-top-bigger padding-bottom-bigger">
       <div class="container">
-        <div class="columns content-wrap" style="margin: 1rem;">
+        <div class="columns content-wrap section-margin">
           <div class="column is-three-quarters">
             <h1 class="title is-2 has-text-white">{{ title }}</h1>
             <p>{{ content }}</p><br>
               <button id="know-more-button" class="button is-warning">KNOW MORE</button>
-            <br><br>
+            <br>
           </div>
           <div class="column">
             <center>

@@ -1,5 +1,5 @@
 <template>
-    <div id="post-statistic-group" class="container">
+    <div class="container group">
       <PostStatistic 
         :number="stars"
         caption="Stars"
@@ -17,15 +17,6 @@
         href="https://github.com/creativecommons/vocabulary"/>
     </div>
 </template>
-
-<style scoped>
-    #post-statistic-group {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-</style>
 
 <script>
 import PostStatistic from './PostStatistic'

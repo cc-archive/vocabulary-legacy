@@ -1,23 +1,21 @@
 <template>
-    <div id="carousel">
-        <Carousel :perPageCustom="[[280, 1],[320, 1],[360, 1],[400, 1], [500, 2], [1024, 3], [1199, 4], [2000, 6], [3000, 7]]" :minSwipeDistance="2" :autoplay='true' :loop='true' :scrollPerPage='false'>
-            <Slide v-for="(item,index) in releaseList" :key="index">
-                <Release :releaseItem="item"/>
+    <Carousel 
+        :perPageCustom="[[280, 1],[320, 1],[360, 1],[400, 1], [500, 2], [1024, 3], [1199, 4], [2000, 6], [3000, 7]]"
+        :minSwipeDistance="2"
+        :autoplay='true'
+        :loop='true'
+        :scrollPerPage='false'>
+            <Slide 
+                v-for="(item,index) in releaseList" 
+                :key="index">
+                    <Release :releaseItem="item"/>
             </Slide>
-        </Carousel>
-    </div>
+    </Carousel>
 </template>
 
-<style scoped>
-    #carousel {
-        padding: 0.25rem;
-        margin: 0.25rem;
-    }
-</style>
-
 <script>
-import Release from './Release'
 import { Carousel, Slide } from 'vue-carousel';
+import Release from './Release'
 
 export default {
     name: 'ReleaseGroup',

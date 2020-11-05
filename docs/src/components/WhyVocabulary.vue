@@ -1,17 +1,16 @@
 <template>
-    <div id="page-section" style="margin: 0.5rem;">
+    <div class="page-section">
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Why Vocabulary?</h2>
         </span>
-    <div id="point-table">    
-    <div class="table-of-progress top-container">
-      <ul>
-       <Step number=1 name="Responsive Components"/>
-       <Step number=2 name="Easy to Use & Adapt"/>
-      </ul>
+    <div class="point-table group">    
+      <div class="table-of-progress top-container separator">
+        <ul>
+        <Step number=1 name="Responsive Components"/>
+        <Step number=2 name="Easy to Use & Adapt"/>
+        </ul>
       <br>
     </div>
-    <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
          <Step number=3 name="Extensive Documentation"/>

@@ -1,11 +1,11 @@
 <template>
-    <div id="page-section"  >
+    <div class="page-section">
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Vocabulary, a Monorepo?</h2>
             <span class="content">Vocabulary comprises of the Fonts, Vocabulary & Vue-Vocabulary packages.</span>
         </span>
-    <div id="point-table">
-    <div class="table-of-progress top-container">
+    <div class="point-table group">
+    <div class="table-of-progress top-container separator">
       <ul>
        <Step number=1 name="Better Structure"/>
        <Step number=2 name="Weak Association"/>
@@ -13,7 +13,6 @@
       </ul>
       <br>
     </div>
-    <div style="width:25px;"/>
     <div class="table-of-progress top-container">
         <ul>
          <Step number=4 name="Straightforward Release Process"/>
@@ -26,7 +25,7 @@
 </template>
 
 <style>
-    #page-section {
+    .page-section {
         border: 3px solid lightgray;
         padding: 2rem;
         margin: 0.5rem;
@@ -38,10 +37,7 @@
         background-color: white;
     }
 
-    #point-table {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .point-table {
         justify-content: space-between;
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div id="grp" class="container">
+    <div class="container group">
         <Package 
             name="Fonts" 
             href="https://github.com/creativecommons/vocabulary/tree/master/packages/fonts" 
@@ -20,15 +20,6 @@
         />
     </div>    
 </template>
-
-<style scoped>
-    #grp {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-</style>
 
 <script>
 import Package from './Package'
