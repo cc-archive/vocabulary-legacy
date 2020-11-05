@@ -44,14 +44,26 @@
   </div>
 </template>
 
-<style scoped>
-#sub-section-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+<style>
+  .section-margin {
+    margin: 0.5rem;
+  }
 
-  justify-content: space-evenly;
-}
+  .padding-section-margin {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .separator {
+    margin-right: 1.5rem;
+  }
 </style>
 
 <script>
