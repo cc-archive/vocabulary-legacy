@@ -16,7 +16,9 @@
             :aria-label="$t('browse-page.aria.close')"
             @click="$emit('close')"
           >
-            <i class="icon cross" />
+            <span class="icon has-color-gray is-size-4 is-size-6-touch">
+              <Cross />
+            </span>
           </button>
         </header>
         <slot default />
@@ -27,11 +29,13 @@
 
 <script>
   import { FocusTrap } from 'focus-trap-vue'
+  import Cross from '@creativecommons/fonts/src/assets/svg/symbols/times.svg?inline'
 
   export default {
     name: 'AppModal',
     components: {
-      FocusTrap
+      FocusTrap,
+      Cross
     },
     props: {
       /** Required for titlebar AND close button to show */
@@ -54,59 +58,6 @@
 </script>
 
 <style lang="scss" scoped>
-@import 'bulma/sass/utilities/_all';
-
-.modal {
-  position: relative;
-  margin: 0px auto;
-  max-width: 85vw;
-  max-height: 85vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px 3px;
-  background-color: #fff;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  z-index: 600;
-  background: #00000094;
-}
-
-.has-color-gray {
-  color: rgb(176, 176, 176);
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.close-button {
-  appearance: none;
-  border: none;
-  height: auto;
-  margin: -20px -20px -20px auto;
-  padding: 20px;
-  background-color: transparent;
-  line-height: 1;
-  cursor: pointer;
-  .icon {
-    height: auto;
-  }
-  &:hover {
-    color: rgb(120, 120, 120);
-  }
-}
+@import '~@creativecommons/vocabulary/dist/scss/color.scss';
+@import '~@creativecommons/vocabulary/dist/scss/modal.scss';
 </style>

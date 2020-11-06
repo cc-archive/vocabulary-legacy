@@ -46,8 +46,11 @@
   background-color: transparent;
   line-height: 1;
   cursor: pointer;
+  .has-color-gray {
+    color: #{$color-gray};
+  }
   .icon {
-    display:block;
+    display:inline-block;
     &.is-size-4 {
       height: 1rem;
     }
