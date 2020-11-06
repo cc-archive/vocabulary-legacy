@@ -1,10 +1,11 @@
-import Button from './Button'
+import VButton from './VButton'
 import { sizes, theme } from '@/utils/values'
 import { addDescription } from '@/utils/addDescription'
+import { addSource } from '@/utils/addSource'
 
 export default {
-  title: 'Elements/Button',
-  component: Button,
+  title: 'Elements/VButton',
+  component: VButton,
   argTypes: {
     size: {
       control: { type: 'select', options: sizes }
@@ -17,49 +18,34 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Button },
-  template: '<Button v-bind="$props">Text</Button>'
+  components: { VButton },
+  template: '<VButton v-bind="$props">Text</VButton>'
 })
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    source: {
-      code: `<Button>Text</Button>`
-    }
-  }
-}
+addSource(Default, `<VButton>Text</VButton>`)
 
 export const Theme = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Button },
+  components: { VButton },
   template: `<div style="display: flex; gap: 4px;">
-    <Button v-bind="$props" theme="primary">Primary</Button>
-    <Button v-bind="$props" theme="success">Success</Button>
-    <Button v-bind="$props" theme="info">Info</Button>
+    <VButton v-bind="$props" theme="primary">Primary</VButton>
+    <VButton v-bind="$props" theme="success">Success</VButton>
+    <VButton v-bind="$props" theme="info">Info</VButton>
   </div>`
 })
 addDescription(Theme, 'Buttons can be styled with various colors. The primary button should be used for major site actions. There should rarely be more than one primary button per page.')
 Theme.args = {}
-Theme.parameters = {
-  docs: {
-    source: {
-      code: `<Button theme="primary">Primary</Button>
-<Button theme="success">Success</Button>
-<Button theme="info">Info</Button>`
-    }
-  }
-}
+addSource(Theme, `<VButton theme="primary">Primary</VButton>
+<VButton theme="success">Success</VButton>
+<VButton theme="info">Info</VButton>`)
+
 export const Link = Template.bind({})
 addDescription(Link, 'Buttons with `href` props will be rendered as anchor tags.')
 Link.args = { href: 'https://creativecommons.org', target: '_blank' }
-Link.parameters = {
-  docs: { source: { code: `<Button href="https://creativecommons.org" target: "_blank">Button</Button>` } }
-}
+addSource(Link, `<VButton href="https://creativecommons.org" target: "_blank">Button</VButton>`)
 
 export const Text = Template.bind({})
 addDescription(Text, 'Text buttons lack background color or border.')
 Text.args = { theme: 'text' }
-Text.parameters = {
-  docs: { source: { code: `<Button theme="text">Button</Button>` } }
-}
+addSource(Text, `<VButton theme="text">Button</VButton>`)
