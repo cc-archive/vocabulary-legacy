@@ -1,5 +1,5 @@
 <template>
-    <div class="container group">
+    <div class="container group package-group">
         <Package 
             name="Fonts" 
             href="https://github.com/creativecommons/vocabulary/tree/master/packages/fonts" 
@@ -20,6 +20,12 @@
         />
     </div>    
 </template>
+
+<style scoped>
+    .package-group {
+        justify-content: center;
+    }
+</style>
 
 <script>
 import Package from './Package'

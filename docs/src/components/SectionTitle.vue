@@ -25,7 +25,7 @@
   }
 
   .section-title {
-    min-height: 19rem;
+    min-height: 20rem;
   }
 </style>
 
