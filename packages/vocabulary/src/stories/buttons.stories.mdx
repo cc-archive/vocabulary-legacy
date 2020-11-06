@@ -26,7 +26,7 @@ export const buttonSources = (classes, isDefaultLabel) => {
 
 export const buttonDonateClass = (classes, el = 'button', href='') => {
  classes = classes ? ` ${classes}` : ''
- return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate">
+ return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
  <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
  Button</${el}>`
 }
