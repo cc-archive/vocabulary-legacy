@@ -12,7 +12,7 @@ import Tab from './layouts/Tabs/Tab'
 import Table from './layouts/Table/Table'
 import TableCell from './layouts/Table/TableCell'
 
-import Button from './elements/Button/Button'
+import VButton from './elements/VButton/VButton'
 import DonateButton from './elements/DonateButton/DonateButton'
 
 import Footer from './patterns/Footer/Footer'
@@ -28,7 +28,7 @@ export {
   Table,
   TableCell,
 
-  Button,
+  VButton,
   DonateButton,
 
   Footer,
@@ -46,7 +46,7 @@ export default {
     Vue.component('Table', Table)
     Vue.component('TableCell', TableCell)
 
-    Vue.component('Button', Button)
+    Vue.component('VButton', VButton)
     Vue.component('DonateButton', DonateButton)
 
     Vue.component('Footer', Footer)
