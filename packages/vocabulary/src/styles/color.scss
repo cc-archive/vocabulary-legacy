@@ -4,8 +4,14 @@ $color-gold: rgb(251, 212, 60);
 $color-forest-green: rgb(0, 128, 0);
 $color-dark-turquoise: rgb(5, 181, 218);
 $color-dark-slate-blue: rgb(21, 71, 168);
-$color-brighter-dark-slate-blue: rgb(16, 102, 231); // Also used for interaction
 $color-dark-slate-gray: rgb(51, 51, 51);
+
+//Soft Brand
+$color-soft-tomato: rgb(254, 237, 233);
+$color-soft-gold: rgb(254, 246, 216);
+$color-soft-green: rgb(224, 245, 224);
+$color-soft-turquoise: rgb(223, 246, 252);
+$color-soft-blue: rgb(227, 235, 253);
 
 // Neutral
 $color-dark-gray: rgb(118, 118, 118);
@@ -18,9 +24,10 @@ $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
 
 // Interaction
-$color-brighter-tomato: rgb(255, 105, 51);
-$color-brighter-gold: rgb(245, 212, 0);
-$color-brighter-forest-green: rgb(0, 184, 80);
+$color-brighter-tomato: rgb(224, 77, 3);
+$color-brighter-gold: rgb(248, 204, 44);
+$color-brighter-forest-green: rgb(0, 139, 0);
+$color-brighter-blue: rgb(23, 78, 188);
 
 // Feedback
 $color-dark-success: rgb(0, 128, 0);
@@ -39,7 +46,6 @@ $brand-colors: (
   "forest-green": $color-forest-green,
   "dark-turquoise": $color-dark-turquoise,
   "dark-slate-blue": $color-dark-slate-blue,
-  "brighter-dark-slate-blue": $color-brighter-dark-slate-blue,
   "dark-slate-gray": $color-dark-slate-gray,
 );
 
