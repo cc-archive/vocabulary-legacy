@@ -1,5 +1,5 @@
 <template>
-    <article class="card entry-post entry-event horizontal release-card">
+    <article class="card entry-post entry-event horizontal release-card padding-section-margin">
       <header class="card-header">
         <div class="card-date">
           <span class="day" style="font-size: 2rem;">{{ releaseItem.created_at.substring(0,10) }}</span>
