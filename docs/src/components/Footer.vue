@@ -3,7 +3,7 @@
   <div class="container">
     <div class="columns">
       <div class="column is-one-quarter">
-        <a href="https://creativecommons.org" aria-label="home" class="main-logo margin-bottom-bigger">
+        <a href="https://creativecommons.org" aria-label="home" class="main-logo margin-bottom-bigger" rel="noopener">
           <span class="has-text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -15,8 +15,8 @@
         </a>
         <div>
           <address class="margin-bottom-normal">Creative Commons<br/>PO Box 1866, Mountain View CA 94042</address>
-          <a href="mailto:info@creativecommons.org" class="mail">info@creativecommons.org</a><br/>
-          <a href="tel://+1-415-429-6753" class="phone">+1-415-429-6753</a>
+          <a href="mailto:info@creativecommons.org" class="mail" rel="noopener">info@creativecommons.org</a><br/>
+          <a href="tel://+1-415-429-6753" class="phone" rel="noopener">+1-415-429-6753</a>
         </div>
         <div class="margin-vertical-large">
           <a href="https://www.instagram.com/creativecommons" aria-label="instagram" class="social has-text-white" target="_blank" rel="noopener">
@@ -38,9 +38,9 @@
           <div class="column is-full">
             <nav aria-label="footerlinks" class="footer-navigation">
               <ul class="menu">
-                <li><a href="https://opensource.creativecommons.org/" class="menu-item">Open Source Site</a></li>
-                <li><a href="https://cc-vocabulary.netlify.app" class="menu-item">Documentation</a></li>
-                <li><a href="https://github.com/creativecommons/vocabulary" class="menu-item">Github</a></li>
+                <li><a href="https://opensource.creativecommons.org/" class="menu-item" rel="noopener">Open Source Site</a></li>
+                <li><a href="https://cc-vocabulary.netlify.app" class="menu-item" rel="noopener">Documentation</a></li>
+                <li><a href="https://github.com/creativecommons/vocabulary" class="menu-item" rel="noopener">Github</a></li>
               </ul>
             </nav>
           </div>
@@ -75,7 +75,7 @@
             <aside class="donate-section">
               <h5>Our work relies on you!</h5>
               <p>Help us keep the internet free and open.</p>
-              <a class="button small donate" style="background-color:#FBD43C" href="http://creativecommons.org/donate">
+              <a class="button small donate" style="background-color:#FBD43C" href="http://creativecommons.org/donate" rel="noopener">
                 <i class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller" style="background-color:#FBD43C"></i>
                 Donate now
               </a>

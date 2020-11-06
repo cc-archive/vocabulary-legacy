@@ -11,7 +11,7 @@
               height="200"
               />
           </div>
-          <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
+          <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false" rel="noopener">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -19,13 +19,13 @@
         </div>
         <div class="navbar-menu is-active">
           <div class="navbar-end">
-              <a class="navbar-item" href="#whatsnew">
+              <a class="navbar-item" href="#whatsnew" rel="noopener">
               What's new
             </a>
-            <a class="navbar-item" href="#development">
+            <a class="navbar-item" href="#development" rel="noopener">
               Development
-            </a>  
-            <a class="navbar-item" href="#about">
+            </a>
+            <a class="navbar-item" href="#about" rel="noopener">
               About
             </a>
             <a class="navbar-item" href="https://cc-vocabulary.netlify.app" target="_blank" rel="noopener">
@@ -34,7 +34,7 @@
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank" rel="noopener">
                 <i class="icon github"></i>
-            </a>    
+            </a>
           </div>
         </div>
       </nav>
