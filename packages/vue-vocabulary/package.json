@@ -22,7 +22,10 @@
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
     "core-js": "^3.6.5",
+    "focus-trap-vue": "^1.1.0",
     "lodash": "^4.17.20",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5",
     "twemoji": "^13.0.1",
     "vue": "^2.6.10",
     "vue-i18n": "^8.20.0"
@@ -49,6 +52,7 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.0.6",
+    "bulma": "^0.9.1",
     "chalk": "^4.1.0",
     "eslint": "^7.8.1",
     "eslint-plugin-vue": "^7.0.1",

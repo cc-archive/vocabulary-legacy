@@ -1,5 +1,5 @@
 <template>
-  <component :is="component" type="button" :class="classes" :href="href">
+  <component :is="component" type="button" :class="classes" :href="href" v-on="$listeners">
     <!-- @slot button content -->
     <slot default />
   </component>
