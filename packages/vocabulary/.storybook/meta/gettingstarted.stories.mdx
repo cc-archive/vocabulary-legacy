@@ -1,0 +1,177 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Vocabulary/Getting Started"/>
+
+# Getting Started
+
+We hope you've grasped what `Vocabulary` is all about. Let's now dive straight into building a simple web application with it.
+
+## Preface
+
+You've learnt how to install `Vocabulary` and the various ways of doing the same in the previous section. You're now _almost_ ready to build your first `CC Vocabulary` powered application!
+
+Throughout this tutorial, you will learn the _"how to's"_ and _"how not to's"_ when it comes to using our components. It's really not that difficult, I promise! 
+
+We'll be building a personal blog site and taking you through the process step by step. We don't expect prior experience, but basic coding knowledge in `HTML + CSS + JS` will greatly help. We also recommend using a code editor such as [VS Code]()/[Sublime]()/[Brackets]() etc. with code highlighting and syntax formatting enabled.
+
+## Tutorial - Blog Site
+
+### Step 1 - Create Basic File Structure
+
+Let's start by making a folder named `blog-site` (or whatever name you prefer) and creating 1 file named `index.html` under it. You could name it as per your wish, but we'll stick to these naming conventions in this tutorial for the sake of simplicity.
+
+Your `blog-site/index.html` must contain some basic lines of html code along with the standard CDN imports for vocabulary. You can go ahead and copy paste this small code snippet into your `blog-site/index.html` file:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Peronal Blog Site</title>
+        <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+    </head>
+    <body>
+        <!--Here's where our custom code goes!-->
+        <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js"></script>
+    </body>
+</html>
+```
+
+### Step 2 - Adding Components
+
+The process of adding in components is the same no matter which component you chose to add. This is facilitated by the choice of our [tech stack]() & [StorybookJS]().
+
+Let's start by adding in a `Header` component. Note that the `Header` & the `Footer` have predefined styles applied to them, and there's no real need to explicitly modify them.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Peronal Blog Site</title>
+        <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+    </head>
+    <body>
+        <!--Header code starts here (This is copy pasted!)-->
+        <header>
+            <nav class="navbar">
+              <div class="navbar-brand">
+                <a href="#" class="has-text-black">
+                  <svg
+                    class="logo"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 304 73">
+                    <use href="#logomark"></use>
+                  </svg>
+                </a>
+                <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="#" class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
+                    <div class="navbar-dropdown">
+                      <a href="#" class="navbar-item">Item 1</a>
+                      <a href="#" class="navbar-item">Item 2</a>
+                      <a href="#" class="navbar-item">Item 3</a>
+                    </div>
+                  </div>
+                  <a href="#" class="navbar-item">
+                    No dropdown
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <div style="background-color: rgb(237, 89, 47); height: 200px;"></div>
+        <!--Header code ends here-->
+
+        <!--
+            Here's
+            where
+            our
+            custom
+            code
+            goes
+        -->
+
+        <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js"></script>
+        <!--This script is needed for creating a global header instance and fetching the logo from the CDN-->
+        <script>
+            <!--For the global header-->
+            const globalHeaderInstance = vocabulary.createGlobalHeader()
+            
+            const getFullyQualifiedUrl = (version, path) => {
+            let baseUrl = 'https://unpkg.com/@creativecommons/vocabulary'
+            return `${baseUrl}@${version}/${path}`
+        }
+
+        const patchAssetIntoDom = (path, version = 'latest') => {
+            fetch(getFullyQualifiedUrl(version, path)).then(response => {
+            return response.text()
+            }).then(data => {
+            div.innerHTML = ajax.responseText;
+            div.style.display = 'none';
+            document.body.prepend(div, document.body.childNodes[0]);
+            })
+        }
+
+        patchAssetIntoDom('/assets/logos/cc/logomark.svg');
+        </script>
+    </body>
+</html>
+
+```
+
+Wait. Where did all these lines of code even come from?
+
+### Step 3 - Copy Paste Code for Components (Quite literally)
+
+As developers, we copy & paste a lot. And what better way to provide for that if its crystal clear what needs to be copy pasted?
+
+We use a Storybook addon called `storybook-addon/docs` to display the code for our component. Let's now help you find the relevant code to copy!
+
+1. If you notice, the left column contains an index to all our components. You just need to click on whichever component you want to use in your site.
+[]()
+
+2. You'll now be able to see a live running sample of the component in the `Canvas` Tab. Go ahead and click on the `Docs` tab to view its documentation.
+[]()
+
+3. Along with the component, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that component. You can go ahead and copy paste this into your application! As easy as it should be.
+[]()
+
+### Step 4 - Choosing Components
+
+The blog site looks a bit empty right now. Maybe we should add in a few more compoents!
+
+Let's add in `PostVideoLarge`, `PostQuote` & `BlogEntryHorizontal` to our site. One thing to note here is that we use [Bulma]() (which internally uses [CSS flexbox]()) to structure the site and make it responsive. All of bulma's classes can be freely used in accompaniment with `Vocabulary` classes.
+
+We have a wide variety of components which should satsify all your needs. If you find the need to have another component for any reason whatsoever, be sure to raise an issue over on our [github repository]().
+
+### Step 5 - Logically Structuring the Site
+
+Here's how we've structured the site through the course of this tutorial:
+
+```
+Global Header
+Header
+PostVideoLarge
+PostQuote x3
+BlogEntryHorizontal x3
+Footer
+```
+
+You could structure the site in any way you'd like to, but here's a working sample to play around with:
+
+<iframe width="100%" height="600" src="//jsfiddle.net/nimishbongale/7b94ozac/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+### Step 6 - Deployment
+
+This step isn't mandatory, but we recommend using [Github Pages]() or [Netlify]() to deploy your static site. Another great add-on for the development process would be to use [lite-server]() to enable live relaod of the site while making changes to it. You could also chose to separate the .html, .css & .js files, but we leave that option to the developer to decide.
+
+## Conclusion
+
+We learnt how easy it is to actually use vocabulary components in your site. If you intend to use frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used similarly. 
