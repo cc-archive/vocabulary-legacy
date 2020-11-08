@@ -10,17 +10,17 @@ We hope you've grasped what `Vocabulary` is all about. Let's now dive straight i
 
 You've learnt how to install `Vocabulary` and the various ways of doing the same in the previous section. You're now _almost_ ready to build your first `CC Vocabulary` powered application!
 
-Throughout this tutorial, you will learn the _"how to's"_ and _"how not to's"_ when it comes to using our components. It's really not that difficult!
+Throughout this tutorial, you will learn the _"how to's"_ when it comes to using our components. It's really not that difficult!
 
-We'll be building a personal blog site and taking you through the process step by step. We don't expect prior experience, but basic coding knowledge in `HTML + CSS + JS` will greatly help. We also recommend using a code editor such as [VS Code](https://code.visualstudio.com/) / [Sublime](https://www.sublimetext.com/) / [Brackets](http://brackets.io) etc. with code highlighting and syntax formatting enabled.
+We'll be building a personal blog site and taking you through the process step by step. We don't expect any prior coding experience, but basic knowledge about `HTML + CSS + JS` will greatly help. We also recommend using a code editor such as [VS Code](https://code.visualstudio.com/) / [Sublime](https://www.sublimetext.com/) / [Brackets](http://brackets.io) etc. with code highlighting and syntax formatting enabled.
 
 ## Tutorial - Personal Blog Site
 
 ### Step 1 - Create Basic File Structure
 
-Let's start by making a folder named `blog-site` (or whatever name you prefer) and creating 1 file named `index.html` under it. You could name it as per your wish, but we'll stick to these naming conventions in this tutorial for the sake of simplicity.
+Let's start by making a folder called `blog-site` (or whatever you prefer) and creating 1 file named `index.html` under it. You could name it as per your wish, but we'll stick to these naming conventions for the sake of simplicity.
 
-Your `blog-site/index.html` must contain some basic lines of html code along with the standard CDN imports for vocabulary. You can go ahead and copy paste this small code snippet into your `blog-site/index.html` file:
+Your `blog-site/index.html` must contain some basic lines of html code along with the standard CDN imports for `Vocabulary`. You can go ahead and copy paste this small code snippet into your `blog-site/index.html` file:
 
 ```html
 <!DOCTYPE html>
@@ -36,11 +36,13 @@ Your `blog-site/index.html` must contain some basic lines of html code along wit
 </html>
 ```
 
+You're all set now! You can open this page in your browser by simply double clicking on the `blog-site/index.html` file in your file explorer or just chose to open it in your local browser. If you aren't able to see anything just yet, don't you worry; we're yet to add the magic!
+
 ### Step 2 - Adding Components
 
-The process of adding in components is the same no matter which component you chose to add. This is facilitated by the [StorybookJS](https://storybook.js.org).
+The process of adding components is the same no matter which component you choose to add. This is hugely facilitated by [StorybookJS](https://storybook.js.org).
 
-Let's start by adding in a `Header` component. Note that the `Header` & the `Footer` have predefined styles applied to them, and there's no real need to explicitly modify the same.
+Let's start by adding in a `Global Header` & a `Header` component. Note that the `Global Header`, `Header` & the `Footer` have predefined styles applied, and there's no real need to explicitly modify them.
 
 ```html
 <!DOCTYPE html>
@@ -89,14 +91,7 @@ Let's start by adding in a `Header` component. Note that the `Header` & the `Foo
           <div style="background-color: rgb(237, 89, 47); height: 200px;"></div>
         <!--Header code ends here-->
 
-        <!--
-            Here's
-            where
-            our
-            custom
-            code
-            goes
-        -->
+        <!-- Here's where our custom code goes -->
 
         <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js"></script>
         <!--This script is needed for creating a global header instance and fetching the logo from the CDN-->
@@ -130,17 +125,17 @@ Wait. Where did all these lines of code even come from?
 
 ### Step 3 - Copy Paste Code for Components (Quite literally)
 
-As developers, we copy & paste a lot. And what better way to provide for that if its crystal clear what needs to be copy pasted?
+As developers, we copy & paste a lot. And what better way to provide for that if it's crystal clear what _needs to be copy pasted_?
 
-We use a Storybook addon called [storybook-addon/docs]() to display the code for our component. Let's now help you find the relevant code to copy!
+We use a Storybook addon called [storybook-addon/docs](https://storybook.js.org/docs/react/writing-docs/introduction) to display the code for our component. Let's help you figure out the relevant code to copy paste!
 
-1. If you notice, the left column contains an index to all our components. You just need to click on whichever component you intend to use in your site.
+1. If you notice, the left column contains an index to all our components. You can now search & proceed to click on whichever component you intend to use in your site.
 []()
 
-2. You'll now be able to see a live running sample of the component in the `Canvas` Tab. Go ahead and click on the `Docs` tab to view its documentation.
+2. You'll now be able to see a live running preview sample of the component in the `Canvas` Tab. Go ahead and click on the `Docs` tab to view its documentation.
 []()
 
-3. Along with the component, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that component. You can go ahead and copy paste this into your application! As easy as you like it!
+3. Along with the component & it's documentation, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that chosen component. You can go ahead and copy paste this into your application! As easy as you like!
 []()
 
 ### Step 4 - Choosing Components
@@ -149,11 +144,11 @@ The blog site looks a bit empty right now. Maybe we should add in a few more com
 
 Let's add in `PostVideoLarge`, `PostQuote` & `BlogEntryHorizontal` to our site. One thing to note here is that we use [Bulma](https://bulma.io) (which internally uses [CSS flexbox]()) to structure the site and make it responsive. All of bulma's classes can be freely used in accompaniment with `Vocabulary` classes.
 
-We have a wide variety of components which should satsify all your needs. If you find the need to have another component for any reason whatsoever, feel free to raise an issue over on our [Github repository](https://github.com/creativecommons/vocabulary).
+We have a wide variety of components which should ideally satsify all your needs. If you ever find the need to have another component for any reason whatsoever, feel free to raise an issue over on our [Github repository](https://github.com/creativecommons/vocabulary).
 
 ### Step 5 - Logically Structuring the Site
 
-Here's how we've structured the site through the course of this tutorial:
+Here's how we've structured the site through the course of this tutorial (see working sample below):
 
 ```
 Global Header (mandatory)
@@ -164,14 +159,14 @@ BlogEntryHorizontal x3
 Footer (mandatory)
 ```
 
-You could structure the site in any way you'd like to, but here's a working sample to play around with:
+You could structure the site in any way you'd like to, but here's a sample to play around with:
 
 <iframe width="100%" height="600" src="//jsfiddle.net/nimishbongale/7b94ozac/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Step 6 - Deployment
 
-This step isn't mandatory, but we recommend using [Github Pages]() or [Netlify]() to deploy your static site. Another great add-on for the development process would be to use [lite-server]() to enable live relaod of the site while making changes to it. You could also chose to separate the .html, .css & .js files, but we leave that option to the developer to decide.
+This step is completely upon the developer's wish, but we recommend using [Github Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/) to deploy your static site. Another great add-on for the development process would be [lite-server](https://www.npmjs.com/package/lite-server) to enable live relaod of the site while making changes to it. You could also chose to separate the `.html`, `.css` & `.js` files, but again we leave that choice to the developer.
 
 ## Conclusion
 
-We learnt how easy it is to actually use vocabulary components in your site. If you intend to use frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used similarly. The changes would only be to the CSS import path, because you no longer have to fetch it via the CDN. 
+We learnt how easy it is to actually use `Vocabulary` components in your site. If you intend on using frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used accordingly. The changes would only be to the CSS import path, because you no longer have to fetch it via the CDN. 
