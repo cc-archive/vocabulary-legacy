@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 
-<Meta title="Vocabulary/Getting Started"/>
+<Meta title="Vocabulary/Getting Started" />
 
 # Getting Started
 
@@ -10,7 +10,7 @@ We hope you've grasped what `Vocabulary` is all about. Let's now dive straight i
 
 You've learnt how to install `Vocabulary` and the various ways of doing the same in the previous section. You're now _almost_ ready to build your first `CC Vocabulary` powered application!
 
-Throughout this tutorial, you will learn the _"how to's"_ and _"how not to's"_ when it comes to using our components. It's really not that difficult, I promise! 
+Throughout this tutorial, you will learn the _"how to's"_ and _"how not to's"_ when it comes to using our components. It's really not that difficult!
 
 We'll be building a personal blog site and taking you through the process step by step. We don't expect prior experience, but basic coding knowledge in `HTML + CSS + JS` will greatly help. We also recommend using a code editor such as [VS Code]()/[Sublime]()/[Brackets]() etc. with code highlighting and syntax formatting enabled.
 
@@ -38,9 +38,9 @@ Your `blog-site/index.html` must contain some basic lines of html code along wit
 
 ### Step 2 - Adding Components
 
-The process of adding in components is the same no matter which component you chose to add. This is facilitated by the choice of our [tech stack]() & [StorybookJS]().
+The process of adding in components is the same no matter which component you chose to add. This is facilitated by the choice of our [Tech Stack]() & [StorybookJS]().
 
-Let's start by adding in a `Header` component. Note that the `Header` & the `Footer` have predefined styles applied to them, and there's no real need to explicitly modify them.
+Let's start by adding in a `Header` component. Note that the `Header` & the `Footer` have predefined styles applied to them, and there's no real need to explicitly modify the same.
 
 ```html
 <!DOCTYPE html>
@@ -134,13 +134,13 @@ As developers, we copy & paste a lot. And what better way to provide for that if
 
 We use a Storybook addon called `storybook-addon/docs` to display the code for our component. Let's now help you find the relevant code to copy!
 
-1. If you notice, the left column contains an index to all our components. You just need to click on whichever component you want to use in your site.
+1. If you notice, the left column contains an index to all our components. You just need to click on whichever component you intend to use in your site.
 []()
 
 2. You'll now be able to see a live running sample of the component in the `Canvas` Tab. Go ahead and click on the `Docs` tab to view its documentation.
 []()
 
-3. Along with the component, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that component. You can go ahead and copy paste this into your application! As easy as it should be.
+3. Along with the component, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that component. You can go ahead and copy paste this into your application! As easy as you like it!
 []()
 
 ### Step 4 - Choosing Components
@@ -149,19 +149,19 @@ The blog site looks a bit empty right now. Maybe we should add in a few more com
 
 Let's add in `PostVideoLarge`, `PostQuote` & `BlogEntryHorizontal` to our site. One thing to note here is that we use [Bulma]() (which internally uses [CSS flexbox]()) to structure the site and make it responsive. All of bulma's classes can be freely used in accompaniment with `Vocabulary` classes.
 
-We have a wide variety of components which should satsify all your needs. If you find the need to have another component for any reason whatsoever, be sure to raise an issue over on our [github repository]().
+We have a wide variety of components which should satsify all your needs. If you find the need to have another component for any reason whatsoever, feel free to raise an issue over on our [Github repository]().
 
 ### Step 5 - Logically Structuring the Site
 
 Here's how we've structured the site through the course of this tutorial:
 
 ```
-Global Header
-Header
+Global Header (mandatory)
+Header (mandatory)
 PostVideoLarge
 PostQuote x3
 BlogEntryHorizontal x3
-Footer
+Footer (mandatory)
 ```
 
 You could structure the site in any way you'd like to, but here's a working sample to play around with:
@@ -174,4 +174,4 @@ This step isn't mandatory, but we recommend using [Github Pages]() or [Netlify](
 
 ## Conclusion
 
-We learnt how easy it is to actually use vocabulary components in your site. If you intend to use frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used similarly. 
+We learnt how easy it is to actually use vocabulary components in your site. If you intend to use frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used similarly. The changes would only be to the CSS import path, because you no longer have to fetch it via a CDN. 
