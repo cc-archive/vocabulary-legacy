@@ -13,6 +13,7 @@ trap '_es=${?};
 npm run build
 cp package.json dist/
 cp ../../README.md dist/
+sed -i -e 's/say, fonts/here, fonts/' dist/README.md
 cp LICENSE dist/
 
 cd dist
