@@ -16,5 +16,5 @@ cp ../../README.md dist/
 sed -i -e 's/say, fonts/here, vocabulary/' -e 's/cd packages\/fonts/cd packages\/vocabulary/' dist/README.md
 cp LICENSE dist/
 
-# cd dist
-# npm publish --access public
+cd dist
+npm publish --access public
