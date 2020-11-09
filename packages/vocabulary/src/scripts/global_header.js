@@ -88,7 +88,7 @@ class GlobalHeader {
       })
     ])
 
-    // OpenTab 
+    // OpenTab
     const openTab = h('button', ['open-tab'], [document.createTextNode(NAVIGATION_TAB_TEXT)])
 
     const mainContainer = h('header', ['cc-global-header'], [
@@ -104,8 +104,8 @@ class GlobalHeader {
           h('div', ['columns', 'is-multiline', 'global-header-main'], [
             productsColumn
           ])
-        ])
-      ,openTab])
+        ]),
+        openTab])
     ])
     openTab.addEventListener('click', event => {
       event.preventDefault()
