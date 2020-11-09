@@ -18,14 +18,20 @@
 	.open-tab {
 		display: none;
 		position: absolute;
-		padding: $space-big 0.7rem $space-smaller;
+		padding: $space-normal 0.7rem $space-smaller;
 		right: 0;
-		bottom: -2rem;
 		background-color: $black;
 		color: $white;
 		border-radius: 0 0 $space-smaller $space-smaller;
 		font-size: 0.75rem;
 		font-weight: 600;
+		border: 0;
+		&:hover {
+			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+		}
 	}
 	.global-header-content {
 		max-height: 0;
@@ -117,6 +123,7 @@
 		.global-header-content {
 			display: flex;
 			flex-direction: row;
+			margin-bottom: 0;
 			.global-header-head {
 				align-items: center;
 				padding-left: $size-7;
@@ -205,12 +212,17 @@
 	position: relative;
 	padding: $space-big 0.7rem $space-smaller;
 	right: 0;
-	top: -$space-small;
+	top: -0.45rem;
 	background-color: $black;
 	color: $white;
 	border-radius: 0 0 $space-smaller $space-smaller;
+	border: 0;
 	&:hover {
 		color: $white;
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
 	}
 	@include desktop() {
 		display: block;

@@ -88,18 +88,13 @@ class GlobalHeader {
       })
     ])
 
-    let openTab = null
+    // OpenTab 
+    const openTab = h('button', ['open-tab'], [document.createTextNode(NAVIGATION_TAB_TEXT)])
+
     const mainContainer = h('header', ['cc-global-header'], [
       h('div', ['container'], [
-        // Open tab
-        h('a', ['open-tab'], [
-          document.createTextNode(NAVIGATION_TAB_TEXT)
-        ], element => {
-          element.setAttribute('href', '#')
-          openTab = element
-        }),
         // Content
-        h('div', ['columns', 'is-multiline', 'is-mobile', 'global-header-content'], [
+        h('div', ['columns', 'is-multiline', 'global-header-content'], [
           // header section
           h('div', ['columns', 'is-multiline', 'global-header-head'], [
             headerSection,
@@ -110,7 +105,7 @@ class GlobalHeader {
             productsColumn
           ])
         ])
-      ])
+      ,openTab])
     ])
     openTab.addEventListener('click', event => {
       event.preventDefault()
@@ -118,17 +113,14 @@ class GlobalHeader {
     })
 
     // Creates a seperate explore button
-    const exploreButton = h('a', ['explore-button'], [document.createTextNode(NAVIGATION_TAB_TEXT)
-    ], element => {
-      element.setAttribute('href', '#')
-    })
+    const exploreButton = h('button', ['explore-button'], [document.createTextNode(NAVIGATION_TAB_TEXT)
+    ])
     exploreButton.addEventListener('click', event => {
       event.preventDefault()
       mainContainer.classList.toggle('is-active')
     })
 
     // queries the DOM if default header is used with global header
-    const exploreTab = document.querySelector('.explore-tab')
     const navbar = document.querySelector('.navbar')
     const navBarStart = document.querySelector('.navbar-start')
     const explorePanel = document.querySelector('.explore')
@@ -139,10 +131,7 @@ class GlobalHeader {
     function mediaQueryResponse (e) {
       if (e.matches) {
         explorePanel.append(mainContainer)
-        exploreTab.addEventListener('click', event => {
-          event.preventDefault()
-          mainContainer.classList.toggle('is-active')
-        })
+        mainContainer.classList.add('is-active')
       } else {
         document.body.prepend(mainContainer)
         navBarStart.append(exploreButton)

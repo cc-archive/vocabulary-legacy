@@ -184,7 +184,7 @@ $navbar-breakpoint: $tablet;
 					position: relative;
 					top: -$space-larger;
 					column-gap: $space-normal;
-					padding: $space-normal 1.25rem 0;
+					padding: $space-small 1.25rem 0;
 					.locale {
 						select {
 							background-color: $color-lighter-gray;
@@ -228,7 +228,7 @@ $navbar-breakpoint: $tablet;
 		@include desktop() {
 			display: grid;
 			grid-template-columns: auto 1fr;
-			padding: $space-small 7.25rem $space-big 5.25rem;
+			padding: 0 7.25rem $space-big 5.25rem;
 			.navbar-brand {
 				padding-top: $space-large;
 			}
