@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.icon-set {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+}
+
+.icon-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  border-radius: 5px;
+}
+
+.icon-box {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 8rem;
+  height: 9rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.icon-name {
+  margin-top: 10px;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.actions-container {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-button {
+  margin: 0;
+  overflow: visible;
+  -webkit-appearance: button;
+  height: 2.5rem;
+  width: 100%;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 0;
+  border: 0.125rem solid #767676;
+  color: #767676;
+  background-color: white;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: "Roboto Condensed",sans-serif;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  opacity: 1;
+  background-color: #767676;
+  border-color: #767676;
+  color: white;
+  text-decoration: none;
+}
+
+.action-button:focus {
+  outline: none;
+}
+
+.action-button.idle {
+  opacity: 0;
+}
