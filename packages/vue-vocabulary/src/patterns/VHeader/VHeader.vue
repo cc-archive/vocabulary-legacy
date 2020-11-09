@@ -2,11 +2,12 @@
   <header class="vocab header">
     <nav class="navbar" :aria-label="$t('header.aria.primary')">
       <div class="navbar-brand has-color-white">
-        <slot name="logo">
-          <a class="logo" href="/">
+        <a class="logo" href="/">
+          <!--@slot The Vue component with the site's logo -->
+          <slot name="logo">
             <CCSearchLogo />
-          </a>
-        </slot>
+          </slot>
+        </a>
         <a role="button"
            :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
            :aria-label="$t('header.aria.menu')"
@@ -20,13 +21,14 @@
       </div>
       <div :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }">
         <div class="navbar-end">
+          <!--@slot Menu items, can be `MenuItem`, `MenuDropdown` -->
           <slot name="menu-items">
-            <MenuItem tag="a" href="/whatever" label="Item One" />
+            <MenuItem tag="a" href="/item_one" label="Item One" />
+            <MenuItem href="/item_two" label="Item Two" />
             <MenuDropdown label="Item Three">
-              <MenuItem href="/whatever" label="Item Three A" />
-              <MenuItem tag = "a" href="/whatever" label="Item Three B" />
+              <MenuItem href="/item_three_a" label="Item Three A" />
+              <MenuItem tag = "a" href="/item_three_b" label="Item Three B" />
             </MenuDropdown>
-            <MenuItem href="/whatever" label="Item Two" />
           </slot>
         </div>
       </div>
@@ -48,9 +50,9 @@
   export default {
     name: 'VHeader',
     components: {
+      CCSearchLogo,
       MenuItem,
-      MenuDropdown,
-      CCSearchLogo
+      MenuDropdown
     },
     data: () => ({ isBurgerMenuActive: false }),
     methods: {
@@ -61,10 +63,13 @@
   }
 </script>
 <style lang="scss" scoped>
-@import '~@creativecommons/vocabulary/scss/vocabulary.scss';
+@import '~@creativecommons/vocabulary/scss/vocabulary';
 
 .logo {
   color: black;
+  &:hover {
+    color: black;
+  }
   svg {
     height: 100%;
     width: auto;
