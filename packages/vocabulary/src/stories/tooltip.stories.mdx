@@ -1,0 +1,27 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Patterns/Tooltip" />
+
+# Tooltip
+
+export const tooltip = () => `
+ <style>
+     .tooltip-container {
+         margin-top: 32px;
+     }
+ </style>
+ <div class="tooltip-container">
+     <div class="tooltip">Hover over me
+         <span class="tooltiptext">Tooltip text</span>
+     </div>
+ </div>
+`
+
+<Preview mdxSource={tooltip()}>
+  <Story name="Default" height="500px" parameters={{
+    design: figmaConfig('6340%3A0')
+  }}>{
+    tooltip()
+  }</Story>
+</Preview>
