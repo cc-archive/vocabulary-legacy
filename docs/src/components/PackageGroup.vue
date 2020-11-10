@@ -1,5 +1,5 @@
 <template>
-    <div class="container group package-group">
+    <div class="container group package-group padding-section-margin">
         <Package 
             name="Fonts" 
             href="https://github.com/creativecommons/vocabulary/tree/master/packages/fonts" 
@@ -23,7 +23,7 @@
 
 <style scoped>
     .package-group {
-        justify-content: center;
+        justify-content: space-between;
     }
 </style>
 

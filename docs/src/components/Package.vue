@@ -1,5 +1,5 @@
  <template>
-  <div class="project-index package padding-section-margin">
+  <div class="project-index package">
     <article class="card entry-post vertical project-index">
       <div class="card-content">
           <h4 class="card-title b-header">
