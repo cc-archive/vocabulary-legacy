@@ -19,6 +19,7 @@
   .card {
     height: 15rem;
     width: 21rem;
+    margin: 1rem;
   }
 </style>
 

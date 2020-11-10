@@ -1,5 +1,5 @@
 <template>
-    <div class="page-section">
+    <div class="page-section padding-section-margin group">
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Vocabulary, a Monorepo?</h2>
             <span class="content">Vocabulary comprises of the Fonts, Vocabulary & Vue-Vocabulary packages.</span>
@@ -26,13 +26,8 @@
 
 <style>
     .page-section {
-        border: 3px solid lightgray;
         padding: 2rem;
-        margin: 0.5rem;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-evenly;
         background-color: white;
     }
