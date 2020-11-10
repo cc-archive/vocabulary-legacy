@@ -1,5 +1,5 @@
 <template>
-    <div class="container group">
+    <div class="container group post-group">
       <PostStatistic 
         :number="stars"
         caption="Stars"
@@ -17,6 +17,12 @@
         href="https://github.com/creativecommons/vocabulary"/>
     </div>
 </template>
+
+<style scoped>
+    .post-group {
+        justify-content: space-between;
+    }
+</style>
 
 <script>
 import PostStatistic from './PostStatistic'
