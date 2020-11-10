@@ -39,8 +39,13 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 `vocabulary` is a monorepo containing three packages:
 
 - [@creativecommons/vocabulary](packages/vocabulary) - The main CSS component library
+  [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)
+
 - [@creativecommons/fonts](packages/fonts) - A collection of typefaces and icon fonts
+  [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
+
 - [@creativecommons/vue-vocabulary](packages/vue-vocabulary) - Vue component library powered by the main CSS library
+  [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
 Packages are located in the `/packages` directory.
 
@@ -48,7 +53,7 @@ Packages are located in the `/packages` directory.
 
 You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-To install dependencies and run the storybooks for all packages in this repository: 
+To install dependencies and run the storybooks for all packages in this repository:
 
 ```bash
 npm install
