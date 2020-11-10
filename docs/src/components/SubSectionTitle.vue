@@ -1,5 +1,5 @@
 <template>
-<div class="section-margin">
+<div class="section-margin container group center-container">
   <article class="card entry-post horizontal">
     <div class="card-content with-button">
         <h2 class="card-title">{{ title }}</h2>
@@ -10,6 +10,13 @@
   </article>
 </div>
 </template>
+
+<style scoped>
+  .center-container {
+    margin: auto;
+    margin-top: 1rem;
+  }
+</style>
 
 <script>
 export default {

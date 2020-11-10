@@ -1,5 +1,5 @@
 <template>
-    <div class="page-section">
+    <div class="page-section group">
         <span class="card-content has-bottom-link">
             <h2 class="card-title">Why Vocabulary?</h2>
         </span>
