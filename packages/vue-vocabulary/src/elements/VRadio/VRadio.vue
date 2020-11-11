@@ -2,7 +2,6 @@
   <label
     ref="label"
     class="v-radio radio"
-    :class="[{ 'is-disabled': disabled }]"
     :disabled="disabled"
     @click="focus"
     @keydown.prevent.enter="$refs.label.click()">
@@ -13,11 +12,10 @@
       ref="input"
       @click.stop
       :disabled="disabled"
-      :required="required"
       :name="name"
       :value="nativeValue">
     <span class="control-label">
-      <!-- @slot The text of the radio -->
+      <!-- @slot The text the radio label -->
       <slot default />
     </span>
   </label>
@@ -27,39 +25,51 @@
   export default {
     name: 'VRadio',
     props: {
+      /**
+       * Radio group's selected value, set by `v-model`.
+       * Can be `undefined` when no radio of the group is selected, or the `nativeValue`
+       * of checked radio when one is selected.
+       */
       value: {
-        type: String,
-        required: true
+        type: [ String, undefined ],
+        default: undefined
       },
+      /**
+       * Individual radio's value. It is this value that gets emitted as the input event's
+       * payload when a radio is selected. You can access it as the parameter in the
+       * `set()` function of the `v-model`'s computed value.
+       */
       nativeValue: {
         type: String,
         required: true
       },
+      /**
+       * The name property should be the same in radios of the same radio group.
+       */
       name: {
         type: String,
         required: true
       },
+      /**
+       * Optional property
+       */
       disabled: {
-        type: Boolean,
-        default: false
-      },
-      required: {
         type: Boolean,
         default: false
       }
     },
     data () {
       return {
-        newValue: this.value
+        radioValue: this.value
       }
     },
     computed: {
       computedValue: {
         get () {
-          return this.newValue
+          return this.radioValue
         },
         set (value) {
-          this.newValue = value
+          this.radioValue = value
           this.$emit('input', value)
         }
       }
@@ -69,7 +79,7 @@
        * When v-model change, set internal value.
        */
       value (value) {
-        this.newValue = value
+        this.radioValue = value
       }
     },
     methods: {
@@ -83,7 +93,8 @@
 
 <style lang="scss" scoped>
 @import "~@creativecommons/vocabulary/scss/color.scss";
-.checkbox, .radio {
+// TODO: These styles should be removed when the radio styles are merged into Vocabulary
+.radio {
   display: flex;
   align-items: baseline;
   color: #{$color-dark-slate-gray};
@@ -149,24 +160,6 @@
 
     &:hover:not(:checked):not(:disabled) {
       --border-color: #{$color-gray};
-    }
-  }
-  input[type='checkbox'] {
-    border-radius: 0.2rem;
-
-    &:after {
-      width: 5px;
-      height: 9px;
-      border: 2px solid var(--checkmark-color);
-      border-top: 0;
-      border-left: 0;
-      left: 4px;
-      top: 2px;
-      transform: rotate(20deg);
-    }
-
-    &:checked::after {
-      transform: rotate(35deg);
     }
   }
   input[type='radio'] {
