@@ -18,6 +18,7 @@ import DonateButton from './elements/DonateButton/DonateButton'
 import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Locale from './patterns/Locale/Locale'
+import AppModal from './patterns/AppModal/AppModal'
 
 // Export individual components
 export {
@@ -33,7 +34,8 @@ export {
 
   Footer,
   Header,
-  Locale
+  Locale,
+  AppModal
 }
 
 // Export as plugin
@@ -52,5 +54,6 @@ export default {
     Vue.component('Footer', Footer)
     Vue.component('Header', Header)
     Vue.component('Locale', Locale)
+    Vue.component('AppModal', AppModal)
   }
 }
