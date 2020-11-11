@@ -1,5 +1,5 @@
 <template>
-    <div class="post-card padding-section-margin">
+    <div class="post-card">
       <article class="card entry-post entry-statistic horizontal">
         <header class="card-header">
           <div class="card-statistic">
@@ -20,6 +20,7 @@
 <style scoped>
   .post-card {
     width: 25rem;
+    margin: 0.5rem;
   }
 
   .read-more {

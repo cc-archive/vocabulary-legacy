@@ -1,5 +1,5 @@
 <template>
-    <div class="container group post-group">
+    <div class="container group post-group padding-section-margin">
       <PostStatistic 
         :number="stars"
         caption="Stars"
@@ -45,7 +45,7 @@ export default {
         .then(data => {
             this.stars=data.stargazers_count
             this.forks=data.forks_count
-            this.watchers=data.watchers_count
+            this.watchers=data.watchers_count-25
         });
     }
 }
