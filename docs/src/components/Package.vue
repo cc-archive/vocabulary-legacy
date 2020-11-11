@@ -26,6 +26,7 @@
 <style scoped>
   .package {
     width: 25rem;
+    margin: 0.5rem;
   }
 
   .npm-link {

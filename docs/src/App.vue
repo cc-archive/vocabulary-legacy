@@ -50,8 +50,8 @@
   }
 
   .padding-section-margin {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .group {
