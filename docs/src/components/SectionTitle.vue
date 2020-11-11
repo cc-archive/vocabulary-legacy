@@ -24,6 +24,11 @@
     background-color:#FBD43C
   }
 
+  .know-more-button:hover {
+    color:black; 
+    background-color:#FBD43C
+  }
+
   .section-title {
     min-height: 20rem;
   }

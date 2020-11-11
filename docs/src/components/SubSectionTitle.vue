@@ -14,7 +14,7 @@
 <style scoped>
   .center-container {
     margin: auto;
-    margin-top: 1rem;
+    padding: 0.5rem;
   }
 </style>
 
