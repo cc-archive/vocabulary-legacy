@@ -5,52 +5,43 @@
  * the next build. To make changes, edit [library/build.js].
  */
 
-import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
-
-import Tabs from './layouts/Tabs/Tabs'
-import Tab from './layouts/Tabs/Tab'
+import DonateButton from './elements/DonateButton/DonateButton'
+import VButton from './elements/VButton/VButton'
 import Table from './layouts/Table/Table'
 import TableCell from './layouts/Table/TableCell'
-
-import VButton from './elements/VButton/VButton'
-import DonateButton from './elements/DonateButton/DonateButton'
-
+import Tab from './layouts/Tabs/Tab'
+import Tabs from './layouts/Tabs/Tabs'
 import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Locale from './patterns/Locale/Locale'
+import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
 
 // Export individual components
 export {
-  SlotRenderer,
-
-  Tabs,
-  Tab,
+  DonateButton,
+  VButton,
   Table,
   TableCell,
-
-  VButton,
-  DonateButton,
-
+  Tab,
+  Tabs,
   Footer,
   Header,
-  Locale
+  Locale,
+  SlotRenderer
 }
 
 // Export as plugin
 export default {
   install: function (Vue) {
-    Vue.component('SlotRenderer', SlotRenderer)
-
-    Vue.component('Tabs', Tabs)
-    Vue.component('Tab', Tab)
+    Vue.component('DonateButton', DonateButton)
+    Vue.component('VButton', VButton)
     Vue.component('Table', Table)
     Vue.component('TableCell', TableCell)
-
-    Vue.component('VButton', VButton)
-    Vue.component('DonateButton', DonateButton)
-
+    Vue.component('Tab', Tab)
+    Vue.component('Tabs', Tabs)
     Vue.component('Footer', Footer)
     Vue.component('Header', Header)
     Vue.component('Locale', Locale)
+    Vue.component('SlotRenderer', SlotRenderer)
   }
 }

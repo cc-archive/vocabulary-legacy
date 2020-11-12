@@ -1,6 +1,0 @@
-{
-  "utils": ["SlotRenderer"],
-  "layouts": ["Tabs", ["Tabs", "Tab"], "Table", ["Table", "TableCell"]],
-  "elements": ["VButton", "DonateButton"],
-  "patterns": ["Footer", "Header", "Locale"]
-}
