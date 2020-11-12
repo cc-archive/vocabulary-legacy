@@ -1,3 +1,10 @@
+<!--
+  Component: App
+  Description: The landing page composed of many components
+  Props: None
+  Nested Components: [ Header, Footer, Monorepo, PackageGroup, PostStatisticGroup, ReleaseGroup, SectionTitle, SubSectionTitle, WhyVocabulary ]
+-->
+
 <template>
   <div id="app">
     <Header/>
@@ -62,6 +69,17 @@
 
   .separator {
     margin-right: 1.5rem;
+  }
+
+  .page-section {
+    padding: 2rem;
+
+    justify-content: space-evenly;
+    background-color: white;
+  }
+
+  .point-table {
+      justify-content: space-between;
   }
 </style>
 
