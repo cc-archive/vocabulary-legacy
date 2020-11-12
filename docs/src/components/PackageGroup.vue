@@ -1,3 +1,10 @@
+<!--
+  Component: PackageGroup
+  Description: Groups the 3 package cards and grids them
+  Props: None
+  Nested Components: [ Package ]
+-->
+
 <template>
     <div class="container group package-group padding-section-margin">
         <Package 

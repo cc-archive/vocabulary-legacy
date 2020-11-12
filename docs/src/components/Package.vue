@@ -1,3 +1,10 @@
+<!--
+  Component: Package
+  Description: Custom variant of Project index component
+  Props: [ 'name', 'href', 'content', 'npmlink' ]
+  Nested Components: None
+-->
+ 
  <template>
   <div class="project-index package">
     <article class="card entry-post vertical project-index">

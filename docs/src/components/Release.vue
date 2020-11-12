@@ -1,3 +1,10 @@
+<!--
+  Component: Release
+  Description: Custom variant of PostEventNarrow component
+  Props: [ 'releaseItem' ]
+  Nested Components: None
+-->
+
 <template>
     <article class="card entry-post entry-event horizontal release-card padding-section-margin">
       <header class="card-header">

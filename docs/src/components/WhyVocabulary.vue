@@ -1,3 +1,10 @@
+<!--
+  Component: WhyVocabulary
+  Description: A section describing why vocabulary?
+  Props: None
+  Nested Components: [ Step ]
+-->
+
 <template>
     <div class="page-section group">
         <span class="card-content has-bottom-link">

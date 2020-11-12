@@ -1,3 +1,10 @@
+<!--
+  Component: SectionTitle
+  Description: Custom variant of PageHeader component
+  Props: [ 'title', 'content', 'id',  'pathtosvg', 'href' ]
+  Nested Components: None
+-->
+
 <template>
     <div :id="id" class="has-background-black has-text-white padding-top-bigger padding-bottom-bigger section-title">
       <div class="container">

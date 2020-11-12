@@ -1,3 +1,10 @@
+<!--
+  Component: Step
+  Description: Custom variant of TableOfProgressStep component
+  Props: [ 'number', 'name' ]
+  Nested Components: None
+-->
+
 <template>
     <li class="step">
         <div class="link">

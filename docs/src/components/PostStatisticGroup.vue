@@ -1,3 +1,10 @@
+<!--
+  Component: PostStatisticGroup
+  Description: Groups the 3 PostStatistic cards and grids them
+  Props: None
+  Nested Components: [ PostStatistic ]
+-->
+
 <template>
     <div class="container group post-group padding-section-margin">
       <PostStatistic 

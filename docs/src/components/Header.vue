@@ -1,6 +1,15 @@
+<!--
+  Component: Header
+  Description: Standard CC Header (mandatory)
+  Props: None
+  Nested Components: None
+
+  (To be replaced with the Vue Component shortly)
+-->
+
 <template>
-<div>
-  <header>
+  <div>
+    <header>
       <nav class="navbar container">
         <div class="navbar-brand">
           <div class="has-text-black">
@@ -33,7 +42,7 @@
               <i class="icon external-link"></i>
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank" rel="noopener">
-                <i class="icon github"></i>
+              <i class="icon github"></i>
             </a>
           </div>
         </div>

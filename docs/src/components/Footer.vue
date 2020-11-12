@@ -1,3 +1,12 @@
+<!--
+  Component: Footer
+  Description: Standard CC Footer (mandatory)
+  Props: None
+  Nested Components: None
+
+  (To be replaced with the Vue Component shortly)
+-->
+
 <template>
 <footer class="main-footer">
   <div class="container">

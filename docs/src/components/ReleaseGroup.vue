@@ -1,3 +1,10 @@
+<!--
+  Component: ReleaseGroup
+  Description: Groups the Release cards into an animated carousel
+  Props: None
+  Nested Components: [ Release, Carousel, Slide ]
+-->
+
 <template>
     <Carousel 
         :perPageCustom="[[280, 1],[320, 1],[360, 1],[400, 2], [500, 2], [1024, 3], [1199, 4], [2000, 6], [3000, 7]]"

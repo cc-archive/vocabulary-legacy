@@ -1,3 +1,10 @@
+ <!--
+  Component: PostStatistic
+  Description: Custom variant of PostStatistic component
+  Props: [ 'number', 'caption', 'description', 'href' ]
+  Nested Components: None
+-->
+
 <template>
     <div class="post-card">
       <article class="card entry-post entry-statistic horizontal">
