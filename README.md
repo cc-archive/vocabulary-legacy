@@ -51,19 +51,19 @@ You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.n
 To install dependencies and run the storybooks for all packages in this repository: 
 
 ```bash
-npm install
-npm run setup # (optional for npm v7 & above)
-npm run build
-npm run storybook
+npm install --legacy-peer-deps
+npm run setup --legacy-peer-deps # (optional for npm v7 & above)
+npm run build --legacy-peer-deps
+npm run storybook --legacy-peer-deps
 ```
 
 To run the storybook for an individual package (say, fonts):
 
 ```bash
 cd packages/fonts
-npm install
-npm run build
-npm run storybook
+npm install --legacy-peer-deps
+npm run build --legacy-peer-deps
+npm run storybook --legacy-peer-deps
 ```
 
 ## Using
