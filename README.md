@@ -52,9 +52,9 @@ To install dependencies and run the storybooks for all packages in this reposito
 
 ```bash
 npm install --legacy-peer-deps
-npm run setup --legacy-peer-deps # (optional for npm v7 & above)
-npm run build --legacy-peer-deps
-npm run storybook --legacy-peer-deps
+npm run setup # (optional for npm v7 & above)
+npm run build
+npm run storybook
 ```
 
 To run the storybook for an individual package (say, fonts):
