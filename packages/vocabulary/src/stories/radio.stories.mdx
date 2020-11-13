@@ -1,0 +1,28 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Form/Radio" />
+
+# Radio
+
+export const radioDiv = () => `<h3>Radio buttons</h3>
+<div class="radio-container">
+  <label class="radio">
+    <input type="radio" name="first" value="default">
+    <span class="radio-label">Default Option</span>
+  </label>
+  <label class="radio"><input type="radio" name="first" checked value="checked">
+    <span class="radio-label">Checked Option</span>
+  </label>
+  <label class="radio"><input type="radio" name="first" disabled value="disabled">
+    <span class="radio-label">Disabled Option</span>
+  </label>
+</div>`
+
+<Preview mdxSource={radioDiv()}>
+  <Story name="Default" height="200px" parameters={{
+    design: figmaConfig('603%3A3')
+  }}>{
+    radioDiv()
+  }</Story>
+</Preview>
