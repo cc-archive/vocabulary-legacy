@@ -17,6 +17,7 @@ import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Locale from './patterns/Locale/Locale'
 import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
+import AppModal from './patterns/AppModal/AppModal'
 
 // Export individual components
 export {
@@ -31,7 +32,8 @@ export {
   Footer,
   Header,
   Locale,
-  SlotRenderer
+  SlotRenderer,
+  AppModal
 }
 
 // Export as plugin
@@ -49,5 +51,6 @@ export default {
     Vue.component('Header', Header)
     Vue.component('Locale', Locale)
     Vue.component('SlotRenderer', SlotRenderer)
+    Vue.component('AppModal', AppModal)
   }
 }

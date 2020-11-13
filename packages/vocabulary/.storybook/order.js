@@ -3,13 +3,15 @@ const order = {
     'Introduction',
     'Overview',
     'Usage',
+    'Structure',
     'Contribution'
   ],
   'Tokens': [
     'Color',
     'Typography',
     'Spacing',
-    'Icons'
+    'Icons',
+    'Icon Font (deprecated)'
   ],
   'Assets': [],
   'Elements': [],

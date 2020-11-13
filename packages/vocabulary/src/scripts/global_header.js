@@ -89,7 +89,10 @@ class GlobalHeader {
     ])
 
     // OpenTab
-    const openTab = h('button', ['open-tab'], [document.createTextNode(NAVIGATION_TAB_TEXT)])
+    const openTab = h('button', ['open-tab'], [document.createTextNode(NAVIGATION_TAB_TEXT)], element => {
+      element.setAttribute('aria-haspopup', 'true')
+      element.setAttribute('aria-expanded', 'false')
+    })
 
     const mainContainer = h('header', ['cc-global-header'], [
       h('div', ['container'], [
@@ -109,14 +112,24 @@ class GlobalHeader {
     ])
     openTab.addEventListener('click', event => {
       event.preventDefault()
+      const currentValue = openTab.getAttribute('aria-expanded')
+      openTab.setAttribute('aria-expanded', invertStringBool(currentValue))
       mainContainer.classList.toggle('is-active')
     })
 
     // Creates a seperate explore button
     const exploreButton = h('button', ['explore-button'], [document.createTextNode(NAVIGATION_TAB_TEXT)
-    ])
+    ], element => {
+      element.setAttribute('aria-haspopup', 'true')
+      element.setAttribute('aria-expanded', 'false')
+    })
     exploreButton.addEventListener('click', event => {
       event.preventDefault()
+      const currentValue = exploreButton.getAttribute('aria-expanded')
+      exploreButton.setAttribute(
+        'aria-expanded',
+        invertStringBool(currentValue)
+      )
       mainContainer.classList.toggle('is-active')
     })
 
@@ -160,4 +173,14 @@ export function createGlobalHeader () {
   const globalHeader = new GlobalHeader()
   globalHeader.up()
   return globalHeader
+}
+
+/**
+ * Takes a "true" or "false" and returns the opposite
+ * @param str {"true"|"false"}
+ * @returns {boolean}
+ * */
+const invertStringBool = (str) => {
+  if (str === 'true') return 'false'
+  if (str === 'false') return 'true'
 }
