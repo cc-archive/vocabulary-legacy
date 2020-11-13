@@ -9,7 +9,8 @@ const order = {
     'Color',
     'Typography',
     'Spacing',
-    'Icons'
+    'Icons',
+    'Icon Font (deprecated)'
   ],
   'Assets': [],
   'Elements': [],
