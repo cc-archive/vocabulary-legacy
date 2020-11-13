@@ -62,8 +62,8 @@ To run the storybook for an individual package (say, fonts):
 ```bash
 cd packages/fonts
 npm install --legacy-peer-deps
-npm run build --legacy-peer-deps
-npm run storybook --legacy-peer-deps
+npm run build
+npm run storybook
 ```
 
 ## Using
