@@ -38,9 +38,11 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 
 `vocabulary` is a monorepo containing three packages:
 
-- [@creativecommons/vocabulary](packages/vocabulary) - The main CSS component library
-- [@creativecommons/fonts](packages/fonts) - A collection of typefaces and icon fonts
-- [@creativecommons/vue-vocabulary](packages/vue-vocabulary) - Vue component library powered by the main CSS library
+Package    | Description  |          |
+-------------- | ------------- | -----
+[@creativecommons/vocabulary](packages/vocabulary)    |  The main CSS component library   | [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)
+[@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
+[@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
 Packages are located in the `/packages` directory.
 
@@ -51,7 +53,7 @@ You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.n
 To install dependencies and run the storybooks for all packages in this repository: 
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 npm run setup # (optional for npm v7 & above)
 npm run build
 npm run storybook
@@ -61,7 +63,7 @@ To run the storybook for an individual package (say, fonts):
 
 ```bash
 cd packages/fonts
-npm install
+npm install --legacy-peer-deps
 npm run build
 npm run storybook
 ```

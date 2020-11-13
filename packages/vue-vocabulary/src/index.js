@@ -14,10 +14,13 @@ import TableCell from './layouts/Table/TableCell'
 
 import Button from './elements/Button/Button'
 import DonateButton from './elements/DonateButton/DonateButton'
+import VRadio from './elements/VRadio/VRadio'
+import VCheckbox from './elements/VCheckbox/VCheckbox'
 
 import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Locale from './patterns/Locale/Locale'
+import AppModal from './patterns/AppModal/AppModal'
 
 // Export individual components
 export {
@@ -30,10 +33,13 @@ export {
 
   Button,
   DonateButton,
+  VRadio,
+  VCheckbox,
 
   Footer,
   Header,
-  Locale
+  Locale,
+  AppModal
 }
 
 // Export as plugin
@@ -48,9 +54,12 @@ export default {
 
     Vue.component('Button', Button)
     Vue.component('DonateButton', DonateButton)
+    Vue.component('VRadio', VRadio)
+    Vue.component('VCheckbox', VCheckbox)
 
     Vue.component('Footer', Footer)
     Vue.component('Header', Header)
     Vue.component('Locale', Locale)
+    Vue.component('AppModal', AppModal)
   }
 }
