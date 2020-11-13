@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Vocabulary/Structure" />
+
+# Why is Vocabulary a monorepo?
+
+> The tool for managing the monorepo in Vocabulary has been extracted out as [Lerna](https://github.com/lerna/lerna).
+
+`Vocabulary` follows a monorepo approach. All maintained modules are a part of the same repository.
+
+## Rationale
+
+-  The three repositories have a  **strong**  dependency chain so storing them together makes some implicit sense.
+-  The relation between a `2020.8.1` release of `Fonts` and a `2020.8.5` release of `Vocabulary` is arbitrary.
+-  The release process is long, convoluted, and involves releasing each project manually in line from `Fonts` to `Vue-Vocabulary`.  
+-   Documentation is scattered across 3 repositories, making it harder to create internal links.
+-   Unified documentation & the landing site could then be placed in the monorepo.
+
+### Pros
+
+- Unfified Lint, Run, Build & Release Processes.
+- Easier management of dependencies across your packages.
+- Easy to coordinate changes across modules.
+- Single place for easier code review of features that span more than one package.
+- Easier to setup a development environment.
+- Tests across modules are run together which finds bugs that touch multiple modules more easily.
+
+### Cons
+ * Codebase looks more intimidating.
+ * Repository is bigger in size due to the presence of individual packages.
+ * Difficult to account for previous individual contributions (git histories) within the same repository.
+
+## Conclusion
+
+`Vocabulary`, `Fonts` and `Vue-Vocabulary` are now packages present in one _unified_ monorepo. They are however, separate npm packages.
