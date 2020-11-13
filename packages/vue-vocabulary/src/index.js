@@ -7,6 +7,8 @@
 
 import DonateButton from './elements/DonateButton/DonateButton'
 import VButton from './elements/VButton/VButton'
+import VCheckbox from './elements/VCheckbox/VCheckbox'
+import VRadio from './elements/VRadio/VRadio'
 import Table from './layouts/Table/Table'
 import TableCell from './layouts/Table/TableCell'
 import Tab from './layouts/Tabs/Tab'
@@ -20,6 +22,8 @@ import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
 export {
   DonateButton,
   VButton,
+  VCheckbox,
+  VRadio,
   Table,
   TableCell,
   Tab,
@@ -35,6 +39,8 @@ export default {
   install: function (Vue) {
     Vue.component('DonateButton', DonateButton)
     Vue.component('VButton', VButton)
+    Vue.component('VCheckbox', VCheckbox)
+    Vue.component('VRadio', VRadio)
     Vue.component('Table', Table)
     Vue.component('TableCell', TableCell)
     Vue.component('Tab', Tab)
