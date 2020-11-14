@@ -27,7 +27,7 @@
 
 <style scoped>
     .post-group {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 </style>
 

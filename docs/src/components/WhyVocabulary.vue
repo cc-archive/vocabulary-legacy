@@ -6,9 +6,9 @@
 -->
 
 <template>
-    <div class="page-section group">
+    <div class="page-section group special">
         <span class="card-content has-bottom-link">
-            <h2 class="card-title">Why Vocabulary?</h2>
+            <h2 class="card-title has-text-white">Why Vocabulary?</h2>
         </span>
     <div class="point-table group">    
       <div class="table-of-progress top-container separator">
@@ -27,6 +27,13 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+  .special {
+    min-height: 20vmax;
+    background-color: #333333;
+  }
+</style>
 
 <script>
 import Step from './Step.vue'

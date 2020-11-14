@@ -6,7 +6,7 @@
 -->
 
 <template>
-    <div class="post-card">
+    <div class="group-card">
       <article class="card entry-post entry-statistic horizontal">
         <header class="card-header">
           <div class="card-statistic">
@@ -18,22 +18,11 @@
           <div class="content">
             {{ description }}
           </div>
-          <a :href="href" class="read-more" rel="noopener">Visit Github</a>
+          <a :href="href" class="group-card-link" rel="noopener">Visit Github</a>
         </div>
       </article>
     </div>
 </template>
-
-<style scoped>
-  .post-card {
-    width: 25rem;
-    margin: 0.5rem;
-  }
-
-  .read-more {
-    color:gray;
-  }
-</style>
 
 <script>
 export default {
