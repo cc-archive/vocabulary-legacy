@@ -28,20 +28,16 @@
         </div>
         <div class="navbar-menu is-active">
           <div class="navbar-end">
-              <a class="navbar-item" href="#whatsnew" rel="noopener">
-              What's new
-            </a>
-            <a class="navbar-item" href="#development" rel="noopener">
-              Development
-            </a>
-            <a class="navbar-item" href="#about" rel="noopener">
-              About
+            <a class="navbar-item" href="https://github.com/creativecommons/vocabulary/releases" rel="noopener">
+              Release Notes
+              <i class="icon external-link"></i>
             </a>
             <a class="navbar-item" href="https://cc-vocabulary.netlify.app" target="_blank" rel="noopener">
               Documentation
               <i class="icon external-link"></i>
             </a>
             <a class="navbar-item" href="https://github.com/creativecommons/vocabulary" target="_blank" rel="noopener">
+              GitHub
               <i class="icon github"></i>
             </a>
           </div>
