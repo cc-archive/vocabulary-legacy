@@ -6,38 +6,16 @@
 -->
 
 <template>
-    <div class="page-section padding-section-margin group">
-        <span class="card-content has-bottom-link">
-            <h2 class="card-title">Vocabulary, a Monorepo?</h2>
-            <span class="content">Vocabulary comprises of the Fonts, Vocabulary & Vue-Vocabulary packages.</span>
+    <div class="page-section" style="background-color: #f5f5f5;">
+        <span class="has-bottom-link">
+            <p class="title is-2 has-text-gray">Multiple ways to use</p>
+            <span class="subtitle is-5 sub-title spacer">Vocabulary is comprised of 3 packages that can be combined or used individually. Use only the parts of Vocabulary that you need for your project.</span>
         </span>
-        <div class="point-table group">
-            <div class="table-of-progress top-container separator">
-                <ul>
-                    <Step number=1 name="Better Structure"/>
-                    <Step number=2 name="Weak Association"/>
-                    <Step number=3 name="Single Source of Truth"/>
-                </ul>
-                <br>
-            </div>
-            <div class="table-of-progress top-container">
-                <ul>
-                    <Step number=4 name="Straightforward Release Process"/>
-                    <Step number=5 name="Easier Progress Tracking"/>
-                    <Step number=6 name="Simplified Issue Management"/>
-                </ul>
-            </div>
-        </div>
     </div>
 </template>
 
 <script>
-import Step from './Step.vue'
-
 export default {
-    name:'Monorepo',
-    components: {
-        Step
-    }
+    name:'Monorepo'
 }
 </script>

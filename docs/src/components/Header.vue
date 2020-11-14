@@ -18,6 +18,7 @@
               alt="vocabulary logo"
               width="200"
               height="200"
+              style="margin-top: 0.25rem;"
               />
           </div>
           <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false" rel="noopener">
