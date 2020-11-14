@@ -30,7 +30,7 @@
 
 <style scoped>
     .package-group {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 </style>
 

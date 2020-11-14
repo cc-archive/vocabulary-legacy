@@ -8,8 +8,8 @@
 <template>
     <li class="step">
         <div class="link">
-            <span class="number is-active">{{ number }}</span>
-            <span class="name">{{ name }}</span>
+            <span class="number is-active has-background-white has-text-black">{{ number }}</span>
+            <span class="name has-text-white">{{ name }}</span>
         </div>
     </li>
 </template>

@@ -27,21 +27,6 @@
   </div>
 </template>
 
-<style scoped>
-  .hero {
-    min-height: 40vmax;
-  }
-
-  .sub-title {
-    font-weight: normal; 
-    color: #767676; 
-  }
-
-  .spacer {
-    margin-bottom: 1.5rem;
-  }
-</style>
-
 <script>
 export default {
     name: 'SectionTitle',
