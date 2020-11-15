@@ -4,7 +4,7 @@ export const sized = {
   props: {
     size: {
       type: String,
-      default: 'medium',
+      default: 'normal',
       validator (value) {
         return sizes.includes(value)
       }

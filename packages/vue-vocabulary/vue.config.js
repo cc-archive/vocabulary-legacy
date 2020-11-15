@@ -18,6 +18,11 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+    config.module
+      .rule('eslint')
+      .exclude
+      .add(/storybook\/generated-entry\.js/)
+
     const svgRule = config.module.rule('svg')
 
     svgRule.uses.clear()

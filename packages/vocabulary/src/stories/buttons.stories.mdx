@@ -16,7 +16,7 @@ export const defaultButton = (classes, options) => {
   const label = options.label || 'button'
   const disabled = options.disabled || false
   const href = options.href || ''
-  return `<${el} ${href ? `href=${href}` : ''}class="button${classes}"${disabled?` disabled`:''}>${label}</${el}>`
+  return `<${el} ${href ? `href="${href}" ` : ''}class="button${classes}"${ disabled?` disabled` : '' }>${label}</${el}>`
 }
 
 export const buttonSources = (classes, isDefaultLabel) => {
@@ -26,7 +26,7 @@ export const buttonSources = (classes, isDefaultLabel) => {
 
 export const buttonDonateClass = (classes, el = 'button', href='') => {
  classes = classes ? ` ${classes}` : ''
- return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate">
+ return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
  <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
  Button</${el}>`
 }
@@ -62,19 +62,19 @@ export const donateButtonSizes = () => {
 }
 
 <Preview mdxSource={donateButtonSizes()}>
-  <Story name="ButtonDonate" height="100px" parameters={{
+  <Story name="Button Donate Sizes" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
     {donateButtonSizes()}
   </Story>
 </Preview>
 
-Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning`, `.is-danger`, and `is-border`.
+Buttons may have four feedback colors such as `.is-success`, `.is-info`, and `is-border`.
 
-export const feedbackClasses = ['is-success', 'is-info', 'is-warning', 'is-danger', 'is-border']
+export const feedbackClasses = ['is-success', 'is-info', 'is-border']
 
 <Preview mdxSource={buttonSources(feedbackClasses, true)}>
-  <Story name="ButtonFeedbackTypes" height="100px" parameters={{
+  <Story name="Button Feedback Types" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     buttonSources(feedbackClasses, true)
@@ -84,7 +84,7 @@ export const feedbackClasses = ['is-success', 'is-info', 'is-warning', 'is-dange
 Buttons can be disabled:
 
 <Preview mdxSource={defaultButton('', {disabled: true})}>
-  <Story name="ButtonDisabled" height="100px" parameters={{
+  <Story name="Button Disabled" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     defaultButton('', {disabled: true})
@@ -116,7 +116,7 @@ The `.tag` class is used to render a tag name.
 You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
 <Preview mdxSource={defaultButton('is-text')}>
-  <Story name="Text" height="100px" parameters={{
+  <Story name="Text Button" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
     defaultButton('is-text')
@@ -125,10 +125,10 @@ You can use the `.is-text` to have a button looking more like a link, with no bo
 
 Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
 
-<Preview mdxSource={defaultButton('small', 'a', 'https://creativecommons.org')}>
+<Preview mdxSource={defaultButton('small', {el: 'a', href: 'https://creativecommons.org'})}>
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('small', 'a', 'https://creativecommons.org')
+    defaultButton('small',  {el: 'a', href: 'https://creativecommons.org'})
   }</Story>
 </Preview>
