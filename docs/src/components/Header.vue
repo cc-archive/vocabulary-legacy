@@ -28,7 +28,7 @@
       </div>
       <div class="navbar-menu is-active">
         <div class="navbar-end">
-          <a class="navbar-item" href="https://github.com/creativecommons/vocabulary/releases" rel="noopener">
+          <a class="navbar-item" href="https://github.com/creativecommons/vocabulary/releases" target="_blank" rel="noopener">
             Release Notes
             <i class="icon external-link"></i>
           </a>
