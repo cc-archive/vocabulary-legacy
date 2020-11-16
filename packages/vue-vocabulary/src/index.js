@@ -13,11 +13,11 @@ import Table from './layouts/Table/Table'
 import TableCell from './layouts/Table/TableCell'
 import Tab from './layouts/Tabs/Tab'
 import Tabs from './layouts/Tabs/Tabs'
+import AppModal from './patterns/AppModal/AppModal'
 import Footer from './patterns/Footer/Footer'
 import Header from './patterns/Header/Header'
 import Locale from './patterns/Locale/Locale'
 import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
-import AppModal from './patterns/AppModal/AppModal'
 
 // Export individual components
 export {
@@ -29,11 +29,11 @@ export {
   TableCell,
   Tab,
   Tabs,
+  AppModal,
   Footer,
   Header,
   Locale,
-  SlotRenderer,
-  AppModal
+  SlotRenderer
 }
 
 // Export as plugin
@@ -47,10 +47,10 @@ export default {
     Vue.component('TableCell', TableCell)
     Vue.component('Tab', Tab)
     Vue.component('Tabs', Tabs)
+    Vue.component('AppModal', AppModal)
     Vue.component('Footer', Footer)
     Vue.component('Header', Header)
     Vue.component('Locale', Locale)
     Vue.component('SlotRenderer', SlotRenderer)
-    Vue.component('AppModal', AppModal)
   }
 }
