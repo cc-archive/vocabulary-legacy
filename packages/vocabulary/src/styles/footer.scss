@@ -162,6 +162,9 @@
 
 		.subscription {
 			grid-area: sub;
+			h5 {
+				width: 100%;
+			}
 			.newsletter {
 				width: 75%;
 				.button {
@@ -223,9 +226,6 @@
 
 		.subscription {
 			margin-left: -$space-normal;
-			h5 {
-				width: 100%;
-			}
 			.newsletter {
 				width: 95%;
 			}
