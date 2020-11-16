@@ -1,6 +1,6 @@
 {
   "utils": ["SlotRenderer"],
   "layouts": ["Tabs", ["Tabs", "Tab"], "Table", ["Table", "TableCell"]],
-  "elements": ["Button", "DonateButton"],
-  "patterns": ["Footer", "Header", "Locale"]
+  "elements": ["VButton", "DonateButton", "VRadio", "VCheckbox"],
+  "patterns": ["Footer", "Header", "Locale", "AppModal"]
 }

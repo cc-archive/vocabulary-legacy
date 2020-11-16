@@ -1,5 +1,5 @@
 <template>
-  <component :is="component" type="button" :class="classes" :href="href">
+  <component :is="component" type="button" :class="classes" :href="href" v-on="$listeners">
     <!-- @slot button content -->
     <slot default />
   </component>
@@ -10,7 +10,7 @@
   import { theme } from '@/utils/values'
 
   export default {
-    name: 'Button',
+    name: 'VButton',
     mixins: [sized],
     props: {
       theme: {
