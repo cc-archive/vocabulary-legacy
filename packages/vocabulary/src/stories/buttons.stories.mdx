@@ -19,16 +19,25 @@ export const defaultButton = (classes, options) => {
   return `<${el} ${href ? `href="${href}" ` : ''}class="button${classes}"${ disabled?` disabled` : '' }>${label}</${el}>`
 }
 
-export const buttonSources = (classes, isDefaultLabel) => {
-  const options = (className) => !isDefaultLabel ? null : {label: className.replace('is-', '')}
-  return classes.map(className => defaultButton(className, options(className))).join('\n')
+export const buttonSources = (classes, options) => {
+  const buttonOptions = (className) => {
+    let label = 'button'
+    if (options && !options.isDefaultLabel) {
+      label = className.replace('is-', '')
+    }
+    return {
+      label,
+      ...options
+    }
+  }
+  return classes.map(className => defaultButton(className, buttonOptions(className))).join('\n')
 }
 
 export const buttonDonateClass = (classes, el = 'button', href='') => {
- classes = classes ? ` ${classes}` : ''
- return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
+  classes = classes ? ` ${classes}` : ''
+  return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
  <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
- Button</${el}>`
+ Donate Now</${el}>`
 }
 
 To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
@@ -73,21 +82,23 @@ Buttons may have four feedback colors such as `.is-success`, `.is-info`, and `is
 
 export const feedbackClasses = ['is-success', 'is-info', 'is-border']
 
-<Preview mdxSource={buttonSources(feedbackClasses, true)}>
+<Preview mdxSource={buttonSources(feedbackClasses, {isDefaultLabel: true})}>
   <Story name="Button Feedback Types" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    buttonSources(feedbackClasses, true)
+    buttonSources(feedbackClasses, {isDefaultLabel: true})
   }</Story>
 </Preview>
 
 Buttons can be disabled:
 
-<Preview mdxSource={defaultButton('', {disabled: true})}>
+export const getFeedbackLabel = (className) => (className.replace('is-', ''))
+
+<Preview mdxSource={buttonSources(['', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})}>
   <Story name="Button Disabled" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('', {disabled: true})
+    buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})
   }</Story>
 </Preview>
 
@@ -129,6 +140,6 @@ Button styles should be applied to anchor tags (`<a>`) when using links. Avoid u
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('small',  {el: 'a', href: 'https://creativecommons.org'})
+    defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})
   }</Story>
 </Preview>
