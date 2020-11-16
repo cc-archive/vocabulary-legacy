@@ -1,6 +1,6 @@
 import AppModal from './AppModal'
 
-import Button from '../../elements/Button/Button'
+import VButton from '../../elements/VButton/VButton'
 
 export default {
   title: 'Patterns/VModal',
@@ -13,7 +13,7 @@ export default {
 }
 
 const modalContainerTemplate = `<div>
-  <Button @click="modalVisible=true">Open Modal</Button>
+  <VButton @click="modalVisible=true">Open Modal</VButton>
   <app-modal v-if="modalVisible" title="App Modal" @close="modalVisible=false">
     <div class="meta-card">
       <hr class="margin-bottom-bigger">
@@ -27,7 +27,7 @@ const modalContainerTemplate = `<div>
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { AppModal, Button },
+  components: { AppModal, VButton },
   template: modalContainerTemplate,
   data: function () {
     return {
