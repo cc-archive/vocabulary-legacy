@@ -8,14 +8,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Hero
-      id="home"
-      title=""
-      content=""
-      pathtosvg="intro.svg"
-      href="https://opensource.creativecommons.org/blog/categories/cc-vocabulary/"
-      hero="true"
-      />
+    <Hero/>
     <Monorepo/>
     <PackageGroup/>
     <WhyVocabulary/>
@@ -52,7 +45,7 @@
   }
 
   .point-table {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .hero {

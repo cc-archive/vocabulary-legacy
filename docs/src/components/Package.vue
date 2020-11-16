@@ -5,7 +5,7 @@
   Nested Components: None
 -->
  
- <template>
+<template>
   <div class="project-index group-card">
     <article class="card entry-post vertical project-index">
       <div class="card-content">
