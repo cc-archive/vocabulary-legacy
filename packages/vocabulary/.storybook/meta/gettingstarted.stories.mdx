@@ -1,0 +1,179 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Vocabulary/Getting Started" />
+
+# Getting Started
+
+We hope you've grasped what `Vocabulary` is all about. Let's now dive straight into building a simple web application with it.
+
+## Preface
+
+You've learnt multiple ways to install `Vocabulary` in the previous section. You're now _almost_ ready to build your first `CC Vocabulary` powered application!
+
+Throughout this tutorial, you will learn the _"how-tos"_ when it comes to using our components. It's really not that difficult, we promise!
+
+We'll be building a personal blog site and taking you through the process step by step. No prior coding experience is expected, but basic knowledge about `HTML + CSS + JS` will greatly help. We also recommend using a code editor such as [VS Code](https://code.visualstudio.com/) / [Sublime](https://www.sublimetext.com/) / [Brackets](http://brackets.io) etc. with code highlighting and syntax formatting enabled.
+
+## Tutorial - Personal Blog Site
+
+### Step 1 - Create Basic File Structure
+
+Let's start by making a folder called `blog-site` (or whatever you prefer) and creating 1 file named `index.html` under it. You could name it as per your wish, but we'll stick to these naming conventions for the sake of simplicity.
+
+Your `blog-site/index.html` must contain some basic lines of html code along with the standard CDN imports for `Vocabulary`. You can go ahead and copy paste this small code snippet into your `blog-site/index.html` file:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Peronal Blog Site</title>
+        <!--Fetches the stylesheets of the latest stable release of Vocabulary-->
+        <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+    </head>
+    <body>
+        <!--Here's where our custom code goes!-->
+        <!--Fetches the js files of the latest stable release of Vocabulary-->
+        <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js"></script>
+    </body>
+</html>
+```
+
+You're all set now! You can open this page in your browser by simply double clicking on the `blog-site/index.html` file in your file explorer or just choose to open it in your local browser. If you aren't able to see anything just yet, don't you worry; we're yet to add the magic!
+
+### Step 2 - Adding Components
+
+The process of adding components is the same no matter which component you choose to add. This is hugely facilitated by [StorybookJS](https://storybook.js.org).
+
+Let's start by adding in a `Global Header` & a `Header` component. Note that the `Global Header`, `Header` & the `Footer` have predefined styles applied, and there's no real need to explicitly modify them.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Peronal Blog Site</title>
+        <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+    </head>
+    <body>
+        <!--Header code starts here (This is copy pasted!)-->
+        <header>
+            <nav class="navbar">
+              <div class="navbar-brand">
+                <a href="#" class="has-text-black">
+                  <svg
+                    class="logo"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 304 73">
+                    <use href="#logomark"></use>
+                  </svg>
+                </a>
+                <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="navbar-menu is-active">
+                <div class="navbar-end">
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="#" class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
+                    <div class="navbar-dropdown">
+                      <a href="#" class="navbar-item">Item 1</a>
+                      <a href="#" class="navbar-item">Item 2</a>
+                      <a href="#" class="navbar-item">Item 3</a>
+                    </div>
+                  </div>
+                  <a href="#" class="navbar-item">
+                    No dropdown
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <div style="background-color: rgb(237, 89, 47); height: 200px;"></div>
+        <!--Header code ends here-->
+
+        <!-- Here's where our custom code goes -->
+
+        <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js"></script>
+        <!--This script is needed for creating a global header instance and fetching the logo from the CDN-->
+        <script>
+            <!--For the global header-->
+            const globalHeaderInstance = vocabulary.createGlobalHeader()
+            
+            const getFullyQualifiedUrl = (version, path) => {
+            let baseUrl = 'https://unpkg.com/@creativecommons/vocabulary'
+            return `${baseUrl}@${version}/${path}`
+        }
+
+        const patchAssetIntoDom = (path, version = 'latest') => {
+            fetch(getFullyQualifiedUrl(version, path)).then(response => {
+            return response.text()
+            }).then(data => {
+            div.innerHTML = ajax.responseText;
+            div.style.display = 'none';
+            document.body.prepend(div, document.body.childNodes[0]);
+            })
+        }
+
+        patchAssetIntoDom('/assets/logos/cc/logomark.svg');
+        </script>
+    </body>
+</html>
+
+```
+
+Wait. Where did all these lines of code even come from?
+
+### Step 3 - Copy & Paste Code for Components (Quite literally)
+
+As developers, we copy & paste a lot. And what better way to provide for that if it's crystal clear what _needs to be copy pasted_?
+
+We use a Storybook addon called [storybook-addon/docs](https://storybook.js.org/docs/react/writing-docs/introduction) to display the code for our component. Let's help you figure out the relevant code to copy paste!
+
+1. If you notice, the left column contains an index to all our components. You can now search & proceed to click on whichever component you intend to use in your site.
+
+![index](/demo/left_index.png)
+
+2. You'll now be able to see a live running preview sample of the component in the `Canvas` Tab. Go ahead and click on the `Docs` tab to view its documentation.
+
+![tabs](/demo/tab_content.png)
+
+3. Along with the component & it's documentation, you'll now also see the `Show Code` option. Upon clicking this, you should be able see the code associated with that chosen component. You can now copy & paste this into your application! As easy as you like!
+
+![code](/demo/show_code.png)
+
+### Step 4 - Choosing Components
+
+The blog site looks a bit empty right now. Maybe we should add in a few more compoents!
+
+Let's add in `PostVideoLarge`, `PostQuote` & `BlogEntryHorizontal` to our site. One thing to note here is that we use [Bulma](https://bulma.io) (which internally uses [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)) to structure the site and make it responsive. All of bulma's classes can be freely used in accompaniment with `Vocabulary` classes.
+
+We have a wide variety of components which should ideally satsify all your needs. If you ever find the need to have another component for any reason whatsoever, feel free to raise an issue over on our [Github repository](https://github.com/creativecommons/vocabulary).
+
+### Step 5 - Logically Structuring the Site
+
+Here's how we've structured the site through the course of this tutorial (see working sample below):
+
+```
+Global Header (mandatory)
+Header (mandatory)
+PostVideoLarge
+PostQuote x3
+BlogEntryHorizontal x3
+Footer (mandatory)
+```
+
+You could structure the site in any way you'd like to, but here's a sample to play around with:
+
+<iframe width="100%" height="600px" src="//jsfiddle.net/nimishbongale/7b94ozac/1/embedded/html,result/dark/" allowFullScreen="allowfullscreen" allowpaymentrequest frameBorder="0"></iframe>
+
+### Step 6 - Deployment
+
+This step is completely upon the developer's wish, but we recommend using [Github Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/) to deploy your static site. Another great add-on for the development process would be [lite-server](https://www.npmjs.com/package/lite-server) to enable live relaod of the site while making changes to it. You could also chose to separate the `.html`, `.css` & `.js` files, but again we leave that choice to the developer.
+
+## Conclusion
+
+We learnt how easy it is to actually use `Vocabulary` components in your site. If you intend on using frontend frameworks such as `Vue`, `React`, `Angular` etc. the package can be installed via npm and used accordingly. The changes would only be to the CSS import path, because you no longer have to fetch it via the CDN.
+
+We genuinely hope this page helps you _get started_ with `CC Vocabulary`! 
