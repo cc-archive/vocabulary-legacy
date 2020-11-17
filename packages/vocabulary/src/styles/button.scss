@@ -1,47 +1,76 @@
 $button-family: $family-secondary;
+$button-color: #fff;
+$button-background-color: $color-tomato;
+
+$button-border-color: transparent;
+$button-border-width: 0.125rem;
+
+$button-padding-vertical: calc(#{$space-normal} - #{$button-border-width});
+$button-padding-horizontal: $space-small;
+
+$button-hover-color: #fff;
+$button-hover-border-color: transparent;
+
+$button-focus-color: $color-brighter-tomato;
+
+$button-focus-border-color: transparent;
+$button-focus-box-shadow-color: rgba(226,54,0,.25);
+
+$button-text-color: $color-tomato;
+$button-text-hover-background-color: transparent;
+$button-text-hover-color: $color-tomato;
 
 @import "bulma/sass/elements/button.sass";
 
 .button {
   text-transform: uppercase;
   font-weight: 600;
-  line-height: 0;
-  background-color: $color-tomato;
-  color: var(--button-color, #fff);
-  border: 0.125rem solid var(--button-border-color, transparent);
   font-size: 1.125rem;
-  padding: $space-small $space-normal;
 
   &:hover,
   &:active,
   &:focus {
     color: #fff;
-    background-color: $color-brighter-tomato;
     text-decoration: none;
     border-color: transparent;
+    background-color: $color-brighter-tomato;
   }
   &:focus, &:focus:not(:active) {
     box-shadow: 0 0 0 0.125em var(--button-focus-outline, rgba(226,54,0,.25));
   }
 
-  &[disabled] {
+  &[disabled],
+  &.is-border[disabled],
+  &.is-primary[disabled],
+  &.is-success[disabled],
+  &.is-info[disabled]
+  {
     background-color: $color-light-gray;
     color: $color-dark-gray;
+    border-color: transparent;
+    &:hover {
+      background-color: $color-light-gray;
+      color: $color-dark-gray;
+      border-color: transparent;
+    }
   }
 
   &.big {
     font-size: 1.75rem;
-    padding: calc(#{$space-large} - 0.093rem) $space-large;
+    padding: $space-big $space-large;
   }
 
   &.medium {
     font-size: 1.43rem;
-    padding: calc(#{$space-bigger} - 0.187rem) $space-large;
+    padding: $space-normal $space-large;
   }
 
   &.small {
+    height: unset;
+    font-family: $family-source-sans-pro;
     font-size: 1rem;
-    padding: $space-small calc(#{$space-normal} + 0.2rem);
+    text-transform: none;
+    padding: calc(#{$space-smaller} - 0.125rem) calc(#{$space-normal} - 0.125rem);
   }
 
   &.tiny {
@@ -112,6 +141,7 @@ $button-family: $family-secondary;
     border: 0.125rem solid $color-dark-gray;
     color: $color-dark-gray;
     background-color: $color-white;
+    padding: calc(#{$space-small} - 0.125rem) calc(#{$space-normal} - 0.125rem);
     &:hover, &:active {
       background-color: $color-dark-gray;
       border-color: $color-dark-gray;
@@ -157,25 +187,33 @@ $button-family: $family-secondary;
   }
 
   &.is-text {
+
     padding: none;
     height: auto !important;
     line-height: normal;
+
+    font-family: $family-source-sans-pro;
+   
+
     text-align: left;
     text-decoration: none;
+    text-transform: none;
     white-space: normal;
 
     &:hover,
     &:active,
     &:focus {
-      border-color: transparent;
-      box-shadow: none;
-      background-color: transparent;
-    }
-    &:focus {
       text-decoration: underline;
+      box-shadow: none;
     }
     &[disabled] {
       color: $color-gray;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+        text-decoration: none;
+      }
     }
   }
 }

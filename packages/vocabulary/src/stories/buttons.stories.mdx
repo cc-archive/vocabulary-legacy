@@ -16,19 +16,28 @@ export const defaultButton = (classes, options) => {
   const label = options.label || 'button'
   const disabled = options.disabled || false
   const href = options.href || ''
-  return `<${el} ${href ? `href=${href}` : ''}class="button${classes}"${disabled?` disabled`:''}>${label}</${el}>`
+  return `<${el} ${href ? `href="${href}" ` : ''}class="button${classes}"${ disabled?` disabled` : '' }>${label}</${el}>`
 }
 
-export const buttonSources = (classes, isDefaultLabel) => {
-  const options = (className) => !isDefaultLabel ? null : {label: className.replace('is-', '')}
-  return classes.map(className => defaultButton(className, options(className))).join('\n')
+export const buttonSources = (classes, options) => {
+  const buttonOptions = (className) => {
+    let label = 'button'
+    if (options && !options.isDefaultLabel) {
+      label = className.replace('is-', '')
+    }
+    return {
+      label,
+      ...options
+    }
+  }
+  return classes.map(className => defaultButton(className, buttonOptions(className))).join('\n')
 }
 
 export const buttonDonateClass = (classes, el = 'button', href='') => {
- classes = classes ? ` ${classes}` : ''
- return `<${el} ${href ? `href=${href}` : ''} class="button${classes} donate">
+  classes = classes ? ` ${classes}` : ''
+  return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
  <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
- Button</${el}>`
+ Donate Now</${el}>`
 }
 
 To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
@@ -62,32 +71,34 @@ export const donateButtonSizes = () => {
 }
 
 <Preview mdxSource={donateButtonSizes()}>
-  <Story name="ButtonDonate" height="100px" parameters={{
+  <Story name="Button Donate Sizes" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
     {donateButtonSizes()}
   </Story>
 </Preview>
 
-Buttons may have four feedback colors such as `.is-success`, `.is-info`, `.is-warning`, `.is-danger`, and `is-border`.
+Buttons may have four feedback colors such as `.is-success`, `.is-info`, and `is-border`.
 
-export const feedbackClasses = ['is-success', 'is-info', 'is-warning', 'is-danger', 'is-border']
+export const feedbackClasses = ['is-success', 'is-info', 'is-border']
 
-<Preview mdxSource={buttonSources(feedbackClasses, true)}>
-  <Story name="ButtonFeedbackTypes" height="100px" parameters={{
+<Preview mdxSource={buttonSources(feedbackClasses, {isDefaultLabel: true})}>
+  <Story name="Button Feedback Types" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    buttonSources(feedbackClasses, true)
+    buttonSources(feedbackClasses, {isDefaultLabel: true})
   }</Story>
 </Preview>
 
 Buttons can be disabled:
 
-<Preview mdxSource={defaultButton('', {disabled: true})}>
-  <Story name="ButtonDisabled" height="100px" parameters={{
+export const getFeedbackLabel = (className) => (className.replace('is-', ''))
+
+<Preview mdxSource={buttonSources(['', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})}>
+  <Story name="Button Disabled" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('', {disabled: true})
+    buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})
   }</Story>
 </Preview>
 
@@ -116,7 +127,7 @@ The `.tag` class is used to render a tag name.
 You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
 <Preview mdxSource={defaultButton('is-text')}>
-  <Story name="Text" height="100px" parameters={{
+  <Story name="Text Button" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
     defaultButton('is-text')
@@ -125,10 +136,10 @@ You can use the `.is-text` to have a button looking more like a link, with no bo
 
 Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
 
-<Preview mdxSource={defaultButton('small', 'a', 'https://creativecommons.org')}>
+<Preview mdxSource={defaultButton('small', {el: 'a', href: 'https://creativecommons.org'})}>
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('small', 'a', 'https://creativecommons.org')
+    defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})
   }</Story>
 </Preview>
