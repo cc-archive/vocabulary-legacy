@@ -11,7 +11,7 @@ $table-cell-border: 1px solid $color-light-gray;
 }
 
 .table {
-  @extend .body-normal;
+  font-size: $font-size-body-normal;
 
   line-height: 1.5;
 }

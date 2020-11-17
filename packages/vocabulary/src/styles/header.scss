@@ -77,8 +77,8 @@ $navbar-dropdown-radius: 0;
   }
 
   &.is-compact {
-    @extend .padding-vertical-normal;
-    @extend .padding-horizontal-bigger;
+    padding-top: $space-normal;
+    padding-left: $space-bigger;
 
     height: 72px;
     display: flex;
@@ -96,7 +96,7 @@ $navbar-dropdown-radius: 0;
       }
 
       & > .navbar-item {
-        @extend .padding-horizontal-smaller;
+        padding-left: $space-smaller;
         margin-left: $space-normal;
       }
     }

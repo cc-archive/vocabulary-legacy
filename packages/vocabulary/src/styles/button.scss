@@ -157,7 +157,7 @@ $button-family: $family-secondary;
   }
 
   &.is-text {
-    @extend .is-paddingless;
+    padding: none;
     height: auto !important;
     line-height: normal;
     text-align: left;
