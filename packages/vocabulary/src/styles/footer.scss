@@ -17,6 +17,9 @@
 			text-decoration: none;
 		}
 	}
+	.button:focus {
+		outline: 1px solid $white;
+	}
 
 	.footer-navigation {
 		.menu {
@@ -90,8 +93,9 @@
 		}
 		.donate {
 			margin-top: $space-normal;
-			color: $color-black;
 			font-size: 1.125rem;
+			padding: 0.7rem $space-normal 0.7rem 0.75rem;
+			font-weight: 700;
 			svg {
 				margin-right: $space-normal;
 				width: $space-bigger;
@@ -245,6 +249,10 @@
 			margin-left: $space-normal;
 			.donate {
 				font-size: 1.5rem;
+				padding: $space-normal $space-big $space-normal 1.25rem;
+				.icon {
+					font-size: 2rem !important;
+				}
 			}
 		}
 	}
