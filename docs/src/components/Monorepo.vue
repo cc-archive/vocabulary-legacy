@@ -6,11 +6,11 @@
 -->
 
 <template>
-    <div class="page-section" style="background-color: #f5f5f5;">
-        <span class="has-bottom-link">
+    <div class="monorepo page-section">
+        <div class="container has-bottom-link">
             <p class="title is-2 has-text-gray">Multiple ways to use</p>
-            <span class="subtitle is-5 sub-title spacer">Vocabulary is comprised of 3 packages that can be combined or used individually. Use only the parts of Vocabulary that you need for your project.</span>
-        </span>
+            <span class="subtitle is-5 sub-title spacer"><a href="https://cc-vocabulary.netlify.app/?path=/docs/vocabulary-structure--page" target="_blank" rel="noopener">Vocabulary is comprised of 3 packages</a> that can be combined or used individually. Use only the parts of Vocabulary that you need for your project.</span>
+        </div>
     </div>
 </template>
 

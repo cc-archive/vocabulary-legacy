@@ -17,7 +17,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+  @import '@creativecommons/vocabulary/scss/color.scss';
+
   .section-margin {
     margin: 0.5rem;
   }
@@ -37,11 +39,18 @@
     margin-right: 1.5rem;
   }
 
+  .why-vocab {
+    background-color: $color-soft-green;
+  }
+
+  .monorepo {
+    background-color: $color-lighter-gray
+  }
+
   .page-section {
     padding: 6rem;
 
     justify-content: space-evenly;
-    background-color: white;
   }
 
   .point-table {
