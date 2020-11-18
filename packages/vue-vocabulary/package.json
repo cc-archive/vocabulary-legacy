@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/vue-vocabulary",
-  "version": "2020.11.1",
+  "version": "2020.11.2",
   "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
@@ -13,8 +13,8 @@
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
   "dependencies": {
-    "@creativecommons/fonts": "^2020.11.1",
-    "@creativecommons/vocabulary": "^2020.11.1",
+    "@creativecommons/fonts": "^2020.11.2",
+    "@creativecommons/vocabulary": "^2020.11.2",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
     "core-js": "^3.6.5",
