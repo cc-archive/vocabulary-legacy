@@ -48,7 +48,7 @@
   }
 
   .page-section {
-    padding: 6rem;
+    padding: 3.5rem;
 
     justify-content: space-evenly;
   }
