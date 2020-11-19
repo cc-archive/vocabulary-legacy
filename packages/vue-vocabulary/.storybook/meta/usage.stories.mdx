@@ -46,14 +46,14 @@ Then in the component containing Vocabulary components, import the required comp
 components using Vue.component for global registration or in the components dictionary within your component definition.
 
 ```js
-import { Header, Footer, Locale } from '@creativecommons/vue-vocabulary'
+import { VHeader, Footer, Locale } from '@creativecommons/vue-vocabulary'
 
 export default {
   components: {
-    Header,
+    VHeader,
     Footer,
     Locale
-  }
+  },
   ...
 }
 ```
@@ -70,7 +70,7 @@ And your template can go like this.
 
 ```html
 <div class="index">
-  <Header app-name="My App"/>
+  <VHeader app-name="My App"/>
   <Footer><Locale/></Footer>
 </div>
 ```

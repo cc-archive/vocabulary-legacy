@@ -1,4 +1,5 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { header } from './helpers'
 
 <Meta title="Patterns/Header" />
 
@@ -6,48 +7,13 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 
 ## Sizes
 
-export const header = (size, color) => `<header>
-      <nav class="navbar ${size}">
-        <div class="navbar-brand">
-          <a class="has-text-black">
-            <svg
-              class="logo"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 304 73">
-              <use href="logos/cc/logomark.svg#logomark"></use>
-            </svg>
-          </a>
-          <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="navbar-menu is-active">
-          <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-arrowless">Dropdown<i class="icon caret-down"></i></a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item">Item 1</a>
-                <a class="navbar-item">Item 2</a>
-                <a class="navbar-item">Item 3</a>
-              </div>
-            </div>
-            <a class="navbar-item">
-              No dropdown
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div style="background-color: ${color}; height: 200px;"></div>`
+<!-- Default header markup moved to helpers.js file and imported here -->
 
 export const compactHeader = (color) => `<div style="width:640px">
       <header>
         <nav class="navbar is-compact">
           <div class="navbar-brand">
-            <a class="has-text-black">
+            <a href="#" class="has-text-black">
               <svg
                 class="logo"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,28 +24,17 @@ export const compactHeader = (color) => `<div style="width:640px">
             </a>
           </div>
           <div class="navbar-end">
-            <a class="navbar-item">Item 1</a>
-            <a class="navbar-item">Item 2</a>
-            <a class="navbar-item">Item 3</a>
+            <a href="#" class="navbar-item">Item 1</a>
+            <a href="#" class="navbar-item">Item 2</a>
+            <a href="#" class="navbar-item">Item 3</a>
           </div>
         </nav>
       </header>
       <div style="background-color: ${color}; height: 200px;"></div>
     </div>`
 
-The big header version was created for static content websites where the main navigation is crucial. In that way, users
-can access and move from page to page easily. This version is not recommended for functional-oriented products like
-CC Search.
-
-<Preview mdxSource={header('', 'rgb(237, 89, 47)')}>
-  <Story name="Big" height="350px">{header('', 'rgb(237, 89, 47)')}</Story>
-</Preview>
-
-The small header version was created for products where functionalities prevail static content and users need to
-interact more within the same page or section. It is not recommended for website like Summit nor Global Network.
-
-<Preview mdxSource={header('small', 'rgb(4, 166, 53)')}>
-  <Story name="Small" height="320px">{header('small', 'rgb(4, 166, 53)')}</Story>
+<Preview mdxSource={header('rgb(237, 89, 47)')}>
+  <Story name="Default" height="350px">{header('rgb(237, 89, 47)')}</Story>
 </Preview>
 
 <Preview mdxSource={compactHeader('rgb(5, 181, 218)')}>

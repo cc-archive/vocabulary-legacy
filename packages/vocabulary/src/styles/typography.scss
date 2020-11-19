@@ -1,8 +1,9 @@
-@import url("https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css");
+@import url("https://unpkg.com/@creativecommons/fonts@2020.9.4/css/fonts.css");
 
 // Families
 $family-roboto-condensed: 'Roboto Condensed', sans-serif;
 $family-source-sans-pro: 'Source Sans Pro', sans-serif;
+$family-accidenz-commons: 'Accidenz Commons', sans-serif;
 $family-jetbrains-mono: 'JetBrains Mono', monospace;
 $family-vocabulary-icons: 'Vocabulary Icons';
 $family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
@@ -11,6 +12,7 @@ $family-system: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
 
 $family-heading: $family-roboto-condensed;
 $family-body: $family-source-sans-pro;
+$family-logo: $family-accidenz-commons;
 $family-code: $family-jetbrains-mono;
 $family-icons: $family-vocabulary-icons;
 
