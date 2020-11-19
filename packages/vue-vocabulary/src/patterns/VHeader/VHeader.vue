@@ -45,24 +45,24 @@
  * The header displays information about the site such as its branding and
  * name as well as navigation links.
  */
-import NavItem from "./NavItem";
-import NavDropdown from "./NavDropdown";
-import CCSearchLogo from "@creativecommons/vocabulary/assets/logos/products/search.svg?inline";
+  import NavItem from './NavItem'
+  import NavDropdown from './NavDropdown'
+  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg?inline'
 
-export default {
-  name: "VHeader",
-  components: {
-    CCSearchLogo,
-    NavItem,
-    NavDropdown,
-  },
-  data: () => ({ isBurgerMenuActive: false }),
-  methods: {
-    toggleBurgerActive() {
-      this.isBurgerMenuActive = !this.isBurgerMenuActive;
+  export default {
+    name: 'VHeader',
+    components: {
+      CCSearchLogo,
+      NavItem,
+      NavDropdown
     },
-  },
-};
+    data: () => ({ isBurgerMenuActive: false }),
+    methods: {
+      toggleBurgerActive () {
+        this.isBurgerMenuActive = !this.isBurgerMenuActive
+      }
+    }
+  }
 </script>
 <style lang="scss" scoped>
 @import "~@creativecommons/vocabulary/scss/vocabulary";
