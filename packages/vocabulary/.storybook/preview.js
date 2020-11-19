@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import viewports from './viewport'
 import order from './order'
 
-import { lightTheme, darkTheme } from './theme'
+import { light, dark } from './theme'
 
 import '../dist/css/vocabulary.css'
 
@@ -24,12 +24,8 @@ addParameters({
       viewports
     },
     darkMode: {
-      light: {
-        ...lightTheme
-      },
-      dark: {
-        ...darkTheme 
-      }
+      light: light,
+      dark: dark
     }
 })
 

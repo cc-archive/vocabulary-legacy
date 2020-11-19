@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming'
 
-import vocabularySvg from "@creativecommons/vocabulary/assets/logos/products/vocabulary.svg";
-import vocabularySvgInverted from "../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg";
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg';
+import vocabularySvgInverted from '../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg';
 
 const base = {
     colorSecondary: 'rgb(251, 119, 41)',
@@ -12,7 +12,7 @@ const base = {
     brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary'
   }
 
-export const lightTheme = create({
+export const light = create({
     base: 'light',
     colorPrimary: 'rgb(0, 0, 0)',
     appBg: 'rgb(255, 255, 255)',
@@ -24,7 +24,7 @@ export const lightTheme = create({
     ...base
   })
 
-export const darkTheme = create({
+export const dark = create({
     base: 'dark',
     colorPrimary: 'rgb(255, 255, 255)',
     appBg: 'rgb(47, 47, 47)',

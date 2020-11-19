@@ -6,7 +6,7 @@ import i18n from '@/i18n'
 import viewports from './viewport'
 import order from './order'
 
-import { lightTheme, darkTheme } from './theme'
+import { light, dark } from './theme'
 
 import '@creativecommons/vocabulary/css/vocabulary.css'
 
@@ -26,12 +26,8 @@ addParameters({
     viewports
   },
   darkMode: {
-    light: { 
-      ...lightTheme 
-    },
-    dark: { 
-      ...darkTheme 
-    }
+    light: light,
+    dark: dark
   }
 })
 
