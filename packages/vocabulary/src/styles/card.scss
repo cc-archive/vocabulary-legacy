@@ -302,7 +302,9 @@ $card-header-shadow: none;
 
                     .icon {
                         padding-left: $space-small;
+                        padding-right: $space-small;
                         padding-top: $space-smaller;
+                        padding-bottom: $space-smaller;
                         color: $color-forest-green;
                     }
                 }
@@ -325,9 +327,11 @@ $card-header-shadow: none;
 
                         .link-content {
                             padding-left: $space-small;
+                            padding-right: $space-small;
                         }
                         .icon {
                             padding-top: $space-smaller;
+                            padding-bottom: $space-smaller;
                         }
                     }
                 }

@@ -79,7 +79,9 @@ $navbar-breakpoint: $tablet;
 
   &.is-compact {
     padding-top: $space-normal;
+	 padding-bottom: $space-normal;
     padding-left: $space-bigger;
+	 padding-right: $space-bigger;
 
     height: 72px;
     display: flex;
@@ -97,7 +99,8 @@ $navbar-breakpoint: $tablet;
       }
 
       & > .navbar-item {
-        padding-left: $space-smaller;
+		 padding-left: $space-smaller;
+		 padding-right: $space-smaller;
         margin-left: $space-normal;
       }
     }
@@ -384,7 +387,9 @@ $navbar-breakpoint: $tablet;
 
 	&.is-compact {
 		padding-top: $space-normal;
+		padding-bottom: $space-normal;
 		padding-left: $space-bigger;
+		padding-right: $space-bigger;
 
 		height: 72px;
 		display: flex;
@@ -403,6 +408,7 @@ $navbar-breakpoint: $tablet;
 
 			& > .navbar-item {
 				padding-left: $space-smaller;
+				padding-right: $space-smaller;
 				margin-left: $space-normal;
 			}
 		}
