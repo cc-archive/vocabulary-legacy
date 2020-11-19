@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming'
 
-import vocabularySvg from "@creativecommons/vocabulary/assets/logos/products/vocabulary.svg";
-import vocabularySvgInverted from "../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg";
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg';
+import vocabularySvgInverted from '../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg';
 
 const base = {
     colorSecondary: 'rgb(251, 119, 41)',
