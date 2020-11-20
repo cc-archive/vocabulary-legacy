@@ -47,8 +47,11 @@
     }
     &.caret-down {
       color: black;
+      width: 0.938rem;
+
       & svg {
         height: 0.938rem;
+        width: auto;
       }
     }
     &.globe {
@@ -70,6 +73,7 @@
     }
     .icon.is-right {
       right: 0.625rem;
+      left: unset;
     }
   }
 }
