@@ -1,15 +1,22 @@
 .table-of-progress {
   .step-header {
-    @extend .b-header;
-    @extend .margin-bottom-big;
+    color: $color-dark-slate-gray;
+
+    font-family: $family-body;
+    font-weight: bold;
+
+    text-transform: none;
+    line-height: 1.3;
+    letter-spacing: 0.02rem;
+    margin-bottom: $space-big;
 
     line-height: 1.6875;
   }
 
   .step {
     .link {
-      @extend .has-color-dark-slate-gray;
-      @extend .body-normal;
+      color: $color-dark-slate-gray;
+      font-size: $font-size-body-normal;
 
       text-decoration: none;
       line-height: 1.25;
@@ -17,8 +24,10 @@
     }
 
     .number {
-      @extend .has-text-centered;
-      @extend .padding-vertical-smaller;
+      
+      text-align: center;
+      padding-top: $space-smaller;
+      padding-bottom: $space-smaller;
 
       background-color: $color-lighter-gray;
       width: 1.8125rem;
@@ -28,7 +37,14 @@
     }
 
     .is-active {
-      @extend .number;
+      text-align: center;
+      padding-top: $space-smaller;
+
+      background-color: $color-lighter-gray;
+      width: 1.8125rem;
+      height: 1.8125rem;
+      border-radius: 50%;
+      display: inline-block;
 
       background-color: $color-dark-slate-gray;
       color: $color-white;
@@ -36,12 +52,23 @@
     }
 
     .name {
-      @extend .margin-left-normal;
+      margin-left: $space-normal;
     }
 
     :hover {
       .number {
-        @extend .is-active;
+        text-align: center;
+        padding-top: $space-smaller;
+
+        background-color: $color-lighter-gray;
+        width: 1.8125rem;
+        height: 1.8125rem;
+        border-radius: 50%;
+        display: inline-block;
+
+        background-color: $color-dark-slate-gray;
+        color: $color-white;
+        position: relative;
       }
     }
 

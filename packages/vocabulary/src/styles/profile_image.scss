@@ -2,7 +2,7 @@
 
 .image {
   .profile {
-    @extend .is-rounded;
+    border-radius: 50%;
 
     border: solid 0.1875em $color-dark-slate-gray;
     min-width: 60px;

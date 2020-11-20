@@ -10,9 +10,9 @@ $menu-list-link-padding: 0.5rem 0;
 @import "bulma/sass/components/menu.sass";
 
 .sidebar-menu {
-  @extend .body-normal;
-  @extend .padding-top-normal;
-  @extend .padding-bottom-big;
+  font-size: $font-size-body-normal;
+  padding-top: $space-normal;
+  padding-bottom: $space-big;
 
   font-weight: bold;
   line-height: 1.5;
@@ -20,21 +20,22 @@ $menu-list-link-padding: 0.5rem 0;
 
   .menu-list .link {
     text-decoration: none;
-    @extend .is-paddingless;
-    @extend .padding-top-small;
-    @extend .padding-horizontal-big;
+    padding: 0;
+    padding-top: $space-small;
+    padding-left: $space-big;
+    padding-right: $space-big;
   }
 
   .icon {
-    @extend .has-text-grey;
-    @extend .padding-right-small;
+    color: $color-gray;
+    padding-right: $space-small;
 
     font-size: 0.375rem;
   }
 
   .divider {
-    @extend .margin-top-normal;
-    @extend .margin-bottom-small;
+    margin-top: $space-normal;
+    margin-bottom: $space-small;
 
     border-top: 0.1875rem solid $color-white;
   }

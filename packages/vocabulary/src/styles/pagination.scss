@@ -24,10 +24,16 @@ $pagination-ellipsis-color: $color-dark-gray;
     }
 
     .inactive {
-      @extend .common;
+      font-weight: bold;
+      font-family: $family-secondary;
+      line-height: 1.875;
+
+      border-radius: 0;
+      text-decoration: none;
 
         .inactive-link {
-          @extend .common-link;
+          border-radius: 0;
+          text-decoration: none;
 
           background-color: $color-lighter-gray;
         }
@@ -38,10 +44,16 @@ $pagination-ellipsis-color: $color-dark-gray;
     }
 
     .inactive-grey {
-      @extend .common;
+      font-weight: bold;
+      font-family: $family-secondary;
+      line-height: 1.875;
+
+      border-radius: 0;
+      text-decoration: none;
 
         .inactive-link {
-          @extend .common-link;
+          border-radius: 0;
+          text-decoration: none;
 
           background-color: $color-white;
         }

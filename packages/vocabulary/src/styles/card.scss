@@ -253,8 +253,16 @@ $card-header-shadow: none;
                         padding-bottom: 6rem;
                     }
                     .card-pretitle {
-                        @extend .title;
-                        @extend .is-4;
+                        color: $color-dark-slate-gray;
+
+                        font-family: $family-heading;
+                        font-weight: bold;
+                        
+                        text-transform: uppercase;
+                        line-height: 1.3;
+                        letter-spacing: 0.02rem;
+                        
+                        column-width: 33%;
                         display: block;
                         padding-bottom: $space-normal;
                     }
@@ -289,37 +297,41 @@ $card-header-shadow: none;
         &.project-index {
             .card-content {
                 .site-link {
-                    @extend .margin-top-small;
-                    @extend .has-text-forest-green;
+                    margin-top: $space-small;
+                    color: $color-forest-green;
 
                     .icon {
-                        @extend .padding-horizontal-small;
-                        @extend .padding-vertical-smaller;
-                        @extend .has-color-forest-green;
+                        padding-left: $space-small;
+                        padding-right: $space-small;
+                        padding-top: $space-smaller;
+                        padding-bottom: $space-smaller;
+                        color: $color-forest-green;
                     }
                 }
                 .content {
-                    @extend .margin-top-bigger;
-                    @extend .is-paddingless;
+                    margin-top: $space-bigger;
+                    padding: 0;
                 }
                 .labels {
-                    @extend .margin-top-normal;
-                    @extend .margin-bottom-normal;
+                    margin-top: $space-normal;
+                    margin-bottom: $space-normal;
 
                     .button {
-                        @extend .margin-right-small;
-                        @extend .margin-bottom-normal;
+                        margin-right: $space-small;
+                        margin-bottom: $space-normal;
                     }
                 }
                 .external-links {
                     .button {
-                        @extend .margin-bottom-small;
+                        margin-bottom: $space-small;
 
                         .link-content {
-                            @extend .padding-horizontal-small;
+                            padding-left: $space-small;
+                            padding-right: $space-small;
                         }
                         .icon {
-                            @extend .padding-vertical-smaller;
+                            padding-top: $space-smaller;
+                            padding-bottom: $space-smaller;
                         }
                     }
                 }
@@ -335,17 +347,17 @@ $card-header-shadow: none;
         }
 
         .blog-content {
-            @extend .margin-left-bigger;
+            margin-left: $space-bigger;
 
             .blog-author {
-                @extend .body-normal;
-                @extend .margin-top-small;
+                font-size: $font-size-body-normal;
+                margin-top: $space-small;
             }
 
             .excerpt {
-                @extend .body-normal;
-                @extend .margin-top-normal;
-                @extend .has-color-dark-slate-gray;
+                font-size: $font-size-body-normal;
+                margin-top: $space-normal;
+                color: $color-dark-slate-gray;
             }
         }
     }
