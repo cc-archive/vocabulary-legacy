@@ -8,10 +8,10 @@ $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 $navbar-breakpoint: $tablet;
 
-@import 'bulma/sass/components/navbar.sass';
+@import "bulma/sass/components/navbar.sass";
 
 .navbar.is-default .navbar-brand {
-	padding: $space-small 1.375rem 0;
+	padding: 0 1.375rem;
 	.logo {
 		width: 7rem;
 		height: 3.5rem;
@@ -99,7 +99,7 @@ $navbar-breakpoint: $tablet;
 					text-transform: none;
 					font-weight: normal;
 					font-size: $font-size-h6;
-					font-family: $family-body;
+					font-family: $family-heading;
 				}
 				.navbar-item {
 					font-family: $family-heading;
@@ -242,7 +242,7 @@ $navbar-breakpoint: $tablet;
 		@include fullhd() {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
-			padding: $space-small 5.75rem $space-big 3.75rem;
+			padding: 0 5.75rem $space-big 3.75rem;
 		}
 	}
 
@@ -257,7 +257,6 @@ $navbar-breakpoint: $tablet;
 
 		.navbar-end {
 			.navbar-item {
-				font-family: $family-source-sans-pro;
 				font-size: $font-size-body-normal;
 				font-weight: 600;
 				text-transform: capitalize;
