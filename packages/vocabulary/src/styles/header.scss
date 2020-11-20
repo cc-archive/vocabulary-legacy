@@ -11,7 +11,7 @@ $navbar-breakpoint: $tablet;
 @import "bulma/sass/components/navbar.sass";
 
 .navbar.is-default .navbar-brand {
-	padding: $space-small 1.375rem 0;
+	padding: 0 1.375rem;
 	.logo {
 		width: 7rem;
 		height: 3.5rem;
@@ -242,7 +242,7 @@ $navbar-breakpoint: $tablet;
 		@include fullhd() {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
-			padding: $space-small 5.75rem $space-big 3.75rem;
+			padding: 0 5.75rem $space-big 3.75rem;
 		}
 	}
 
