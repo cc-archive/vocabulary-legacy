@@ -45,7 +45,8 @@ $navbar-breakpoint: $tablet;
 					border-color: $color-soft-tomato;
 					line-height: 19px;
 					font-size: 0.75rem;
-					padding: $space-smaller $space-small $space-small $space-smaller;
+					padding: calc(#{$space-smaller} - 0.7px) $space-small calc(#{$space-smaller} - 0.7px) $space-smaller;
+					height: unset;
 					.icon {
 						font-size: 0.6rem;
 						margin-left: $space-smaller;

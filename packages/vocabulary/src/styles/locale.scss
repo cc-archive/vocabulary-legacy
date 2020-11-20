@@ -10,7 +10,7 @@
       border-color: transparent;
       border-width: 0.125rem;
       width: 8.125rem;
-      padding: $space-smaller $space-big $space-smaller 1.75rem;
+      padding: calc(#{$space-smaller} - 1.3px) calc(#{$space-big} - 1.3px) calc(#{$space-smaller} - 1.3px) 1.7rem;
       height: unset;
       line-height: 1.118rem;
       font-size: 0.813rem;
