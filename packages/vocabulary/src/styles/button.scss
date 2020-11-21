@@ -187,8 +187,12 @@ $button-text-hover-color: $color-tomato;
   }
 
   &.is-text {
+    padding: 0;
+    height: auto !important;
+    line-height: normal;
+
     font-family: $family-source-sans-pro;
-    @extend .is-paddingless;
+   
     text-align: left;
     text-decoration: none;
     text-transform: none;

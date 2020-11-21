@@ -3,9 +3,9 @@
 @import "bulma/sass/components/menu.sass";
 
 .table-of-contents {
-  @extend .body-normal;
-  @extend .padding-big;
-  @extend .margin-top-normal;
+  font-size: $font-size-body-normal;
+  padding: $space-big;
+  margin-top: $space-normal;
 
   font-weight: bold;
   line-height: 1.5;
@@ -18,8 +18,8 @@
   }
 
   .icon {
-    @extend .has-text-grey;
-    @extend .padding-right-small;
+    color: $color-gray;
+    padding-right: $space-small;
 
     font-size: 0.375rem;
   }

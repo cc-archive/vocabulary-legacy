@@ -8,40 +8,157 @@ $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 $navbar-breakpoint: $tablet;
 
-@import 'bulma/sass/components/navbar.sass';
+@import "bulma/sass/components/navbar.sass";
 
+.navbar.is-default .navbar-brand {
+	padding: 0 1.375rem;
+	.logo {
+		width: 7rem;
+		height: 3.5rem;
+	}
+	.navbar-burger span {
+		width: 18px;
+		height: 3px;
+		left: calc(50% + 8px);
+	}
+	.navbar-burger {
+		width: 3.25rem;
+		top: -$space-small;
+		color: $grey;
+	}
+}
 .navbar {
+
+  padding: $space-bigger;
+
+  .logo {
+    height: 46px;
+  }
+
+  .navbar-burger span {
+    height: 2px;
+  }
+
+  .navbar-burger {
+    width: 3.25rem;
+  }
+
+  .navbar-link {
+    text-decoration: none;
+  }
+
+  .navbar-end {
+    .navbar-item {
+      font-family: $family-roboto-condensed;
+      font-size: $font-size-h5;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height:  1.5;
+      letter-spacing: 2%;
+
+      .icon {
+        margin-left: $space-small;
+      }
+
+    }
+
+    & > .navbar-item {
+      margin-left: $space-large;
+    }
+
+    & .navbar-item:hover {
+      text-decoration: none;
+      color: $color-dark-slate-gray;
+    }
+    @include desktop-only() {
+      .navbar-item {
+        margin-left: 0;
+        font-size: $font-size-h6;
+      }
+    }
+  }
+
+  &.small {
+    padding: $space-normal;
+
+    .logo {
+      height: 42px;
+    }
+
+    .navbar-menu {
+      margin-right: 20rem;
+
+      &.is-active {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.is-compact {
+    padding-top: $space-normal;
+    padding-bottom: $space-normal;
+    padding-left: $space-bigger;
+    padding-right: $space-bigger;
+
+    height: 72px;
+    display: flex;
+
+    .logo {
+      height: 36px;
+    }
+
+    .navbar-end {
+      .navbar-item {
+        font-family: $family-source-sans-pro;
+        font-size: $font-size-body-normal;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      & > .navbar-item {
+        padding-left: $space-smaller;
+        padding-right: $space-smaller;
+        margin-left: $space-normal;
+      }
+    }
+
+    @include mobile() {
+      .navbar-end {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        margin-left: auto;
+      }
+
+      .navbar-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @include tablet() {
+      .navbar-end {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        margin-left: auto;
+      }
+
+      .navbar-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
 	&.is-default {
-		.navbar-brand {
-			padding: $space-small 1.375rem 0;
-			.logo {
-				width: 7rem;
-				height: 3.5rem;
-			}
-			.navbar-burger span {
-				width: 18px;
-				height: 3px;
-				left: calc(50% + 8px);
-			}
-			.navbar-burger {
-				width: 3.25rem;
-				top: -$space-small;
-				color: $grey;
-			}
-		}
 		.navbar-menu {
+			--button-outline-color: white;
 			background-color: $black;
 			padding: $space-smaller 0 0;
 			.navbar-start {
 				padding: 0 0.9rem $space-small;
-				.locale {
-					select {
-						border: 2px solid $white;
-					}
-					.is-small {
-						font-size: 0.813rem;
-					}
-				}
+
 				.donate {
 					display: none;
 					font-family: $family-source-sans-pro;
@@ -51,7 +168,8 @@ $navbar-breakpoint: $tablet;
 					border-color: $color-soft-tomato;
 					line-height: 19px;
 					font-size: 0.75rem;
-					padding: $space-smaller $space-small $space-small $space-smaller;
+					padding: calc(#{$space-smaller} - 0.7px) $space-small calc(#{$space-smaller} - 0.7px) $space-smaller;
+					height: unset;
 					.icon {
 						font-size: 0.6rem;
 						margin-left: $space-smaller;
@@ -104,7 +222,7 @@ $navbar-breakpoint: $tablet;
 					text-transform: none;
 					font-weight: normal;
 					font-size: $font-size-h6;
-					font-family: $family-body;
+					font-family: $family-heading;
 				}
 				.navbar-item {
 					font-family: $family-heading;
@@ -185,15 +303,7 @@ $navbar-breakpoint: $tablet;
 					top: -$space-larger;
 					column-gap: $space-normal;
 					padding: $space-small 1.25rem 0;
-					.locale {
-						select {
-							background-color: $color-lighter-gray;
-							border: 2px solid $color-lighter-gray;
-						}
-						.is-small {
-							font-size: 0.75rem;
-						}
-					}
+
 					.donate {
 						display: block;
 					}
@@ -255,17 +365,12 @@ $navbar-breakpoint: $tablet;
 		@include fullhd() {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
-			padding: $space-small 5.75rem $space-big 3.75rem;
+			padding: 0 5.75rem $space-big 3.75rem;
 		}
-	}
-	.hide {
-		display: none;
 	}
 
 	&.is-compact {
-		@extend .padding-vertical-normal;
-		@extend .padding-horizontal-bigger;
-
+		padding: $space-bigger $space-normal;
 		height: 72px;
 		display: flex;
 
@@ -275,14 +380,14 @@ $navbar-breakpoint: $tablet;
 
 		.navbar-end {
 			.navbar-item {
-				font-family: $family-source-sans-pro;
 				font-size: $font-size-body-normal;
 				font-weight: 600;
 				text-transform: capitalize;
 			}
 
 			& > .navbar-item {
-				@extend .padding-horizontal-smaller;
+				padding-left: $space-smaller;
+				padding-right: $space-smaller;
 				margin-left: $space-normal;
 			}
 		}
@@ -315,4 +420,9 @@ $navbar-breakpoint: $tablet;
 			}
 		}
 	}
+
+}
+
+.navbar.hide {
+	display: none;
 }
