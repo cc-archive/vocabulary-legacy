@@ -12,7 +12,7 @@
     "storybook": "vue-cli-service storybook:serve --ci -s ./src/assets -p 8082",
     "build:documentation": "npm run build && vue-cli-service storybook:build -s ./src/assets -o ./docs"
   },
-  "main": "vue-vocabulary.umd.js",
+  "main": "vue-vocabulary.umd.min.js",
   "dependencies": {
     "@creativecommons/fonts": "^2020.11.3",
     "@creativecommons/vocabulary": "^2020.11.3",
