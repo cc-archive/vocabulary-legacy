@@ -1,39 +1,49 @@
 .tooltip {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    &:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
+  &:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .tooltiptext {
+    @extend .padding-horizontal-small;
+    @extend .padding-vertical-smaller;
+    @extend .has-color-dark-slate-gray;
+    @extend .has-background-white;
+
+    visibility: hidden;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 0.125rem solid $color-light-gray;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -3.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      top: 100%;
+      left: 10%;
+      margin-left: -0.3125rem;
     }
 
-    .tooltiptext {
-        @extend .padding-horizontal-small;
-        @extend .padding-vertical-smaller;
-        @extend .has-color-dark-slate-gray;
-        @extend .has-background-white;
-
-        visibility: hidden;
-        text-align: center;
-        border-radius: 0.25rem;
-        border: 0.125rem solid $color-light-gray;
-        position: absolute;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -3.75rem;
-        opacity: 0;
-        transition: opacity 0.3s;
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 10%;
-            margin-left: -5px;
-            border-width: 0.325rem;
-            border-style: solid;
-            border-color: $color-white transparent transparent transparent;
-        }
-
+    &::before {
+      border-top: 0.55rem solid $color-light-gray;
     }
+
+    &::after {
+      border-top: 0.5rem solid white;
+      margin-top: -0.125rem;
+      z-index: 1;
+    }
+
+  }
 }
