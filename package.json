@@ -3,10 +3,10 @@
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
   "workspaces": {
-  "packages": [
-    "packages/*"
-  ]
-},
+    "packages": [
+      "packages/*"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/creativecommons/vocabulary.git"
