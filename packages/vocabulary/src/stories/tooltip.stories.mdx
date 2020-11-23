@@ -33,3 +33,32 @@ import { figmaConfig } from './helpers'
     </div>
   `}</Story>
 </Preview>
+
+<Preview>
+  <Story name="Right Tooltip" height="500px" parameters={{
+    design: figmaConfig('9101%3A113')
+  }}>{`
+    <div>
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext right">Tooltip text</span>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Left Tooltip" height="500px" parameters={{
+    design: figmaConfig('9101%3A113')
+  }}>{`
+    <style>
+      .tooltip-container {
+        margin-left: 100px;
+      }
+    </style>
+    <div class="tooltip-container">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext left">Tooltip text</span>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
