@@ -19,8 +19,9 @@
     border: 0.125rem solid $color-light-gray;
     position: absolute;
     bottom: 125%;
-    left: 50%;
+    left: 100%;
     margin-left: -3.75rem;
+    width: 100%;
     opacity: 0;
     transition: opacity 0.3s;
 
