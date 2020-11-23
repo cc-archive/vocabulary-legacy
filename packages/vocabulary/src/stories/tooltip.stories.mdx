@@ -5,23 +5,31 @@ import { figmaConfig } from './helpers'
 
 # Tooltip
 
-export const tooltip = () => `
- <style>
-     .tooltip-container {
-         margin-top: 32px;
-     }
- </style>
- <div class="tooltip-container">
-     <div class="tooltip">Hover over me
-         <span class="tooltiptext">Tooltip text</span>
-     </div>
- </div>
-`
-
-<Preview mdxSource={tooltip()}>
+<Preview>
   <Story name="Default" height="500px" parameters={{
-    design: figmaConfig('6340%3A0')
-  }}>{
-    tooltip()
-  }</Story>
+    design: figmaConfig('9101%3A113')
+  }}>{`
+    <style>
+      .tooltip-container {
+        margin-top: 32px;
+      }
+    </style>
+    <div class="tooltip-container">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext top">Tooltip text</span>
+      </div>
+    </div>
+  `}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Bottom Tooltip" height="500px" parameters={{
+    design: figmaConfig('9101%3A113')
+  }}>{`
+    <div>
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext bottom">Tooltip text</span>
+      </div>
+    </div>
+  `}</Story>
 </Preview>

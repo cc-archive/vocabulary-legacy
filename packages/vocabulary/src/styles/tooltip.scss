@@ -24,7 +24,9 @@
     width: 100%;
     opacity: 0;
     transition: opacity 0.3s;
+  }
 
+  .top {
     &::before,
     &::after {
       content: "";
@@ -45,6 +47,33 @@
       margin-top: -0.125rem;
       z-index: 1;
     }
+  }
 
+  .bottom {
+    top: 125%;
+    height: 150%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      top: 0%;
+      left: 10%;
+      margin-left: -0.3125rem;
+    }
+
+    &::before {
+      border-bottom: 0.55rem solid $color-light-gray;
+      top: -30%;
+    }
+
+    &::after {
+      border-bottom: 0.5rem solid white;
+      margin-bottom: 0.125rem;
+      top: -20%;
+      z-index: 1;
+    }
   }
 }
