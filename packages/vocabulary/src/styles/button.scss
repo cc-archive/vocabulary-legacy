@@ -175,14 +175,41 @@ $button-text-hover-color: $color-tomato;
 
   &.donate {
     background-color: $color-gold;
-    border-color: $color-gold;
+    border-color: transparent;
     color: $color-black;
 
     &:hover, &:active, &:focus {
       background-color: $color-brighter-gold;
-      border-color: $color-brighter-gold;
+      border-color: transparent;
       color: $color-black;
       text-decoration: none;
+    }
+    &.is-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $color-tomato;
+      background-color: $color-soft-tomato;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: calc(#{$space-smaller} - 0.7px) $space-small calc(#{$space-smaller} - 0.7px) $space-smaller;
+      max-height: 1.6875rem;
+      &:hover, &:active, &:focus {
+        color: $color-white;
+        background-color: $color-tomato;
+        transition: background-color 400ms ease;
+      }
+      & .icon {
+        display: flex;
+        height: 0.625rem;
+        width: 0.625rem;
+        margin-left: $space-smaller;
+        margin-right: $space-small;
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 
@@ -190,9 +217,7 @@ $button-text-hover-color: $color-tomato;
     padding: 0;
     height: auto !important;
     line-height: normal;
-
     font-family: $family-source-sans-pro;
-   
     text-align: left;
     text-decoration: none;
     text-transform: none;
