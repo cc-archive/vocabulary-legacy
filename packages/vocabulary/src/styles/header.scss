@@ -10,21 +10,12 @@ $navbar-breakpoint: $tablet;
 
 @import "bulma/sass/components/navbar.sass";
 
-//.navbar
-//  .navbar-brand
-//  .navbar-start
-//  .navbar-menu // .is-active: open on mobile
-//     .tabs-nav -> mobile
-//     .main-nav main-nav -> tablet and up
-//                .navbar-end is where the menu links are
-
 .header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-// What is displayed when in the navbar, and the widths and grids
 .navbar {
   width: 100%;
   display: grid;
@@ -98,6 +89,7 @@ $navbar-breakpoint: $tablet;
     width: $widescreen;
   }
 }
+
 .navbar.is-active {
   @include mobile(){
     .navbar-start, .navbar-menu {
@@ -126,7 +118,6 @@ $navbar-breakpoint: $tablet;
   }
 }
 
-// Logo and burger
 .navbar .navbar-brand {
   color: black;
   padding: 1.0625rem 1.375rem;
@@ -188,7 +179,6 @@ $navbar-breakpoint: $tablet;
   }
 }
 
-// Burger menu open, colors
 .navbar.is-active {
   background-color: black;
   .navbar-brand .logo {
@@ -214,15 +204,12 @@ $navbar-breakpoint: $tablet;
   }
 }
 
-// Colors of main nav
 .main-nav {
   .navbar-item, .navbar-link {
     color: $color-dark-gray;
   }
 }
 
-// Typography
-// Tablet and up
 .main-nav {
   .navbar-item, .navbar-item .navbar-link {
     font-family: $family-heading;
@@ -279,10 +266,8 @@ $navbar-breakpoint: $tablet;
     height: 0.9375rem;
     margin-left: 0.5rem;
   }
-  .navbar-item {
-    .navbar-dropdown {
+  .navbar-item .navbar-dropdown {
       display: none;
-    }
   }
   .navbar-item.has-dropdown.is-active {
     svg {

@@ -111,7 +111,6 @@
       activateTab (event) {
         const buttons = [...event.currentTarget.parentElement.children]
         buttons.forEach((button) => {
-          console.log({ button })
           if (button === event.currentTarget) {
             button.classList.add('is-active')
           } else {
