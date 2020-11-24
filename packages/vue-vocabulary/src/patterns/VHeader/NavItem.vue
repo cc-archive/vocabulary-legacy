@@ -15,7 +15,7 @@
 <script>
 // import ExternalLink from '@creativecommons/fonts/dist/assets/svg/symbols/external-link.svg?inline'
 // prettier-ignore
-export default {
+  export default {
     name: 'NavItem',
     // components: {
     //   ExternalLink
@@ -46,9 +46,18 @@ export default {
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar-item {
   cursor: pointer;
-  background: white;
+}
+.navbar-item.navbar-link {
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 25px;
+  }
+  .icon.external-link {
+    margin-left: 0.5rem;
+  }
 }
 </style>

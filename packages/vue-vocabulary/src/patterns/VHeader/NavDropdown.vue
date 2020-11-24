@@ -13,8 +13,10 @@
       @click="toggleMenu"
     >
       {{ label }}
+      <span class="icon caret-down">
+        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M7.45896 11.25H22.5351c1.043 0 1.5645 1.2598.8262 1.998l-7.5352 7.5411c-.457.457-1.2011.457-1.6582 0L6.63279 13.248c-.73828-.7382-.2168-1.998.82617-1.998z" fill="currentColor"/></svg>
+      </span>
       <!--  <span class="icon"><CaretDown /></span>-->
-      <i class="icon caret-down" />
     </button>
     <div class="navbar-dropdown">
       <slot />
@@ -24,41 +26,42 @@
 
 <script>
 // import CaretDown from '@creativecommons/fonts/dist/assets/svg/arrows/caret-down.svg?inline'
-export default {
-  name: "NavDropdown",
-  // components: {
-  //   CaretDown
-  // },
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  props: {
-    label: {
-      type: String,
-      required: true,
+  export default {
+    name: 'NavDropdown',
+    // components: {
+    //   CaretDown
+    // },
+    data () {
+      return {
+        isOpen: false
+      }
     },
-  },
-  methods: {
-    openMenu() {
-      this.isOpen = true;
-      this.$refs.opener.setAttribute("aria-expanded", "true");
+    props: {
+      label: {
+        type: String,
+        required: true
+      }
     },
-    closeMenu() {
-      this.isOpen = false;
-      this.$refs.opener.setAttribute("aria-expanded", "false");
-    },
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-      const ariaExpanded = this.$refs.opener.getAttribute("aria-expanded");
-      this.$refs.opener.setAttribute("aria-expanded", `${!ariaExpanded}`);
-    },
-  },
-};
+    methods: {
+      openMenu () {
+        this.isOpen = true
+        this.$refs.opener.setAttribute('aria-expanded', 'true')
+      },
+      closeMenu () {
+        this.isOpen = false
+        this.$refs.opener.setAttribute('aria-expanded', 'false')
+      },
+      toggleMenu (event) {
+        this.isOpen = !this.isOpen
+        const ariaExpanded = this.$refs.opener.getAttribute('aria-expanded')
+        this.$refs.opener.setAttribute('aria-expanded', `${!ariaExpanded}`)
+        event.currentTarget.parentElement.classList.toggle('is-active')
+      }
+    }
+  }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar-link {
   background: transparent;
   border: none;
@@ -67,5 +70,18 @@ export default {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.5;
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 25px;
+    .navbar-dropdown {
+      padding-left: 1rem;
+    }
+  }
+  &:active, &:focus, &:hover {
+    border: none;
+    outline: none;
+    text-decoration: underline;
+  }
 }
 </style>
