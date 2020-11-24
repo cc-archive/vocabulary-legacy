@@ -24,38 +24,38 @@
 
 <script>
 // import CaretDown from '@creativecommons/fonts/dist/assets/svg/arrows/caret-down.svg?inline'
-  export default {
-    name: 'NavDropdown',
-    // components: {
-    //   CaretDown
-    // },
-    data () {
-      return {
-        isOpen: false
-      }
+export default {
+  name: "NavDropdown",
+  // components: {
+  //   CaretDown
+  // },
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  props: {
+    label: {
+      type: String,
+      required: true,
     },
-    props: {
-      label: {
-        type: String,
-        required: true
-      }
+  },
+  methods: {
+    openMenu() {
+      this.isOpen = true;
+      this.$refs.opener.setAttribute("aria-expanded", "true");
     },
-    methods: {
-      openMenu () {
-        this.isOpen = true
-        this.$refs.opener.setAttribute('aria-expanded', 'true')
-      },
-      closeMenu () {
-        this.isOpen = false
-        this.$refs.opener.setAttribute('aria-expanded', 'false')
-      },
-      toggleMenu () {
-        this.isOpen = !this.isOpen
-        const ariaExpanded = this.$refs.opener.getAttribute('aria-expanded')
-        this.$refs.opener.setAttribute('aria-expanded', `${!ariaExpanded}`)
-      }
-    }
-  }
+    closeMenu() {
+      this.isOpen = false;
+      this.$refs.opener.setAttribute("aria-expanded", "false");
+    },
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+      const ariaExpanded = this.$refs.opener.getAttribute("aria-expanded");
+      this.$refs.opener.setAttribute("aria-expanded", `${!ariaExpanded}`);
+    },
+  },
+};
 </script>
 
 <style scoped>
