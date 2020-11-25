@@ -1,11 +1,20 @@
 import { addParameters } from '@storybook/html'
+import { create } from '@storybook/theming'
 
 import order from './order'
 
-import { light, dark } from './theme'
+import fontsSvg from '../src/assets/logos/fonts.svg'
+import fontsSvgInverted from '../src/assets/logos/fonts_inverted.svg'
+
+import { light, dark } from '../../shared/theme'
 
 import '../dist/css/fonts.css'
 import '../dist/css/accidenz_commons.css'
+
+const meta = {
+  brandTitle: 'Fonts',
+  brandUrl: 'https://opensource.creativecommons.org/cc-fonts'
+}
 
 addParameters({
   options: {
@@ -18,7 +27,15 @@ addParameters({
       ]
     },
     darkMode: {
-      light: light,
-      dark: dark
+      light: {
+        meta,
+        brandImage: fontsSvg,
+        ...create(light)
+      },
+      dark: {
+        meta,
+        brandImage: fontsSvgInverted,
+        ...create(dark)
+      }
     }
 })
