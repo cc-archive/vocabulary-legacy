@@ -20,7 +20,7 @@ $navbar-breakpoint: $tablet;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 59px;
+  grid-template-rows: 3.688rem;
   grid-template-areas: "brand";
   .navbar-brand {
     grid-area: brand;
@@ -35,7 +35,7 @@ $navbar-breakpoint: $tablet;
   }
   &.is-active {
     @include mobile() {
-      grid-template-rows: 59px 70px auto;
+      grid-template-rows: 3.688rem 4.375rem auto;
       grid-template-areas: "brand" "start" "menu";
     }
   }
@@ -157,8 +157,8 @@ $navbar-breakpoint: $tablet;
     color: $color-gray;
     border: none;
     background-color: transparent;
-    height: 59px;
-    width: 59px;
+    height: 3.688rem;
+    width: 3.688rem;
     appearance: none;
     outline: none;
     &:hover, &:active, &:focus, &.is-active {
