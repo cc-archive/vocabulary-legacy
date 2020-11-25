@@ -33,7 +33,7 @@
   <a
     href="https://lerna.js.org/"
     style="margin-right: 1em;">
-    <img alt="Maintained With Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg"/>
+    <img alt="Maintained With Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg"/>
   </a>
 </p>
 
