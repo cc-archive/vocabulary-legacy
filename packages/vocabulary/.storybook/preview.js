@@ -1,4 +1,8 @@
 import { addDecorator, addParameters, } from '@storybook/html'
+import { create } from '@storybook/theming'
+
+import vocabularySvg from '../src/assets/logos/products/vocabulary.svg'
+import vocabularySvgInverted from '../src/assets/logos/products/vocabulary_inverted.svg'
 
 import { withDesign } from 'storybook-addon-designs'
 import { withKnobs } from '@storybook/addon-knobs'
@@ -6,9 +10,14 @@ import { withKnobs } from '@storybook/addon-knobs'
 import viewports from './viewport'
 import order from './order'
 
-import { light, dark } from './theme'
+import { light, dark } from '../../shared/theme'
 
 import '../dist/css/vocabulary.css'
+
+const meta = {
+  brandTitle: 'Vocabulary',
+  brandUrl: 'https://opensource.creativecommons.org/cc-vocabulary'
+}
 
 addParameters({
   options: {
@@ -24,8 +33,16 @@ addParameters({
       viewports
     },
     darkMode: {
-      light: light,
-      dark: dark
+      light: {
+        meta,
+        ...create(light),
+        brandImage: vocabularySvg
+      },
+      dark: {
+        meta,
+        ...create(dark),
+        brandImage: vocabularySvgInverted
+      }
     }
 })
 
