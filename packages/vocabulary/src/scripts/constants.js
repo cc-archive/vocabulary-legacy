@@ -1,6 +1,5 @@
 export const CC_ORG_URL = "https://creativecommons.org";
-export const DONATION_URL =
-  "https://creativecommons.org/donate?c_src=website&c_src2=GlobalHeader";
+export const DONATION_URL = "https://creativecommons.org/donate";
 
 export const CDN_BASE_URL = "https://unpkg.com/@creativecommons/vocabulary";
 export const GLOBAL_HEADER_API_URL =
