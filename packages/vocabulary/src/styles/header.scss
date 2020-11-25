@@ -45,6 +45,11 @@ $navbar-breakpoint: $tablet;
     grid-template-rows: 4.875rem 5.25rem;
     grid-template-areas: "brand start"
                             "menu menu";
+    &.is-full-width {
+      width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     .navbar-menu {
       display: flex;
       & .tabs-nav {
@@ -77,6 +82,11 @@ $navbar-breakpoint: $tablet;
     grid-template-areas: "brand start"
                             "brand menu";
     width: $desktop;
+    &.is-full-width {
+      width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     .navbar-start {
       align-items: flex-start;
 
@@ -87,6 +97,11 @@ $navbar-breakpoint: $tablet;
   }
   @include widescreen() {
     width: $widescreen;
+    &.is-full-width {
+      width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
 
