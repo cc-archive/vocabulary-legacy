@@ -1,14 +1,23 @@
 import { addDecorator, addParameters } from '@storybook/vue'
 import { withDesign } from "storybook-addon-designs";
+import { create } from '@storybook/theming'
+
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg';
+import vocabularySvgInverted from '../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg';
 
 import i18n from '@/i18n'
 
 import viewports from './viewport'
 import order from './order'
 
-import { light, dark } from './theme'
+import { light, dark } from '../../shared/theme'
 
 import '@creativecommons/vocabulary/css/vocabulary.css'
+
+const meta = {
+  brandTitle: 'Vue Vocabulary',
+  brandUrl: 'https://opensource.creativecommons.org/cc-vue-vocabulary'
+}
 
 addParameters({
   options: { 
@@ -26,8 +35,16 @@ addParameters({
     viewports
   },
   darkMode: {
-    light: light,
-    dark: dark
+    light: {
+      ...meta,
+      ...create(light),
+      brandImage: vocabularySvg
+    },
+    dark: {
+      ...meta,
+      ...create(dark),
+      brandImage: vocabularySvgInverted
+    }
   }
 })
 
