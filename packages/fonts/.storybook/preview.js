@@ -6,10 +6,10 @@ import order from './order'
 import fontsSvg from '../src/assets/logos/fonts.svg'
 import fontsSvgInverted from '../src/assets/logos/fonts_inverted.svg'
 
-import { light, dark } from '../../shared/theme'
-
 import '../dist/css/fonts.css'
 import '../dist/css/accidenz_commons.css'
+
+const themes = require('../../shared/theme')
 
 const meta = {
   brandTitle: 'Fonts',
@@ -28,14 +28,14 @@ addParameters({
     },
     darkMode: {
       light: {
-        meta,
+        ...meta,
+        ...create(themes.light),
         brandImage: fontsSvg,
-        ...create(light)
       },
       dark: {
-        meta,
+        ...meta,
+        ...create(themes.dark),
         brandImage: fontsSvgInverted,
-        ...create(dark)
       }
     }
 })

@@ -10,9 +10,9 @@ import i18n from '@/i18n'
 import viewports from './viewport'
 import order from './order'
 
-import { light, dark } from '../../shared/theme'
-
 import '@creativecommons/vocabulary/css/vocabulary.css'
+
+const { light, dark } =  require('../../shared/theme') 
 
 const meta = {
   brandTitle: 'Vue Vocabulary',
