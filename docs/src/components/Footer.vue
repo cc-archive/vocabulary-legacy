@@ -150,7 +150,7 @@
                 <p>Help us keep the internet free and open.</p>
                 <a
                   class="button small donate"
-                  href="http://creativecommons.org/donate?c_src=website&c_src2=GlobalFooter"
+                  href="https://creativecommons.org/donate?c_src=website&c_src2=GlobalFooter"
                   rel="noopener"
                 >
                   <i
