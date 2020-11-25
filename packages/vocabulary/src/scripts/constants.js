@@ -1,5 +1,5 @@
 export const CC_ORG_URL = 'https://creativecommons.org'
-export const DONATION_URL = 'https://us.netdonor.net/page/6650/donate/1?ea.tracking.id=global-navigation-bar'
+export const DONATION_URL = 'https://classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=GlobalHeader'
 
 export const CDN_BASE_URL = 'https://unpkg.com/@creativecommons/vocabulary'
 export const GLOBAL_HEADER_API_URL = 'https://creativecommons.org/wp-json/ccglobal/menu'
