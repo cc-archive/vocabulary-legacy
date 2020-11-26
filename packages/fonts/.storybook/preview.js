@@ -9,7 +9,7 @@ import fontsSvgInverted from '../src/assets/logos/fonts_inverted.svg'
 import '../dist/css/fonts.css'
 import '../dist/css/accidenz_commons.css'
 
-const themes = require('../../shared/theme')
+import { light, dark } from '@creativecommons/shared/theme'
 
 const meta = {
   brandTitle: 'Fonts',
@@ -29,13 +29,13 @@ addParameters({
     darkMode: {
       light: {
         ...meta,
-        ...create(themes.light),
-        brandImage: fontsSvg,
+        ...create(light),
+        brandImage: fontsSvg
       },
       dark: {
         ...meta,
-        ...create(themes.dark),
-        brandImage: fontsSvgInverted,
+        ...create(dark),
+        brandImage: fontsSvgInverted
       }
     }
 })

@@ -1,8 +1,6 @@
 {
   "packages": [
-    "packages/fonts",
-    "packages/vocabulary",
-    "packages/vue-vocabulary"
+    "packages/*"
   ],
   "version": "2020.11.3"
 }

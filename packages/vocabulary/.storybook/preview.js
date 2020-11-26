@@ -10,9 +10,9 @@ import { withKnobs } from '@storybook/addon-knobs'
 import viewports from './viewport'
 import order from './order'
 
-import { light, dark } from '../../shared/theme'
-
 import '../dist/css/vocabulary.css'
+
+import { light, dark } from '@creativecommons/shared/theme'
 
 const meta = {
   brandTitle: 'Vocabulary',
@@ -34,12 +34,12 @@ addParameters({
     },
     darkMode: {
       light: {
-        meta,
+        ...meta,
         ...create(light),
         brandImage: vocabularySvg
       },
       dark: {
-        meta,
+        ...meta,
         ...create(dark),
         brandImage: vocabularySvgInverted
       }

@@ -12,7 +12,7 @@ import order from './order'
 
 import '@creativecommons/vocabulary/css/vocabulary.css'
 
-const { light, dark } =  require('../../shared/theme') 
+import { light, dark } from '@creativecommons/shared/theme'
 
 const meta = {
   brandTitle: 'Vue Vocabulary',
