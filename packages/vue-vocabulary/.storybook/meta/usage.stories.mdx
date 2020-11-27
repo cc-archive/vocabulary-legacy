@@ -4,15 +4,9 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # Usage
 
-We've tried to make it as easy as possible to use Vue Vocabulary in your projects. Depending on your build pipeline you
-might prefer to install Vue Vocabulary via `npm` or via a CDN.
+We've tried to make it as easy as possible to use Vue Vocabulary in your projects. Depending on your build pipeline you may prefer to install Vue Vocabulary via `npm` or via a `CDN`.
 
-You need to install Vue and [Vue i18n], explaining which is beyond the scope of this guide. The usage of Vue Vocabulary
-requires the installation and usage of Vocabulary. See [Vocabulary installation]. Once you are done with installing all
-of these, resume installation from the steps here.
-
-[Vue i18n]:https://kazupon.github.io/vue-i18n/
-[Vocabulary installation]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-usage--page
+You need to install Vue and [Vue i18n](https://www.npmjs.com/package/vue-i18n), explaining which is beyond the scope of this guide. The usage of Vue Vocabulary requires the installation and usage of Vocabulary. See [Vocabulary installation](https://cc-vocabulary.netlify.app/?path=/story/vocabulary-usage--page#installation). Once you are done with installing all of these, resume installation from the steps here.
 
 ## NPM
 
@@ -30,11 +24,7 @@ $ npm install @creativecommons/vue-vocabulary
 
 ### JavaScript
 
-<!-- TODO
-
-Set up the i18n instance.
-
-```js
+```javascript
 const i18n = new VueI18n({
   locale: 'en',
   fallbackLocale: 'en',
@@ -42,10 +32,9 @@ const i18n = new VueI18n({
 })
 ```
 
-Then in the component containing Vocabulary components, import the required components. You will need to register these
-components using Vue.component for global registration or in the components dictionary within your component definition.
+Then in the component containing Vocabulary components, import the required components. You will need to register these components using `Vue.component` for global registration or in the components dictionary within your component definition.
 
-```js
+```javascript
 import { VHeader, Footer, Locale } from '@creativecommons/vue-vocabulary'
 
 export default {
@@ -58,7 +47,7 @@ export default {
 }
 ```
 
-If you are planning to use a hefty chunk of the components, you can install Vocabulary as a plugin too.
+If you are planning to use a hefty chunk of the components, you can install `Vocabulary` as a plugin too.
 
 ```js
 import VueVocabulary from '@creativecommons/vue-vocabulary'
@@ -74,9 +63,6 @@ And your template can go like this.
   <Footer><Locale/></Footer>
 </div>
 ```
--->
-
-Coming soon.
 
 ## CDN
 
@@ -115,4 +101,3 @@ Remember to install dependencies
 ### JavaScript
 
 <!-- TODO -->
-Coming soon.
