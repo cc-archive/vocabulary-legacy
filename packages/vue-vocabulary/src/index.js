@@ -8,6 +8,7 @@
 import DonateButton from './elements/DonateButton/DonateButton'
 import VButton from './elements/VButton/VButton'
 import VCheckbox from './elements/VCheckbox/VCheckbox'
+import VInput from './elements/VInput/VInput'
 import VRadio from './elements/VRadio/VRadio'
 import Table from './layouts/Table/Table'
 import TableCell from './layouts/Table/TableCell'
@@ -26,6 +27,7 @@ export {
   DonateButton,
   VButton,
   VCheckbox,
+  VInput,
   VRadio,
   Table,
   TableCell,
@@ -46,6 +48,7 @@ export default {
     Vue.component('DonateButton', DonateButton)
     Vue.component('VButton', VButton)
     Vue.component('VCheckbox', VCheckbox)
+    Vue.component('VInput', VInput)
     Vue.component('VRadio', VRadio)
     Vue.component('Table', Table)
     Vue.component('TableCell', TableCell)
