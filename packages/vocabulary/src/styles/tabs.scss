@@ -40,8 +40,10 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
 
   &.is-boxed {
     a {
-      @extend .padding-vertical-small;
-      @extend .padding-horizontal-normal;
+      padding-top: $space-small;
+      padding-bottom: $space-small;
+      padding-left: $space-normal;
+      padding-right: $space-normal;
 
       margin: 0 0 -2px;
       border: 2px solid $color-light-gray;
@@ -72,7 +74,7 @@ $tabs-boxed-link-active-border-color: $color-light-gray;
   }
 
   &.is-boxed {
-    @extend .padding-normal;
+    padding: $space-normal;
 
     border: 2px solid $color-light-gray;
     border-top: 0;

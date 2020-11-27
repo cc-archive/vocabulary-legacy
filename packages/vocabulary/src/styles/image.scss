@@ -10,17 +10,19 @@
   .image-title,
   .image-icons,
   .bookmark-icon {
-    @extend .padding-vertical-small;
+    padding-top: $space-small;
+    padding-bottom: $space-small;
 
     transition: transform 0.2s linear;
     position: absolute;
   }
 
   .image-title {
-    @extend .padding-horizontal-normal;
-    @extend .has-text-white;
-    @extend .has-background-black;
-    @extend .caption;
+    padding-left: $space-normal;
+    padding-right: $space-normal;
+    color: $color-white;
+    background-color: $color-black;
+    font-size: $font-size-caption;
 
     transform: translateY(100%);
     left: 0;
@@ -39,8 +41,9 @@
   }
 
   .image-icons {
-    @extend .padding-horizontal-normal;
-    @extend .has-text-black;
+    padding-left: $space-normal;
+    padding-right: $space-normal;
+    color: $color-black;
 
     transform: translateY(-100%);
     left: 0;
@@ -50,9 +53,10 @@
   }
 
   .bookmark-icon {
-    @extend .padding-horizontal-small;
-    @extend .has-text-white;
-    @extend .has-background-black;
+    padding-left: $space-small;
+    padding-right: $space-small;
+    color: $color-white;
+    background-color: $color-black;
 
     right: 0;
     top: 0;
@@ -71,8 +75,9 @@
 
   &.is-compact {
     .image-icons {
-      @extend .is-paddingless;
-      @extend .padding-horizontal-small;
+      padding: 0;
+      padding-left: $space-small;
+      padding-right: $space-small;
 
       font-size: 1.3rem;
     }

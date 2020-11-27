@@ -87,7 +87,8 @@
   }
   &.is-compact {
     .notification-container {
-      @extend .padding-vertical-normal;
+      padding-top: $space-normal;
+      padding-bottom: $space-normal;
       padding-left: $space-big;
 
       p {

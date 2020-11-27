@@ -30,6 +30,11 @@
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
   </a>
+  <a
+    href="https://lerna.js.org/"
+    style="margin-right: 1em;">
+    <img alt="Maintained With Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg"/>
+  </a>
 </p>
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
