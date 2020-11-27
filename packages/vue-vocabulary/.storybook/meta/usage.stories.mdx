@@ -35,13 +35,11 @@ const i18n = new VueI18n({
 Then in the component containing Vocabulary components, import the required components. You will need to register these components using `Vue.component` for global registration or in the components dictionary within your component definition.
 
 ```javascript
-import { VHeader, Footer, Locale } from '@creativecommons/vue-vocabulary'
+import { VHeader } from '@creativecommons/vue-vocabulary'
 
 export default {
   components: {
-    VHeader,
-    Footer,
-    Locale
+    VHeader
   },
   ...
 }
@@ -49,7 +47,7 @@ export default {
 
 If you are planning to use a hefty chunk of the components, you can install `Vocabulary` as a plugin too.
 
-```js
+```javascript
 import VueVocabulary from '@creativecommons/vue-vocabulary'
 
 Vue.use(VueVocabulary)
@@ -97,7 +95,3 @@ Remember to install dependencies
 -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@creativecommons/vue-vocabulary"></script>
 ```
-
-### JavaScript
-
-<!-- TODO -->
