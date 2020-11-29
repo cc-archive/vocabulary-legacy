@@ -8,11 +8,12 @@
   }
 
   .tooltiptext {
-    @extend .padding-horizontal-small;
-    @extend .padding-vertical-smaller;
-    @extend .has-color-dark-slate-gray;
-    @extend .has-background-white;
-
+    padding-top: $space-smaller;
+    padding-bottom: $space-smaller;
+    padding-right: $space-small;
+    padding-left: $space-small;
+    color: $dark-slate-gray;
+    background-color: $color-white;
     visibility: hidden;
     text-align: center;
     border-radius: 0.25rem;
