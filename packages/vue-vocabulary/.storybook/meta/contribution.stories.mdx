@@ -4,12 +4,9 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # Contribution
 
-We're always looking for contributors to help us find and fix bugs, build new
-features, help us improve the project documentation or translate the project to
-another language.
+We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
 
-Vue Vocabulary is continuously evolving and improving. You can contribute to the
-project in a number of ways.
+Vue Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
 
 | What | How |
 |-|-|
@@ -33,10 +30,9 @@ These instructions are a port of the general guidelines, tailored specifically f
 
 ## Setting up
 
-Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork
-instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
+Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and
+To setup you can either use [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) or manually set up the project. Both have their advantages and
 disadvantages.
 
 Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle
@@ -74,20 +70,19 @@ $ docker-compose build storybook
 
 Install Node.js and NPM, if you don't already have them on your computer.
 
-Install dependencies.
+Install dependencies:
 ```
-$ npm install
+$ npm install --legacy-peer-deps
 ```
 
 Start the Storybook process which is an interactive playground of components in
-the browser.
+the browser:
 
 ```
+$ npm run build
 $ npm run storybook
 ```
 
 ## Discussing changes, assigning work, making changes and testing
 
-See [Vocabulary guidelines].
-
-[Vocabulary guidelines]:https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page
+See [Vocabulary guidelines](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).

@@ -1,4 +1,5 @@
 import { config } from 'storybook-addon-designs'
+import { DONATION_URL } from '../scripts/constants'
 
 export const figmaConfig = (nodeId) =>
   config({
@@ -61,7 +62,7 @@ export const header = (color) => `<header>
                 <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M7.45896 11.25H22.5351c1.043 0 1.5645 1.2598.8262 1.998l-7.5352 7.5411c-.457.457-1.2011.457-1.6582 0L6.63279 13.248c-.73828-.7382-.2168-1.998.82617-1.998z" fill="currentColor"/></svg>
               </span>
             </div>
-            <a class="button donate" href="http://creativecommons.org/donate">
+            <a class="button donate" href="${DONATION_URL}?c_src=website&c_src2=NavBar">
               <i class="icon heart"></i>
               Donate
             </a>
