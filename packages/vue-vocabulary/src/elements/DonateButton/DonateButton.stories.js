@@ -1,5 +1,6 @@
 import DonateButton from './DonateButton'
 import { sizes } from '../../utils/values'
+import { addSource } from '@/utils/addSource'
 
 export default {
   title: 'Elements/Donate Button',
@@ -27,3 +28,11 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({})
 Default.args = {}
+
+export const Iconless = Template.bind({})
+Iconless.args = { noIcon: true }
+addSource(Iconless, '<DonateButton :no-icon="true">Text</DonateButton>')
+
+export const withLink = Template.bind({})
+withLink.args = { href: 'http://creativecommons.org/donate' }
+addSource(withLink, '<DonateButton href="http://creativecommons.org/donate">Text</DonateButton>')
