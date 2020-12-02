@@ -13,14 +13,22 @@ For a full fledged app, use `npm` (or if you're one of those people, `yarn`) to 
 
 Just install `@creativecommons/fonts` using the package manager of your choice.
 
+To install the latest stable release:
+
 ```bash
 $ npm install @creativecommons/fonts
+```
+
+To install a specific [Calver](https://calver.org/) version, use the *@* character followed by the version number:
+
+```bash
+$ npm install @creativecommons/fonts@2020.11.1
 ```
 
 In your entrypoint, you can include the master CSS file. It does not include the Accidenz Commons font, so you might
 want to import that separately.
 
-```js
+```javascript
 import '@creativecommons/fonts/css/fonts.css'
 ```
 
@@ -35,7 +43,7 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css">
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@2020.11.1/css/fonts.css">
 <!-- or, if you prefer the latest version, use -->
 <link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts/css/fonts.css">
 ```
@@ -44,7 +52,7 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/fonts@2020.11.1/css/fonts.css">
 <!-- or, if you prefer the latest version, use -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/fonts/css/fonts.css">
 ```

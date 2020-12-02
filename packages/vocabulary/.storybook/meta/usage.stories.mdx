@@ -5,7 +5,7 @@ import { Meta } from '@storybook/addon-docs/blocks'
 # Usage
 
 We've tried to make it as easy as possible to use Vocabulary in your projects. Depending on your build pipeline you
-might prefer to install Vocabulary via `npm` or via a CDN.
+may prefer to install Vocabulary via `npm` or via a `CDN`.
 
 ## NPM
 
@@ -13,21 +13,27 @@ For a full fledged app, use `npm` (or if you're one of those people, `yarn`) to 
 
 ### Installation
 
-Just install `@creativecommons/vocabulary` using the package manager of your choice.
+Just install `@creativecommons/vocabulary` using the package manager of your choice to pull the latest stable version:
 
 ```bash
-npm install @creativecommons/vocabulary
+$ npm install @creativecommons/vocabulary
+```
+
+To install a specific [Calver](https://calver.org/) version, use the *@* character followed by the version number:
+
+```bash
+$ npm install @creativecommons/vocabulary@2020.11.1
 ```
 
 ### Stylesheets
 
-In your entrypoint, you can include the master CSS file.
+In your entrypoint, you can include the master CSS file:
 
 ```js
 import '@creativecommons/vocabulary/css/vocabulary.css'
 ```
 
-Alternatively, you can import the SCSS styleheets into your own stylesheets.
+Alternatively, you can import the SCSS styleheets into your own stylesheets:
 
 ```scss
 @import '~@creativecommons/vocabulary/scss/header.scss'
@@ -36,7 +42,13 @@ Alternatively, you can import the SCSS styleheets into your own stylesheets.
 
 ### JavaScript
 
-Coming soon.
+```JavaScript
+import '@creativecommons/vocabulary/js/vocabulary.js'
+
+// Or alternatively
+
+require('@creativecommons/vocabulary/js/vocabulary.js')
+```
 
 ### Assets
 
@@ -65,7 +77,7 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css">
 <!-- or, if you prefer the latest version, use -->
 <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
 ```
@@ -74,7 +86,7 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@1.0.0-beta.6/css/vocabulary.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css">
 <!-- or, if you prefer the latest version, use -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
 ```
@@ -106,6 +118,7 @@ Source the bundled JS file with any of these one-link `script` tags within your 
 The JavaScript bundle is imported as `vocabulary` in the global scope. You can then access the functions as follows.
 
 ```html
+<script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js">
 <script>
   vocabulary.createGlobalHeader()
 </script>
@@ -113,8 +126,7 @@ The JavaScript bundle is imported as `vocabulary` in the global scope. You can t
 
 ### Assets
 
-Vocabulary bundles a number of assets, like SVGs for the brand and product logos, and license badges. Since SVGs cannot
-directly be hotlinked from the CDNs due to cross-origin issues, you will need to adopt this workaround.
+Vocabulary bundles a number of assets, like SVGs for the brand and product logos, and license badges. Since SVGs cannot directly be hotlinked from the CDNs due to cross-origin issues, you will need to adopt this workaround.
 
 ```html
 <script>

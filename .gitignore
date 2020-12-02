@@ -2,7 +2,6 @@
 node_modules
 /dist
 /build
-/docs
 /.cache
 __diff_output__
 

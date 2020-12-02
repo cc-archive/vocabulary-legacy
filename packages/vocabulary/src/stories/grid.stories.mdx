@@ -1,0 +1,157 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Layouts/Grid" />
+
+# Grid System
+
+The Vocabulary's Grid is based on [Bulma](https://bulma.io)’s grid system and was adapted to provide a comfortable lecture of the elements displayed by increasing the gap space. Every website must use the grid to keep consistency across all CC sites.
+
+The grid has [12 flexible columns](https://bulma.io/documentation/columns/sizes/#12-columns-system), and the main container will vary depending on the original four breakpoints of Bulma’s grid. Despite being a grid designed to wrap content through columns, other sections like galleries or highlighted titles can be placed without using the grid.
+
+export const cols = (number, color) => {
+  let result=``
+  for (let i=1; i<=number; i++)
+  result += `<div class="column"><div class="has-background-${color} has-text-white padding-top-big padding-bottom-big" style="display: grid; place-items: center center; font-weight: bold"">${i}</div></div>`
+  return result
+}
+
+## Fullhd
+
+<Preview mdxSource = {`
+<div style="width: 1248px;">
+  <div class="container columns">
+    ${cols(1,'tomato')}
+  </div>
+  <br>
+  <div class="container columns is-6">
+      ${cols(12,'tomato')}
+  <div>
+  <br>
+  <div class="container columns is-6">
+      ${cols(11,'dark')}
+  <div>
+</div>
+  `}>
+  <Story name="Fullhd" parameters={{
+    design: figmaConfig('3990%3A1666')
+  }}>{`
+  <div style="width: 1248px;">
+  <div class="columns">
+  ${cols(1,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(12,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(11,'dark')}
+  </div>
+  </div>
+  `}</Story>
+</Preview>
+
+## Desktop
+
+<Preview mdxSource = {`
+<div style="width: 952px;">
+  <div class="container columns">
+    ${cols(1,'tomato')}
+  </div>
+  <br>
+  <div class="container columns">
+      ${cols(12,'tomato')}
+  <div>
+  <br>
+  <div class="container columns">
+      ${cols(11,'dark')}
+  <div>
+</div>
+  `}>
+  <Story name="Desktop" parameters={{
+    design: figmaConfig('3990%3A1666')
+  }}>{`
+  <div style="width: 952px;">
+  <div class="columns" >
+  ${cols(1,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(12,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(11,'dark')}
+  </div>
+  </div>
+  `}</Story>
+</Preview>
+
+## Tablet
+
+<Preview mdxSource = {`
+<div style="width: 736px;">
+  <div class="columns">
+    ${cols(1,'tomato')}
+  </div>
+  <br>
+  <div class="columns">
+      ${cols(12,'tomato')}
+  <div>
+  <br>
+  <div class="columns">
+      ${cols(11,'dark')}
+  <div>
+</div>
+  `}>
+  <Story name="Tablet" parameters={{
+    design: figmaConfig('3990%3A1666')
+  }}>{`
+  <div style="width: 736px;">
+  <div class="columns">
+  ${cols(1,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(12,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(11,'dark')}
+  </div>
+  </div>
+  `}</Story>
+</Preview>
+
+## Mobile
+
+<Preview mdxSource = {`
+<div style="width: 276px;">
+  <div class="columns">
+    ${cols(1,'tomato')}
+  </div>
+  <br>
+  <div class="columns">
+      ${cols(4,'tomato')}
+  <div>
+  <br>
+  <div class="columns">
+      ${cols(3,'dark')}
+  <div>
+</div>
+  `}>
+  <Story name="Mobile" parameters={{
+    design: figmaConfig('3990%3A1666')
+  }}>{`
+  <div style="width: 276px;">
+  <div class="columns">
+  ${cols(1,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(4,'tomato')}
+  </div>
+  <div class="columns">
+  ${cols(3,'dark')}
+  </div>
+  </div>
+  `}</Story>
+</Preview>
+
+[Bulma](https://bulma.io) also offers further customisation with respect to the column widths. If you prefer, bulma column width classes such as `is-three-quarters` can also be explicitly applied to any individual column. This would then force the column to occupy three-fourths of the total container width, which by default spaces out equally. Bulma also offers provisions to modify the size, responsiveness, nesting, gap and other customised variants.
+
+Head over to the [bulma documentation](https://bulma.io/documentation/columns/sizes/) to learn more.

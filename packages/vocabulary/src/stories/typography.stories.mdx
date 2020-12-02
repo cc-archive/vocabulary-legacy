@@ -124,7 +124,7 @@ Values can be rendered with the class `.value` on the `<p>` tag.
   style={{color: '#333'}}
   sampleText="42" />
 
-Code can be rendered with the class `.monospace` on the `<p>` tag.
+Code can be rendered with the class `.monospace` on the `<p>` tag. If you additionally want syntax highlighting, we recommend using [highlightjs](https://highlightjs.org/) in combination with our styles.
 
 <Typeset
   fontSizes={[
@@ -141,3 +141,16 @@ Code can be rendered with the class `.monospace` on the `<p>` tag.
 }}>{`
   See the Design tab.
 `}</Story>
+
+Markdown can also be rendered with the help of the [vue-markdown](https://www.npmjs.com/package/vue-markdown) package. Just install it, and use our custom CSS overrides to achieve the desired results.
+
+<Typeset
+  fontSizes={[
+    '0.875rem'
+  ]}
+  fontFamily="monospace"
+  fontWeight={400}
+  style={{color: '#333'}}
+  sampleText="
+  <VueMarkdown># Title 1</VueMarkdown> //The text content will get auto-styled provided our stylesheets are imported
+  " />

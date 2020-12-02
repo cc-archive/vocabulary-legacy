@@ -25,7 +25,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^4.2.1",
     "eslint": "^7.6.0",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -57,7 +57,7 @@
     },
     {
       "type": "donations",
-      "url": "https://www.classy.org/give/308451/#!/donation/checkout"
+      "url": "https://creativecommons.org/donate"
     }
   ],
   "homepage": "https://creativecommons.github.io/cc-fonts/",

@@ -15,7 +15,7 @@
 <script>
 // import ExternalLink from '@creativecommons/fonts/dist/assets/svg/symbols/external-link.svg?inline'
 // prettier-ignore
-export default {
+  export default {
     name: 'NavItem',
     // components: {
     //   ExternalLink

@@ -4,16 +4,13 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Contribution
 
-We're always looking for contributors to help us find and fix bugs, build new
-features, help us improve the project documentation or translate the project to
-another language.
+We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
 
-Vocabulary is continuously evolving and improving. You can contribute to the
-project in a number of ways.
+Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
 
 | What       | How                                                                                                                                                   |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Code**   | If you are a developer, feel free to resolve open issues, proof PRs, add new features to existing components or add new components altogether.        |
+| **Code**   | If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.        |
 | **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.      |
 | **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
 | **Write**  | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.      |
@@ -32,10 +29,9 @@ These instructions are a port of the general guidelines, tailored specifically f
 
 ## Setting up
 
-Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork
-instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
+Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork instead. See GitHub Help pages for [instructions on how to do that](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
+To setup you can either use [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) or manually set up the project. Both have their advantages and disadvantages.
 
 Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
 
@@ -70,12 +66,14 @@ $ docker-compose build storybook
 
 ### Manual setup
 
-Install Node.js and NPM, if you don't already have them on your computer.
-Install dependencies in the root project
+Install [Node.js](https://nodejs.org/) and [Npm](https://www.npmjs.com/), if you don't already have them on your computer. 
 
-```shell
-$ npm install
+Install dependencies in the root project:
+
+```bash
+$ npm install --legacy-peer-deps
 $ npm run setup
+$ npm run build
 ```
 
 Start the following processes in different terminals:
@@ -90,19 +88,14 @@ $ npm run storybook
 
 ## Discussing changes
 
-For bugs reports and feature requests, use GitHub issues with the appropriate
-labels. We can discuss the possibility of that change or new feature being
-implemented and released in the future. This lets us come to an agreement about
+For bugs reports and feature requests, use GitHub issues with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about
 the proposed idea before any work is done.
 
 ## Assigning work
 
-If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to attempt
-it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last
-assignee bails.
+If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to  attempt it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last assignee bails.
 
-Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it
-before your PR comes in, your PR will be put on hold for a week.
+Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it before your PR comes in, your PR will be put on hold for a week.
 
 ## Making changes
 
@@ -126,7 +119,7 @@ Write new tests, and update existing ones, for the changes you make.
 
 ## Testing
 
-While our Husky setup will prevent you from committing poorly linted code, it cannot catch logical problems. For
+While our [Husky](https://www.npmjs.com/package/husky) setup will prevent you from committing poorly linted code, it cannot catch logical problems. For
 that we have some tests.
 
 ### Unit
