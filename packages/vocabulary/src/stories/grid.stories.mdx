@@ -6,13 +6,13 @@ import { figmaConfig } from './helpers'
 # Grid System
 
 The Vocabulary's Grid is based on [Bulma](https://bulma.io)’s grid system and was adapted to provide a comfortable lecture of the elements displayed by increasing the gap space. Every website must use the grid to keep consistency across all CC sites.
-The grid has [12 flexible columns](https://bulma.io/documentation/columns/sizes/#12-columns-system), and the main container will vary depending on the original four breakpoints of Bulma’s grid. Despite being a grid designed to wrap content through columns, other sections like galleries or highlighted titles can be placed without using the grid.
-The pixel measure displayed is mostly for Figma users, and the grid can be enabled in the Layout grid functionality.
 
-export const cols = (number, color, width) => {
+The grid has [12 flexible columns](https://bulma.io/documentation/columns/sizes/#12-columns-system), and the main container will vary depending on the original four breakpoints of Bulma’s grid. Despite being a grid designed to wrap content through columns, other sections like galleries or highlighted titles can be placed without using the grid.
+
+export const cols = (number, color) => {
   let result=``
   for (let i=1; i<=number; i++)
-  result+=`<div class="column"><div class="has-background-${color}" style="height:60px; width:${width}px"><center class="has-text-white">${i}</center></div></div>`
+  result += `<div class="column"><div class="has-background-${color} has-text-white padding-top-big padding-bottom-big" style="display: grid; place-items: center center; font-weight: bold"">${i}</div></div>`
   return result
 }
 
@@ -21,15 +21,15 @@ export const cols = (number, color, width) => {
 <Preview mdxSource = {`
 <div style="width: 1248px;">
   <div class="container columns">
-    ${cols(1,'tomato',1248)}
+    ${cols(1,'tomato')}
   </div>
   <br>
   <div class="container columns is-6">
-      ${cols(12,'tomato',60)}
+      ${cols(12,'tomato')}
   <div>
   <br>
   <div class="container columns is-6">
-      ${cols(11,'dark',48)}
+      ${cols(11,'dark')}
   <div>
 </div>
   `}>
@@ -38,13 +38,13 @@ export const cols = (number, color, width) => {
   }}>{`
   <div style="width: 1248px;">
   <div class="columns">
-  ${cols(1,'tomato',1248)}
+  ${cols(1,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(12,'tomato',60)}
+  <div class="columns">
+  ${cols(12,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(11,'dark',48)}
+  <div class="columns">
+  ${cols(11,'dark')}
   </div>
   </div>
   `}</Story>
@@ -55,15 +55,15 @@ export const cols = (number, color, width) => {
 <Preview mdxSource = {`
 <div style="width: 952px;">
   <div class="container columns">
-    ${cols(1,'tomato',952)}
+    ${cols(1,'tomato')}
   </div>
   <br>
-  <div class="container columns is-8">
-      ${cols(12,'tomato',50)}
+  <div class="container columns">
+      ${cols(12,'tomato')}
   <div>
   <br>
-  <div class="container columns is-8">
-      ${cols(11,'dark',32)}
+  <div class="container columns">
+      ${cols(11,'dark')}
   <div>
 </div>
   `}>
@@ -72,13 +72,13 @@ export const cols = (number, color, width) => {
   }}>{`
   <div style="width: 952px;">
   <div class="columns" >
-  ${cols(1,'tomato',952)}
+  ${cols(1,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(12,'tomato',50)}
+  <div class="columns">
+  ${cols(12,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(11,'dark',32)}
+  <div class="columns">
+  ${cols(11,'dark')}
   </div>
   </div>
   `}</Story>
@@ -89,15 +89,15 @@ export const cols = (number, color, width) => {
 <Preview mdxSource = {`
 <div style="width: 736px;">
   <div class="columns">
-    ${cols(1,'tomato',736)}
+    ${cols(1,'tomato')}
   </div>
   <br>
-  <div class="columns is-8">
-      ${cols(12,'tomato',32)}
+  <div class="columns">
+      ${cols(12,'tomato')}
   <div>
   <br>
-  <div class="columns is-8">
-      ${cols(11,'dark',32)}
+  <div class="columns">
+      ${cols(11,'dark')}
   <div>
 </div>
   `}>
@@ -106,13 +106,13 @@ export const cols = (number, color, width) => {
   }}>{`
   <div style="width: 736px;">
   <div class="columns">
-  ${cols(1,'tomato',736)}
+  ${cols(1,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(12,'tomato',32)}
+  <div class="columns">
+  ${cols(12,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(11,'dark',32)}
+  <div class="columns">
+  ${cols(11,'dark')}
   </div>
   </div>
   `}</Story>
@@ -123,15 +123,15 @@ export const cols = (number, color, width) => {
 <Preview mdxSource = {`
 <div style="width: 276px;">
   <div class="columns">
-    ${cols(1,'tomato',276)}
+    ${cols(1,'tomato')}
   </div>
   <br>
-  <div class="columns is-8">
-      ${cols(4,'tomato',45)}
+  <div class="columns">
+      ${cols(4,'tomato')}
   <div>
   <br>
-  <div class="columns is-8">
-      ${cols(3,'dark',32)}
+  <div class="columns">
+      ${cols(3,'dark')}
   <div>
 </div>
   `}>
@@ -140,13 +140,13 @@ export const cols = (number, color, width) => {
   }}>{`
   <div style="width: 276px;">
   <div class="columns">
-  ${cols(1,'tomato',276)}
+  ${cols(1,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(4,'tomato',45)}
+  <div class="columns">
+  ${cols(4,'tomato')}
   </div>
-  <div class="columns is-8">
-  ${cols(3,'dark',32)}
+  <div class="columns">
+  ${cols(3,'dark')}
   </div>
   </div>
   `}</Story>
