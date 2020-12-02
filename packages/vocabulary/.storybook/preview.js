@@ -13,6 +13,7 @@ import order from './order'
 import '../dist/css/vocabulary.css'
 
 import { light, dark } from '@creativecommons/shared/theme'
+import { backgrounds } from "@creativecommons/shared/backgrounds";
 
 const meta = {
   brandTitle: 'Vocabulary',
@@ -23,27 +24,23 @@ addParameters({
   options: {
     showRoots: true,
     storySort: order,
-    backgrounds: [
-        { name: 'canvas', value: '#f5f5f5', default: true },
-        { name: 'white', value: '#ffffff' },
-        { name: 'black', value: '#000000' }
-      ]
+  },
+  backgrounds,
+  viewport: {
+    viewports
+  },
+  darkMode: {
+    light: {
+      ...meta,
+      ...create(light),
+      brandImage: vocabularySvg
     },
-    viewport: {
-      viewports
-    },
-    darkMode: {
-      light: {
-        ...meta,
-        ...create(light),
-        brandImage: vocabularySvg
-      },
-      dark: {
-        ...meta,
-        ...create(dark),
-        brandImage: vocabularySvgInverted
-      }
+    dark: {
+      ...meta,
+      ...create(dark),
+      brandImage: vocabularySvgInverted
     }
+  }
 })
 
 addDecorator(withDesign)

@@ -13,6 +13,7 @@ import order from './order'
 import '@creativecommons/vocabulary/css/vocabulary.css'
 
 import { light, dark } from '@creativecommons/shared/theme'
+import { backgrounds } from '@creativecommons/shared/backgrounds'
 
 const meta = {
   brandTitle: 'Vue Vocabulary',
@@ -20,16 +21,9 @@ const meta = {
 }
 
 addParameters({
-  options: { 
-  storySort: order,
-  backgrounds: {
-    default: 'canvas',
-    values: [
-        { name: 'canvas', value: '#f5f5f5', default: true },
-        { name: 'white', value: '#ffffff' },
-        { name: 'black', value: '#000000' }
-      ]
-    }
+  backgrounds,
+  options: {
+    storySort: order,
   },
   viewport: {
     viewports
