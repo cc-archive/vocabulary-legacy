@@ -33,9 +33,7 @@ export const isInverted = `<a class="github-corner is-inverted">
 
 <Preview mdxSource={isInverted} style={{backgroundColor: 'black'}} className="tight">
   <Story name="Inverted" height="120px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
+    backgrounds: { default: 'black' },
     design: figmaConfig('795%3A1')
   }}>{
     isInverted.toString()

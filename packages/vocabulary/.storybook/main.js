@@ -1,3 +1,4 @@
+  
 module.exports = {
   stories: [
     './meta/*.stories.mdx',
@@ -14,6 +15,7 @@ module.exports = {
     '@storybook/addon-backgrounds',
     '@storybook/addon-viewport',
     '@storybook/addon-docs',
-    '@storybook/addon-a11y',
+    '@storybook/addon-a11y', 
+    'storybook-dark-mode/register'
   ]
 }
