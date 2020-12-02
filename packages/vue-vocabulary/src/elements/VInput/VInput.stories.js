@@ -1,8 +1,8 @@
 import VInput from './VInput'
 import { figmaConfig } from '@/utils/helpers'
 import { addSource } from '@/utils/addSource'
-import Search from '@creativecommons/fonts/src/assets/svg/symbols/search.svg?inline'
-import Cross from '@creativecommons/fonts/src/assets/svg/symbols/times.svg?inline'
+import Search from '@creativecommons/fonts/assets/svg/symbols/search.svg?inline'
+import Cross from '@creativecommons/fonts/assets/svg/symbols/times.svg?inline'
 
 export default {
   title: 'Elements/VInput',
