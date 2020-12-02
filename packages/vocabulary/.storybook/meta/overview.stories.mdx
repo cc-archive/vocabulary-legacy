@@ -6,14 +6,13 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## What is Vocabulary?
 
-Vocabulary is the web design system for the Creative Commons brand. It provides styles and components that will be used
-across all Creative Commons websites to ensure attractive and consistent design.
+Vocabulary is the web design system for the [Creative Commons](https://opensource.creativecommons.org/) brand. It provides styles and components that will be used across all Creative Commons websites to ensure attractive and consistent design.
 
-The overall Vocabulary project consists of
-- **Design Library** (Figma), the source of truth for all designs in Vocabulary
+The overall Vocabulary project consists of:
+- **Design Library** ([Figma](https://figma.com)), the source of truth for all designs in Vocabulary
 - **Fonts** (Typefaces), which provides typefaces and the main icon font for use in the system
 - **Vocabulary** (CSS library and assets), which provides base CSS styles for all components.
-- **Vue Vocabulary** (Vue.js library), which provides Vue components derived from Vocabulary
+- **Vue Vocabulary** ([Vue.js](https://vuejs.org) library), which provides Vue components derived from Vocabulary
 
 ## Why does Vocabulary exist?
 
@@ -31,14 +30,13 @@ manner.
 > **Every CC website will be based on Vocabulary.**
 
 #### Meaning
-- If there’s a new design element needed for a website, the **UX designer** needs to be consulted and create a design in
-  Figma first.
-- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into
-  their own code.
+- If there’s a new design element needed for a website, the **UX designer** needs to be consulted and create a design in Figma first.
+- Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into their own code.
 
 #### Rationale
 - To ensure consistency and maintainability
 - To ensure maintainability by restricting websites to using only shared code for styling.
+- One person bottlenecks all major design changes.
 
 #### Tradeoffs
 - Lack of opportunity for individual creativity.
@@ -55,7 +53,7 @@ manner.
   - If using the CSS from Vocabulary is the same amount of code as using a custom Vue component, we will use the CSS
     directly and skip the Vue component.
 - We will not create additional Vocabulary libraries similar to Vue Vocabulary; we’ll use the base CSS styles instead
-  for other systems like WordPress and Lektor.
+  for other systems like [WordPress](https://wordpress.org/) and [Lektor](https://www.getlektor.com/).
   - WordPress and Lektor do not support standalone components like Vue. We will only create Vocabulary libraries for
     systems that support standalone components if needed.
 - Vocabulary will not offer special styling for combinations of basic elements.
@@ -107,124 +105,6 @@ manner.
 #### Tradeoffs
 - Work needed to keep this documentation updated.
 
-### Principle 5
-
-> **All designs must be approved by our UX Designer; it is not sufficient to use Vocabulary.**
-
-#### Meaning
-- Any significant design changes or new designs must be approved by the **UX Designer** before being implemented, even if
-  they are based on existing Vocabulary components.
-
-#### Rationale
-- This will provide the best user experience for our users.
-- All designs are vetted by an expert.
-
-#### Tradeoffs
-- One person bottlenecks all major design changes.
-
-## Workflow
-
-## Roles and responsibilities
-
-### Roles
-
-#### Comms Manager
-
-The Comms Manager owns the CC Style Guide. Vocabulary follows the Style Guide from the perspective of colors
-and styles, it does not inform the Style Guide. Any implementation of web styles (for example, color choices) that are
-at odds with the Style Guide must be properly justified and discussed with Victoria for sign-off. It is crucial that CC
-maintains a consistent brand and style experience throughout.
-
-#### UX Designer
-
-The UX Designer maintains the Figma Design Library, which is used for designing mockups. When experimenting
-with changes to Vocabulary, they are first done in Figma and surfaced to the team. Francisco is responsible for making
-suggestions for how Vocabulary can be improved, in light of how things look when it is integrated on CC web properties.
-He is also responsible for defining layout-specific styles within Vocabulary. He also runs point on proposing
-web-specific UI styles as needed. If there is no conflict with the Style Guide (i.e. these are additive, not
-contradictory), then sign-off falls to Anna. Otherwise, Victoria is consulted.
-
-#### Director of Product
-
-The Director of Product (DoP) is responsible for final review and sign-off on all design changes, prior to
-implementation.
-
-#### Director of Engineering
-
-The Director of Engineering (DoE) is responsible for the technical architecture and project management of Vocabulary,
-with input from CC staff developers and the community maintainer.
-
-#### Community Maintainer
-
-The Community Maintainer is responsible for releasing new versions of Vocabulary, triaging issues, and managing
-community contributors to Vocabulary. He also makes changes to Vocabulary and provides technical input on Vocabulary as
-needed.
-
-#### Web Developer
-
-The Web Developer is responsible for making changes to Vocabulary and maintaining the WordPress themes that use
-Vocabulary. He also helps with new releases of Vocabulary, managing community contributors to Vocabulary and providing
-technical input on Vocabulary as needed.
-
-#### Frontend Developer
-
-The Frontend Developer is responsible for making changes to Vocabulary and Vue Vocabulary. He also helps with
-new releases of Vocabulary, managing community contributors to Vocabulary and providing technical input on Vocabulary
-as needed.
-
-#### Community contributors and interns
-
-Community contributors and interns work on pre-approved open GitHub issues in Vocabulary. They may also make
-suggestions for design or technical changes, which must be approved by Anna and Francisco, or Kriti, respectively.
-
-### Current people
-
-| Role                               | Current holder   |
-|------------------------------------|------------------|
-| Comms Manager                      | Victoria Heath   |
-| UX Designer                        | Francisco Vera   |
-| Director of Product                | Anna Tumadottir  |
-| Director of Engineering            | Kriti Godey      |
-| Community Maintainer               | Dhruv Bhanushali |
-| Web Developer                      | Hugo Solar       |
-| Frontend Developer                 | Zack Krida       |
-
 ## Discussions
 
-Conversations around Vocabulary happen primarily in the (private) #ux-design channel and the (public) #cc-dev-vocabulary
-channels in Slack. The tech team is consulted on proposed design changes on an ongoing basis. We may also talk about
-Vocabulary in the (internal) biweekly Design-Product sync meeting or call other meetings as appropriate.
-
-## Workflows
-
-### New website design
-
-- The developer working on the website design creates wireframes and discusses with the **UX Designer** and the
-  **Director of Product**
-  - A wireframe is a representation of the content displayed with gray tones to separate sections/zones. It is focused
-    on content and navigation.
-- The **UX Designer** works with the developer to create high-fidelity mockups in Figma using Vocabulary components.
-  - A mockup has the brand and graphic definitions with interaction notes. It is focused on the look-and-feel.
-- The **Director of Product** approves the mockups.
-- The **UX Designer** adds any new components used in the mockup to the Design Library.
-- The developer adds new components or updates existing components in Vocabulary (and Vue Vocabulary, if appropriate)
-- The developer uses the updated version of Vocabulary to build the website.
-
-
-### Technical architecture change
-
-- The developer suggesting the change creates a GitHub ticket and tags Kriti in it for approval.
-- The **Director of Engineering**, at their discretion, consults with the **Web Developer**, the **Frontend Developer**,
-  and/or the **Community Maintainer** and makes a decision and communicates it on the
-  GitHub ticket.
-- The ticket is either implemented or closed.
-
-### Design change
-
-- The person suggesting the change creates a GitHub ticket and tags the **Director of Product** and the **UX Designer**
-  in it for approval.
-- The **Director of Product** and the **UX Designer** make a decision on whether to approve it.
-- If approved, the **UX Designer** updates the Design Library with the new design.
-- The change is then implemented in Vocabulary (and if needed, Vue Vocabulary)
-- A new version of Vocabulary is released.
-- All projects using Vocabulary pull in the latest version so that the design change is reflected everywhere.
+Conversations around Vocabulary happen primarily in the (private) `#ux-design` channel and the (public) `#cc-dev-vocabulary` channels in [Slack](https://creativecommons.slack.com). The tech team is consulted on proposed design changes on an ongoing basis. We may also talk about Vocabulary in the (internal) biweekly Design-Product sync meeting or call other meetings as appropriate.
