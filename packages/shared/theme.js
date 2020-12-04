@@ -5,7 +5,8 @@ const base = {
   fontCode: '"Fira Code", monospace'
 }
 
-export const light = {
+const light = {
+  ...base,
   base: 'light',
   colorPrimary: 'rgb(0, 0, 0)',
   appBg: 'rgb(255, 255, 255)',
@@ -13,10 +14,10 @@ export const light = {
   barBg: 'rgb(255, 255, 255)',
   textColor: 'rgb(0, 0, 0)',
   textInverseColor: 'rgb(255, 255, 255)',
-  ...base
 }
 
-export const dark = {
+const dark = {
+  ...base,
   base: 'dark',
   colorPrimary: 'rgb(255, 255, 255)',
   appBg: 'rgb(47, 47, 47)',
@@ -24,5 +25,10 @@ export const dark = {
   barBg: 'rgb(47, 47, 47)',
   textColor: 'rgb(255, 255, 255)',
   textInverseColor: 'rgb(0, 0, 0)',
-  ...base
+}
+
+
+module.exports = {
+  light,
+  dark
 }

@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
-    "@creativecommons/shared": "file:../shared",
+    "@creativecommons/shared": "^2020.11.3",
     "@storybook/addon-a11y": "^6.1.9",
     "@storybook/addon-backgrounds": "^6.1.9",
     "@storybook/addon-docs": "^6.1.9",

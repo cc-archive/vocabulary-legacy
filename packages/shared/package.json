@@ -1,9 +1,5 @@
 {
   "private": true,
   "name": "@creativecommons/shared",
-  "version": "2020.11.3",
-  "dependencies": {},
-  "devDependencies": {
-    "core-js": "^3.8.0"
-  }
+  "version": "2020.11.3"
 }
