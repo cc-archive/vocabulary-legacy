@@ -1,4 +1,5 @@
 import { config } from 'storybook-addon-designs'
+import { DONATION_URL } from '../scripts/constants'
 
 export const figmaConfig = (nodeId) =>
   config({
@@ -60,12 +61,13 @@ export const header1 = (color, isActive = '') => `<header class="header" style="
               <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M7.45896 11.25H22.5351c1.043 0 1.5645 1.2598.8262 1.998l-7.5352 7.5411c-.457.457-1.2011.457-1.6582 0L6.63279 13.248c-.73828-.7382-.2168-1.998.82617-1.998z" fill="currentColor"/></svg>
             </span>
           </div>
-          <a class="button donate is-header small" href="http://creativecommons.org/donate">
+          <a class="button donate is-header small" href=href="${DONATION_URL}?c_src=website&c_src2=NavBar">
             <span class="icon heart">
               <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M27.088 3.668c-3.211-2.736-7.986-2.244-10.934.797L15 5.655l-1.154-1.19C10.904 1.424 6.123.932 2.912 3.668c-3.68 3.14-3.873 8.777-.58 12.182L13.67 27.557a1.837 1.837 0 002.654 0L27.662 15.85c3.299-3.405 3.106-9.041-.574-12.182z" fill="currentColor"/></svg>
             </span>
             Donate
           </a>
+
           </div>
         <div class="navbar-menu${isActive ? ' is-active' : ''}">
           <div class="tabs-nav">

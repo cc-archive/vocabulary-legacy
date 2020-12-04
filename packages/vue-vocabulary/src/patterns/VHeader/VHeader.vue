@@ -125,6 +125,7 @@
             tab.classList.remove('is-active')
           }
         })
+
       }
     }
   }

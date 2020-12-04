@@ -83,6 +83,7 @@ $button-text-hover-color: $color-tomato;
 
   &.tag {
     font-family: $family-source-sans-pro;
+    font-weight: bold;
     padding: 0 $space-normal;
     font-size: 0.81rem;
     text-transform: none;
@@ -92,19 +93,28 @@ $button-text-hover-color: $color-tomato;
     white-space: normal;
     border-radius: 18.75rem;
     border: 0.125rem solid $color-light-gray;
-    &:hover {
+    background-color: white;
+    color: $color-dark-gray;
+    --button-focus-outline: $color-light-gray;
+    &:hover, &:active, &:focus {
       border-color: $color-dark-gray;
+      background-color: $color-dark-gray;
+      color: white;
     }
 
     &--removable {
       font-family: $family-source-sans-pro;
+      font-weight: bold;
       padding: 0 $space-normal;
       font-size: 0.81rem;
       text-transform: none;
       height: 1.81rem;
       border-radius: 18.75rem;
       border: 0.125rem solid $color-light-gray;
-      &:hover {
+      background-color: white;
+      color: $color-dark-gray;
+      --button-focus-outline: $color-light-gray;
+      &:hover, &:active, &:focus {
         color: $color-dark-gray;
         background-color: $color-white;
         border: 0.125rem solid $color-dark-gray;
@@ -121,9 +131,9 @@ $button-text-hover-color: $color-tomato;
     }
 
     &--removable .icon {
-      height: 1.56rem;
+      height: 1.6rem;
       width: 1.9rem;
-      line-height: 1.56rem;
+      line-height: 1.6rem;
       font-size: 1rem;
       background-color: $color-white;
       color: $color-light-gray;
@@ -154,6 +164,7 @@ $button-text-hover-color: $color-tomato;
 
   &.is-primary {
     --button-focus-outline: #{$color-lighter-gray};
+    background-color: $color-tomato;
     &:hover, &:focus, &:active {
       background-color: $color-brighter-tomato;
     }
@@ -161,6 +172,7 @@ $button-text-hover-color: $color-tomato;
 
   &.is-success {
     --button-focus-outline: #{$color-lighter-gray};
+    background-color: $color-forest-green;
     &:hover, &:focus, &:active {
       background-color: $color-brighter-forest-green;
     }
@@ -218,6 +230,7 @@ $button-text-hover-color: $color-tomato;
     height: auto !important;
     line-height: normal;
     font-family: $family-source-sans-pro;
+
     text-align: left;
     text-decoration: none;
     text-transform: none;
