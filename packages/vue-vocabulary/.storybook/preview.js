@@ -12,8 +12,8 @@ import order from './order'
 
 import '@creativecommons/vocabulary/css/vocabulary.css'
 
-import { light, dark } from '@creativecommons/shared/theme'
-import { backgrounds } from '@creativecommons/shared/backgrounds'
+import { light, dark } from '../../shared/theme'
+import { backgrounds } from '../../shared/backgrounds'
 
 const meta = {
   brandTitle: 'Vue Vocabulary',

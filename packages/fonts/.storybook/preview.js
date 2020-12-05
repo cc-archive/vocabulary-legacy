@@ -9,8 +9,8 @@ import fontsSvgInverted from '../src/assets/logos/fonts_inverted.svg'
 import '../dist/css/fonts.css'
 import '../dist/css/accidenz_commons.css'
 
-import { light, dark } from '@creativecommons/shared/theme'
-import { backgrounds } from '@creativecommons/shared/backgrounds'
+import { light, dark } from '../../shared/theme'
+import { backgrounds } from '../../shared/backgrounds'
 
 const meta = {
   brandTitle: 'Fonts',
