@@ -81,5 +81,8 @@
     "directory": "packages/vocabulary"
   },
   "main": "index.js",
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "directory": "dist"
+  }
 }

@@ -75,5 +75,8 @@
     "url": "https://github.com/creativecommons/vocabulary.git",
     "directory": "packages/fonts"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "directory": "dist"
+  }
 }
