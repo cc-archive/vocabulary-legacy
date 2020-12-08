@@ -25,7 +25,7 @@
 </template>
 
 <script>
-// import CaretDown from '@creativecommons/fonts/dist/assets/svg/arrows/caret-down.svg?inline'
+// import CaretDown from '@creativecommons/fonts/assets/svg/caret-down.svg?inline'
   export default {
     name: 'NavDropdown',
     // components: {
