@@ -16,6 +16,10 @@ $navbar-breakpoint: $tablet;
   justify-content: center;
 }
 
+.header {
+  background-color: white;
+}
+
 .navbar {
   width: 100%;
   display: grid;
@@ -145,6 +149,7 @@ $navbar-breakpoint: $tablet;
   }
   .logo {
     height: 1.5875rem;
+    color: black;
     svg {
       height: 100%;
       width: auto;
@@ -183,6 +188,7 @@ $navbar-breakpoint: $tablet;
     padding-bottom: 0.5rem;
     .logo {
       height: 2.875rem;
+      color: black;
       svg {
         height: 100%;
         width: auto;
@@ -235,6 +241,7 @@ $navbar-breakpoint: $tablet;
     padding-right: 0;
     &:hover, &:active, &:focus {
       text-decoration: none;
+      color: black;
     }
   }
   .navbar-item svg {
@@ -244,6 +251,7 @@ $navbar-breakpoint: $tablet;
   }
   .navbar-dropdown .navbar-item {
     padding-left: 1rem;
+    padding-right: 1rem;
     &:hover, &:active, &:focus {
       background-color: transparent;
     }
