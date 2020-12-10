@@ -16,19 +16,19 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
-    "@storybook/addon-a11y": "^6.0.26",
-    "@storybook/addon-backgrounds": "^5.3.21",
-    "@storybook/addon-docs": "^6.0.4",
-    "@storybook/addon-knobs": "^6.0.4",
-    "@storybook/addon-viewport": "^6.0.4",
-    "@storybook/html": "^6.0.4",
+    "@storybook/addon-a11y": "^6.1.9",
+    "@storybook/addon-backgrounds": "^6.1.9",
+    "@storybook/addon-docs": "^6.1.9",
+    "@storybook/addon-knobs": "^6.1.9",
+    "@storybook/addon-viewport": "^6.1.9",
+    "@storybook/html": "^6.1.9",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.0.6",
     "bulma": "^0.9.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.0",
     "eslint": "^7.8.1",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -47,7 +47,8 @@
     "sass-loader": "^10.0.2",
     "sass-true": "^5.0.0",
     "start-server-and-test": "^1.10.11",
-    "storybook-addon-designs": "^5.4.1",
+    "storybook-addon-designs": "^5.4.2",
+    "storybook-dark-mode": "^1.0.3",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
@@ -79,5 +80,9 @@
     "url": "https://github.com/creativecommons/vocabulary.git",
     "directory": "packages/vocabulary"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {},
+  "publishConfig": {
+    "directory": "dist"
+  }
 }

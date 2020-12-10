@@ -5,6 +5,7 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-backgrounds',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    'storybook-dark-mode/register'
   ]
 }
