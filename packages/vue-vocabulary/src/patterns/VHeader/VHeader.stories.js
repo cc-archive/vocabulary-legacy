@@ -2,6 +2,7 @@ import VHeader from './VHeader'
 import ChooserLogo from '@creativecommons/vocabulary/assets/logos/products/chooser.svg?inline'
 import NavItem from './NavItem'
 import NavDropdown from './NavDropdown'
+import Locale from '../Locale/Locale'
 import { addDescription } from '../../utils/addDescription'
 
 export default {
@@ -10,11 +11,17 @@ export default {
 }
 
 let menuItems = `
+<NavDropdown label="Item Label">
+<NavItem tag="a" href="/item" label="Dropdown Item" />
+</NavDropdown>
 <NavItem tag="a" href="/whatever" label="Item One" />
 <NavItem tag="a" href="/whatever" label="Item External" :isExternal="true" />
 <NavDropdown label="Item Three">
 <NavItem tag="a" href="/whatever" label="Item Three A" />
 <NavItem tag="a" href="/whatever" label="Item Three B" />
+</NavDropdown>
+<NavDropdown label="Item Label">
+<NavItem tag="a" href="/item" label="Dropdown Item" />
 </NavDropdown>`
 
 const Template = (args, { argTypes }) => ({
@@ -41,14 +48,20 @@ addDescription(
 
 export const IntlHeader = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { VHeader, NavItem, ChooserLogo },
-  template: `<VHeader v-bind="$props">
-<template #menu-items>
-<NavItem tag="a" href="/menu_item" :label="$t('Menu Item')" />
-<NavItem tag="a" href="/menu_item" :label="$t('Menu Item')" :isExternal="true" />
-</template></VHeader>`
+  components: { VHeader, NavItem, ChooserLogo, Locale },
+  methods: {
+    setLanguage (payload) {
+      console.log('setting language, ', payload)
+    }
+  },
+  template: `<VHeader language="Russian" v-bind="{ aria_nav: 'навигация', aria_menu: 'menu' }">
+    <template #locale><Locale selected-language="Russian" /></template>
+    <template #menu-items>
+    <NavItem tag="a" href="/menu_item" label="Пункт меню 1" />
+    <NavItem tag="a" href="/menu_item" label="Пункт меню 2" :isExternal="true" />
+    </template></VHeader>`
 })
 addDescription(
   IntlHeader,
-  'When using i18n, you should pass translated strings to the header'
+  'When using i18n, you should pass translated strings to the header. There are two translated strings you need to provide using `v-bind="{key: value}"` syntax for accessibility: `aria_nav` and `aria_menu`. Locale emits `update` event when a language is changed'
 )

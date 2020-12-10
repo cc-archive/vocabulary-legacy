@@ -2,30 +2,29 @@
   <header class="vocab header">
     <nav class="navbar is-default"
          :class="{['is-active'] : isBurgerMenuActive}"
-         :aria-label="$t('header.aria.primary')">
+         :aria-label="aria_nav">
       <div class="navbar-brand">
         <a class="logo" href="/">
           <!--@slot The Vue component with the site's logo -->
           <slot name="logo">
-            <CCSearchLogo />
+            <CCLogo />
           </slot>
         </a>
-        <a
-          role="button"
+        <button
+          type="button"
           :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
-          :aria-label="$t('header.aria.menu')"
-          aria-expanded="false"
+          :aria-label="aria_menu"
+          :aria-expanded="isBurgerMenuActive.toString()"
           @click="toggleBurgerActive"
-          @keyup.enter="toggleBurgerActive"
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
-        </a>
+        </button>
       </div>
       <div class="navbar-start">
         <slot name="locale">
-          <Locale />
+          <Locale @update="updateLanguage"/>
         </slot>
         <slot name="donate">
           <DonateButton size="small" :is-header="true">Donate</DonateButton>
@@ -90,18 +89,36 @@
  */
   import NavItem from './NavItem'
   import NavDropdown from './NavDropdown'
-  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg?inline'
+  import CCLogo from '../../assets/creativecommons.svg?inline'
   import Locale from '../Locale/Locale'
   import DonateButton from '../../elements/DonateButton/DonateButton'
 
   export default {
     name: 'VHeader',
     components: {
-      CCSearchLogo,
+      CCLogo,
       NavItem,
       NavDropdown,
       Locale,
       DonateButton
+    },
+    props: {
+      aria_menu: {
+        type: String,
+        default: 'menu'
+      },
+      aria_nav: {
+        type: String,
+        default: 'navigation'
+      },
+      languages: {
+        type: Array,
+        required: false
+      },
+      selectedLanguage: {
+        type: String,
+        default: 'English'
+      }
     },
     data: () => ({ isBurgerMenuActive: false }),
     methods: {
@@ -125,7 +142,9 @@
             tab.classList.remove('is-active')
           }
         })
-
+      },
+      updateLanguage (payload) {
+        this.$emit('update', payload)
       }
     }
   }
