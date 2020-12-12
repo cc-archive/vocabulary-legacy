@@ -63,7 +63,8 @@ $navbar-breakpoint: $tablet;
     }
 
     & > .navbar-item {
-      margin-left: $space-large;
+	  margin-left: $space-large;
+	  color: $grey-dark;
     }
 
     & .navbar-item:hover {
