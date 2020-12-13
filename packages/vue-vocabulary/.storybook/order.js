@@ -6,6 +6,7 @@ const order = {
   ],
   'Elements': [],
   'Layouts': [],
+  'Patterns': []
 }
 const families = Object.keys(order)
 
