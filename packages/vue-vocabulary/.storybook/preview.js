@@ -1,9 +1,9 @@
 import { addDecorator, addParameters } from '@storybook/vue'
-import { withDesign } from "storybook-addon-designs";
+import { withDesign } from "storybook-addon-designs"
 import { create } from '@storybook/theming'
 
-import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg';
-import vocabularySvgInverted from '../../vocabulary/src/assets/logos/products/vocabulary_inverted.svg';
+import vocabularySvg from '@creativecommons/vocabulary/assets/logos/products/vocabulary.svg'
+import vocabularySvgInverted from '../src/assets/vocabulary_inverted.svg'
 
 import i18n from '@/i18n'
 
