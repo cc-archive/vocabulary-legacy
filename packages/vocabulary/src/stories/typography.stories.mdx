@@ -1,5 +1,5 @@
-import { Meta, Story, Preview, Typeset } from "@storybook/addon-docs/blocks";
-import { figmaConfig } from "./helpers";
+import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Typography" />
 
@@ -25,7 +25,8 @@ export const title = () => `
 <p class="title is-3">Title 3</p>
 <p class="title is-4">Title 4</p>
 <p class="title is-5">Title 5</p>
-`;
+<p class="title is-5">Title 6</p>
+`
 
 export const subtitle = () => `
 <p class="subtitle is-1">Subtitle 1</p>
@@ -33,40 +34,49 @@ export const subtitle = () => `
 <p class="subtitle is-3">Subtitle 3</p>
 <p class="subtitle is-4">Subtitle 4</p>
 <p class="subtitle is-5">Subtitle 5</p>
-`;
+<p class="subtitle is-5">Subtitle 6</p>
+`
 
-Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h5>`.
+Headings of type A need no additional classes to be used. They directly apply to all heading tags from `<h1>` to `<h6>`.
 
 <Typeset
-  fontSizes={["3.56rem", "2.25rem", "1.75rem", "1.43rem", "1.25rem"]}
+  fontSizes={[
+    '3.56rem',
+    '2.25rem',
+    '1.75rem',
+    '1.43rem',
+    '1.25rem',
+    '1.125rem'
+  ]}
   fontFamily="Roboto Condensed"
   fontWeight={700}
-  style={{ color: "#333" }}
-  sampleText="HEADING A"
-/>
+  style={{color: '#333'}}
+  sampleText="HEADING A" />
 
 Headings of type B need the class `.b-header` to be applied to heading tags from `<h3>` to `<h6>`.
 
 <Typeset
-  fontSizes={["1.75rem", "1.43rem", "1.25rem", "1.125rem"]}
+  fontSizes={[
+    '1.75rem',
+    '1.43rem',
+    '1.25rem',
+    '1.125rem'
+  ]}
   fontFamily="Source Sans Pro"
   fontWeight={700}
-  style={{ color: "#333" }}
-  sampleText="Heading B"
-/>
+  style={{color: '#333'}}
+  sampleText="Heading B" />
 
 Heading styles can also be applied to any elements, regardless of semantic meaning, with the `.title is-x` and `.subtitle .is-x` classes:
 
 <Preview mdxSource={title()}>
-  <Story name="Heading- Title" height="250px">
-    {title()}
-  </Story>
+  <Story name="Heading- Title" height="250px">{
+    title()
+  }</Story>
 </Preview>
 
 <Preview mdxSource={subtitle()}>
-  <Story name="Heading- Subitle" height="100px">
-    {subtitle()}
-  </Story>
+  <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
 </Preview>
 
 This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
@@ -76,71 +86,76 @@ This is useful in situations where you need an `<h1>` tag that _looks like_ an `
 By default, body text in `<p>` tags is rendered at the base font size.
 
 <Typeset
-  fontSizes={["1.00rem"]}
+  fontSizes={[
+    '1.00rem'
+  ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  style={{ color: "#333" }}
-  sampleText="Body"
-/>
+  style={{color: '#333'}}
+  sampleText="Body" />
 
 Body text can be made big or bigger with the eponymous `.body-big` and `.body-bigger` classes on the `<p>` tag.
 
 <Typeset
-  fontSizes={["1.43rem", "1.12rem"]}
+  fontSizes={[
+    '1.43rem',
+    '1.12rem'
+  ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  style={{ color: "#333" }}
-  sampleText="Enlarged body"
-/>
+  style={{color: '#333'}}
+  sampleText="Enlarged body" />
 
 Captions can be rendered with the classes `.caption` and `small-caption` depending on the required size on the `<p>` tag.
 
 <Typeset
-  fontSizes={["0.80rem", "0.697rem"]}
+  fontSizes={[
+    '0.80rem',
+    '0.697rem'
+  ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  style={{ color: "#333" }}
-  sampleText="Caption"
-/>
+  style={{color: '#333'}}
+  sampleText="Caption" />
 
 Values can be rendered with the class `.value` on the `<p>` tag.
 
 <Typeset
-  fontSizes={["4.37rem"]}
+  fontSizes={[
+    '4.37rem'
+  ]}
   fontFamily="Roboto Condensed"
   fontWeight={700}
-  style={{ color: "#333" }}
-  sampleText="42"
-/>
+  style={{color: '#333'}}
+  sampleText="42" />
 
 Code can be rendered with the class `.monospace` on the `<p>` tag. If you additionally want syntax highlighting, we recommend using [highlightjs](https://highlightjs.org/) in combination with our styles.
 
 <Typeset
-  fontSizes={["0.875rem"]}
+  fontSizes={[
+    '0.875rem'
+  ]}
   fontFamily="monospace"
   fontWeight={400}
-  style={{ color: "#333" }}
-  sampleText="const x = () => { console.log('Hello World!') }"
-/>
+  style={{color: '#333'}}
+  sampleText="const x = () => { console.log('Hello World!') }" />
 
-<Story
-  name="Figma"
-  parameters={{
-    design: figmaConfig("0%3A110"),
-    docs: { disable: true },
-  }}
->{`
+<Story name="Figma" parameters={{
+  design: figmaConfig('0%3A110'),
+  docs: { disable: true }
+}}>{`
   See the Design tab.
 `}</Story>
 
 Markdown can also be rendered with the help of the [vue-markdown](https://www.npmjs.com/package/vue-markdown) package. Just install it, and use our custom CSS overrides to achieve the desired results.
 
 <Typeset
-  fontSizes={["0.875rem"]}
+  fontSizes={[
+    '0.875rem'
+  ]}
   fontFamily="monospace"
   fontWeight={400}
-  style={{ color: "#333" }}
+  style={{color: '#333'}}
   sampleText="
   <VueMarkdown># Title 1</VueMarkdown> //The text content will get auto-styled provided our stylesheets are imported
-  "
-/>
+  " />
