@@ -58,19 +58,24 @@ $button-text-hover-color: $color-tomato;
   }
 
   &.big {
-    font-size: 1.75rem;
+    font-size: $font-size-h3;
     padding: $space-big $space-large;
   }
 
   &.medium {
-    font-size: 1.43rem;
+    font-size: $font-size-h4;
     padding: $space-normal $space-large;
+  }
+
+  &.normal {
+    font-size: $font-size-h5;
+    padding: $space-small $space-normal;
   }
 
   &.small {
     height: unset;
     font-family: $family-source-sans-pro;
-    font-size: 1rem;
+    font-size: $font-size-body-normal;
     text-transform: none;
     padding: calc(#{$space-smaller} - 0.125rem) calc(#{$space-normal} - 0.125rem);
   }
