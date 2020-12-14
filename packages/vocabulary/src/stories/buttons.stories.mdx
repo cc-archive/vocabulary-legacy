@@ -33,11 +33,11 @@ export const buttonSources = (classes, options) => {
   return classes.map(className => defaultButton(className, buttonOptions(className))).join('\n')
 }
 
-export const buttonDonateClass = (classes, el = 'button', href='') => {
+export const buttonDonateClass = (classes, el = 'button', href='', label='Donate Now') => {
   classes = classes ? ` ${classes}` : ''
   return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
- <i class= "icon cc-letterheart-filled margin-right-small padding-top-smaller"></i>
- Donate Now</${el}>`
+ <i class= "icon cc-letterheart-filled"></i>
+<span>${label}</span></${el}>`
 }
 
 To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
@@ -75,6 +75,16 @@ export const donateButtonSizes = () => {
     design: figmaConfig('1404%3A19')
   }}>
     {donateButtonSizes()}
+  </Story>
+</Preview>
+
+In the header, the Donate button has a different design:
+
+<Preview mdxSource={buttonDonateClass()}>
+  <Story name="Button Donate Header" height="100px" parameters={{
+    design: figmaConfig('1404%3A19')
+  }}>
+    {buttonDonateClass('is-header', 'a', '', 'Donate')}
   </Story>
 </Preview>
 
