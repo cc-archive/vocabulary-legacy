@@ -58,28 +58,48 @@ const inputValue = 'value1'
 export const Default = Template.bind({})
 
 export const Normal = Template.bind({})
-Normal.args = { label: 'Input label', description: 'Input description', placeholder: 'Placeholder text', 'v-model': inputValue }
-addSource(Normal, '<VInput label="Input label" description="Input description" placeholder="Placeholder text" v-model ="inputValue" />')
+Normal.args = {
+  label: 'Input name',
+  description: 'Description of the input',
+  placeholder: 'Placeholder text',
+  'v-model': inputValue
+}
+addSource(Normal, '<VInput label="Input name" description="Input description" placeholder="Placeholder text" v-model ="inputValue" />')
 
 export const NormalDisabled = Template.bind({})
-NormalDisabled.args = { label: 'Input label', description: 'Input description', placeholder: 'Placeholder text', 'v-model': inputValue, 'is-disabled': true }
-addSource(NormalDisabled, '<VInput label="Input label" description="Input description" placeholder="Placeholder text" is-disabled="true" v-model ="inputValue" />')
+NormalDisabled.args = {
+  label: 'Input name',
+  description: 'Description of the input',
+  placeholder: 'Placeholder text',
+  'v-model': inputValue,
+  'is-disabled': true
+}
+addSource(NormalDisabled, '<VInput label="Input name" description="Description of the input" placeholder="Placeholder text" is-disabled="true" v-model ="inputValue" />')
 
 export const Medium = Template.bind({})
-Medium.args = { size: 'is-medium', label: 'Input label', description: 'Input description', placeholder: 'Placeholder text', 'v-model': inputValue }
-addSource(Medium, '<VInput size="is-medium" label="Input label" description="Input description" placeholder="Placeholder text" v-model ="inputValue" />')
+Medium.args = {
+  size: 'is-medium',
+  label: 'Input name',
+  description: 'Description of the input',
+  placeholder: 'Placeholder text',
+  'v-model': inputValue
+}
+addSource(Medium, '<VInput size="is-medium" label="Input name" description="Description of the input" placeholder="Placeholder text" v-model ="inputValue" />')
 
 export const Large = Template.bind({ })
-Large.args = { size: 'is-large', label: '' }
+Large.args = {
+  size: 'is-large',
+  label: ''
+}
 addSource(Large, '<VInput size="is-large" label="" v-model ="inputValue" />')
 
 export const HasIcons = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { VInput, Search, Cross },
   template: `<div class="input-container" @input="onInput">
-      <VInput v-bind="$props" label="Input with Icons" size="is-large" v-model="inputValue" :has-left-icon="true" :has-right-icon="true">
-        <template #left-icon><Search class="icon-svg" /></template>
-        <template #right-icon><Cross class="icon-svg clickable" @click="clearInput"/></template>
+      <VInput v-bind="$props" label="Input with Icons" size="is-large" v-model="inputValue">
+        <template #left-icon><Search class="icon-img" /></template>
+        <template #right-icon><Cross class="icon-img clickable" @click="clearInput"/></template>
       </VInput>
       <p class="margin-top-big">Text input value: {{text}}</p>
     </div>`,
@@ -88,7 +108,7 @@ export const HasIcons = (args, { argTypes }) => ({
   computed: inputComputed
 })
 addSource(HasIcons, `
- <VInput v-bind="$props" label="Input with Icons" size="is-large" v-model="inputValue" :has-left-icon="true" :has-right-icon="true" placeholder = 'Placeholder text'>
+ <VInput v-bind="$props" label="Input with Icons" size="is-large" v-model="inputValue" placeholder = 'Placeholder text'>
  <template #left-icon><Search class="icon-svg" /></template>
  <template #right-icon><Cross class="icon-svg clickable" @click="clearInput"/></template>
  </VInput>`)

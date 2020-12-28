@@ -1,10 +1,14 @@
 <template>
-  <div :class="[ 'control', sizeClass, { 'has-icons-left': hasLeftIcon } ]">
-    <label :class="sizeClass">
-      <span v-if="label" :class="['label', { 'label-bold': description}]" >{{ label }}</span>
-      <span v-if="description" class="description">{{description}}</span>
-      <span class="control-inner">
-        <span v-if="hasLeftIcon" class="icon is-left">
+  <div :class="['control', sizeClass, {
+        'has-icons-left': !!$slots['left-icon'],
+        'has-icons-right': !$slots['right-icon']
+      }]">
+    <label :class="sizeClass" >
+      <span v-if="label" class="label">{{ label }}
+        <span v-if="description" class="description">{{description}}</span>
+      </span>
+      <span :class="['control-inner', { 'disabled': isDisabled, 'readonly': isReadonly}]">
+         <span v-if="$slots['left-icon']" class="icon left-icon">
           <slot name="left-icon"></slot>
         </span>
         <input
@@ -26,8 +30,8 @@
           :readonly="isReadonly"
           @input="onInput"
         />
-        <span v-if="hasRightIcon" class="icon is-right">
-            <slot name="right-icon"></slot>
+        <span v-if="$slots['right-icon']" class="icon right-icon">
+          <slot name="right-icon"></slot>
         </span>
       </span>
     </label>
@@ -80,14 +84,6 @@
         validate: function (value) {
           return ['is-normal', 'is-medium', 'is-large'].indexOf(value) > -1
         }
-      },
-      hasLeftIcon: {
-        type: Boolean,
-        default: false
-      },
-      hasRightIcon: {
-        type: Boolean,
-        default: false
       }
     },
     data () {
@@ -122,17 +118,14 @@
 
 <style lang="scss" scoped >
 @import "~@creativecommons/vocabulary/scss/color.scss";
-@import "@creativecommons/vocabulary/scss/typography.scss";
+@import "~@creativecommons/vocabulary/scss/typography.scss";
 .input, .textarea {
-  border-color: $color-light-gray;
-  border-width: 0.125rem;
+  border: none;
   &:hover, &:active, &:focus {
     border-color: $color-gray;
   }
 }
-.label-bold {
-  font-weight: bold;
-}
+
 label {
   &.is-medium {
     .label, .description {
@@ -144,7 +137,13 @@ label {
   display: block;
   margin-bottom: 0.5rem;
 }
-.control.has-icons-left, .control.has-icons-right {
+.label {
+  font-weight: bold;
+}
+.description {
+  font-weight: normal;
+}
+.control {
   .control-inner {
     border: 0.125rem solid $color-light-gray;
     border-radius: 4px;
@@ -153,43 +152,58 @@ label {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    &:hover, &:active, &:focus {
+    &:hover:not(.disabled):not(.readonly),
+    &:active:not(.disabled):not(.readonly),
+    &:focus:not(.disabled):not(.readonly) {
       border-color: $color-gray;
       .icon {
         color: $color-gray;
       }
     }
+    &.disabled {
+    background-color: $color-lighter-gray;
+      textarea {
+        background-color: $color-lighter-gray;
+      }
+  }
   }
   .input {
-    width: calc(100% - 4.25rem);
+    width: 100%;
     padding-left: 1rem;
+    padding-right: 1rem;
     border-color: transparent;
     margin-top: 0;
   }
+
   .icon {
-    .icon-svg {
+    position: static;
+    height: 1.25rem;
+    width: 1.25rem;
+    &.left-icon {
+      margin-left: 1rem;
+    }
+    &.right-icon {
+      margin-right: 1rem;
+    }
+    .icon-img {
       height: auto;
       width: 100%;
+      pointer-events: none;
+      cursor: unset;
       &.clickable {
         pointer-events: auto;
         cursor: pointer;
       }
     }
   }
-}
 
-.control.has-icons-left, .control.has-icons-right {
-  .icon {
-    position: static;
-    height: 1.25rem;
-    width: 1.25rem;
-    &.is-left {
-      margin-left: 1rem;
-    }
-    &.is-right {
-      margin-right: 1rem;
-    }
+}
+.control.is-large {
+  .left-icon {
+    margin-left: 1.5rem;
+  }
+  .right-icon {
+    margin-right: 1.5rem;
   }
 }
-
 </style>
