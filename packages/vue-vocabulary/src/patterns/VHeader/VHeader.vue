@@ -5,7 +5,6 @@
         <a class="logo" href="/">
           <!--@slot The Vue component with the site's logo -->
           <slot name="logo">
-            <CCSearchLogo />
           </slot>
         </a>
         <a
@@ -47,12 +46,10 @@
  */
   import NavItem from './NavItem'
   import NavDropdown from './NavDropdown'
-  import CCSearchLogo from '@creativecommons/vocabulary/assets/logos/products/search.svg?inline'
 
   export default {
     name: 'VHeader',
     components: {
-      CCSearchLogo,
       NavItem,
       NavDropdown
     },
