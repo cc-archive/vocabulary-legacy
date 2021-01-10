@@ -1,14 +1,14 @@
 <template>
   <div :class="['control', sizeClass, {
-        'has-icons-left': !!$slots['left-icon'],
-        'has-icons-right': !$slots['right-icon']
+        'has-icons-left': hasLeftIcon,
+        'has-icons-right': hasRightIcon
       }]">
-    <label :class="sizeClass" >
+    <label :class="[sizeClass]" >
       <span v-if="label" class="label">{{ label }}
         <span v-if="description" class="description">{{description}}</span>
       </span>
       <span :class="['control-inner', { 'disabled': isDisabled, 'readonly': isReadonly}]">
-         <span v-if="$slots['left-icon']" class="icon left-icon">
+         <span v-if="hasLeftIcon" class="icon left-icon">
           <slot name="left-icon"></slot>
         </span>
         <input
@@ -30,7 +30,7 @@
           :readonly="isReadonly"
           @input="onInput"
         />
-        <span v-if="$slots['right-icon']" class="icon right-icon">
+        <span v-if="hasRightIcon" class="icon right-icon">
           <slot name="right-icon"></slot>
         </span>
       </span>
@@ -61,10 +61,6 @@
       placeholder: {
         type: String,
         default: ''
-      },
-      icon: {
-        type: [String, null],
-        default: null
       },
       isTextArea: {
         type: Boolean,
@@ -103,6 +99,14 @@
       },
       sizeClass () {
         return this.size === 'normal' ? '' : this.size
+      },
+      hasLeftIcon () {
+        // Check if the 'left-icon' slot has content, return a boolean value
+        return !!this.$slots['left-icon']
+      },
+      hasRightIcon () {
+        // Check if the 'right-icon' slot has content, return a boolean value
+        return !!this.$slots['right-icon']
       }
     },
     methods: {
