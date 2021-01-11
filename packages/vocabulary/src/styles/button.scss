@@ -20,7 +20,7 @@ $button-text-color: $color-tomato;
 $button-text-hover-background-color: transparent;
 $button-text-hover-color: $color-tomato;
 
-@import "bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/button.sass";
 
 .button {
   text-transform: uppercase;
@@ -199,8 +199,6 @@ $button-text-hover-color: $color-tomato;
   }
 
   &.is-text {
-    padding: 0;
-    height: auto !important;
     line-height: normal;
 
     font-family: $family-source-sans-pro;
