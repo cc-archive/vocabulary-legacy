@@ -15,10 +15,10 @@ import Tab from './layouts/Tabs/Tab'
 import Tabs from './layouts/Tabs/Tabs'
 import AppModal from './patterns/AppModal/AppModal'
 import Footer from './patterns/Footer/Footer'
-import Locale from './patterns/Locale/Locale'
 import NavDropdown from './patterns/VHeader/NavDropdown'
 import NavItem from './patterns/VHeader/NavItem'
 import VHeader from './patterns/VHeader/VHeader'
+import VLocale from './patterns/VLocale/VLocale'
 import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
 
 // Export individual components
@@ -33,10 +33,10 @@ export {
   Tabs,
   AppModal,
   Footer,
-  Locale,
   NavDropdown,
   NavItem,
   VHeader,
+  VLocale,
   SlotRenderer
 }
 
@@ -53,10 +53,10 @@ export default {
     Vue.component('Tabs', Tabs)
     Vue.component('AppModal', AppModal)
     Vue.component('Footer', Footer)
-    Vue.component('Locale', Locale)
     Vue.component('NavDropdown', NavDropdown)
     Vue.component('NavItem', NavItem)
     Vue.component('VHeader', VHeader)
+    Vue.component('VLocale', VLocale)
     Vue.component('SlotRenderer', SlotRenderer)
   }
 }
