@@ -36,3 +36,7 @@ addSource(Iconless, '<DonateButton :no-icon="true">Text</DonateButton>')
 export const withLink = Template.bind({})
 withLink.args = { href: 'http://creativecommons.org/donate' }
 addSource(withLink, '<DonateButton href="http://creativecommons.org/donate">Text</DonateButton>')
+
+export const headerDonate = Template.bind({})
+headerDonate.args = { href: 'http://creativecommons.org/donate', isHeader: true }
+addSource(headerDonate, '<DonateButton href="http://creativecommons.org/donate" is-header="true">Text</DonateButton>')
