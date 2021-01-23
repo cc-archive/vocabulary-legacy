@@ -1,6 +1,6 @@
 <template>
   <header class="vocab header">
-    <nav class="navbar" :aria-label="$t('header.aria.primary')">
+    <nav class="navbar" :aria-label="ariaPrimaryLabel">
       <div class="navbar-brand has-color-white">
         <a class="logo" href="/">
           <!--@slot The Vue component with the site's logo -->
@@ -10,7 +10,7 @@
         <a
           role="button"
           :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
-          :aria-label="$t('header.aria.menu')"
+          :aria-label="ariaMenuLabel"
           aria-expanded="false"
           @click="toggleBurgerActive"
           @keyup.enter="toggleBurgerActive"
@@ -52,6 +52,16 @@
     components: {
       NavItem,
       NavDropdown
+    },
+    props: {
+      ariaPrimaryLabel: {
+        type: String,
+        default: 'Main'
+      },
+      ariaMenuLabel: {
+        type: String,
+        default: 'Menu'
+      }
     },
     data: () => ({ isBurgerMenuActive: false }),
     methods: {
