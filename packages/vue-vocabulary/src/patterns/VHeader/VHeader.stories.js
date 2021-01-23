@@ -44,11 +44,13 @@ export const IntlHeader = (args, { argTypes }) => ({
   components: { VHeader, NavItem, ChooserLogo },
   template: `<VHeader v-bind="$props">
 <template #menu-items>
-<NavItem tag="a" href="/menu_item" :label="$t('Menu Item')" />
-<NavItem tag="a" href="/menu_item" :label="$t('Menu Item')" :isExternal="true" />
+<NavItem tag="a" href="/menu_item" label="Меню 1" />
+<NavItem tag="a" href="/menu_item" label="Меню 2" :isExternal="true" />
 </template></VHeader>`
 })
+IntlHeader.args = { ariaPrimaryLabel: 'Основная', ariaMenuLabel: 'Меню' }
+
 addDescription(
   IntlHeader,
-  'When using i18n, you should pass translated strings to the header'
+  'When using i18n, you should pass translated strings to the header. Header has two aria labels that need to be bound to it if the language is not English.'
 )

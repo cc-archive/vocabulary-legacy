@@ -13,7 +13,7 @@
           <button
             type="button"
             class="close-button has-color-gray is-size-6 is-size-4-touch"
-            :aria-label="$t('browse-page.aria.close')"
+            :aria-label="ariaCloseLabel"
             @click="$emit('close')"
           >
             <span class="icon has-color-gray is-size-4 is-size-6-touch">
@@ -37,7 +37,11 @@
     },
     props: {
       /** Required for titlebar AND close button to show */
-      title: String
+      title: String,
+      ariaCloseLabel: {
+        type: String,
+        default: 'close'
+      }
     },
     mounted () {
       document.addEventListener('keyup', this.closeOnEsc)

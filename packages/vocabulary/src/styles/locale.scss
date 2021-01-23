@@ -11,7 +11,7 @@
       border-width: 0.125rem;
       width: 8.125rem;
       padding: calc(#{$space-smaller} - 1.3px) calc(#{$space-big} - 1.3px) calc(#{$space-smaller} - 1.3px) 1.7rem;
-      height: unset;
+      height: 2.1875rem;
       line-height: 1.118rem;
       font-size: 0.813rem;
       font-weight: 700;
@@ -66,6 +66,7 @@
         width: 100%;
         font-size: 0.75rem;
         background-color: $color-lighter-gray;
+        height: unset;
       }
       &:not(.is-multiple):not(.is-loading)::after {
          content: unset;
