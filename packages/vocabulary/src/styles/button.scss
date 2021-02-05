@@ -26,6 +26,7 @@ $button-text-hover-color: $color-tomato;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.125rem;
+  --icon-size: 1.875rem;
 
   &:hover,
   &:active,
@@ -34,6 +35,7 @@ $button-text-hover-color: $color-tomato;
     text-decoration: none;
     border-color: transparent;
     background-color: $color-brighter-tomato;
+    transition: background-color 400ms ease, border-color 400ms ease;
   }
   &:focus, &:focus:not(:active) {
     box-shadow: 0 0 0 0.125em var(--button-focus-outline, rgba(226,54,0,.25));
@@ -56,19 +58,24 @@ $button-text-hover-color: $color-tomato;
   }
 
   &.big {
-    font-size: 1.75rem;
+    font-size: $font-size-h3;
     padding: $space-big $space-large;
   }
 
   &.medium {
-    font-size: 1.43rem;
+    font-size: $font-size-h4;
     padding: $space-normal $space-large;
+  }
+
+  &.normal {
+    font-size: $font-size-h5;
+    padding: $space-small $space-normal;
   }
 
   &.small {
     height: unset;
     font-family: $family-source-sans-pro;
-    font-size: 1rem;
+    font-size: $font-size-body-normal;
     text-transform: none;
     padding: calc(#{$space-smaller} - 0.125rem) calc(#{$space-normal} - 0.125rem);
   }
@@ -79,6 +86,22 @@ $button-text-hover-color: $color-tomato;
     font-size: 1rem;
     text-transform: none;
     height: 2rem;
+  }
+
+  &.big, &.medium, &.normal, &.small, &.donate {
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      line-height: var(--icon-size);
+      &:first-child {
+        margin-right: 0.5rem;
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-left: 0.5rem;
+        margin-right: 0;
+      }
+    }
   }
 
   &.tag {
@@ -100,6 +123,7 @@ $button-text-hover-color: $color-tomato;
       border-color: $color-dark-gray;
       background-color: $color-dark-gray;
       color: white;
+      transition: background-color 400ms ease, border-color 200ms ease;
     }
 
     &--removable {
@@ -123,7 +147,7 @@ $button-text-hover-color: $color-tomato;
       &:hover > .icon {
         color: $color-white;
         background-color: $color-dark-gray;
-
+        transition: background-color 200ms ease;
         &:first-child:last-child {
           margin-right: calc(-1rem - 1px);
         }
@@ -187,22 +211,41 @@ $button-text-hover-color: $color-tomato;
 
   &.donate {
     background-color: $color-gold;
-    border-color: $color-gold;
+    border-color: transparent;
     color: $color-black;
 
     &:hover, &:active, &:focus {
       background-color: $color-brighter-gold;
-      border-color: $color-brighter-gold;
+      border-color: transparent;
       color: $color-black;
       text-decoration: none;
+    }
+    &.is-header {
+      --icon-size: 10px;
+      color: $color-tomato;
+      background-color: $color-soft-tomato;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: calc(#{$space-smaller} - 0.7px) $space-small calc(#{$space-smaller} - 0.7px) $space-smaller;
+      max-height: 1.6875rem;
+      text-transform: none;
+      font-family: $family-source-sans-pro;
+      &:hover, &:active, &:focus {
+        color: $color-white;
+        background-color: $color-tomato;
+        transition: background-color 400ms ease;
+      }
+      .icon {
+        svg {
+          width: var(--icon-size);
+          height: auto;
+        }
+      }
     }
   }
 
   &.is-text {
-    padding: 0;
-    height: auto !important;
     line-height: normal;
-
     font-family: $family-source-sans-pro;
 
     text-align: left;
