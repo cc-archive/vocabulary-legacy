@@ -15,7 +15,7 @@ import Tab from './layouts/Tabs/Tab'
 import Tabs from './layouts/Tabs/Tabs'
 import AppModal from './patterns/AppModal/AppModal'
 import Footer from './patterns/Footer/Footer'
-import FooterLinks from './patterns/Footer/FooterLinks'
+import FooterLink from './patterns/Footer/FooterLink'
 import Locale from './patterns/Locale/Locale'
 import NavDropdown from './patterns/VHeader/NavDropdown'
 import NavItem from './patterns/VHeader/NavItem'
@@ -34,7 +34,7 @@ export {
   Tabs,
   AppModal,
   Footer,
-  FooterLinks,
+  FooterLink,
   Locale,
   NavDropdown,
   NavItem,
@@ -55,7 +55,7 @@ export default {
     Vue.component('Tabs', Tabs)
     Vue.component('AppModal', AppModal)
     Vue.component('Footer', Footer)
-    Vue.component('FooterLinks', FooterLinks)
+    Vue.component('FooterLink', FooterLink)
     Vue.component('Locale', Locale)
     Vue.component('NavDropdown', NavDropdown)
     Vue.component('NavItem', NavItem)
