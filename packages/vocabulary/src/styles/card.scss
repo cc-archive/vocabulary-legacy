@@ -3,13 +3,12 @@ $card-content-padding: $space-big;
 $card-header-shadow: none;
 
 @import "bulma/sass/components/card.sass";
-@import "./mediaQueries.scss";
 
 .card {
-    &.entry-post {
+    &.entry-post { 
         display: flex;
         flex-direction: row;
-        @include responsive(phone) {
+        @include mobile() {
             flex-direction: column;
         }
         border: 3px solid $color-light-gray;
@@ -59,7 +58,7 @@ $card-header-shadow: none;
             }
         }
         &.horizontal {
-            display: flex;
+           display: flex;
             .card-content {
                 flex:1;
                 padding: $space-bigger;
