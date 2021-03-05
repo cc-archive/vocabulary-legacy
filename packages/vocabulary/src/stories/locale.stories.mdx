@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import { figmaConfig } from "./helpers";
 
 <Meta title="Patterns/Locale" />
@@ -9,7 +9,7 @@ The locale component should be used to indicate and switch the language of the p
 displayed in the select component must show the current language and then the language’s name written in the language’s
 alphabet.
 
-<Preview>
+<Canvas>
   <Story name="Default" height="64px" parameters={{
     design: figmaConfig('753%3A0')
   }}>{`
@@ -32,4 +32,4 @@ alphabet.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>

@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api'
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { createGlobalHeader } from '../scripts/global_header'
 
 <Meta
@@ -12,7 +12,7 @@ import { createGlobalHeader } from '../scripts/global_header'
 
 export const globalHeader = 'const globalHeaderInstance = vocabulary.createGlobalHeader()'
 
-<Preview mdxSource={globalHeader} className="tight">
+<Canvas mdxSource={globalHeader} className="tight">
   <Story name="Interactive">{() => {
     // Using Storybook hooks to clean up effects of DOM insertion
     useEffect(() => {
@@ -27,4 +27,4 @@ export const globalHeader = 'const globalHeaderInstance = vocabulary.createGloba
     })
     return '<div style="background-color: rgb(237, 89, 47); height: 200px;"></div>'
   }}</Story>
-</Preview>
+</Canvas>

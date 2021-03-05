@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Table" />
@@ -7,7 +7,7 @@ import { figmaConfig } from './helpers'
 
 ## Basic Content Table
 
-<Preview>
+<Canvas>
   <Story name="Basic Content" parameters={{
     design: figmaConfig('904%3A0')
   }}>{`
@@ -48,11 +48,11 @@ import { figmaConfig } from './helpers'
       </table>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 ## Rich Content Table
 
-<Preview>
+<Canvas>
   <Story name="Rich Content" parameters={{
     design: figmaConfig('904%3A0')
   }}>{`
@@ -109,4 +109,4 @@ import { figmaConfig } from './helpers'
       </tr>
     </table>
   `}</Story>
-</Preview>
+</Canvas>

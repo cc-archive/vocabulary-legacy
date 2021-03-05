@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Navigation/Breadcrumb" />
@@ -20,10 +20,10 @@ The Breadcrumb has two text styles: links to parent pages and the page the user 
 
 For accessibility purposes, the component should be placed above the page's title.
 
-<Preview mdxSource={breadCrumb()}>
+<Canvas mdxSource={breadCrumb()}>
   <Story name="Default" parameters={{
     design: figmaConfig('6368%3A9')
   }}>{
     breadCrumb()
   }</Story>
-</Preview>
+</Canvas>
