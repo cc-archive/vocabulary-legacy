@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Elements/Buttons" />
@@ -43,25 +43,25 @@ export const buttonDonateClass = (classes, el = 'button', href='', label='Donate
 To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
 By default, buttons are of `normal` size and `primary` theme.
 
-<Preview mdxSource={buttonSources([''])}>
+<Canvas mdxSource={buttonSources([''])}>
   <Story name="Button" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     defaultButton('normal')
   }</Story>
-</Preview>
+</Canvas>
 
 export const sizes = ['big', 'medium', 'normal','small', 'tiny']
 
 You can customize the size of buttons with the `.big`, `.medium`, `.normal`, `.small` and `.tiny` classes.
 
-<Preview mdxSource={buttonSources(sizes, true)}>
+<Canvas mdxSource={buttonSources(sizes, true)}>
   <Story name="Button Sizes" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>
     {buttonSources(sizes, true)}
   </Story>
-</Preview>
+</Canvas>
 
 You can also combine other classes such as `.donate` with the aforementioned size classes.
 
@@ -70,60 +70,60 @@ export const donateButtonSizes = () => {
     .map((classes) => (buttonDonateClass(classes))).join('\n')
 }
 
-<Preview mdxSource={donateButtonSizes()}>
+<Canvas mdxSource={donateButtonSizes()}>
   <Story name="Button Donate Sizes" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
     {donateButtonSizes()}
   </Story>
-</Preview>
+</Canvas>
 
 In the header, the Donate button has a different design:
 
-<Preview mdxSource={buttonDonateClass()}>
+<Canvas mdxSource={buttonDonateClass()}>
   <Story name="Button Donate Header" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
     {buttonDonateClass('is-header', 'a', '', 'Donate')}
   </Story>
-</Preview>
+</Canvas>
 
 Buttons may have four feedback colors such as `.is-success`, `.is-info`, and `is-border`.
 
 export const feedbackClasses = ['is-success', 'is-info', 'is-border']
 
-<Preview mdxSource={buttonSources(feedbackClasses, {isDefaultLabel: true})}>
+<Canvas mdxSource={buttonSources(feedbackClasses, {isDefaultLabel: true})}>
   <Story name="Button Feedback Types" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     buttonSources(feedbackClasses, {isDefaultLabel: true})
   }</Story>
-</Preview>
+</Canvas>
 
 Buttons can be disabled:
 
 export const getFeedbackLabel = (className) => (className.replace('is-', ''))
 
-<Preview mdxSource={buttonSources(['', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})}>
+<Canvas mdxSource={buttonSources(['', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})}>
   <Story name="Button Disabled" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})
   }</Story>
-</Preview>
+</Canvas>
 
 
 The `.tag` class is used to render a tag name.
 
-<Preview mdxSource={defaultButton('tag')}>
+<Canvas mdxSource={defaultButton('tag')}>
   <Story name="Tag" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
     defaultButton('tag')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Removable Tag" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{`
@@ -132,24 +132,24 @@ The `.tag` class is used to render a tag name.
       <i class="icon cross"></i>
     </button>
   `}</Story>
-</Preview>
+</Canvas>
 
 You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
-<Preview mdxSource={defaultButton('is-text')}>
+<Canvas mdxSource={defaultButton('is-text')}>
   <Story name="Text Button" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
     defaultButton('is-text')
   }</Story>
-</Preview>
+</Canvas>
 
 Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
 
-<Preview mdxSource={defaultButton('small', {el: 'a', href: 'https://creativecommons.org'})}>
+<Canvas mdxSource={defaultButton('small', {el: 'a', href: 'https://creativecommons.org'})}>
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
     defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})
   }</Story>
-</Preview>
+</Canvas>

@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Patterns/Image" />
@@ -9,7 +9,7 @@ The image component is not restricted to a specific size; it must be used
 depending on the content type and its container. If it is placed as a single
 image within the content, it should follow the grid columns.
 
-<Preview>
+<Canvas>
   <Story name="Default" height="300px" parameters={{
     design: figmaConfig('576%3A1')}}>{`
     <div class="image" style="max-width: 384px;">
@@ -24,9 +24,9 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Long title" height="300px" parameters={{
     design: figmaConfig('576%3A1')}}>{`
     <div class="image" style="max-width: 384px;">
@@ -41,9 +41,9 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Ellipsised" height="300px" parameters={{
     design: figmaConfig('576%3A1')}}>{`
     <div class="image" style="max-width: 384px;">
@@ -58,9 +58,9 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Compact" height="500px" parameters={{
     design: figmaConfig('576%3A1')}}>{`
     <div class="image is-compact" style="max-width: 384px;">
@@ -78,9 +78,9 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Selected" height="500px" parameters={{
     design: figmaConfig('576%3A1')}}>{`
     <div class="image is-selected" style="max-width: 384px;">
@@ -95,7 +95,7 @@ image within the content, it should follow the grid columns.
       </div>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 
 [Broadway Tower](https://commons.wikimedia.org/wiki/File:Broadway_tower.jpg)

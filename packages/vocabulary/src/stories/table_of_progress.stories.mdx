@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Navigation/Table of Progress" />
@@ -13,7 +13,7 @@ section.
 The component has two states, active and inactive. The hover state of inactive
 elements should have the same style of active state.
 
-<Preview>
+<Canvas>
   <Story name="Default" parameters={{
     design: figmaConfig('6990%3A133')
   }}>{`
@@ -53,4 +53,4 @@ elements should have the same style of active state.
       </ul>
     </div>
   `}</Story>
-</Preview>
+</Canvas>

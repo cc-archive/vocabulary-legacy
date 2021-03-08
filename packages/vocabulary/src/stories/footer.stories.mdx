@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { figmaConfig, svgCode } from './helpers'
 
 <Meta title="Patterns/Footer" />
@@ -93,10 +93,10 @@ export const footer = () => `
   </div>
 </footer>`
 
-<Preview mdxSource={footer()}>
+<Canvas mdxSource={footer()}>
   <Story name="Default" parameters={{
     design: figmaConfig("639%3A185")
   }}>{
     footer()
   }</Story>
-</Preview>
+</Canvas>

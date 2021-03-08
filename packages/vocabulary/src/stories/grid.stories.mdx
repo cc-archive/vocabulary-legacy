@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Grid" />
@@ -18,7 +18,7 @@ export const cols = (number, color) => {
 
 ## Fullhd
 
-<Preview mdxSource = {`
+<Canvas mdxSource = {`
 <div style="width: 1248px;">
   <div class="container columns">
     ${cols(1,'tomato')}
@@ -48,11 +48,11 @@ export const cols = (number, color) => {
   </div>
   </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 ## Desktop
 
-<Preview mdxSource = {`
+<Canvas mdxSource = {`
 <div style="width: 952px;">
   <div class="container columns">
     ${cols(1,'tomato')}
@@ -82,11 +82,11 @@ export const cols = (number, color) => {
   </div>
   </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 ## Tablet
 
-<Preview mdxSource = {`
+<Canvas mdxSource = {`
 <div style="width: 736px;">
   <div class="columns">
     ${cols(1,'tomato')}
@@ -116,11 +116,11 @@ export const cols = (number, color) => {
   </div>
   </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 ## Mobile
 
-<Preview mdxSource = {`
+<Canvas mdxSource = {`
 <div style="width: 276px;">
   <div class="columns">
     ${cols(1,'tomato')}
@@ -150,7 +150,7 @@ export const cols = (number, color) => {
   </div>
   </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 [Bulma](https://bulma.io) also offers further customisation with respect to the column widths. If you prefer, bulma column width classes such as `is-three-quarters` can also be explicitly applied to any individual column. This would then force the column to occupy three-fourths of the total container width, which by default spaces out equally. Bulma also offers provisions to modify the size, responsiveness, nesting, gap and other customised variants.
 

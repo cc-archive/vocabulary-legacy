@@ -1,4 +1,4 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Navigation/Pagination" />
@@ -7,7 +7,7 @@ import { figmaConfig } from './helpers'
 
 The pagination component allows the user to move between pages and indicates the amount of pages depending on what the user is seeing. It has two basic component: active and hover, and inactive.
 
-<Preview>
+<Canvas>
   <Story name="White background" parameters={{
     design: figmaConfig('7005%3A35')
   }}>{`
@@ -50,9 +50,9 @@ The pagination component allows the user to move between pages and indicates the
       <span class="pagination-ellipsis">&hellip;</span>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Grey background" parameters={{
     design: figmaConfig('7005%3A35')
   }}>{`
@@ -89,4 +89,4 @@ The pagination component allows the user to move between pages and indicates the
       <span class="pagination-ellipsis">&hellip;</span>
     </div>
   `}</Story>
-</Preview>
+</Canvas>

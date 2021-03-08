@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
 import { figmaConfig } from "./helpers";
 
 <Meta title="Tokens/Color" />
@@ -129,11 +129,11 @@ export const helperExamples = () => `
   on a light grey background
 </div>`;
 
-<Preview mdxSource={helperExamples()}>
+<Canvas mdxSource={helperExamples()}>
   <Story name="Helpers" height="250px">
     {helperExamples}
   </Story>
-</Preview>
+</Canvas>
 
 <Story
   name="Figma"

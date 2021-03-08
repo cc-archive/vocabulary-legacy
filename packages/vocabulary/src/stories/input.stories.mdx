@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Form/Input" />
@@ -182,82 +182,82 @@ export const inputsWithIcons = () => `
 `
 
 
-<Preview mdxSource={inputType('')}>
+<Canvas mdxSource={inputType('')}>
   <Story name="Normal" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputType('')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputType('medium')}>
+<Canvas mdxSource={inputType('medium')}>
   <Story name="Medium" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputType('medium')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputType('large')}>
+<Canvas mdxSource={inputType('large')}>
   <Story name="Large" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputType('large')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeLabel('')}>
+<Canvas mdxSource={inputTypeLabel('')}>
   <Story name="Normal (+ label)" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeLabel('')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeLabelMed('medium')}>
+<Canvas mdxSource={inputTypeLabelMed('medium')}>
   <Story name="Medium (+ label)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeLabelMed('medium')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeLabelLarge('large')}>
+<Canvas mdxSource={inputTypeLabelLarge('large')}>
   <Story name="Large (+ label)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeLabelLarge('large')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeNameDesc('')}>
+<Canvas mdxSource={inputTypeNameDesc('')}>
   <Story name="Normal (+ name, description)" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDesc('')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeNameDescMed('medium')}>
+<Canvas mdxSource={inputTypeNameDescMed('medium')}>
   <Story name="Medium (+ name, description)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDescMed('medium')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputTypeNameDescLarge('large')}>
+<Canvas mdxSource={inputTypeNameDescLarge('large')}>
   <Story name="Large (+ name, description)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputTypeNameDescLarge('large')
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={inputsWithIcons()}>
+<Canvas mdxSource={inputsWithIcons()}>
   <Story name="With Icons" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
     inputsWithIcons()
   }</Story>
-</Preview>
+</Canvas>
