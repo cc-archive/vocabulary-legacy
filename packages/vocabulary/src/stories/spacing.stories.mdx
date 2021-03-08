@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Spacing" />
@@ -54,11 +54,11 @@ export const helperExamples = () => `
   Margin of 2.5rem on left side
 </div>`
 
-<Preview mdxSource={helperExamples()}>
+<Canvas mdxSource={helperExamples()}>
   <Story name="Helpers" height="250px">{
     helperExamples
   }</Story>
-</Preview>
+</Canvas>
 
 <Story name="Figma" parameters={{
   design: figmaConfig('0%3A190'),

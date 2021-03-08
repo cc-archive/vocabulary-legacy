@@ -1,9 +1,9 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Notification" />
 
-<Preview>
+<Canvas>
   <Story name="Warning">{`
     <div class="notification warning">
       <a href="#" class="notification-container">
@@ -15,9 +15,9 @@ import { figmaConfig } from './helpers'
       </a>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Content">{`
     <div class="notification content">
       <a href="#" class="notification-container">
@@ -33,9 +33,9 @@ import { figmaConfig } from './helpers'
         </span>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Compact Notification">{`
     <div class="notification is-compact">
       <span class="notification-container has-background-success-light">
@@ -43,4 +43,4 @@ import { figmaConfig } from './helpers'
       </span>
     </div>
   `}</Story>
-</Preview>
+</Canvas>

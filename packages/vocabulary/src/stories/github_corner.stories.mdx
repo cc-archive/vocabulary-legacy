@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Elements/GitHub corner" />
@@ -17,13 +17,13 @@ export const isNormal = `<a class="github-corner">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isNormal} className="tight">
+<Canvas mdxSource={isNormal} className="tight">
   <Story name="Normal" height="120px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{
     isNormal.toString()
   }</Story>
-</Preview>
+</Canvas>
 
 This is the classic black ribbon. Most pages use the GitHub corner in this fashion.
 
@@ -31,14 +31,14 @@ export const isInverted = `<a class="github-corner is-inverted">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isInverted} style={{backgroundColor: 'black'}} className="tight">
+<Canvas mdxSource={isInverted} style={{backgroundColor: 'black'}} className="tight">
   <Story name="Inverted" height="120px" parameters={{
     backgrounds: { default: 'black' },
     design: figmaConfig('795%3A1')
   }}>{
     isInverted.toString()
   }</Story>
-</Preview>
+</Canvas>
 
 The colors may be inverted when displaying on darker, non-white backgrounds.
 
@@ -46,13 +46,13 @@ export const isLeftAligned = `<a class="github-corner is-left-aligned">
   ${GitHubCorner}
 </a>`
 
-<Preview mdxSource={isLeftAligned} className="tight">
+<Canvas mdxSource={isLeftAligned} className="tight">
   <Story name="Left aligned" height="120px" parameters={{
     design: figmaConfig('795%3A1')
   }}>{
     isLeftAligned.toString()
   }</Story>
-</Preview>
+</Canvas>
 
 If the right side of the page is too bloated, or if the language is read and written RTL, the position of the ribbon may
 be flipped over to the left hand side.

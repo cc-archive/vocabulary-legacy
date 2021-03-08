@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Form/Checkbox" />
@@ -32,11 +32,11 @@ export const checkboxDiv = () => `<h3>Checkbox</h3>
   </label>
 </div>`
 
-<Preview mdxSource={checkboxDiv()}>
+<Canvas mdxSource={checkboxDiv()}>
   <Story name="Default" height="200px" parameters={{
     design: figmaConfig('603%3A3')
   }}>{
     checkboxDiv()
   }</Story>
-</Preview>
+</Canvas>
 

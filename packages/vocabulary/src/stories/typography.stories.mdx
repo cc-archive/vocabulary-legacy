@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Typeset } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas, Typeset } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Tokens/Typography" />
@@ -65,15 +65,15 @@ Headings of type B need the class `.b-header` to be applied to heading tags from
 
 Heading styles can also be applied to any elements, regardless of semantic meaning, with the `.title is-x` and `.subtitle .is-x` classes:
 
-<Preview mdxSource={title()}>
+<Canvas mdxSource={title()}>
   <Story name="Heading- Title" height="250px">{
     title()
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={subtitle()}>
+<Canvas mdxSource={subtitle()}>
   <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
-</Preview>
+</Canvas>
 
 This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
 

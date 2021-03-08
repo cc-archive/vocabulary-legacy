@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig, svgCode, blackText, whiteText } from './helpers'
 
 <Meta title="Assets/Logos/Main" />
@@ -10,15 +10,15 @@ export const logomarkSvg = `
 ${svgCode(304, 73, 'cc/logomark', 'logomark')}
 `
 
-<Preview mdxSource={blackText(logomarkSvg)}>
+<Canvas mdxSource={blackText(logomarkSvg)}>
   <Story name="Logomark" height="128px" parameters={{
     design: figmaConfig('1%3A13')
   }}>{
     blackText(logomarkSvg)
   }</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource={whiteText(logomarkSvg)} style={{backgroundColor: 'black'}}>
+<Canvas mdxSource={whiteText(logomarkSvg)} style={{backgroundColor: 'black'}}>
   <Story name="Logomark Inverted" height="128px" parameters={{
     backgrounds: [
       { name: 'black', value: 'black', default: true }
@@ -27,35 +27,35 @@ ${svgCode(304, 73, 'cc/logomark', 'logomark')}
   }}>{
     whiteText(logomarkSvg)
   }</Story>
-</Preview>
+</Canvas>
 
 export const lettermarkSvg = `
 <style>svg { height: 72px; }</style>
 ${svgCode(72, 72, 'cc/lettermark', 'lettermark')}
 `
 
-<Preview mdxSource={blackText(lettermarkSvg)}>
+<Canvas mdxSource={blackText(lettermarkSvg)}>
   <Story name="Lettermark" height="128px" parameters={{
     design: figmaConfig('712%3A8')
   }}>{`
     <p>${blackText(lettermarkSvg)}</p>
     <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
   `}</Story>
-</Preview>
+</Canvas>
 
 export const letterheartSvg = `
 <style>svg { height: 72px; }</style>
 ${svgCode(80, 72, 'cc/letterheart', 'letterheart')}
 `
 
-<Preview mdxSource={blackText(letterheartSvg)}>
+<Canvas mdxSource={blackText(letterheartSvg)}>
   <Story name="Letterheart" height="128px" parameters={{
     design: figmaConfig('712%3A7')
   }}>{`
     <p>${blackText(letterheartSvg)}</p>
     <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
   `}</Story>
-</Preview>
+</Canvas>
 
 The CC lettermark and the CC "letterheart" can also be found as icons for easier
 embedding in other components, like buttons.

@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { figmaConfig } from './helpers'
 
 <Meta title="Layouts/Cards" />
@@ -25,7 +25,7 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
   </article>
 </div>`
 
-<Preview mdxSource = {cardWithButton(400,'4by3', 'vertical')}>
+<Canvas mdxSource = {cardWithButton(400,'4by3', 'vertical')}>
   <Story name="PostVertical" parameters={{
     design: figmaConfig('776%3A0')
   }}>{`
@@ -33,9 +33,9 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
       ${cardWithButton(400,'4by3', 'vertical')}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource = {cardWithButton(600,'4by5', 'horizontal')}>
+<Canvas mdxSource = {cardWithButton(600,'4by5', 'horizontal')}>
   <Story name="PostHorizontal" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
@@ -43,7 +43,7 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
     ${cardWithButton(600,'4by5', 'horizontal')}
   </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 export const postVideo = (width,image_size,orientation) => `<div style="width: ${width}px;">
       <article class="card entry-post entry-video ${orientation} no-border">
@@ -61,7 +61,7 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
       </article>
     </div>`
 
-<Preview mdxSource = {postVideo(400,'4by3','vertical')}>
+<Canvas mdxSource = {postVideo(400,'4by3','vertical')}>
   <Story name="PostVideoVertical" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
@@ -69,9 +69,9 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
     ${postVideo(400,'4by3','vertical')}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource = {postVideo(600,'','horizontal')}>
+<Canvas mdxSource = {postVideo(600,'','horizontal')}>
   <Story name="PostVideoHorizontal" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
@@ -79,9 +79,9 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
     ${postVideo(600,'', 'horizontal')}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="PostVideoLarge" parameters={{
     design: figmaConfig('776%3A86')
   }}>{`
@@ -103,7 +103,7 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
       </article>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 
 export const postEvent = (width) => `<div
@@ -124,7 +124,7 @@ style="width: ${width}px;">
       </article>
     </div>`
 
-<Preview mdxSource = {postEvent(600)}>
+<Canvas mdxSource = {postEvent(600)}>
   <Story name="PostEventWide" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
@@ -132,9 +132,9 @@ style="width: ${width}px;">
     ${postEvent(600)}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview mdxSource = {postEvent(350)}>
+<Canvas mdxSource = {postEvent(350)}>
   <Story name="PostEventNarrow" parameters={{
     design: figmaConfig('776%3A43')
   }}>{`
@@ -142,9 +142,9 @@ style="width: ${width}px;">
     ${postEvent(350)}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
@@ -165,9 +165,9 @@ style="width: ${width}px;">
       </article>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="PostQuote" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
@@ -191,9 +191,9 @@ style="width: ${width}px;">
       </article>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="ImageTop" parameters={{
     design: figmaConfig('776%3A3')
   }}> {`
@@ -213,7 +213,7 @@ style="width: ${width}px;">
       </article>
     </div>`
   }</Story>
-</Preview>
+</Canvas>
 
 export const linkCard = `<article class="card entry-post link no-border">
   <a href="#" class="has-background-dark-slate-blue">
@@ -225,7 +225,7 @@ export const linkCard = `<article class="card entry-post link no-border">
   </a>
 </article>`
 
-<Preview mdxSource = {linkCard}>
+<Canvas mdxSource = {linkCard}>
   <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
@@ -233,7 +233,7 @@ export const linkCard = `<article class="card entry-post link no-border">
       ${linkCard.toString()}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 
 export const linkBorderCard = `<article class="card entry-post link">
@@ -245,7 +245,7 @@ export const linkBorderCard = `<article class="card entry-post link">
   </a>
 </article>`
 
-<Preview mdxSource = {linkBorderCard}>
+<Canvas mdxSource = {linkBorderCard}>
   <Story name="Link Border" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
@@ -253,10 +253,10 @@ export const linkBorderCard = `<article class="card entry-post link">
       ${linkBorderCard.toString()}
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
 
-<Preview>
+<Canvas>
   <Story name="Blog entry horizontal" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
@@ -277,9 +277,9 @@ export const linkBorderCard = `<article class="card entry-post link">
       </article>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Project index" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
@@ -318,4 +318,4 @@ export const linkBorderCard = `<article class="card entry-post link">
       </article>
     </div>
   `}</Story>
-</Preview>
+</Canvas>
