@@ -20,9 +20,12 @@ ${svgCode(304, 73, 'cc/logomark', 'logomark')}
 
 <Canvas mdxSource={whiteText(logomarkSvg)} style={{backgroundColor: 'black'}}>
   <Story name="Logomark Inverted" height="128px" parameters={{
-    backgrounds: [
-      { name: 'black', value: 'black', default: true }
-    ],
+    backgrounds: {
+      default: 'black',
+      values: [
+        { name: 'black', value: 'black' },
+      ],
+    },
     design: figmaConfig('476%3A0')
   }}>{
     whiteText(logomarkSvg)
