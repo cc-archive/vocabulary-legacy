@@ -41,7 +41,7 @@
     "storybook": "lerna run storybook --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
   },
   "volta": {
     "node": "14.15.1",
