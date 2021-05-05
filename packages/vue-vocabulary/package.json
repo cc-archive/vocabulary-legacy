@@ -57,7 +57,7 @@
     "husky": "^6.0.0",
     "lerna": "^4.0.0",
     "react": "^17.0.1",
-    "react-is": "^16.13.1",
+    "react-is": "^17.0.2",
     "storybook-addon-designs": "^5.4.2",
     "storybook-dark-mode": "^1.0.3",
     "stylus": "^0.54.8",
