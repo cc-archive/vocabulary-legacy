@@ -26,7 +26,7 @@
     "node-sass": "^5.0.0",
     "sass-loader": "^10.0.5",
     "twemoji": "^13.0.1",
-    "vue": "^2.6.10",
+    "vue": "^2.6.12",
     "vue-i18n": "^8.20.0"
   },
   "devDependencies": {
@@ -52,7 +52,6 @@
     "fs-extra": "^9.0.1",
     "husky": "^6.0.0",
     "lerna": "^4.0.0",
-    "react": "^17.0.1",
     "react-is": "^16.13.1",
     "storybook-addon-designs": "^6.0.0",
     "storybook-dark-mode": "^1.0.8",
