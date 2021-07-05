@@ -5,12 +5,12 @@ on:
     paths:
       - "packages/vue-vocabulary/**"
     branches:
-      - master
+      - main
   pull_request:
     paths:
       - "packages/vue-vocabulary/**"
     branches:
-      - master
+      - main
 
 env:
   CI: true
