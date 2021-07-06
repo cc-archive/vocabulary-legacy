@@ -139,6 +139,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "arushivii",
+      "name": "Arushi Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43967251?v=4",
+      "profile": "https://github.com/arushivii",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
