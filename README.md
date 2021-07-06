@@ -1,7 +1,4 @@
 <p align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
     <img
       alt="Vocabulary logo"
@@ -13,6 +10,12 @@
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
 <p align="center">
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+  
+  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+
+  <!-- ALL-CONTRIBUTORS-BADGE:END -->
+  
   <a
     href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
