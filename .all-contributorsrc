@@ -148,6 +148,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "krhitesh",
+      "name": "Hitesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25616334?v=4",
+      "profile": "https://github.com/krhitesh",
+      "contributions": [
+        "infra",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
