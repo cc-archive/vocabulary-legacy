@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dhruvkb",
+      "name": "Dhruv Bhanushali",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16580576?v=4",
+      "profile": "https://dhruvkb.github.io",
+      "contributions": [
+        "code",
+        "mentoring"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "vocabulary",
+  "projectOwner": "creativecommons",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
