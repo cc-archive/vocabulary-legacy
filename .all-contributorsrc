@@ -51,6 +51,15 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "Blackcipher101",
+      "name": "Nehal Nevle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33775493?v=4",
+      "profile": "https://blackcipher101.github.io/portfolio",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
