@@ -11,7 +11,7 @@
 
 <p align="center">
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   
   <a
@@ -118,6 +118,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/megha070"><img src="https://avatars.githubusercontent.com/u/40516822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Megha Varshney</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=megha070" title="Code">💻</a> <a href="#design-megha070" title="Design">🎨</a></td>
     <td align="center"><a href="https://kushaggarwal.github.io/me/"><img src="https://avatars.githubusercontent.com/u/44523552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kush aggarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=kushaggarwal" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/krysal"><img src="https://avatars.githubusercontent.com/u/9145885?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Krystle Salazar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=krysal" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/arushivii"><img src="https://avatars.githubusercontent.com/u/43967251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arushi Verma</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=arushivii" title="Code">💻</a></td>
   </tr>
 </table>
 
