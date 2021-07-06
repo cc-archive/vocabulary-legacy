@@ -5,7 +5,6 @@ import vocabularySvg from '../src/assets/logos/products/vocabulary.svg'
 import vocabularySvgInverted from '../src/assets/logos/products/vocabulary_inverted.svg'
 
 import { withDesign } from 'storybook-addon-designs'
-import { withKnobs } from '@storybook/addon-knobs'
 
 import viewports from './viewport'
 import order from './order'
@@ -79,4 +78,3 @@ addParameters({
 })
 
 addDecorator(withDesign)
-addDecorator(withKnobs)
