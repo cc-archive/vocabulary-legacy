@@ -120,6 +120,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "kushaggarwal",
+      "name": "kush aggarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44523552?v=4",
+      "profile": "https://kushaggarwal.github.io/me/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
