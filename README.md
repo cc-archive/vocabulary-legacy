@@ -11,7 +11,7 @@
 
 <p align="center">
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   
   <a
@@ -114,6 +114,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://tanuj22.github.io"><img src="https://avatars.githubusercontent.com/u/42486853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanuj Agarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Tanuj22" title="Documentation">📖</a></td>
     <td align="center"><a href="http://kritigodey.com"><img src="https://avatars.githubusercontent.com/u/287034?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kriti Godey</b></sub></a><br /><a href="#projectManagement-kgodey" title="Project Management">📆</a></td>
     <td align="center"><a href="https://silvinabt87.github.io"><img src="https://avatars.githubusercontent.com/u/57196258?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Silvina Tamburini</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Tests">⚠️</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jahnvigupta"><img src="https://avatars.githubusercontent.com/u/43217070?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jahnvi Gupta</b></sub></a><br /><a href="#design-jahnvigupta" title="Design">🎨</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=jahnvigupta" title="Code">💻</a></td>
   </tr>
 </table>
 
