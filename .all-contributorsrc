@@ -71,6 +71,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "Tanuj22",
+      "name": "Tanuj Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42486853?v=4",
+      "profile": "https://tanuj22.github.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
