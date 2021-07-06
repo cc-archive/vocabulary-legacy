@@ -5,12 +5,12 @@ on:
     paths:
       - "packages/fonts/**"
     branches:
-      - master
+      - main
   pull_request:
     paths:
       - "packages/fonts/**"
     branches:
-      - master
+      - main
 
 env:
   CI: true
