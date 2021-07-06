@@ -40,7 +40,7 @@
     "puppeteer": "^2.1.1",
     "react-is": "^16.13.0",
     "sass-loader": "^10.0.2",
-    "sass-true": "^5.0.0",
+    "sass-true": "^6.0.1",
     "start-server-and-test": "^1.10.11",
     "storybook-dark-mode": "^1.0.8",
     "style-loader": "^1.1.3",
