@@ -90,6 +90,16 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "silvinabt87",
+      "name": "Silvina Tamburini",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57196258?v=4",
+      "profile": "https://silvinabt87.github.io",
+      "contributions": [
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
