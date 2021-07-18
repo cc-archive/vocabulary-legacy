@@ -1,0 +1,53 @@
+{
+  "name": "@creativecommons/vue-vocabulary",
+  "version": "2020.11.3",
+  "description": "Vue components implementing a cohesive design system to unite the web facing Creative Commons",
+  "author": "Creative Commons (https://creativecommons.org)",
+  "main": "vue-vocabulary.common.js",
+  "unpkg": "vue-vocabulary.umd.min.js",
+  "dependencies": {
+    "@creativecommons/fonts": "^2020.11.3",
+    "@creativecommons/vocabulary": "^2020.11.3",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "@vue/cli": "^4.5.13",
+    "core-js": "^3.6.5",
+    "focus-trap-vue": "^1.1.0",
+    "lodash": "^4.17.20",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5",
+    "twemoji": "^13.0.1",
+    "vue": "^2.6.12",
+    "vue-i18n": "^8.20.0"
+  },
+  "bugs": "https://github.com/creativecommons/vue-vocabulary/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://creativecommons.org/donate"
+    }
+  ],
+  "homepage": "https://creativecommons.github.io/vue-vocabulary/",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "components",
+    "vue components",
+    "library"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git",
+    "directory": "packages/vue-vocabulary"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  }
+}

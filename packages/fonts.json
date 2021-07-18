@@ -1,0 +1,37 @@
+{
+  "name": "@creativecommons/fonts",
+  "version": "2020.11.3",
+  "description": "Typefaces that lend personality to the web facing Creative Commons",
+  "author": "Creative Commons (https://creativecommons.org)",
+  "bugs": "https://github.com/creativecommons/fonts/issues/",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/creativecommons"
+    },
+    {
+      "type": "donations",
+      "url": "https://creativecommons.org/donate"
+    }
+  ],
+  "homepage": "https://creativecommons.github.io/cc-fonts/",
+  "keywords": [
+    "ui",
+    "ux",
+    "design",
+    "design system",
+    "fonts",
+    "web fonts",
+    "library"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git",
+    "directory": "packages/fonts"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "directory": "dist"
+  }
+}
