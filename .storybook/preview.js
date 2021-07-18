@@ -6,4 +6,14 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  options: {
+    storySort: {
+      order: [
+        'Hello',
+        ['WIP', 'Introduction', 'Getting Started', 'Overview', 'Structure', 'Usage', 'Contribution'],
+        'Fonts',
+        ['Accidenz Commons', 'Roboto Condensed', 'Source Sans Pro', 'JetBrains Mono', 'Vocabulary Icons'],
+      ],
+    },
+  },
 };
