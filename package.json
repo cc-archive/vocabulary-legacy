@@ -38,6 +38,7 @@
     "@storybook/addon-actions": "^6.3.4",
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-links": "^6.3.4",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/vue": "^6.3.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
