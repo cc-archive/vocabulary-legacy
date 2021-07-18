@@ -1,12 +1,7 @@
 {
-  "name": "root",
+  "name": "vocabulary",
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/creativecommons/vocabulary.git"
@@ -26,25 +21,29 @@
   "keywords": [
     "ui",
     "ux",
-    "design",
-    "design system",
-    "components",
-    "sass stylesheets",
-    "library",
-    "monorepo"
+    "scss",
+    "vue"
   ],
   "license": "MIT",
   "scripts": {
-    "setup": "lerna bootstrap",
-    "build": "lerna run build --stream",
-    "watch": "lerna run watch --parallel",
-    "storybook": "lerna run storybook --parallel"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "core-js": "^3.6.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
-  "volta": {
-    "node": "14.15.1",
-    "npm": "6.14.9"
-  }
+  "dependencies": {}
 }
