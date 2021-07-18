@@ -2,7 +2,7 @@ $card-shadow : none;
 $card-content-padding: $space-big;
 $card-header-shadow: none;
 
-@import "bulma/sass/components/card.sass";
+@import "~bulma/sass/components/card.sass";
 
 .card {
     &.entry-post {

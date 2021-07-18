@@ -4,7 +4,7 @@ $breadcrumb-item-hover-color: $color-tomato;
 $breadcrumb-item-padding-horizontal: $space-small;
 $breadcrumb-item-separator-color: $color-gray;
 
-@import "bulma/sass/components/breadcrumb.sass";
+@import "~bulma/sass/components/breadcrumb.sass";
 
 nav.breadcrumb > ul {
   font-size: $font-size-caption;
