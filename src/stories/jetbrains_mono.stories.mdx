@@ -1,7 +1,6 @@
-import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks'
-import { alphabetTable, numberTable, sampleTexts } from './helpers'
+import { Meta, Typeset } from '@storybook/addon-docs/blocks'
 
-<Meta title = "JetBrains Mono" parameters = {{
+<Meta title = "Fonts/JetBrains Mono" parameters = {{
   decorators: [
     storyFn => `<style>
   .jetbrains-mono {
@@ -28,7 +27,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
 
 export const sampleCode = "const isEqual = (a, b) => { a === b }"
 
-## Regular
+## Regular - 400
 
 <Typeset
   fontSizes={[
@@ -69,8 +68,7 @@ export const sampleCode = "const isEqual = (a, b) => { a === b }"
   fontWeight={400}
   sampleText="<= >= => === !== == != ... <> </> ~@ www" />
 
-
-## Bold
+## Bold - 700
 
 <Typeset
   fontSizes={[
@@ -110,21 +108,3 @@ export const sampleCode = "const isEqual = (a, b) => { a === b }"
   fontFamily="JetBrains Mono"
   fontWeight={700}
   sampleText="<= >= => === !== == != ... <> </> ~@ www" />
-
-<Story name="Uppercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable()
-}</Story>
-
-<Story name="Lowercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable(['lowercase'])
-}</Story>
-
-<Story name="Numbers" parameters={{
-  docs: { disable: true }
-}}>{
-  numberTable()
-}</Story>

@@ -1,7 +1,6 @@
-import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks'
-import { alphabetTable, numberTable, sampleTexts } from './helpers'
+import { Meta, Typeset } from '@storybook/addon-docs/blocks'
 
-<Meta title = "Roboto Condensed" parameters = {{
+<Meta title = "Fonts/Roboto Condensed" parameters = {{
   decorators: [
     storyFn => `<style>
   .roboto-condensed {
@@ -27,7 +26,7 @@ system Android. The entire font family has been licensed under the Apache licens
 
 It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
 
-## Regular
+## Regular - 400
 
 <Typeset
   fontSizes={[
@@ -36,7 +35,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   ]}
   fontFamily="Roboto Condensed"
   fontWeight={400}
-  sampleText={sampleTexts[0]} />
+  sampleText="The quick brown fox jumps over the lazy dog." />
 
 <Typeset
   fontSizes={['2rem']}
@@ -62,8 +61,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   fontWeight={400}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
 
-
-## Bold
+## Bold - 700
 
 <Typeset
   fontSizes={[
@@ -72,7 +70,7 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   ]}
   fontFamily="Roboto Condensed"
   fontWeight={700}
-  sampleText={sampleTexts[2]} />
+  sampleText="The quick brown fox jumps over the lazy dog." />
 
 <Typeset
   fontSizes={['2rem']}
@@ -97,21 +95,3 @@ It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
   fontFamily="Roboto Condensed"
   fontWeight={700}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
-
-<Story name="Uppercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable()
-}</Story>
-
-<Story name="Lowercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable(['lowercase'])
-}</Story>
-
-<Story name="Numbers" parameters={{
-  docs: { disable: true }
-}}>{
-  numberTable()
-}</Story>

@@ -1,7 +1,6 @@
-import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks'
-import { alphabetTable, numberTable, sampleTexts } from './helpers'
+import { Meta, Typeset } from '@storybook/addon-docs/blocks'
 
-<Meta title="Source Sans Pro" parameters={{
+<Meta title="Fonts/Source Sans Pro" parameters={{
   decorators: [
     storyFn => `<style>
   .source-sans-pro {
@@ -33,7 +32,7 @@ family from Adobe, distributed under the SIL Open Font License.
 
 It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bold (700).
 
-## Regular
+## Regular - 400
 
 <Typeset
   fontSizes={[
@@ -42,7 +41,7 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={400}
-  sampleText={sampleTexts[0]} />
+  sampleText="The quick brown fox jumps over the lazy dog." />
 
 <Typeset
   fontSizes={['2rem']}
@@ -68,7 +67,7 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   fontWeight={400}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
 
-## Semibold
+## Semibold - 600
 
 <Typeset
   fontSizes={[
@@ -77,7 +76,7 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={600}
-  sampleText={sampleTexts[1]} />
+  sampleText="The quick brown fox jumps over the lazy dog." />
 
 <Typeset
   fontSizes={['2rem']}
@@ -103,7 +102,7 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   fontWeight={600}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
 
-## Bold
+## Bold - 700
 
 <Typeset
   fontSizes={[
@@ -112,7 +111,7 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   ]}
   fontFamily="Source Sans Pro"
   fontWeight={700}
-  sampleText={sampleTexts[2]} />
+  sampleText="The quick brown fox jumps over the lazy dog." />
 
 <Typeset
   fontSizes={['2rem']}
@@ -137,21 +136,3 @@ It is used in Vocabulary in 3 font weights: regular (400), semibold (600) and bo
   fontFamily="Source Sans Pro"
   fontWeight={700}
   sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
-
-<Story name="Uppercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable()
-}</Story>
-
-<Story name="Lowercase letters" parameters={{
-  docs: { disable: true }
-}}>{
-  alphabetTable(['lowercase'])
-}</Story>
-
-<Story name="Numbers" parameters={{
-  docs: { disable: true }
-}}>{
-  numberTable()
-}</Story>
