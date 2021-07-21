@@ -109,3 +109,11 @@ export const header = (color) => `<header>
       </nav>
     </header>
     <div style="background-color: ${color}; height: 200px;"></div>`;
+
+/**
+ * Wraps the given HTML as a Vue component that can be rendered as a story
+ * @param template - the HTML to wrap into a Vue component
+ */
+export const htmlWrapper = (template) => () => ({
+  template: `<div>${template}</div>`,
+});

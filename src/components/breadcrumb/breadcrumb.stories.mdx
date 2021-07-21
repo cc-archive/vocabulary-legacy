@@ -1,5 +1,5 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Navigation/Breadcrumb" />
 
@@ -24,6 +24,6 @@ For accessibility purposes, the component should be placed above the page's titl
   <Story name="Default" parameters={{
     design: figmaConfig('6368%3A9')
   }}>{
-    breadCrumb()
+    htmlWrapper(breadCrumb()).bind({})
   }</Story>
 </Canvas>
