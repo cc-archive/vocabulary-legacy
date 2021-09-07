@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Form/Select" />
 
@@ -34,6 +34,6 @@ export const selectDiv = () => `
   <Story name="Default" height="200px" parameters={{
     design: figmaConfig('603%3A6')
   }}>{
-    selectDiv()
+    htmlWrapper(selectDiv()).bind({})
   }</Story>
 </Canvas>
