@@ -58,5 +58,8 @@
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.11"
   },
-  "dependencies": {}
+  "dependencies": {
+    "focus-trap": "^6.6.1",
+    "focus-trap-vue": "^1.1.1"
+  }
 }
