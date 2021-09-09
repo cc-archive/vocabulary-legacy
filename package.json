@@ -27,8 +27,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "serve": "start-storybook -p 6006 --ci",
-    "build:storybook": "build-storybook -o ./docs",
+    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
+    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
     "build:fonts": "scripts/build_fonts.sh",
     "build:vocabulary": "scripts/build_vocabulary.sh",
     "build:vue-vocabulary": "scripts/build_vue_vocabulary.sh"

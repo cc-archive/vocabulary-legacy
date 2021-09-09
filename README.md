@@ -76,6 +76,7 @@ npm install --legacy-peer-deps
 npm run build
 npm run storybook
 ```
+> ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
 ## Using
 
