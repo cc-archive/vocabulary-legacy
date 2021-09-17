@@ -4,7 +4,7 @@ import { addSource } from '@/utils/addSource';
 import VButton from './VButton.vue';
 
 export default {
-  title: 'Vue/Elements/VButton',
+  title: 'Elements/VButton',
   component: VButton,
   argTypes: {
     size: {

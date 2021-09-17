@@ -27,7 +27,7 @@
 
 <script>
 import { sized } from '@/mixins/sized';
-import VButton from '../VButton/VButton.vue';
+import VButton from './VButton.vue';
 
 export default {
   name: 'DonateButton',

@@ -3,7 +3,7 @@ import { addSource } from '@/utils/addSource';
 import DonateButton from './DonateButton.vue';
 
 export default {
-  title: 'Vue/Elements/Donate Button',
+  title: 'Elements/Donate Button',
   parameters: {
     docs: {
       description: {

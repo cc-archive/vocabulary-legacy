@@ -1,11 +1,11 @@
+import { addDescription } from '@/utils/addDescription';
 import VHeader from './VHeader.vue';
 import NavItem from './NavItem.vue';
 import NavDropdown from './NavDropdown.vue';
 import ChooserLogo from './ChooserLogo.vue';
-import { addDescription } from '../../utils/addDescription';
 
 export default {
-  title: 'Vue/Elements/VHeader',
+  title: 'Elements/VHeader',
   component: VHeader,
 };
 
