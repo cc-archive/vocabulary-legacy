@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
-import { figmaConfig } from "@/stories/helpers";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Tokens/Color" />
 
@@ -131,7 +131,7 @@ export const helperExamples = () => `
 
 <Canvas mdxSource={helperExamples()}>
   <Story name="Helpers" height="250px">
-    {helperExamples}
+    {htmlWrapper(helperExamples()).bind({})}
   </Story>
 </Canvas>
 

@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, Typeset } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Tokens/Typography" />
 
@@ -67,12 +67,12 @@ Heading styles can also be applied to any elements, regardless of semantic meani
 
 <Canvas mdxSource={title()}>
   <Story name="Heading- Title" height="250px">{
-    title()
+    htmlWrapper(title()).bind({})
   }</Story>
 </Canvas>
 
 <Canvas mdxSource={subtitle()}>
-  <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
+  <Story name="Heading- Subitle" height="100px">{htmlWrapper(subtitle()).bind({})}</Story>
 </Canvas>
 
 This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
