@@ -169,6 +169,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "sadn1ck",
+      "name": "Anik Das",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16396161?v=4",
+      "profile": "https://anik.live/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
