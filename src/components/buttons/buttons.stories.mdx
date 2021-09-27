@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Elements/Buttons" />
 
@@ -59,7 +59,7 @@ You can customize the size of buttons with the `.big`, `.medium`, `.normal`, `.s
   <Story name="Button Sizes" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>
-    {buttonSources(sizes, true)}
+    {htmlWrapper(buttonSources(sizes, true)).bind({})}
   </Story>
 </Canvas>
 
@@ -74,7 +74,7 @@ export const donateButtonSizes = () => {
   <Story name="Button Donate Sizes" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
-    {donateButtonSizes()}
+    {htmlWrapper(donateButtonSizes()).bind({})}
   </Story>
 </Canvas>
 
@@ -84,7 +84,7 @@ In the header, the Donate button has a different design:
   <Story name="Button Donate Header" height="100px" parameters={{
     design: figmaConfig('1404%3A19')
   }}>
-    {buttonDonateClass('is-header', 'a', '', 'Donate')}
+    {htmlWrapper(buttonDonateClass('is-header', 'a', '', 'Donate')).bind({})}
   </Story>
 </Canvas>
 
@@ -96,7 +96,7 @@ export const feedbackClasses = ['is-success', 'is-info', 'is-border']
   <Story name="Button Feedback Types" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    buttonSources(feedbackClasses, {isDefaultLabel: true})
+    htmlWrapper(buttonSources(feedbackClasses, {isDefaultLabel: true})).bind({})
   }</Story>
 </Canvas>
 
@@ -108,7 +108,7 @@ export const getFeedbackLabel = (className) => (className.replace('is-', ''))
   <Story name="Button Disabled" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})
+    htmlWrapper(buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})).bind({})
   }</Story>
 </Canvas>
 
@@ -119,7 +119,7 @@ The `.tag` class is used to render a tag name.
   <Story name="Tag" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
-    defaultButton('tag')
+    htmlWrapper(defaultButton('tag')).bind({})
   }</Story>
 </Canvas>
 
@@ -140,7 +140,7 @@ You can use the `.is-text` to have a button looking more like a link, with no bo
   <Story name="Text Button" height="100px" parameters={{
     design: figmaConfig('1404%3A1')
   }}>{
-    defaultButton('is-text')
+    htmlWrapper(defaultButton('is-text')).bind({})
   }</Story>
 </Canvas>
 
@@ -150,6 +150,6 @@ Button styles should be applied to anchor tags (`<a>`) when using links. Avoid u
   <Story name="Anchor Tags" height="100px" parameters={{
     design: figmaConfig('1403%3A61')
   }}>{
-    defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})
+    htmlWrapper(defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})).bind({})
   }</Story>
 </Canvas>

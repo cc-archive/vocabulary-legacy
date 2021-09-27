@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Form/Radio" />
 
@@ -23,6 +23,6 @@ export const radioDiv = () => `<h3>Radio buttons</h3>
   <Story name="Default" height="200px" parameters={{
     design: figmaConfig('603%3A3')
   }}>{
-    radioDiv()
+    htmlWrapper(radioDiv()).bind({})
   }</Story>
 </Canvas>

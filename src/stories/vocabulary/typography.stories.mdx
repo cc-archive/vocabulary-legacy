@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas, Typeset } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Tokens/Typography" />
 
@@ -67,12 +67,12 @@ Heading styles can also be applied to any elements, regardless of semantic meani
 
 <Canvas mdxSource={title()}>
   <Story name="Heading- Title" height="250px">{
-    title()
+    htmlWrapper(title()).bind({})
   }</Story>
 </Canvas>
 
 <Canvas mdxSource={subtitle()}>
-  <Story name="Heading- Subitle" height="100px">{subtitle()}</Story>
+  <Story name="Heading- Subitle" height="100px">{htmlWrapper(subtitle()).bind({})}</Story>
 </Canvas>
 
 This is useful in situations where you need an `<h1>` tag that _looks like_ an `<h2>`, for example.
@@ -139,7 +139,7 @@ Code can be rendered with the class `.monospace` on the `<p>` tag. If you additi
   design: figmaConfig('0%3A110'),
   docs: { disable: true }
 }}>{`
-  See the Design tab.
+  <div>See the Design tab.</div>
 `}</Story>
 
 Markdown can also be rendered with the help of the [vue-markdown](https://www.npmjs.com/package/vue-markdown) package. Just install it, and use our custom CSS overrides to achieve the desired results.

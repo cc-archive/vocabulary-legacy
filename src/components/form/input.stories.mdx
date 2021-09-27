@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Form/Input" />
 
@@ -186,7 +186,7 @@ export const inputsWithIcons = () => `
   <Story name="Normal" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputType('')
+    htmlWrapper(inputType('')).bind({})
   }</Story>
 </Canvas>
 
@@ -194,7 +194,7 @@ export const inputsWithIcons = () => `
   <Story name="Medium" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputType('medium')
+    htmlWrapper(inputType('medium')).bind({})
   }</Story>
 </Canvas>
 
@@ -202,7 +202,7 @@ export const inputsWithIcons = () => `
   <Story name="Large" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputType('large')
+    htmlWrapper(inputType('large')).bind({})
   }</Story>
 </Canvas>
 
@@ -210,7 +210,7 @@ export const inputsWithIcons = () => `
   <Story name="Normal (+ label)" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeLabel('')
+    htmlWrapper(inputTypeLabel('')).bind({})
   }</Story>
 </Canvas>
 
@@ -218,7 +218,7 @@ export const inputsWithIcons = () => `
   <Story name="Medium (+ label)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeLabelMed('medium')
+    htmlWrapper(inputTypeLabelMed('medium')).bind({})
   }</Story>
 </Canvas>
 
@@ -226,7 +226,7 @@ export const inputsWithIcons = () => `
   <Story name="Large (+ label)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeLabelLarge('large')
+    htmlWrapper(inputTypeLabelLarge('large')).bind({})
   }</Story>
 </Canvas>
 
@@ -234,7 +234,7 @@ export const inputsWithIcons = () => `
   <Story name="Normal (+ name, description)" height="200px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeNameDesc('')
+    htmlWrapper(inputTypeNameDesc('')).bind({})
   }</Story>
 </Canvas>
 
@@ -242,7 +242,7 @@ export const inputsWithIcons = () => `
   <Story name="Medium (+ name, description)" height="250px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeNameDescMed('medium')
+    htmlWrapper(inputTypeNameDescMed('medium')).bind({})
   }</Story>
 </Canvas>
 
@@ -250,7 +250,7 @@ export const inputsWithIcons = () => `
   <Story name="Large (+ name, description)" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputTypeNameDescLarge('large')
+    htmlWrapper(inputTypeNameDescLarge('large')).bind({})
   }</Story>
 </Canvas>
 
@@ -258,6 +258,6 @@ export const inputsWithIcons = () => `
   <Story name="With Icons" height="320px" parameters={{
     design: figmaConfig('1%3A24')
   }}>{
-    inputsWithIcons()
+    htmlWrapper(inputsWithIcons()).bind({})
   }</Story>
 </Canvas>

@@ -1,5 +1,5 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Navigation/Sidebar menu" />
 
@@ -13,42 +13,41 @@ all sibling and child pages.
 The component has two states, active and inactive. The hover state of inactive
 elements should have the same style of active state.
 
-<Canvas>
+export const SidebarMenu = () => `
+<div class="sidebar-container">
+  <aside class="menu sidebar-menu">
+    <ul class="menu-list">
+      <li>
+        <a class="is-active link">Active page</a>
+        <ul>
+          <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+          <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+        </ul>
+      </li>
+      <hr class="divider">
+      <li>
+        <a class="link">Sibling page</a>
+      </li>
+      <hr class="divider">
+      <li>
+        <a class="link">Sibling page</a>
+        <ul>
+          <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+        </ul>
+      </li>
+      <hr class="divider">
+      <li>
+        <a class="link">Sibling page</a>
+      </li>
+    </ul>
+  </aside>
+</div>
+`
+
+<Canvas mdxSource={SidebarMenu()}>
   <Story name="Default" parameters={{
     design: figmaConfig('6990%3A11')
-  }}>{`
-    <style>
-      .sidebar-container {
-        max-width: 276px;
-      }
-    </style>
-    <div class="sidebar-container">
-      <aside class="menu sidebar-menu">
-        <ul class="menu-list">
-          <li>
-            <a class="is-active link">Active page</a>
-            <ul>
-              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
-              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
-            </ul>
-          </li>
-          <hr class="divider">
-          <li>
-            <a class="link">Sibling page</a>
-          </li>
-          <hr class="divider">
-          <li>
-            <a class="link">Sibling page</a>
-            <ul>
-              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
-            </ul>
-          </li>
-          <hr class="divider">
-          <li>
-            <a class="link">Sibling page</a>
-          </li>
-        </ul>
-      </aside>
-    </div>
-  `}</Story>
+  }}>{
+    htmlWrapper(SidebarMenu()).bind({})
+  }</Story>
 </Canvas>

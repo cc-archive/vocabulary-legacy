@@ -7,7 +7,10 @@ export const figmaConfig = (nodeId) => config({
   url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`,
 });
 
-export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `<svg
+export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `
+<svg
+  height="${viewBoxY}"
+  width="${viewBoxX}"
   xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 ${viewBoxX} ${viewBoxY}">

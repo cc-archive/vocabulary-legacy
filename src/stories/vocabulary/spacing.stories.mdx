@@ -1,5 +1,5 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { figmaConfig, htmlWrapper } from '@/stories/helpers'
 
 <Meta title="Tokens/Spacing" />
 
@@ -56,7 +56,7 @@ export const helperExamples = () => `
 
 <Canvas mdxSource={helperExamples()}>
   <Story name="Helpers" height="250px">{
-    helperExamples
+    htmlWrapper(helperExamples()).bind({})
   }</Story>
 </Canvas>
 
@@ -64,5 +64,5 @@ export const helperExamples = () => `
   design: figmaConfig('0%3A190'),
   docs: { disable: true }
 }}>{`
-  See the Design tab.
+  <div>See the Design tab.</div>
 `}</Story>
