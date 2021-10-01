@@ -23,7 +23,7 @@
     "core-js": "^3.6.5",
     "focus-trap-vue": "^1.1.0",
     "lodash": "^4.17.20",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "sass-loader": "^10.0.5",
     "twemoji": "^13.0.1",
     "vue": "^2.6.12",
