@@ -14,7 +14,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  
+
   <a
     href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
@@ -49,13 +49,11 @@ Package    | Description  |          |
 [@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
 [@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
-Packages are located in the `/packages` directory.
-
 ## Installation
 
 You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-To install dependencies and run the storybooks for all packages in this repository: 
+To install dependencies and run the storybooks for all packages in this repository:
 
 ```bash
 npm install --legacy-peer-deps
