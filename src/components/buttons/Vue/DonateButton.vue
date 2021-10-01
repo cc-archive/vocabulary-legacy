@@ -1,3 +1,5 @@
+<!-- eslint-disable max-len -->
+
 <template>
   <VButton :class="['donate', { 'is-header': isHeader }]" :size="size" v-bind="$attrs">
     <span class="icon heart" v-if="isHeader">

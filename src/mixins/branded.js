@@ -7,24 +7,24 @@ export default {
      */
     brand: {
       type: String,
-      validator: val => [
+      validator: (val) => [
         'blue',
         'forest',
         'gold',
         'orange',
         'tomato',
         'turquoise',
-        'slate'
-      ].includes(val)
-    }
+        'slate',
+      ].includes(val),
+    },
   },
   computed: {
-    brandedClasses: function () {
-      let classes = []
+    brandedClasses() {
+      const classes = [];
       if (this.brand) {
-        classes.push(`${this.brand}-branded`)
+        classes.push(`${this.brand}-branded`);
       }
-      return classes
-    }
-  }
-}
+      return classes;
+    },
+  },
+};

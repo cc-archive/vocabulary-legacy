@@ -5,16 +5,16 @@ export default {
      */
     isCircular: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
-    circleableClasses: function () {
+    circleableClasses() {
       return [
         {
-          'circular': this.isCircular
-        }
-      ]
-    }
-  }
-}
+          circular: this.isCircular,
+        },
+      ];
+    },
+  },
+};

@@ -7,16 +7,16 @@ export default {
      */
     isInverted: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
-    invertibleClasses: function () {
+    invertibleClasses() {
       return [
         {
-          'inverted': this.isInverted
-        }
-      ]
-    }
-  }
-}
+          inverted: this.isInverted,
+        },
+      ];
+    },
+  },
+};

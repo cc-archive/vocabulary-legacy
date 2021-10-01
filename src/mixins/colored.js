@@ -10,7 +10,7 @@ export default {
      */
     color: {
       type: String,
-      validator: val => [
+      validator: (val) => [
         'red',
         'pink',
         'grape',
@@ -20,8 +20,8 @@ export default {
         'teal',
         'green',
         'lime',
-        'yellow'
-      ].includes(val)
+        'yellow',
+      ].includes(val),
     },
     /**
      * _the accentuating shade of the primary color to use_
@@ -33,17 +33,17 @@ export default {
     shade: {
       type: Number,
       default: 9,
-      validator: val => val >= 0 && val <= 9
-    }
+      validator: (val) => val >= 0 && val <= 9,
+    },
   },
   computed: {
-    coloredClasses: function () {
-      let classes = []
+    coloredClasses() {
+      const classes = [];
       if (this.color) {
-        classes.push(`${this.color}-colored`)
+        classes.push(`${this.color}-colored`);
       }
-      classes.push(`s${this.shade}-shaded`) // Classes cannot start with number
-      return classes
-    }
-  }
-}
+      classes.push(`s${this.shade}-shaded`); // Classes cannot start with number
+      return classes;
+    },
+  },
+};

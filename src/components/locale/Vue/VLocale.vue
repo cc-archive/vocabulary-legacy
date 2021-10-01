@@ -1,3 +1,5 @@
+<!-- eslint-disable max-len -->
+
 <template>
   <div class="vocab locale">
     <span class="icon globe is-small is-left">

@@ -7,16 +7,16 @@ export default {
      */
     simplicity: {
       type: String,
-      validator: val => ['slight', 'extreme'].includes(val)
-    }
+      validator: (val) => ['slight', 'extreme'].includes(val),
+    },
   },
   computed: {
-    simplifiedClasses: function () {
-      let classes = []
+    simplifiedClasses() {
+      const classes = [];
       if (this.simplicity) {
-        classes.push(`${this.simplicity}ly-simple`)
+        classes.push(`${this.simplicity}ly-simple`);
       }
-      return classes
-    }
-  }
-}
+      return classes;
+    },
+  },
+};

@@ -1,3 +1,5 @@
+<!-- eslint-disable max-len -->
+
 <template>
   <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events -->
   <div ref="modal" class="overlay app-modal" @click.self="$emit('close')">

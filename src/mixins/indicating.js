@@ -7,16 +7,16 @@ export default {
      */
     indication: {
       type: String,
-      validator: val => ['negative', 'positive', 'probably'].includes(val)
-    }
+      validator: (val) => ['negative', 'positive', 'probably'].includes(val),
+    },
   },
   computed: {
-    indicatingClasses: function () {
-      let classes = []
+    indicatingClasses() {
+      const classes = [];
       if (this.indication) {
-        classes.push(`${this.indication}-indicating`)
+        classes.push(`${this.indication}-indicating`);
       }
-      return classes
-    }
-  }
-}
+      return classes;
+    },
+  },
+};
