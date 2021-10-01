@@ -62,13 +62,19 @@ npm run build
 npm run storybook
 ```
 
-To run the storybook for an individual package (say, fonts):
+## Building the packages
+
+To build the files for an individual package, run the relevant build command:
+
+- `build:fonts`
+- `build:vocabulary`
+- `build:vue-vocabulary`
+
+For example, to build the `fonts` package, run the following commands:
 
 ```bash
-cd packages/fonts
 npm install --legacy-peer-deps
-npm run build
-npm run storybook
+npm run build:fonts
 ```
 > ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
