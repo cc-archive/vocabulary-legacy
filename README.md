@@ -51,15 +51,24 @@ Package    | Description  |          |
 
 ## Installation
 
-You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+### System dependencies
 
-To install dependencies and run the storybooks for all packages in this repository:
+You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+
+### Project dependencies
+
+If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
 ```bash
 npm install --legacy-peer-deps
-npm run setup # (optional for npm v7 & above)
-npm run build
-npm run storybook
+```
+
+## Running the project
+
+Once the project dependencies are installed, run the following command to start the project:
+
+```bash
+npm run serve
 ```
 
 ## Building the packages
