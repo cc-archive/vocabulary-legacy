@@ -10,10 +10,11 @@
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
 <p align="center">
-  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  
+
   <a
     href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
@@ -34,11 +35,6 @@
     style="margin-right: 1em;">
     <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
   </a>
-  <a
-    href="https://lerna.js.org/"
-    style="margin-right: 1em;">
-    <img alt="Maintained With Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg"/>
-  </a>
 </p>
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
@@ -53,29 +49,43 @@ Package    | Description  |          |
 [@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
 [@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
-Packages are located in the `/packages` directory.
-
 ## Installation
 
-You would need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+### System dependencies
 
-To install dependencies and run the storybooks for all packages in this repository: 
+You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+
+### Project dependencies
+
+If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
 ```bash
 npm install --legacy-peer-deps
-npm run setup # (optional for npm v7 & above)
-npm run build
-npm run storybook
 ```
 
-To run the storybook for an individual package (say, fonts):
+## Running the project
+
+Once the project dependencies are installed, run the following command to start the project:
 
 ```bash
-cd packages/fonts
-npm install --legacy-peer-deps
-npm run build
-npm run storybook
+npm run serve
 ```
+
+## Building the packages
+
+To build the files for an individual package, run the relevant build command:
+
+- `build:fonts`
+- `build:vocabulary`
+- `build:vue-vocabulary`
+
+For example, to build the `fonts` package, run the following commands:
+
+```bash
+npm install --legacy-peer-deps
+npm run build:fonts
+```
+> ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
 ## Using
 

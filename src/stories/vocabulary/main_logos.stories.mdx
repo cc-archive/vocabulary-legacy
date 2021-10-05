@@ -1,0 +1,67 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { figmaConfig, svgCode, blackText, whiteText, htmlWrapper } from '@/stories/helpers'
+
+<Meta title="Assets/Logos/Main" />
+
+# Main logos
+
+export const logomarkSvg = `
+${svgCode(304, 73, 'cc/logomark', 'logomark')}
+`
+
+<Canvas mdxSource={blackText(logomarkSvg)}>
+  <Story name="Logomark" height="128px" parameters={{
+    design: figmaConfig('1%3A13')
+  }}>{
+    htmlWrapper(blackText(logomarkSvg)).bind({})
+  }</Story>
+</Canvas>
+
+<Canvas mdxSource={whiteText(logomarkSvg)} style={{backgroundColor: 'black'}}>
+  <Story name="Logomark Inverted" height="128px" parameters={{
+    backgrounds: {
+      default: 'black',
+      values: [
+        { name: 'black', value: 'black' },
+      ],
+    },
+    design: figmaConfig('476%3A0')
+  }}>{
+    htmlWrapper(whiteText(logomarkSvg)).bind({})
+  }</Story>
+</Canvas>
+
+export const lettermarkSvg = `
+${svgCode(72, 72, 'cc/lettermark', 'lettermark')}
+`
+
+<Canvas mdxSource={blackText(lettermarkSvg)}>
+  <Story name="Lettermark" height="128px" parameters={{
+    design: figmaConfig('712%3A8')
+  }}>{htmlWrapper(`
+    <p>${blackText(lettermarkSvg)}</p>
+    <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
+  `).bind({})}</Story>
+</Canvas>
+
+export const letterheartSvg = `
+${svgCode(80, 72, 'cc/letterheart', 'letterheart')}
+`
+
+<Canvas mdxSource={blackText(letterheartSvg)}>
+  <Story name="Letterheart" height="128px" parameters={{
+    design: figmaConfig('712%3A7')
+  }}>{htmlWrapper(`
+    <p>${blackText(letterheartSvg)}</p>
+    <p class="caption"><strong>Note</strong>: Also available as an icon.</p>
+  `).bind({})}</Story>
+</Canvas>
+
+The CC lettermark and the CC "letterheart" can also be found as icons for easier
+embedding in other components, like buttons.
+
+```html
+<!-- Be careful, the lettermark is called logo in the icons -->
+<i class="icon cc-logo"></i>
+<i class="icon cc-letterheart"></i>
+```

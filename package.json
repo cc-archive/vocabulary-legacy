@@ -1,12 +1,7 @@
 {
-  "name": "root",
+  "name": "vocabulary",
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/creativecommons/vocabulary.git"
@@ -26,25 +21,45 @@
   "keywords": [
     "ui",
     "ux",
-    "design",
-    "design system",
-    "components",
-    "sass stylesheets",
-    "library",
-    "monorepo"
+    "scss",
+    "vue"
   ],
   "license": "MIT",
   "scripts": {
-    "setup": "lerna bootstrap",
-    "build": "lerna run build --stream",
-    "watch": "lerna run watch --parallel",
-    "storybook": "lerna run storybook --parallel"
+    "lint": "vue-cli-service lint",
+    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
+    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
+    "build:fonts": "scripts/build_fonts.sh",
+    "build:vocabulary": "scripts/build_vocabulary.sh",
+    "build:vue-vocabulary": "scripts/build_vue_vocabulary.sh"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/vue": "^6.3.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "bulma": "^0.9.3",
+    "core-js": "^3.6.5",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "storybook-addon-designs": "^6.0.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.11"
   },
-  "volta": {
-    "node": "14.15.1",
-    "npm": "6.14.9"
+  "dependencies": {
+    "focus-trap": "^6.6.1",
+    "focus-trap-vue": "^1.1.1"
   }
 }
