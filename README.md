@@ -54,47 +54,10 @@ Package    | Description  |          |
 ## Installation
 
 
-To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
+To setup you will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+Instailling with `npm` is lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup. 
 
-Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
-
-
-### Setting up with Docker
-
-#### Docker and Docker Compose
-
-Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose), if you don't already have them on your computer.
-
-Bring up all services
-
-```bash
- docker-compose up -d
-```
-
-To run npm commands, you'll need to enter a Vocabulary container.
-
-```bash
- ./docker/vocabulary/run.sh
-docker-desktop:/codebase ...
-```
-
-If you install new packages, you'll need to rebuild a few things.
-
-```bash
- docker-compose down
- docker volume prune
- docker-compose build storybook
- ```
-
-
-
-### Manual Setup (NPM)
-
-#### System dependencies
-
-You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
 #### Project dependencies
 
