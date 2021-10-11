@@ -39,7 +39,7 @@
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
-## Included Packages
+# Included Packages
 
 `vocabulary` is a monorepo containing three packages:
 
@@ -49,7 +49,7 @@ Package    | Description  |          |
 [@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
 [@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
-## **Installation**
+# Installation
 
 
 To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
@@ -59,13 +59,13 @@ Docker makes sure every developer has a consistent and identical development set
 Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
 
 
-### **Setting up with Docker**
+## Setting up with Docker
 
-**Docker and Docker Compose**
+### Docker and Docker Compose
 
 Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose), if you don't already have them on your computer.
 
-**Bring up all services**
+Bring up all services
 
 ```bash
  docker-compose up -d
@@ -88,13 +88,13 @@ If you install new packages, you'll need to rebuild a few things.
 
 
 
-### **Manual Setup (NPM)**
+## Manual Setup (NPM)
 
-**System dependencies**
+### System dependencies
 
 You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-#### **Project dependencies**
+### Project dependencies
 
 If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
@@ -102,7 +102,7 @@ If you have the system dependencies installed, you can install the project depen
 npm install --legacy-peer-deps
 ```
 
-## Running the project
+# Running the project
 
 Once the project dependencies are installed, run the following command to start the project:
 
@@ -126,23 +126,139 @@ npm run build:fonts
 ```
 > ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
-## Using
+# Using
 
 To use Vocabulary in your projects, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-usage--page).
 
-## Contributing
+# Contributing
 
-To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).
+We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
 
-## Versioning
+Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
+
+<table>
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>How</hi>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  <strong>Code</strong> </td>
+      <td>If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.</td>
+    </tr>
+     <tr>
+      <td>  <strong>Design</strong> </td>
+      <td>If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.</td>
+    </tr>
+     <tr>
+      <td>  <strong>Test</strong> </td>
+      <td>If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs.</td>
+    </tr>
+     <tr>
+      <td>  <strong>Write</strong> </td>
+      <td>If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.</td>
+    </tr>
+     <tr>
+      <td> <strong>Share</strong> </td>
+      <td>If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out.</td>
+    </tr>
+  </tbody>
+</table>
+
+Interested?
+
+The following instructions are in addition to the processes in our general [Contribution](https://opensource.creativecommons.org/contributing-code/) and [Pull Request](https://opensource.creativecommons.org/contributing-code/pr-guidelines/) guidelines on the Creative Common Open Source website. If you haven't read them already, read them first.
+
+These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
+
+## Discussing Changes
+For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done. 
+
+## Assigning work
+
+If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to attempt it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last assignee bails.
+
+Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it before your PR comes in, your PR will be put on hold for a week.
+
+## Making changes
+
+Do all work on its own branch. Use meaningful branch names.
+
+Examples
+
+```bash
+  broken_links_readme
+  typo_misspelled
+```
+Use clean commit messages, as imperative sentences in the present tense.
+
+Examples:
+
+```bash
+  Remove the broken links from the `README.md` file
+  Fix the typo on line 12, where 'misspelled' was misspelled as 'mispelled'
+```
+
+Update your fork from time to time. See GitHub Help pages for instructions on how to do that.
+
+Write new tests, and update existing ones, for the changes you make.
+
+## Testing
+
+While our [Husky](https://www.npmjs.com/package/husky) setup will prevent you from committing poorly linted code, it cannot catch logical problems. For that we have some tests.
+
+### **Unit**
+
+Running unit tests is easy.
+
+```bash
+  npm run test:unit
+```
+
+### **Visual regression**
+
+Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from affecting the screenshots.
+
+Create a new file ``docker/puppeteer/env_vars`` in which to hold environment variables. Add the ``STORYBOOK_ORIGIN`` environment variable corresponding to the OS you're using.
+
+**macOS**
+```bash
+  STORYBOOK_ORIGIN=http://host.docker.internal:8080
+```
+**Linux**
+```bash
+  STORYBOOK_ORIGIN=http://localhost:8080
+```
+
+Build the container.
+
+```bash
+docker build \
+    --tag puppeteer:latest \
+    --file docker/puppeteer/Dockerfile \
+    .
+```
+
+Start by running the Storybook. You can use your preferred method from the **Installation** section to do so. Once you have the Storybook server running, run the commands as shown below.
+
+```bash
+   ./docker/puppeteer/run.sh
+    pptr@docker-desktop:/codebase$ npm run test:snapshot
+```
+
+To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier with  `-- -u` appended to the end of the npm run command. The `--` is a special construct that allows passing arguments to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot` ) flag to Jest.
+
+# Versioning
 
 Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.7.1` is the first release in July 2020, while `2020.7.2` is the second.
 
-## License
+# License
 
 Licensed under the Expat/[MIT](http://www.opensource.org/licenses/MIT) license.
 
-## Contributors ✨
+# Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
