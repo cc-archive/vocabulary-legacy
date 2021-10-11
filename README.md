@@ -51,6 +51,43 @@ Package    | Description  |          |
 
 ## Installation
 
+### Setting up
+
+Clone the repository. If you intend to contribute, which you should, fork the repo from GitHub's GUI and clone your fork instead. See GitHub Help pages for instructions on how to do that.
+
+To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
+
+Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+
+Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+
+Vocabulary is a monorepo containing multiple packages. The manual approach also allows for working on multiple packages simultaneously.
+
+### Docker and docker compose
+
+Install Docker and Docker Compose, if you don't already have them on your computer.
+
+Bring up all services.
+
+````
+$ docker-compose up -d
+````
+
+To run `npm` commands, you'll need to enter a Vocabulary container.
+
+````
+$ ./docker/vocabulary/run.sh
+docker-desktop:/codebase$ ...
+````
+
+If you install new packages, you'll need to rebuild a few things.
+
+`
+$ docker-compose down
+$ docker volume prune
+$ docker-compose build storybook
+`
+
 ### System dependencies
 
 You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
