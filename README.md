@@ -7,6 +7,8 @@
   </a>
 </p>
 
+# Creative Commons Vocabulary
+
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
 <p align="center">
@@ -51,11 +53,13 @@ Package    | Description  |          |
 
 ## Installation
 
-### System dependencies
 
-You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
+To setup you will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-### Project dependencies
+Instailling with `npm` is lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup. 
+
+
+#### Project dependencies
 
 If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
@@ -71,7 +75,7 @@ Once the project dependencies are installed, run the following command to start 
 npm run serve
 ```
 
-## Building the packages
+### Building the packages
 
 To build the files for an individual package, run the relevant build command:
 
@@ -93,7 +97,101 @@ To use Vocabulary in your projects, refer to [this document](https://cc-vocabula
 
 ## Contributing
 
-To contribute to Vocabulary, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-contribution--page).
+We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
+
+Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
+
+| What       |How      |
+| ---------- | ------- |
+| **Code**   | If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.  |
+| **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.|
+| **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs.|
+| **Write**  | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.      |
+| **Share**  | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
+
+
+Interested?
+
+The following instructions are in addition to the processes in our general [Contribution](https://opensource.creativecommons.org/contributing-code/) and [Pull Request](https://opensource.creativecommons.org/contributing-code/pr-guidelines/) guidelines on the Creative Common Open Source website. If you haven't read them already, read them first.
+
+These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
+
+### Discussing Changes
+For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done. 
+
+### Assigning work
+
+If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to attempt it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last assignee bails.
+
+Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it before your PR comes in, your PR will be put on hold for a week.
+
+### Making changes
+
+Do all work on its own branch. Use meaningful branch names.
+
+Examples
+
+```bash
+  broken_links_readme
+  typo_misspelled
+```
+Use clean commit messages, as imperative sentences in the present tense.
+
+Examples:
+
+```bash
+  Remove the broken links from the `README.md` file
+  Fix the typo on line 12, where 'misspelled' was misspelled as 'mispelled'
+```
+
+Update your fork from time to time. See GitHub Help pages for instructions on how to do that.
+
+Write new tests, and update existing ones, for the changes you make.
+
+### Testing
+
+While our [Husky](https://www.npmjs.com/package/husky) setup will prevent you from committing poorly linted code, it cannot catch logical problems. For that we have some tests.
+
+#### **Unit**
+
+Running unit tests is easy.
+
+```bash
+  npm run test:unit
+```
+
+#### **Visual regression**
+
+Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from affecting the screenshots.
+
+Create a new file ``docker/puppeteer/env_vars`` in which to hold environment variables. Add the ``STORYBOOK_ORIGIN`` environment variable corresponding to the OS you're using.
+
+**macOS**
+```bash
+  STORYBOOK_ORIGIN=http://host.docker.internal:8080
+```
+**Linux**
+```bash
+  STORYBOOK_ORIGIN=http://localhost:8080
+```
+
+Build the container.
+
+```bash
+docker build \
+    --tag puppeteer:latest \
+    --file docker/puppeteer/Dockerfile \
+    .
+```
+
+Start by running the Storybook. You can use your preferred method from the [Installation](https://github.com/creativecommons/vocabulary#installation) section to do so. Once you have the Storybook server running, run the commands as shown below.
+
+```bash
+   ./docker/puppeteer/run.sh
+    pptr@docker-desktop:/codebase$ npm run test:snapshot
+```
+
+To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier with  `-- -u` appended to the end of the npm run command. The `--` is a special construct that allows passing arguments to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot` ) flag to Jest.
 
 ## Versioning
 
