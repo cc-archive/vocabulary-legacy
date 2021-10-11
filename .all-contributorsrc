@@ -190,6 +190,7 @@
     }
   ],
   "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": true,
   "projectName": "vocabulary",
   "projectOwner": "creativecommons",
   "repoType": "github",
