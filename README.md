@@ -7,6 +7,8 @@
   </a>
 </p>
 
+# Creative Commons Vocabulary
+
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
 <p align="center">
@@ -39,7 +41,7 @@
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
 
-# Included Packages
+## Included Packages
 
 `vocabulary` is a monorepo containing three packages:
 
@@ -49,7 +51,7 @@ Package    | Description  |          |
 [@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
 [@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
-# Installation
+## Installation
 
 
 To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
@@ -59,9 +61,9 @@ Docker makes sure every developer has a consistent and identical development set
 Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
 
 
-## Setting up with Docker
+### Setting up with Docker
 
-### Docker and Docker Compose
+#### Docker and Docker Compose
 
 Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose), if you don't already have them on your computer.
 
@@ -88,13 +90,13 @@ If you install new packages, you'll need to rebuild a few things.
 
 
 
-## Manual Setup (NPM)
+### Manual Setup (NPM)
 
-### System dependencies
+#### System dependencies
 
 You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-### Project dependencies
+#### Project dependencies
 
 If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
@@ -102,7 +104,7 @@ If you have the system dependencies installed, you can install the project depen
 npm install --legacy-peer-deps
 ```
 
-# Running the project
+## Running the project
 
 Once the project dependencies are installed, run the following command to start the project:
 
@@ -110,7 +112,7 @@ Once the project dependencies are installed, run the following command to start 
 npm run serve
 ```
 
-## Building the packages
+### Building the packages
 
 To build the files for an individual package, run the relevant build command:
 
@@ -126,11 +128,11 @@ npm run build:fonts
 ```
 > ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
-# Using
+## Using
 
 To use Vocabulary in your projects, refer to [this document](https://cc-vocabulary.netlify.com/?path=/docs/vocabulary-usage--page).
 
-# Contributing
+## Contributing
 
 We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
 
@@ -151,16 +153,16 @@ The following instructions are in addition to the processes in our general [Cont
 
 These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
 
-## Discussing Changes
+### Discussing Changes
 For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done. 
 
-## Assigning work
+### Assigning work
 
 If the issue is already assigned to somebody, it is considered polite to give the last assignee a week's time to attempt it before you do. You can express an intention to work on it nonetheless so that it can be reassigned to you if the last assignee bails.
 
 Submitting PRs without commenting your intent to solve an issue is risky because if someone else does ask to work on it before your PR comes in, your PR will be put on hold for a week.
 
-## Making changes
+### Making changes
 
 Do all work on its own branch. Use meaningful branch names.
 
@@ -183,11 +185,11 @@ Update your fork from time to time. See GitHub Help pages for instructions on ho
 
 Write new tests, and update existing ones, for the changes you make.
 
-## Testing
+### Testing
 
 While our [Husky](https://www.npmjs.com/package/husky) setup will prevent you from committing poorly linted code, it cannot catch logical problems. For that we have some tests.
 
-### **Unit**
+#### **Unit**
 
 Running unit tests is easy.
 
@@ -195,7 +197,7 @@ Running unit tests is easy.
   npm run test:unit
 ```
 
-### **Visual regression**
+#### **Visual regression**
 
 Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from affecting the screenshots.
 
@@ -228,15 +230,15 @@ Start by running the Storybook. You can use your preferred method from the [Inst
 
 To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier with  `-- -u` appended to the end of the npm run command. The `--` is a special construct that allows passing arguments to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot` ) flag to Jest.
 
-# Versioning
+## Versioning
 
 Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.7.1` is the first release in July 2020, while `2020.7.2` is the second.
 
-# License
+## License
 
 Licensed under the Expat/[MIT](http://www.opensource.org/licenses/MIT) license.
 
-# Contributors ✨
+## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
