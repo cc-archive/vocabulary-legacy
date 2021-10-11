@@ -136,36 +136,14 @@ We're always looking for contributors to help us find and fix bugs, build new fe
 
 Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
 
-<table>
-  <thead>
-    <tr>
-      <th>What</th>
-      <th>How</hi>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>  <strong>Code</strong> </td>
-      <td>If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.</td>
-    </tr>
-     <tr>
-      <td>  <strong>Design</strong> </td>
-      <td>If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.</td>
-    </tr>
-     <tr>
-      <td>  <strong>Test</strong> </td>
-      <td>If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs.</td>
-    </tr>
-     <tr>
-      <td>  <strong>Write</strong> </td>
-      <td>If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.</td>
-    </tr>
-     <tr>
-      <td> <strong>Share</strong> </td>
-      <td>If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out.</td>
-    </tr>
-  </tbody>
-</table>
+| What       |How      |
+| ---------- | ------- |
+| **Code**   | If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.  |
+| **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.|
+| **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs.|
+| **Write**  | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.      |
+| **Share**  | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
+
 
 Interested?
 
@@ -241,7 +219,7 @@ docker build \
     .
 ```
 
-Start by running the Storybook. You can use your preferred method from the **Installation** section to do so. Once you have the Storybook server running, run the commands as shown below.
+Start by running the Storybook. You can use your preferred method from the [Installation](https://github.com/creativecommons/vocabulary#installation) section to do so. Once you have the Storybook server running, run the commands as shown below.
 
 ```bash
    ./docker/puppeteer/run.sh
