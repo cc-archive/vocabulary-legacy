@@ -49,13 +49,52 @@ Package    | Description  |          |
 [@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
 [@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
-## Installation
+## **Installation**
 
-### System dependencies
+
+To setup you can either use Docker and Docker Compose or manually set up the project. Both have their advantages and disadvantages.
+
+Docker makes sure every developer has a consistent and identical development setup. It also removes the entire hassle involved in dependency management. On the other hand, it is heavy and hits system resources particularly hard.
+
+Manual setups are lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
+
+
+### **Setting up with Docker**
+
+**Docker and Docker Compose**
+
+Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose), if you don't already have them on your computer.
+
+**Bring up all services**
+
+```bash
+ docker-compose up -d
+```
+
+To run npm commands, you'll need to enter a Vocabulary container.
+
+```bash
+ ./docker/vocabulary/run.sh
+docker-desktop:/codebase ...
+```
+
+If you install new packages, you'll need to rebuild a few things.
+
+```bash
+ docker-compose down
+ docker volume prune
+ docker-compose build storybook
+ ```
+
+
+
+### **Manual Setup (NPM)**
+
+**System dependencies**
 
 You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-### Project dependencies
+#### **Project dependencies**
 
 If you have the system dependencies installed, you can install the project dependencies via `npm`:
 
