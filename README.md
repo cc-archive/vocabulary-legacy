@@ -82,11 +82,11 @@ docker-desktop:/codebase$ ...
 
 If you install new packages, you'll need to rebuild a few things.
 
-`
+````
 $ docker-compose down
 $ docker volume prune
 $ docker-compose build storybook
-`
+````
 
 ### System dependencies
 
