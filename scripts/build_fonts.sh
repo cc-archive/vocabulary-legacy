@@ -6,7 +6,7 @@
 echo -n "Copying meta files..."
 cp README.md dist/fonts
 cp LICENSE dist/fonts
-#cp packages/fonts.json dist/fonts/package.json
+cp packages/fonts/package.json dist/fonts/package.json
 echo "done!"
 
 echo -n "Removing superfluous files..."

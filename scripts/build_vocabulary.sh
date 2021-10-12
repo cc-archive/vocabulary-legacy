@@ -6,7 +6,7 @@
 echo -n "Copying meta files..."
 cp README.md dist/vocabulary
 cp LICENSE dist/vocabulary
-#cp packages/vocabulary.json dist/vocabulary/package.json
+cp ./packages/vocabulary/package.json dist/vocabulary/package.json
 echo "done!"
 
 echo -n "Removing superfluous files..."
