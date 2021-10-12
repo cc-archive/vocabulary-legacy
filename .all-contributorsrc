@@ -178,9 +178,19 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "MuluhGodson",
+      "name": "MuluhGodson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40151808?v=4",
+      "profile": "https://github.com/MuluhGodson",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": true,
   "projectName": "vocabulary",
   "projectOwner": "creativecommons",
   "repoType": "github",
