@@ -12,7 +12,7 @@ jobs:
   deploy_npm:
     defaults:
       run:
-        working-directory: "packages/fonts"
+        working-directory: "/"
     name: Deploy to npm
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
         run: npm install --no-audit
 
       - name: Publish package
-        run: bash deploy.sh
+        run: bash scripts/build_fonts.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
