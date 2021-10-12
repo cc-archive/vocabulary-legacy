@@ -31,6 +31,11 @@ jobs:
         run: bash scripts/build_vocabulary.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      -name: Deploy
+       run: bash deploy.sh
+       env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
