@@ -21,7 +21,8 @@ jobs:
     - uses: actions/stale@v3
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+        stale-issue-message: 'Marking as stale, since there is no recent activity.'
+        stale-pr-message: 'Marking as stale, since there is no recent activity.'
+        stale-issue-label: 'no-recent-activity'
+        stale-pr-label: 'no-recent-activity'
+        days-before-close: -1
