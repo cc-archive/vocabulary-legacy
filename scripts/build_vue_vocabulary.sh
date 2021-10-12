@@ -6,7 +6,7 @@
 echo -n "Copying meta files..."
 cp README.md dist/vue-vocabulary
 cp LICENSE dist/vue-vocabulary
-cp ./packages/vue-vocabulary/package.json dist/vue-vocabulary/package.json
+cp packages/vue-vocabulary/package.json dist/vue-vocabulary/package.json
 echo "done!"
 
 echo -n "Removing superfluous files..."
