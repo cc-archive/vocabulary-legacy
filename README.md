@@ -47,9 +47,9 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 
 Package    | Description  |          |
 -------------- | ------------- | -----
-[@creativecommons/vocabulary](packages/vocabulary)    |  The main CSS component library   | [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)
-[@creativecommons/fonts](packages/fonts)    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
-[@creativecommons/vue-vocabulary](packages/vue-vocabulary)    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
+@creativecommons/vocabulary    |  The main CSS component library   | [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)
+@creativecommons/fonts    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
+@creativecommons/vue-vocabulary    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
 
 ## Installation
 
@@ -88,6 +88,12 @@ For example, to build the `fonts` package, run the following commands:
 ```bash
 npm install --legacy-peer-deps
 npm run build:fonts
+```
+
+Sometimes, on windows environments you may get an error about linebreaks, fix that by running the command as
+
+```bash
+npm run build:fonts --fix
 ```
 > ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
