@@ -127,4 +127,4 @@ jobs:
         run: npm install --prefer-offline --no-audit
 
       - name: Run build
-        run: npm run build
+        run: npm run build:storybook
