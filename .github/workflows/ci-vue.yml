@@ -46,7 +46,7 @@ jobs:
     name: Lint
     defaults:
       run:
-        working-directory: "packages/vue-vocabulary"
+        working-directory: "/"
     runs-on: ubuntu-latest
     needs: setup
 
