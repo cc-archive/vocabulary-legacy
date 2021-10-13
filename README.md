@@ -165,11 +165,9 @@ Running unit tests is easy.
 ```bash
   npm run test:unit
 ```
-Running this command will run tests for all the packages. Test can also be run for individual packages by running their respective commands
+Running this command will run a general test. Test can also be run for individual packages by running their respective commands
 
 ```bash
-  npm run test:fonts
-  npm run test:vocabulary
   npm run test:vue-vocabulary
 ```
 
