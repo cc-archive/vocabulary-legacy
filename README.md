@@ -165,39 +165,13 @@ Running unit tests is easy.
 ```bash
   npm run test:unit
 ```
-
-#### **Visual regression**
-
-Visual regression tests are slightly more complex. They run in a Docker container to prevent OS differences from affecting the screenshots.
-
-Create a new file ``docker/puppeteer/env_vars`` in which to hold environment variables. Add the ``STORYBOOK_ORIGIN`` environment variable corresponding to the OS you're using.
-
-**macOS**
-```bash
-  STORYBOOK_ORIGIN=http://host.docker.internal:8080
-```
-**Linux**
-```bash
-  STORYBOOK_ORIGIN=http://localhost:8080
-```
-
-Build the container.
+Running this command will run tests for all the packages. Test can also be run for individual packages by running their respective commands
 
 ```bash
-docker build \
-    --tag puppeteer:latest \
-    --file docker/puppeteer/Dockerfile \
-    .
+  npm run test:fonts
+  npm run test:vocabulary
+  npm run test:vue-vocabulary
 ```
-
-Start by running the Storybook. You can use your preferred method from the [Installation](https://github.com/creativecommons/vocabulary#installation) section to do so. Once you have the Storybook server running, run the commands as shown below.
-
-```bash
-   ./docker/puppeteer/run.sh
-    pptr@docker-desktop:/codebase$ npm run test:snapshot
-```
-
-To update screenshots, after you've written some new tests or updated failing ones, run the same commands as earlier with  `-- -u` appended to the end of the npm run command. The `--` is a special construct that allows passing arguments to `npm` scripts, which we're using the pass the `-u` (or `--updateSnapshot` ) flag to Jest.
 
 ## Versioning
 
