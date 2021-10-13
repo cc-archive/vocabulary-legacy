@@ -33,7 +33,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
       -name: Deploy
-       run: bash publish.sh
+       run: bash publish/vocabulary.sh
        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
