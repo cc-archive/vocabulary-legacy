@@ -9,7 +9,7 @@ export const content = `<div class="content">
             Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
           </div>`
 
-export const cardWithButton = (width, image_size, orientation) => `<div style="width: ${width}px;">
+export const cardWithButton = (width, image_size, orientation) => `<div style="max-width: ${width}px;">
   <article class="card entry-post ${orientation}">
     <header class="card-image">
       <figure class="image is-${image_size}">
@@ -45,7 +45,7 @@ export const cardWithButton = (width, image_size, orientation) => `<div style="w
   `}</Story>
 </Canvas>
 
-export const postVideo = (width,image_size,orientation) => `<div style="width: ${width}px;">
+export const postVideo = (width,image_size,orientation) => `<div style="max-width: ${width}px;">
       <article class="card entry-post entry-video ${orientation} no-border">
         <header class="card-image">
           <a href="#">
@@ -107,7 +107,7 @@ export const postVideo = (width,image_size,orientation) => `<div style="width: $
 
 
 export const postEvent = (width) => `<div
-style="width: ${width}px;">
+style="max-width: ${width}px;">
       <article class="card entry-post entry-event horizontal">
         <header class="card-header">
           <div class="card-date">
@@ -148,7 +148,7 @@ style="width: ${width}px;">
   <Story name="PostStatistic" parameters={{
     design: figmaConfig('776%3A144')
   }}>{`
-    <div style="width: 600px;">
+    <div style="max-width: 600px;">
       <article class="card entry-post entry-statistic horizontal no-border">
         <header class="card-header">
           <div class="card-statistic">
@@ -171,7 +171,7 @@ style="width: ${width}px;">
   <Story name="PostQuote" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
-    <div style="width: 600px;">
+    <div style="max-width: 600px;">
       <article class="card entry-post entry-quote horizontal no-border">
         <header class="card-image">
           <figure class="image is-1by1">
@@ -197,7 +197,7 @@ style="width: ${width}px;">
   <Story name="ImageTop" parameters={{
     design: figmaConfig('776%3A3')
   }}> {`
-    <div style="width: 340px;">
+    <div style="max-width: 340px;">
       <article class="card entry-post entry-image vertical">
         <header class="card-image">
           <a href="#">
@@ -229,7 +229,7 @@ export const linkCard = `<article class="card entry-post link no-border">
   <Story name="Link" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
-    <div style="width: 400px;">
+    <div style="max-width: 400px;">
       ${linkCard.toString()}
     </div>
   `}</Story>
@@ -249,7 +249,7 @@ export const linkBorderCard = `<article class="card entry-post link">
   <Story name="Link Border" parameters={{
     design: figmaConfig('776%3A122')
   }}>{`
-    <div style="width: 400px;">
+    <div style="max-width: 400px;">
       ${linkBorderCard.toString()}
     </div>
   `}</Story>
@@ -260,7 +260,7 @@ export const linkBorderCard = `<article class="card entry-post link">
   <Story name="Blog entry horizontal" parameters={{
     design: figmaConfig('776%3A3')
   }}>{`
-    <div style="width: 384px;" class="margin-normal">
+    <div style="max-width: 384px;" class="margin-normal">
       <article class="card entry-post horizontal no-border blog-entry">
         <header>
           <figure class="image blog-image">
