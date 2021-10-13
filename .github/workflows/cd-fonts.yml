@@ -32,9 +32,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
-      -name: Deploy
-       run: bash publish/fonts.sh
-       env:
+      - name: Deploy
+        run: bash publish/fonts.sh
+        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Repository Dispatch
