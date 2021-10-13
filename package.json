@@ -12,7 +12,7 @@
     "build:vue-vocabulary": "bash ./scripts/build_vue_vocabulary.sh",
     "test:fonts": "jest -c ./packages/fonts/tests/unit/jest.config.js",
     "test:vocabulary": "jest -c ./packages/vocabulary/tests/unit/jest.config.js",
-    "test:vue-vocabulary": "vue-cli-service test:unit ./packages/vue-vocabulary/tests/unit"
+    "test:vue-vocabulary": "vue-cli-service test:unit"
   },
   "dependencies": {
     "focus-trap": "^6.6.1",
