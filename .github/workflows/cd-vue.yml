@@ -11,7 +11,7 @@ jobs:
   deploy_npm:
     defaults:
       run:
-        working-directory: "packages/vue-vocabulary"
+        working-directory: "/"
     name: Deploy to npm
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +27,11 @@ jobs:
         run: npm install --no-audit
 
       - name: Publish package
-        run: bash deploy.sh
+        run: bash scripts/build_vue_vocabulary.sh
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      -name: Deploy
+       run: bash publish/vue-vocabulary.sh
+       env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
