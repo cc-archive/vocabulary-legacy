@@ -21,7 +21,7 @@ jobs:
     name: Setup
     defaults:
       run:
-        working-directory: "packages/fonts"
+        working-directory: "/"
     runs-on: ubuntu-latest
 
     steps:
