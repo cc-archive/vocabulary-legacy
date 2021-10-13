@@ -2,9 +2,51 @@
   "name": "vocabulary",
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/creativecommons/vocabulary.git"
+  "scripts": {
+    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
+    "test:unit": "bash ./scripts/test_unit.sh",
+    "lint": "vue-cli-service lint",
+    "build:fonts": "bash ./scripts/build_fonts.sh",
+    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
+    "build:vocabulary": "bash ./scripts/build_vocabulary.sh",
+    "build:vue-vocabulary": "bash ./scripts/build_vue_vocabulary.sh",
+    "test:fonts": "jest -c ./packages/fonts/tests/unit/jest.config.js",
+    "test:vocabulary": "jest -c ./packages/vocabulary/tests/unit/jest.config.js",
+    "test:vue-vocabulary": "vue-cli-service test:unit ./packages/vue-vocabulary/tests/unit"
+  },
+  "dependencies": {
+    "focus-trap": "^6.6.1",
+    "focus-trap-vue": "^1.1.1",
+    "glob": "^7.2.0",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/vue": "^6.3.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "bulma": "^0.9.3",
+    "core-js": "^3.6.5",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^27.2.5",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "storybook-addon-designs": "^6.0.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.11"
   },
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
   "funding": [
@@ -25,41 +67,8 @@
     "vue"
   ],
   "license": "MIT",
-  "scripts": {
-    "lint": "vue-cli-service lint",
-    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
-    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
-    "build:fonts": "bash ./scripts/build_fonts.sh",
-    "build:vocabulary": "bash ./scripts/build_vocabulary.sh",
-    "build:vue-vocabulary": "bash ./scripts/build_vue_vocabulary.sh"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.10",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/vue": "^6.3.4",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "bulma": "^0.9.3",
-    "core-js": "^3.6.5",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.25.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "storybook-addon-designs": "^6.0.1",
-    "vue": "^2.6.11",
-    "vue-loader": "^15.9.7",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "dependencies": {
-    "focus-trap": "^6.6.1",
-    "focus-trap-vue": "^1.1.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/vocabulary.git"
   }
 }
