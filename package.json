@@ -4,14 +4,12 @@
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
     "serve": "start-storybook -p 6006 --ci -s ./src/assets",
-    "test:unit": "bash ./scripts/test_unit.sh",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:fonts": "bash ./scripts/build_fonts.sh",
     "build:storybook": "build-storybook -o ./docs -s ./src/assets",
     "build:vocabulary": "bash ./scripts/build_vocabulary.sh",
     "build:vue-vocabulary": "bash ./scripts/build_vue_vocabulary.sh",
-    "test:fonts": "jest -c ./packages/fonts/tests/unit/jest.config.js",
-    "test:vocabulary": "jest -c ./packages/vocabulary/tests/unit/jest.config.js",
     "test:vue-vocabulary": "vue-cli-service test:unit"
   },
   "dependencies": {
