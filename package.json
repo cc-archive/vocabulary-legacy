@@ -13,6 +13,7 @@
     "test:vue-vocabulary": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "eslint-plugin-jest": "^25.0.6",
     "focus-trap": "^6.6.1",
     "focus-trap-vue": "^1.1.1",
     "glob": "^7.2.0",
