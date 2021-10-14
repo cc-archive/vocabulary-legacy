@@ -13,38 +13,3 @@ updates:
     # Check for updates once a month
     schedule:
       interval: "monthly"
-
-  # Enable version updates for Docker in the "packages/vocabulary" package
-
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `/docker/puppeteer` directory
-    directory: "packages/vocabulary/docker/puppeteer"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
-
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `/docker/vocabulary` directory
-    directory: "packages/vocabulary/docker/vocabulary"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
-
-
-  # Enable version updates for Docker
-  - package-ecosystem: 'docker'
-    # Look for a `Dockerfile` in the `/docker/puppeteer` directory
-    directory: 'packages/fonts/docker/puppeteer'
-    # Check for updates once a week
-    schedule:
-      interval: 'weekly'
-
-  # Enable version updates for Docker
-  - package-ecosystem: 'docker'
-    # Look for a `Dockerfile` in the `/docker/fonts` directory
-    directory: 'packages/fonts/docker/fonts'
-    # Check for updates once a week
-    schedule:
-      interval: 'weekly'
