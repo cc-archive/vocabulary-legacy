@@ -28,12 +28,12 @@ jobs:
         run: npm install --no-audit
 
       - name: Publish package
-        run: bash scripts/build_fonts.sh
+        run: bash scripts/build/fonts.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
       - name: Deploy
-        run: bash publish/fonts.sh
+        run: bash scripts/publish/fonts.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
