@@ -196,7 +196,7 @@ class GlobalHeader {
       mainContainer.classList.toggle('is-active');
     });
 
-    // Creates a seperate explore button
+    // Creates a separate explore button
     const exploreButton = h(
       'button',
       ['explore-button'],
