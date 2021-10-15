@@ -27,11 +27,11 @@ jobs:
         run: npm install --no-audit
 
       - name: Publish package
-        run: bash scripts/build_vue_vocabulary.sh
+        run: bash scripts/build/vue_vocabulary.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Deploy
-        run: bash publish/vue-vocabulary.sh
+        run: bash scripts/publish/vue-vocabulary.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

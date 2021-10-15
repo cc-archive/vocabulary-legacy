@@ -14,7 +14,7 @@
 <p align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
   <a
@@ -171,6 +171,73 @@ Running this command will run a general test. Test can also be run for individua
   npm run test:vue-vocabulary
 ```
 
+## CI/CD
+
+We use [Github Actions](https://github.com/features/actions) to automate some parts of our CI/CD pipeline. When contributing code, rather than having to commit/push every time a check fails, it will be useful to automate this process on your development environment to be sure all checks done will be successful. 
+
+### Setting up CI testing on your Development Environment
+
+We recommend using the cross-platform package [Nektos/act](https://github.com/nektos/act). It requires Docker to run workflows. 
+
+#### **Install Dependencies**
+
+##### - **Docker**
+If you don't have `Docker` installed, you can follow the links below to set it up depending on your environment.
+ 
+- [x] Mac     : [Docker for Mac](https://docs.docker.com/desktop/mac/install/)
+- [x] Linux   : [Docker for Linux](https://docs.docker.com/engine/install/) 
+- [x] Windows : [Docker for Windows](https://docs.docker.com/desktop/windows/install/)
+
+##### - **Nektos/act**
+Install using any of the methods below depending on your environment.
+
+| Package / Method      |Command      |
+| ----------    | -------     |
+| **[Homebrew](https://brew.sh/) (Linux/macOS)**              | `brew install act`      |
+| **[MacPorts](https://www.macports.org) (macOS)**            | `sudo port install act` |
+| **[Chocolatey](https://chocolatey.org/) (Windows)**         | `choco install act-cli` |
+| **[Scoop](https://scoop.sh/) (Windows)**                    | `scoop install act`     |
+| **[AUR](https://aur.archlinux.org/packages/act/) (Linux)**  | `yay -S act`            |
+| **[Nix](https://nixos.org) (Linux/macOS)**                  | [Nix recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/misc/act/default.nix) |
+| **[Go](https://golang.org) (Linux/Windows/macOS/any other platform supported by Go)** | `go install github.com/nektos/act@latest`                                    |
+| **[Manual Download](https://github.com/nektos/act/releases/latest) (GitHub)**                  | Download the [latest release](https://github.com/nektos/act/releases/latest) and add the path to your binary into your PATH. |
+
+#### **Running Workflows**
+Once you have downloaded and installed the package with its dependencies, it will automatically read the CI scripts from your [/.github/workflows](https://github.com/creativecommons/vocabulary/tree/main/.github/workflows) folder.
+
+##### Trigger all workflows
+To trigger all the CI workflows, `cd` into the root folder of this project (`vocabulary`) and run the command:
+```bash
+act
+```
+If you have permission errors, you run it as a sudo user:
+```bash
+sudo act
+```
+
+**NB:** *When you run it for the first time, it will ask you to choose a docker image to be used as default.*
+
+##### Trigger a specific workflow
+To run a specific workflow, for example, the `build` workflow, you can specify it by running:
+```bash
+act -j build
+```
+If you want to see all the workflows available, you run the command:
+```bash
+act -l
+```
+Currently, we have four CI workflows namely:
+```
+- build
+- lint
+- test
+- update_release_draft
+```
+We recommended that you run these workflows on your development environment so that if any errors occur, you can identify and resolve them before opening a PR.
+
+You can refer the [Netktos/act Documentation](https://github.com/nektos/act/blob/master/README.md) for more commands and configuration options.
+
+
 ## Versioning
 
 Vocabulary uses [CalVer](https://calver.org/) for version numbering, in the `YYYY.M.Micro` format. `Micro` is bumped whenever there are multiple releases in a month, for example `2020.7.1` is the first release in July 2020, while `2020.7.2` is the second.
@@ -206,12 +273,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/megha070"><img src="https://avatars.githubusercontent.com/u/40516822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Megha Varshney</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=megha070" title="Code">💻</a> <a href="#design-megha070" title="Design">🎨</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/waridrox"><img src="https://avatars.githubusercontent.com/u/58583793?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad Warid</b></sub></a><br /><a href="#infra-waridrox" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=waridrox" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/MuluhGodson"><img src="https://avatars.githubusercontent.com/u/40151808?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MuluhGodson</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=MuluhGodson" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nilshah98.me/"><img src="https://avatars.githubusercontent.com/u/22821480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neel Shah</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=nilshah98" title="Code">💻</a></td>
     <td align="center"><a href="https://blackcipher101.github.io/portfolio"><img src="https://avatars.githubusercontent.com/u/33775493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nehal Nevle</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Blackcipher101" title="Code">💻</a></td>
     <td align="center"><a href="https://silvinabt87.github.io"><img src="https://avatars.githubusercontent.com/u/57196258?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Silvina Tamburini</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Tests">⚠️</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Code">💻</a></td>
     <td align="center"><a href="https://tanuj22.github.io"><img src="https://avatars.githubusercontent.com/u/42486853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanuj Agarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Tanuj22" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/clasick"><img src="https://avatars.githubusercontent.com/u/13066221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vignesh Kumar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=clasick" title="Code">💻</a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="https://kushaggarwal.github.io/me/"><img src="https://avatars.githubusercontent.com/u/44523552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kush aggarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=kushaggarwal" title="Code">💻</a></td>
   </tr>
 </table>
