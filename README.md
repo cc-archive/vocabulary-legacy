@@ -14,7 +14,7 @@
 <p align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
   <a
@@ -206,12 +206,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/megha070"><img src="https://avatars.githubusercontent.com/u/40516822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Megha Varshney</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=megha070" title="Code">💻</a> <a href="#design-megha070" title="Design">🎨</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/waridrox"><img src="https://avatars.githubusercontent.com/u/58583793?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad Warid</b></sub></a><br /><a href="#infra-waridrox" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=waridrox" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/MuluhGodson"><img src="https://avatars.githubusercontent.com/u/40151808?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MuluhGodson</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=MuluhGodson" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nilshah98.me/"><img src="https://avatars.githubusercontent.com/u/22821480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neel Shah</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=nilshah98" title="Code">💻</a></td>
     <td align="center"><a href="https://blackcipher101.github.io/portfolio"><img src="https://avatars.githubusercontent.com/u/33775493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nehal Nevle</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Blackcipher101" title="Code">💻</a></td>
     <td align="center"><a href="https://silvinabt87.github.io"><img src="https://avatars.githubusercontent.com/u/57196258?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Silvina Tamburini</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Tests">⚠️</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Code">💻</a></td>
     <td align="center"><a href="https://tanuj22.github.io"><img src="https://avatars.githubusercontent.com/u/42486853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanuj Agarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Tanuj22" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/clasick"><img src="https://avatars.githubusercontent.com/u/13066221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vignesh Kumar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=clasick" title="Code">💻</a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="https://kushaggarwal.github.io/me/"><img src="https://avatars.githubusercontent.com/u/44523552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kush aggarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=kushaggarwal" title="Code">💻</a></td>
   </tr>
 </table>

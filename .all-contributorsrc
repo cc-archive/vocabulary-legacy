@@ -205,6 +205,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "waridrox",
+      "name": "Mohammad Warid",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58583793?v=4",
+      "profile": "https://github.com/waridrox",
+      "contributions": [
+        "infra",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
