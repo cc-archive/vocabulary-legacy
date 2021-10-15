@@ -1,21 +1,12 @@
 name: Build
 
-on: # TODO: determine best "on" configuration
+on: 
   push:
-    paths:
-      - "packages/**"
-      - "scripts/**"
-      - "src/**"
     branches:
-      - main
+        - main
   pull_request:
-    paths:
-      - "packages/**"
-      - "scripts/**"
-      - "src/**"
     branches:
       - main
-
 env:
   CI: true
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
