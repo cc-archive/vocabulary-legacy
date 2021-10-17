@@ -26,7 +26,7 @@ Now, you can go ahead and format all files with Prettier:
 npx prettier --write .
 ```
 
-If you want to form just a particular directory,  You may run 
+If you want to format just a particular directory,  You may run 
 
 ```bash
 prettier --write src/footer 
