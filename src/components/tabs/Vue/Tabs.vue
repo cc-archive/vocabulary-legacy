@@ -6,11 +6,9 @@
           v-for="(tab, index) in tabList"
           :key="index"
           :class="{ 'is-active': index === activeTabIndex }"
-          @click="changeTab(index)">
-          <SlotRenderer
-            :component="tab"
-            name="tab"
-            tag="a">
+          @click="changeTab(index)"
+        >
+          <SlotRenderer :component="tab" name="tab" tag="a">
             {{ tab.title }}
           </SlotRenderer>
         </li>
@@ -22,20 +20,21 @@
         :key="index"
         :component="tab"
         tag="div"
-        :classList="['tabs-panel', {'is-active': index === activeTabIndex }]"/>
+        :classList="['tabs-panel', { 'is-active': index === activeTabIndex }]"
+      />
     </div>
     <div v-show="false">
       <!-- @slot [`Tab`](#/Layouts/Tab) components go here -->
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
 
 <script>
-import SlotRenderer from '../../../utils/SlotRenderer/SlotRenderer.vue';
+import SlotRenderer from "../../../utils/SlotRenderer/SlotRenderer.vue";
 
 export default {
-  name: 'Tabs',
+  name: "Tabs",
   provide() {
     return {
       tabList: this.tabList,
@@ -50,9 +49,9 @@ export default {
       default: false,
     },
     /**
-       * The index of the tab which should be active when initialised.
-       * Indices start at zero.
-       */
+     * The index of the tab which should be active when initialised.
+     * Indices start at zero.
+     */
     initialActiveTabIndex: {
       type: Number,
       default: 0,
@@ -69,7 +68,7 @@ export default {
       return this.tabList[this.activeTabIndex];
     },
     boxedClass() {
-      return { 'is-boxed': this.boxed };
+      return { "is-boxed": this.boxed };
     },
     tabsClass() {
       return {
@@ -79,7 +78,7 @@ export default {
     },
     tabsContentClass() {
       return {
-        'tabs-content': true,
+        "tabs-content": true,
         ...this.boxedClass,
       };
     },

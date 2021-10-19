@@ -1,4 +1,4 @@
-@import 'bulma/sass/utilities/_all';
+@import "bulma/sass/utilities/_all";
 
 .modal {
   position: relative;
@@ -50,7 +50,7 @@
     color: #{$color-gray};
   }
   .icon {
-    display:inline-block;
+    display: inline-block;
     &.is-size-4 {
       height: 1rem;
     }

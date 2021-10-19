@@ -1,16 +1,22 @@
 <template>
-  <component :is="component" type="button" :class="classes" :href="href" v-on="$listeners">
+  <component
+    :is="component"
+    type="button"
+    :class="classes"
+    :href="href"
+    v-on="$listeners"
+  >
     <!-- @slot button content -->
     <slot default />
   </component>
 </template>
 
 <script>
-import { sized } from '@/mixins/sized';
-import { theme } from '@/utils/values';
+import { sized } from "@/mixins/sized";
+import { theme } from "@/utils/values";
 
 export default {
-  name: 'VButton',
+  name: "VButton",
   mixins: [sized],
   props: {
     theme: {
@@ -31,7 +37,7 @@ export default {
 
   computed: {
     component() {
-      return this.href ? 'a' : 'button';
+      return this.href ? "a" : "button";
     },
     classes() {
       return {

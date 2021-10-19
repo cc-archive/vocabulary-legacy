@@ -7,7 +7,7 @@ export default {
      */
     indication: {
       type: String,
-      validator: (val) => ['negative', 'positive', 'probably'].includes(val),
+      validator: (val) => ["negative", "positive", "probably"].includes(val),
     },
   },
   computed: {

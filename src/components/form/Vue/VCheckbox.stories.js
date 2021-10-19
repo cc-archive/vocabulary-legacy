@@ -1,13 +1,14 @@
 /* eslint-disable no-underscore-dangle */
-import { figmaConfig } from '@/stories/helpers';
-import VCheckbox from './VCheckbox.vue';
+import { figmaConfig } from "@/stories/helpers";
+import VCheckbox from "./VCheckbox.vue";
 
-const checkboxDescription = 'The Checkbox component is an essential forms component.';
+const checkboxDescription =
+  "The Checkbox component is an essential forms component.";
 
 export default {
-  title: 'Elements/VCheckbox',
+  title: "Elements/VCheckbox",
   parameters: {
-    design: figmaConfig('603%3A3'),
+    design: figmaConfig("603%3A3"),
     docs: { description: { component: checkboxDescription } },
   },
   component: VCheckbox,

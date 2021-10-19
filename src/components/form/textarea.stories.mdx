@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Form/Textarea" />
 
@@ -11,12 +11,16 @@ export const textArea = () => `
 <textarea class="textarea">Typed text</textarea>
 <br/>
 <textarea class="textarea" disabled>Fixed text</textarea>
-`
+`;
 
 <Canvas mdxSource={textArea()}>
-  <Story name="Default" height="500px" parameters={{
-    design: figmaConfig('6340%3A0')
-  }}>{
-    htmlWrapper(textArea()).bind({})
-  }</Story>
+  <Story
+    name="Default"
+    height="500px"
+    parameters={{
+      design: figmaConfig("6340%3A0"),
+    }}
+  >
+    {htmlWrapper(textArea()).bind({})}
+  </Story>
 </Canvas>

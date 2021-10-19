@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Layouts/Grid" />
 
@@ -10,41 +10,46 @@ The Vocabulary's Grid is based on [Bulma](https://bulma.io)’s grid system and 
 The grid has [12 flexible columns](https://bulma.io/documentation/columns/sizes/#12-columns-system), and the main container will vary depending on the original four breakpoints of Bulma’s grid. Despite being a grid designed to wrap content through columns, other sections like galleries or highlighted titles can be placed without using the grid.
 
 export const cols = (number, color) => {
-  let result=``
-  for (let i=1; i<=number; i++)
-  result += `<div class="column"><div class="has-background-${color} has-text-white padding-top-big padding-bottom-big" style="display: grid; place-items: center center; font-weight: bold"">${i}</div></div>`
-  return result
-}
+  let result = ``;
+  for (let i = 1; i <= number; i++)
+    result += `<div class="column"><div class="has-background-${color} has-text-white padding-top-big padding-bottom-big" style="display: grid; place-items: center center; font-weight: bold"">${i}</div></div>`;
+  return result;
+};
 
 ## Fullhd
 
-<Canvas mdxSource = {`
+<Canvas
+  mdxSource={`
 <div style="width: 1248px;">
   <div class="container columns">
-    ${cols(1,'tomato')}
+    ${cols(1, "tomato")}
   </div>
   <br>
   <div class="container columns is-6">
-      ${cols(12,'tomato')}
+      ${cols(12, "tomato")}
   <div>
   <br>
   <div class="container columns is-6">
-      ${cols(11,'dark')}
+      ${cols(11, "dark")}
   <div>
 </div>
-  `}>
-  <Story name="Fullhd" parameters={{
-    design: figmaConfig('3990%3A1666')
-  }}>{`
+  `}
+>
+  <Story
+    name="Fullhd"
+    parameters={{
+      design: figmaConfig("3990%3A1666"),
+    }}
+  >{`
   <div style="width: 1248px;">
   <div class="columns">
-  ${cols(1,'tomato')}
+  ${cols(1, "tomato")}
   </div>
   <div class="columns">
-  ${cols(12,'tomato')}
+  ${cols(12, "tomato")}
   </div>
   <div class="columns">
-  ${cols(11,'dark')}
+  ${cols(11, "dark")}
   </div>
   </div>
   `}</Story>
@@ -52,33 +57,38 @@ export const cols = (number, color) => {
 
 ## Desktop
 
-<Canvas mdxSource = {`
+<Canvas
+  mdxSource={`
 <div style="width: 952px;">
   <div class="container columns">
-    ${cols(1,'tomato')}
+    ${cols(1, "tomato")}
   </div>
   <br>
   <div class="container columns">
-      ${cols(12,'tomato')}
+      ${cols(12, "tomato")}
   <div>
   <br>
   <div class="container columns">
-      ${cols(11,'dark')}
+      ${cols(11, "dark")}
   <div>
 </div>
-  `}>
-  <Story name="Desktop" parameters={{
-    design: figmaConfig('3990%3A1666')
-  }}>{`
+  `}
+>
+  <Story
+    name="Desktop"
+    parameters={{
+      design: figmaConfig("3990%3A1666"),
+    }}
+  >{`
   <div style="width: 952px;">
   <div class="columns" >
-  ${cols(1,'tomato')}
+  ${cols(1, "tomato")}
   </div>
   <div class="columns">
-  ${cols(12,'tomato')}
+  ${cols(12, "tomato")}
   </div>
   <div class="columns">
-  ${cols(11,'dark')}
+  ${cols(11, "dark")}
   </div>
   </div>
   `}</Story>
@@ -86,33 +96,38 @@ export const cols = (number, color) => {
 
 ## Tablet
 
-<Canvas mdxSource = {`
+<Canvas
+  mdxSource={`
 <div style="width: 736px;">
   <div class="columns">
-    ${cols(1,'tomato')}
+    ${cols(1, "tomato")}
   </div>
   <br>
   <div class="columns">
-      ${cols(12,'tomato')}
+      ${cols(12, "tomato")}
   <div>
   <br>
   <div class="columns">
-      ${cols(11,'dark')}
+      ${cols(11, "dark")}
   <div>
 </div>
-  `}>
-  <Story name="Tablet" parameters={{
-    design: figmaConfig('3990%3A1666')
-  }}>{`
+  `}
+>
+  <Story
+    name="Tablet"
+    parameters={{
+      design: figmaConfig("3990%3A1666"),
+    }}
+  >{`
   <div style="width: 736px;">
   <div class="columns">
-  ${cols(1,'tomato')}
+  ${cols(1, "tomato")}
   </div>
   <div class="columns">
-  ${cols(12,'tomato')}
+  ${cols(12, "tomato")}
   </div>
   <div class="columns">
-  ${cols(11,'dark')}
+  ${cols(11, "dark")}
   </div>
   </div>
   `}</Story>
@@ -120,33 +135,38 @@ export const cols = (number, color) => {
 
 ## Mobile
 
-<Canvas mdxSource = {`
+<Canvas
+  mdxSource={`
 <div style="width: 276px;">
   <div class="columns">
-    ${cols(1,'tomato')}
+    ${cols(1, "tomato")}
   </div>
   <br>
   <div class="columns">
-      ${cols(4,'tomato')}
+      ${cols(4, "tomato")}
   <div>
   <br>
   <div class="columns">
-      ${cols(3,'dark')}
+      ${cols(3, "dark")}
   <div>
 </div>
-  `}>
-  <Story name="Mobile" parameters={{
-    design: figmaConfig('3990%3A1666')
-  }}>{`
+  `}
+>
+  <Story
+    name="Mobile"
+    parameters={{
+      design: figmaConfig("3990%3A1666"),
+    }}
+  >{`
   <div style="width: 276px;">
   <div class="columns">
-  ${cols(1,'tomato')}
+  ${cols(1, "tomato")}
   </div>
   <div class="columns">
-  ${cols(4,'tomato')}
+  ${cols(4, "tomato")}
   </div>
   <div class="columns">
-  ${cols(3,'dark')}
+  ${cols(3, "dark")}
   </div>
   </div>
   `}</Story>

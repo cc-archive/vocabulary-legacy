@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Hello/Overview" />
 
@@ -9,6 +9,7 @@ import { Meta } from '@storybook/addon-docs/blocks'
 Vocabulary is the web design system for the [Creative Commons](https://opensource.creativecommons.org/) brand. It provides styles and components that will be used across all Creative Commons websites to ensure attractive and consistent design.
 
 The overall Vocabulary project consists of:
+
 - **Design Library** ([Figma](https://figma.com)), the source of truth for all designs in Vocabulary
 - **Fonts** (Typefaces), which provides typefaces and the main icon font for use in the system
 - **Vocabulary** (CSS library and assets), which provides base CSS styles for all components.
@@ -30,15 +31,18 @@ manner.
 > **Every CC website will be based on Vocabulary.**
 
 #### Meaning
+
 - If there’s a new design element needed for a website, the **UX designer** needs to be consulted and create a design in Figma first.
 - Developers will need to add items or update designs in Vocabulary and then pull the latest version of Vocabulary into their own code.
 
 #### Rationale
+
 - To ensure consistency and maintainability
 - To ensure maintainability by restricting websites to using only shared code for styling.
 - One person bottlenecks all major design changes.
 
 #### Tradeoffs
+
 - Lack of opportunity for individual creativity.
 
 ### Principle 2
@@ -46,6 +50,7 @@ manner.
 > **Vocabulary will provide only the styles and components needed for real use cases.**
 
 #### Meaning
+
 - All components in Vocabulary should have a real world use case. If they are not used, they should not be in
   Vocabulary.
 - Vue Vocabulary will only contain Vue components that are used in a CC website that uses Vue. This means that not all
@@ -62,11 +67,13 @@ manner.
   - Complex components like header and footer which are relevant to CC branding will be an exception to this rule.
 
 #### Rationale
+
 - To keep the maintenance burden as low as possible by maintaining only a minimum viable set of styles and components.
 - To ensure that designs are created with a real use case in mind. Theoretical designs often don’t stand up when
   introduced to the real world.
 
 #### Tradeoffs
+
 - Vocabulary or Vue Vocabulary may look a little sparse.
 - Vocabulary will not be very customizable or extensible.
 
@@ -75,6 +82,7 @@ manner.
 > **Vocabulary will have the same set of components in both Figma and the web.**
 
 #### Meaning
+
 - Each component in Figma needs to have a corresponding set of stories in Vocabulary. The titles should match exactly.
 - Vocabulary should offer the same variety of components as Figma as much as it is feasible to do so.
 - Figma should clearly separate the styles of basic elements and patterns from documentation on how those elements and
@@ -84,9 +92,11 @@ manner.
 - Vocabulary should embed the relevant Figma component in the documentation for that component.
 
 #### Rationale
+
 - To reduce confusion and ensure that the relationship between the designs in Figma and the web are absolutely clear.
 
 #### Tradeoffs
+
 - Lack of customizability for different use cases.
 
 ### Principle 4
@@ -94,15 +104,18 @@ manner.
 > **Vocabulary will provide documentation on the approved ways to use components.**
 
 #### Meaning
+
 - Design documentation provided in Figma needs to be provided in Vocabulary through Storybook Docs and/or Figma embeds.
 - All components need to have some explanation about what they are and how they are used.
 
 #### Rationale
+
 - To provide context around components and offer guidelines for their use to build consistent websites.
 - To allow developers to create designs in approved ways without needing sign-off from the design and product team for
   every single change.
 
 #### Tradeoffs
+
 - Work needed to keep this documentation updated.
 
 ## Discussions

@@ -17,8 +17,14 @@ $table-cell-border: 1px solid $color-light-gray;
 }
 
 .is-responsive {
-  @media only screen and (max-width: 760px),(min-device-width: $tablet) and (max-device-width: $desktop)  {
-    table, thead, tbody, th, td, tr {
+  @media only screen and (max-width: 760px),
+    (min-device-width: $tablet) and (max-device-width: $desktop) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
       display: block;
     }
 
@@ -67,6 +73,8 @@ $table-cell-border: 1px solid $color-light-gray;
       border-right: 0.0625rem solid $color-light-gray;
     }
 
-    td:nth-of-type(n):before { content: attr(data-label);}
+    td:nth-of-type(n):before {
+      content: attr(data-label);
+    }
   }
 }

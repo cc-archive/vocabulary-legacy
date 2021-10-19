@@ -7,7 +7,13 @@
       <div class="modal relative" aria-modal="true" role="dialog">
         <header
           v-if="title"
-          class="modal-header padding-top-bigger padding-left-bigger padding-right-normal padding-bottom-small"
+          class="
+            modal-header
+            padding-top-bigger
+            padding-left-bigger
+            padding-right-normal
+            padding-bottom-small
+          "
         >
           <slot name="header">
             <h3>{{ title }}</h3>
@@ -19,7 +25,12 @@
             @click="$emit('close')"
           >
             <span class="icon has-color-gray is-size-4 is-size-6-touch">
-              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M18.9094 15L24.7729 9.13652C25.4924 8.41699 25.4924 7.25039 24.7729 6.53027L23.4697 5.22715C22.7502 4.50762 21.5836 4.50762 20.8635 5.22715L15 11.0906L9.13652 5.22715C8.41699 4.50762 7.25039 4.50762 6.53027 5.22715L5.22715 6.53027C4.50762 7.2498 4.50762 8.41641 5.22715 9.13652L11.0906 15L5.22715 20.8635C4.50762 21.583 4.50762 22.7496 5.22715 23.4697L6.53027 24.7729C7.2498 25.4924 8.41699 25.4924 9.13652 24.7729L15 18.9094L20.8635 24.7729C21.583 25.4924 22.7502 25.4924 23.4697 24.7729L24.7729 23.4697C25.4924 22.7502 25.4924 21.5836 24.7729 20.8635L18.9094 15Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.9094 15L24.7729 9.13652C25.4924 8.41699 25.4924 7.25039 24.7729 6.53027L23.4697 5.22715C22.7502 4.50762 21.5836 4.50762 20.8635 5.22715L15 11.0906L9.13652 5.22715C8.41699 4.50762 7.25039 4.50762 6.53027 5.22715L5.22715 6.53027C4.50762 7.2498 4.50762 8.41641 5.22715 9.13652L11.0906 15L5.22715 20.8635C4.50762 21.583 4.50762 22.7496 5.22715 23.4697L6.53027 24.7729C7.2498 25.4924 8.41699 25.4924 9.13652 24.7729L15 18.9094L20.8635 24.7729C21.583 25.4924 22.7502 25.4924 23.4697 24.7729L24.7729 23.4697C25.4924 22.7502 25.4924 21.5836 24.7729 20.8635L18.9094 15Z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
           </button>
         </header>
@@ -30,10 +41,10 @@
 </template>
 
 <script>
-import { FocusTrap } from 'focus-trap-vue';
+import { FocusTrap } from "focus-trap-vue";
 
 export default {
-  name: 'AppModal',
+  name: "AppModal",
   components: {
     FocusTrap,
   },
@@ -42,19 +53,19 @@ export default {
     title: String,
     ariaCloseLabel: {
       type: String,
-      default: 'close',
+      default: "close",
     },
   },
   mounted() {
-    document.addEventListener('keyup', this.closeOnEsc);
+    document.addEventListener("keyup", this.closeOnEsc);
   },
   destroyed() {
-    document.removeEventListener('keyup', this.closeOnEsc);
+    document.removeEventListener("keyup", this.closeOnEsc);
   },
   methods: {
     closeOnEsc(e) {
       if (e.keyCode === 27) {
-        this.$emit('close');
+        this.$emit("close");
       }
     },
   },
@@ -62,9 +73,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/vocabulary/color.scss';
-@import '@/components/modal/modal.scss';
-@import 'bulma/sass/utilities/_all';
+@import "@/styles/vocabulary/color.scss";
+@import "@/components/modal/modal.scss";
+@import "bulma/sass/utilities/_all";
 
 .modal {
   position: relative;
@@ -116,7 +127,7 @@ export default {
     color: #{$color-gray};
   }
   .icon {
-    display:inline-block;
+    display: inline-block;
     &.is-size-4 {
       height: 1rem;
     }
@@ -131,5 +142,4 @@ export default {
     color: rgb(120, 120, 120);
   }
 }
-
 </style>

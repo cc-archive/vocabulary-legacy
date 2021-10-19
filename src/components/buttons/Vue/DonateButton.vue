@@ -1,7 +1,11 @@
 <!-- eslint-disable max-len -->
 
 <template>
-  <VButton :class="['donate', { 'is-header': isHeader }]" :size="size" v-bind="$attrs">
+  <VButton
+    :class="['donate', { 'is-header': isHeader }]"
+    :size="size"
+    v-bind="$attrs"
+  >
     <span class="icon heart" v-if="isHeader">
       <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -28,11 +32,11 @@
 </template>
 
 <script>
-import { sized } from '@/mixins/sized';
-import VButton from './VButton.vue';
+import { sized } from "@/mixins/sized";
+import VButton from "./VButton.vue";
 
 export default {
-  name: 'DonateButton',
+  name: "DonateButton",
   props: {
     isHeader: {
       type: Boolean,

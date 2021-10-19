@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Elements/GitHub corner" />
 
@@ -9,49 +9,65 @@ GitHub corners are a convenient way for projects to link to their repositories f
 
 export const GitHubCorner = `<svg width="80" height="80" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <use href="icons/github_corner.svg#githubcorner"></use>
-</svg>`
+</svg>`;
 
 ## Variants
 
 export const isNormal = `<a class="github-corner">
   ${GitHubCorner}
-</a>`
+</a>`;
 
 <Canvas mdxSource={isNormal} className="tight">
-  <Story name="Normal" height="120px" parameters={{
-    design: figmaConfig('795%3A1')
-  }}>{
-    isNormal.toString()
-  }</Story>
+  <Story
+    name="Normal"
+    height="120px"
+    parameters={{
+      design: figmaConfig("795%3A1"),
+    }}
+  >
+    {isNormal.toString()}
+  </Story>
 </Canvas>
 
 This is the classic black ribbon. Most pages use the GitHub corner in this fashion.
 
 export const isInverted = `<a class="github-corner is-inverted">
   ${GitHubCorner}
-</a>`
+</a>`;
 
-<Canvas mdxSource={isInverted} style={{backgroundColor: 'black'}} className="tight">
-  <Story name="Inverted" height="120px" parameters={{
-    backgrounds: { default: 'black' },
-    design: figmaConfig('795%3A1')
-  }}>{
-    isInverted.toString()
-  }</Story>
+<Canvas
+  mdxSource={isInverted}
+  style={{ backgroundColor: "black" }}
+  className="tight"
+>
+  <Story
+    name="Inverted"
+    height="120px"
+    parameters={{
+      backgrounds: { default: "black" },
+      design: figmaConfig("795%3A1"),
+    }}
+  >
+    {isInverted.toString()}
+  </Story>
 </Canvas>
 
 The colors may be inverted when displaying on darker, non-white backgrounds.
 
 export const isLeftAligned = `<a class="github-corner is-left-aligned">
   ${GitHubCorner}
-</a>`
+</a>`;
 
 <Canvas mdxSource={isLeftAligned} className="tight">
-  <Story name="Left aligned" height="120px" parameters={{
-    design: figmaConfig('795%3A1')
-  }}>{
-    isLeftAligned.toString()
-  }</Story>
+  <Story
+    name="Left aligned"
+    height="120px"
+    parameters={{
+      design: figmaConfig("795%3A1"),
+    }}
+  >
+    {isLeftAligned.toString()}
+  </Story>
 </Canvas>
 
 If the right side of the page is too bloated, or if the language is read and written RTL, the position of the ribbon may

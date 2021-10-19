@@ -3,10 +3,10 @@ import {
   GLOBAL_HEADER_API_URL,
   VISIT_SITE_BUTTON_TEXT,
   NAVIGATION_TAB_TEXT,
-} from './constants';
+} from "./constants";
 
-import { h } from './render';
-import { patchAssetIntoDom } from './assets';
+import { h } from "./render";
+import { patchAssetIntoDom } from "./assets";
 
 /**
  * Takes a "true" or "false" and returns the opposite
@@ -15,8 +15,8 @@ import { patchAssetIntoDom } from './assets';
  * */
 // eslint-disable-next-line consistent-return
 const invertStringBool = (str) => {
-  if (str === 'true') return 'false';
-  if (str === 'false') return 'true';
+  if (str === "true") return "false";
+  if (str === "false") return "true";
 };
 
 /**
@@ -27,7 +27,7 @@ const invertStringBool = (str) => {
  */
 class GlobalHeader {
   constructor() {
-    patchAssetIntoDom('/assets/logos/cc/logomark.svg');
+    patchAssetIntoDom("/assets/logos/cc/logomark.svg");
     this.logomark = `<svg xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 304 73">
@@ -50,183 +50,184 @@ class GlobalHeader {
 
   build(data) {
     const headerSection = h(
-      'header',
-      ['column'],
+      "header",
+      ["column"],
       [
         h(
-          'a',
-          ['main-logo'],
+          "a",
+          ["main-logo"],
           [
-            h('div', ['has-text-white'], [], (element) => {
+            h("div", ["has-text-white"], [], (element) => {
               // eslint-disable-next-line no-param-reassign
               element.innerHTML = this.logomark;
             }),
           ],
           (element) => {
-            element.setAttribute('href', CC_ORG_URL);
-            element.setAttribute('target', '_blank');
-          },
+            element.setAttribute("href", CC_ORG_URL);
+            element.setAttribute("target", "_blank");
+          }
         ),
-      ],
+      ]
     );
 
     const visitSiteColumn = h(
-      'div',
-      ['column', 'visit-button-cover'],
+      "div",
+      ["column", "visit-button-cover"],
       [
         // Visit CC site section
         h(
-          'aside',
-          ['visit-button-section'],
+          "aside",
+          ["visit-button-section"],
           [
             // Button
             h(
-              'a',
-              ['button', 'small', 'donate'],
+              "a",
+              ["button", "small", "donate"],
               [
                 document.createTextNode(VISIT_SITE_BUTTON_TEXT),
-                h('i', [
-                  'icon',
-                  'external-link',
-                  'margin-left-small',
-                  'is-size-6',
-                  'padding-top-smaller',
+                h("i", [
+                  "icon",
+                  "external-link",
+                  "margin-left-small",
+                  "is-size-6",
+                  "padding-top-smaller",
                 ]),
               ],
               (element) => {
-                element.setAttribute('href', CC_ORG_URL);
-                element.setAttribute('target', '_blank');
-              },
+                element.setAttribute("href", CC_ORG_URL);
+                element.setAttribute("target", "_blank");
+              }
             ),
-          ],
+          ]
         ),
-      ],
+      ]
     );
 
     const productsColumn = h(
-      'div',
-      ['column'],
+      "div",
+      ["column"],
       [
         // Navigation section
         h(
-          'nav',
-          ['products'],
+          "nav",
+          ["products"],
           [
             h(
-              'div',
-              ['product-list'],
+              "div",
+              ["product-list"],
               data.map((product) =>
                 // eslint-disable-next-line implicit-arrow-linebreak
                 h(
-                  'a',
-                  ['column', 'product-item'],
+                  "a",
+                  ["column", "product-item"],
                   [
                     // Title
-                    h('strong', [], [document.createTextNode(product.title)]),
+                    h("strong", [], [document.createTextNode(product.title)]),
                     // Description
                     h(
-                      'span',
-                      ['item-description'],
-                      [document.createTextNode(product.description)],
+                      "span",
+                      ["item-description"],
+                      [document.createTextNode(product.description)]
                     ),
                   ],
                   (element) => {
-                    element.setAttribute('href', product.url);
-                    element.setAttribute('target', '_blank');
-                  },
-                )),
+                    element.setAttribute("href", product.url);
+                    element.setAttribute("target", "_blank");
+                  }
+                )
+              )
             ),
           ],
           (element) => {
-            element.setAttribute('role', 'navigation');
-            element.setAttribute('aria-label', 'global navigation');
-          },
+            element.setAttribute("role", "navigation");
+            element.setAttribute("aria-label", "global navigation");
+          }
         ),
-      ],
+      ]
     );
 
     // OpenTab
     const openTab = h(
-      'button',
-      ['open-tab'],
+      "button",
+      ["open-tab"],
       [document.createTextNode(NAVIGATION_TAB_TEXT)],
       (element) => {
-        element.setAttribute('aria-haspopup', 'true');
-        element.setAttribute('aria-expanded', 'false');
-      },
+        element.setAttribute("aria-haspopup", "true");
+        element.setAttribute("aria-expanded", "false");
+      }
     );
 
     const mainContainer = h(
-      'header',
-      ['cc-global-header'],
+      "header",
+      ["cc-global-header"],
       [
         h(
-          'div',
-          ['container'],
+          "div",
+          ["container"],
           [
             // Content
             h(
-              'div',
-              ['columns', 'is-multiline', 'global-header-content'],
+              "div",
+              ["columns", "is-multiline", "global-header-content"],
               [
                 // header section
                 h(
-                  'div',
-                  ['columns', 'is-multiline', 'global-header-head'],
-                  [headerSection, visitSiteColumn],
+                  "div",
+                  ["columns", "is-multiline", "global-header-head"],
+                  [headerSection, visitSiteColumn]
                 ),
                 // Main columns
                 h(
-                  'div',
-                  ['columns', 'is-multiline', 'global-header-main'],
-                  [productsColumn],
+                  "div",
+                  ["columns", "is-multiline", "global-header-main"],
+                  [productsColumn]
                 ),
-              ],
+              ]
             ),
             openTab,
-          ],
+          ]
         ),
-      ],
+      ]
     );
 
-    openTab.addEventListener('click', (event) => {
+    openTab.addEventListener("click", (event) => {
       event.preventDefault();
-      const currentValue = openTab.getAttribute('aria-expanded');
-      openTab.setAttribute('aria-expanded', invertStringBool(currentValue));
-      mainContainer.classList.toggle('is-active');
+      const currentValue = openTab.getAttribute("aria-expanded");
+      openTab.setAttribute("aria-expanded", invertStringBool(currentValue));
+      mainContainer.classList.toggle("is-active");
     });
 
     // Creates a seperate explore button
     const exploreButton = h(
-      'button',
-      ['explore-button'],
+      "button",
+      ["explore-button"],
       [document.createTextNode(NAVIGATION_TAB_TEXT)],
       (element) => {
-        element.setAttribute('aria-haspopup', 'true');
-        element.setAttribute('aria-expanded', 'false');
-      },
+        element.setAttribute("aria-haspopup", "true");
+        element.setAttribute("aria-expanded", "false");
+      }
     );
-    exploreButton.addEventListener('click', (event) => {
+    exploreButton.addEventListener("click", (event) => {
       event.preventDefault();
-      const currentValue = exploreButton.getAttribute('aria-expanded');
+      const currentValue = exploreButton.getAttribute("aria-expanded");
       exploreButton.setAttribute(
-        'aria-expanded',
-        invertStringBool(currentValue),
+        "aria-expanded",
+        invertStringBool(currentValue)
       );
-      mainContainer.classList.toggle('is-active');
+      mainContainer.classList.toggle("is-active");
     });
 
     // queries the DOM if default header is used with global header
-    const navBarStart = document.querySelector('.navbar-start');
-    const explorePanel = document.querySelector('.tabs-panel.explore');
+    const navBarStart = document.querySelector(".navbar-start");
+    const explorePanel = document.querySelector(".tabs-panel.explore");
     const globalHeaderCopy = mainContainer.cloneNode(true);
-    globalHeaderCopy.classList.add('is-active');
+    globalHeaderCopy.classList.add("is-active");
 
     document.body.prepend(mainContainer);
     if (navBarStart) {
       navBarStart.append(exploreButton);
     } else {
-      openTab.style.display = 'block';
+      openTab.style.display = "block";
     }
     if (explorePanel) explorePanel.appendChild(globalHeaderCopy);
 

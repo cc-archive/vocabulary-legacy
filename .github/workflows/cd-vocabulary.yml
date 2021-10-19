@@ -4,7 +4,6 @@ on:
   repository_dispatch:
     types: [fonts-built]
 
-
 env:
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
 
@@ -31,7 +30,7 @@ jobs:
         run: bash scripts/build/vocabulary.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+
       - name: Deploy
         run: bash scripts/publish/vocabulary.sh
         env:

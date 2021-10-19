@@ -25,7 +25,7 @@
 <script>
 // import CaretDown from '@creativecommons/fonts/assets/svg/caret-down.svg?inline'
 export default {
-  name: 'NavDropdown',
+  name: "NavDropdown",
   // components: {
   //   CaretDown
   // },
@@ -43,16 +43,16 @@ export default {
   methods: {
     openMenu() {
       this.isOpen = true;
-      this.$refs.opener.setAttribute('aria-expanded', 'true');
+      this.$refs.opener.setAttribute("aria-expanded", "true");
     },
     closeMenu() {
       this.isOpen = false;
-      this.$refs.opener.setAttribute('aria-expanded', 'false');
+      this.$refs.opener.setAttribute("aria-expanded", "false");
     },
     toggleMenu() {
       this.isOpen = !this.isOpen;
-      const ariaExpanded = this.$refs.opener.getAttribute('aria-expanded');
-      this.$refs.opener.setAttribute('aria-expanded', `${!ariaExpanded}`);
+      const ariaExpanded = this.$refs.opener.getAttribute("aria-expanded");
+      this.$refs.opener.setAttribute("aria-expanded", `${!ariaExpanded}`);
     },
   },
 };

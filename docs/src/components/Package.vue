@@ -4,7 +4,7 @@
   Props: [ 'name', 'href', 'content', 'npmlink' ]
   Nested Components: None
 -->
- 
+
 <template>
   <div class="project-index group-card">
     <article class="card entry-post vertical project-index">
@@ -22,7 +22,13 @@
         <div class="external-links">
           <button class="button is-text tiny">
             <i class="icon external-link"></i>
-            <a class="link-content group-card-link" :href="npmlink" target="blank" rel="noopener">Visit npmjs package</a>
+            <a
+              class="link-content group-card-link"
+              :href="npmlink"
+              target="blank"
+              rel="noopener"
+              >Visit npmjs package</a
+            >
           </button>
         </div>
       </div>
@@ -32,12 +38,7 @@
 
 <script>
 export default {
-    name: 'Package',
-    props: [
-      'name',
-      'href',
-      'content',
-      'npmlink'
-    ]
-}
+  name: "Package",
+  props: ["name", "href", "content", "npmlink"],
+};
 </script>

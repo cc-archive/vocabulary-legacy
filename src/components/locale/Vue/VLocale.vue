@@ -11,13 +11,19 @@
       </svg>
     </span>
     <div class="select">
-      <select ref="select" aria-labelledby="locale-label" @change="updateLanguage">
+      <select
+        ref="select"
+        aria-labelledby="locale-label"
+        @change="updateLanguage"
+      >
         <option disabled id="locale-label">Language</option>
         <option
           v-for="language in languages"
           :key="language.name"
           :value="language.name"
-        >{{ language.nativeName }}</option>
+        >
+          {{ language.nativeName }}
+        </option>
       </select>
     </div>
     <span class="icon caret-down is-small is-right">
@@ -39,30 +45,30 @@
  * switch between locales using this component.
  */
 export default {
-  name: 'VLocale',
+  name: "VLocale",
   props: {
     languages: {
       type: Array,
-      default: () => ([
-        { name: 'English', nativeName: 'English' },
-        { name: 'Japanese', nativeName: '日本語' },
-        { name: 'Russian', nativeName: 'Русский' },
-        { name: 'Spanish', nativeName: 'Español' },
-      ]),
+      default: () => [
+        { name: "English", nativeName: "English" },
+        { name: "Japanese", nativeName: "日本語" },
+        { name: "Russian", nativeName: "Русский" },
+        { name: "Spanish", nativeName: "Español" },
+      ],
     },
     selectedLanguage: {
       type: String,
-      default: 'English',
+      default: "English",
     },
   },
   mounted() {
-    if (this.selectedLanguage !== 'English') {
+    if (this.selectedLanguage !== "English") {
       this.$refs.select.value = this.selectedLanguage;
     }
   },
   methods: {
     updateLanguage() {
-      this.$emit('update', { selectedLanguage: this.$refs.select.value });
+      this.$emit("update", { selectedLanguage: this.$refs.select.value });
     },
   },
 };

@@ -1,21 +1,21 @@
-import { sizes } from '@/utils/values';
-import { addSource } from '@/utils/addSource';
-import DonateButton from './DonateButton.vue';
+import { sizes } from "@/utils/values";
+import { addSource } from "@/utils/addSource";
+import DonateButton from "./DonateButton.vue";
 
 export default {
-  title: 'Elements/Donate Button',
+  title: "Elements/Donate Button",
   parameters: {
     docs: {
       description: {
         component:
-          'The donate button is a special version of the button element. It works the same way as [button](/docs/elements-button--default) but without theming.',
+          "The donate button is a special version of the button element. It works the same way as [button](/docs/elements-button--default) but without theming.",
       },
     },
   },
   component: DonateButton,
   argTypes: {
     size: {
-      control: { type: 'select', options: sizes },
+      control: { type: "select", options: sizes },
     },
   },
 };
@@ -34,18 +34,18 @@ Iconless.args = { noIcon: true };
 addSource(Iconless, '<DonateButton :no-icon="true">Text</DonateButton>');
 
 export const withLink = Template.bind({});
-withLink.args = { href: 'http://creativecommons.org/donate' };
+withLink.args = { href: "http://creativecommons.org/donate" };
 addSource(
   withLink,
-  '<DonateButton href="http://creativecommons.org/donate">Text</DonateButton>',
+  '<DonateButton href="http://creativecommons.org/donate">Text</DonateButton>'
 );
 
 export const headerDonate = Template.bind({});
 headerDonate.args = {
-  href: 'http://creativecommons.org/donate',
+  href: "http://creativecommons.org/donate",
   isHeader: true,
 };
 addSource(
   headerDonate,
-  '<DonateButton href="http://creativecommons.org/donate" is-header="true">Text</DonateButton>',
+  '<DonateButton href="http://creativecommons.org/donate" is-header="true">Text</DonateButton>'
 );

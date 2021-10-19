@@ -1,10 +1,10 @@
-import { sizes } from '@/utils/values';
+import { sizes } from "@/utils/values";
 
 export const sized = {
   props: {
     size: {
       type: String,
-      default: 'normal',
+      default: "normal",
       validator(value) {
         return sizes.includes(value);
       },

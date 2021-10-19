@@ -31,16 +31,16 @@ $pagination-ellipsis-color: $color-dark-gray;
       border-radius: 0;
       text-decoration: none;
 
-        .inactive-link {
-          border-radius: 0;
-          text-decoration: none;
+      .inactive-link {
+        border-radius: 0;
+        text-decoration: none;
 
-          background-color: $color-lighter-gray;
-        }
+        background-color: $color-lighter-gray;
+      }
 
-        :hover {
-          background-color:  $color-dark-gray;
-        }
+      :hover {
+        background-color: $color-dark-gray;
+      }
     }
 
     .inactive-grey {
@@ -51,16 +51,16 @@ $pagination-ellipsis-color: $color-dark-gray;
       border-radius: 0;
       text-decoration: none;
 
-        .inactive-link {
-          border-radius: 0;
-          text-decoration: none;
+      .inactive-link {
+        border-radius: 0;
+        text-decoration: none;
 
-          background-color: $color-white;
-        }
+        background-color: $color-white;
+      }
 
-        :hover {
-          background-color:  $color-dark-gray;
-        }
+      :hover {
+        background-color: $color-dark-gray;
+      }
     }
   }
 }

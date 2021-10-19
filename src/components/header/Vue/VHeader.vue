@@ -4,12 +4,14 @@
       <div class="navbar-brand">
         <a class="logo" href="/">
           <!--@slot The Vue component with the site's logo -->
-          <slot name="logo">
-          </slot>
+          <slot name="logo"> </slot>
         </a>
         <a
           role="button"
-          :class="{ ['navbar-burger']: true, ['is-active']: isBurgerMenuActive }"
+          :class="{
+            ['navbar-burger']: true,
+            ['is-active']: isBurgerMenuActive,
+          }"
           :aria-label="ariaMenuLabel"
           aria-expanded="false"
           @click="toggleBurgerActive"
@@ -20,7 +22,9 @@
           <span aria-hidden="true" />
         </a>
       </div>
-      <div :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }">
+      <div
+        :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }"
+      >
         <div class="navbar-end">
           <!--@slot Menu items, can be `NavItem`, `NavDropdown` -->
           <slot name="menu-items">
@@ -44,11 +48,11 @@
  * The header displays information about the site such as its branding and
  * name as well as navigation links.
  */
-import NavItem from './NavItem.vue';
-import NavDropdown from './NavDropdown.vue';
+import NavItem from "./NavItem.vue";
+import NavDropdown from "./NavDropdown.vue";
 
 export default {
-  name: 'VHeader',
+  name: "VHeader",
   components: {
     NavItem,
     NavDropdown,
@@ -56,11 +60,11 @@ export default {
   props: {
     ariaPrimaryLabel: {
       type: String,
-      default: 'Main',
+      default: "Main",
     },
     ariaMenuLabel: {
       type: String,
-      default: 'Menu',
+      default: "Menu",
     },
   },
   data: () => ({ isBurgerMenuActive: false }),

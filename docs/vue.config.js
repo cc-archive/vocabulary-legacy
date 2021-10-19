@@ -1,10 +1,10 @@
 module.exports = {
-  publicPath: '',
+  publicPath: "",
   pwa: {
-    name: 'CC Vocabulary',
-    themeColor: '#000000',
-    msTileColor: '#000000',
-    appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
-  }
-}
+    name: "CC Vocabulary",
+    themeColor: "#000000",
+    msTileColor: "#000000",
+    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppStatusBarStyle: "black",
+  },
+};

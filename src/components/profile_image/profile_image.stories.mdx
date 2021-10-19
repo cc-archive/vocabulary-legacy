@@ -1,5 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Patterns/Profile image" />
 
@@ -12,9 +12,12 @@ needed, however, a `60px` square is a minimum size available.
 You can use Bulma size helpers like `is-128x128` to set the image size.
 
 <Canvas>
-  <Story name="Default" parameters={{
-    design: figmaConfig('6728%3A329')
-  }}>{`
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("6728%3A329"),
+    }}
+  >{`
     <figure class="image is-128x128">
       <img class="profile" src="demo/lion_dafrique.jpg">
     </figure>
@@ -24,9 +27,12 @@ You can use Bulma size helpers like `is-128x128` to set the image size.
 You can also use CSS properties `height` and `width` to size the image.
 
 <Canvas>
-  <Story name="Custom sizes" parameters={{
-    design: figmaConfig('6728%3A329')
-  }}>{`
+  <Story
+    name="Custom sizes"
+    parameters={{
+      design: figmaConfig("6728%3A329"),
+    }}
+  >{`
     <style>
       .image {
         height: 256px;

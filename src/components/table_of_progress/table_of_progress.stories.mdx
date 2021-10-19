@@ -1,5 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Navigation/Table of Progress" />
 
@@ -13,7 +13,7 @@ section.
 The component has two states, active and inactive. The hover state of inactive
 elements should have the same style of active state.
 
-export const TableOfProgess = () =>`
+export const TableOfProgess = () => `
 <div class="table-of-progress top-container">
   <h4 class="step-header">Steps</h4>
   <ul>
@@ -43,10 +43,15 @@ export const TableOfProgess = () =>`
     </li>
   </ul>
 </div>
-`
+`;
 
 <Canvas mdxSource={TableOfProgess()}>
-  <Story name="Default" parameters={{
-    design: figmaConfig('6990%3A133')
-  }}>{htmlWrapper(TableOfProgess()).bind({})}</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("6990%3A133"),
+    }}
+  >
+    {htmlWrapper(TableOfProgess()).bind({})}
+  </Story>
 </Canvas>

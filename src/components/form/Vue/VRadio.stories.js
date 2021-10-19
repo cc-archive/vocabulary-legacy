@@ -1,13 +1,14 @@
-import { figmaConfig } from '@/stories/helpers';
-import VRadio from './VRadio.vue';
+import { figmaConfig } from "@/stories/helpers";
+import VRadio from "./VRadio.vue";
 
 export default {
-  title: 'Elements/VRadio',
+  title: "Elements/VRadio",
   parameters: {
-    design: figmaConfig('603%3A3'),
+    design: figmaConfig("603%3A3"),
     docs: {
       description: {
-        component: 'The Radio component is an essential forms component. To use it, you have to pass it a reactive value with a `get()` function and a `set()` function as a `v-model`, as in the code below:',
+        component:
+          "The Radio component is an essential forms component. To use it, you have to pass it a reactive value with a `get()` function and a `set()` function as a `v-model`, as in the code below:",
       },
     },
   },

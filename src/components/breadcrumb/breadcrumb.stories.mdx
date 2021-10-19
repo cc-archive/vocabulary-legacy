@@ -1,5 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Navigation/Breadcrumb" />
 
@@ -14,16 +14,19 @@ export const breadCrumb = () => `
     <li class="is-active"><a href="#" aria-current="page displayed">Page displayed</a></li>
   </ul>
 </nav>
-`
+`;
 
 The Breadcrumb has two text styles: links to parent pages and the page the user is seeing. The parent links should be corresponding to the site map defined. At the same time, the color used for links should be the main color for links across the site.
 
 For accessibility purposes, the component should be placed above the page's title.
 
 <Canvas mdxSource={breadCrumb()}>
-  <Story name="Default" parameters={{
-    design: figmaConfig('6368%3A9')
-  }}>{
-    htmlWrapper(breadCrumb()).bind({})
-  }</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("6368%3A9"),
+    }}
+  >
+    {htmlWrapper(breadCrumb()).bind({})}
+  </Story>
 </Canvas>

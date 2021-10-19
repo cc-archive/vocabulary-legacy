@@ -1,16 +1,16 @@
-import { mount } from '@vue/test-utils';
-import VCheckbox from '../../src/components/form/Vue/VCheckbox.vue';
+import { mount } from "@vue/test-utils";
+import VCheckbox from "../../src/components/form/Vue/VCheckbox.vue";
 
-describe('VCheckbox', () => {
+describe("VCheckbox", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = mount(VCheckbox, {
       slots: {
-        default: 'Default Checkbox',
+        default: "Default Checkbox",
       },
     });
   });
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('emits "true" when checked', () => {
@@ -27,7 +27,7 @@ describe('VCheckbox', () => {
     await checkbox.element.click();
     expect(wrapper.emitted().input[0]).toEqual([false]);
   });
-  it('cannot be clicked when disabled', async () => {
+  it("cannot be clicked when disabled", async () => {
     await wrapper.setProps({
       value: true,
       disabled: true,

@@ -1,8 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import {
-  figmaConfig,
-  htmlWrapper,
-} from '@/stories/helpers';
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Navigation/Pagination" />
 
@@ -42,12 +39,15 @@ export const pagination = () => `
   </nav>
   <h5 class="b-header padding-vertical-big">Ellipsis</h5>
   <span class="pagination-ellipsis">&hellip;</span>
-</div>`
+</div>`;
 
 <Canvas>
-  <Story name="Default" parameters={{
-    design: figmaConfig('7005%3A35')
-  }}>{
-    htmlWrapper(pagination()).bind({})
-  }</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("7005%3A35"),
+    }}
+  >
+    {htmlWrapper(pagination()).bind({})}
+  </Story>
 </Canvas>

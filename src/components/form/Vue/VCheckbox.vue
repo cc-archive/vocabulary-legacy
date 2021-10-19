@@ -1,6 +1,11 @@
 <template>
   <label class="v-checkbox checkbox">
-    <input type="checkbox" :checked="value" :disabled="disabled" v-model="computedValue" />
+    <input
+      type="checkbox"
+      :checked="value"
+      :disabled="disabled"
+      v-model="computedValue"
+    />
     <span class="checkbox-label">
       <slot default />
     </span>
@@ -9,7 +14,7 @@
 
 <script>
 export default {
-  name: 'VCheckbox',
+  name: "VCheckbox",
   props: {
     /**
      * Checkbox is checked if this is true. This value is set by `v-model`.
@@ -41,7 +46,7 @@ export default {
       },
       set(value) {
         this.localValue = value;
-        this.$emit('input', value);
+        this.$emit("input", value);
       },
     },
   },
@@ -55,7 +60,7 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log('Doing something');
+      console.log("Doing something");
     },
     focus() {
       // MacOS FireFox and Safari do not focus when clicked

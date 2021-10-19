@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Form/Checkbox" />
 
@@ -30,13 +30,16 @@ export const checkboxDiv = () => `<h3>Checkbox</h3>
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
     ex ea commodo consequat. </span>
   </label>
-</div>`
+</div>`;
 
 <Canvas mdxSource={checkboxDiv()}>
-  <Story name="Default" height="200px" parameters={{
-    design: figmaConfig('603%3A3')
-  }}>{
-    htmlWrapper(checkboxDiv()).bind()
-  }</Story>
+  <Story
+    name="Default"
+    height="200px"
+    parameters={{
+      design: figmaConfig("603%3A3"),
+    }}
+  >
+    {htmlWrapper(checkboxDiv()).bind()}
+  </Story>
 </Canvas>
-

@@ -1,7 +1,7 @@
-import '@/styles/vocabulary/_index.scss';
+import "@/styles/vocabulary/_index.scss";
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -11,10 +11,24 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Hello',
-        ['WIP', 'Introduction', 'Getting Started', 'Overview', 'Structure', 'Usage', 'Contribution'],
-        'Fonts',
-        ['Accidenz Commons', 'Roboto Condensed', 'Source Sans Pro', 'JetBrains Mono', 'Vocabulary Icons'],
+        "Hello",
+        [
+          "WIP",
+          "Introduction",
+          "Getting Started",
+          "Overview",
+          "Structure",
+          "Usage",
+          "Contribution",
+        ],
+        "Fonts",
+        [
+          "Accidenz Commons",
+          "Roboto Condensed",
+          "Source Sans Pro",
+          "JetBrains Mono",
+          "Vocabulary Icons",
+        ],
       ],
     },
   },

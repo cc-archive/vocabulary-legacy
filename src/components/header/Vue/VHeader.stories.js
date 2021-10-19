@@ -1,11 +1,11 @@
-import { addDescription } from '@/utils/addDescription';
-import VHeader from './VHeader.vue';
-import NavItem from './NavItem.vue';
-import NavDropdown from './NavDropdown.vue';
-import ChooserLogo from './ChooserLogo.vue';
+import { addDescription } from "@/utils/addDescription";
+import VHeader from "./VHeader.vue";
+import NavItem from "./NavItem.vue";
+import NavDropdown from "./NavDropdown.vue";
+import ChooserLogo from "./ChooserLogo.vue";
 
 export default {
-  title: 'Elements/VHeader',
+  title: "Elements/VHeader",
   component: VHeader,
 };
 
@@ -36,7 +36,7 @@ export const ChooserHeader = (args, { argTypes }) => ({
 });
 addDescription(
   ChooserHeader,
-  'This is a sample header for the Chooser page. It uses `<ChooserLogo />` svg component as the logo, and one `<NavItem>` component.',
+  "This is a sample header for the Chooser page. It uses `<ChooserLogo />` svg component as the logo, and one `<NavItem>` component."
 );
 
 export const IntlHeader = (args, { argTypes }) => ({
@@ -48,9 +48,9 @@ export const IntlHeader = (args, { argTypes }) => ({
 <NavItem tag="a" href="/menu_item" label="Меню 2" :isExternal="true" />
 </template></VHeader>`,
 });
-IntlHeader.args = { ariaPrimaryLabel: 'Основная', ariaMenuLabel: 'Меню' };
+IntlHeader.args = { ariaPrimaryLabel: "Основная", ariaMenuLabel: "Меню" };
 
 addDescription(
   IntlHeader,
-  'When using i18n, you should pass translated strings to the header. Header has two aria labels that need to be bound to it if the language is not English.',
+  "When using i18n, you should pass translated strings to the header. Header has two aria labels that need to be bound to it if the language is not English."
 );

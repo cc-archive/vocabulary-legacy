@@ -1,7 +1,7 @@
-import VLocale from './VLocale.vue';
+import VLocale from "./VLocale.vue";
 
 export default {
-  title: 'Patterns/VLocale',
+  title: "Patterns/VLocale",
   component: VLocale,
 };
 

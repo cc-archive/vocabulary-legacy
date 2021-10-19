@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Layouts/Cards" />
 
@@ -7,10 +7,10 @@ import { figmaConfig } from '@/stories/helpers'
 
 export const content = `<div class="content">
             Description metus ligula pharetra litora class massa viverra, facilisis cum aenean hendrerit eget magnis convallis.
-          </div>`
+          </div>`;
 
-export const cardWithButton = (width, image_size, orientation) => 
-`<div style="max-width: ${width}px;">
+export const cardWithButton = (width, image_size, orientation) =>
+  `<div style="max-width: ${width}px;">
   <article class="card entry-post ${orientation}">
     <header class="card-image">
       <figure class="image is-${image_size}">
@@ -24,29 +24,39 @@ export const cardWithButton = (width, image_size, orientation) =>
         <a href="#" class="button is-primary">Read more</a>
     </div>
   </article>
-</div>`
+</div>`;
 
-<Canvas mdxSource = {cardWithButton(400,'4by3', 'vertical')}>
-  <Story name="PostVertical" parameters={{
-    design: figmaConfig('776%3A0')
-  }}>{`
+<Canvas mdxSource={cardWithButton(400, "4by3", "vertical")}>
+  <Story
+    name="PostVertical"
+    parameters={{
+      design: figmaConfig("776%3A0"),
+    }}
+  >{`
     <div>
-      ${cardWithButton(400,'4by3', 'vertical')}
+      ${cardWithButton(400, "4by3", "vertical")}
     </div>
   `}</Story>
 </Canvas>
 
-<Canvas mdxSource = {cardWithButton(600,'4by5', 'horizontal')}>
-  <Story name="PostHorizontal" parameters={{
-    design: figmaConfig('776%3A3')
-  }}>{`
+<Canvas mdxSource={cardWithButton(600, "4by5", "horizontal")}>
+  <Story
+    name="PostHorizontal"
+    parameters={{
+      design: figmaConfig("776%3A3"),
+    }}
+  >{`
   <div>
-    ${cardWithButton(600,'4by5', 'horizontal')}
+    ${cardWithButton(600, "4by5", "horizontal")}
   </div>
   `}</Story>
 </Canvas>
 
-export const postVideo = (width,image_size,orientation) => `<div style="max-width: ${width}px;">
+export const postVideo = (
+  width,
+  image_size,
+  orientation
+) => `<div style="max-width: ${width}px;">
       <article class="card entry-post entry-video ${orientation} no-border">
         <header class="card-image">
           <a href="#">
@@ -60,32 +70,41 @@ export const postVideo = (width,image_size,orientation) => `<div style="max-widt
          ${content.toString()}
         </div>
       </article>
-    </div>`
+    </div>`;
 
-<Canvas mdxSource = {postVideo(400,'4by3','vertical')}>
-  <Story name="PostVideoVertical" parameters={{
-    design: figmaConfig('776%3A86')
-  }}>{`
+<Canvas mdxSource={postVideo(400, "4by3", "vertical")}>
+  <Story
+    name="PostVideoVertical"
+    parameters={{
+      design: figmaConfig("776%3A86"),
+    }}
+  >{`
     <div>
-    ${postVideo(400,'4by3','vertical')}
+    ${postVideo(400, "4by3", "vertical")}
     </div>
   `}</Story>
 </Canvas>
 
-<Canvas mdxSource = {postVideo(600,'','horizontal')}>
-  <Story name="PostVideoHorizontal" parameters={{
-    design: figmaConfig('776%3A86')
-  }}>{`
+<Canvas mdxSource={postVideo(600, "", "horizontal")}>
+  <Story
+    name="PostVideoHorizontal"
+    parameters={{
+      design: figmaConfig("776%3A86"),
+    }}
+  >{`
     <div>
-    ${postVideo(600,'', 'horizontal')}
+    ${postVideo(600, "", "horizontal")}
     </div>
   `}</Story>
 </Canvas>
 
 <Canvas>
-  <Story name="PostVideoLarge" parameters={{
-    design: figmaConfig('776%3A86')
-  }}>{`
+  <Story
+    name="PostVideoLarge"
+    parameters={{
+      design: figmaConfig("776%3A86"),
+    }}
+  >{`
     <div style="max-width: 100%;">
       <article class="card entry-post entry-video horizontal large no-border">
         <header class="card-image">
@@ -106,7 +125,6 @@ export const postVideo = (width,image_size,orientation) => `<div style="max-widt
   `}</Story>
 </Canvas>
 
-
 export const postEvent = (width) => `<div
 style="max-width: ${width}px;">
       <article class="card entry-post entry-event horizontal">
@@ -123,22 +141,28 @@ style="max-width: ${width}px;">
           <a href="#" class="read-more">Read more</a>
         </div>
       </article>
-    </div>`
+    </div>`;
 
-<Canvas mdxSource = {postEvent(600)}>
-  <Story name="PostEventWide" parameters={{
-    design: figmaConfig('776%3A43')
-  }}>{`
+<Canvas mdxSource={postEvent(600)}>
+  <Story
+    name="PostEventWide"
+    parameters={{
+      design: figmaConfig("776%3A43"),
+    }}
+  >{`
     <div>
     ${postEvent(600)}
     </div>
   `}</Story>
 </Canvas>
 
-<Canvas mdxSource = {postEvent(350)}>
-  <Story name="PostEventNarrow" parameters={{
-    design: figmaConfig('776%3A43')
-  }}>{`
+<Canvas mdxSource={postEvent(350)}>
+  <Story
+    name="PostEventNarrow"
+    parameters={{
+      design: figmaConfig("776%3A43"),
+    }}
+  >{`
     <div>
     ${postEvent(350)}
     </div>
@@ -146,9 +170,12 @@ style="max-width: ${width}px;">
 </Canvas>
 
 <Canvas>
-  <Story name="PostStatistic" parameters={{
-    design: figmaConfig('776%3A144')
-  }}>{`
+  <Story
+    name="PostStatistic"
+    parameters={{
+      design: figmaConfig("776%3A144"),
+    }}
+  >{`
     <div style="max-width: 600px;">
       <article class="card entry-post entry-statistic horizontal no-border">
         <header class="card-header">
@@ -169,9 +196,12 @@ style="max-width: ${width}px;">
 </Canvas>
 
 <Canvas>
-  <Story name="PostQuote" parameters={{
-    design: figmaConfig('776%3A3')
-  }}>{`
+  <Story
+    name="PostQuote"
+    parameters={{
+      design: figmaConfig("776%3A3"),
+    }}
+  >{`
     <div style="max-width: 600px;">
       <article class="card entry-post entry-quote horizontal no-border">
         <header class="card-image">
@@ -195,9 +225,14 @@ style="max-width: ${width}px;">
 </Canvas>
 
 <Canvas>
-  <Story name="ImageTop" parameters={{
-    design: figmaConfig('776%3A3')
-  }}> {`
+  <Story
+    name="ImageTop"
+    parameters={{
+      design: figmaConfig("776%3A3"),
+    }}
+  >
+    {" "}
+    {`
     <div style="max-width: 340px;">
       <article class="card entry-post entry-image vertical">
         <header class="card-image">
@@ -212,8 +247,8 @@ style="max-width: ${width}px;">
           <span class="subtitle">This is a short description</span>
         </div>
       </article>
-    </div>`
-  }</Story>
+    </div>`}
+  </Story>
 </Canvas>
 
 export const linkCard = `<article class="card entry-post link no-border">
@@ -224,18 +259,20 @@ export const linkCard = `<article class="card entry-post link no-border">
       <span class="link-arrow">Loren ipsum dolor</span>
     </span>
   </a>
-</article>`
+</article>`;
 
-<Canvas mdxSource = {linkCard}>
-  <Story name="Link" parameters={{
-    design: figmaConfig('776%3A122')
-  }}>{`
+<Canvas mdxSource={linkCard}>
+  <Story
+    name="Link"
+    parameters={{
+      design: figmaConfig("776%3A122"),
+    }}
+  >{`
     <div style="max-width: 400px;">
       ${linkCard.toString()}
     </div>
   `}</Story>
 </Canvas>
-
 
 export const linkBorderCard = `<article class="card entry-post link">
   <a href="#">
@@ -244,23 +281,28 @@ export const linkBorderCard = `<article class="card entry-post link">
       <h2 class="card-title">This is a Title of a page or a section</h2>
     </div>
   </a>
-</article>`
+</article>`;
 
-<Canvas mdxSource = {linkBorderCard}>
-  <Story name="Link Border" parameters={{
-    design: figmaConfig('776%3A122')
-  }}>{`
+<Canvas mdxSource={linkBorderCard}>
+  <Story
+    name="Link Border"
+    parameters={{
+      design: figmaConfig("776%3A122"),
+    }}
+  >{`
     <div style="max-width: 400px;">
       ${linkBorderCard.toString()}
     </div>
   `}</Story>
 </Canvas>
 
-
 <Canvas>
-  <Story name="Blog entry horizontal" parameters={{
-    design: figmaConfig('776%3A3')
-  }}>{`
+  <Story
+    name="Blog entry horizontal"
+    parameters={{
+      design: figmaConfig("776%3A3"),
+    }}
+  >{`
     <div style="max-width: 384px;" class="margin-normal">
       <article class="card entry-post horizontal no-border blog-entry">
         <header>
@@ -281,9 +323,12 @@ export const linkBorderCard = `<article class="card entry-post link">
 </Canvas>
 
 <Canvas>
-  <Story name="Project index" parameters={{
-    design: figmaConfig('776%3A144')
-  }}>{`
+  <Story
+    name="Project index"
+    parameters={{
+      design: figmaConfig("776%3A144"),
+    }}
+  >{`
     <div class="project-index">
       <article class="card entry-post vertical project-index">
         <div class="card-content">

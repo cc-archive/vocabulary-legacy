@@ -7,7 +7,7 @@ export default {
      */
     simplicity: {
       type: String,
-      validator: (val) => ['slight', 'extreme'].includes(val),
+      validator: (val) => ["slight", "extreme"].includes(val),
     },
   },
   computed: {

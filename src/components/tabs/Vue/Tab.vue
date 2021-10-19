@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  name: 'Tab',
-  inject: ['tabList'],
+  name: "Tab",
+  inject: ["tabList"],
   props: {
     /**
      * The text that appears in the tab.
