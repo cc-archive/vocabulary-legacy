@@ -9,7 +9,7 @@
  * @see Inspired by [SlotComponent@Buefy](https://github.com/buefy/buefy/blob/dev/src/utils/SlotComponent.js).
  */
 export default {
-  name: 'SlotRenderer',
+  name: "SlotRenderer",
   props: {
     /**
      * _the VNode whose slot is being rendered_
@@ -26,7 +26,7 @@ export default {
      */
     name: {
       type: String,
-      default: 'default',
+      default: "default",
     },
     /**
      * _whether the slot is scoped_
@@ -46,7 +46,7 @@ export default {
      */
     tag: {
       type: String,
-      default: 'div',
+      default: "div",
     },
     /**
      * _the list of classes to apply to the rendered tag_
@@ -60,7 +60,7 @@ export default {
      */
     event: {
       type: String,
-      default: 'hook:updated',
+      default: "hook:updated",
     },
   },
   methods: {
@@ -98,9 +98,7 @@ export default {
         {
           class: this.classList,
         },
-        [
-          this.getContent(),
-        ],
+        [this.getContent()]
       );
     }
     return null;

@@ -1,13 +1,13 @@
-import { Meta, IconItem, IconGallery } from '@storybook/addon-docs/blocks';
+import { Meta, IconItem, IconGallery } from "@storybook/addon-docs/blocks";
 
-import { iconGroups } from '@/components/icons/icons';
+import { iconGroups } from "@/components/icons/icons";
 
-<Meta title="Vocabulary/Icons"/>
+<Meta title="Vocabulary/Icons" />
 
 # Vocabulary Icons
 
 Vocabulary Icons is a set of SVG icons for use in Vocabulary, a cohesive design system to unite the web-facing
-Creative Commons. Some icons are from  [Font Awesome](https://fontawesome.com).
+Creative Commons. Some icons are from [Font Awesome](https://fontawesome.com).
 
 SVG icons are light-weight and scalable, and offer all the benefits of styling with CSS just like a regular font.
 They are smaller than fonts in size. In addition, you can include in your build only the icons you actually need,
@@ -19,31 +19,40 @@ fonts, as they don't have a corresponding code-point, and can have semantic titl
 ### Chevrons
 
 <IconGallery>
-  {
-    Object.entries(iconGroups.arrows.chevrons).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups.arrows.chevrons).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>
 
 ### Angles
 
 <IconGallery>
-  {
-    Object.entries(iconGroups.arrows.angles).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups.arrows.angles).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>
 
 ### Carets
 
 <IconGallery>
-  {
-    Object.entries(iconGroups.arrows.carets).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups.arrows.carets).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>
 
 ## Symbols
@@ -51,29 +60,38 @@ fonts, as they don't have a corresponding code-point, and can have semantic titl
 ### Shapes
 
 <IconGallery>
-  {
-    Object.entries(iconGroups.symbols.shapes).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups.symbols.shapes).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>
 
 ### Hieroglyphs
 
 <IconGallery>
-  {
-    Object.entries(iconGroups.symbols.hieroglyphs).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups.symbols.hieroglyphs).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>
 
 ## Social media apps
 
 <IconGallery>
-  {
-    Object.entries(iconGroups['social-media']).map(([name, svg]) => <IconItem key={name} name={name}>
-      <div style={{ height:'16px', width: '16px' }} dangerouslySetInnerHTML={{ __html: svg }} />
-    </IconItem>)
-  }
+  {Object.entries(iconGroups["social-media"]).map(([name, svg]) => (
+    <IconItem key={name} name={name}>
+      <div
+        style={{ height: "16px", width: "16px" }}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </IconItem>
+  ))}
 </IconGallery>

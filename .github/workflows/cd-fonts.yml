@@ -31,7 +31,7 @@ jobs:
         run: bash scripts/build/fonts.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+
       - name: Deploy
         run: bash scripts/publish/fonts.sh
         env:

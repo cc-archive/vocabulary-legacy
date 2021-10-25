@@ -1,5 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Navigation/Table of Contents" />
 
@@ -40,10 +40,15 @@ export const TableOfContents = () => `
     </ul>
   </aside>
 </div>
-`
+`;
 
 <Canvas mdxSource={TableOfContents()}>
-  <Story name="Default" parameters={{
-    design: figmaConfig('6990%3A82')
-  }}>{htmlWrapper(TableOfContents()).bind({})}</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("6990%3A82"),
+    }}
+  >
+    {htmlWrapper(TableOfContents()).bind({})}
+  </Story>
 </Canvas>

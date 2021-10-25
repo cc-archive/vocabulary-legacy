@@ -32,10 +32,15 @@
             <address class="margin-bottom-normal">
               Creative Commons<br />PO Box 1866, Mountain View CA 94042
             </address>
-            <a href="mailto:info@creativecommons.org" class="mail" rel="noopener"
+            <a
+              href="mailto:info@creativecommons.org"
+              class="mail"
+              rel="noopener"
               >info@creativecommons.org</a
             ><br />
-            <a href="tel://+1-415-429-6753" class="phone" rel="noopener">+1-415-429-6753</a>
+            <a href="tel://+1-415-429-6753" class="phone" rel="noopener"
+              >+1-415-429-6753</a
+            >
           </div>
           <div class="margin-vertical-large">
             <a
@@ -90,7 +95,10 @@
                     >
                   </li>
                   <li>
-                    <a href="https://cc-vocabulary.netlify.app" class="menu-item" rel="noopener"
+                    <a
+                      href="https://cc-vocabulary.netlify.app"
+                      class="menu-item"
+                      rel="noopener"
                       >Documentation</a
                     >
                   </li>
@@ -111,8 +119,15 @@
               <div class="subscription">
                 <h5 class="b-header">Subscribe to our newsletter</h5>
                 <form class="newsletter">
-                  <label for="email" class="is-sr-only">Email to subscribe</label>
-                  <input type="text" id="email" class="input" placeholder="Your email" />
+                  <label for="email" class="is-sr-only"
+                    >Email to subscribe</label
+                  >
+                  <input
+                    type="text"
+                    id="email"
+                    class="input"
+                    placeholder="Your email"
+                  />
                   <input type="submit" value="subscribe" class="button small" />
                 </form>
               </div>
@@ -131,11 +146,18 @@
                     rel="noopener"
                     >Creative Commons Attribution 4.0 International license</a
                   >.
-                  <a href="https://creativecommons.org/website-icons" target="_blank" rel="noopener"
+                  <a
+                    href="https://creativecommons.org/website-icons"
+                    target="_blank"
+                    rel="noopener"
                     >Icons</a
                   >
                   by
-                  <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a
+                  <a
+                    href="https://fontawesome.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Font Awesome</a
                   >.
                 </p>
                 <div class="margin-top-smaller">
@@ -154,7 +176,13 @@
                   rel="noopener"
                 >
                   <i
-                    class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller"
+                    class="
+                      icon
+                      cc-letterheart-filled
+                      margin-right-small
+                      is-size-5
+                      padding-top-smaller
+                    "
                   ></i>
                   Donate now
                 </a>

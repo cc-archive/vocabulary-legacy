@@ -1,14 +1,18 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Layouts/Tabs" />
 
 # Tabs
 
 <Canvas>
-  <Story name="Tab" height="200px" parameters={{
-    design: figmaConfig('933%3A1')
-  }}>{`
+  <Story
+    name="Tab"
+    height="200px"
+    parameters={{
+      design: figmaConfig("933%3A1"),
+    }}
+  >{`
     <div>
       <div class="tabs">
         <ul>
@@ -29,9 +33,13 @@ import { figmaConfig } from '@/stories/helpers'
 </Canvas>
 
 <Canvas>
-  <Story name="Box Tab" height="200px" parameters={{
-    design: figmaConfig('933%3A1')
-  }}>{`
+  <Story
+    name="Box Tab"
+    height="200px"
+    parameters={{
+      design: figmaConfig("933%3A1"),
+    }}
+  >{`
     <div>
       <div class="tabs is-boxed">
         <ul>

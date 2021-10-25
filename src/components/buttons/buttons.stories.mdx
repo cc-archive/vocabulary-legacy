@@ -1,64 +1,86 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Elements/Buttons" />
 
 # Buttons
 
-export const defaultOptions = {el: 'button', href: '', label: 'button', disabled: false}
+export const defaultOptions = {
+  el: "button",
+  href: "",
+  label: "button",
+  disabled: false,
+};
 
 export const defaultButton = (classes, options) => {
-  classes = classes ? ` ${classes}` : ''
+  classes = classes ? ` ${classes}` : "";
   if (!options) {
-    options = defaultOptions
+    options = defaultOptions;
   }
-  const el = options.el || 'button'
-  const label = options.label || 'button'
-  const disabled = options.disabled || false
-  const href = options.href || ''
-  return `<${el} ${href ? `href="${href}" ` : ''}class="button${classes}"${ disabled?` disabled` : '' }>${label}</${el}>`
-}
+  const el = options.el || "button";
+  const label = options.label || "button";
+  const disabled = options.disabled || false;
+  const href = options.href || "";
+  return `<${el} ${href ? `href="${href}" ` : ""}class="button${classes}"${
+    disabled ? ` disabled` : ""
+  }>${label}</${el}>`;
+};
 
 export const buttonSources = (classes, options) => {
   const buttonOptions = (className) => {
-    let label = 'button'
+    let label = "button";
     if (options && !options.isDefaultLabel) {
-      label = className.replace('is-', '')
+      label = className.replace("is-", "");
     }
     return {
       label,
-      ...options
-    }
-  }
-  return classes.map(className => defaultButton(className, buttonOptions(className))).join('\n')
-}
+      ...options,
+    };
+  };
+  return classes
+    .map((className) => defaultButton(className, buttonOptions(className)))
+    .join("\n");
+};
 
-export const buttonDonateClass = (classes, el = 'button', href='', label='Donate Now') => {
-  classes = classes ? ` ${classes}` : ''
-  return `<${el}${href ? ` href=${href}` : ''} class="button${classes} donate">
+export const buttonDonateClass = (
+  classes,
+  el = "button",
+  href = "",
+  label = "Donate Now"
+) => {
+  classes = classes ? ` ${classes}` : "";
+  return `<${el}${href ? ` href=${href}` : ""} class="button${classes} donate">
  <i class= "icon cc-letterheart-filled"></i>
-<span>${label}</span></${el}>`
-}
+<span>${label}</span></${el}>`;
+};
 
 To create buttons, add the `.button` class to a `<button>` or an `<a>` element.
 By default, buttons are of `normal` size and `primary` theme.
 
-<Canvas mdxSource={buttonSources([''])}>
-  <Story name="Button" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{
-    defaultButton('normal')
-  }</Story>
+<Canvas mdxSource={buttonSources([""])}>
+  <Story
+    name="Button"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1403%3A61"),
+    }}
+  >
+    {defaultButton("normal")}
+  </Story>
 </Canvas>
 
-export const sizes = ['big', 'medium', 'normal','small', 'tiny']
+export const sizes = ["big", "medium", "normal", "small", "tiny"];
 
 You can customize the size of buttons with the `.big`, `.medium`, `.normal`, `.small` and `.tiny` classes.
 
 <Canvas mdxSource={buttonSources(sizes, true)}>
-  <Story name="Button Sizes" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>
+  <Story
+    name="Button Sizes"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1403%3A61"),
+    }}
+  >
     {htmlWrapper(buttonSources(sizes, true)).bind({})}
   </Story>
 </Canvas>
@@ -66,14 +88,19 @@ You can customize the size of buttons with the `.big`, `.medium`, `.normal`, `.s
 You can also combine other classes such as `.donate` with the aforementioned size classes.
 
 export const donateButtonSizes = () => {
-  return ['big', 'medium', 'normal', 'small']
-    .map((classes) => (buttonDonateClass(classes))).join('\n')
-}
+  return ["big", "medium", "normal", "small"]
+    .map((classes) => buttonDonateClass(classes))
+    .join("\n");
+};
 
 <Canvas mdxSource={donateButtonSizes()}>
-  <Story name="Button Donate Sizes" height="100px" parameters={{
-    design: figmaConfig('1404%3A19')
-  }}>
+  <Story
+    name="Button Donate Sizes"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1404%3A19"),
+    }}
+  >
     {htmlWrapper(donateButtonSizes()).bind({})}
   </Story>
 </Canvas>
@@ -81,52 +108,83 @@ export const donateButtonSizes = () => {
 In the header, the Donate button has a different design:
 
 <Canvas mdxSource={buttonDonateClass()}>
-  <Story name="Button Donate Header" height="100px" parameters={{
-    design: figmaConfig('1404%3A19')
-  }}>
-    {htmlWrapper(buttonDonateClass('is-header', 'a', '', 'Donate')).bind({})}
+  <Story
+    name="Button Donate Header"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1404%3A19"),
+    }}
+  >
+    {htmlWrapper(buttonDonateClass("is-header", "a", "", "Donate")).bind({})}
   </Story>
 </Canvas>
 
 Buttons may have four feedback colors such as `.is-success`, `.is-info`, and `is-border`.
 
-export const feedbackClasses = ['is-success', 'is-info', 'is-border']
+export const feedbackClasses = ["is-success", "is-info", "is-border"];
 
-<Canvas mdxSource={buttonSources(feedbackClasses, {isDefaultLabel: true})}>
-  <Story name="Button Feedback Types" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{
-    htmlWrapper(buttonSources(feedbackClasses, {isDefaultLabel: true})).bind({})
-  }</Story>
+<Canvas mdxSource={buttonSources(feedbackClasses, { isDefaultLabel: true })}>
+  <Story
+    name="Button Feedback Types"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1403%3A61"),
+    }}
+  >
+    {htmlWrapper(buttonSources(feedbackClasses, { isDefaultLabel: true })).bind(
+      {}
+    )}
+  </Story>
 </Canvas>
 
 Buttons can be disabled:
 
-export const getFeedbackLabel = (className) => (className.replace('is-', ''))
+export const getFeedbackLabel = (className) => className.replace("is-", "");
 
-<Canvas mdxSource={buttonSources(['', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})}>
-  <Story name="Button Disabled" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{
-    htmlWrapper(buttonSources(['is-primary', ...feedbackClasses, 'is-text'], {getLabel: getFeedbackLabel, disabled: true})).bind({})
-  }</Story>
+<Canvas
+  mdxSource={buttonSources(["", ...feedbackClasses, "is-text"], {
+    getLabel: getFeedbackLabel,
+    disabled: true,
+  })}
+>
+  <Story
+    name="Button Disabled"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1403%3A61"),
+    }}
+  >
+    {htmlWrapper(
+      buttonSources(["is-primary", ...feedbackClasses, "is-text"], {
+        getLabel: getFeedbackLabel,
+        disabled: true,
+      })
+    ).bind({})}
+  </Story>
 </Canvas>
-
 
 The `.tag` class is used to render a tag name.
 
-<Canvas mdxSource={defaultButton('tag')}>
-  <Story name="Tag" height="100px" parameters={{
-    design: figmaConfig('1404%3A1')
-  }}>{
-    htmlWrapper(defaultButton('tag')).bind({})
-  }</Story>
+<Canvas mdxSource={defaultButton("tag")}>
+  <Story
+    name="Tag"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1404%3A1"),
+    }}
+  >
+    {htmlWrapper(defaultButton("tag")).bind({})}
+  </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Removable Tag" height="100px" parameters={{
-    design: figmaConfig('1404%3A1')
-  }}>{`
+  <Story
+    name="Removable Tag"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1404%3A1"),
+    }}
+  >{`
     <button class="button tag--removable">
       Label
       <i class="icon cross"></i>
@@ -136,20 +194,35 @@ The `.tag` class is used to render a tag name.
 
 You can use the `.is-text` to have a button looking more like a link, with no borders and background color.
 
-<Canvas mdxSource={defaultButton('is-text')}>
-  <Story name="Text Button" height="100px" parameters={{
-    design: figmaConfig('1404%3A1')
-  }}>{
-    htmlWrapper(defaultButton('is-text')).bind({})
-  }</Story>
+<Canvas mdxSource={defaultButton("is-text")}>
+  <Story
+    name="Text Button"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1404%3A1"),
+    }}
+  >
+    {htmlWrapper(defaultButton("is-text")).bind({})}
+  </Story>
 </Canvas>
 
 Button styles should be applied to anchor tags (`<a>`) when using links. Avoid using JavaScript and `<button>` tags to replicate anchor tag behavior whenever possible.
 
-<Canvas mdxSource={defaultButton('small', {el: 'a', href: 'https://creativecommons.org'})}>
-  <Story name="Anchor Tags" height="100px" parameters={{
-    design: figmaConfig('1403%3A61')
-  }}>{
-    htmlWrapper(defaultButton('',  {el: 'a', href: 'https://creativecommons.org'})).bind({})
-  }</Story>
+<Canvas
+  mdxSource={defaultButton("small", {
+    el: "a",
+    href: "https://creativecommons.org",
+  })}
+>
+  <Story
+    name="Anchor Tags"
+    height="100px"
+    parameters={{
+      design: figmaConfig("1403%3A61"),
+    }}
+  >
+    {htmlWrapper(
+      defaultButton("", { el: "a", href: "https://creativecommons.org" })
+    ).bind({})}
+  </Story>
 </Canvas>

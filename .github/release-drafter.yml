@@ -1,28 +1,28 @@
 # Configuration for the release-drafter action
 # See docs here: https://github.com/marketplace/actions/release-drafter
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
 categories:
-  - title: 'New Features'
-    label: '⭐ goal: addition'
-  - title: 'Improvements'
-    label: '✨ goal: improvement'
-  - title: 'Bug Fixes'
-    label: '🛠 goal: fix'
+  - title: "New Features"
+    label: "⭐ goal: addition"
+  - title: "Improvements"
+    label: "✨ goal: improvement"
+  - title: "Bug Fixes"
+    label: "🛠 goal: fix"
 # Exclude dependabot PRs from release notes
 exclude-labels:
-  - 'dependencies'
-change-template: '- $TITLE: #$NUMBER by @$AUTHOR'
+  - "dependencies"
+change-template: "- $TITLE: #$NUMBER by @$AUTHOR"
 version-resolver:
   major:
     labels:
-      - 'major'
+      - "major"
   minor:
     labels:
-      - 'minor'
+      - "minor"
   patch:
     labels:
-      - 'patch'
+      - "patch"
   default: patch
 template: |
   $CHANGES

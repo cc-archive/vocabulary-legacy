@@ -1,16 +1,16 @@
-import { figmaConfig } from '@/stories/helpers';
-import { addDescription } from '@/utils/addDescription';
-import Tabs from './Tabs.vue';
-import Tab from './Tab.vue';
+import { figmaConfig } from "@/stories/helpers";
+import { addDescription } from "@/utils/addDescription";
+import Tabs from "./Tabs.vue";
+import Tab from "./Tab.vue";
 
 export default {
-  title: 'Layouts/TabsVue',
+  title: "Layouts/TabsVue",
   parameters: {
-    design: figmaConfig('933%3A1'),
+    design: figmaConfig("933%3A1"),
     docs: {
       description: {
         component:
-          'The Tabs component is a navigation element to switch between content sections, and should be used as the main content switch in a page. Tabs are added with the `<Tab>` component.',
+          "The Tabs component is a navigation element to switch between content sections, and should be used as the main content switch in a page. Tabs are added with the `<Tab>` component.",
       },
     },
   },
@@ -34,6 +34,6 @@ Default.args = {};
 export const Boxed = Template.bind({});
 addDescription(
   Boxed,
-  'Set the `boxed` prop to `true` use a different variation.',
+  "Set the `boxed` prop to `true` use a different variation."
 );
 Boxed.args = { boxed: true };

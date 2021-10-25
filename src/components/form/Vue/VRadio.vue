@@ -4,7 +4,8 @@
     class="v-radio radio"
     :disabled="disabled"
     @click="focus"
-    @keydown.prevent.enter="$refs.label.click()">
+    @keydown.prevent.enter="$refs.label.click()"
+  >
     <input
       v-model="computedValue"
       class="radio-input"
@@ -13,7 +14,8 @@
       @click.stop
       :disabled="disabled"
       :name="name"
-      :value="nativeValue">
+      :value="nativeValue"
+    />
     <span class="control-label">
       <!-- @slot The text the radio label -->
       <slot default />
@@ -23,36 +25,36 @@
 
 <script>
 export default {
-  name: 'VRadio',
+  name: "VRadio",
   props: {
     /**
-       * Radio group's selected value, set by `v-model`.
-       * Can be `undefined` when no radio of the group is selected, or the `nativeValue`
-       * of checked radio when one is selected.
-       */
+     * Radio group's selected value, set by `v-model`.
+     * Can be `undefined` when no radio of the group is selected, or the `nativeValue`
+     * of checked radio when one is selected.
+     */
     value: {
       type: [String, undefined],
       default: undefined,
     },
     /**
-       * Individual radio's value. It is this value that gets emitted as the input event's
-       * payload when a radio is selected. You can access it as the parameter in the
-       * `set()` function of the `v-model`'s computed value.
-       */
+     * Individual radio's value. It is this value that gets emitted as the input event's
+     * payload when a radio is selected. You can access it as the parameter in the
+     * `set()` function of the `v-model`'s computed value.
+     */
     nativeValue: {
       type: String,
       required: true,
     },
     /**
-       * The name property should be the same in radios of the same radio group.
-       */
+     * The name property should be the same in radios of the same radio group.
+     */
     name: {
       type: String,
       required: true,
     },
     /**
-       * Optional property
-       */
+     * Optional property
+     */
     disabled: {
       type: Boolean,
       default: false,
@@ -70,14 +72,14 @@ export default {
       },
       set(value) {
         this.radioValue = value;
-        this.$emit('input', value);
+        this.$emit("input", value);
       },
     },
   },
   watch: {
     /**
-       * When v-model change, set internal value.
-       */
+     * When v-model change, set internal value.
+     */
     value(value) {
       this.radioValue = value;
     },
@@ -101,12 +103,12 @@ export default {
 }
 
 // This is overriding Bulma style for horizontal radio elements?
-.radio+.radio {
+.radio + .radio {
   margin-left: unset;
 }
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type='checkbox'],
-  input[type='radio'] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
     margin: 0 0.5rem 0 0;
     flex: 0 0 auto;
     width: 1rem;
@@ -122,15 +124,15 @@ export default {
     cursor: pointer;
     border: 1px solid var(--border-color, #{$color-light-gray});
     background: var(--background);
-    transition: background .3s, border-color .3s, box-shadow .2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       left: 0;
       top: 0;
       position: absolute;
-      transition: transform .3s ease, opacity .2s;
+      transition: transform 0.3s ease, opacity 0.2s;
       opacity: var(--o, 0);
     }
 
@@ -155,14 +157,14 @@ export default {
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+      box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
     }
 
     &:hover:not(:checked):not(:disabled) {
       --border-color: #{$color-gray};
     }
   }
-  input[type='radio'] {
+  input[type="radio"] {
     border-radius: 0.5rem;
 
     &:checked::after {

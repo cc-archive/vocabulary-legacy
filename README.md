@@ -14,29 +14,32 @@
 <p align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-  <a
+<a
     href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
     style="margin-right: 1em;">
-    <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vocabulary.svg?color=brightgreen"/>
-  </a>
-  <a
+<img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vocabulary.svg?color=brightgreen"/>
+</a>
+<a
     href="https://github.com/creativecommons/vocabulary/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
-    <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
-  </a>
-  <a
+<img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+</a>
+<a
     href="https://github.com/creativecommons/vocabulary/actions"
     style="margin-right: 1em;">
-    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/creativecommons/vocabulary/vocabulary-ci/master?label=vocabulary-ci"/>
-  </a>
-  <a
+<img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/creativecommons/vocabulary/vocabulary-ci/master?label=vocabulary-ci"/>
+</a>
+<a
     href="https://cc-vocabulary.netlify.com"
     style="margin-right: 1em;">
-    <img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
-  </a>
+<img alt="Netlify" src="https://img.shields.io/netlify/fcee0dba-9c91-450d-96e5-82494e6b3af9"/>
+</a>
+
 </p>
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
@@ -45,19 +48,17 @@ Vocabulary is the code implementation of Creative Commons' Design Language. Voca
 
 `vocabulary` is a monorepo containing three packages:
 
-Package    | Description  |          |
--------------- | ------------- | -----
-@creativecommons/vocabulary    |  The main CSS component library   | [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)
-@creativecommons/fonts    | A collection of typefaces and icon fonts  | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)
-@creativecommons/vue-vocabulary    | Vue component library powered by the main CSS library  | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary)
+| Package                         | Description                                           |                                                                                                                                                          |
+| ------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| @creativecommons/vocabulary     | The main CSS component library                        | [![install size](https://packagephobia.com/badge?p=@creativecommons/vocabulary)](https://packagephobia.com/result?p=@creativecommons/vocabulary)         |
+| @creativecommons/fonts          | A collection of typefaces and icon fonts              | [![install size](https://packagephobia.com/badge?p=@creativecommons/fonts)](https://packagephobia.com/result?p=@creativecommons/fonts)                   |
+| @creativecommons/vue-vocabulary | Vue component library powered by the main CSS library | [![install size](https://packagephobia.com/badge?p=@creativecommons/vue-vocabulary)](https://packagephobia.com/result?p=@creativecommons/vue-vocabulary) |
 
 ## Installation
 
-
 To setup you will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-Instailling with `npm` is lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup. 
-
+Instailling with `npm` is lightweight, tweakable and much more performant as the code runs very close to the operating system. On the other hand, all dependencies must be manually resolved and each developer has a different setup.
 
 #### Project dependencies
 
@@ -95,6 +96,7 @@ Sometimes, on windows environments you may get an error about linebreaks, fix th
 ```bash
 npm run build:fonts --fix
 ```
+
 > ## IMPORTANT NOTE: The `serve` command has the -s flag for static assets serving
 
 ## Using
@@ -107,14 +109,13 @@ We're always looking for contributors to help us find and fix bugs, build new fe
 
 Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
 
-| What       |How      |
-| ---------- | ------- |
-| **Code**   | If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.  |
-| **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.|
-| **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs.|
+| What       | How                                                                                                                                                   |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Code**   | If you are a developer, feel free to resolve open issues, raise PRs, add new features to existing components or add new components altogether.        |
+| **Design** | If you are a designer, your inputs on making every component more intuitive, aesthetic and joyful will reverberate through the entire ecosystem.      |
+| **Test**   | If you are a user of these components, your feedback, bug reports and feature requests will drive the project forward so that we can meet your needs. |
 | **Write**  | If you have a knack for writing technical articles, you could be the voice of the library's documentation, making it easy to use and understand.      |
 | **Share**  | If you can't contribute in these ways, you can refer the project to a friend who might be able to. Spreading the word is the easiest way to help out. |
-
 
 Interested?
 
@@ -123,7 +124,8 @@ The following instructions are in addition to the processes in our general [Cont
 These instructions are a port of the general guidelines, tailored specifically for Vocabulary.
 
 ### Discussing Changes
-For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done. 
+
+For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done.
 
 ### Assigning work
 
@@ -141,6 +143,7 @@ Examples
   broken_links_readme
   typo_misspelled
 ```
+
 Use clean commit messages, as imperative sentences in the present tense.
 
 Examples:
@@ -165,6 +168,7 @@ Running unit tests is easy.
 ```bash
   npm run test:unit
 ```
+
 Running this command will run a general test. Test can also be run for individual packages by running their respective commands
 
 ```bash
@@ -173,70 +177,83 @@ Running this command will run a general test. Test can also be run for individua
 
 ## CI/CD
 
-We use [Github Actions](https://github.com/features/actions) to automate some parts of our CI/CD pipeline. When contributing code, rather than having to commit/push every time a check fails, it will be useful to automate this process on your development environment to be sure all checks done will be successful. 
+We use [Github Actions](https://github.com/features/actions) to automate some parts of our CI/CD pipeline. When contributing code, rather than having to commit/push every time a check fails, it will be useful to automate this process on your development environment to be sure all checks done will be successful.
 
 ### Setting up CI testing on your Development Environment
 
-We recommend using the cross-platform package [Nektos/act](https://github.com/nektos/act). It requires Docker to run workflows. 
+We recommend using the cross-platform package [Nektos/act](https://github.com/nektos/act). It requires Docker to run workflows.
 
 #### **Install Dependencies**
 
 ##### - **Docker**
+
 If you don't have `Docker` installed, you can follow the links below to set it up depending on your environment.
- 
-- [x] Mac     : [Docker for Mac](https://docs.docker.com/desktop/mac/install/)
-- [x] Linux   : [Docker for Linux](https://docs.docker.com/engine/install/) 
+
+- [x] Mac : [Docker for Mac](https://docs.docker.com/desktop/mac/install/)
+- [x] Linux : [Docker for Linux](https://docs.docker.com/engine/install/)
 - [x] Windows : [Docker for Windows](https://docs.docker.com/desktop/windows/install/)
 
 ##### - **Nektos/act**
+
 Install using any of the methods below depending on your environment.
 
-| Package / Method      |Command      |
-| ----------    | -------     |
-| **[Homebrew](https://brew.sh/) (Linux/macOS)**              | `brew install act`      |
-| **[MacPorts](https://www.macports.org) (macOS)**            | `sudo port install act` |
-| **[Chocolatey](https://chocolatey.org/) (Windows)**         | `choco install act-cli` |
-| **[Scoop](https://scoop.sh/) (Windows)**                    | `scoop install act`     |
-| **[AUR](https://aur.archlinux.org/packages/act/) (Linux)**  | `yay -S act`            |
-| **[Nix](https://nixos.org) (Linux/macOS)**                  | [Nix recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/misc/act/default.nix) |
-| **[Go](https://golang.org) (Linux/Windows/macOS/any other platform supported by Go)** | `go install github.com/nektos/act@latest`                                    |
-| **[Manual Download](https://github.com/nektos/act/releases/latest) (GitHub)**                  | Download the [latest release](https://github.com/nektos/act/releases/latest) and add the path to your binary into your PATH. |
+| Package / Method                                                                      | Command                                                                                                                      |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **[Homebrew](https://brew.sh/) (Linux/macOS)**                                        | `brew install act`                                                                                                           |
+| **[MacPorts](https://www.macports.org) (macOS)**                                      | `sudo port install act`                                                                                                      |
+| **[Chocolatey](https://chocolatey.org/) (Windows)**                                   | `choco install act-cli`                                                                                                      |
+| **[Scoop](https://scoop.sh/) (Windows)**                                              | `scoop install act`                                                                                                          |
+| **[AUR](https://aur.archlinux.org/packages/act/) (Linux)**                            | `yay -S act`                                                                                                                 |
+| **[Nix](https://nixos.org) (Linux/macOS)**                                            | [Nix recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/misc/act/default.nix)                       |
+| **[Go](https://golang.org) (Linux/Windows/macOS/any other platform supported by Go)** | `go install github.com/nektos/act@latest`                                                                                    |
+| **[Manual Download](https://github.com/nektos/act/releases/latest) (GitHub)**         | Download the [latest release](https://github.com/nektos/act/releases/latest) and add the path to your binary into your PATH. |
 
 #### **Running Workflows**
+
 Once you have downloaded and installed the package with its dependencies, it will automatically read the CI scripts from your [/.github/workflows](https://github.com/creativecommons/vocabulary/tree/main/.github/workflows) folder.
 
 ##### Trigger all workflows
+
 To trigger all the CI workflows, `cd` into the root folder of this project (`vocabulary`) and run the command:
+
 ```bash
 act
 ```
+
 If you have permission errors, you run it as a sudo user:
+
 ```bash
 sudo act
 ```
 
-**NB:** *When you run it for the first time, it will ask you to choose a docker image to be used as default.*
+**NB:** _When you run it for the first time, it will ask you to choose a docker image to be used as default._
 
 ##### Trigger a specific workflow
+
 To run a specific workflow, for example, the `build` workflow, you can specify it by running:
+
 ```bash
 act -j build
 ```
+
 If you want to see all the workflows available, you run the command:
+
 ```bash
 act -l
 ```
+
 Currently, we have four CI workflows namely:
+
 ```
 - build
 - lint
 - test
 - update_release_draft
 ```
+
 We recommended that you run these workflows on your development environment so that if any errors occur, you can identify and resolve them before opening a PR.
 
 You can refer the [Netktos/act Documentation](https://github.com/nektos/act/blob/master/README.md) for more commands and configuration options.
-
 
 ## Versioning
 

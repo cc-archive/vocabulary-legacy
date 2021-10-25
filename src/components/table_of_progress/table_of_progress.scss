@@ -24,7 +24,6 @@
     }
 
     .number {
-      
       text-align: center;
       padding-top: $space-smaller;
       padding-bottom: $space-smaller;
@@ -73,7 +72,7 @@
     }
 
     &:not(:last-of-type)::after {
-      content: '';
+      content: "";
 
       display: block;
 

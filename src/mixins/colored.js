@@ -10,18 +10,19 @@ export default {
      */
     color: {
       type: String,
-      validator: (val) => [
-        'red',
-        'pink',
-        'grape',
-        'violet',
-        'indigo',
-        'cyan',
-        'teal',
-        'green',
-        'lime',
-        'yellow',
-      ].includes(val),
+      validator: (val) =>
+        [
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+        ].includes(val),
     },
     /**
      * _the accentuating shade of the primary color to use_

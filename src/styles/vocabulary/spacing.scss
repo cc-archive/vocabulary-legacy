@@ -19,13 +19,10 @@ $spacing-sizes: (
   "-large": $space-large,
   "-larger": $space-larger,
   "-xl": $space-xl,
-  "-xxl": $space-xxl
+  "-xxl": $space-xxl,
 );
 
-$spacing-properties: (
-  "padding",
-  "margin"
-);
+$spacing-properties: ("padding", "margin");
 
 $spacing-direction-groups: (
   "-top": "-top",
@@ -33,7 +30,7 @@ $spacing-direction-groups: (
   "-bottom": "-bottom",
   "-left": "-left",
   "-horizontal": "-left" "-right",
-  "-vertical": "-top" "-bottom"
+  "-vertical": "-top" "-bottom",
 );
 
 @mixin undirected-spacing($property, $size-namespace, $size) {

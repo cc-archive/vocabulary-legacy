@@ -10,7 +10,7 @@ nav.breadcrumb > ul {
   font-size: $font-size-caption;
   font-weight: 600;
 
-  li+li:before {
+  li + li:before {
     font-family: "Vocabulary Icons";
     content: "\e901";
   }

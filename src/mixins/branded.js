@@ -7,15 +7,16 @@ export default {
      */
     brand: {
       type: String,
-      validator: (val) => [
-        'blue',
-        'forest',
-        'gold',
-        'orange',
-        'tomato',
-        'turquoise',
-        'slate',
-      ].includes(val),
+      validator: (val) =>
+        [
+          "blue",
+          "forest",
+          "gold",
+          "orange",
+          "tomato",
+          "turquoise",
+          "slate",
+        ].includes(val),
     },
   },
   computed: {

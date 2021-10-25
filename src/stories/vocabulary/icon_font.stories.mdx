@@ -1,9 +1,16 @@
-import { Meta, IconItem, IconGallery, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig } from '@/stories/helpers'
+import {
+  Meta,
+  IconItem,
+  IconGallery,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { figmaConfig } from "@/stories/helpers";
 
 <Meta title="Tokens/Icon Font (deprecated)" />
 
-<div dangerouslySetInnerHTML={{__html: `<style>
+<div
+  dangerouslySetInnerHTML={{
+    __html: `<style>
 body.sb-show-main,
 .sbdocs.sbdocs-wrapper {
   padding: 0 !important;
@@ -15,18 +22,24 @@ body.sb-show-main,
   background: url("puff.svg") center center no-repeat;
 }
 </style>
-`
-}}></div>
+`,
+  }}
+></div>
 
 <!-- Source code can be found in the repo creativecommons/fonts -->
+
 <div class="iframe-holder">
   <iframe
-    style={{ width: '100%', height: '99vh' }}
+    style={{ width: "100%", height: "99vh" }}
     src="https://cc-fonts.netlify.app/iframe.html?id=vocabulary-icon-font--page"
-    onLoad="resizeIframe(this)" />
+    onLoad="resizeIframe(this)"
+  />
 </div>
 
-<Story name="Figma" parameters={{
-  design: figmaConfig('0%3A135'),
-  docs: { disable: true }
-}}>{`<div>See the Design tab.</div>`}</Story>
+<Story
+  name="Figma"
+  parameters={{
+    design: figmaConfig("0%3A135"),
+    docs: { disable: true },
+  }}
+>{`<div>See the Design tab.</div>`}</Story>

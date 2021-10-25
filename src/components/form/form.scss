@@ -14,7 +14,7 @@ $input-disabled-border-color: $color-gray;
 // Custom classes not from with bulma
 $input-size-small: $size-small;
 $input-size-normal: $size-normal;
-$input-size-medium:  1.43rem;
+$input-size-medium: 1.43rem;
 $input-size-large: 1.75rem;
 
 @import "~bulma/sass/form/_all.sass";
@@ -75,7 +75,6 @@ $input-size-large: 1.75rem;
   }
 }
 
-
 // Icon support for bulma form controls
 .control {
   box-sizing: border-box;
@@ -87,7 +86,6 @@ $input-size-large: 1.75rem;
   // Modifiers
   &.has-icons-left,
   &.has-icons-right {
-
     .icon {
       align-items: center;
       display: inline-flex;
@@ -101,7 +99,8 @@ $input-size-large: 1.75rem;
 
     .input,
     .select {
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         & ~ .icon {
           color: $input-icon-active-color;
         }
@@ -151,19 +150,20 @@ $input-size-large: 1.75rem;
   }
 }
 
-.checkbox, .radio {
+.checkbox,
+.radio {
   display: flex;
   align-items: baseline;
   color: #{$color-dark-slate-gray};
 }
 
 // This is overriding Bulma style for horizontal radio elements?
-.radio+.radio {
+.radio + .radio {
   margin-left: unset;
 }
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type='checkbox'],
-  input[type='radio'] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
     margin: 0 0.5rem 0 0;
     flex: 0 0 auto;
     width: 1rem;
@@ -179,15 +179,15 @@ $input-size-large: 1.75rem;
     cursor: pointer;
     border: 1px solid var(--border-color, #{$color-light-gray});
     background: var(--background);
-    transition: background .3s, border-color .3s, box-shadow .2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       left: 0;
       top: 0;
       position: absolute;
-      transition: transform  .3s ease, opacity  .2s;
+      transition: transform 0.3s ease, opacity 0.2s;
       opacity: var(--o, 0);
     }
     &:checked {
@@ -207,13 +207,13 @@ $input-size-large: 1.75rem;
       }
     }
     &:focus {
-      box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+      box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
     }
     &:hover:not(:checked):not(:disabled) {
       --border-color: #{$color-gray};
     }
   }
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     border-radius: 0.2rem;
     &:after {
       width: 5px;
@@ -229,7 +229,7 @@ $input-size-large: 1.75rem;
       transform: rotate(35deg);
     }
   }
-  input[type='radio'] {
+  input[type="radio"] {
     border-radius: 0.5rem;
     &:checked::after {
       background: var(--checkmark-color);
@@ -241,7 +241,7 @@ $input-size-large: 1.75rem;
     }
     &:disabled {
       --checkmark-color: #{$color-gray};
-      &+.radio-label {
+      & + .radio-label {
         color: #{$color-gray};
       }
     }

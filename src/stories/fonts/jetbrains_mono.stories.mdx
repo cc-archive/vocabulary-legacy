@@ -1,8 +1,10 @@
-import { Meta, Typeset } from '@storybook/addon-docs/blocks'
+import { Meta, Typeset } from "@storybook/addon-docs/blocks";
 
-<Meta title = "Fonts/JetBrains Mono" parameters = {{
-  decorators: [
-    storyFn => `<style>
+<Meta
+  title="Fonts/JetBrains Mono"
+  parameters={{
+    decorators: [
+      (storyFn) => `<style>
   .jetbrains-mono {
     font-family: 'JetBrains Mono';
   }
@@ -15,9 +17,10 @@ import { Meta, Typeset } from '@storybook/addon-docs/blocks'
 </div>
 <div class="jetbrains-mono bold has-text-black ">
   ${storyFn()}
-</div>`
-  ]
-}}/>
+</div>`,
+    ],
+  }}
+/>
 
 # JetBrains Mono
 
@@ -25,86 +28,92 @@ JetBrains Mono is a monospaced font developed by JetBrains and designed to make 
 
 It is used in Vocabulary in 2 font weight: regular (400) and bold (700).
 
-export const sampleCode = "const isEqual = (a, b) => { a === b }"
+export const sampleCode = "const isEqual = (a, b) => { a === b }";
 
 ## Regular - 400
 
 <Typeset
-  fontSizes={[
-    '2rem',
-    '1rem'
-  ]}
+  fontSizes={["2rem", "1rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText={sampleCode} />
+  sampleText={sampleCode}
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" />
+  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z" />
+  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $" />
+  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={400}
-  sampleText="<= >= => === !== == != ... <> </> ~@ www" />
+  sampleText="<= >= => === !== == != ... <> </> ~@ www"
+/>
 
 ## Bold - 700
 
 <Typeset
-  fontSizes={[
-    '2rem',
-    '1rem'
-  ]}
+  fontSizes={["2rem", "1rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText={sampleCode} />
+  sampleText={sampleCode}
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" />
+  sampleText="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z" />
+  sampleText="a b c d e f g h i j k l m n o p q r s t u v w x y z"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $" />
+  sampleText="0 1 2 3 4 5 6 7 8 9 + - * / % $"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]" />
+  sampleText=". ? ! ' & : ; @ # < > ( ) { } [ ]"
+/>
 
 <Typeset
-  fontSizes={['2rem']}
+  fontSizes={["2rem"]}
   fontFamily="JetBrains Mono"
   fontWeight={700}
-  sampleText="<= >= => === !== == != ... <> </> ~@ www" />
+  sampleText="<= >= => === !== == != ... <> </> ~@ www"
+/>

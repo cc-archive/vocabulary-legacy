@@ -1,12 +1,12 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Form/Input" />
 
 # Input
 
 export const inputType = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <input class="input${sizeClass}" type="text" placeholder="Placeholder text"/>
@@ -16,11 +16,11 @@ export const inputType = (size) => {
   </div>
   <div class="margin-bottom-small">
   <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-  </div>`
-}
+  </div>`;
+};
 
 export const inputTypeLabel = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
@@ -33,11 +33,11 @@ export const inputTypeLabel = (size) => {
   <div class="margin-bottom-small">
     <label class="margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputTypeLabelMed = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="body-big margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
@@ -50,11 +50,11 @@ export const inputTypeLabelMed = (size) => {
   <div class="margin-bottom-small">
     <label class="body-big margin-bottom-small is-inline-block"> <strong> Input Name </strong> </label>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputTypeLabelLarge = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
@@ -67,11 +67,11 @@ export const inputTypeLabelLarge = (size) => {
   <div class="margin-bottom-small">
     <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputTypeNameDesc = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
@@ -87,11 +87,11 @@ export const inputTypeNameDesc = (size) => {
     <label class="margin-bottom-small"> <strong> Input Name </strong> </label>
     <p class="margin-bottom-small"> Description of the input </p>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputTypeNameDescMed = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
@@ -107,11 +107,11 @@ export const inputTypeNameDescMed = (size) => {
     <label class="body-big margin-bottom-small"> <strong> Input Name </strong> </label>
     <p class="body-big margin-bottom-small"> Description of the input </p>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputTypeNameDescLarge = (size) => {
-  let sizeClass = size ? ` is-${size}` : ''
+  let sizeClass = size ? ` is-${size}` : "";
   return `
   <div class="margin-bottom-small">
     <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
@@ -127,8 +127,8 @@ export const inputTypeNameDescLarge = (size) => {
     <label class="body-bigger margin-bottom-small"> <strong> Input Name </strong> </label>
     <p class="body-bigger margin-bottom-small"> Description of the input </p>
     <input class="input${sizeClass}" type="text" value="Fixed text" disabled/>
-    </div>`
-}
+    </div>`;
+};
 
 export const inputsWithIcons = () => `
   <div class="control has-icons-left margin-bottom-normal">
@@ -179,85 +179,124 @@ export const inputsWithIcons = () => `
       <i class="icon cross"></i>
     </span>
   </div>
-`
+`;
 
-
-<Canvas mdxSource={inputType('')}>
-  <Story name="Normal" height="200px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputType('')).bind({})
-  }</Story>
+<Canvas mdxSource={inputType("")}>
+  <Story
+    name="Normal"
+    height="200px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputType("")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputType('medium')}>
-  <Story name="Medium" height="250px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputType('medium')).bind({})
-  }</Story>
+<Canvas mdxSource={inputType("medium")}>
+  <Story
+    name="Medium"
+    height="250px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputType("medium")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputType('large')}>
-  <Story name="Large" height="320px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputType('large')).bind({})
-  }</Story>
+<Canvas mdxSource={inputType("large")}>
+  <Story
+    name="Large"
+    height="320px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputType("large")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeLabel('')}>
-  <Story name="Normal (+ label)" height="200px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeLabel('')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeLabel("")}>
+  <Story
+    name="Normal (+ label)"
+    height="200px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeLabel("")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeLabelMed('medium')}>
-  <Story name="Medium (+ label)" height="250px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeLabelMed('medium')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeLabelMed("medium")}>
+  <Story
+    name="Medium (+ label)"
+    height="250px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeLabelMed("medium")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeLabelLarge('large')}>
-  <Story name="Large (+ label)" height="320px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeLabelLarge('large')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeLabelLarge("large")}>
+  <Story
+    name="Large (+ label)"
+    height="320px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeLabelLarge("large")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeNameDesc('')}>
-  <Story name="Normal (+ name, description)" height="200px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeNameDesc('')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeNameDesc("")}>
+  <Story
+    name="Normal (+ name, description)"
+    height="200px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeNameDesc("")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeNameDescMed('medium')}>
-  <Story name="Medium (+ name, description)" height="250px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeNameDescMed('medium')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeNameDescMed("medium")}>
+  <Story
+    name="Medium (+ name, description)"
+    height="250px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeNameDescMed("medium")).bind({})}
+  </Story>
 </Canvas>
 
-<Canvas mdxSource={inputTypeNameDescLarge('large')}>
-  <Story name="Large (+ name, description)" height="320px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputTypeNameDescLarge('large')).bind({})
-  }</Story>
+<Canvas mdxSource={inputTypeNameDescLarge("large")}>
+  <Story
+    name="Large (+ name, description)"
+    height="320px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputTypeNameDescLarge("large")).bind({})}
+  </Story>
 </Canvas>
 
 <Canvas mdxSource={inputsWithIcons()}>
-  <Story name="With Icons" height="320px" parameters={{
-    design: figmaConfig('1%3A24')
-  }}>{
-    htmlWrapper(inputsWithIcons()).bind({})
-  }</Story>
+  <Story
+    name="With Icons"
+    height="320px"
+    parameters={{
+      design: figmaConfig("1%3A24"),
+    }}
+  >
+    {htmlWrapper(inputsWithIcons()).bind({})}
+  </Story>
 </Canvas>

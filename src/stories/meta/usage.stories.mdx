@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Hello/Usage" />
 
@@ -19,7 +19,7 @@ Just install `@creativecommons/vocabulary` using the package manager of your cho
 $ npm install @creativecommons/vocabulary
 ```
 
-To install a specific [Calver](https://calver.org/) version, use the *@* character followed by the version number:
+To install a specific [Calver](https://calver.org/) version, use the _@_ character followed by the version number:
 
 ```bash
 $ npm install @creativecommons/vocabulary@2020.11.1
@@ -30,14 +30,14 @@ $ npm install @creativecommons/vocabulary@2020.11.1
 In your entrypoint, you can include the master CSS file:
 
 ```js
-import '@creativecommons/vocabulary/css/vocabulary.css'
+import "@creativecommons/vocabulary/css/vocabulary.css";
 ```
 
 Alternatively, you can import the SCSS styleheets into your own stylesheets:
 
 ```scss
-@import '~@creativecommons/vocabulary/scss/header.scss'
-@import '~@creativecommons/vocabulary/scss/footer.scss'
+@import "~@creativecommons/vocabulary/scss/header.scss" @import
+  "~@creativecommons/vocabulary/scss/footer.scss";
 ```
 
 ### JavaScript
@@ -59,8 +59,11 @@ You can reference assets using file loader or SVG inline loader.
   class="logo"
   xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="xMidYMid meet"
-  viewBox="0 0 304 73">
-  <use href="@creativecommons/vocabulary/assets/logos/cc/logomark.svg#creativecommons"></use>
+  viewBox="0 0 304 73"
+>
+  <use
+    href="@creativecommons/vocabulary/assets/logos/cc/logomark.svg#creativecommons"
+  ></use>
 </svg>
 ```
 
@@ -77,18 +80,30 @@ Just link to the master CSS file with any of these one-line `link` tags within y
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css"
+/>
 <!-- or, if you prefer the latest version, use -->
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css"
+/>
 ```
 
 #### jsDelivr
 
 ```html
 <!-- If you have a specific version in mind, use -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.1/css/vocabulary.css"
+/>
 <!-- or, if you prefer the latest version, use -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary/css/vocabulary.css"
+/>
 ```
 
 ### JavaScript
@@ -119,8 +134,8 @@ The JavaScript bundle is imported as `vocabulary` in the global scope. You can t
 
 ```html
 <script src="https://unpkg.com/@creativecommons/vocabulary/js/vocabulary.js">
-<script>
-  vocabulary.createGlobalHeader()
+  <script>
+    vocabulary.createGlobalHeader()
 </script>
 ```
 
@@ -138,11 +153,11 @@ Vocabulary bundles a number of assets, like SVGs for the brand and product logos
    * @return {string} the fully qualified URL of the asset
    */
   const getFullyQualifiedUrl = (version, path) => {
-    let baseUrl = 'https://unpkg.com/@creativecommons/vocabulary'
+    let baseUrl = "https://unpkg.com/@creativecommons/vocabulary";
     // If you prefer jsDelivr instead, use
     // let baseUrl = 'https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary'
-    return `${baseUrl}@${version}/${path}`
-  }
+    return `${baseUrl}@${version}/${path}`;
+  };
 
   /**
    * Create an invisible container and place the asset into the DOM.
@@ -154,24 +169,27 @@ Vocabulary bundles a number of assets, like SVGs for the brand and product logos
    * @param {string} path - the path of the asset being patched
    * @param {string} version - the Vocabulary version in which to locate the asset
    */
-  const patchAssetIntoDom = (path, version = 'latest') => {
-    fetch(getFullyQualifiedUrl(version, path)).then(response => {
-      return response.text()
-    }).then(data => {
-      // Render SVG in the page
-      div.innerHTML = ajax.responseText;
-      div.style.display = 'none';
-      document.body.prepend(div, document.body.childNodes[0]);
-    })
-  }
+  const patchAssetIntoDom = (path, version = "latest") => {
+    fetch(getFullyQualifiedUrl(version, path))
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        // Render SVG in the page
+        div.innerHTML = ajax.responseText;
+        div.style.display = "none";
+        document.body.prepend(div, document.body.childNodes[0]);
+      });
+  };
 
-  patchAssetIntoDom('/assets/logos/cc/logomark.svg');
+  patchAssetIntoDom("/assets/logos/cc/logomark.svg");
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="xMidYMid meet"
-  viewBox="0 0 304 73">
+  viewBox="0 0 304 73"
+>
   <!-- Automatically finds ID amongst all assets loaded using `patchAssetIntoDom()` -->
   <use href="#logomark"></use>
 </svg>

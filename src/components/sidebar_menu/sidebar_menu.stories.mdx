@@ -1,5 +1,5 @@
-import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
-import { figmaConfig, htmlWrapper } from '@/stories/helpers'
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import { figmaConfig, htmlWrapper } from "@/stories/helpers";
 
 <Meta title="Navigation/Sidebar menu" />
 
@@ -42,12 +42,15 @@ export const SidebarMenu = () => `
     </ul>
   </aside>
 </div>
-`
+`;
 
 <Canvas mdxSource={SidebarMenu()}>
-  <Story name="Default" parameters={{
-    design: figmaConfig('6990%3A11')
-  }}>{
-    htmlWrapper(SidebarMenu()).bind({})
-  }</Story>
+  <Story
+    name="Default"
+    parameters={{
+      design: figmaConfig("6990%3A11"),
+    }}
+  >
+    {htmlWrapper(SidebarMenu()).bind({})}
+  </Story>
 </Canvas>

@@ -1,11 +1,12 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { config } from 'storybook-addon-designs';
-import { DONATION_URL } from '@/scripts/constants';
+import { config } from "storybook-addon-designs";
+import { DONATION_URL } from "@/scripts/constants";
 
-export const figmaConfig = (nodeId) => config({
-  type: 'figma',
-  url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`,
-});
+export const figmaConfig = (nodeId) =>
+  config({
+    type: "figma",
+    url: `https://www.figma.com/file/l4Mt3dn3Ndtrvrb4aLcwXI/Design-Library?node-id=${nodeId}`,
+  });
 
 export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `
 <svg
@@ -17,9 +18,11 @@ export const svgCode = (viewBoxX, viewBoxY, fileName, id) => `
   <use href="logos/${fileName}.svg#${id}"></use>
 </svg>`;
 
-export const blackText = (content) => `<div class="has-text-black">${content}</div>`;
+export const blackText = (content) =>
+  `<div class="has-text-black">${content}</div>`;
 
-export const whiteText = (content) => `<div class="has-text-white">${content}</div>`;
+export const whiteText = (content) =>
+  `<div class="has-text-white">${content}</div>`;
 
 export const header = (color) => `<header>
       <nav class="navbar is-default is-active">
