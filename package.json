@@ -3,7 +3,7 @@
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
-    "preinstall": "npm npm-force-resolutions",
+    "preinstall": "npx npm-force-resolutions",
     "serve": "start-storybook -p 6006 --ci -s ./src/assets",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
