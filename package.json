@@ -3,6 +3,7 @@
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
+    "preinstall": "npm npm-force-resolutions",
     "serve": "start-storybook -p 6006 --ci -s ./src/assets",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
@@ -71,5 +72,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/creativecommons/vocabulary.git"
+  },
+  "resolutions": {
+    "ansi-html": "https://registry.yarnpkg.com/ansi-html-community/-/ansi-html-community-0.0.8.tgz#69fbc4d6ccbe383f9736934ae34c3f8290f1bf41"
   }
 }
