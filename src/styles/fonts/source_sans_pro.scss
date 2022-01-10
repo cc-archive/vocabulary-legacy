@@ -1,7 +1,0 @@
-@use "font_face";
-
-@include font_face.font_face("Source Sans Pro", "SourceSansPro-Regular", 400);
-
-@include font_face.font_face("Source Sans Pro", "SourceSansPro-SemiBold", 600);
-
-@include font_face.font_face("Source Sans Pro", "SourceSansPro-Bold", 700);

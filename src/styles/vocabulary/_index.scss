@@ -23,27 +23,7 @@
 
 // Layouts
 @import "layout";
-@import "~@/components/cards/card";
-@import "~@/components/table/table";
 @import "~@/components/tabs/tabs";
-@import "~@/components/notification/notification";
-
-// Navigation
-@import "~@/components/sidebar_menu/sidebar_menu";
-@import "~@/components/table_of_contents/table_of_contents";
-@import "~@/components/table_of_progress/table_of_progress";
-@import "~@/components/breadcrumb/breadcrumb";
-@import "~@/components/pagination/pagination";
-
-// Patterns
-@import "~@/components/global_header/global_header";
-@import "~@/components/header/header";
-@import "~@/components/footer/footer";
-@import "~@/components/github_corner/github_corner";
-@import "~@/components/locale/locale";
-@import "~@/components/image/image";
-@import "~@/components/profile_image/profile_image";
-@import "~@/components/modal/modal";
 
 // Content
 @import "~bulma/sass/elements/content.sass";

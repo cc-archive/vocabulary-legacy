@@ -1,9 +1,0 @@
-@use "font_face";
-
-@include font_face.font_face(
-  "Roboto Condensed",
-  "RobotoCondensed-Regular",
-  400
-);
-
-@include font_face.font_face("Roboto Condensed", "RobotoCondensed-Bold", 700);
