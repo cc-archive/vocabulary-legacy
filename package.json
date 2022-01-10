@@ -3,12 +3,8 @@
   "private": true,
   "author": "Creative Commons (https://creativecommons.org)",
   "scripts": {
-    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build:fonts": "bash ./scripts/build/fonts.sh",
-    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
-    "build:vocabulary": "bash ./scripts/build/vocabulary.sh",
     "build:vue-vocabulary": "bash ./scripts/build/vue_vocabulary.sh",
     "test:vue-vocabulary": "vue-cli-service test:unit"
   },
@@ -19,11 +15,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/vue": "^6.3.12",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "^4.5.15",
     "@vue/cli-plugin-unit-jest": "~4.5.15",
@@ -39,10 +30,9 @@
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^27.4.7",
+    "node-sass": "^5.0.0",
     "prettier": "^2.4.1",
-    "sass": "^1.46.0",
-    "sass-loader": "^8.0.2",
-    "storybook-addon-designs": "^6.0.1",
+    "sass-loader": "^10.0.5",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.11"
