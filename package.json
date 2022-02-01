@@ -42,7 +42,7 @@
     "prettier": "^2.4.1",
     "sass": "^1.46.0",
     "sass-loader": "^8.0.2",
-    "storybook-addon-designs": "^6.0.1",
+    "storybook-addon-designs": "^6.2.1",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.11"
