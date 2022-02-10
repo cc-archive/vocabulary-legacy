@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Welcome to Creativecommons Community! Thanks so much for creating your first issue"
+        pr-message: "You have successfully raised your first PR to the CC Vocabulary repository. The Creative Commons Open Source community is grateful for your contribution! 💯"
