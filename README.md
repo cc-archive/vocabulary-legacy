@@ -8,7 +8,7 @@
 </p>
 
 # Creative Commons Vocabulary
-#### Note: This project has been suspended. 
+**Note:** This project has been suspended. 
 
 (Scroll down to **`Supenstion and Redestribution`** section for more details and links)
 
