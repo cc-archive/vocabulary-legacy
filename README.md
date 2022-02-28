@@ -8,6 +8,9 @@
 </p>
 
 # Creative Commons Vocabulary
+#### Note: This project has been suspended. 
+
+(Scroll down to **`Supenstion and Redestribution`** section for more details and links)
 
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
@@ -43,6 +46,15 @@
 </p>
 
 Vocabulary is the code implementation of Creative Commons' Design Language. Vocabulary makes it easier to develop Creative Commons apps while ensuring a consistently familiar experience.
+
+## Supenstion and Redestribution
+
+This `vocabulary` package has been suspended to be re-distributed and divided into `vocabulary-components`, `vocabulary-fonts`, `vocabulary-styles`.
+
+They are now accessible at-
+* [vocabulary-components](https://github.com/creativecommons/vocabulary-components)
+* [vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)
+* [vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)
 
 ## Included Packages
 
