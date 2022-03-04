@@ -124,34 +124,6 @@ $navbar-dropdown-radius: 0;
         margin-left: $space-normal;
       }
     }
-
-    @include mobile() {
-      .navbar-end {
-        display: flex;
-        align-items: stretch;
-        justify-content: flex-end;
-        margin-left: auto;
-      }
-
-      .navbar-item {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    @include tablet() {
-      .navbar-end {
-        display: flex;
-        align-items: stretch;
-        justify-content: flex-end;
-        margin-left: auto;
-      }
-
-      .navbar-item {
-        display: flex;
-        align-items: center;
-      }
-    }
   }
 
 	&.is-default {
