@@ -153,7 +153,7 @@ $navbar-dropdown-radius: 0;
 	&.is-default {
 		.navbar-menu {
 			--button-outline-color: white;
-			background-color: $black;
+			background-color: $white;
 			padding: $space-smaller 0 0;
 			.navbar-start {
 				padding: 0 0.9rem $space-small;
@@ -265,107 +265,6 @@ $navbar-dropdown-radius: 0;
 				}
 			}
 		}
-
-		@include tablet() {
-			flex-direction: column;
-			padding: $space-normal 1.7rem 0;
-			background-color: $white;
-			&.is-active {
-				background-color: $white;
-			}
-			.navbar-brand {
-				background-color: $white;
-				.logo {
-					width: 12rem;
-					color: $black;
-				}
-			}
-			.navbar-item,
-			.navbar-link {
-				color: $color-dark-gray;
-				&:hover {
-					color: $color-dark-slate-gray;
-				}
-			}
-			.navbar-link {
-				justify-content: start;
-			}
-			.navbar-menu {
-				max-height: 5rem;
-				background-color: $white;
-				margin-left: $space-small;
-				flex-direction: column;
-				.navbar-start {
-					justify-content: flex-end;
-					margin: 0;
-					position: relative;
-					top: -$space-larger;
-					column-gap: $space-normal;
-					padding: $space-small 1.25rem 0;
-
-					.donate {
-						display: block;
-					}
-				}
-				.tabs-nav {
-					display: none;
-				}
-				.main-nav {
-					display: block;
-				}
-				.navbar-end {
-					&.main-nav {
-						display: flex;
-					}
-					margin: 0;
-					justify-content: flex-start;
-					position: relative;
-					top: -$space-bigger;
-					.navbar-dropdown .navbar-item {
-						text-transform: uppercase;
-						font-weight: bold;
-						font-size: 1.063rem;
-					}
-					.navbar-item {
-						margin-left: 0;
-						font-size: 1.063rem;
-					}
-				}
-			}
-		}
-
-		@include desktop() {
-			display: grid;
-			grid-template-columns: auto 1fr;
-			padding: 0 7.25rem $space-big 5.25rem;
-			.navbar-brand {
-				padding-top: $space-large;
-			}
-			.navbar-menu {
-				.navbar-start {
-					align-items: center;
-					position: relative;
-					top: -0.25rem;
-					column-gap: $space-normal;
-					padding: $space-smaller $space-normal 0;
-					.locale {
-						margin-right: 0;
-					}
-				}
-				.navbar-end {
-					position: static;
-					top: 0;
-					padding-top: $space-normal;
-					justify-content: flex-end;
-				}
-			}
-		}
-
-		@include fullhd() {
-			display: grid;
-			grid-template-columns: 1fr 2fr;
-			padding: 0 5.75rem $space-big 3.75rem;
-		}
 	}
 
 	&.is-compact {
@@ -390,36 +289,7 @@ $navbar-dropdown-radius: 0;
 				margin-left: $space-normal;
 			}
 		}
-
-		@include mobile() {
-			.navbar-end {
-				display: flex;
-				align-items: stretch;
-				justify-content: flex-end;
-				margin-left: auto;
-			}
-
-			.navbar-item {
-				display: flex;
-				align-items: center;
-			}
-		}
-
-		@include tablet() {
-			.navbar-end {
-				display: flex;
-				align-items: stretch;
-				justify-content: flex-end;
-				margin-left: auto;
-			}
-
-			.navbar-item {
-				display: flex;
-				align-items: center;
-			}
-		}
 	}
-
 }
 
 .navbar.hide {
