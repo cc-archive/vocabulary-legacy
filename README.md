@@ -37,7 +37,6 @@ The following repos may be indirectly affected by this work:
 
 -----
 
-**Note:** This project has been suspended. 
 
 (Scroll down to **[Suspension and Redistribution](#suspension-and-redistribution)`** section for more details and links)
 
