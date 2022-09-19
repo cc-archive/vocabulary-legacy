@@ -8,6 +8,35 @@
 </p>
 
 # Creative Commons Vocabulary
+
+🚧 __Notice 09.19.22__: This repository is currently __unstable__, the Vocabulary project as a whole is undergoing major changes related to [Vocabulary Roadmap 2022.Q4-2023.Q1 (work in progress) #1081](https://github.com/creativecommons/vocabulary/issues/1081#objectives).  
+
+If you are using this repository in a project, it is __strongly recommended__ that you lock your version to the latest stable release for the time being, as new releases at the moment are not guaranteed to be non-breaking, and will likely require manual intervention to correct and/or upgrade.
+
+
+The following repos are directly affected by this work:
+
+* [creativecommons/vocabulary](https://github.com/creativecommons/vocabulary)
+* [creative-commons/vocabulary-components](https://github.com/creativecommons/vocabulary-components)
+* [creativecommons/vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)
+* [creativecommons/vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)
+* [creativecommons/cc-assets](https://github.com/creativecommons/cc-assets)
+
+
+The following repos may be indirectly affected by this work:
+
+* [creativecommons/creativecommons-certificate](https://github.com/creativecommons/creativecommons-certificate)	
+* [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam)		
+* [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source)	
+* [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit)			
+* [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components)			
+* [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data)		
+* [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app)			
+* [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base)	
+* [creativecommons/chooser](https://github.com/creativecommons/chooser)
+
+-----
+
 **Note:** This project has been suspended. 
 
 (Scroll down to **[Suspension and Redistribution](#suspension-and-redistribution)`** section for more details and links)
