@@ -1,0 +1,54 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import { figmaConfig } from './helpers'
+
+<Meta title="Navigation/Sidebar menu" />
+
+# Sidebar menu
+
+The sidebar menu is a navigation component to indicate what page the user is
+viewing and what sibling pages exist. To show consistent information, it is
+crucial to follow the information architecture and sitemap definitions to show
+all sibling and child pages.
+
+The component has two states, active and inactive. The hover state of inactive
+elements should have the same style of active state.
+
+<Preview>
+  <Story name="Default" parameters={{
+    design: figmaConfig('6990%3A11')
+  }}>{`
+    <style>
+      .sidebar-container {
+        max-width: 276px;
+      }
+    </style>
+    <div class="sidebar-container">
+      <aside class="menu sidebar-menu">
+        <ul class="menu-list">
+          <li>
+            <a class="is-active link">Active page</a>
+            <ul>
+              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+            </ul>
+          </li>
+          <hr class="divider">
+          <li>
+            <a class="link">Sibling page</a>
+          </li>
+          <hr class="divider">
+          <li>
+            <a class="link">Sibling page</a>
+            <ul>
+              <li><a class="link"><i class="icon circle-filled"></i>Child page</a></li>
+            </ul>
+          </li>
+          <hr class="divider">
+          <li>
+            <a class="link">Sibling page</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  `}</Story>
+</Preview>
