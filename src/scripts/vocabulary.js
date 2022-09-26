@@ -1,1 +1,1 @@
-export { createGlobalHeader } from "./global_header";
+export { createGlobalHeader } from './global_header'
