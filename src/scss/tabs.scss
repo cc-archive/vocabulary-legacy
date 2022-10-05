@@ -10,7 +10,7 @@ $tabs-boxed-link-hover-border-bottom-color: $color-white;
 $tabs-boxed-link-active-background-color: $color-white;
 $tabs-boxed-link-active-border-color: $color-light-gray;
 
-@import ".vendor/bulma/sass/components/tabs.sass";
+@import "./vendor/bulma/sass/components/tabs.sass";
 
 .tabs {
   font-family: $family-source-sans-pro;
