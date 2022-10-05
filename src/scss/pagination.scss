@@ -8,7 +8,7 @@ $pagination-color: $color-dark-gray;
 $pagination-border-color: $color-lighter-gray;
 $pagination-ellipsis-color: $color-dark-gray;
 
-@import "~bulma/sass/components/pagination.sass";
+@import ".vendor/bulma/sass/components/pagination.sass";
 
 .pagination {
   .pagination-list {

@@ -7,7 +7,7 @@ $menu-nested-list-margin: 0;
 $menu-nested-list-padding-left: 0;
 $menu-list-link-padding: 0.5rem 0;
 
-@import "~bulma/sass/components/menu.sass";
+@import ".vendor/bulma/sass/components/menu.sass";
 
 .sidebar-menu {
   font-size: $font-size-body-normal;

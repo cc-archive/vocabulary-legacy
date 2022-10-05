@@ -4,7 +4,7 @@ $table-head-background-color: $color-light-gray;
 $table-striped-row-even-background-color: $color-lighter-gray;
 $table-cell-border: 1px solid $color-light-gray;
 
-@import "~bulma/sass/elements/table.sass";
+@import ".vendor/bulma/sass/elements/table.sass";
 
 .number-cell {
   text-align: right !important;

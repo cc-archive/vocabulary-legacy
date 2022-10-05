@@ -7,7 +7,7 @@ $navbar-item-hover-background-color: transparent;
 $navbar-dropdown-border-top: none;
 $navbar-dropdown-radius: 0;
 
-@import "bulma/sass/components/navbar.sass";
+@import ".vendor/bulma/sass/components/navbar.sass";
 
 .navbar-brand .navbar-burger {
 	margin-left: auto;
