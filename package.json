@@ -1,52 +1,14 @@
 {
-  "name": "vocabulary",
-  "private": true,
+  "name": "@creativecommons/vocabulary-core",
+  "version": "2.0.0-alpha",
+  "description": "A cohesive design system to unite Creative Common's web facing products",
   "author": "Creative Commons (https://creativecommons.org)",
-  "scripts": {
-    "serve": "start-storybook -p 6006 --ci -s ./src/assets",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "build:fonts": "bash ./scripts/build/fonts.sh",
-    "build:storybook": "build-storybook -o ./docs -s ./src/assets",
-    "build:vocabulary": "bash ./scripts/build/vocabulary.sh",
-    "build:vue-vocabulary": "bash ./scripts/build/vue_vocabulary.sh",
-    "test:vue-vocabulary": "vue-cli-service test:unit"
-  },
-  "dependencies": {
-    "focus-trap": "^6.7.1",
-    "focus-trap-vue": "^1.1.1",
-    "glob": "^7.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/vue": "^6.3.12",
-    "@vue/cli-plugin-babel": "~4.5.15",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-plugin-unit-jest": "~4.5.15",
-    "@vue/cli-service": "^4.5.15",
-    "@vue/eslint-config-airbnb": "^5.3.0",
-    "@vue/test-utils": "^1.3.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.3",
-    "bulma": "^0.9.3",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^25.3.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "jest": "^27.4.7",
-    "prettier": "^2.4.1",
-    "sass": "^1.46.0",
-    "sass-loader": "^8.0.2",
-    "storybook-addon-designs": "^6.0.1",
-    "vue": "^2.6.11",
-    "vue-loader": "^15.9.8",
-    "vue-template-compiler": "^2.6.11"
-  },
+  "files": [
+    "dist/css/"
+  ],
+  "main": "dist/css/vocabulary.css",
+  "style": "dist/css/vocabulary.css",
+  "unpkg": "dist/css/vocabulary.css",
   "bugs": "https://github.com/creativecommons/vocabulary/issues/",
   "funding": [
     {
@@ -62,8 +24,8 @@
   "keywords": [
     "ui",
     "ux",
-    "scss",
-    "vue"
+    "design",
+    "design system"
   ],
   "license": "MIT",
   "repository": {
