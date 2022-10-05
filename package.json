@@ -1,7 +1,7 @@
 {
   "name": "@creativecommons/vocabulary-core",
   "version": "2.0.0-alpha",
-  "description": "A cohesive design system to unite the web facing Creative Commons",
+  "description": "A cohesive design system to unite Creative Common's web facing products",
   "author": "Creative Commons (https://creativecommons.org)",
   "files": [
     "dist/css/"
