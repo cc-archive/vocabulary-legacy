@@ -20,7 +20,7 @@ $button-text-color: $color-tomato;
 $button-text-hover-background-color: transparent;
 $button-text-hover-color: $color-tomato;
 
-@import "~bulma/sass/elements/button.sass";
+@import "./vendor/bulma/sass/elements/button.sass";
 
 .button {
   text-transform: uppercase;
