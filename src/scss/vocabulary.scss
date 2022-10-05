@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Reset
-@import "bulma/sass/base/minireset.sass";
+@import "./vendor/bulma/sass/base/minireset.sass";
 
 // Tokens
 @import "./color.scss";
@@ -14,9 +14,9 @@
 @import "./typography_overrides.scss";
 
 // Bulma
-@import "bulma/sass/utilities/_all.sass";
-@import "bulma/sass/helpers/_all.sass";
-@import "bulma/sass/base/generic.sass";
+@import "./vendor/bulma/sass/utilities/_all.sass";
+@import "./vendor/bulma/sass/helpers/_all.sass";
+@import "./vendor/bulma/sass/base/generic.sass";
 
 // Elements
 @import "./button.scss";
@@ -49,4 +49,4 @@
 @import "./modal.scss";
 
 // Content
-@import "bulma/sass/elements/content.sass";
+@import "./vendor/bulma/sass/elements/content.sass";
