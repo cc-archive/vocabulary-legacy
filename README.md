@@ -54,31 +54,49 @@ The following repos may be indirectly affected by this work:
   - `@creativecommons/vocabulary-fonts, ^0.1.1`
   - `@creativecommons/vocabulary-styles, ^0.2.1`
 
+Known Versions of Vocabulary "family" repositories in use on active CC Projects:
 
 
-Known Versions of Vocabulary "family" repositories in use on active CC Projects
 
-* creativecommons/fonts
-  - `1.0.0-beta.2`
-  - `2020.9.3`
-  - ^2020.x.x == (`2020.11.3`)
-* creativecommons/vocabulary
-  - ^1.x.x-beta.16 == (`1.0.0-beta.16`)
-  - `2020.04.1`
-  - `2020.06.1`
-  - `2020.7.2`
-  - ^2020.x.x == (2020.11.3)
-  - `2020.11.3`
-* creativecommons/vocabulary-fonts
-  - 0.x.x == (0.1.1) 
-  - `0.1.1`
-* creativecommons/vocabulary-styles
-  - 0.x.x  == (0.3.0)
-  - `0.3.0`
-* creativecommons/vocabulary-components
-  - ^0.x.x == (`0.3.0`)
-* creativecommons/cc-assets
-  - ^0.x.x == (`0.1.0`)
+  | [cc-archive/fonts](https://github.com/cc-archive/fonts) | downstream |
+  | -- | -- |
+  |`1.0.0-beta.2` | [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam) |
+  | `2020.9.3` | [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source), [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components) |
+  
+-----
+  
+  | [creativecommons/vocabulary](https://github.com/creativecommons/vocabulary) | downstream |
+  | -- | -- | 
+  | `1.0.0-beta.16` | [creativecommons/creativecommons-certificate](https://github.com/creativecommons/creativecommons-certificate) |
+  | `2020.04.1` | [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam) |
+  | `2020.06.1` | [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit) |
+  | `2020.7.2` | [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source) |
+  | `2020.11.3` | [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components), [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit) |
+
+-----
+
+  | [creativecommons/vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts) | downstream |
+  | -- | -- | 
+  | `0.1.1` | [creativecommons/chooser](https://github.com/creativecommons/chooser), [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app), [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data), [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base) |
+  
+ -----
+ 
+  | [creativecommons/vocabulary-styles](https://github.com/creativecommons/vocabulary-styles) | downstream |
+  | -- | -- |
+  | `0.3.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser), [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app), [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data), [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base)	|
+  
+  -----
+
+  | [creative-commons/vocabulary-components](https://github.com/creativecommons/vocabulary-components) | downstream |
+  | -- | -- |
+  | `0.3.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser) |
+  
+  -----
+  
+  | [creativecommons/cc-assets](https://github.com/creativecommons/cc-assets) | downstream |
+  | -- | -- |
+  | `0.1.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser) |
+  
   
 -----
 
