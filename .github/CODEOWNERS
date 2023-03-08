@@ -1,4 +1,5 @@
 # https://help.github.com/en/articles/about-code-owners
-# PRs to CC Vocabulary will need review from the Vocabulary team or the CC staff technology team
-* @creativecommons/technology
-* @creativecommons/ct-vocabulary-maintainers @creativecommons/ct-vocabulary-core-committers
+# If you want to match two or more code owners with the same pattern, all the
+# code owners must be on the same line. If the code owners are not on the same
+# line, the pattern matches only the last mentioned code owner.
+* @creativecommons/technology @creativecommons/ct-vocabulary-maintainers @creativecommons/ct-vocabulary-core-committers
