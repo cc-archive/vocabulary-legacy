@@ -1,1 +1,1 @@
-require('../styles/accidenz_commons.scss')
+require('../styles/cc_accidenz_commons.scss')

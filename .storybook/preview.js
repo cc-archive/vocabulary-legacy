@@ -23,7 +23,7 @@ export const parameters = {
         ],
         "Fonts",
         [
-          "Accidenz Commons",
+          "CC Accidenz Commons",
           "Roboto Condensed",
           "Source Sans Pro",
           "JetBrains Mono",
