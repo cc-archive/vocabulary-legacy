@@ -7,11 +7,8 @@
   </a>
 </p>
 
+
 # Creative Commons Vocabulary
-
-
-
-
 
 > Vocabulary is a cohesive design system to unite the web facing Creative Commons.
 
@@ -104,22 +101,28 @@ Projects:
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.1.0` | • [creativecommons/chooser][gh-chooser] |
+| `0.1.0` | • [creativecommons/chooser][gh-chooser] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
 
 
 ### [creativecommons/vocabulary][cc-vocab] (this repository)
 
 | Version | Downstream repository |
 | -- | -- |
+| `1.0.0-beta.2` | • [creativecommons/mp][gh-mp] |
 | `1.0.0-beta.16` | • [creativecommons/creativecommons-certificate][gh-cc-cert] |
 | `2020.04.1` | • [creativecommons/wp-theme-openglam][gh-wp-theme-openglam] |
 | `2020.06.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 | `2020.7.2` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
+| `2020.8.6` | • [creativecommons/og-image-generator][gh-og-image-gen] |
 | `2020.8.7` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 | `2020.9.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
 | `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] |
-| `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
+| `2020.11.1` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
+| `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
+- [creativecommons/creativecommons.github.io-source][gh-ccos-website]
+  - `webpack/js/main.js`: [lines 10-11](https://github.com/creativecommons/creativecommons.github.io-source/blob/main/webpack/js/main.js#L10-L11)
+  (resolves to `@creativecommons/vocabulary@2020.11.3`)
 - [creativecommons/legaldb][gh-legaldb]
   - `@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);`
   - `"@creativecommons/vocabulary": "2020.9.4",`
@@ -145,14 +148,14 @@ Projects:
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.3.0` | • [creativecommons/chooser][gh-chooser] |
+| `0.2.0` | • [creativecommons/chooser][gh-chooser] |
 
 
 ###  [creativecommons/vocabulary-fonts][gh-vocab-fonts]
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.1.1` | • [creativecommons/chooser][gh-chooser] <br>• [creativecommons/creativecommons-base][gh-cc-base] |
+| `0.1.1` | • [creativecommons/chooser][gh-chooser] <br>• [creativecommons/creativecommons-base][gh-cc-base] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
 
 - [creativecommons/creativecommons-base][gh-cc-base]]
   - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.x.x/dist/css/fonts.css`
@@ -163,7 +166,8 @@ Projects:
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.3.0` | • [creativecommons/chooser][gh-chooser] <br>• [creativecommons/creativecommons-base][gh-cc-base] |
+| `0.2.1` | • [creativecommons/chooser][gh-chooser] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
+| `0.3.0` | • [creativecommons/creativecommons-base][gh-cc-base] |
 
 - [creativecommons/creativecommons-base][gh-cc-base]]
   - `https://unpkg.com/@creativecommons/vocabulary-styles@0.x.x/dist/css/vocabulary-styles.css`
@@ -177,6 +181,7 @@ Projects:
 [gh-ccos-website]: https://github.com/creativecommons/creativecommons.github.io-source
 [gh-chooser]: https://github.com/creativecommons/chooser
 [gh-global-components]: https://github.com/creativecommons/cc-global-components
+[gh-mp]: https://github.com/creativecommons/mp
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
 [gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
