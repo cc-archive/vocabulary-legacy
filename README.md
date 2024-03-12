@@ -9,10 +9,9 @@
 
 # Creative Commons Vocabulary
 
-🚧 __Notice 09.19.22__: This repository is currently __unstable__, the Vocabulary project as a whole is undergoing major changes related to [Vocabulary Roadmap 2022.Q4-2023.Q1 (work in progress) #1081](https://github.com/creativecommons/vocabulary/issues/1081#objectives).  
+🚧 __Notice 09.19.22__: This repository is currently __unstable__, the Vocabulary project as a whole is undergoing major changes related to [Vocabulary Roadmap 2022.Q4-2023.Q1 (work in progress) #1081](https://github.com/creativecommons/vocabulary/issues/1081#objectives).
 
 If you are using this repository in a project, it is __strongly recommended__ that you lock your version to the latest stable release for the time being, as new releases at the moment are not guaranteed to be non-breaking, and will likely require manual intervention to correct and/or upgrade.
-
 
 The following repos are directly affected by this work:
 
@@ -24,49 +23,47 @@ The following repos are directly affected by this work:
 
 The following repos may be indirectly affected by this work:
 
-* [creativecommons/creativecommons-certificate](https://github.com/creativecommons/creativecommons-certificate)
-  - `@creativecommons/vocabulary, ^1.0.0-beta.16`
-* [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam)		
-  - `https://unpkg.com/@creativecommons/fonts/css/fonts.css?ver=5.5` (calculates to v1.0.0-beta.2)
-  - `https://openglam.org/wp-content/themes/wp-theme-openglam-master/assets/js/script.js?ver=2020.04.1 (id='vocabulary-js')`
-* [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source)	
-  - `https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css`
-  - `https://unpkg.com/@creativecommons/vocabulary@2020.7.2/js/vocabulary.js`
-* [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit)	
-  - `@creativecommons/vocabulary, ^2020.8.7` in `/front/package.json`
-  - `https://unpkg.com/@creativecommons/fonts@1.0.0-beta.2/css/fonts.css?ver=5.5.9` (calculates to v1.0.0-beta.2)
-  - `https://summit.creativecommons.org/wp-content/themes/wp-theme-summit/assets/js/vocabulary.js?ver=2020.06.1`
-* [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components)	
+* [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components)
   - `https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css`
   - `https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css`
-* [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data)		
+* [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data)
   - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.1.1/dist/css/fonts.css`
   - `https://unpkg.com/@creativecommons/vocabulary-styles@0.3.0/dist/css/vocabulary-styles.css`
-* [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app)		
+* [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app)
   - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.1.1/dist/css/fonts.css`
   - `https://unpkg.com/@creativecommons/vocabulary-styles@0.3.0/dist/css/vocabulary-styles.css`
-* [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base)
-  - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.x.x/dist/css/fonts.css`
-  - `https://unpkg.com/@creativecommons/vocabulary-styles@0.x.x/dist/css/vocabulary-styles.css`
 * [creativecommons/chooser](https://github.com/creativecommons/chooser)
   - `@creativecommons/cc-assets, ^0.1.0`
   - `@creativecommons/vocabulary-components, ^0.2.0`
   - `@creativecommons/vocabulary-fonts, ^0.1.1`
   - `@creativecommons/vocabulary-styles, ^0.2.1`
+* [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base)
+  - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.x.x/dist/css/fonts.css`
+  - `https://unpkg.com/@creativecommons/vocabulary-styles@0.x.x/dist/css/vocabulary-styles.css`
+* [creativecommons/creativecommons-certificate](https://github.com/creativecommons/creativecommons-certificate)
+  - `@creativecommons/vocabulary, ^1.0.0-beta.16`
+* [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source)
+  - `https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css`
+  - `https://unpkg.com/@creativecommons/vocabulary@2020.7.2/js/vocabulary.js`
+* [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam)
+  - `https://unpkg.com/@creativecommons/fonts/css/fonts.css?ver=5.5` (calculates to v1.0.0-beta.2)
+  - `https://openglam.org/wp-content/themes/wp-theme-openglam-master/assets/js/script.js?ver=2020.04.1 (id='vocabulary-js')`
+* [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit)
+  - `@creativecommons/vocabulary, ^2020.8.7` in `/front/package.json`
+  - `https://unpkg.com/@creativecommons/fonts@1.0.0-beta.2/css/fonts.css?ver=5.5.9` (calculates to v1.0.0-beta.2)
+  - `https://summit.creativecommons.org/wp-content/themes/wp-theme-summit/assets/js/vocabulary.js?ver=2020.06.1`
 
 Known Versions of Vocabulary "family" repositories in use on active CC Projects:
-
-
 
   | [cc-archive/fonts](https://github.com/cc-archive/fonts) | downstream |
   | -- | -- |
   |`1.0.0-beta.2` | [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam) |
   | `2020.9.3` | [creativecommons/creativecommons.github.io-source](https://github.com/creativecommons/creativecommons.github.io-source), [creativecommons/cc-global-components](https://github.com/creativecommons/cc-global-components) |
-  
+
 -----
-  
+
   | [creativecommons/vocabulary](https://github.com/creativecommons/vocabulary) | downstream |
-  | -- | -- | 
+  | -- | -- |
   | `1.0.0-beta.16` | [creativecommons/creativecommons-certificate](https://github.com/creativecommons/creativecommons-certificate) |
   | `2020.04.1` | [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam) |
   | `2020.06.1` | [creativecommons/wp-theme-summit](https://github.com/creativecommons/wp-theme-summit) |
@@ -76,28 +73,28 @@ Known Versions of Vocabulary "family" repositories in use on active CC Projects:
 -----
 
   | [creativecommons/vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts) | downstream |
-  | -- | -- | 
+  | -- | -- |
   | `0.1.1` | [creativecommons/chooser](https://github.com/creativecommons/chooser), [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app), [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data), [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base) |
-  
+
  -----
- 
+
   | [creativecommons/vocabulary-styles](https://github.com/creativecommons/vocabulary-styles) | downstream |
   | -- | -- |
   | `0.3.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser), [creativecommons/cc-legal-tools-app](https://github.com/creativecommons/cc-legal-tools-app), [creativecommons/cc-legal-tools-data](https://github.com/creativecommons/cc-legal-tools-data), [creativecommons/creativecommons-base](https://github.com/creativecommons/creativecommons-base)	|
-  
+
   -----
 
   | [creative-commons/vocabulary-components](https://github.com/creativecommons/vocabulary-components) | downstream |
   | -- | -- |
   | `0.3.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser) |
-  
+
   -----
-  
+
   | [creativecommons/cc-assets](https://github.com/creativecommons/cc-assets) | downstream |
   | -- | -- |
   | `0.1.0` | [creativecommons/chooser](https://github.com/creativecommons/chooser) |
-  
-  
+
+
 -----
 
 
