@@ -50,10 +50,6 @@ Vocabulary is the code implementation of Creative Commons' Design Language.
 Vocabulary makes it easier to develop Creative Commons apps while ensuring a
 consistently familiar experience.
 
-(Scroll down to **[Suspension and
-Redistribution](#suspension-and-redistribution)** section for more details and
-links)
-
 
 -----
 
@@ -90,14 +86,18 @@ Projects:
 | Version | Downstream repository |
 | -- | -- |
 |`1.0.0-beta.2` | • [creativecommons/wp-theme-openglam][gh-wp-theme-openglam] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
-| `2020.9.3` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/cc-global-components][gh-global-components] |
+|`1.0.0-beta.3` | • [creativecommons/vocabulary-fonts][gh-vocab-fonts] |
+|`2020.8.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
+- [creativecommons/vocabulary-fonts][gh-vocab-fonts]
+  - `href="https://unpkg.com/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css"`
 - [creativecommons/wp-theme-openglam][gh-wp-theme-openglam]
   - `https://unpkg.com/@creativecommons/fonts/css/fonts.css?ver=5.5`
     (resolves to `v1.0.0-beta.2`)
 - [creativecommons/wp-theme-summit][gh-wp-theme-summit]
   - `https://unpkg.com/@creativecommons/fonts@1.0.0-beta.2/css/fonts.css?ver=5.5.9`
     (resolves to `v1.0.0-beta.2`)
+  - `@import url(https://unpkg.com/@creativecommons/fonts@2020.8.1/css/fonts.css);`
 
 
 #### [creativecommons/cc-assets][gh-cc-assets]
@@ -116,9 +116,13 @@ Projects:
 | `2020.06.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 | `2020.7.2` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
 | `2020.8.7` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
-| `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
+| `2020.9.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
+| `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] |
+| `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
 - [creativecommons/legaldb][gh-legaldb]
+  - `@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);`
+  - `"@creativecommons/vocabulary": "2020.9.4",`
   - `legal_db/templates/legal_db/base.html`: [lines
     22-27](https://github.com/creativecommons/legaldb/blob/3fe9ed3d1595c286972d748e65ac2d08fc3a28f3/legal_db/templates/legal_db/base.html#L22-L27)
     (resolves to `vocabulary@2020.11.3`)
@@ -128,6 +132,13 @@ Projects:
 - [creativecommons/wp-theme-summit][gh-wp-theme-summit]
   - `https://summit.creativecommons.org/wp-content/themes/wp-theme-summit/assets/js/vocabulary.js?ver=2020.06.1`
   - `@creativecommons/vocabulary, ^2020.8.7` in `/front/package.json`
+- [creativecommons/vocabulary-fonts][gh-vocab-fonts]
+  - `https://unpkg.com/@creativecommons/fonts/css/fonts.css`
+    (resolves to `@creativecommons/fonts@2020.11.3`)
+- [creativecommons/vocabulary-styles][gh-vocab-styles]
+  - `@import url("https://unpkg.com/@creativecommons/fonts@2020.9.4/css/fonts.css");`
+  - `https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css`
+    (resolves to `@creativecommons/vocabulary@2020.11.3`)
 
 
 ### [creative-commons/vocabulary-components][gh-vocab-components]
@@ -159,6 +170,7 @@ Projects:
     (resolves to `@creativecommons/vocabulary-styles@0.3.0`)
 
 <!-- ordered lexicogrpahically -->
+[cc-vocab]: https://github.com/creativecommons/vocabulary
 [gh-cc-assets]: https://github.com/creativecommons/cc-assets
 [gh-cc-base]: https://github.com/creativecommons/creativecommons-base
 [gh-cc-cert]: https://github.com/creativecommons/creativecommons-certificate
@@ -167,24 +179,27 @@ Projects:
 [gh-global-components]: https://github.com/creativecommons/cc-global-components
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
-[cc-vocab]: https://github.com/creativecommons/vocabulary
 [gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
 [gh-vocab-fonts]: https://github.com/creativecommons/vocabulary-fonts
 [gh-vocab-styles]: https://github.com/creativecommons/vocabulary-styles
+[gh-wp-theme-cc]: https://github.com/creativecommons/wp-theme-creativecommons.org
 [gh-wp-theme-openglam]: https://github.com/creativecommons/wp-theme-openglam
 [gh-wp-theme-summit]: https://github.com/creativecommons/wp-theme-summit
 
 -----
 
 
-## Suspension and Redistribution
+## ~~Suspension and Redistribution~~
 
-This `vocabulary` package has been suspended to be redistributed and divided into `vocabulary-components`, `vocabulary-fonts`, `vocabulary-styles`.
+~~This `vocabulary` package has been suspended to be redistributed and divided into `vocabulary-components`, `vocabulary-fonts`, `vocabulary-styles`.~~
 
-They are now accessible at-
-* [vocabulary-components](https://github.com/creativecommons/vocabulary-components)
-* [vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)
-* [vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)
+~~They are now accessible at:~~
+* ~~[vocabulary-components](https://github.com/creativecommons/vocabulary-components)~~
+* ~~[vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)~~
+* ~~[vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)~~
+
+(This work was never completed and shouldn't be used.)
+
 
 ## Included Packages
 
