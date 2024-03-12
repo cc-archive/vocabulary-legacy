@@ -86,6 +86,9 @@ Projects:
 |`1.0.0-beta.3` | • [creativecommons/vocabulary-fonts][gh-vocab-fonts] |
 |`2020.8.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
+<details>
+<summary>Notes</summary>
+
 - [creativecommons/vocabulary-fonts][gh-vocab-fonts]
   - `href="https://unpkg.com/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css"`
 - [creativecommons/wp-theme-openglam][gh-wp-theme-openglam]
@@ -95,6 +98,8 @@ Projects:
   - `https://unpkg.com/@creativecommons/fonts@1.0.0-beta.2/css/fonts.css?ver=5.5.9`
     (resolves to `v1.0.0-beta.2`)
   - `@import url(https://unpkg.com/@creativecommons/fonts@2020.8.1/css/fonts.css);`
+
+</details>
 
 
 #### [creativecommons/cc-assets][gh-cc-assets]
@@ -120,6 +125,9 @@ Projects:
 | `2020.11.1` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
 | `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
+<details>
+<summary>Notes</summary>
+
 - [creativecommons/creativecommons.github.io-source][gh-ccos-website]
   - `webpack/js/main.js`: [lines 10-11](https://github.com/creativecommons/creativecommons.github.io-source/blob/main/webpack/js/main.js#L10-L11)
   (resolves to `@creativecommons/vocabulary@2020.11.3`)
@@ -143,6 +151,8 @@ Projects:
   - `https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css`
     (resolves to `@creativecommons/vocabulary@2020.11.3`)
 
+</details>
+
 
 ### [creative-commons/vocabulary-components][gh-vocab-components]
 
@@ -157,9 +167,14 @@ Projects:
 | -- | -- |
 | `0.1.1` | • [creativecommons/chooser][gh-chooser] <br>• [creativecommons/creativecommons-base][gh-cc-base] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
 
+<details>
+<summary>Notes</summary>
+
 - [creativecommons/creativecommons-base][gh-cc-base]]
   - `https://unpkg.com/@creativecommons/vocabulary-fonts@0.x.x/dist/css/fonts.css`
     (resolves to `@creativecommons/vocabulary-fonts@0.1.1`)
+
+</details>
 
 
 ### [creativecommons/vocabulary-styles][gh-vocab-styles]
