@@ -73,7 +73,7 @@ likely require manual intervention to correct and/or upgrade.
 The following repos are directly affected by this work:
 
 - [creativecommons/cc-assets][gh-cc-assets]
-- [creativecommons/vocabulary](https://github.com/creativecommons/vocabulary)
+- [creativecommons/vocabulary][cc-vocab] (this repository)
 - [creativecommons/vocabulary-components][gh-vocab-components]
 - [creativecommons/vocabulary-fonts][gh-vocab-fonts]
 - [creativecommons/vocabulary-styles][gh-vocab-styles]
@@ -107,12 +107,12 @@ Projects:
 | `0.1.0` | • [creativecommons/chooser][gh-chooser] |
 
 
-### [creativecommons/vocabulary](https://github.com/creativecommons/vocabulary)
+### [creativecommons/vocabulary][cc-vocab] (this repository)
 
 | Version | Downstream repository |
 | -- | -- |
 | `1.0.0-beta.16` | • [creativecommons/creativecommons-certificate][gh-cc-cert] |
-| `2020.04.1` | • [creativecommons/wp-theme-openglam](https://github.com/creativecommons/wp-theme-openglam) |
+| `2020.04.1` | • [creativecommons/wp-theme-openglam][gh-wp-theme-openglam] |
 | `2020.06.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 | `2020.7.2` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
 | `2020.8.7` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
@@ -167,6 +167,7 @@ Projects:
 [gh-global-components]: https://github.com/creativecommons/cc-global-components
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
+[cc-vocab]: https://github.com/creativecommons/vocabulary
 [gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
 [gh-vocab-fonts]: https://github.com/creativecommons/vocabulary-fonts
 [gh-vocab-styles]: https://github.com/creativecommons/vocabulary-styles
