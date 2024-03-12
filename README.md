@@ -184,9 +184,14 @@ Projects:
 | `0.2.1` | • [creativecommons/chooser][gh-chooser] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
 | `0.3.0` | • [creativecommons/creativecommons-base][gh-cc-base] |
 
-- [creativecommons/creativecommons-base][gh-cc-base]]
+<details>
+<summary>Notes</summary>
+
+- [creativecommons/creativecommons-base][gh-cc-base]
   - `https://unpkg.com/@creativecommons/vocabulary-styles@0.x.x/dist/css/vocabulary-styles.css`
     (resolves to `@creativecommons/vocabulary-styles@0.3.0`)
+
+</details>
 
 <!-- ordered lexicogrpahically -->
 [cc-vocab]: https://github.com/creativecommons/vocabulary
