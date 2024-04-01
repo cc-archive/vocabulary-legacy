@@ -7,6 +7,19 @@
   </a>
 </p>
 
+## Code of conduct
+
+[`CODE_OF_CONDUCT.md`][org-coc]:
+> The Creative Commons team is committed to fostering a welcoming community.
+> This project and all other Creative Commons open source projects are governed
+> by our [Code of Conduct][code_of_conduct]. Please report unacceptable
+> behavior to [conduct@creativecommons.org](mailto:conduct@creativecommons.org)
+> per our [reporting guidelines][reporting_guide].
+
+[org-coc]: https://github.com/creativecommons/.github/blob/main/CODE_OF_CONDUCT.md
+[code_of_conduct]: https://opensource.creativecommons.org/community/code-of-conduct/
+[reporting_guide]: https://opensource.creativecommons.org/community/code-of-conduct/enforcement/
+
 
 # Creative Commons Vocabulary
 
@@ -287,7 +300,10 @@ To use Vocabulary in your projects, refer to [this document](https://cc-vocabula
 
 ## Contributing
 
-We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.
+We're always looking for contributors to help us find and fix bugs, build new features, help us improve the project documentation or translate the project to another language.See [`CONTRIBUTING.md`][org-contrib] for making contributions.
+
+[org-contrib]: https://github.com/creativecommons/.github/blob/main/CONTRIBUTING.md
+
 
 Vocabulary is continuously evolving and improving. You can contribute to the project in a number of ways.
 
