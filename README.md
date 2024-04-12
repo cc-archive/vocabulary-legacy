@@ -171,7 +171,7 @@ Projects:
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.2.0` | • [creativecommons/chooser][gh-chooser] |
+| `0.3.0` | • [creativecommons/chooser][gh-chooser] |
 
 
 ###  [creativecommons/vocabulary-fonts][gh-vocab-fonts]
@@ -194,8 +194,8 @@ Projects:
 
 | Version | Downstream repository |
 | -- | -- |
-| `0.2.1` | • [creativecommons/chooser][gh-chooser] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
-| `0.3.0` | • [creativecommons/creativecommons-base][gh-cc-base] |
+| `0.2.1` | • [creative-commons/vocabulary-components][gh-vocab-components] |
+| `0.3.0` | • [creativecommons/chooser][gh-chooser] <br>• [creativecommons/creativecommons-base][gh-cc-base] |
 
 <details>
 <summary>Notes</summary>
