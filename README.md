@@ -133,10 +133,10 @@ Projects:
 | `2020.7.2` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
 | `2020.8.6` | • [creativecommons/og-image-generator][gh-og-image-gen] |
 | `2020.8.7` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
-| `2020.9.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
+| `2020.9.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
 | `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] |
 | `2020.11.1` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
-| `2020.11.3` | • [creativecommons/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
+| `2020.11.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
 <details>
 <summary>Notes</summary>
@@ -213,7 +213,7 @@ Projects:
 [gh-cc-cert]: https://github.com/creativecommons/creativecommons-certificate
 [gh-ccos-website]: https://github.com/creativecommons/creativecommons.github.io-source
 [gh-chooser]: https://github.com/creativecommons/chooser
-[gh-global-components]: https://github.com/creativecommons/cc-global-components
+[gh-global-components]: https://github.com/cc-archive/cc-global-components
 [gh-mp]: https://github.com/creativecommons/mp
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
