@@ -80,9 +80,9 @@ The following repos are directly affected by this work:
 
 - [creativecommons/cc-assets][gh-cc-assets]
 - [creativecommons/vocabulary][cc-vocab] (this repository)
-- [creativecommons/vocabulary-components][gh-vocab-components]
-- [creativecommons/vocabulary-fonts][gh-vocab-fonts]
-- [creativecommons/vocabulary-styles][gh-vocab-styles]
+- [cc-archive/vocabulary-components][gh-vocab-components]
+- [cc-archive/vocabulary-fonts][gh-vocab-fonts]
+- [cc-archive/vocabulary-styles][gh-vocab-styles]
 
 
 ### Legacy use
@@ -96,13 +96,13 @@ Projects:
 | Version | Downstream repository |
 | -- | -- |
 |`1.0.0-beta.2` | • [creativecommons/wp-theme-openglam][gh-wp-theme-openglam] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
-|`1.0.0-beta.3` | • [creativecommons/vocabulary-fonts][gh-vocab-fonts] |
+|`1.0.0-beta.3` | • [cc-archive/vocabulary-fonts][gh-vocab-fonts] |
 |`2020.8.1` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
 <details>
 <summary>Notes</summary>
 
-- [creativecommons/vocabulary-fonts][gh-vocab-fonts]
+- [cc-archive/vocabulary-fonts][gh-vocab-fonts]
   - `href="https://unpkg.com/@creativecommons/fonts@1.0.0-beta.3/css/fonts.css"`
 - [creativecommons/wp-theme-openglam][gh-wp-theme-openglam]
   - `https://unpkg.com/@creativecommons/fonts/css/fonts.css?ver=5.5`
@@ -136,7 +136,7 @@ Projects:
 | `2020.9.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
 | `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] |
 | `2020.11.1` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
-| `2020.11.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [creativecommons/vocabulary-fonts][gh-vocab-fonts] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
+| `2020.11.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [cc-archive/vocabulary-fonts][gh-vocab-fonts] <br>• [cc-archive/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
 <details>
 <summary>Notes</summary>
@@ -156,10 +156,10 @@ Projects:
 - [creativecommons/wp-theme-summit][gh-wp-theme-summit]
   - `https://summit.creativecommons.org/wp-content/themes/wp-theme-summit/assets/js/vocabulary.js?ver=2020.06.1`
   - `@creativecommons/vocabulary, ^2020.8.7` in `/front/package.json`
-- [creativecommons/vocabulary-fonts][gh-vocab-fonts]
+- [cc-archive/vocabulary-fonts][gh-vocab-fonts]
   - `https://unpkg.com/@creativecommons/fonts/css/fonts.css`
     (resolves to `@creativecommons/fonts@2020.11.3`)
-- [creativecommons/vocabulary-styles][gh-vocab-styles]
+- [cc-archive/vocabulary-styles][gh-vocab-styles]
   - `@import url("https://unpkg.com/@creativecommons/fonts@2020.9.4/css/fonts.css");`
   - `https://unpkg.com/@creativecommons/vocabulary/css/vocabulary.css`
     (resolves to `@creativecommons/vocabulary@2020.11.3`)
@@ -174,7 +174,7 @@ Projects:
 | `0.3.0` | • [creativecommons/chooser][gh-chooser] |
 
 
-###  [creativecommons/vocabulary-fonts][gh-vocab-fonts]
+###  [cc-archive/vocabulary-fonts][gh-vocab-fonts]
 
 | Version | Downstream repository |
 | -- | -- |
@@ -190,7 +190,7 @@ Projects:
 </details>
 
 
-### [creativecommons/vocabulary-styles][gh-vocab-styles]
+### [cc-archive/vocabulary-styles][gh-vocab-styles]
 
 | Version | Downstream repository |
 | -- | -- |
@@ -217,7 +217,7 @@ Projects:
 [gh-mp]: https://github.com/creativecommons/mp
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
-[gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
+[gh-vocab-components]: https://github.com/cc-archive/vocabulary-components
 [gh-vocab-fonts]: https://github.com/cc-archive/vocabulary-fonts
 [gh-vocab-styles]: https://github.com/cc-archive/vocabulary-styles
 [gh-wp-theme-cc]: https://github.com/creativecommons/wp-theme-creativecommons.org
@@ -232,9 +232,9 @@ Projects:
 ~~This `vocabulary` package has been suspended to be redistributed and divided into `vocabulary-components`, `vocabulary-fonts`, `vocabulary-styles`.~~
 
 ~~They are now accessible at:~~
-* ~~[vocabulary-components](https://github.com/creativecommons/vocabulary-components)~~
-* ~~[vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)~~
-* ~~[vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)~~
+* ~~[vocabulary-components](https://github.com/cc-archive/vocabulary-components)~~
+* ~~[vocabulary-fonts](https://github.com/cc-archive/vocabulary-fonts)~~
+* ~~[vocabulary-styles](https://github.com/cc-archive/vocabulary-styles)~~
 
 (This work was never completed and shouldn't be used.)
 
