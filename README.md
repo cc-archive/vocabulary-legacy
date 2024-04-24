@@ -217,7 +217,7 @@ Projects:
 [gh-mp]: https://github.com/creativecommons/mp
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
-[gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
+[gh-vocab-components]: https://github.com/cc-archive/vocabulary-components
 [gh-vocab-fonts]: https://github.com/cc-archive/vocabulary-fonts
 [gh-vocab-styles]: https://github.com/cc-archive/vocabulary-styles
 [gh-wp-theme-cc]: https://github.com/creativecommons/wp-theme-creativecommons.org
@@ -232,9 +232,9 @@ Projects:
 ~~This `vocabulary` package has been suspended to be redistributed and divided into `vocabulary-components`, `vocabulary-fonts`, `vocabulary-styles`.~~
 
 ~~They are now accessible at:~~
-* ~~[vocabulary-components](https://github.com/creativecommons/vocabulary-components)~~
-* ~~[vocabulary-fonts](https://github.com/creativecommons/vocabulary-fonts)~~
-* ~~[vocabulary-styles](https://github.com/creativecommons/vocabulary-styles)~~
+* ~~[vocabulary-components](https://github.com/cc-archive/vocabulary-components)~~
+* ~~[vocabulary-fonts](https://github.com/cc-archive/vocabulary-fonts)~~
+* ~~[vocabulary-styles](https://github.com/cc-archive/vocabulary-styles)~~
 
 (This work was never completed and shouldn't be used.)
 
