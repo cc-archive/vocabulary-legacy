@@ -2,7 +2,7 @@
   <a href="https://creativecommons.github.io/vocabulary/" class="readme-vocabulary-logo">
     <img
       alt="Vocabulary logo"
-      src="https://raw.githubusercontent.com/creativecommons/vocabulary/master/readme_assets/vocabulary_logo.svg?sanitize=true"
+      src="https://raw.githubusercontent.com/creativecommons/vocabulary-legacy/master/readme_assets/vocabulary_logo.svg?sanitize=true"
       height="40px"/>
   </a>
 </p>
@@ -34,17 +34,17 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <a
-    href="https://github.com/creativecommons/vocabulary/blob/master/LICENSE"
+    href="https://github.com/creativecommons/vocabulary-legacy/blob/master/LICENSE"
     style="margin-right: 1em;">
 <img alt="MIT license" src="https://img.shields.io/github/license/creativecommons/vocabulary.svg?color=brightgreen"/>
 </a>
 <a
-    href="https://github.com/creativecommons/vocabulary/blob/master/CONTRIBUTING.md"
+    href="https://github.com/creativecommons/vocabulary-legacy/blob/master/CONTRIBUTING.md"
     style="margin-right: 1em;">
 <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
 </a>
 <a
-    href="https://github.com/creativecommons/vocabulary/actions"
+    href="https://github.com/creativecommons/vocabulary-legacy/actions"
     style="margin-right: 1em;">
 <img alt="GitHub Actions" src="https://img.shields.io/github/actions/workflow/status/creativecommons/vocabulary/vocabulary-ci/master?label=vocabulary-ci"/>
 </a>
@@ -69,7 +69,7 @@ consistently familiar experience.
 As of 2022-09-19, this repository is currently **unstable**, the
 Vocabulary project as a whole is undergoing major changes related to
 [Vocabulary Roadmap 2022.Q4-2023.Q1 (work in progress)
-#1081](https://github.com/creativecommons/vocabulary/issues/1081#objectives).
+#1081](https://github.com/creativecommons/vocabulary-legacy/issues/1081#objectives).
 
 If you are using this repository in a project, it is **strongly recommended**
 that you lock your version to the latest stable release for the time being, as
@@ -79,7 +79,7 @@ likely require manual intervention to correct and/or upgrade.
 The following repos are directly affected by this work:
 
 - [creativecommons/cc-assets][gh-cc-assets]
-- [creativecommons/vocabulary][cc-vocab] (this repository)
+- [creativecommons/vocabulary-legacy][cc-vocab] (this repository)
 - [cc-archive/vocabulary-components][gh-vocab-components]
 - [cc-archive/vocabulary-fonts][gh-vocab-fonts]
 - [cc-archive/vocabulary-styles][gh-vocab-styles]
@@ -122,7 +122,7 @@ Projects:
 | `0.1.0` | • [creativecommons/chooser][gh-chooser] <br>• [creative-commons/vocabulary-components][gh-vocab-components] |
 
 
-### [creativecommons/vocabulary][cc-vocab] (this repository)
+### [creativecommons/vocabulary-legacy][cc-vocab] (this repository)
 
 | Version | Downstream repository |
 | -- | -- |
@@ -134,7 +134,7 @@ Projects:
 | `2020.8.6` | • [creativecommons/og-image-generator][gh-og-image-gen] |
 | `2020.8.7` | • [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 | `2020.9.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] |
-| `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/vocabulary-styles][gh-vocab-styles] |
+| `2020.9.4` | • [creativecommons/legaldb][gh-legaldb] <br>• [cc-archive/vocabulary-styles][gh-vocab-styles] |
 | `2020.11.1` | • [creativecommons/creativecommons.github.io-source][gh-ccos-website] |
 | `2020.11.3` | • [cc-archive/cc-global-components][gh-global-components] <br>• [creativecommons/creativecommons.github.io-source][gh-ccos-website] <br>• [creativecommons/legaldb][gh-legaldb] <br>• [creativecommons/og-image-generator][gh-og-image-gen] <br>• [cc-archive/vocabulary-fonts][gh-vocab-fonts] <br>• [cc-archive/vocabulary-styles][gh-vocab-styles] <br>• [creativecommons/wp-theme-creativecommons.org][gh-wp-theme-cc] <br>• [creativecommons/wp-theme-summit][gh-wp-theme-summit] |
 
@@ -207,7 +207,7 @@ Projects:
 </details>
 
 <!-- ordered lexicogrpahically -->
-[cc-vocab]: https://github.com/creativecommons/vocabulary
+[cc-vocab]: https://github.com/creativecommons/vocabulary-legacy
 [gh-cc-assets]: https://github.com/creativecommons/cc-assets
 [gh-cc-base]: https://github.com/creativecommons/creativecommons-base
 [gh-cc-cert]: https://github.com/creativecommons/creativecommons-certificate
@@ -323,7 +323,7 @@ These instructions are a port of the general guidelines, tailored specifically f
 
 ### Discussing Changes
 
-For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done.
+For bug reports and feature requests, use [GitHub issues](https://github.com/creativecommons/vocabulary-legacy/issues/new/choose) with the appropriate labels. We can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done.
 
 ### Assigning work
 
@@ -408,7 +408,7 @@ Install using any of the methods below depending on your environment.
 
 #### **Running Workflows**
 
-Once you have downloaded and installed the package with its dependencies, it will automatically read the CI scripts from your [/.github/workflows](https://github.com/creativecommons/vocabulary/tree/main/.github/workflows) folder.
+Once you have downloaded and installed the package with its dependencies, it will automatically read the CI scripts from your [/.github/workflows](https://github.com/creativecommons/vocabulary-legacy/tree/main/.github/workflows) folder.
 
 ##### Trigger all workflows
 
@@ -470,34 +470,34 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Akpjunior94"><img src="https://avatars.githubusercontent.com/u/56775903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akpan Abraham</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Akpjunior94" title="Code">💻</a></td>
-    <td align="center"><a href="https://anik.live/"><img src="https://avatars.githubusercontent.com/u/16396161?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anik Das</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=sadn1ck" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/arushivii"><img src="https://avatars.githubusercontent.com/u/43967251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arushi Verma</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=arushivii" title="Code">💻</a></td>
-    <td align="center"><a href="http://brenoferreira.github.io"><img src="https://avatars.githubusercontent.com/u/707019?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Breno Ferreira</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=brenoferreira" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary/pulls?q=is%3Apr+reviewed-by%3Abrenoferreira" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://conye.netlify.app/"><img src="https://avatars.githubusercontent.com/u/25040059?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chidiebere Onyegbuchulem</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=chidexebere" title="Code">💻</a></td>
-    <td align="center"><a href="https://dhruvkb.github.io"><img src="https://avatars.githubusercontent.com/u/16580576?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhruv Bhanushali</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=dhruvkb" title="Code">💻</a> <a href="#mentoring-dhruvkb" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/creativecommons/vocabulary/pulls?q=is%3Apr+reviewed-by%3Adhruvkb" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="http://dhruvi16.me"><img src="https://avatars.githubusercontent.com/u/34674462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhruvi Butti</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Dhruvi16" title="Code">💻</a> <a href="#design-Dhruvi16" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/Akpjunior94"><img src="https://avatars.githubusercontent.com/u/56775903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akpan Abraham</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=Akpjunior94" title="Code">💻</a></td>
+    <td align="center"><a href="https://anik.live/"><img src="https://avatars.githubusercontent.com/u/16396161?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anik Das</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=sadn1ck" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/arushivii"><img src="https://avatars.githubusercontent.com/u/43967251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arushi Verma</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=arushivii" title="Code">💻</a></td>
+    <td align="center"><a href="http://brenoferreira.github.io"><img src="https://avatars.githubusercontent.com/u/707019?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Breno Ferreira</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=brenoferreira" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary-legacy/pulls?q=is%3Apr+reviewed-by%3Abrenoferreira" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://conye.netlify.app/"><img src="https://avatars.githubusercontent.com/u/25040059?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chidiebere Onyegbuchulem</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=chidexebere" title="Code">💻</a></td>
+    <td align="center"><a href="https://dhruvkb.github.io"><img src="https://avatars.githubusercontent.com/u/16580576?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhruv Bhanushali</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=dhruvkb" title="Code">💻</a> <a href="#mentoring-dhruvkb" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/creativecommons/vocabulary-legacy/pulls?q=is%3Apr+reviewed-by%3Adhruvkb" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="http://dhruvi16.me"><img src="https://avatars.githubusercontent.com/u/34674462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhruvi Butti</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=Dhruvi16" title="Code">💻</a> <a href="#design-Dhruvi16" title="Design">🎨</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/Bob160"><img src="https://avatars.githubusercontent.com/u/58000961?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Efio-esien Efiom</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Bob160" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/krhitesh"><img src="https://avatars.githubusercontent.com/u/25616334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hitesh</b></sub></a><br /><a href="#infra-krhitesh" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=krhitesh" title="Tests">⚠️</a> <a href="#platform-krhitesh" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=krhitesh" title="Code">💻</a></td>
-    <td align="center"><a href="http://hugo.solar"><img src="https://avatars.githubusercontent.com/u/894708?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo Solar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=hugosolar" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary/pulls?q=is%3Apr+reviewed-by%3Ahugosolar" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://github.com/jahnvigupta"><img src="https://avatars.githubusercontent.com/u/43217070?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jahnvi Gupta</b></sub></a><br /><a href="#design-jahnvigupta" title="Design">🎨</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=jahnvigupta" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=jahnvigupta" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/Bob160"><img src="https://avatars.githubusercontent.com/u/58000961?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Efio-esien Efiom</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=Bob160" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/krhitesh"><img src="https://avatars.githubusercontent.com/u/25616334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hitesh</b></sub></a><br /><a href="#infra-krhitesh" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=krhitesh" title="Tests">⚠️</a> <a href="#platform-krhitesh" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=krhitesh" title="Code">💻</a></td>
+    <td align="center"><a href="http://hugo.solar"><img src="https://avatars.githubusercontent.com/u/894708?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo Solar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=hugosolar" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary-legacy/pulls?q=is%3Apr+reviewed-by%3Ahugosolar" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/jahnvigupta"><img src="https://avatars.githubusercontent.com/u/43217070?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jahnvi Gupta</b></sub></a><br /><a href="#design-jahnvigupta" title="Design">🎨</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=jahnvigupta" title="Code">💻</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=jahnvigupta" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://kritigodey.com"><img src="https://avatars.githubusercontent.com/u/287034?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kriti Godey</b></sub></a><br /><a href="#projectManagement-kgodey" title="Project Management">📆</a></td>
-    <td align="center"><a href="https://github.com/krysal"><img src="https://avatars.githubusercontent.com/u/9145885?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Krystle Salazar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=krysal" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/megha070"><img src="https://avatars.githubusercontent.com/u/40516822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Megha Varshney</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=megha070" title="Code">💻</a> <a href="#design-megha070" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/krysal"><img src="https://avatars.githubusercontent.com/u/9145885?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Krystle Salazar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=krysal" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/megha070"><img src="https://avatars.githubusercontent.com/u/40516822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Megha Varshney</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=megha070" title="Code">💻</a> <a href="#design-megha070" title="Design">🎨</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/waridrox"><img src="https://avatars.githubusercontent.com/u/58583793?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad Warid</b></sub></a><br /><a href="#infra-waridrox" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=waridrox" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/MuluhGodson"><img src="https://avatars.githubusercontent.com/u/40151808?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MuluhGodson</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=MuluhGodson" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://nilshah98.me/"><img src="https://avatars.githubusercontent.com/u/22821480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neel Shah</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=nilshah98" title="Code">💻</a></td>
-    <td align="center"><a href="https://blackcipher101.github.io/portfolio"><img src="https://avatars.githubusercontent.com/u/33775493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nehal Nevle</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Blackcipher101" title="Code">💻</a></td>
-    <td align="center"><a href="https://silvinabt87.github.io"><img src="https://avatars.githubusercontent.com/u/57196258?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Silvina Tamburini</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Tests">⚠️</a> <a href="https://github.com/creativecommons/vocabulary/commits?author=silvinabt87" title="Code">💻</a></td>
-    <td align="center"><a href="https://tanuj22.github.io"><img src="https://avatars.githubusercontent.com/u/42486853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanuj Agarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=Tanuj22" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/clasick"><img src="https://avatars.githubusercontent.com/u/13066221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vignesh Kumar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=clasick" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/waridrox"><img src="https://avatars.githubusercontent.com/u/58583793?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad Warid</b></sub></a><br /><a href="#infra-waridrox" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=waridrox" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/MuluhGodson"><img src="https://avatars.githubusercontent.com/u/40151808?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MuluhGodson</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=MuluhGodson" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://nilshah98.me/"><img src="https://avatars.githubusercontent.com/u/22821480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neel Shah</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=nilshah98" title="Code">💻</a></td>
+    <td align="center"><a href="https://blackcipher101.github.io/portfolio"><img src="https://avatars.githubusercontent.com/u/33775493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nehal Nevle</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=Blackcipher101" title="Code">💻</a></td>
+    <td align="center"><a href="https://silvinabt87.github.io"><img src="https://avatars.githubusercontent.com/u/57196258?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Silvina Tamburini</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=silvinabt87" title="Tests">⚠️</a> <a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=silvinabt87" title="Code">💻</a></td>
+    <td align="center"><a href="https://tanuj22.github.io"><img src="https://avatars.githubusercontent.com/u/42486853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanuj Agarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=Tanuj22" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/clasick"><img src="https://avatars.githubusercontent.com/u/13066221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vignesh Kumar</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=clasick" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://kushaggarwal.github.io/me/"><img src="https://avatars.githubusercontent.com/u/44523552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kush aggarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary/commits?author=kushaggarwal" title="Code">💻</a></td>
+    <td align="center"><a href="https://kushaggarwal.github.io/me/"><img src="https://avatars.githubusercontent.com/u/44523552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kush aggarwal</b></sub></a><br /><a href="https://github.com/creativecommons/vocabulary-legacy/commits?author=kushaggarwal" title="Code">💻</a></td>
   </tr>
 </table>
 
