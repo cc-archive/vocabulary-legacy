@@ -219,7 +219,7 @@ Projects:
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
 [gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
 [gh-vocab-fonts]: https://github.com/creativecommons/vocabulary-fonts
-[gh-vocab-styles]: https://github.com/creativecommons/vocabulary-styles
+[gh-vocab-styles]: https://github.com/cc-archive/vocabulary-styles
 [gh-wp-theme-cc]: https://github.com/creativecommons/wp-theme-creativecommons.org
 [gh-wp-theme-openglam]: https://github.com/creativecommons/wp-theme-openglam
 [gh-wp-theme-summit]: https://github.com/creativecommons/wp-theme-summit
