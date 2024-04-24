@@ -46,7 +46,7 @@
 <a
     href="https://github.com/creativecommons/vocabulary-legacy/actions"
     style="margin-right: 1em;">
-<img alt="GitHub Actions" src="https://img.shields.io/github/actions/workflow/status/creativecommons/vocabulary/vocabulary-ci/master?label=vocabulary-ci"/>
+<img alt="GitHub Actions" src="https://img.shields.io/github/actions/workflow/status/creativecommons/vocabulary-legacy/ci-test.yml"/>
 </a>
 <a
     href="https://cc-vocabulary.netlify.com"
