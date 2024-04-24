@@ -218,7 +218,7 @@ Projects:
 [gh-legaldb]: https://github.com/creativecommons/legaldb
 [gh-og-image-gen]: https://github.com/creativecommons/og-image-generator
 [gh-vocab-components]: https://github.com/creativecommons/vocabulary-components
-[gh-vocab-fonts]: https://github.com/creativecommons/vocabulary-fonts
+[gh-vocab-fonts]: https://github.com/cc-archive/vocabulary-fonts
 [gh-vocab-styles]: https://github.com/cc-archive/vocabulary-styles
 [gh-wp-theme-cc]: https://github.com/creativecommons/wp-theme-creativecommons.org
 [gh-wp-theme-openglam]: https://github.com/creativecommons/wp-theme-openglam
